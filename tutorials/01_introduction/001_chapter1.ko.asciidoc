@@ -1,16 +1,18 @@
+-*- coding: utf-8 -*-
 :authoer: Jeff Crouse <jeff@crouse.cc>
 :title: ofTutorials - 시작하기
 :date: setptember 2013
 :author_site: http://jeffcrouse.info
 :summary: 이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리는 등의 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저...
+:source-highlighter: highlightjs
 :doctype: book
 
 ofTutorials - Chapter 1 - Getting Started
 =========================================
 
 ____________
-*업데이트! 새로운 프로젝트 생성기*: 
-_오픈프레임웍스 0072부터, 새로운 오픈프레임웍스 프로젝트를 생성시켜주는 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[새로운 프로젝스 생성기]가 제공되었습니다, 애드온도 포함해서 말이죠. 예전 버전에서는 프로젝트를 생성하기 위해, 이미 존재하는 예제 앱을 복제하거나 애드온을 추가할 때 일일히 수동으로 아래에 언급된 과정들을 작성해줘야 했습니다. 새로운 프로젝트 생성기에서는, 프로젝트를 빠르게 생성하며, 또한 에러를 덜 발생시킵니다. 새 버젼의 사용을 강력하게 추천드립니다. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[지금 바로 확인해보세요!]_
+*업데이트! 새로운 프로젝트 생성기* : 
+_오픈프레임웍스 0072부터, 새로운 오픈프레임웍스 프로젝트를 생성시켜주는 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[새로운 프로젝스 생성기] 가 제공되었습니다, 애드온도 포함해서 말이죠. 예전 버전에서는 프로젝트를 생성하기 위해, 이미 존재하는 예제 앱을 복제하거나 애드온을 추가할 때 일일히 수동으로 아래에 언급된 과정들을 작성해줘야 했습니다. 새로운 프로젝트 생성기에서는, 프로젝트를 빠르게 생성하며, 또한 에러를 덜 발생시킵니다. 새 버젼의 사용을 강력하게 추천드립니다. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[지금 바로 확인해보세요!]_
 ____________
 
 이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리기 등과 같은 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저 ...
@@ -18,9 +20,9 @@ ____________
 Your First look inside oF 
 --------------------------
 
-여기서는, 여러분이 http://www.openframeworks.cc/download/[오픈프레임웍스 다운및 셋업가이드]를 따라했다고 가정합니다. 우선 여러분이 해야할 일은 압축된 오픈프레임웍스를 여러분이 접근하기 쉬운 폴더에 압축을 푸는 것입니다. 개인적으로, 저는 폴더를 내문서에 위치시키고 사이드바에 바로가기를 만들어둡니다. 이렇게 말이죠 :
+여기서는, 여러분이 http://www.openframeworks.cc/download/[오픈프레임웍스 다운및 셋업가이드] 를 따라했다고 가정합니다. 우선 여러분이 해야할 일은 압축된 오픈프레임웍스를 여러분이 접근하기 쉬운 폴더에 압축을 푸는 것입니다. 개인적으로, 저는 폴더를 내문서에 위치시키고 사이드바에 바로가기를 만들어둡니다. 이렇게 말이죠 :
 
-image:shortcut.png["Shortcut",width="600"]
+image::shortcut.png["Shortcut",width="600"]
 
 어디에 위치해두건, 폴더를 열어보면, 아래 같은 폴더가 보일 것입니다:
 
@@ -45,7 +47,7 @@ libs;;
 Take a Tour of the Examples
 ---------------------------
 
-"examples"폴더는 오픈프레임웍스로 할수 있는 것들을 보여주는 프로젝트들이 담겨있습니다. 여러분이 직접 앱을 만들기 전에 이 예제들을 살펴보는것은 좋은 생각입니다. 이 과정은 여러분이 사용하는 IDE에 따라 약간 다릅니다.
+"examples" 폴더는 오픈프레임웍스로 할수 있는 것들을 보여주는 프로젝트들이 담겨있습니다. 여러분이 직접 앱을 만들기 전에 이 예제들을 살펴보는것은 좋은 생각입니다. 이 과정은 여러분이 사용하는 IDE에 따라 약간 다릅니다.
 
 XCode
 ~~~~~
@@ -84,7 +86,7 @@ image::graphicsExample03.png["graphicsExample, running",width="800"]
 . 아래에 보이는것처럼 "All"과 "Combinded"가 선택되었는지 확인합니다.
 . *Base SDK"를 찾아, 클릭하여 "10.6"을 선택합니다.
 
-image:tenpointsix.png["10.6 Fix",width="600"]
+image::tenpointsix.png["10.6 Fix",width="600"]
 
 모든 프로젝트마다 이런 과정을 거쳐야 할것 이므로, 익숙해지셔야 할겁니다 :)
 =====================================================================
@@ -152,26 +154,26 @@ Creating Your First Project
 [NOTE]
 .Code::Blocks note
 =====================================================================
-이 섹션은 예시로 드는 IDE로 XCode에 촛점이 맞춰져있습니다. 여기에서 제공되는 일반적인 정보들은 Code::Blocks에도 동일하게 적용됩니다. Code::Blocks프로젝트 파일은 ".xcodeproj"대신 .workspace"확장자를 사용합니다. IDE 에 관한 질문이 있으시다면 http://www.codeblocks.org/user-manual[Code::Blocks 매뉴얼]을 살펴봐주시기 바랍니다.
+이 섹션은 예시로 드는 IDE로 XCode에 촛점이 맞춰져있습니다. 여기에서 제공되는 일반적인 정보들은 Code::Blocks에도 동일하게 적용됩니다. Code::Blocks프로젝트 파일은 ".xcodeproj"대신 .workspace"확장자를 사용합니다. IDE 에 관한 질문이 있으시다면 http://www.codeblocks.org/user-manual[Code::Blocks 매뉴얼] 을 살펴봐주시기 바랍니다.
 =====================================================================
 
 소개부분에서 언급했듯이, 오픈프레임웍스는 여러분이 선택한 IDE의 지루한 C++ project 세팅을 담당합니다. 하지만 Flash나 Processing 프로그램과는 다르게, 프로젝트를 생성하는 "파일 > 새 파일"은 없습니다. 대신에 새 프로젝트를 생성하기 위해 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator]를 사용해야 합니다. 예전(openFrameworks 0072 이전)에는 추천되는 방법은 예제프로젝트중 하나를 복제하는 것이었습니다.
 
 [IMPORTANT]
 =====================================================================
-좀더 설명하자면, 예제파일을 복제한다는 말은 어떠한 예제 프로젝트라 하더라도 절대 편집하면 안되고, 여러분의 앱을 예제 폴더에 두지 말라는 의미입니다. 이것들은 여러분의 앱을 위해 시작지점으로 제공되도록 위치하고 있으므로, 원시적으로 유지하시는것이 좋습니다. 앞으로 이것의 중요성을 알게 될것입니다..  link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator]를 사용하시는게 좋습니다.
+좀더 설명하자면, 예제파일을 복제한다는 말은 어떠한 예제 프로젝트라 하더라도 절대 편집하면 안되고, 여러분의 앱을 예제 폴더에 두지 말라는 의미입니다. 이것들은 여러분의 앱을 위해 시작지점으로 제공되도록 위치하고 있으므로, 원시적으로 유지하시는것이 좋습니다. 앞으로 이것의 중요성을 알게 될것입니다..  link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] 를 사용하시는게 좋습니다.
 =====================================================================
 
 단순하게 보시는것과 같이, 초보자들에게는 엄청 어지러울수 있습니다. 따라서 우선 용어부터 정리해보죠.
 
-apps폴더를 열어보면, _myApps_폴더를 볼 수 있습니다. 이 폴더를 *작업공간*이라고 부릅시다.
+apps폴더를 열어보면, _myApps_폴더를 볼 수 있습니다. 이 폴더를 *작업공간* 이라고 부릅시다.
 
-이제 _myApps_ 작업공간을 열어보면, _emptyExample_ 폴더가 보입니다. 이것을 *프로젝트*라고 부르겠습니다. 각 프로젝트에는 다른 파일들과 함께 (사용하고 있는 IDE에 따라)".xcodeproj" 또는 ".workspace"파일과, "src"폴더가 있습니다. *프로젝트*는 _반드시_ *작업공간*내에 위치해야 하며, 하나의 어플리케이션으로 컴파일 될 수 있습니다.
+이제 _myApps_ 작업공간을 열어보면, _emptyExample_ 폴더가 보입니다. 이것을 *프로젝트* 라고 부르겠습니다. 각 프로젝트에는 다른 파일들과 함께 (사용하고 있는 IDE에 따라)".xcodeproj" 또는 ".workspace" 파일과, "src" 폴더가 있습니다. *프로젝트* 는 _반드시_ *작업공간*내에 위치해야 하며, 하나의 어플리케이션으로 컴파일 될 수 있습니다.
 
 
-image:workspace04.png["Workspace terminology"]
+image::workspace04.png["Workspace terminology"]
 
-자 우리는 *프로젝트*를 만들려고 합니다만, 모든 프로젝트는 *작업공간* 내에서 살아갑니다. 따라서 편리하가게 *myApps* 작업공간을 사용해봅시다. 물론 원한다면 여러분이 원하는 작업공간을 사용할 수 있습니다. 하지만 중요한것은 "apps"내에 바로 위치해야 한다는 점입니다. 예를들어 : 하나의 작업공간 내에 다른 작업공간을 가질 수 없습니다.
+자 우리는 *프로젝트* 를 만들려고 합니다만, 모든 프로젝트는 *작업공간* 내에서 살아갑니다. 따라서 편리하가게 *myApps* 작업공간을 사용해봅시다. 물론 원한다면 여러분이 원하는 작업공간을 사용할 수 있습니다. 하지만 중요한것은 "apps" 내에 바로 위치해야 한다는 점입니다. 예를들어 : 하나의 작업공간 내에 다른 작업공간을 가질 수 없습니다.
 
 [NOTE]
 .이제는 사용되지 않는 이전 버전에서의 프로젝트 생성 방법입니다.
@@ -180,20 +182,20 @@ First we will [underline]#duplicate# (NOT rename) the entire "emptyExample"
 folder. On a Mac, you can literally right-click on the emptyExample folder,
 and click 'Duplicate'. So the result should look like this:
 
-image:workspace02.png["emptyExample Copy", width="800"]
+image::workspace02.png["emptyExample Copy", width="800"]
 
 Next, we can rename the duplicate project folder from "emptyExample Copy" to "myFirstProject".
 
-image:workspace03.png["My First Project", width="800"]
+image::workspace03.png["My First Project", width="800"]
 =====================================================================
 
 여기서 매우 중요한 사실은 여러분 Xcode나 Code::Blocks 프로젝트 파일은 root폴더로부터 *정확히* 3단계를 유지하고 있다는 점입니다 (위의 컬러 다이어그램을 참고하세요). 따라서, 여러분이 새 프로젝트를 만들떄, 특별한 이유없이 갑자기 수천개의 에러가 출력되는 경우, Xcode나 Code::Blocks 프로젝트 파일이 정확한 위치에 있는지 반드시 체크해봐야 합니다.
 
-이는 'lib' 폴더와 관계가 있습니다. 앞에서 언급했지만 오픈프레임웍스는 다양한 다른 라이브러리들을 묶는 "접착제" 역할을 합니다. 이러한 라이브러리들은 'lib' 디렉토리에 위치해 있습니다.  또한 우리는 이러한 라이브러리가 어디에 있는지를 찾아서, 그것들을 함께 묶는작업이 IDE의 주 역할이라는것도 알았죠. 따라서 IDE가 여러분의 프로그램을 컴파일하려고 할때, IDE는 라이브러리를 찾기 위해 "../../../lib" 를 살펴봅니다. 다르게 말하면: ".xcodeproj파일로부터 http://support.dtsearch.com/webhelp/dtsearch/relative_paths.htm[상대적인] 경로로 3번 상위로 올라가서 lib폴더를 살펴보라" 라는 의미입니다.  예를 들어 아무 오픈프레임웍스 프로젝트의 세팅부분을 살펴보면, "../../../libs/Freeimage/include" 와 "../../../libs/poco/include" 경로를 찾을 수 있을것입니다. 따라서, 여러분의 .xcodeproj 파일이 of_v0.9.0_osx_release/apps/[작업공간]/[프로젝트] 에만 위치하고 있다면, 문제없이 컴파일할 수 있습니다. 그렇지 않다면, 문제가 발생합니다.
+이는 'lib' 폴더와 관계가 있습니다. 앞에서 언급했지만 오픈프레임웍스는 다양한 다른 라이브러리들을 묶는 "접착제" 역할을 합니다. 이러한 라이브러리들은 'lib' 디렉토리에 위치해 있습니다.  또한 우리는 이러한 라이브러리가 어디에 있는지를 찾아서, 그것들을 함께 묶는작업이 IDE의 주 역할이라는것도 알았죠. 따라서 IDE가 여러분의 프로그램을 컴파일하려고 할때, IDE는 라이브러리를 찾기 위해 "../../../lib" 를 살펴봅니다. 다르게 말하면: ".xcodeproj파일로부터 http://support.dtsearch.com/webhelp/dtsearch/relative_paths.htm[상대적인] 경로로 3번 상위로 올라가서 lib폴더를 살펴보라" 라는 의미입니다.  예를 들어 아무 오픈프레임웍스 프로젝트의 세팅부분을 살펴보면, "../../../libs/Freeimage/include" 와 "../../../libs/poco/include" 경로를 찾을 수 있을 것입니다. 따라서, 여러분의 .xcodeproj 파일이 of_v0.9.0_osx_release/apps/[작업공간]/[프로젝트] 에만 위치하고 있다면, 문제없이 컴파일할 수 있습니다. 그렇지 않다면, 문제가 발생합니다.
 
 자 보십시오! 이제 여러분의 최조의 오픈프레임웍스 프로젝트를 생성했네요. 여러분의 새 Xcode 프로젝트 파일을 더블클릭하고 "emptyExample" 이 타겟으로 선택되었는지 확인한 다음 "Run" 을 클릭하면(또는 Code::Blocks에서 F9를 눌러보면), 아래와 같은 화면이 보일것입니다:
 
-image:PlainGray.png["Plain Gray Window", width="600"]
+image::PlainGray.png["Plain Gray Window", width="600"]
 
 아무것도 없네요! 하지만 이것이 정확히 여러분이 보게 될 화면입니다. 뭐, 아직 아주 흥미롭진 않네요, 그래도 잘하고 있는겁니다.
 
@@ -205,11 +207,11 @@ ESC나 Apple+Q를 눌러 프로그램을 종료하세요
 =====================================================================
 파일명을 "emptyExample.xcodeproj" 를 "myFirstProject.xcodeproj" 로 변경하려고 시도할수도 있습니다. 만약 Xcode 4 이전의 버젼이라면 가능하지만, Xcode 4에서는 문제가 발생합니다. 따라서 대신에, 프로젝트를 XCode에서 열고, 아래에 보이는 것처럼 좌측 상단의 "emptyExample" 제목을 누르십시오:
 
-image:rename01.png["Renaming your Project",width="400"]
+image::rename01.png["Renaming your Project",width="400"]
 
 이름을 변경하면, 다이얼로그 박스로 많은것들 역시 이름을 변경할것이냐고 물어볼것입니다. "Rename"을 누르세요.
  
-image:rename02.png["Renaming your Project",width="700"]
+image::rename02.png["Renaming your Project",width="700"]
 
 쨔잔!
 =====================================================================
@@ -217,7 +219,7 @@ image:rename02.png["Renaming your Project",width="700"]
 
 XCode의 "Run" 버튼을 클릭할 때, 실제로 뒤에서 벌어지는 일을 설명하자면, 여러분의 코드는 실행가능한 파일로 컴파일되어 "bin" 디렉토리에 위치하게 됩니다. 그리고 나서 실행파일을 더블클릭하여 실행한것처럼 해당 어플리케이션이 실행됩니다. 자, "myApps/MyFirstApplication/bin" 폴더를 살펴보면, 어플리케이션 아이콘이 보일것입니다. 이것이 여러분의 어플리케이션입니다! 더블클릭해보면, 똑같은 회색 윈도우가 보일 것입니다. 이제 이 어플리케이션을 (맥을 사용하는) 다른 친구에게 보낼 수 있습니다. 그리고 이 멋진 회색 윈도우 프로그램을 실행 할수도 있죠!
 
-image:workspace05.png["Your Executable",width="760"]
+image::workspace05.png["Your Executable",width="760"]
 
 
 Writing Code
@@ -230,7 +232,7 @@ ofApp.cpp
 
 자 마침내 코드를 살펴보기 시작할 시간입니다. 우선 해야할 일은 Xcode에서 프로젝트를 여는것입니다. 여러분이 앞 섹션에의 "myApps" 작업공간에 있는 "myFirstProject" 로 작업한다고 가정하고 진행하겠습니다. 열어서, *네비게이터 뷰* (XCode의 좌측 끝 패널)의 작은 삼각형을 클릭해보세요. 아래와 같이요:
 
-image:expand01.gif["Open up the project"]
+image::expand01.gif["Open up the project"]
 
 . Click the disclosure triangle next to "MyFirstProject"
 . Click the disclosure triangle next to "src"
@@ -267,9 +269,9 @@ void testApp::keyPressed(int key){
 
 다양한 측면에서, ofApp.cpp는 소개란에서 작성했던 hello.cpp와 같습니다. 이 파일은 `C++` 소스코드를 담는 평문 텍스트 파일입니다. 다른점이 있다면 우리는 이것을 IDE를 통해 편집하고 있으므로, 보시다시피 아주 훌륭하게 문법 강조(syntax highlighting)가 적용되어 있어 코드를 쉽게 이해할 수 있습니다. 또한 역시 컴파일 및 실행을 쉽게 할 수 있죠.
 
-아주 기초적인 레벨에서, 여러분이 보고 계시는것은 많은 빈 함수들입니다. https://en.wikipedia.org/wiki/Function_(computer_science)[함수]는 보다 큰 프로그램을 만들어가는 명령의 집합입니다. 위의 작은 코드조각들을 보면, 4개의 함수가 있습니다: setup, update, draw 그리고 keyPressed입니다. 각 함수는 중괄호({})로 감싸져 있습니다. 중괄호 내에 주로 작성되는 내용들은 명령들(변수에 값을 할당하거나, 반복(loop)들, 그리고 다른 함수의 호출 등등)이며, 이것들이 함수를 완성합니다.
+아주 기초적인 레벨에서, 여러분이 보고 계시는것은 많은 빈 함수들입니다. https://en.wikipedia.org/wiki/Function_(computer_science)[함수] 는 보다 큰 프로그램을 만들어가는 명령의 집합입니다. 위의 작은 코드조각들을 보면, 4개의 함수가 있습니다: setup, update, draw 그리고 keyPressed입니다. 각 함수는 중괄호({})로 감싸져 있습니다. 중괄호 내에 주로 작성되는 내용들은 명령들(변수에 값을 할당하거나, 반복(loop)들, 그리고 다른 함수의 호출 등등)이며, 이것들이 함수를 완성합니다.
 
-소개 부분에서 "소프트웨어 프레임워크가 뭔가요" 라는 질문으로 돌아가서, 영화 프로덕션 회사로 비유하는것은 이지점에서 매우 유용합니다. ofApp.cpp에서 여러분이 보시는것은 오픈프레임웍스가 어떻게 필요한 모든것들을 제공하느냐 인것이죠. 이제 여러분의 역할은 무엇을 할것인지 결정하는겁니다. ofApp.cpp내의 함수안에 코드로 작성하면 되는겁니다.
+소개 부분에서 "소프트웨어 프레임워크가 뭔가요" 라는 질문으로 돌아가서, 영화 프로덕션 회사로 비유하는것은 이지점에서 매우 유용합니다. ofApp.cpp에서 여러분이 보시는것은 오픈프레임웍스가 어떻게 필요한 모든것들을 제공하느냐 인것이죠. 이제 여러분의 역할은 무엇을 할것인지 결정하는겁니다. ofApp.cpp내의 함수안에 코드로 작성하면 되는겁니다는.
 
 이러한 함수들은 프로그램이 실행되는동안 다른 지점에서 오픈프레임웍스에 의해 호출됩니다. 이중 몇개를 좀더 살펴봅시다.
 
@@ -295,7 +297,7 @@ Making a Mark
 void testApp::draw(){
     ofCircle(200, 300, 60);
 }
----------------------------------------------------------------------
+-----------------------------------------------------
 
 [NOTE]
 =====================================================================
@@ -304,7 +306,7 @@ void testApp::draw(){
 
 이제 프로그램을 실행하면, 이런 화면이 보일것입니다:
 
-image:MyFirstProject01.png["A Plain White Circle", width="500"]
+image::MyFirstProject01.png["A Plain White Circle", width="500"]
 
 축하드립니다! 화면에 뭔가를 띄웠네요! 이제부터는 내리막길만 남았습니다.
 
@@ -344,7 +346,7 @@ void testApp::draw(){
 
 이제 어플리케이션을 실행해봅시다.
 
-image:MyFirstProject02.png["A purple circle", width="500"]
+image::MyFirstProject02.png["A purple circle", width="500"]
 
 ofCircle과 비슷하게, ofSetColor함수 역시 3개의 인자를 취합니다. 하지만 숫자들은 아주 다른 의미를 가집니다. link:/documentation/graphics/ofGraphics.html#show_ofSetColor[ofSetColor] 문서를 살펴보시면, 이 인자들은 사용하기 위한 색의 red, green, blue값을 의미하며, 각각 0-255사이의 범위를 갖는다는 것을 알 수 있습니다. red, green, blue는 https://en.wikipedia.org/w/index.php?title=RGB_color_model[RGB 색모델 혹은 색공간] 을 구성합니다. 따라서 우리가 `ofSetColor(255, 0, 255);` 라고 입력하면, "추후에 공지를 하기전까지는, 그려지는 모든것은 100%의 red, 0의 green, 100%의 blue로 칠해라" 라고 말하는 것입니다. 
 
@@ -379,7 +381,7 @@ void testApp::draw(){
 }
 ---------------------------------------------------------------------
 
-image:MyFirstProject03.png["Two Colorful Circles", width="500"]
+image::MyFirstProject03.png["Two Colorful Circles", width="500"]
 
 
 All The Shapes You Can Handle
@@ -387,13 +389,13 @@ All The Shapes You Can Handle
 
 당연히, 오픈프레임웍스에서는 원 말고도 다른것들을 그릴 수 있습니다.
 
-. link:/documentation/graphics/ofGraphics.html#show_ofDrawRectangle[ofDrawRectangle]는 사각형을 그립니다. 인자들은 다음과 같습니다: (x, y, width, height)
-. link:/documentation/graphics/ofGraphics.html#show_ofDrawRectangleRounded[ofDrawRectangleRounded]는 모서리가 둥근 사각형을 그립니다. 인자들은 다음과 같습니다: (x, y, width, height, radius of rounded corders)
+. link:/documentation/graphics/ofGraphics.html#show_ofDrawRectangle[ofDrawRectangle] 는 사각형을 그립니다. 인자들은 다음과 같습니다: (x, y, width, height)
+. link:/documentation/graphics/ofGraphics.html#show_ofDrawRectangleRounded[ofDrawRectangleRounded] 는 모서리가 둥근 사각형을 그립니다. 인자들은 다음과 같습니다: (x, y, width, height, radius of rounded corders)
 
-. link:/documentation/graphics/ofGraphics.html#show_ofTriangle[ofTriangle]는 삼각형을 그립니다. 인자들은 세 점의 좌표입니다: (x1, y1, x2, y2, x3, y3)
-. link:/documentation/graphics/ofGraphics.html#show_ofLine[ofLine]는 선을 그립니다. 인자들은 시작점과 끝점의 좌표입니다: (x1, y1, x2, y2)
-. link:/documentation/graphics/ofGraphics.html#show_ofEllipse[ofEllipse]의 인자들은 다음과 같습니다: (x, y, width, height)
-. link:/documentation/graphics/ofGraphics.html#show_ofCurve[ofCurve]는 점(x1, y1)부터 점(x2, y2)으로의 커브를 그립니다. 커브의 모양은 두개의 컨트롤 포인트 (x0, y0)와 (x3, y3)으로 결정됩니다. 
+. link:/documentation/graphics/ofGraphics.html#show_ofTriangle[ofTriangle] 는 삼각형을 그립니다. 인자들은 세 점의 좌표입니다: (x1, y1, x2, y2, x3, y3)
+. link:/documentation/graphics/ofGraphics.html#show_ofLine[ofLine] 는 선을 그립니다. 인자들은 시작점과 끝점의 좌표입니다: (x1, y1, x2, y2)
+. link:/documentation/graphics/ofGraphics.html#show_ofEllipse[ofEllipse] 의 인자들은 다음과 같습니다: (x, y, width, height)
+. link:/documentation/graphics/ofGraphics.html#show_ofCurve[ofCurve] 는 점(x1, y1)부터 점(x2, y2)으로의 커브를 그립니다. 커브의 모양은 두개의 컨트롤 포인트 (x0, y0)와 (x3, y3)으로 결정됩니다. 
 
 [NOTE]
 =====================================================================
@@ -415,9 +417,9 @@ Adding Movement
 
 위의 예제에서, 우리가 원을 그릴때, ofDrawCircle함수에 원을 윈도우의 어느 위치에에 그릴게 할것인지 두 숫자를 사용했습니다. 이 방법에 따르자면, 만약 원을 움직이게 할려면, 시간이 경과할때마다 이 숫자들을 변경해주어야 합니다. 처음 draw()출시에, 원은 (200, 300)에 그려지지만, 그 다음에는, 1픽셀만큼 우측으로 이동해 (201, 300)으로, 그 다음에는 (202, 300). 이런식으로 말이죠.
 
-`C++`에서, 그리고 일반적인 프로그래밍에서, 어떤 값을 갖고 있고, 그것을 변경하고 싶을때에는, "변수" 를 선언합니다. 변수는 표현하고자 하는 값에 따라 다른 형과 크기를 사용합니다. 가령 정수, 실수, 문자, 문자열 등이 있죠. 우리의 경우, ofDrawCircle함수에서 좌표를 의미하는 변수를 만들것이므로, 두개의 **int**(정수)를 사용할 것입니다.
+`C++` 에서, 그리고 일반적인 프로그래밍에서, 어떤 값을 갖고 있고, 그것을 변경하고 싶을때에는, "변수" 를 선언합니다. 변수는 표현하고자 하는 값에 따라 다른 형과 크기를 사용합니다. 가령 정수, 실수, 문자, 문자열 등이 있죠. 우리의 경우, ofDrawCircle함수에서 좌표를 의미하는 변수를 만들것이므로, 두개의 **int**(정수)를 사용할 것입니다.
 
-ofApp.cpp의 상단 `#include`라인의 바로 아래에, 이것을 넣어봅시다. 코드는 이렇게 시작될 것입니다:
+ofApp.cpp의 상단 `#include` 라인의 바로 아래에, 이것을 넣어봅시다. 코드는 이렇게 시작될 것입니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -471,7 +473,7 @@ void ofApp::draw(){
 
 이제 프로그램을 실행해보면, 원이 우측으로 움직이는것을 볼수 있을것입니다! 애니메이션이죠!
 
-이 새로운 코드라인에서, setup함수에서 처럼 "할당 연산자"를 다시한번 사용했습니다. 저 코드라인을 우리의 말로 하자면 "myCircleX의 값을 가져와 1을 더하고, 그 값을 myCircleX로 할당해" 라고 하는겁니다. 다른 말로는, myCircleX를 1씩 증가시키고 있는것이지요. `C++`에서는 다른 값에 의해 변수가 증가하는 기본적인 작업을 위한 단축표기를 제공하고 있습니다: `myCircleX += value;` 이죠. 우리의 경우, 이렇게 작성할 수 있습니다: `myCircleX += 1;`. 하지만 1씩 증가하는것이 정말로 일반적이어서, 심지어 더 축약하여 표기하는 방법이 있습니다: `myCircleX++`입니다. 그러니까 실제로 우리가 코드에서 이 편리한 단축 표기를 사용하고 있는것이지요:
+이 새로운 코드라인에서, setup함수에서 처럼 "할당 연산자"     를 다시한번 사용했습니다. 저 코드라인을 우리의 말로 하자면 "myCircleX의 값을 가져와 1을 더하고, 그 값을 myCircleX로 할당해" 라고 하는겁니다. 다른 말로는, myCircleX를 1씩 증가시키고 있는것이지요. `C++` 에서는 다른 값에 의해 변수가 증가하는 기본적인 작업을 위한 단축표기를 제공하고 있습니다: `myCircleX += value;` 이죠. 우리의 경우, 이렇게 작성할 수 있습니다: `myCircleX += 1;`. 하지만 1씩 증가하는것이 정말로 일반적이어서, 심지어 더 축약하여 표기하는 방법이 있습니다: `myCircleX++` 입니다. 그러니까 실제로 우리가 코드에서 이 편리한 단축 표기를 사용하고 있는것이지요:
 
 ....
 myCircleX = myCircleX + 1;
@@ -548,11 +550,11 @@ void ofApp::update(){
 The Pacman Effect
 ~~~~~~~~~~~~~~~~~
 
-Let's have one final adventure with our purple circle before saying goodbye. Our application is still a little disappointing because once our circle leaves the screen on the right, it's gone forever. Let's fix that problem by making the circle re-appear on the left side after leaving on the right: the Pacman Effect.
+튜토리얼을 마치기 전에 마지막으로 보라색 원으로 한가지를 더 해봅시다. 우리의 어플리케이션에서 원이 화면의 우측으로 영원히 사라져버리므로 여전히 약간 실망습니다. 이 문제를 원이 우측에서 사라지면 좌측에서 다시 나타나도록 해결해봅시다 : 이른바 팩맨 효과입니다.
 
-Before we write any code, let's think about what this is going to mean in terms of the variables that we have. In the current state, we have myCircleX acting as the x coordinate for our circle, and it is being incrementing by 1 (or 4, if you followed the tip above) every frame. By default, an openFrameworks window is 1024x768. So, one way we could achieve the Pacman Effect is to reset myCircleX back to 300 once it goes beyond 1024.
+코드를 작성하기 전에, 우리가 갖고 있는 변수의 측면에서 이것이 무슨 의미를 갖게 되는지 생각해봅시다. 현재 myCircleX는 원의 x 좌표로 사용되고 있고, 이것은 매 프레임마다 1씩 증가하고 있습니다(바로 위의 팁을 따른다면 4씩 증가하겠죠?). 기본적으로, 오픈프레임웍스 윈도우는 1024x768의 크기를 갖습니다. 따라서 팩맨 효과를 적용하는 방법중 하나는 myCircleX이 1024보다 커질경우 300으로 리셋하는것입니다.
 
-How can we do this? We know that we are supposed to do any variable updating in the update() function, so let's start there. We also know that we *only* want to reset myCircleX *if* it has gone above 1024. So for that, we use the 'if' statement.
+어떻게 하면 될까요? 우리는 어떤 변수든지 update()안에서 다룬다는것을 알고 있으므로, 여기서 시작해보도록 합시다. 또한 *만약* myCircleX가 1024보다 클때*만*, 리셋하면 된다는것도 알고 있죠. 이를 위해서 `if`구문을 사용합니다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -564,19 +566,18 @@ void ofApp::update(){
     }
 }
 ---------------------------------------------------------------------
-This code says:
+코드의 뜻은 이렇습니다:
 
-- increment myCircleX by one.
-- test if myCircleX is greater than 1024
-- *only* if that test turns out to be true, set myCircleX back to 300;
-
+- myCircleX를 1씩 증가시킨다
+- myCircleX가 1024보다 큰지 테스트한다.
+- 테스트한 결과가 참일때*만*, myCircleX 를 300으로 되돌린다;
 
 Adding Interaction
 ------------------
 
-Now that you are a master of animation, it's time to get the user involved. For this section, we will be focusing on keyboard and mouse interaction.
+이제 여러분은 애니메이션을 마스터했습니다. 이제 사용자의 참여에 대해서 배울 시간이군요. 이 섹션에서는, 키보드와 마우스 인터랙션에 집중해보려 합니다.
 
-So far, we've been focusing on 3 functions: setup(), update(), and draw(). For interaction, we will start with 2 of the other functions in your ofApp.cpp file:
+지금까지는, setup(), update(), 그리고 draw() 세 함수에 대해 알아봤습니다. 인터랙션을 위해서는, ofApp.cpp 파일안의 다른 2개의 함수로 시작합니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -589,38 +590,41 @@ void ofApp::keyReleased(int key){
 }
 ---------------------------------------------------------------------
 
-Going back to the producer metaphor can help us understand how these functions work. openFrameworks has done the hard work of setting up your app to know when the user has done some keyboard business. Now, all you have to do is put code into these functions that you want to execute when a particular event occurs:
+프로덕션 비유로 돌아가서 보면 이런 함수들의 동작원리를 이해하는데 도움이 됩니다. 오픈프레임웍스는 여러분의 앱이 사용자가 키보드로 하는 작업들이 언제 발생하는지 알수 있도록 어려운 작업들을 해두었습니다. 이제, 여러분이 할일은 이런 특정 이벤트들이 발생했을때 수행할 것들을 이 함수들안에 코드로 작성하는것입니다:
 
 - user physically presses down on a key
 - user physically releases the key
 
-This might be a little unintuitive if you are accustomed to thinking about typing a letter as a single action: "I just typed the letter 'o'". But in fact, they are 2 distinct actions, or "events", and eventually you might find it handy to be able to distinguish between them.
+- 사용자가 물리적인 키를 누름
+- 사용자가 물리적인 키를 눌렀다 뗌
 
-Create a new project in "myApps" called "keyboardInteraction". If you need to, go back to "Creating your First Project" to see how.
+이는 여러분이 평소처럼 키를 누르는 것을 하나의 행위로 생각하는데 익숙했다면 직관적이지 않을 수 있습니다: "그냥 `o`키를 눌렀음". 하지만 사실 여기엔 두 가지 행위, 또는 "이벤트"로 구분됩니다. 그리고 궁극적으로 여러분이 이 둘의 차이를 구별할 수 있어야 합니다.
 
-image:KeyboardInteraction01.png["Keyboard Interaction Project",width="750"]
+"myApps"에 "keyboardInteraction"이라는 새 프로젝트를 생성합니다. 만약 필요하다면, "여러분의 첫 프로젝트 생성하기"로 돌아가서 어떻게 하는지 살펴보시기 바랍니다.
+
+image::KeyboardInteraction01.png["Keyboard Interaction Project",width="750"]
 
 Introducing, cout!
 ~~~~~~~~~~~~~~~~~~
 
-The easiest way to quickly see how these functions work is to print a message to the console. Remember when we printed "Hello, World!" to the console in the introduction? We did that using a `C++` thing called http://www.cplusplus.com/reference/iostream/cout/["cout"] (pronounced 'c out'). The syntax for using it is a bit weird because it's not technically a function (it's actually an object, which we will talk more about in later chapters), but if you can get beyond the syntax, it's actually very useful for debugging.
+이 기능들이 어떻게 동작하는지 알아볼 수 있는 가장 쉽고 빠른 방법은 콘솔에 메시지를 출력하는 것입니다. 콘솔에 "Hello, World"를 출력하는 가이드 기억나시죠? http://www.cplusplus.com/reference/iostream/cout/["cout"] 이라 불리는 것을 `C++`에서 사용했습니다. 이 문법을 사용하는 것은 약간 이상한데, 사실 기술적으로 이녀석은 함수가 아니기 때문입니다(정확히는 오브젝트이며, 추후 챕터에서 이에 대해서 다룰 것입니다). 하지만 이 문법에 대해 익숙해진다면, 디버깅을 할때 아주 유용합니다.
 
-But first: you may be asking yourself: how will we see text output? We are dealing with a GUI interface now. Luckily, XCode/Code::Blocks provides a window where we can see anything text that your program outputs (also known as http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout]).
+하지만 우선: 스스로에게 물어봅시다: 텍스트 출력을 어떻게 확인하죠? 우리는 지금 GUI를 다루고 있습니다. 다행이도, Xcode/Code::Blocks는 프로그램에서 출력되는 텍스트를 확인할 수 있는 윈도우를 제공하고 있습니다(http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout] 이라고 불리기도 합니다).
 
-So start by going to View->Debug Area->Activate Console, or press apple+shift+C when using XCode. Code::Blocks automatically opens a console window when you press F9 (to build and run your program).
+자, Xcode에서 메뉴의 View->Debug Area->Activate Console을 투르거나, 혹은 apple+shift+C 단축기를 눌러봅시다.Code::Blocks는 F9를 누를때(프로그램을 빌드하거나 실행) 자동으로 콘솔 윈도우를 보여줍니다.
 
-image:activate-console.png["Activate Console"]
+image::activate-console.png["Activate Console"]
 
 [NOTE]
 =====================================================================
-For XCode 3 users, use the key command Shift-Cmd-R. There's also a preference in XCode to bring up the console after each launch - Xcode->Preferences->Debugging->On Start Show Console.
+Xcode 3를 사용하신다면, Shift+Cmd+R 단축키를 누르십시오. 또한 XCode 환경설정인 Xcode->Preference->Debugging->On Start Show console 에서 콘솔창을 보이게 할 수 있습니다.
 =====================================================================
 
-You should see a panel like this appear at the bottom of your XCode window
+XCode 윈도우의 하단에 아래와 같은 패널이 보일것입니다.
 
-image:debug-area.png["Debug Area"]
+image::debug-area.png["Debug Area"]
 
-Excellent! Your output will appear in the pane on the right. Now we will add some code to our key functions that will print stuff to the console:
+훌륭합니다! 이제 출력은 패널의 우측에 보여질 것입니다. 이제 키 기능을 사용하여 콘솔에 출력하는 코드를 작성해봅시다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -633,11 +637,11 @@ void ofApp::keyReleased(int key){
 }
 ---------------------------------------------------------------------
 
-As I mentioned before, the syntax for cout is a little strange and, frankly, way beyond the scope of this chapter. In `C++` parlance, cout represents the "standard output stream", and without worrying too much about what that means, "stream" is a nice way to think about it. If you look at the line of code within 'keyPressed', it appears that there is a "stream" of data flowing into the "cout". First we send in the string "keyPressed " down the stream, then we send in a variable: key. Finally, we send http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] down the stream. endl simply tells the console to go to the next line.
+앞에서 언급했던것처럼, cout의 문법은 약간 이상합니다. 그리고 솔직히, 이 챕터의 범위를 벗어납니다. `C++`에서는, cout은 "표준 출력 스트림(standard output stream)"을 의미하며 여기서 이게 무슨말인지 걱정할 필요는 없습니다만, "stream(흐름)"이야 말로 이것에 대해 생각하기엔 좋은 방법입니다. `keyPressed` 가 포함된 코드라인을 살펴보면, 데이터의 "stream"이 "cout"으로 되어있음을 볼 수 있습니다. 우선 "keyPressed" 문자열을 stream으로 흘려보내고, 그리고 나서 변수 key 를 흘려보냈습니다. 마지막으로, http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] 를 보냈습니다. endl은 콘솔에게 다음 줄로 넘어가라 라고 명령하는 것과 같습니다.
 
-The 'key' variable represents the key that was pressed or released. More about this in a bit.
+'key' 변수는 눌렸거나, 떼었을 키를 의미합니다. 이것에 대해서 좀더 살펴보죠.
 
-Let's give it a try. Launch your program and type some keys. I will type "qwerty". You should see something like this in the console:
+한번 직접 해봅시다. 프로그램을 실행하고 아무 키나 눌러보십시오. 저는 "qwerty"를 입력했습니다. 콘솔에는 이렇게 보일겁니다:
 
 ...................................
 GNU gdb 6.3.50-20050815 (Apple version gdb-1708) (Thu Nov  3 21:59:02 UTC 2011)
@@ -662,27 +666,27 @@ keyPressed 121
 keyReleased 121
 ...................................
 
-Don't worry about the crap at the beginning -- that's added by the debugger.
+시작부분의 잡다한 부분은 신경쓰지 마세요 -- 이것들은 디버거에서 추가한 것들입니다.
 
-The fact that the 'key' is supplied as an 'int' may seem a bit strange. Perhaps you were expecting a string or a char? In fact, what this number represents is the http://www.asciitable.com/[ASCII code] for the key pressed. Check out this table:
+'key'는 'int(정수형)'인데, 이건 좀 이상해 보입니다. 아마도 여러분은 문자나 문자열을 기대하고 있었죠? 사실, 이 숫자는 눌렸던 키의 http://www.asciitable.com/[ASCII 코드] 입니다. 표를 한번 살펴보죠:
 
-image:ascii_table.jpg["ASCII Table"]
+image::ascii_table.jpg["ASCII Table"]
 
-On the right of each column in red, you will see a key on your keyboard. Under the corresponding "Dec" (decimal=base 10) column, you will see the number that you will receive in the key functions.
+각 열의 우측에 붉은색을 보면, 키보드의 키를 볼 수 있습니다. 아래에 대응되는 "Dec(10진수)" 열을 보시면, key 함수에서 받는 숫자를 볼 수 있습니다.
 
 [TIP]
 =====================================================================
-You can actually use something called http://www.cplusplus.com/doc/tutorial/typecasting/[type casting] to turn the int into a 'char', or letter. Simply put "(char)" before the "key" variable so that your cout statement looks like this:
+사실 이 int를 'char'나 문자로 변환하기 위해 http://www.cplusplus.com/doc/tutorial/typecasting/[type casting(형 변환)] 이라 불리는 것을 사용할수도 있습니다. "key"앞에 "(char)"만 붙여넣어 cout 구문에 넣으면 됩니다:
 [source,cpp]
 ---------------------------------------------------------------------
 cout << "keyPressed " << (char)key << endl;
 ---------------------------------------------------------------------
-More about type casting later in this chapter!
+형변환에 대해서는 이 나중에 더 살펴보도록 하죠!
 =====================================================================
 
-Fantastic. But presumably we want to do more with the key presses than print to the console. Let's use the keys to move a ball around on the screen.
+훌륭합니다만, 키를 이용해 콘솔에 출력하는 그럴듯한 프로그램이 되었네요. 이번엔 키를 이용해서 화면의 공을 움직여봅시다.
 
-Start by adding two variables to your ofApp and using them to draw a circle, just like we did in the Adding Movement section:
+ofApp에 두 변수를 추가하고 이것들을 이용해 원을 그려봅시다. 아치 움직임을 추가하는 앞 섹션과 같이요:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -773,7 +777,7 @@ void ofApp::mouseReleased(int x, int y, int button){
 
 Create a new project called MouseInteraction so we can play with them.
 
-image:MouseInteraction01.png["Mouse Interaction Project"]
+image::MouseInteraction01.png["Mouse Interaction Project"]
 
 Let's do the same thing with the mouse functions that we did with the key functions. Add the following to your project:
 
@@ -875,11 +879,11 @@ You should find that the circle grows every time you click the mouse, regardless
 
 Well, luckily we are dealing with a circle, which will make it significantly easier. Because if we can determine the distance between the center of the circle and the location of the mouse click, we can compare this distance to the radius, and if it is less than the radius, then the click was inside the circle. Take a look at the diagrams:
 
-image:hit-test-01.png["Hit Test 1"]
+image::hit-test-01.png["Hit Test 1"]
 
 We know that the radius of the circle = 300, and we know that the mouse click is 230 pixels away from the center of the circle. So, was the mouse click inside the circle?
 
-image:hit-test-02.png["Hit Test 2"]
+image::hit-test-02.png["Hit Test 2"]
 
 In this case, we know that the mouse click was 90 pixels from the center of the circle, so the click was clearly inside the circle.
 
@@ -927,7 +931,7 @@ In the "Adding Movement" section, we introduced the idea of using variables to r
 
 But there will be times when you do need to have a variable that can hold a fraction, or something completely different, such as letters, words, even a location in memory. There are variable types for each of these situations. Here is a short list of some of them from http://www.cplusplus.com/doc/tutorial/variables/[cplusplus.com]
 
-image:variable-types.png["Variable Types"]
+image::variable-types.png["Variable Types"]
 
 So, as you can see, our basic integer takes up 4 bytes in memory. This is a finite amount of memory, and therefore there is limited (but pretty huge!) range of values that it can hold: namely, -2,147,483,648 to 2,147,483,647. If you need to store higher (or lower) numbers, you'd have to use a 'long int', which (contrary to the diagram) can go up to 9,223,372,036,854,775,807 and down to -9,223,372,036,854,775,808.
 
