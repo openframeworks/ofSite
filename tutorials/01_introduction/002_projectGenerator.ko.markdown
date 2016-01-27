@@ -4,6 +4,8 @@
 .. summary: 오픈프레임웍스 0090 부터 프로젝트 생성을 위해 새로 업데이트된 프로젝트 생성기가 제공됩니다.
 .. author: Jesus Gollonet
 .. author_site: http://jesusgollonet.com
+.. translator: Yi donghoon
+.. translator_site: http://openframeworks.kr
 ---
 
 ## 1. 이것은 무엇입니까?

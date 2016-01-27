@@ -49,4 +49,6 @@ MESSAGES = {
     'instructions': 'openFrameworksはコンパイルされていない状態でライブラリとしてリリースしています。つまり、openFrameworksをダウンロードしてunzipしたら、以下のフォルダが展開されるはずです：「addons/」「/apps」「/libs」など。これらのフォルダにopenFrameworksの全てが含まれています。ですので、もし複数のバージョンのopenFrameworksを同時に保持していたいのであれば、複数のフォルダを作成して保存するだけです。例えば「of_v0.9.0_osx_release/」「of_v0.8.4_osx_release/」というフォルダを一つずつ作成し、それぞれに「apps/」フォルダなどが含まれるようにします。もし新しいバージョンのopenFrameworksがリリースされたとしても、作成した古いバージョンのアプリケーションは、引き続き古いバージョンのopenFrameworksでコンパイル可能です。<br/><br/>exampleフォルダーは、スタート地点としてうってつけです。exampleフォルダの中には、openFrameworksで可能な様々な実例が入っています。フォントのロード、グラフィクス、オーディオ入出力、サウンドファイルを再生しFFT解析、ビデオのキャプチャー、動画の再生、画像のロードと保存、イベントの取り扱い、シリアル接続などをデモしています。',
     
     'other_releases': '<h2>other releases</h2>    Older releases of openFrameworks are archived <a href="older/">here</a>. For the absolute latest version of openFrameworks, see the <a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>. If you\'re interested in contributing to openFrameworks, you should fork the GitHub repository and follow the guidelines for the <a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">openFrameworks GitHub workflow</a>.',
+    
+    'translation': 'translation'
 }

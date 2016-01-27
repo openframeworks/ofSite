@@ -38,6 +38,8 @@ class MarkdownArticle:
         self.summary = ''
         self.author = ''
         self.author_site = ''
+        self.translator = ''
+        self.translator_site = ''
         self.body = ''
         self.type = 'markdown'
         self.lang = lang
@@ -62,6 +64,12 @@ class MarkdownArticle:
             if state=='header' and line.find('author_site:')!=-1:
                 self.author_site = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
+            if state=='header' and line.find('translator:')!=-1:
+                self.translator = stripFileLine(line[line.find(':')+1:]).strip(' ')
+                continue
+            if state=='header' and line.find('translator_site:')!=-1:
+                self.translator_site = stripFileLine(line[line.find(':')+1:]).strip(' ')
+                continue
             if state=='header' and stripFileLine(line).strip(' ')=='---':
                 return  
                    
@@ -78,6 +86,8 @@ class AsciidocArticle:
         self.summary = ''
         self.author = ''
         self.author_site = ''
+        self.translator = ''
+        self.translator_site = ''
         self.body = ''
         self.type = 'asciidoc'
         self.lang = lang
@@ -97,6 +107,12 @@ class AsciidocArticle:
                 continue
             if line.find(':author_site:')!=-1:
                 self.author_site = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
+                continue
+            if line.find(':translator:')!=-1:
+                self.translator = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
+                continue
+            if line.find(':translator_site:')!=-1:
+                self.translator_site = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
                 continue
             if stripFileLine(line).find(":")!=0:
                 return   

@@ -49,4 +49,6 @@ MESSAGES = {
     'instructions': '저희는 오픈프레임웍스를 컴파일되지 않은 라이브러리로 배포하고 있습니다. openFrameworks를 다운받아 압축을 풀면, addons/, apps/, libs/ 등등의 폴더를 보실 수 있습니다. 오픈프레임웍스가 이 폴더들을 모두 포함하고 있으므로, 여러 버전의 openFrameworks를 동시에 유지하고 싶다면, 그냥 폴더를 따로 갖고 있으면 됩니다. 예를들어 `of_v${currentVersion}_osx_release/` 폴더와  `of_v${olderVersion}_osx_release/` 폴더가 있다면, 각각은 자신만의 apps/폴더를 갖게 됩니다. 추후 새 버전의 openFrameworks가 릴리즈 되더라도, 여러분의 이전 앱들은 이전버전의 openFrameworks로 컴파일 할 수 있습니다.<br/><br/>예제폴더들은 좋은 출발점입니다. 예제폴더 내부에서 openFrameworks로 가능한 다양한 예제들을 살펴볼 수 있습니다. 폰트불러오기, 그래픽, 오디오 입출력, 사운드 재생 및 FFT분석, 웹캠 사용하기, 비디오 재생, 이미지를 불러오거나 저장하기, 이벤트 다루기, 시리얼 통신 등등을 볼 수 있습니다.',
     
     'other_releases': '<h2>다른 릴리즈</h2>    오픈프레임웍스의 이전 릴리즈는 <a href="older/">이곳</a>에 보관되어 있습니다. 가장 최신버전의 오픈프레임웍스는 <a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>을 살펴봐주십시오. 오픈프레임웍스에 대해 공헌하고 싶으신 분들은, GitHub 저장소를 fork하신 뒤, <a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">오픈프레임웍스 GitHub 워크플로우</a> 가이드를 따라주십시오.',
+    
+    'translation': 'translation'
 }
