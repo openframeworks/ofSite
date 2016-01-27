@@ -1,4 +1,3 @@
--*- coding: utf-8 -*
 :author: Jeff Crouse <jeff@crouse.cc>
 :title: ofTutorials - Introduction
 :date: September 2013
