@@ -22,12 +22,12 @@
 
 <%def name="lang_link(permalink, src_lang, dst_lang, default_lang)"><%
     elements = permalink.split('/')
-    if len(elements)>0 and elements[0] == src_lang:
-        no_lang = "/".join(elements[1:])
+    if len(elements)>1 and elements[1] == src_lang:
+        no_lang = "/".join(elements[2:])
     else:
         no_lang = "/".join(elements)
     if dst_lang == default_lang:
-        dst_link = no_lang
+        dst_link = "/" + no_lang
     else:
         dst_link = "/" + dst_lang + no_lang
 %>${dst_link}</%def>
