@@ -1,6 +1,6 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="base.tmpl" />
-<%namespace name="helpers" file="helpers.tmpl"/>
+<%namespace name="of" file="of_helpers.tmpl"/>
 
 <%block name="extra_head">
     <script src="/assets/js/documentation.js" type="text/javascript"></script>
@@ -15,10 +15,10 @@
             </ul-->
     	    <h1>${post.title()}</h1>
     	    
-    	    <span class="article_meta">${post.date}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+    	    <span class="article_meta">${post.date}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;${permalink}
         	<a href="${post.meta[lang]["author_site"]}">${post.author()}</a></span><br/>
         	% if post.meta[lang]["translator"] != "":
-            	<span class="article_meta">${helpers.msg("translation", locals())}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="${post.meta[lang]["translator_site"]}">${post.meta[lang]["translator"]}</a></span><br/>
+            	<span class="article_meta">${of.msg("translation", locals())}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="${post.meta[lang]["translator_site"]}">${post.meta[lang]["translator"]}</a></span><br/>
         	% endif
     	    <div class="article">
                 ${post.text()}
