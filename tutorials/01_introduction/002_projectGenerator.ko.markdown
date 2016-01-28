@@ -1,3 +1,4 @@
+-*- coding: utf-8 -*-
 ---
 .. date: 2012/10/20 17:00:00
 .. title: projectGenerator로 새 프로젝트를 생성하세요
@@ -5,7 +6,7 @@
 .. author: Jesus Gollonet
 .. author_site: http://jesusgollonet.com
 .. translator: Yi donghoon
-.. translator_site: http://openframeworks.kr
+.. translator_site: http://icq4ever.net
 ---
 
 ## 1. 이것은 무엇입니까?

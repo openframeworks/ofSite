@@ -1,8 +1,11 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2013/08/17 10:00:00
 .. title: 쉐이더 소개
 .. summary: ofShare와 GLSL의 기초
 .. author: Lucasz Karluk, Joshua Noble, Jordi Puig
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 ###Contents
@@ -44,7 +47,7 @@
 
 ![IMG](shaders_pipeline.png)
 
-Walking from the upper left to the lower right we have:
+<!-- Walking from the upper left to the lower right we have: -->
 좌측 상단에서 우측 하단으로 아래와 같습니다:
 
 <!-- * 1) Our OF application passing some vertex positions and texture coordinates to the graphics card

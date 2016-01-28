@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 .. title: raspberry pi
 
 <!-- If you would like to contribute code, there are a few workflows listed below (NOTE: there may be better ways to do this!  If you are a smart github user and you find yourself laughing at the instructions below, please improve them :).

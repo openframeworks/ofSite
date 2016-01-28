@@ -1,9 +1,9 @@
 ## -*- coding: utf-8 -*-
-<%inherit file="/_templates/slideshow_wide.mako" />
+.. title: download
 
-<!--h1>다운로드</h1-->
+<!--<h1>다운로드</h1-->
 
-
+<!--
 <div id="download-latest-header">
 
 	<h2>${bf.config.currentVersion}</h2>
@@ -125,3 +125,4 @@ other releases
 --------------
 
 이전 버전의 openFrameworks 릴리즈는 [이곳](older.html)에 저장되어 있습니다. 가장 최신의 openFrmaeworks는 이곳 [openFrameworks GitHub](https://bithub.com/openframeworks/openFrameworks/)에서 볼 수 있습니다. 여러분중에 openFrameworks의 공헌에 관심이 있으시다면, GitHub저장소를 fork하고 [openFrameworks GitHub workflow](https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow)의 가이드라인에 따라주시면 됩니다.
+-->

@@ -1,9 +1,12 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2013/11/20 4:00:00
 .. title: 메시 생성하기
 .. summary: 이미지로부터 메시 생성하기 기초편
 .. author: Michael Hadley
 .. author_site : www.mikewesthad.wordpress.com/me
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 
@@ -30,7 +33,7 @@
 	* 이미지 불러오기 
     * 픽셀에서 메시 생성하기
     * ofEasyCam을 이용하여 메시 둘러보기
-3. [조작하기 : 메쉬를 수정하는 효과 추가하기 ](#manipulations)
+3. [조작하기 : 메쉬를 수정하는 효과 추가하기](#manipulations)
     * 진동 추가하기
     * 정점에 궤도를 추가하기
     * 상호작용하는 확대효과 생성
@@ -59,10 +62,12 @@ mesh는 다양한 방법으로 연결이 가능한 **정점들**(Vertices. Verte
 자 이제 코드를 직접 작성해보죠!
 
 메쉬 변수를 헤더파일(.h)에 추가합니다:
+
 ~~~.h
     ofMesh mesh;
 ~~~
 소스파일(.cpp)파일에서 *setup()*과 *draw()* 함수에 아래 코드들을 추가해줍니다.:
+
 ~~~.cpp
 void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_POINTS);
@@ -231,14 +236,19 @@ HubbleMesh라는 이름으로 [새 오픈프레임웍스 프로젝트](http://ww
 자 이제 알록달록한 픽셀뭉치를 갖게 되었습니다. 하지만 저 픽셀들에서 메쉬로 변한하기 위해 어떠한 규칙들을 사용해야할까요? 일단 점을 그리는것으로 시작해 선을 그려볼까요? 우리의 이미지에는 엄청난 별들이 있으니, 저 별들이 위치한 곳에 정점을 생성해봅시다. 그리고 나면, 인접한 정점들과 선을 그려 일종의 거미줄을 생성할 수 있을 것입니다.
 
 자 우선적으로, 이미지를 불러와봅시다. main.cpp파일로 가서 창 크기를 다운받은 이미지의 크기와 동일하도록 수정해봅시다:
+
 ~~~.cpp
     ofSetupOpenGL(800,800,OF_WINDOW);
 ~~~
+
 그리고 헤더파일(testApp.h)로 가서 아래 코드를 추가합니다:
+
 ~~~.h
     ofImage image;
 ~~~
+
 그리고 마지막으로, 소스파일(testApp.cpp)에 아래와 같이 코드를 추가합니다:
+
 ~~~.cpp
 void testApp::setup(){
     image.loadImage("stars.png");
@@ -382,10 +392,12 @@ cout << mesh.getNumVertices() << endl;  // 아마 64,000 개 이상일 것입니
 흠.. 코드를 변경했는데 많이 바뀐거 같진 않죠? 자, 이제 마지막으로 추가할 처리가 남아있습니다: 바로 카메라를 추가하는 것입니다.
 
 아래 코드를 헤더파일에 추가하세요:
+
 ~~~.h
 		ofEasyCam easyCam;
 ~~~
 그리고나서 draw함수를 아래와 같이 수정해보세요:
+
 ~~~.cpp
 void testApp::draw(){
     ofColor centerColor = ofColor(85, 78, 68);
@@ -425,11 +437,13 @@ ofRandom()을 사용하면, 값의 범위를 지정할수 있고, 지정한 범�
 움직임을 생성하기 위해 Perlin 노이즈를 사용할때는, 일반적으로 현재의 시간을 입력값으로 전달합니다(앞서 설명했던 그래프에서의 x값). 따라서, 정점의 위치를 변경하기 위해서, 우리는 ofSignedNoise에 시간을 전달할 것입니다([ofGetElapsedTimef()](http://www.openframeworks.kr/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef])함수를 이용해서 말이죠). 이렇게 하면 결과의 값은 시간이 경과할수록 스무스한 값을 얻을수 있습니다. 주의할 점은, 우리는 각각의 정점들이 독립적으로 움직이도록 할것이라는 겁니다. 만약 모든 정점들에 대해 ofSignedNoise에 같은 시간값을 전달해 주게 되면, 모든 정점들이 똑같이 움직이게 될것입니다. 즉 정점 1을 움직였다면, 정점2는 다른 시간을 사용해야 한다는 것이죠.(정점 3, 4 또한 마찬가지입니다.)
 
 코드로 넘어가봅시다. 헤더파일에 아래 코드를 추가해주세요:
+
 ~~~.h
 		vector<ofVec3f> offsets;
 ~~~
 
 그리고 setup함수에 아래의 두 줄을 추가해주세요:
+
 ~~~.cpp
     // Add this line:
     ofSetFrameRate(60);
@@ -457,7 +471,8 @@ ofRandom()을 사용하면, 값의 범위를 지정할수 있고, 지정한 범�
     }
 ~~~
 
-마지막으로, 아래의 코드들을 update함수에 추가해줍니다:
+마지막으로, 아래의 코드들을 update 함수에 추가해줍니다:
+
 ~~~.cpp
     int numVerts = mesh.getNumVertices();
     for (int i=0; i<numVerts; ++i) {
@@ -469,7 +484,7 @@ ofRandom()을 사용하면, 값의 범위를 지정할수 있고, 지정한 범�
         ofVec3f timeOffsets = offsets[i];
 	
 	    // Perlin 노이즈가 몇가지 파라미터를 사용하는 일반적인 디자인 패턴입니다.
-	    // ofSignedNoise(time*timeScale+timeOffset)*displacementScale
+	    //     ofSignedNoise(time*timeScale+timeOffset)*displacementScale
 	    //     ofSignedNoise(time) 은 주어진 시간에 따라  노이즈 값을 스무스하게 변경하여 제공해줍니다.
 	    //     ofSignedNoise(time*timeScale)는 노이즈를 얼마나 스무스하게 조절할지를 가능케 해줍니다.(timeScale이 작을수록 더 스무스해집니다)
 	    //     ofSignedNoise(time+timeOffset) allows us to use the same Perlin noise function to control multiple things and have them look as if they are moving independently
@@ -506,6 +521,7 @@ setup에서, 우리는 두가지를 추가했습니다:
 z축은 잊어버리고 x와 y 축만 생각해봅시다. 원모양의 궤도를 돌게 한다 생각해보면, 사인과 코사인을 사용하기 위해 각을 사용하면 됩니다. [wiki](http://ko.wikipedia.org/wiki/%EA%B7%B9%EC%A2%8C%ED%91%9C%EA%B3%84) 페이지의 극좌표를 읽어보세요. 특히 "극좌표와 데카르트 좌표 사이의 변환" 섹션을 살펴보시길 바랍니다.
 
 만약 하나의 점이 중심에서 얼마나 떨어져있는지 알고 있다면, 우리는 공간상의 거리와 각을 사용하여 점의 위치를 정의할 수 있습니다(극좌표). 우리는 이 거리와 각을 이용하여 x, y값으로 변환할 수 있습니다(데카르트 좌표):
+
 ~~~.cpp
     x = distance * cos(angle)
     y = distance * sin(angle)
@@ -520,6 +536,7 @@ z축은 잊어버리고 x와 y 축만 생각해봅시다. 원모양의 궤도를
 3. 각 정점에 대해 시간이 경과할때마다 극좌표의 각을 서서히 증가시킵니다.
 
 헤더파일에 새 변수들을 추가해봅시다:
+
 ~~~.h
 		// 궤도움직임을 온오프 하기위해 사용될 변수들
 		ofMesh meshCopy;
@@ -533,6 +550,7 @@ z축은 잊어버리고 x와 y 축만 생각해봅시다. 원모양의 궤도를
 ~~~
 
 그리고 setup함수의 끝에 아래의 내용을 추가하세요:
+
 ~~~.cpp
    // 메쉬를 위한 중심점을 계산해주어야 하는데
    // ofMesh의 getCentroid()는 모든 정점들의 평균위치를 찾아줍니다.
@@ -557,7 +575,9 @@ z축은 잊어버리고 x와 y 축만 생각해봅시다. 원모양의 궤도를
     startOrbitTime = 0.0;
     meshCopy = mesh;		// 메쉬를 복사하여 저장해두므로써, 원래 상태를 다시 불러올 수 있습니다.
 ~~~
+
 아래 코드를 update함수에 추가합니다:
+
 ~~~.cpp
     if (orbiting) {
         int numVerts = mesh.getNumVertices();
@@ -583,6 +603,7 @@ z축은 잊어버리고 x와 y 축만 생각해봅시다. 원모양의 궤도를
     }
 ~~~
 아래코드를 keyPressed 함수에 추가합니다:
+
 ~~~.cpp
     if (key == 'o') {
         orbiting = !orbiting; 		    // boolean변수를 토글링한다.
@@ -594,6 +615,7 @@ z축은 잊어버리고 x와 y 축만 생각해봅시다. 원모양의 궤도를
 자 이제 'o'키를 눌러서 궤도움직임을 온오프할 수 있게 되었습니다.
 
 프로그래밍 노트 : 변수 *meshCopy*는 원본 메쉬를 복사해 백업하는데 사용되었습니다. 나중에 필요할 때 불러올 수 있게 하기 위해서이죠. setup함수에서 아래와 같이 사용하였었습니다: 
+
 ~~~.cpp
 meshCopy = mesh;
 ~~~
@@ -625,14 +647,16 @@ The last tweak we will add gives a bit of interactivity to the mesh.  We will ad
 
 헤더에 새로운 변수를 추가합니다:
 ~~~.h
-        // 궤도 움직임 효과와 마찬가지로, 확대효과를 토글링 하기 위한 변수 추가
-		bool mouseDisplacement;
+    // 궤도 움직임 효과와 마찬가지로, 확대효과를 토글링 하기 위한 변수 추가
+	bool mouseDisplacement;
 ~~~
+
 setup함수의 끝에 아래 코드들을 추가하세요
 ~~~.cpp
     // 효과를 켜기 전에는 효과를 끈다.
     mouseDisplacement = false;
 ~~~
+
 아래 코드를 update함수의 시작부분에 추가하세요:
 ~~~.cpp
     if (mouseDisplacement) {
@@ -662,6 +686,7 @@ setup함수의 끝에 아래 코드들을 추가하세요
         }
     }
 ~~~
+
 그리고 마지막으로, 아래코드들을 keyPressed함수의 시작부분에 추가하세요:
 ~~~.cpp
     if (key == 'm') {

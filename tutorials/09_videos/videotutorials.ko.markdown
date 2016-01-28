@@ -1,9 +1,12 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2015/11/08 20:18:00
 .. title: 오픈프레임웍스 비디오 튜토리얼
 .. summary: 간략한 비디오 튜토리얼 리스트
 .. author: Lewis Lepton
 .. author_site: http://www.lewislepton.com
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 이 비디오들은 초보자를 위한것이지만, 스킬업을 위한 사람들을 위한 것이기도 합니다.

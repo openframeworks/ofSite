@@ -1,9 +1,12 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2013/09/01 00:00:00
 .. title: OpenGL의 기초
 .. summary: OF를 위한 OpenGL 소개
 .. author: Joshua Noble
 .. author_site: http://twitter.com/fctry2/
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 

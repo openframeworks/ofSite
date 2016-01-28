@@ -1,5 +1,5 @@
 ## -*- coding: utf-8 -*-
-<%inherit file="/_templates/markdown.mako" />
+.. title: xcode
 
 Xcode 셋업 가이드
 ==================
