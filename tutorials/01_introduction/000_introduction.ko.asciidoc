@@ -1,4 +1,3 @@
--*- coding: utf-8 -*-
 :author: Jeff Crouse <jeff@crouse.cc>
 :title: ofTutorials - Introduction
 :date: September 2013
@@ -22,25 +21,25 @@ What is OpenFrameworks?
 __________________________
 오픈프레임웍스는 실험적인 작업을 위한 간단하고 직관적인 프레임워크를 제공하여 생산적인 프로세스를 돕는 창조적 http://www.openframeworks.cc/about/license.html[오픈소스] http://en.wikipedia.org/wiki/C%2B%2B"[C++] 저작도구입니다. 이 저작도구는 범용적인 "접착제" 의 역활을 하도록 디자인 되었으며 아래에 나열된 일반적으로 사용되는 라이브러리들을 포함하고 있습니다. 
 
--   그래픽 :http://www.opengl.org/[OpenGL],
+-   그래픽 : http://www.opengl.org/[OpenGL],
     http://glew.sourceforge.net/[GLEW],
     http://www.opengl.org/resources/libraries/glut/[GLUT],
     http://www.glfw.org/[GLFW],
     https://code.google.com/p/libtess2/[libtess2],
     http://cairographics.org/[cairo] 
 
--   오디오 입력, 출력 및 분석 :http://www.music.mcgill.ca/~gary/rtaudio/[rtAudio],
+-   오디오 입력, 출력 및 분석 : http://www.music.mcgill.ca/~gary/rtaudio/[rtAudio],
     http://www.portaudio.com/[PortAudio]또는 http://www.fmod.org/[FMOD],
     http://kissfft.sourceforge.net/[KissFFT] 
 
--   폰트 :http://freetype.sourceforge.net/index2.html[FreeType]
+-   폰트 : http://freetype.sourceforge.net/index2.html[FreeType]
 
--   이미지 불러오기 및 저장 :http://freeimage.sourceforge.net/[FreeImage]
+-   이미지 불러오기 및 저장 : http://freeimage.sourceforge.net/[FreeImage]
 
--   비디오 재생 :http://developer.apple.com/quicktime/[Quicktime],
-    https://github.com/ofTheo/videoInput[videoInput]
+-   비디오 재생 : http://developer.apple.com/quicktime/[Quicktime],
+    https://github.com/ofTheo/vihdeoInput[videoInput]
 
--   다양한 유틸리티 :http://pocoproject.org/[Poco]
+-   다양한 유틸리티 : http://pocoproject.org/[Poco]
 
 openFrameworks는 강력한 크로스플랫폼을 지원합니다. 현재만 하더라도 5개의 운영체제와(윈도우, 맥OSX, 리눅스, iOS, 안드로이드) 네 종류의 IDE(XCode, Code::Blocks, Visual Studio, Eclipse)를 지원합니다. API는 최소한으로, 그리고 쉽게 이해되도록 디자인 되었습니다.
 
@@ -222,9 +221,9 @@ Why openFrameworks?
 Additional oF Resources
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-- http://www.openframeworks.kr/about/[오픈프레임웍스 소개] 디자인 방법론을 포함하는 오픈프레임웍스에 관한 소개.
-- http://www.openframeworks.kr/documentation/[공식 도큐먼트] 오픈프레임웍스를 구성하고 있는 클래스와 함수들에 대한 설명을 찾을수 있습니다,
-- http://forum.openframeworks.cc/[oF Forum] 아마도 궁금한 질문에 대한 답을 구할수 있는 최적의 곳입니다
-- http://www.amazon.com/Programming-Interactivity-Designers-Processing-Openframeworks/dp/0596154143[Programming Interactivity] 오픈프레임웍스, 프로세싱, 아두이노를 다루는 훌륭한 서적입니다.
+- http://www.openframeworks.kr/about/[오픈프레임웍스 소개] : 디자인 방법론을 포함하는 오픈프레임웍스에 관한 소개.
+- http://www.openframeworks.kr/documentation/[공식 도큐먼트] : 오픈프레임웍스를 구성하고 있는 클래스와 함수들에 대한 설명을 찾을수 있습니다,
+- http://forum.openframeworks.cc/[oF Forum] : 아마도 궁금한 질문에 대한 답을 구할수 있는 최적의 곳입니다
+- http://www.amazon.com/Programming-Interactivity-Designers-Processing-Openframeworks/dp/0596154143[Programming Interactivity] : 오픈프레임웍스, 프로세싱, 아두이노를 다루는 훌륭한 서적입니다.
 - http://www.creativeapplications.net/[Creative Applications]
 

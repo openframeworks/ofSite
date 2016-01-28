@@ -1,4 +1,3 @@
--*- coding: utf-8 -*-
 :author: Jeff Crouse <jeff@crouse.cc>
 :title: ofTutorials - Getting Started
 :date: september 2013
@@ -10,12 +9,14 @@
 
 ofTutorials - Chapter 1 - Getting Started
 =========================================
+
 ____________
-*업데이트! 새로운 프로젝트 생성기* : 
-_오픈프레임웍스 0072부터, 새로운 오픈프레임웍스 프로젝트를 생성시켜주는 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[새로운 프로젝스 생성기] 가 제공되었습니다, 애드온도 포함해서 말이죠. 예전 버전에서는 프로젝트를 생성하기 위해, 이미 존재하는 예제 앱을 복제하거나 애드온을 추가할 때 일일히 수동으로 아래에 언급된 과정들을 작성해줘야 했습니다. 새로운 프로젝트 생성기에서는, 프로젝트를 빠르게 생성하며, 또한 에러를 덜 발생시킵니다. 새 버젼의 사용을 강력하게 추천드립니다. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[지금 바로 확인해보세요!]_
+*Update! New project generator*: _오픈프레임웍스 0072부터, 새로운 오픈프레임웍스 프로젝트를 생성시켜주는 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[새로운 프로젝트 생성기] 가 제공되었습니다, 애드온도 포함해서 말이죠. 예전 버전에서는 프로젝트를 생성하기 위해, 이미 존재하는 예제 앱을 복제하거나 애드온을 추가할 때 일일히 수동으로 아래에 언급된 과정들을 작성해줘야 했습니다. 새로운 프로젝트 생성기에서는, 프로젝트를 빠르게 생성하며, 또한 에러를 덜 발생시킵니다. 새 버젼의 사용을 강력하게 추천드립니다. 
+link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[지금 바로 확인해보세요!]_
+
 ____________
 
-이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리기 등과 같은 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저 ...
+이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리기 등과 같은 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저..
 
 Your First look inside oF 
 --------------------------
@@ -154,10 +155,10 @@ Creating Your First Project
 [NOTE]
 .Code::Blocks note
 =====================================================================
-이 섹션은 예시로 드는 IDE로 XCode에 촛점이 맞춰져있습니다. 여기에서 제공되는 일반적인 정보들은 Code::Blocks에도 동일하게 적용됩니다. Code::Blocks프로젝트 파일은 ".xcodeproj"대신 .workspace"확장자를 사용합니다. IDE 에 관한 질문이 있으시다면 http://www.codeblocks.org/user-manual[Code::Blocks 매뉴얼] 을 살펴봐주시기 바랍니다.
+이 섹션은 예시로 드는 IDE로 XCode에 촛점이 맞춰져있습니다. 여기에서 제공되는 일반적인 정보들은 Code::Blocks에도 동일하게 적용됩니다. Code::Blocks프로젝트 파일은 ".xcodeproj" 대신 .workspace" 확장자를 사용합니다. IDE 에 관한 질문이 있으시다면 http://www.codeblocks.org/user-manual[Code::Blocks 매뉴얼] 을 살펴봐주시기 바랍니다.
 =====================================================================
 
-소개부분에서 언급했듯이, 오픈프레임웍스는 여러분이 선택한 IDE의 지루한 C++ project 세팅을 담당합니다. 하지만 Flash나 Processing 프로그램과는 다르게, 프로젝트를 생성하는 "파일 > 새 파일"은 없습니다. 대신에 새 프로젝트를 생성하기 위해 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator]를 사용해야 합니다. 예전(openFrameworks 0072 이전)에는 추천되는 방법은 예제프로젝트중 하나를 복제하는 것이었습니다.
+소개부분에서 언급했듯이, 오픈프레임웍스는 여러분이 선택한 IDE의 지루한 C++ project 세팅을 담당합니다. 하지만 Flash나 Processing 프로그램과는 다르게, 프로젝트를 생성하는 "파일 > 새 파일" 은 없습니다. 대신에 새 프로젝트를 생성하기 위해 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator]를 사용해야 합니다. 예전(openFrameworks 0072 이전)에는 추천되는 방법은 예제프로젝트중 하나를 복제하는 것이었습니다.
 
 [IMPORTANT]
 =====================================================================
@@ -209,7 +210,7 @@ ESC나 Apple+Q를 눌러 프로그램을 종료하세요
 
 image::/tutorials/01_introduction/001_chapter1/rename01.png["Renaming your Project",width="400"]
 
-이름을 변경하면, 다이얼로그 박스로 많은것들 역시 이름을 변경할것이냐고 물어볼것입니다. "Rename"을 누르세요.
+이름을 변경하면, 다이얼로그 박스로 많은것들 역시 이름을 변경할것이냐고 물어볼것입니다. "Rename" 을 누르세요.
  
 image::/tutorials/01_introduction/001_chapter1/rename02.png["Renaming your Project",width="700"]
 
@@ -290,7 +291,7 @@ keyPressed(), keyReleased(), mouseMoved(), mouseDragged(), mousePressed(), mouse
 Making a Mark
 ~~~~~~~~~~~~~
 
-이제 우리는 ofCircle함수를 이용해 우리의 회색 윈도우안에 간단한 원을 하나 그려보겠습니다. "ofCircle(200, 200, 60);"을 draw()함수 내의 빈 라인에 입력해봅시다. draw()함수는 아래와 같을것입니다:
+이제 우리는 ofCircle함수를 이용해 우리의 회색 윈도우안에 간단한 원을 하나 그려보겠습니다. "ofCircle(200, 200, 60);" 을 draw()함수 내의 빈 라인에 입력해봅시다. draw()함수는 아래와 같을것입니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -313,7 +314,7 @@ image::/tutorials/01_introduction/001_chapter1/MyFirstProject01.png["A Plain Whi
 
 그런데, 우리가 방금 뭘 한거죠?
 
-link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] 는 오픈프레임웍스에서 제공하는 함수입니다('of'로 시작하죠?). draw 함수내에 여러분이 원하는 만큼 몇번이고 ofCircle을 실행할 수 있습니다. 'ofCircle' 뒤의 괄호 안에 있는 숫자들은 https://en.wikipedia.org/wiki/Parameter_(computer_programming)[인자] 라고 합니다. 이것들은 함수가 하는 어떻게 일할지를 정확히 결정합니다. 함수는 이렇게 응답합니다: "좋아, 원을 그리길 원하는군, 그런데 어디에? 그리고 얼마나 크게?". 함수는 어떠한 갯수의 인자라도 받을 수 있으며, 항상 콤마에 의해 구별됩니다. ofCirlce은 3개의 인자를 받습니다: x좌표, y좌표, 그리고 지름입니다. 이 인자들에 대해서 여러분이 알아두어야 할 몇가지 사항들이 있습니다:
+link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] 는 오픈프레임웍스에서 제공하는 함수입니다('of' 로 시작하죠?). draw 함수내에 여러분이 원하는 만큼 몇번이고 ofCircle을 실행할 수 있습니다. 'ofCircle' 뒤의 괄호 안에 있는 숫자들은 https://en.wikipedia.org/wiki/Parameter_(computer_programming)[인자] 라고 합니다. 이것들은 함수가 하는 어떻게 일할지를 정확히 결정합니다. 함수는 이렇게 응답합니다: "좋아, 원을 그리길 원하는군, 그런데 어디에? 그리고 얼마나 크게?". 함수는 어떠한 갯수의 인자라도 받을 수 있으며, 항상 콤마에 의해 구별됩니다. ofCirlce은 3개의 인자를 받습니다: x좌표, y좌표, 그리고 지름입니다. 이 인자들에 대해서 여러분이 알아두어야 할 몇가지 사항들이 있습니다:
 
 . 오픈프레임웍스 내에서 사용되는 단위는 픽셀입니다. 우리의 원의 지름을 60으로 하라고 말하면, 원은 최종으로 PI*60^2^ 픽셀을 취하게 됩니다.
 . 여기서는 좌표가 원의 중심을 뜻하지만, 다른 도형들(예를 들어 사각형의 경우)은 좌측 상단 코너를 뜻합니다.
@@ -326,7 +327,7 @@ link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] 는 오픈�
 
 [NOTE]
 =====================================================================
-또한 어떤 함수(가령 단순히 그려질 도형들을 칠하라고 명령하는 link:/documentation/graphics/ofGraphics.html#show_ofFill[ofFill])들 같은 경우는 인자가 없습니다. 하지만 함수명 뒤에 괄호를 사용해야 합니다.
+또한 어떤 함수(가령 단순히 그려질 도형들을 칠하라고 명령하는 link:/documentation/graphics/ofGraphics.html#show_ofFill[ofFill] )들 같은 경우는 인자가 없습니다. 하지만 함수명 뒤에 괄호를 사용해야 합니다.
 =====================================================================
 
 여러분이 이것에 관해 여기서 읽지 않더라도, ofCircle에 관한 정보는 link:/documentation/[오픈프레임웍스 도큐먼트] 에서도 찾아보실 수 있습니다. 앞으로 여러분이 더 많이 사용할 것입니다.
@@ -405,7 +406,6 @@ All The Shapes You Can Handle
 
 [TIP]
 =====================================================================
-Try making 3 different projects in your "MyFirstWorkspace" workspace. In each one, draw a different shape in a different location using a different color.
 "MyFirstWorkspace" 작업공간에서 세대의 다른 프로젝트를 만들어보세요. 각각 다른 위치에, 다른 색을 사용해서 다른 도형을 그려보세요.
 =====================================================================
 
@@ -418,7 +418,7 @@ Adding Movement
 
 위의 예제에서, 우리가 원을 그릴때, ofDrawCircle함수에 원을 윈도우의 어느 위치에에 그릴게 할것인지 두 숫자를 사용했습니다. 이 방법에 따르자면, 만약 원을 움직이게 할려면, 시간이 경과할때마다 이 숫자들을 변경해주어야 합니다. 처음 draw()출시에, 원은 (200, 300)에 그려지지만, 그 다음에는, 1픽셀만큼 우측으로 이동해 (201, 300)으로, 그 다음에는 (202, 300). 이런식으로 말이죠.
 
-`C++` 에서, 그리고 일반적인 프로그래밍에서, 어떤 값을 갖고 있고, 그것을 변경하고 싶을때에는, "변수" 를 선언합니다. 변수는 표현하고자 하는 값에 따라 다른 형과 크기를 사용합니다. 가령 정수, 실수, 문자, 문자열 등이 있죠. 우리의 경우, ofDrawCircle함수에서 좌표를 의미하는 변수를 만들것이므로, 두개의 **int**(정수)를 사용할 것입니다.
+`C++` 에서, 그리고 일반적인 프로그래밍에서, 어떤 값을 갖고 있고, 그것을 변경하고 싶을때에는, "변수" 를 선언합니다. 변수는 표현하고자 하는 값에 따라 다른 형과 크기를 사용합니다. 가령 정수, 실수, 문자, 문자열 등이 있죠. 우리의 경우, ofDrawCircle함수에서 좌표를 의미하는 변수를 만들것이므로, 두개의 **int** (정수)를 사용할 것입니다.
 
 ofApp.cpp의 상단 `#include` 라인의 바로 아래에, 이것을 넣어봅시다. 코드는 이렇게 시작될 것입니다:
 
@@ -474,7 +474,7 @@ void ofApp::draw(){
 
 이제 프로그램을 실행해보면, 원이 우측으로 움직이는것을 볼수 있을것입니다! 애니메이션이죠!
 
-이 새로운 코드라인에서, setup함수에서 처럼 "할당 연산자"     를 다시한번 사용했습니다. 저 코드라인을 우리의 말로 하자면 "myCircleX의 값을 가져와 1을 더하고, 그 값을 myCircleX로 할당해" 라고 하는겁니다. 다른 말로는, myCircleX를 1씩 증가시키고 있는것이지요. `C++` 에서는 다른 값에 의해 변수가 증가하는 기본적인 작업을 위한 단축표기를 제공하고 있습니다: `myCircleX += value;` 이죠. 우리의 경우, 이렇게 작성할 수 있습니다: `myCircleX += 1;`. 하지만 1씩 증가하는것이 정말로 일반적이어서, 심지어 더 축약하여 표기하는 방법이 있습니다: `myCircleX++` 입니다. 그러니까 실제로 우리가 코드에서 이 편리한 단축 표기를 사용하고 있는것이지요:
+이 새로운 코드라인에서, setup함수에서 처럼 "할당 연산자" 를 다시한번 사용했습니다. 저 코드라인을 우리의 말로 하자면 "myCircleX의 값을 가져와 1을 더하고, 그 값을 myCircleX로 할당해" 라고 하는겁니다. 다른 말로는, myCircleX를 1씩 증가시키고 있는것이지요. `C++` 에서는 다른 값에 의해 변수가 증가하는 기본적인 작업을 위한 단축표기를 제공하고 있습니다: `myCircleX += value;` 이죠. 우리의 경우, 이렇게 작성할 수 있습니다: `myCircleX += 1;`. 하지만 1씩 증가하는것이 정말로 일반적이어서, 심지어 더 축약하여 표기하는 방법이 있습니다: `myCircleX++` 입니다. 그러니까 실제로 우리가 코드에서 이 편리한 단축 표기를 사용하고 있는것이지요:
 
 ....
 myCircleX = myCircleX + 1;
@@ -555,7 +555,7 @@ The Pacman Effect
 
 코드를 작성하기 전에, 우리가 갖고 있는 변수의 측면에서 이것이 무슨 의미를 갖게 되는지 생각해봅시다. 현재 myCircleX는 원의 x 좌표로 사용되고 있고, 이것은 매 프레임마다 1씩 증가하고 있습니다(바로 위의 팁을 따른다면 4씩 증가하겠죠?). 기본적으로, 오픈프레임웍스 윈도우는 1024x768의 크기를 갖습니다. 따라서 팩맨 효과를 적용하는 방법중 하나는 myCircleX이 1024보다 커질경우 300으로 리셋하는것입니다.
 
-어떻게 하면 될까요? 우리는 어떤 변수든지 update()안에서 다룬다는것을 알고 있으므로, 여기서 시작해보도록 합시다. 또한 *만약* myCircleX가 1024보다 클때*만*, 리셋하면 된다는것도 알고 있죠. 이를 위해서 `if`구문을 사용합니다.
+어떻게 하면 될까요? 우리는 어떤 변수든지 update()안에서 다룬다는것을 알고 있으므로, 여기서 시작해보도록 합시다. 또한 *만약* myCircleX가 1024보다 클때*만*, 리셋하면 된다는것도 알고 있죠. 이를 위해서 `if` 구문을 사용합니다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -593,26 +593,23 @@ void ofApp::keyReleased(int key){
 
 프로덕션 비유로 돌아가서 보면 이런 함수들의 동작원리를 이해하는데 도움이 됩니다. 오픈프레임웍스는 여러분의 앱이 사용자가 키보드로 하는 작업들이 언제 발생하는지 알수 있도록 어려운 작업들을 해두었습니다. 이제, 여러분이 할일은 이런 특정 이벤트들이 발생했을때 수행할 것들을 이 함수들안에 코드로 작성하는것입니다:
 
-- user physically presses down on a key
-- user physically releases the key
-
 - 사용자가 물리적인 키를 누름
 - 사용자가 물리적인 키를 눌렀다 뗌
 
-이는 여러분이 평소처럼 키를 누르는 것을 하나의 행위로 생각하는데 익숙했다면 직관적이지 않을 수 있습니다: "그냥 `o`키를 눌렀음". 하지만 사실 여기엔 두 가지 행위, 또는 "이벤트"로 구분됩니다. 그리고 궁극적으로 여러분이 이 둘의 차이를 구별할 수 있어야 합니다.
+이는 여러분이 평소처럼 키를 누르는 것을 하나의 행위로 생각하는데 익숙했다면 직관적이지 않을 수 있습니다: "그냥 `o` 키를 눌렀음". 하지만 사실 여기엔 두 가지 행위, 또는 "이벤트" 로 구분됩니다. 그리고 궁극적으로 여러분이 이 둘의 차이를 구별할 수 있어야 합니다.
 
-"myApps"에 "keyboardInteraction"이라는 새 프로젝트를 생성합니다. 만약 필요하다면, "여러분의 첫 프로젝트 생성하기"로 돌아가서 어떻게 하는지 살펴보시기 바랍니다.
+"myApps" 에 "keyboardInteraction" 이라는 새 프로젝트를 생성합니다. 만약 필요하다면, "여러분의 첫 프로젝트 생성하기" 로 돌아가서 어떻게 하는지 살펴보시기 바랍니다.
 
 image::/tutorials/01_introduction/001_chapter1/KeyboardInteraction01.png["Keyboard Interaction Project",width="750"]
 
 Introducing, cout!
 ~~~~~~~~~~~~~~~~~~
 
-이 기능들이 어떻게 동작하는지 알아볼 수 있는 가장 쉽고 빠른 방법은 콘솔에 메시지를 출력하는 것입니다. 콘솔에 "Hello, World"를 출력하는 가이드 기억나시죠? http://www.cplusplus.com/reference/iostream/cout/["cout"] 이라 불리는 것을 `C++`에서 사용했습니다. 이 문법을 사용하는 것은 약간 이상한데, 사실 기술적으로 이녀석은 함수가 아니기 때문입니다(정확히는 오브젝트이며, 추후 챕터에서 이에 대해서 다룰 것입니다). 하지만 이 문법에 대해 익숙해진다면, 디버깅을 할때 아주 유용합니다.
+이 기능들이 어떻게 동작하는지 알아볼 수 있는 가장 쉽고 빠른 방법은 콘솔에 메시지를 출력하는 것입니다. 콘솔에 "Hello, World" 를 출력하는 가이드 기억나시죠? http://www.cplusplus.com/reference/iostream/cout/["cout"] 이라 불리는 것을 `C++`에서 사용했습니다. 이 문법을 사용하는 것은 약간 이상한데, 사실 기술적으로 이녀석은 함수가 아니기 때문입니다(정확히는 오브젝트이며, 추후 챕터에서 이에 대해서 다룰 것입니다). 하지만 이 문법에 대해 익숙해진다면, 디버깅을 할때 아주 유용합니다.
 
-하지만 우선: 스스로에게 물어봅시다: 텍스트 출력을 어떻게 확인하죠? 우리는 지금 GUI를 다루고 있습니다. 다행이도, Xcode/Code::Blocks는 프로그램에서 출력되는 텍스트를 확인할 수 있는 윈도우를 제공하고 있습니다(http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout] 이라고 불리기도 합니다).
+하지만 우선: 스스로에게 물어봅시다: 텍스트 출력을 어떻게 확인하죠? 우리는 지금 GUI를 다루고 있습니다. 다행히도, Xcode/Code::Blocks는 프로그램에서 출력되는 텍스트를 확인할 수 있는 윈도우를 제공하고 있습니다(http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout] 이라고 불리기도 합니다).
 
-자, Xcode에서 메뉴의 View->Debug Area->Activate Console을 투르거나, 혹은 apple+shift+C 단축기를 눌러봅시다.Code::Blocks는 F9를 누를때(프로그램을 빌드하거나 실행) 자동으로 콘솔 윈도우를 보여줍니다.
+자, Xcode에서 메뉴의 View->Debug Area->Activate Console을 투르거나, 혹은 apple+shift+C 단축기를 눌러봅시다.Code::Blocks는 F9를 누를 때(프로그램을 빌드하거나 실행) 자동으로 콘솔 윈도우를 보여줍니다.
 
 image::/tutorials/01_introduction/001_chapter1/activate-console.png["Activate Console"]
 
@@ -638,7 +635,7 @@ void ofApp::keyReleased(int key){
 }
 ---------------------------------------------------------------------
 
-앞에서 언급했던것처럼, cout의 문법은 약간 이상합니다. 그리고 솔직히, 이 챕터의 범위를 벗어납니다. `C++`에서는, cout은 "표준 출력 스트림(standard output stream)"을 의미하며 여기서 이게 무슨말인지 걱정할 필요는 없습니다만, "stream(흐름)"이야 말로 이것에 대해 생각하기엔 좋은 방법입니다. `keyPressed` 가 포함된 코드라인을 살펴보면, 데이터의 "stream"이 "cout"으로 되어있음을 볼 수 있습니다. 우선 "keyPressed" 문자열을 stream으로 흘려보내고, 그리고 나서 변수 key 를 흘려보냈습니다. 마지막으로, http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] 를 보냈습니다. endl은 콘솔에게 다음 줄로 넘어가라 라고 명령하는 것과 같습니다.
+앞에서 언급했던것처럼, cout의 문법은 약간 이상합니다. 그리고 솔직히, 이 챕터의 범위를 벗어납니다. `C++`에서는, cout은 "표준 출력 스트림(standard output stream)"을 의미하며 여기서 이게 무슨말인지 걱정할 필요는 없습니다만, "stream(흐름)" 이야 말로 이것에 대해 생각하기엔 좋은 방법입니다. `keyPressed` 가 포함된 코드라인을 살펴보면, 데이터의 "stream" 이 "cout" 으로 되어있음을 볼 수 있습니다. 우선 "keyPressed" 문자열을 stream으로 흘려보내고, 그리고 나서 변수 key 를 흘려보냈습니다. 마지막으로, http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] 를 보냈습니다. endl은 콘솔에게 다음 줄로 넘어가라 라고 명령하는 것과 같습니다.
 
 'key' 변수는 눌렸거나, 떼었을 키를 의미합니다. 이것에 대해서 좀더 살펴보죠.
 
@@ -677,7 +674,7 @@ image::/tutorials/01_introduction/001_chapter1/ascii_table.jpg["ASCII Table"]
 
 [TIP]
 =====================================================================
-사실 이 int를 'char'나 문자로 변환하기 위해 http://www.cplusplus.com/doc/tutorial/typecasting/[type casting(형 변환)] 이라 불리는 것을 사용할수도 있습니다. "key"앞에 "(char)" 만 붙여넣어 cout 구문에 넣으면 됩니다:
+사실 이 int를 'char'나 문자로 변환하기 위해 http://www.cplusplus.com/doc/tutorial/typecasting/[type casting(형 변환)] 이라 불리는 것을 사용할수도 있습니다. "key" 앞에 "(char)" 만 붙여넣어 cout 구문에 넣으면 됩니다:
 [source,cpp]
 ---------------------------------------------------------------------
 cout << "keyPressed " << (char)key << endl;
