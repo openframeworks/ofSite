@@ -5,6 +5,8 @@
 .. summary: 오픈프레임웍스와 git의 기본적인 연결방법 소개 
 .. author: Christoph Buchner
 .. author_site:
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 <!-- This tutorial contains a short introduction to the distributed version control system **git**, why it's a good idea to use it when coding, and its usage in connection with openFrameworks and [github](www.github.com). -->

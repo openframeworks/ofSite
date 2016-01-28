@@ -6,7 +6,7 @@
 .. author: Jesus Gollonet
 .. author_site: http://jesusgollonet.com
 .. translator: Yi donghoon
-.. translator_site: http://openframeworks.kr
+.. translator_site: http://icq4ever.net
 ---
 
 ## 1. 이것은 무엇입니까?

@@ -5,6 +5,8 @@
 .. summary: 이미지로부터 메시 생성하기 기초편
 .. author: Michael Hadley
 .. author_site : www.mikewesthad.wordpress.com/me
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 

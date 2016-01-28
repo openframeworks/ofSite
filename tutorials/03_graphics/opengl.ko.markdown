@@ -5,6 +5,8 @@
 .. summary: OF를 위한 OpenGL 소개
 .. author: Joshua Noble
 .. author_site: http://twitter.com/fctry2/
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 

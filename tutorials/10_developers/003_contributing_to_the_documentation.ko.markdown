@@ -5,6 +5,8 @@
 .. summary: 도큐먼트를 수정하고 오픈프레임웍스를 빌드하는 법
 .. author: David Newbury
 .. author_site: http://workergnome.com
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 <!-- The openFrameworks documentation is a community effort, and we'd love for people to contribute missing documentation, fix typos, add examples, and generally make it a better representation of the community.   If you're interested in helping or if you're frustrated by something, there are two ways to contribute by modifying the documentation.   There's the Easy Way, and the Hard Way. -->

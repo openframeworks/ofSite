@@ -4,6 +4,8 @@
 .. title: 쉐이더 소개
 .. summary: ofShare와 GLSL의 기초
 .. author: Lucasz Karluk, Joshua Noble, Jordi Puig
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 ###Contents

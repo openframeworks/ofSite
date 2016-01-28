@@ -5,6 +5,8 @@
 .. summary: 이 키노트 모음은 오픈프레임웍스의 주요 핵심문서들로, Antiwerp에서 열린 FreakDay 모임을 위해 작성된 것입니다.
 .. author: roxlu
 .. author_site: http://www.roxlu.com/
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 아래 프리젠테이션들은 roxlu에 의해 제작되었으며, Antwerp에서 있었던 FreakDay 미팅 이후, 그의 [블로그](http://www.roxlu.com/blog/entry/145/openframeworks-007-presentations)에 게시되어있습니다.
