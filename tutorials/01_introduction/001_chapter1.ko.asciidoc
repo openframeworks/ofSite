@@ -6,6 +6,8 @@
 :source-highlighter: highlightjs
 :icons: font
 :doctype: book
+:translator: Yi donghoon <icq4ever@gmail.com>
+:translator_site: http://icq4ever.net
 
 ofTutorials - Chapter 1 - Getting Started
 =========================================
