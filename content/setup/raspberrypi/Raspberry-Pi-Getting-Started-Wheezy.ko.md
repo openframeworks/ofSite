@@ -63,7 +63,7 @@ _We need to make sure the CPU has 192MB of RAM in order to compile openFramework
 이제 오픈프레임웍스의 armv6 리눅스를 다운받아 폴더에 압축을 풀 수 있습니다. 쉘에서 아래의 명령을 입력하여, 오픈프레임웍스를 다운받고 `/home/pi/openFrameworks`의 폴더에 압축을 풉니다.
  
 0. `cd` 
-0. `curl -O http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv6l_release.tar.gz` 
+0. `curl -O http://openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv6l_release.tar.gz` 
 0.  `mkdir openFrameworks`
 0.  `tar vxfz of_v0.8.4_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 

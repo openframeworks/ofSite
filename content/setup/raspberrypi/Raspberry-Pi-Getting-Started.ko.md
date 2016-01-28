@@ -78,21 +78,21 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 <!-- <h3> For the Raspberry Pi 1/arm6</h3> -->
 <!-- <h3> 라즈베리파이1/arm6</h3>
 0. `cd` 
-0. `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
+0. `curl -O http://openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
 0.  `mkdir openFrameworks`
 0.  `tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1` -->
 
 <!-- <h3> For the Raspberry Pi 2/arm7</h3> -->
 <h3> 라즈베리파이2/arm7</h3>
 0. `cd` 
-0. `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv7l_release.tar.gz` 
+0. `curl -O http://openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv7l_release.tar.gz` 
 0.  `mkdir openFrameworks`
 0.  `tar vxfz of_v0.9.0_linuxarmv7l_release.tar.gz -C openFrameworks --strip-components 1`
 
 <!-- <h3> For the Raspberry Pi using OF for arm6</h3> -->
 <h3> For the Raspberry Pi using OF for arm6</h3>
  0. `cd` 
- 0. `curl -O http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
+ 0. `curl -O http://openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
  0. `mkdir openFrameworks`
  0.	`tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 
