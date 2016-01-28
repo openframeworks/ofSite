@@ -25,21 +25,15 @@ var pageTracker = _gat._getTracker("UA-9614675-1");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 
-<%def name="getTime()">
-  <% 
+<%def name="getTime()"><% 
     from time import gmtime, strftime
     currentTime = strftime("%A, %d %B %Y %H:%M:%S UTC", gmtime())
-  %>
-${currentTime}
-</%def>
+%>${currentTime}</%def>
 
-<%def name="getLastCommitHash()">
-<% 
+<%def name="getLastCommitHash()"><% 
     import subprocess
     p1 = subprocess.Popen(["git", "log", "-1"], stdout=subprocess.PIPE)
     (out,err) = p1.communicate()
     out = out.decode()
     hash = out[len("commit "):out.find('\n')].strip()
-%>
-${hash}
-</%def>
+%>${hash}</%def>
