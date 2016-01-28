@@ -1,4 +1,4 @@
-## -*- coding: utf-8 -*-
+-*- coding: utf-8 -*-
 ---
 .. date: 2012/10/20 17:00:00
 .. title: projectGenerator로 새 프로젝트를 생성하세요
