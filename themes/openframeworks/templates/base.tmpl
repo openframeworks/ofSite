@@ -3,6 +3,7 @@
 <%namespace name="header" file="base_header.tmpl" import="*"/>
 <%namespace name="footer" file="base_footer.tmpl" import="*"/>
 <%namespace name="annotations" file="annotation_helper.tmpl"/>
+<%namespace name="of" file="of_helpers.tmpl"/>
 ${set_locale(lang)}
 <!DOCTYPE html>
 <html \
@@ -157,7 +158,7 @@ lang="${lang}">
                             %if langname in external_translations:
                                 <li><a href="${external_translations[langname]}" rel="alternate" hreflang="${langname}">${messages("LANGUAGE", langname)}</a></li>
                             %else:
-                                <li><a href="${abs_link(_link("root", None, langname))}" rel="alternate" hreflang="${langname}">${messages("LANGUAGE", langname)}</a></li>
+                                <li><a href="${of.lang_link(permalink, lang, langname,'en')}" rel="alternate" hreflang="${langname}">${messages("LANGUAGE", langname)}</a></li>
                             %endif
                         %endif
                     %endfor

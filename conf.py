@@ -1176,7 +1176,7 @@ UNSLUGIFY_TITLES = True
 USE_BUNDLES = False
 
 # Plugins you don't want to use. Be careful :-)
-# DISABLED_PLUGINS = ["render_galleries"]
+# DISABLED_PLUGINS = ["documentation"]
 
 # Add the absolute paths to directories containing plugins to use them.
 # For example, the `plugins` directory of your clone of the Nikola plugins

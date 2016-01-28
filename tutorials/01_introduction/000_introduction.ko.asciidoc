@@ -5,6 +5,7 @@
 :author_site: http://www.jeffcrouse.info
 :summary: 이 챕터에서는 openFrameworks를 소개하고 여러분이 첫 프로젝트를 시작할 수 있도록 준비하는 과정을 소개합니다.
 :source-highlighter: highlightjs
+:icons: font
 :doctype: book
 
 ofTutorials - Introduction
@@ -226,3 +227,4 @@ Additional oF Resources
 - http://forum.openframeworks.cc/[oF Forum] 아마도 궁금한 질문에 대한 답을 구할수 있는 최적의 곳입니다
 - http://www.amazon.com/Programming-Interactivity-Designers-Processing-Openframeworks/dp/0596154143[Programming Interactivity] 오픈프레임웍스, 프로세싱, 아두이노를 다루는 훌륭한 서적입니다.
 - http://www.creativeapplications.net/[Creative Applications]
+

@@ -1,0 +1,33 @@
+
+<%def name="msg(key, locals)"><%
+    import importlib
+    import sys
+    import pathlib
+    import re
+    sys.path.append( "messages" )
+    has_translation = locals["pageargs"]["exists"]("messages/of_messages_"+locals["pageargs"]["lang"]+".py")
+    messages = {}
+    if has_translation:
+        messages = importlib.import_module("of_messages_"+locals["pageargs"]["lang"])
+    messages_en = importlib.import_module("of_messages_en")
+    msg = ""
+    try:
+        msg = messages.MESSAGES[key]
+    except:
+        msg = messages_en.MESSAGES[key]
+    search = re.findall(r'\$\{([^}]*)\}', msg)
+    for match in search:
+        msg = msg.replace('${' + match + '}', locals["pageargs"][match.strip()])
+%>${msg}</%def>
+
+<%def name="lang_link(permalink, src_lang, dst_lang, default_lang)"><%
+    elements = permalink.split('/')
+    if len(elements)>1 and elements[1] == src_lang:
+        no_lang = "/".join(elements[2:])
+    else:
+        no_lang = "/".join(elements)
+    if dst_lang == default_lang:
+        dst_link = "/" + no_lang
+    else:
+        dst_link = "/" + dst_lang + no_lang
+%>${dst_link}</%def>

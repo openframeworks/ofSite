@@ -38,6 +38,8 @@ class MarkdownArticle:
         self.summary = ''
         self.author = ''
         self.author_site = ''
+        self.translator = ''
+        self.translator_site = ''
         self.body = ''
         self.type = 'markdown'
         self.lang = lang
@@ -62,6 +64,12 @@ class MarkdownArticle:
             if state=='header' and line.find('author_site:')!=-1:
                 self.author_site = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
+            if state=='header' and line.find('translator:')!=-1:
+                self.translator = stripFileLine(line[line.find(':')+1:]).strip(' ')
+                continue
+            if state=='header' and line.find('translator_site:')!=-1:
+                self.translator_site = stripFileLine(line[line.find(':')+1:]).strip(' ')
+                continue
             if state=='header' and stripFileLine(line).strip(' ')=='---':
                 return  
                    
@@ -78,6 +86,8 @@ class AsciidocArticle:
         self.summary = ''
         self.author = ''
         self.author_site = ''
+        self.translator = ''
+        self.translator_site = ''
         self.body = ''
         self.type = 'asciidoc'
         self.lang = lang
@@ -97,6 +107,12 @@ class AsciidocArticle:
                 continue
             if line.find(':author_site:')!=-1:
                 self.author_site = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
+                continue
+            if line.find(':translator:')!=-1:
+                self.translator = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
+                continue
+            if line.find(':translator_site:')!=-1:
+                self.translator_site = stripFileLine(line[line[1:].find(':')+2:]).strip(' ')
                 continue
             if stripFileLine(line).find(":")!=0:
                 return   
@@ -166,24 +182,29 @@ class TutorialsTask(Task):
                     else:
                         translations.append(articleobj)
                 elif os.path.isdir(folder):
-                    out_folder = os.path.join(self.site.original_cwd, 'output','tutorials',catfolder,article.lower())
-                    for root, dirs, file_ins in os.walk(folder):
-                        for f in file_ins:
-                            in_path = os.path.join(root,f)
-                            out_path = os.path.join(out_folder, f)
-                            yield utils.apply_filters({
-                                'basename': self.name,
-                                'name': in_path,
-                                'file_dep': [in_path],
-                                'targets': [out_path],
-                                'actions': [
-                                    (create_file, (in_path, out_path))
-                                ],
-                                'clean': True,
-                                'uptodate': [utils.config_changed({
-                                    1: self.kw,
-                                })],
-                            }, self.kw['filters'])
+                    for lang in self.kw['translations']:
+                        if lang == self.site.config['DEFAULT_LANG']: 
+                            out_folder = os.path.join(self.site.original_cwd, 'output','tutorials',catfolder,article.lower())
+                        else:
+                            out_folder = os.path.join(self.site.original_cwd, 'output',lang,'tutorials',catfolder,article.lower())
+                            
+                        for root, dirs, file_ins in os.walk(folder):
+                            for f in file_ins:
+                                in_path = os.path.join(root,f)
+                                out_path = os.path.join(out_folder, f)
+                                yield utils.apply_filters({
+                                    'basename': self.name,
+                                    'name': in_path + "." + lang,
+                                    'file_dep': [in_path, __file__],
+                                    'targets': [out_path],
+                                    'actions': [
+                                        (create_file, (in_path, out_path))
+                                    ],
+                                    'clean': True,
+                                    'uptodate': [utils.config_changed({
+                                        1: self.kw,
+                                    })],
+                                }, self.kw['filters'])
             
                 
             def find_translations(article):

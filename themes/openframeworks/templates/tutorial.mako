@@ -1,8 +1,12 @@
 ## -*- coding: utf-8 -*-
 <%inherit file="base.tmpl" />
+<%namespace name="of" file="of_helpers.tmpl"/>
 
 <%block name="extra_head">
     <script src="/assets/js/documentation.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
+<style>
+</style>
 </%block>
 
 <%block name="content">
@@ -15,7 +19,10 @@
     	    <h1>${post.title()}</h1>
     	    
     	    <span class="article_meta">${post.date}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-        	<a href="${post.meta[lang]["author_site"]}">${post.author()}</a></span><br/>
+        	<a href="${post.meta[lang]['author_site']}">${post.author()}</a></span><br/>
+        	% if post.meta[lang]["translator"] != "":
+            	<span class="article_meta">${of.msg("translation", locals())}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="${post.meta[lang]["translator_site"]}">${post.meta[lang]["translator"]}</a></span><br/>
+        	% endif
     	    <div class="article">
                 ${post.text()}
     		</div>
