@@ -1,9 +1,12 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2008/06/30 14:16:00
 .. title: Processing 사용자들을 위한 openFrameworks
 .. summary: 프로세싱 사용자를 위한 오픈프레임웍스 개요
 .. author: Zach Gage
 .. author_site: http://www.stfj.net 
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 ## Contents

@@ -1,9 +1,12 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2012/02/23 10:00:00
 .. title: 오픈프레임웍스는 어떻게 동작하는가
 .. summary: 오픈프레임웍스 코드의 일반적인 패턴 설명
 .. author: Arturo Castro
 .. author_site: http://arturocastro.net
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 <!-- openFrameworks is an open source C++ toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries.  -->

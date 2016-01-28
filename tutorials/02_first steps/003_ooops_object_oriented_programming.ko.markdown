@@ -1,9 +1,12 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2008/03/20 20:18:00
 .. title: 웁쓰! = 객체지향프로그래밍 + 클래스
 .. summary: 이 튜토리얼은 오픈프레임웍스에서의 객체지향 프로그래밍에 관한 간단한 소개와 자신만의 클래스를 작성하는 가이드를 담고 있습니다.
 .. author: Rux
 .. author_site:
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 ## Contents

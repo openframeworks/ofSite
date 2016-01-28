@@ -1,21 +1,24 @@
-:authoer: Jeff Crouse <jeff@crouse.cc>
-:title: ofTutorials - 시작하기
-:date: setptember 2013
+:author: Jeff Crouse <jeff@crouse.cc>
+:title: ofTutorials - Getting Started
+:date: september 2013
 :author_site: http://jeffcrouse.info
 :summary: 이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리는 등의 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저...
 :source-highlighter: highlightjs
 :icons: font
 :doctype: book
+:translator: Yi donghoon <icq4ever@gmail.com>
+:translator_site: http://icq4ever.net
 
 ofTutorials - Chapter 1 - Getting Started
 =========================================
 
 ____________
-*업데이트! 새로운 프로젝트 생성기* : 
-_오픈프레임웍스 0072부터, 새로운 오픈프레임웍스 프로젝트를 생성시켜주는 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[새로운 프로젝스 생성기] 가 제공되었습니다, 애드온도 포함해서 말이죠. 예전 버전에서는 프로젝트를 생성하기 위해, 이미 존재하는 예제 앱을 복제하거나 애드온을 추가할 때 일일히 수동으로 아래에 언급된 과정들을 작성해줘야 했습니다. 새로운 프로젝트 생성기에서는, 프로젝트를 빠르게 생성하며, 또한 에러를 덜 발생시킵니다. 새 버젼의 사용을 강력하게 추천드립니다. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[지금 바로 확인해보세요!]_
+*Update! New project generator*: _오픈프레임웍스 0072부터, 새로운 오픈프레임웍스 프로젝트를 생성시켜주는 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[새로운 프로젝트 생성기] 가 제공되었습니다, 애드온도 포함해서 말이죠. 예전 버전에서는 프로젝트를 생성하기 위해, 이미 존재하는 예제 앱을 복제하거나 애드온을 추가할 때 일일히 수동으로 아래에 언급된 과정들을 작성해줘야 했습니다. 새로운 프로젝트 생성기에서는, 프로젝트를 빠르게 생성하며, 또한 에러를 덜 발생시킵니다. 새 버젼의 사용을 강력하게 추천드립니다. 
+link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[지금 바로 확인해보세요!]_
+
 ____________
 
-이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리기 등과 같은 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저 ...
+이 챕터에서는 프로젝트를 생성 및 실행윈도우 크기를 지정, 기본 도형을 그리기 등과 같은 오픈프레임웍스를 처음 시작하는 기초적인 단계들을 다룹니다. 하지만 먼저..
 
 Your First look inside oF 
 --------------------------
@@ -154,10 +157,10 @@ Creating Your First Project
 [NOTE]
 .Code::Blocks note
 =====================================================================
-이 섹션은 예시로 드는 IDE로 XCode에 촛점이 맞춰져있습니다. 여기에서 제공되는 일반적인 정보들은 Code::Blocks에도 동일하게 적용됩니다. Code::Blocks프로젝트 파일은 ".xcodeproj"대신 .workspace"확장자를 사용합니다. IDE 에 관한 질문이 있으시다면 http://www.codeblocks.org/user-manual[Code::Blocks 매뉴얼] 을 살펴봐주시기 바랍니다.
+이 섹션은 예시로 드는 IDE로 XCode에 촛점이 맞춰져있습니다. 여기에서 제공되는 일반적인 정보들은 Code::Blocks에도 동일하게 적용됩니다. Code::Blocks프로젝트 파일은 ".xcodeproj" 대신 .workspace" 확장자를 사용합니다. IDE 에 관한 질문이 있으시다면 http://www.codeblocks.org/user-manual[Code::Blocks 매뉴얼] 을 살펴봐주시기 바랍니다.
 =====================================================================
 
-소개부분에서 언급했듯이, 오픈프레임웍스는 여러분이 선택한 IDE의 지루한 C++ project 세팅을 담당합니다. 하지만 Flash나 Processing 프로그램과는 다르게, 프로젝트를 생성하는 "파일 > 새 파일"은 없습니다. 대신에 새 프로젝트를 생성하기 위해 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator]를 사용해야 합니다. 예전(openFrameworks 0072 이전)에는 추천되는 방법은 예제프로젝트중 하나를 복제하는 것이었습니다.
+소개부분에서 언급했듯이, 오픈프레임웍스는 여러분이 선택한 IDE의 지루한 C++ project 세팅을 담당합니다. 하지만 Flash나 Processing 프로그램과는 다르게, 프로젝트를 생성하는 "파일 > 새 파일" 은 없습니다. 대신에 새 프로젝트를 생성하기 위해 link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator]를 사용해야 합니다. 예전(openFrameworks 0072 이전)에는 추천되는 방법은 예제프로젝트중 하나를 복제하는 것이었습니다.
 
 [IMPORTANT]
 =====================================================================
@@ -209,7 +212,7 @@ ESC나 Apple+Q를 눌러 프로그램을 종료하세요
 
 image::rename01.png["Renaming your Project",width="400"]
 
-이름을 변경하면, 다이얼로그 박스로 많은것들 역시 이름을 변경할것이냐고 물어볼것입니다. "Rename"을 누르세요.
+이름을 변경하면, 다이얼로그 박스로 많은것들 역시 이름을 변경할것이냐고 물어볼것입니다. "Rename" 을 누르세요.
  
 image::rename02.png["Renaming your Project",width="700"]
 
@@ -290,14 +293,15 @@ keyPressed(), keyReleased(), mouseMoved(), mouseDragged(), mousePressed(), mouse
 Making a Mark
 ~~~~~~~~~~~~~
 
-이제 우리는 ofCircle함수를 이용해 우리의 회색 윈도우안에 간단한 원을 하나 그려보겠습니다. `ofCircle(200, 200, 60);` 을 draw()함수 내의 빈 라인에 입력해봅시다. draw()함수는 아래와 같을것입니다:
+이제 우리는 ofCircle함수를 이용해 우리의 회색 윈도우안에 간단한 원을 하나 그려보겠습니다. "ofCircle(200, 200, 60);" 을 draw()함수 내의 빈 라인에 입력해봅시다. draw()함수는 아래와 같을것입니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
 void testApp::draw(){
     ofCircle(200, 300, 60);
 }
------------------------------------------------------
+---------------------------------------------------------------------
+
 
 [NOTE]
 =====================================================================
@@ -312,7 +316,7 @@ image::MyFirstProject01.png["A Plain White Circle", width="500"]
 
 그런데, 우리가 방금 뭘 한거죠?
 
-link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] 는 오픈프레임웍스에서 제공하는 함수입니다('of'로 시작하죠?). draw 함수내에 여러분이 원하는 만큼 몇번이고 ofCircle을 실행할 수 있습니다. 'ofCircle' 뒤의 괄호 안에 있는 숫자들은 https://en.wikipedia.org/wiki/Parameter_(computer_programming)[인자] 라고 합니다. 이것들은 함수가 하는 어떻게 일할지를 정확히 결정합니다. 함수는 이렇게 응답합니다: "좋아, 원을 그리길 원하는군, 그런데 어디에? 그리고 얼마나 크게?". 함수는 어떠한 갯수의 인자라도 받을 수 있으며, 항상 콤마에 의해 구별됩니다. ofCirlce은 3개의 인자를 받습니다: x좌표, y좌표, 그리고 지름입니다. 이 인자들에 대해서 여러분이 알아두어야 할 몇가지 사항들이 있습니다:
+link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] 는 오픈프레임웍스에서 제공하는 함수입니다('of' 로 시작하죠?). draw 함수내에 여러분이 원하는 만큼 몇번이고 ofCircle을 실행할 수 있습니다. 'ofCircle' 뒤의 괄호 안에 있는 숫자들은 https://en.wikipedia.org/wiki/Parameter_(computer_programming)[인자] 라고 합니다. 이것들은 함수가 하는 어떻게 일할지를 정확히 결정합니다. 함수는 이렇게 응답합니다: "좋아, 원을 그리길 원하는군, 그런데 어디에? 그리고 얼마나 크게?". 함수는 어떠한 갯수의 인자라도 받을 수 있으며, 항상 콤마에 의해 구별됩니다. ofCirlce은 3개의 인자를 받습니다: x좌표, y좌표, 그리고 지름입니다. 이 인자들에 대해서 여러분이 알아두어야 할 몇가지 사항들이 있습니다:
 
 . 오픈프레임웍스 내에서 사용되는 단위는 픽셀입니다. 우리의 원의 지름을 60으로 하라고 말하면, 원은 최종으로 PI*60^2^ 픽셀을 취하게 됩니다.
 . 여기서는 좌표가 원의 중심을 뜻하지만, 다른 도형들(예를 들어 사각형의 경우)은 좌측 상단 코너를 뜻합니다.
@@ -325,7 +329,7 @@ link:/documentation/graphics/ofGraphics.html#show_ofCircle[ofCircle] 는 오픈�
 
 [NOTE]
 =====================================================================
-또한 어떤 함수(가령 단순히 그려질 도형들을 칠하라고 명령하는 link:/documentation/graphics/ofGraphics.html#show_ofFill[ofFill])들 같은 경우는 인자가 없습니다. 하지만 함수명 뒤에 괄호를 사용해야 합니다.
+또한 어떤 함수(가령 단순히 그려질 도형들을 칠하라고 명령하는 link:/documentation/graphics/ofGraphics.html#show_ofFill[ofFill] )들 같은 경우는 인자가 없습니다. 하지만 함수명 뒤에 괄호를 사용해야 합니다.
 =====================================================================
 
 여러분이 이것에 관해 여기서 읽지 않더라도, ofCircle에 관한 정보는 link:/documentation/[오픈프레임웍스 도큐먼트] 에서도 찾아보실 수 있습니다. 앞으로 여러분이 더 많이 사용할 것입니다.
@@ -404,7 +408,6 @@ All The Shapes You Can Handle
 
 [TIP]
 =====================================================================
-Try making 3 different projects in your "MyFirstWorkspace" workspace. In each one, draw a different shape in a different location using a different color.
 "MyFirstWorkspace" 작업공간에서 세대의 다른 프로젝트를 만들어보세요. 각각 다른 위치에, 다른 색을 사용해서 다른 도형을 그려보세요.
 =====================================================================
 
@@ -417,7 +420,7 @@ Adding Movement
 
 위의 예제에서, 우리가 원을 그릴때, ofDrawCircle함수에 원을 윈도우의 어느 위치에에 그릴게 할것인지 두 숫자를 사용했습니다. 이 방법에 따르자면, 만약 원을 움직이게 할려면, 시간이 경과할때마다 이 숫자들을 변경해주어야 합니다. 처음 draw()출시에, 원은 (200, 300)에 그려지지만, 그 다음에는, 1픽셀만큼 우측으로 이동해 (201, 300)으로, 그 다음에는 (202, 300). 이런식으로 말이죠.
 
-`C++` 에서, 그리고 일반적인 프로그래밍에서, 어떤 값을 갖고 있고, 그것을 변경하고 싶을때에는, "변수" 를 선언합니다. 변수는 표현하고자 하는 값에 따라 다른 형과 크기를 사용합니다. 가령 정수, 실수, 문자, 문자열 등이 있죠. 우리의 경우, ofDrawCircle함수에서 좌표를 의미하는 변수를 만들것이므로, 두개의 **int**(정수)를 사용할 것입니다.
+`C++` 에서, 그리고 일반적인 프로그래밍에서, 어떤 값을 갖고 있고, 그것을 변경하고 싶을때에는, "변수" 를 선언합니다. 변수는 표현하고자 하는 값에 따라 다른 형과 크기를 사용합니다. 가령 정수, 실수, 문자, 문자열 등이 있죠. 우리의 경우, ofDrawCircle함수에서 좌표를 의미하는 변수를 만들것이므로, 두개의 **int** (정수)를 사용할 것입니다.
 
 ofApp.cpp의 상단 `#include` 라인의 바로 아래에, 이것을 넣어봅시다. 코드는 이렇게 시작될 것입니다:
 
@@ -473,7 +476,7 @@ void ofApp::draw(){
 
 이제 프로그램을 실행해보면, 원이 우측으로 움직이는것을 볼수 있을것입니다! 애니메이션이죠!
 
-이 새로운 코드라인에서, setup함수에서 처럼 "할당 연산자"     를 다시한번 사용했습니다. 저 코드라인을 우리의 말로 하자면 "myCircleX의 값을 가져와 1을 더하고, 그 값을 myCircleX로 할당해" 라고 하는겁니다. 다른 말로는, myCircleX를 1씩 증가시키고 있는것이지요. `C++` 에서는 다른 값에 의해 변수가 증가하는 기본적인 작업을 위한 단축표기를 제공하고 있습니다: `myCircleX += value;` 이죠. 우리의 경우, 이렇게 작성할 수 있습니다: `myCircleX += 1;`. 하지만 1씩 증가하는것이 정말로 일반적이어서, 심지어 더 축약하여 표기하는 방법이 있습니다: `myCircleX++` 입니다. 그러니까 실제로 우리가 코드에서 이 편리한 단축 표기를 사용하고 있는것이지요:
+이 새로운 코드라인에서, setup함수에서 처럼 "할당 연산자" 를 다시한번 사용했습니다. 저 코드라인을 우리의 말로 하자면 "myCircleX의 값을 가져와 1을 더하고, 그 값을 myCircleX로 할당해" 라고 하는겁니다. 다른 말로는, myCircleX를 1씩 증가시키고 있는것이지요. `C++` 에서는 다른 값에 의해 변수가 증가하는 기본적인 작업을 위한 단축표기를 제공하고 있습니다: `myCircleX += value;` 이죠. 우리의 경우, 이렇게 작성할 수 있습니다: `myCircleX += 1;`. 하지만 1씩 증가하는것이 정말로 일반적이어서, 심지어 더 축약하여 표기하는 방법이 있습니다: `myCircleX++` 입니다. 그러니까 실제로 우리가 코드에서 이 편리한 단축 표기를 사용하고 있는것이지요:
 
 ....
 myCircleX = myCircleX + 1;
@@ -554,7 +557,7 @@ The Pacman Effect
 
 코드를 작성하기 전에, 우리가 갖고 있는 변수의 측면에서 이것이 무슨 의미를 갖게 되는지 생각해봅시다. 현재 myCircleX는 원의 x 좌표로 사용되고 있고, 이것은 매 프레임마다 1씩 증가하고 있습니다(바로 위의 팁을 따른다면 4씩 증가하겠죠?). 기본적으로, 오픈프레임웍스 윈도우는 1024x768의 크기를 갖습니다. 따라서 팩맨 효과를 적용하는 방법중 하나는 myCircleX이 1024보다 커질경우 300으로 리셋하는것입니다.
 
-어떻게 하면 될까요? 우리는 어떤 변수든지 update()안에서 다룬다는것을 알고 있으므로, 여기서 시작해보도록 합시다. 또한 *만약* myCircleX가 1024보다 클때*만*, 리셋하면 된다는것도 알고 있죠. 이를 위해서 `if`구문을 사용합니다.
+어떻게 하면 될까요? 우리는 어떤 변수든지 update()안에서 다룬다는것을 알고 있으므로, 여기서 시작해보도록 합시다. 또한 *만약* myCircleX가 1024보다 클때*만*, 리셋하면 된다는것도 알고 있죠. 이를 위해서 `if` 문을 사용합니다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -592,26 +595,23 @@ void ofApp::keyReleased(int key){
 
 프로덕션 비유로 돌아가서 보면 이런 함수들의 동작원리를 이해하는데 도움이 됩니다. 오픈프레임웍스는 여러분의 앱이 사용자가 키보드로 하는 작업들이 언제 발생하는지 알수 있도록 어려운 작업들을 해두었습니다. 이제, 여러분이 할일은 이런 특정 이벤트들이 발생했을때 수행할 것들을 이 함수들안에 코드로 작성하는것입니다:
 
-- user physically presses down on a key
-- user physically releases the key
-
 - 사용자가 물리적인 키를 누름
 - 사용자가 물리적인 키를 눌렀다 뗌
 
-이는 여러분이 평소처럼 키를 누르는 것을 하나의 행위로 생각하는데 익숙했다면 직관적이지 않을 수 있습니다: "그냥 `o`키를 눌렀음". 하지만 사실 여기엔 두 가지 행위, 또는 "이벤트"로 구분됩니다. 그리고 궁극적으로 여러분이 이 둘의 차이를 구별할 수 있어야 합니다.
+이는 여러분이 평소처럼 키를 누르는 것을 하나의 행위로 생각하는데 익숙했다면 직관적이지 않을 수 있습니다: "그냥 `o` 키를 눌렀음". 하지만 사실 여기엔 두 가지 행위, 또는 "이벤트" 로 구분됩니다. 그리고 궁극적으로 여러분이 이 둘의 차이를 구별할 수 있어야 합니다.
 
-"myApps"에 "keyboardInteraction"이라는 새 프로젝트를 생성합니다. 만약 필요하다면, "여러분의 첫 프로젝트 생성하기"로 돌아가서 어떻게 하는지 살펴보시기 바랍니다.
+"myApps" 에 "keyboardInteraction" 이라는 새 프로젝트를 생성합니다. 만약 필요하다면, "여러분의 첫 프로젝트 생성하기" 로 돌아가서 어떻게 하는지 살펴보시기 바랍니다.
 
 image::KeyboardInteraction01.png["Keyboard Interaction Project",width="750"]
 
 Introducing, cout!
 ~~~~~~~~~~~~~~~~~~
 
-이 기능들이 어떻게 동작하는지 알아볼 수 있는 가장 쉽고 빠른 방법은 콘솔에 메시지를 출력하는 것입니다. 콘솔에 "Hello, World"를 출력하는 가이드 기억나시죠? http://www.cplusplus.com/reference/iostream/cout/["cout"] 이라 불리는 것을 `C++`에서 사용했습니다. 이 문법을 사용하는 것은 약간 이상한데, 사실 기술적으로 이녀석은 함수가 아니기 때문입니다(정확히는 오브젝트이며, 추후 챕터에서 이에 대해서 다룰 것입니다). 하지만 이 문법에 대해 익숙해진다면, 디버깅을 할때 아주 유용합니다.
+이 기능들이 어떻게 동작하는지 알아볼 수 있는 가장 쉽고 빠른 방법은 콘솔에 메시지를 출력하는 것입니다. 콘솔에 "Hello, World" 를 출력하는 가이드 기억나시죠? http://www.cplusplus.com/reference/iostream/cout/["cout"] 이라 불리는 것을 `C++`에서 사용했습니다. 이 문법을 사용하는 것은 약간 이상한데, 사실 기술적으로 이녀석은 함수가 아니기 때문입니다(정확히는 오브젝트이며, 추후 챕터에서 이에 대해서 다룰 것입니다). 하지만 이 문법에 대해 익숙해진다면, 디버깅을 할때 아주 유용합니다.
 
-하지만 우선: 스스로에게 물어봅시다: 텍스트 출력을 어떻게 확인하죠? 우리는 지금 GUI를 다루고 있습니다. 다행이도, Xcode/Code::Blocks는 프로그램에서 출력되는 텍스트를 확인할 수 있는 윈도우를 제공하고 있습니다(http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout] 이라고 불리기도 합니다).
+하지만 우선: 스스로에게 물어봅시다: 텍스트 출력을 어떻게 확인하죠? 우리는 지금 GUI를 다루고 있습니다. 다행히도, Xcode/Code::Blocks는 프로그램에서 출력되는 텍스트를 확인할 수 있는 윈도우를 제공하고 있습니다(http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout] 이라고 불리기도 합니다).
 
-자, Xcode에서 메뉴의 View->Debug Area->Activate Console을 투르거나, 혹은 apple+shift+C 단축기를 눌러봅시다.Code::Blocks는 F9를 누를때(프로그램을 빌드하거나 실행) 자동으로 콘솔 윈도우를 보여줍니다.
+자, Xcode에서 메뉴의 View->Debug Area->Activate Console을 투르거나, 혹은 apple+shift+C 단축기를 눌러봅시다.Code::Blocks는 F9를 누를 때(프로그램을 빌드하거나 실행) 자동으로 콘솔 윈도우를 보여줍니다.
 
 image::activate-console.png["Activate Console"]
 
@@ -637,11 +637,11 @@ void ofApp::keyReleased(int key){
 }
 ---------------------------------------------------------------------
 
-앞에서 언급했던것처럼, cout의 문법은 약간 이상합니다. 그리고 솔직히, 이 챕터의 범위를 벗어납니다. `C++`에서는, cout은 "표준 출력 스트림(standard output stream)"을 의미하며 여기서 이게 무슨말인지 걱정할 필요는 없습니다만, "stream(흐름)"이야 말로 이것에 대해 생각하기엔 좋은 방법입니다. `keyPressed` 가 포함된 코드라인을 살펴보면, 데이터의 "stream"이 "cout"으로 되어있음을 볼 수 있습니다. 우선 "keyPressed" 문자열을 stream으로 흘려보내고, 그리고 나서 변수 key 를 흘려보냈습니다. 마지막으로, http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] 를 보냈습니다. endl은 콘솔에게 다음 줄로 넘어가라 라고 명령하는 것과 같습니다.
+앞에서 언급했던것처럼, cout의 문법은 약간 이상합니다. 그리고 솔직히, 이 챕터의 범위를 벗어납니다. `C++`에서는, cout은 "표준 출력 스트림(standard output stream)"을 의미하며 여기서 이게 무슨말인지 걱정할 필요는 없습니다만, "stream(흐름)" 이야 말로 이것에 대해 생각하기엔 좋은 방법입니다. `keyPressed` 가 포함된 코드라인을 살펴보면, 데이터의 "stream" 이 "cout" 으로 되어있음을 볼 수 있습니다. 우선 "keyPressed" 문자열을 stream으로 흘려보내고, 그리고 나서 변수 key 를 흘려보냈습니다. 마지막으로, http://www.cplusplus.com/reference/iostream/manipulators/endl/[endl] 를 보냈습니다. endl은 콘솔에게 다음 줄로 넘어가라 라고 명령하는 것과 같습니다.
 
 'key' 변수는 눌렸거나, 떼었을 키를 의미합니다. 이것에 대해서 좀더 살펴보죠.
 
-한번 직접 해봅시다. 프로그램을 실행하고 아무 키나 눌러보십시오. 저는 "qwerty"를 입력했습니다. 콘솔에는 이렇게 보일겁니다:
+한번 직접 해봅시다. 프로그램을 실행하고 아무 키나 눌러보십시오. 저는 "qwerty" 를 입력했습니다. 콘솔에는 이렇게 보일겁니다:
 
 ...................................
 GNU gdb 6.3.50-20050815 (Apple version gdb-1708) (Thu Nov  3 21:59:02 UTC 2011)
@@ -676,7 +676,7 @@ image::ascii_table.jpg["ASCII Table"]
 
 [TIP]
 =====================================================================
-사실 이 int를 'char'나 문자로 변환하기 위해 http://www.cplusplus.com/doc/tutorial/typecasting/[type casting(형 변환)] 이라 불리는 것을 사용할수도 있습니다. "key"앞에 "(char)"만 붙여넣어 cout 구문에 넣으면 됩니다:
+사실 이 int를 'char'나 문자로 변환하기 위해 http://www.cplusplus.com/doc/tutorial/typecasting/[type casting(형 변환)] 이라 불리는 것을 사용할수도 있습니다. "key" 앞에 "(char)" 만 붙여넣어 cout 구문에 넣으면 됩니다:
 [source,cpp]
 ---------------------------------------------------------------------
 cout << "keyPressed " << (char)key << endl;
@@ -710,9 +710,9 @@ void ofApp::draw(){
 }
 ---------------------------------------------------------------------
 
-In the Adding Movement section, we used variables so that we could have the circle move by itself. The difference this time is that we want the ball to move in response to our keyboard input. This means that we need to modify the values of the variables depending on which keys are pressed rather than incrementing it automatically every frame. So it follows that we need to change the value of myCircleX and myCircleY in keyPressed() (or keyReleased() -- it's up to you!) instead of update().
+움직임 추가하기 색션에서, 변수를 사용함으로써 원이 스스로 움직이게 했습니다. 이번에 할 작업이 다른점은, 원의 움직임이 키보드의 입력에 따라 반응한다는 것입니다. 즉 변수의 값이 매프레임마다 자동으로 증가하는것이 아니라 어떤 키가 눌렸는지에 따라 변수의 값을 수정해줘야 한다는 것이죠. 따라서 update()가 아닌, keyPressed() (또는 keyReleased() -- 여러분의 결정에 따르세요!)에 myCircleX와 myCircleY의 값을 변경하는 코드를 작성해야 합니다.
 
-Let's use a typical computer game keyboard scheme: say we want the ball to move up when we press 'w', to the left when we press 'a', down when we press 's', and right when we press 'd'. We could start by looking up the ASCII values and finding that the values are 119, 97, 115, and 100, respectively. Next, we think about what "up", "down", "left" and "right" mean in terms of our variables: myCircleX and myCircleY. What we end up with is:
+일반적인 컴퓨터 게임에서의 키보드 키 방식을 따르도록 하죠 : 원이 위로 움직이게 할려면 'w' 를, 왼쪽으로 움직이게 할려면 'a' 를, 아래로는 's' 를, 오른쪽으로는 'd' 를 사용하도록 합시다. ASCII 값을 살펴보니 이 값들은 각각 119, 97, 115, 100이군요, 다음으로, "위", "아래", "왼쪽", "오른쪽"의 뜻이 변수 myCircleX와 myCircleY에서 어떤 의미를 같는지 생각해봅시다. 결과는 이렇게 되겠죠:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -728,11 +728,11 @@ void ofApp::keyPressed(int key){
 }
 ---------------------------------------------------------------------
 
-As we discovered, any time any key is pressed, the keyPressed() function is called. However, we want to be more selective than that. We want to be able to make certain things happen when the 'w' key is pressed, and other things happen when the 'a' key is pressed, etc. So, we need to add some http://www.cprogramming.com/tutorial/lesson2.html[if statements]. When the keyPressed function is called, the first thing that happens is we test if 'key' is equal to 119.
+앞서 살펴본 것과 같이, 어떤 키라도 눌리면, keyPressed() 함수가 호출됩니다. 하지만, 우리는 좀더 구별되게 해야합니다. 'w' 키가 눌렸을때 정확히 어떤 일이 벌어지도록 해야하는것이지요, 'a' 키 등 다른 키도 마찬가지입니다. 따라서 http://www.cprogramming.com/tutorial/lesson2.html[if 문] 을 추가해주어야 합니다. keyPressed 함수가 호출되면, 먼저 수행될 과정은 'key' 가 119와 같은지 테스트 하는 것입니다.
 
-Notice the double equals sign. This signifies that we are performing a comparison rather than an assignment. In other words, we don't want to assign the value 119 to the variable 'key', we want to test whether key is equal to 119. If this turns out to be true, then the code inside the curly brackets immediately following the if() is executed.
+등괄호(=)가 두번 사용되었다는 것에 주의하세요. 이는 할당이 아니라 비교를 한다는 의미입니다. 즉 119를 'key' 변수 값에 할당하는것이 아니라, key와 119가 같은지 테스트 하고 싶다는 것입니다. 만약 이 결과가 참이면, if()뒤에 오는 중괄호 안의 내용이 실행됩니다.
 
-Your challenge is to complete the function to respond to the 's' and 'd' keys.
+'s' 와 'd' 키에도 반응하도록 함수를 완성해보세요.
 
 [TIP]
 =====================================================================
@@ -754,7 +754,7 @@ if(key=='a')
 Mighty Mouse
 ------------
 
-Keyboard interaction is great, but what about the mouse? You might have noticed the following functions hanging out in ofApp also:
+키보드 인터랙션은 훌륭합니다만, 마우스는 어떤가요? ofApp 안의 아래 함수가 역시 있다는것을 보셨을겁니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -775,11 +775,11 @@ void ofApp::mouseReleased(int x, int y, int button){
 }
 ---------------------------------------------------------------------
 
-Create a new project called MouseInteraction so we can play with them.
+새 Mouseinteraction 프로젝트를 생성하고 한번 가지고 놀아봅시다.
 
 image::MouseInteraction01.png["Mouse Interaction Project"]
 
-Let's do the same thing with the mouse functions that we did with the key functions. Add the following to your project:
+키 함수들에 적용했던 코딩을 마우스 함수에도 적용해봅시다. 프로젝트에 아래와 같이 추가해보세요:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -801,8 +801,9 @@ void ofApp::mouseReleased(int x, int y, int button){
 ---------------------------------------------------------------------
 
 The 'x' and 'y' variables in the cout statement represent the location of the mouse click -- very handy information to have.
+cout 구문 안의 'x' 와 'y' 변수들은 마우스를 클릭했을때의 위치를 나탄잽니다 -- 아주 편리한 정보죠?
 
-Run the program and you should see something like this:
+프로그램을 실행하면 이와 같은 결과를 볼 수 있을것입니다.
 
 ...................................
 mouseMoved: 627, 500
@@ -837,14 +838,12 @@ mouseMoved: 434, 370
 mouseMoved: 433, 367
 ...................................
 
-There are a few important things to notice about this output. First, you will probably see a ton of "mouseMoved" messages. Indeed, this function is called whenever the mouse is moved so much as a single pixel, so be aware of this when adding code to mouseMoved. Next, notice that you see a "mousePressed" before every "mouseDragged" event, and then a bunch of "mouseDragged" messages, and then "mouseReleased" before it switches back to "mouseMoved".
+이 출력에 관해 알아야 할 몇가지 중요한 정보들이 있습니다. 첫째로, 엄청나게 많은 "mouseMoved" 메시지를 볼 수 있습니다. 실제로 단 하나의 픽셀만 움직여도 이 함수가 호출되므로, mouseMoved에 코드를 추가할 때는 주의하셔야 합니다. 두번째로, 매 "mouseDragged"가 출력되기 전에 "mousePressed" 이벤트가 출력됨을 알 수 있습니다. 그 다음 엄청난 "mouseDragged"이벤트가 출력되고, "mouseMoved"로 돌아오기 전에 "mouseReleased"가 출력됩니다.
 
 Interacting With Graphics
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-So now we know how to make something happen when the user does any mouse business. But printing to the console is hardly the kind of interaction we want. When it comes to interacting with GUI applications, the mouse is used in a variety of ways: simple clicking, double-clicking, dragging, hovering, gestures, etc. One very basic interaction is "user clicks on something, something happens." Let's see how we might accomplish this.
-
-Suppose, for instance, that we wanted our trusty circle to expand whenever the user clicks on it. Let's start by setting up a new project called MouseInteraction2. It will start out very similar to our 'MouseInteraction' project:
+아마도, 예를 들어, 사용자가 원을 클릭하면 커지게 해본다고 할 수 있을것입니다. 새로운 MouseInteraction2 프로젝트를 세팅해봅시다. 이것은 'MouseInteraction' 프로젝트와 아주 비슷하게 시작할겁니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -864,9 +863,9 @@ void ofApp::draw(){
 }
 ---------------------------------------------------------------------
 
-As you can see, we have added a new variable called 'myCircleRadius'. It should be clear that, if we want the circle to grow, all we have to do is increase myCircleRadius. The trick will be to determine when this should happen.
+보시다시피, 'myCircleRadius' 라는 새로운 변수를 추가했습니다. 우리가 원을 키우고 싶다면, myCircleRadius를 증가시키면 되는거죠. 이 트릭을 언제 사용할건지만 결정하면 됩니다.
 
-It's clear that it has something to do with the mousePressed function that we just discovered above. We know that mousePressed is called every time the user clicks the mouse, so if we simply drop 'myCircleRadius++;' into the mousePressed function, we would be half way there. Try this out.
+우리가 위애서 살펴봤듯이, mousePressed 함수로 뭔가를 하면 될거니다. 사용자가 마우스를 클릭할 때마다 mousePressed가 호출된다는것을 우리가 알고 있으니, mousePressed 함수에 'myCircleRadius++' 만 추가해주면 됩니다. 절반은 온 셈입니다. 한번 시도해보죠.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -875,20 +874,19 @@ void ofApp::mousePressed(int x, int y, int button){
 }
 ---------------------------------------------------------------------
 
-You should find that the circle grows every time you click the mouse, regardless of whether or not your clicked inside the circle. But our challenge is to only grow the circle when the use clicks *inside* of it. So how might we go about this?
+마우스를 클릭할때마다 원이 커지는것을 볼 수 있을 것입니다. 그런데 어떻습니까? 원 안 뿐만 아니라 다른 아무곳을 클릭해도 원이 커집니다. 하지만 우리의 목표는 원의 *안* 을 클릭할때만 커지게 하는것이죠. 그렇다면 어떻게 해야할까요?
 
-Well, luckily we are dealing with a circle, which will make it significantly easier. Because if we can determine the distance between the center of the circle and the location of the mouse click, we can compare this distance to the radius, and if it is less than the radius, then the click was inside the circle. Take a look at the diagrams:
+뭐, 다행이 우리는 원을 다루고 있습니다. 이것을 아주 쉽게 해결할 수 있죠. 왜냐하면, 원의 중심과 마우스를 클릭할때의 위치의 거리를 계산하여 해결할 수 있으니까요. 이 거리와 원의 반지름을 비교해서, 원의 반지름보다 작으면 원 안에 있다고 결정할 수 있으니까요. 그림을 한번 봅시다:
 
 image::hit-test-01.png["Hit Test 1"]
 
-We know that the radius of the circle = 300, and we know that the mouse click is 230 pixels away from the center of the circle. So, was the mouse click inside the circle?
+우리는 저 원의 반지름이 100임을 알고 있습니다. 그리고 마우스를 클릭했을 때의 커서가 원의 중심으로부터 230픽셀 떨어져 있다는 것도 말이죠. 마우스가 원안에서 클릭되었나요?
 
 image::hit-test-02.png["Hit Test 2"]
 
-In this case, we know that the mouse click was 90 pixels from the center of the circle, so the click was clearly inside the circle.
+위의 경우, 원의 중심에서 92픽셀 떨어진곳에서 클릭했다는것을 알 수 있습니다. 확실히 원안에서 클릭된 거겠죠.
 
-So how do we measure this distance? openFrameworks provides a function called
-ofDist([x1], [y1], [x2], [y2]) that will save us from doing any basic trigonometry. All we have to do is give it our two coordinates.
+그렇다면, 어떻게 거리를 계산할 수 있을까요? 오픈프레임웍스는 ofDist([x1], [y1], [x2], [y2]) 라고 하는 함수를 제공하고 있습니다. 이것으로 어떠한 기본 삼각함수와 관련한 계산을 쉽게 할 수 있죠. 우리가 할 일은 두 좌표만 제공하면 되는것입니다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -900,9 +898,9 @@ void ofApp::mousePressed(int x, int y, int button){
 }
 ---------------------------------------------------------------------
 
-The 'cout' will allow us to check what kind of values we are getting from ofDist. Run your program now. Click around the screen and see what kind of values get printed in your console.
+'cout' 은 윌에게 ofDist의 결과로 얻은 값을 체크할 수 있게 해줍니다. 프로그램을 실행해보세요. 화면에서 마우스를 클릭하고 콘솔에 어떤 값들이 출력되는지 보시기 바랍니다.
 
-So the only thing left to do is compare 'myCircleRadius' to 'distance', and we can do this using a simple if statement.
+자 이제 남은것은 'myCircleRadius' 와 'distance'를 비교하는 것이고, 우리는 이것을 간단한 if문에 사용할 수 있습니다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -915,33 +913,33 @@ void ofApp::mousePressed(int x, int y, int button){
 }
 ---------------------------------------------------------------------
 
-This code says "first calculate the distance between the center of the circle and the mouse click. Then compare 'distance' to 'myCircleRadius'. If (and only if) distance is LESS THAN myCircleRadius, increment myCircleRadius by 1."
+위 코드는 "먼저 원의 중심과 마우스를 클릭했을때의 커서 위치를 계산하고, 그리고 나서 'distance' 와 'myCircleRadius' 를 비교한다. 만약 distacne가 myCircleRadius보다 작으면(작을 경우에만), myCircleRadius를 1씩 증가시킨다" 라는 뜻입니다.
 
-Et voila!  You are interacting with graphics!
+보십시오! 지금 여러분은 그래픽과 인터랙션을 하고 있습니다!
 
 Technical Topics
 ----------------
 
-In the example above, we looked at one of the most basic control structures: the http://www.cprogramming.com/tutorial/lesson2.html[if statement]. Control structures like the if statement allow you to alter the flow of your program based on criteria that you define. Control structures are not an openFrameworks "thing", but rather a feature of the `C++` language. Let's take a moment to review a few basics of the `C++` language.
+위의 예제에서, 우리는 아주 기초적인 제어 구조 중 하나를 살펴봤습니다: 바로 http://www.cprogramming.com/tutorial/lesson2.html[if 문] 입니다. if 문과 같은 제어 구문은 여러분이 선언한 기준을 가지고 프로그램의 흐름을 제어할 수 있게 해줍니다. 제어 구문은 오픈프레임웍스의 "것" 이 아닙니다, 바로 'C++' 언어의 요소입니다. 자 그렇다면 잠깐 'C++' 언어의 기초에 대해서 살펴보도록 하죠.
 
 Variables
 ~~~~~~~~~
 
-In the "Adding Movement" section, we introduced the idea of using variables to represent values that change over the course of your program. We used 2 integers, or *int*s - 'int myCircleX' and 'int myCircleY' - to represent the location of a circle. When you declare a variable as an 'int', you are telling the computer "I only intend to put whole numbers into this variable."  This made sense in our example because we were moving a circle by a single pixel, so we didn't need to worry about fractions.
+"움직임 추가하기" 섹션에서, 프로그램의 구동중에 값이 계속 변화하는 값을 의미하는 변수의 사용법을 소개했습니다. 우리는 2개의 정수, 혹은 *int* 를 사용했습니다 - 'int myCircleX' 그리고 'int myCircleY' 죠 - 바로 원의 위치를 표현하기 위해서입니다. 'int' 라는 변수를 선언할 때에는, 컴퓨터에게 "이 변수에 모든 정수만을 담을거야" 라고 말하는 것과 같습니다. 이는 예제에서 문제가 되지 않았습니다. 원을 한 픽셀씩 이동시켰기 때문이죠, 소수점에 대해서는 걱정하지 않아도 되었던 겂니다.
 
-But there will be times when you do need to have a variable that can hold a fraction, or something completely different, such as letters, words, even a location in memory. There are variable types for each of these situations. Here is a short list of some of them from http://www.cplusplus.com/doc/tutorial/variables/[cplusplus.com]
+하지만 어떨때는 소수점, 혹은 전혀 다른 뭔가를 담는 변수를 필요로 할 때도 있을것입니다, 가령 문자, 단어, 심지어 메모리의 주소 같은 것 말이죠. 이러한 다양한 경우에 따라 변수형이 존재합니다. 아래에 http://www.cplusplus.com/doc/tutorial/variables/[cplusplus.com] 에서 가져온 이에 관한 리스트들이 있습니다.
 
 image::variable-types.png["Variable Types"]
 
-So, as you can see, our basic integer takes up 4 bytes in memory. This is a finite amount of memory, and therefore there is limited (but pretty huge!) range of values that it can hold: namely, -2,147,483,648 to 2,147,483,647. If you need to store higher (or lower) numbers, you'd have to use a 'long int', which (contrary to the diagram) can go up to 9,223,372,036,854,775,807 and down to -9,223,372,036,854,775,808.
+자, 보시다시피, 우리의 기본적인 정수는 메모리에서 4 byte를 차지하고 있습니다. 이게 바로 메모리의 유한한 양이죠, 그리고 그렇기 때문에 담을 수 있는 값의 범위가 제한되어 있습니다(하지만 엄청 큽니다!): -2,147,483,648 에서 2,147,483,647 입니다. 만약 더 큰(또는 더 작은) 숫자를 저장하고 싶다면, 'long int' 를 사용해야 합니다, 이 변수에 담을 수 있는 값의 범위는 (상대적으로) 훨씬 큰 -9,223,372,036,854,775,808 에서 9,223,372,036,854,775,807 입니다.
 
-It may be unintuitive to make such distinctions when dealing with variables. A number is a number, right? Why differentiate between a decimal number and a whole number? The reason has to do with how values are stored in your computer's memory. Ultimately, by giving the programmer the responsibility of declaring what range and precision their variables need, the program can run that much more efficiently.
+변수들을 다룰때에 이런식으로 구별하는것이 애매할 수 있습니다. 숫자는 숫자쟎아요, 그렇죠? 십진수와 정수를 왜 다르게 취급할까요? 이는 변수가 컴퓨터의 메모리에 어떻게 저장되는지와 관련이 있습니다. 결국 프로그래머가 필요로 하는 변수의 범위와 정확도를 확실하게 제공함으로써, 컴퓨터가 좀 더 효율적으로 구동할 수 있는것입니다.
 
-There is one important kind of variable that is not covered in this chart: 'string'. A string can hold a sequence of characters. ... more to come ...
+위 차트에서 포함하고 있지 않는 중요한 변수가 하나 있습니다: 'string' 입니다. string은 문자의 열을 담을 수 있습니다. ... 원하는 만큼 많이요 ...
 
 [TIP]
 =====================================================================
-Compile and run this program to see information about how your computer treats different kinds of variables.
+아래의 코드를 컴파일하고 실행하여 컴퓨터가 어떻게 다양한 변수를 다루는지 살펴보세요.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -971,7 +969,7 @@ int main ()
 Loops
 ~~~~~
 
-Loops are perhaps one of the most important things to be comfortable with as a programmer. They are, arguably, the main advantage of using a computer: doing something over and over again very rapidly is the definition of what a computer is good at. There are a few different kinds of loops, and it is important to be familiar with all of them.
+반복문은 프로그래머에게는 아마도 가장 친숙하고 중요한 개념중 하나일 것입니다. 이것들은 틀립없이, 컴퓨터를 사용하는 주요한 장점입니다: 뭔가를 아주 빠르게 반복해서 수행하는 것은 컴퓨터가 잘 하는 것이라 정의할 수 있죠. 반복문은 몇가지 다른 종류가 있습니다, 그리고 이 모든 것에 친숙해지는것이 중요합니다.
 
 Suppose you want to a circle every 20 pixels across your window. One option would be to copy and paste ofDrawCircle commands like this:
 
@@ -988,7 +986,7 @@ void ofApp::draw(){
 }
 ---------------------------------------------------------------------
 
-That would be over 50 lines of code - ugh. And what if you decided you wanted them every 30 pixels instead of every 20 pixels?  You'd have to go back and edit each line of code. And what if the size of your window changed?  This is clearly unacceptable. Consider this code:
+위에 50라인의 코드가 있습니다- 으읔.. 그런데 만약에 20픽셀씩이 아니라 30픽셀식 이동하는것으로 바꿀려면요? 맨앞으로 돌아가서 코드의 한줄 한줄을 다 편집해줘야 합니다. 그리고 만약에 윈도우의 크기가 변경되면요? 이건 분명 받아들일 수 없군요. 코드를 봅시다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1007,20 +1005,20 @@ void ofApp::draw(){
 }
 ---------------------------------------------------------------------
 
-In some ways, this is even worse. We've turned one line of code per circle into 2 lines of code per circle. However, there is one very important difference: in this case, the 2 lines are identical every time. We have "abstracted" the task -- that is, we have taken out the specifics and made it into a more general form.
+어떤 경우에, 더 심각할 수 있습니다. 위 코드에는 각 원마다 2개의 코드라인이 작성되어 있죠. 하지만, 아주 중요한 차이점이 있습니다: 이 경우, 두줄의 코드라인은 매번 동일합니다. "추출된" 작업을 갖고 있는 셈이죠 -- 즉, 상세한 내용을 취해서, 그것을 좀더 일반적인 형태로 바꿔보는 겁니다.
 
-So now, all that's left to do is to tell the computer to do those 2 lines of code a bunch of times instead of us pasting it in ourselves. This is where loops come in.
+자 이제, 우리가 직접 붙여넣지 말고, 컴퓨터에게 저 두줄을 계속 반목하라고 시켜봅시다. 이 때가 바로 반복문을 사용할 때 입니다.
 
 do...while loop
 ^^^^^^^^^^^^^^^
 
-All loops basically take the same form:
+모든 반복문은 동일한 형태를 취합니다:
 
-. Set up some initial values (initialization)
-. Execute the body of the loop
-. Decide whether to go back to step 2 or exit the loop
+. 몇가지 초기값을 지정한다 (초기화)
+. 반복문의 몸통을 실행한다.
+. 두번째의 단계로 돌아갈지, 아니면 반복문을 빠져나갈지 결정한다
 
-The simplest loop is the do/while loop. As the name suggests, this loop allows you to ask the computer to "do" something "while" a condition is met. Using a do/while loop, we can easily draw 51 circles
+가장 단순한 반복문은 do/while 반복문입니다. 이름에서 유추할 수 있듯이, 반복문은 컴퓨터에게 "do(실행)" 하도록 합니다, "while(동안)" 조건을 만날 때 까지요. do/while 반복문을 사용하라면, 51개의 원을 아주 쉽게 그려낼 수 있습니다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1035,35 +1033,35 @@ void ofApp::draw(){
 }
 ---------------------------------------------------------------------
 
-So what just happened?  Let's go through the code step by step as if we were the computer. I apologize that this is the most tedious thing you will ever read, but hopefully it will illustrate what is going on in the loop.
+자 어떤 일이 벌어졌나요? 우리가 컴퓨터라 생각하고 코드를 하나하나 훑어봅시다. 아마도 지금까지 중에 가장 지루한 과정일테니 미리 양해를 구합니다만, 이를 통해 반복문에서 어떤 일이 벌어지는지 이해할 수 있을것입니다.
 
-. Initialize a variable called i and set it equal to 0
-. Initialize a variable called x and set it equal to 20
-. Draw a circle at (20, 30) with a radius of 10
-. Increment x by 20 (it now equals 40)
-. Increment i by 1 (it now equals 1)
-. Is 1 less than 51?
-.. Yes!  Go back to the beginning of the loop
-. Draw a circle at (40, 30) with a radius of 10
-. Increment x by 20 (it now equals 60)
-. Increment i by 1 (it now equals 2)
-. Is 2 less than 51?
-.. Yes!  Go back to the beginning of the loop
-. Draw a circle at (60, 30) with a radius of 10
-. Increment x by 20 (it now equals 80)
-. Increment i by 1 (it now equals 3)
-. Is 3 less than 51?
-.. Yes!  Go back to the beginning of the loop
-. [REPEAT 46 TIMES UNTIL i=50 and x=1000]
-. Draw a circle at (1000, 30) with a radius of 10
-. Increment x by 20 (it now equals 1020)
-. Increment i by 1 (it now equals 51)
-. Is 51 less than 51?
-.. NO!  Exit out of loop and continue on to whatever comes next
+. 변수 i를 0으로 초기화한다
+. 변수 x를 20으로 초기화한다.
+. 지금이 10인 원을 (20, 30)에 그린다.
+. x를 20만큼 증가시킨다 (지금은 40)
+. i를 1씩 증가시킨다 (지금은 1)
+. 1이 51보다 작은가?
+.. 맞네! 반복문의 처음으로 돌아간다
+. 지금이 10인 원을 (40, 30)에 그린다.
+. x를 20만큼 증가시킨다 (지금은 60)
+. i를 1씩 증가시킨다 (지금은 2)
+. 2이 51보다 작은가?
+.. 맞네! 반복문의 처음으로 돌아간다
+. 지금이 10인 원을 (60, 30)에 그린다.
+. x를 20만큼 증가시킨다 (지금은 80)
+. i를 1씩 증가시킨다 (지금은 3)
+. 3이 51보다 작은가?
+.. 맞네! 반복문의 처음으로 돌아간다
+. [i가 50, x 가 1000이 될 때까지 46번 반복한다]
+. 지금이 10인 원을 (1000, 30)에 그린다.
+. x를 20만큼 증가시킨다 (지금은 1020)
+. i를 1씩 증가시킨다 (지금은 51)
+. 51이 51보다 작은가?
+.. 아니네! 반복문을 빠져나가고 다음에 올 명령을 계속 수행한다.
 
 [TIP]
 =====================================================================
-We could actually make this even a bit more efficient and make the 'x' variable to double duty like this:
+사실 아래와 같이 좀 더 효율적으로 코드를 작성해서 'x' 변수로 두가지를 한번에 해결할 수 있습니다:
 [source,cpp]
 ---------------------------------------------------------------------
 int x = 20;
@@ -1072,13 +1070,13 @@ do {
     x+=20;
 } while(x < ofGetWidth());
 ---------------------------------------------------------------------
-This has the added advantage of being immune to changes in window size. Try making the window bigger and smaller -- the circles will always be drawn to the end of the window.
+이 방법은 또한 윈도우 크기가 변경되었을때에도 문제없이 동작합니다. 윈도우를 크게 또는 작게 변경해보세요 -- 원은 항상 윈도우의 끝에 그려질겁니다.
 =====================================================================
 
 while loop
 ^^^^^^^^^^
 
-In a while loop, the 'while' part is simply moved up to the top of the loop. So if we want to draw a string of circles with a while loop, it would look like this:
+while 문에서는, 'while' 부분이 반복문의 맨앞으로 이동합니다. 따라서 while 문에서 원들을 그릴때에는, 이렇게 작성하면 됩니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1092,7 +1090,7 @@ while(i < 51)
 }
 ---------------------------------------------------------------------
 
-The only difference between a do...while loop and a while loop is that the the condition happens first, before the loop body runs. For example, suppose we edited our do...while loop like this:
+do...while 문과 한가지 다른점이라면, 반복문의 몸통이 실행되기 전에 조건을 먼저 확인한다는 것입니다. 예를들어, 우리의 do...while를 이렇게 편집한다고 해봅시다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1103,7 +1101,7 @@ do {
 } while( x < mouseX );
 ---------------------------------------------------------------------
 
-Notice how we've changed the condition so that the circles will be drawn until 'x' is less than the x position of the mouse. Run this code and see what happens. Notice, in particular, that there is always 1 circle on the screen regardless of how far to the left the mouse goes. Now transform that into a while loop:
+'x' 가 마우스의 x 위치보다 작을때까지만 원이 그려지도록 하기 위해 조건문이 어떻게 바꼈는지 보십시오. 이 코드를 실행하면 어떻게 되나요? 일반적으로 마우스가 좌측에서 얼마나 떨어져있는지와 상관없이 항상 하나의 원이 그려집니다. 이것을 wihle문으로 바꿔보죠:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1115,12 +1113,12 @@ while( x < mouseX )
 }
 ---------------------------------------------------------------------
 
-Now, if you move your mouse beyond the left side of the window, nothing at all is drawn. This is because before the body of the loop is executed (namely the ofDrawCircle draw command), the test is done. So if mouseX is less than x, no circles are drawn at all.
+이제, 마우스를 윈도우의 좌측으로 이동시켜보면, 아무것도 그려지지 않습니다. 이는 반복문의 몸통(즉 ofDrawCircle 명령)에 다다르기 전에 반복문이 실행된다는 것이죠. 따라서 mouseX가 x보다 작으면, 원은 전혀 그려지지 않는것입니다.
 
 for loop
 ^^^^^^^^
 
-We've saved the best for last. The for loop is probably the one that you will use the most. This might be because it combines all 3 parts of a loop (initialization, condition, and incrementing) into one compact syntax. Let's draw the same circles using a for loop:
+무사히 가장중요한 마지막에 다다랐군요. for 반복문은 아마도 여러분이 가장 많이 사용할 반복문 입니다. 이는 반복문의 세 부분(초기화, 조건, 증가)가 하나의 함축된 문법으로 조합되어 있기 때문입니다. for 반복문을 이용해서 원들을 한번 그려봅시다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1132,17 +1130,17 @@ for(int i=0; i<51; i++)
 }
 ---------------------------------------------------------------------
 
-The syntax of the for loop can be a little daunting at first, but let's take it apart piece by piece. The first part is initialization: "int i=0;"  Pretty straightforward: we now have an integer called i that we have set to 0. The next part is the condition: "i<51". In other words, we want the loop to continue so long as i is less than 51. And lastly,  the increment: "i++". After every iteration of the loop, we will increment i by 1.
+for 반복문의 문법은 처음에 보면 별거 아닌것처럼 보일겁니다만, 하나하나 뜯어서 살펴봅시다. 첫 부분은 초기화입니다: "int i=0;" 충분히 직관적이네요: 이제 우리는 i라는 정수형 변수를 갖고 있고, 0으로 초기화하였습니다. 다음 부분은 조건입니다: "i<51". 즉, i가 51보다 작으면 반복을 계속 하는것이죠. 그리고 마지막으로 증가입니다: "i++". 반복문의 모든 반복 다음에는, i를 1씩 증가할겁니다.
 
-We saw each of these things in the other kind of loops. The only difference here is that they are all smashed into one line.
-
+지금까지 다양한 종류의 반복문을 각각 살펴 보았습니다. for 문에서 차이점이 있다면 이것들을 한줄로 압축했다는 점입니다.
 
 Arrays
 ~~~~~~
 
-Another strength of computers is that they are encyclopedic: that is, they can keep track of a huge number of things at a time. Suppose we want to draw six thousand moving particles?  We know from the loop section that it is trivial to do something over and over again, but so far, we have only used loops to achieve a relatively consistent pattern. If we want do draw tons of particles, each with their own position, things get a little more complicated.
+컴퓨터의 강점중 하나는 박식하다는 것입니다: 즉, 한번에 많은 수들을 가질 수 있다는 점이죠. 6000개의 움직이는 파티클을 그리고 싶다고요? 반복문 섹션에서 봤듯이 그 작업을 계속해서 반복하면 됩니다, 별거 없죠, 하지만 아직까지는, 일관적인 패턴에만 반복문을 사용해왔습니다. 만약 엄청난 수의 파티클을 그리고 싶다면, 파티클 각각의 위치들을 다뤄야 할것이고, 이것들은 점점 더 복잡해집니다.
 
-.50000 particles!
+.50000개의 파티클! 
+
 image::Arrays01.png["Arrays!",width=500]
 
 [source,cpp]
@@ -1197,12 +1195,12 @@ void ofApp::draw(){
 
 [TIP]
 =====================================================================
-Notice the use of ofRandom(). This function will return a random number. It takes 2 arguments: the minimum possible value and the maximum possible value. What I am saying in this code is "give me a number between 0 and the width of the screen."
+ofRandom()의 사용을 보십시오. 이 함수는 랜덤한 숫자를 리턴해줍니다. 이 함수는 2개의 인자를 갖습니다: 결과로 나올수 있는 값의 최소값과 최대값이지요. 이 코드는 "0에서 화면의 가로 사이즈 사이의 값을 다오"라고 하는것과 같습니다.
 =====================================================================
 
-Technically this works, but we have only drawn 3 circles, and already the code is getting unwieldy. We want to draw 1000! We clearly have a bunch of variables that are used in very similar ways. Why not group, say, all of the x coordinates into a single set, and all of the y coordinates, etc.?
+기술적으로 이는 동작합니다, 하지만 겨우 3개의 원을 그렸네요, 그리고 코드는 이미 너무 길어져서 다루기가 힘듭니다. 1000개를 그리고 싶은데요! 분명히 이와같은 방법을 사용하면 엄청난 수의 변수들을 가져야 할것입니다. 그룹을 지어보는건 어떨까요? 모든 x 좌표들을 하나의 세트로 만드는겁니다, 그리고 y 좌표, 등등 말이죠.
 
-These sets are called arrays. Check out the following code:
+이러한 세트들을 배열이라고 합니다. 아래의 코드를 살펴보죠:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1246,11 +1244,11 @@ void ofApp::draw(){
 }
 ---------------------------------------------------------------------
 
-As you can see, we've replaced int circle1x, int circle2x, and int circle3x with simply int circleX[3]. Now circleX is an "array" that can hold up to 3 integers, rather than just 1. Read a little further, and you will see that, in order to assign a value to one of the ints in the array, you use the square brackets, like this: circleX[0] = 50;
+보시다시피, int circle1x, int circle2x, 그리고 int circle3x를 단순히 int circleX[3]으로 대체했습니다. 이제 circleX은 1개가 아니라 3개의 정수를 담을 수 있는 "배열" 입니다. 좀더 읽어보면, 무슨의미인지 아실거니다, 하나의 정수을 배열 내에서 할당하고 있죠, 대괄호(square bracket, [])를 사용하고 있습니다, 이렇게요: circleX[0] = 50;
 
-Down in the draw function, you can see that we use the same syntax to use the values that we have previously assigned to a particular slot in the array.
+draw 함수로 내려가보면, 배열 내에서 앞에서 할당한 값들을 사용하기 위해 마찬가지로 같은 문법(특정 기호를 사용하는 것)을 사용하고 있음을 알 수 있습니다.
 
-But this is still kind of a mess. One sign that you might not be utilizing loops as much as possible is if you see patterns in your code -- that is, similar sequences of code over and over again. So let's try to clean this up even more using some 'for' loops.
+하지만, 여전히 복잡합니다. 아직 반복문을 가능한 한 확실하게 이용하지 않은 부분이 있는데, 코드의 패턴을 보면 알 수 있습니다. -- 바로, 코드가 계속 비슷한 과정을 반복하고 있다는 것이죠. 자, 'for' 반복문을 이용해서 더 깔끔하게 만들어 봅시다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1287,14 +1285,14 @@ void ofApp::draw(){
 }
 ---------------------------------------------------------------------
 
-Now, instead of putting hard-coded numbers between the square brackets, we use the 'i' variable of our for loop.
+이제, 대괄호를 이용하여 하드-코딩하는 대신, 반복문의 'i' 변수를 사용했습니다.
 
 #define
 ^^^^^^^
 
-A wise person once said: the primary virtue of a programmer is laziness. Suppose you wanted to change the number of circles that appear on the screen from 3 to 500. Obviously, the first step would be to change circleX[3] to circleX[500], and likewise circleY and circleRad. Oh, but that's not all. You'd still have to go through every "for" loop and change i<3 to i<50. That's a lot of work!
+한 영리한 사람이 말했습니다: 프로그래머의 미덕의 근본은 바로 게으름이다. 아마도 화면에 보여지는 원의 수를 3에서 500으로 바꾸고 싶을 수 있을것입니다. 분명히, 첫 단계는 circleX[3]을 circleX[500]으로 바꾸는 것일겁니다, circleY와 circleRad도 마찬가지로요. 이런, 하지만 이게 다가 아닙니다. "for" 반복문으로 가서 i<3을 i<50으로 바꿔줘야 하는군요. 거 참 할일이 많네요!
 
-It would be great if we could use a variable to keep track of how many items we have in our array! It might look something like this:
+배열에 얼마나 많은 아이템이 들어있는지를 추적할 수 있는 변수를 사용하면 얼마나 좋겠습니까! 아래와 같이 말이죠:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1304,9 +1302,9 @@ float circleY[num];
 float circleRad[num];
 ---------------------------------------------------------------------
 
-Unfortunately, this isn't possible. You can't use a variable to declare a variable.
+불행이도, 이는 불가능합니다. 변수를 선언하기위해 변수를 사용할수 없습니다.
 
-Instead, we will use a new thing called a #define (pronounced: "pound define"). Take a look at this:
+대신에, 우리는 #define ("pound define" 이라고 읽습니다) 이라는 새로운 놈을 사용합니다. 한번 살펴보죠:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1353,13 +1351,13 @@ void ofApp::draw(){
 }
 ---------------------------------------------------------------------
 
-At the very top, notice the line "#define NUM_CIRCLES 500". This isn't technically a line of `C++` code, but rather a message to your compiler. It tells the compiler "before you start compiling code, anywhere you see NUM_CIRCLES, replace it with 500". That's it! A #define is one of a couple messages that you can send to the compiler (or, more accurately, the preprocessor), known more broadly as http://www.cplusplus.com/doc/tutorial/preprocessor/[preprocessor directives]. We will talk more about them at a later date., but for now, all you need to know is that #define is a very simple find/replace procedure.
+맨 위를 보시면, "#define NUM_CIRCLES_500"이라는 라인이 보입니다. 이는 사실 `C++` 코드가 아닙니다, 이는 컴파일러에게 보내는 메시지죠. 이 코드는 컴파일러에게 "코드를 컴파일 하기 전에, NUM_CIRCLES로 작성된것을 싹 다 500으로 바꿔버려"라고 말하는 것과 같습니다. 이게 답니다! #define은 컴파일러(또는, 좀 더 정확히, 전처리기)에게 전할 수 있는 메세지중 하나입니다. 이 메시지는 좀 더 광범위하게 말하면 http://www.cplusplus.com/doc/tutorial/preprocessor/[전처리기 지시자] 라고 합니다. 이것들에 대해서는 나중에 시간을 내서 알아보도록 하죠., 하지만 지금으로썬, 여러분은 "#define이라는 것은 찾기/바꾸기 절차" 정도로만 이해하시면 충분합니다.
 
 
 Functions
 ~~~~~~~~~
 
-In the examples above you had blocks of code enclosed in curly braces. To compose some more abstract functionality you also group instructions and call this group my a name. Look at the following example:
+위 예제에서, 중괄호({})로 묶인 코드의 블록들을 볼 수 있습니다. 좀더 추상적인 기능들을 구성하기 위해, 명령어들을 그룹짓고, 이 그룹을 이름으로 부를 수 있습니다. 아래의 예제를 살펴봅시다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1379,7 +1377,7 @@ void drawStar(float xpos, float ypos, float radius, int npts)
 }
 ---------------------------------------------------------------------
 
-Here you see the definition of a http://www.cplusplus.com/doc/tutorial/functions/[function]. A function is a named group of instruction which might take some input in the form of variables and might return some output. It might also be called a https://en.wikipedia.org/wiki/Subroutine[subroutine], depending on the context. Line 1 shows what is called the signature of a function. It first names the type of the data returned. Void means no data will be returned, int means a whole number gets returned, and so on. The return data type is followed by the name of the function ("drawStar") and finally a list of arguments. The list of arguments first states the data type (e.g. "int") and then a variable name (e.g. "xpos"). The argument variables are visible by their name inside the function body (aka. the curly braces), but not outside. The following code should make these concepts more clear.
+여러분이 보고 계신것은 http://www.cplusplus.com/doc/tutorial/functions/[함수] 의 선언입니다. 함수는 이름이 있는 명령의 그룹이며, 변수의 형태로 입력을 가질수도 있고 출력값을 리턴할 수도 있습니다. 함수는 또한 맭락에 따라 https://en.wikipedia.org/wiki/Subroutine[서브루틴] 이라고 불릴 수도 있습니다. 첫번째 라인이 함수의 서명이라 불리는 곳입니다. 처음에 작성된 것이 리턴되는 값의 형입니다. void란 아무것도 리턴되지 않는다는 의미이고, int는 정수가 리턴된다는 것입니다. 각 변수형도 마찬가지입니다. 리턴형 다음으로는 함수의 이름인 ("drawStar")가 오며, 그 뒤로 인자들의 리스트가 있습니다. 인자들의 리스트들은 앞에 자료형(가령 "int")이, 그 뒤로 변수명(가령 "xpos")으로 구성되어 있습니다. 인자 변수들은 함수의 몸통 내부({}로 감싸여진 부분)에서 각자의 이름으로 보여지며, 몸통 바깥에서는 보여지지 않습니다. 아래의 코드를 살펴보시면 이러한 개념이 명확히 이해되실 겁니다.
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1397,9 +1395,9 @@ void other(float arg)
 }
 ---------------------------------------------------------------------
 
-The function "add2" takes an integer as an argument ("number") and adds two to it. This value gets returned by the "return" statement. A "void" function (usually) does not have a return statement. The variable "number" can be seen and accessed inside the "add2" function, but not the inside the "other" function. When calling the "add2" function, the value of "ivalue" (4) gets copied over into "number". Then "add2" is executed and the return value (4 + 2 = 6) calculated. This is then passed back add assigned to "ivalue".
+함수 "add2"는 인자("number")로써 정수를 받아 2를 더합니다. 이 값은 "return" 구문에 의해 리턴됩니다. "void" 함수는 (일반적으로) return 구문을 갖지 않습니다. 변수 "number" 는 함수 "add2" 내부에서만 접근할 수 있으며, "다른" 함수 내에서는 접근할 수 없습니다. 함수 "add2" 가 호출될 때, "ivalue" 의 값 (4)는 "number" 에 복사됩니다. 그리고 나서 "add2" 함수가 실행되고, 계산된 값 (4 + 2 = 6)을 리턴합니다. 이 값은 "ivalue"로 할당됩니다.
 
-There are other noteworthy things about the "drawStar" function. As you can see in the source, a function can have its own variables (like "useInner"), which only exist inside the function body. A function can call other functions, as demonstrated with "ofBeginShape()", "ofDegToRad()" and so on. The line 7 is an abbreviated if statement. A more recognizable way to write it is:
+"drawStar" 함수에 대하여 주목할만한 점이 몇가지 있습니다. 코드에서 볼 수 있읏이, 함수는 자신만의 변수("useInner" 와 같은)를 가질 수 있습니다. 이 변수는 함수 내부에서만 존재합니다. 또한 "ofBeginShape()", "ofDegToRad()" 와 같은곳에서 보여지는 것처럼, 함수는 다른 함수를 호출할 수 있습니다. 코드의 7번째 라인은 if문을 단축하여 작성한 것입니다. 좀더 보여지기 쉽게 작성하면 이와 같습니다:
 
 [source,cpp]
 ---------------------------------------------------------------------
@@ -1411,6 +1409,6 @@ if (useInner) {
 }
 ---------------------------------------------------------------------
 
-This abbreviated syntax might be useful if each alternative consists of only one statement to be executed, but is also easy to overlook when trying to find bugs (programming errors) in a program. The more verbose version is easier to spot and understand. It also is easier to extend if needed.
+이러한 단축된 문법은 조건문의 각 갈래에서 하나의 구문만 수행되어야 할 경우 유용하지만, 버그(프로그래밍 에러)를 찾을려고 할 때 쉽게 훑어볼 수 있습니다. 좀더 자세항 곳은 보다 찾고 이해가기 쉬울것입니다. 또한 필요할 경우 확장 하기도 쉽죠.
 
-All the concepts introduced should give you the basic tools to study and understand the example code provided. We covered a lot of ground, so go and poke at the other examples!
+여러분이 학습하기 위한, 그리고 제공된 예제코드들을 이해하기 위한 모든 개념들을 소새했습니다. 기본적인 모든것을 다뤘으니, 이제 다른 예제들로 가서 이것저것 지지고 볶아보세요!

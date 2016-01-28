@@ -1,8 +1,11 @@
+## -*- coding: utf-8 -*-
 ---
-date: 2013/03/07 10:00:00
-title: Map과 함께 놀아봅시다, 정확히 std::map말이죠 
-summary: std:: 의 non-vector 컨테이너에 대한 개요
-author: Joshua Noble
+.. date: 2013/03/07 10:00:00
+.. title: Map과 함께 놀아봅시다, 정확히 std::map말이죠 
+.. summary: std:: 의 non-vector 컨테이너에 대한 개요
+.. author: Joshua Noble
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 <!-- This tutorial is composed by these sections: -->

@@ -1,6 +1,5 @@
 ## -*- coding: utf-8 -*-
-<%inherit file="/_templates/markdown.mako" />
-${'''
+.. title: raspberry pi
 
 라즈베리파이
 ============

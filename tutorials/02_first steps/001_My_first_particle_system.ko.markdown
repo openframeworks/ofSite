@@ -1,9 +1,12 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2012/02/24 10:00:00
 .. title: 파티클 시스템을 만들어보는 첫 단계
 .. summary: 첫 단계로 파티클 시스템을 만들어보는것보다 재미난게 있을까요 ?
 .. author: Patricio Gonzalez Vivo
 .. author_site: http://patriciogonzalezvivo.com
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 이 문서에서는, openFrameworks 다운로드와, IDE 셋업 및 프로젝트 예제를 컴파일하는 방법을 이미 읽어보신분에게 적합합니다. 이제 바로 재밌는 것들을 한번 만들어 볼 시간입니다!

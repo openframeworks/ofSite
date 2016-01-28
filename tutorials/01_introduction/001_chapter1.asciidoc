@@ -867,11 +867,11 @@ Well, luckily we are dealing with a circle, which will make it significantly eas
 
 image:hit-test-01.png["Hit Test 1"]
 
-We know that the radius of the circle = 300, and we know that the mouse click is 230 pixels away from the center of the circle. So, was the mouse click inside the circle?
+We know that the radius of the circle = 100, and we know that the mouse click is 230 pixels away from the center of the circle. So, was the mouse click inside the circle?
 
 image:hit-test-02.png["Hit Test 2"]
 
-In this case, we know that the mouse click was 90 pixels from the center of the circle, so the click was clearly inside the circle.
+In this case, we know that the mouse click was 92 pixels from the center of the circle, so the click was clearly inside the circle.
 
 So how do we measure this distance? openFrameworks provides a function called
 ofDist([x1], [y1], [x2], [y2]) that will save us from doing any basic trigonometry. All we have to do is give it our two coordinates.
