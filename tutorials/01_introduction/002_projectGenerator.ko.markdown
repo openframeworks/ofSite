@@ -20,11 +20,11 @@ openframeworks 0072부터, addon을 포함하여 오픈프레임워크 프로젝
 프로젝트 생성은 엄청 쉽습니다.
 projectGenerator가 포함된 폴더는 oF의 최상 폴더에 위치해 있습니다.
 
-![Image: where is the projectGenerator](/tutorials/01_introduction/002_projectGenerator/new-pg-00.png)
+![Image: where is the projectGenerator](new-pg-00.png)
 
 더블클릭하여 실행해주십시오.
 
-![Image: projectGenerator GUI](/tutorials/01_introduction/002_projectGenerator/new-pg-01.png)
+![Image: projectGenerator GUI](new-pg-01.png)
 
 새 앱을 생성할 때 설정 가능한 옵션도 있습니다.
 
@@ -57,7 +57,7 @@ projectGenerator를 실행하면, 여기엔 배포판이 위치한 폴더의 절
 
 ### 3. Addons
 만약 당신이 추가할 addon을 알고 있다면, addon 선택창을 열어서 선택 한 후 다시 돌아가주시면 됩니다.
-![Image: projectGenerator - selecting addons](/tutorials/01_introduction/002_projectGenerator/new-pg-02.png)
+![Image: projectGenerator - selecting addons](new-pg-02.png)
 	
 ### 4. Platform
 여기엔 여러분이 원하는 빌드하고싶은 플랫폼(운영체제)이 나타납니다. 이부분은 다양한 운영체제 각각의 배포판마다 다르게 나타납니다.

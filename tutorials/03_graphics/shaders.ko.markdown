@@ -45,7 +45,7 @@
 <!-- The triangle is the root of making 3d or even 2d scenes. We spend a lot of time trying to hide this or make them fancier, flashing, sparklier, etc, but the truth is: pretty much everything is a triangle. The OpenGL pipeline is pretty oriented towards the following workpath: your OF app fills OpenGL-managed memory buffers with arrays of points in 3d space (we're going to call these "vertices") and these "vertices" are projected into screen space, put together into triangles, and finally turned into pixel-sized fragments in a process called "rasterization". Finally, every fragment (read: pixel) is assigned a color value and drawn to the framebuffer so that you can actually see it. When we're talking about shaders, the whole "figuring out where vertices go in screen space" is a Vertex Shader and the whole "assign a color value to each pixel" is a Fragment Shader. The flow looks more or less like this (excuse the over-simplification) -->
 삼각형은 3d 혹은 심지어 2d 씬의 뿌리입니다. 이놈을 숨기거나 좀더 매력적으로 만들거나, 반짝이거나, 눈부시게 하거나 등등 많은 시간을 보냈습니다만, 분명히 모든것은 삼각형입니다. OpenGL 파이프라인은 분명히 이러한 작업순서를 따릅니다: 뎌러분의 오픈프레임웍스 어플리케이션은 OpenGL에 의해 관리되는 메모리 버퍼를 3d공간내 점(우리는 이것을 "버텍스"라고 부를겁니다)들의 배열로 채웁니다. 그리고 이 "버텍스들"은 화면 공간에 투영되어, 삼각형으로 함께 놓여지고, "래스터화(rasterization)"라고 불리우는 처리에서 픽셀 크기의 프래그먼트로 전환됩니다. 마지막으로, 모든 프래그먼트(픽셀)는 색이 주어져서 프레임버퍼로 그려져, 우리가 그것을 볼 수 있게 됩니다. 우리가 쉐이더에 대하여 이야기할 때, 모든 "어디에 있는 버텍스들이 스크린의 공간으로 가는지 알아내는것"이 버텍스 쉐이더이며, 모든 "각 픽셀에 색을 지정하는 것"이 프래그먼트 쉐이더입니다. 흐름은 더도 말고 덜도 말고 아래와 같습니다 (너무-대충 그려서 죄송합니다)
 
-![IMG](/tutorials/03_graphics/shaders/shaders_pipeline.png)
+![IMG](shaders_pipeline.png)
 
 <!-- Walking from the upper left to the lower right we have: -->
 좌측 상단에서 우측 하단으로 아래와 같습니다:
@@ -256,7 +256,7 @@ void main()
 <!-- That should look like the following when you run it: -->
 실행할 때 보여지는 화면은 아래와 같습니다:
 
-![IMG](/tutorials/03_graphics/shaders/001.png)
+![IMG](001.png)
 
 <!-- Let's break some of the things in there down a little bit. At the top of the fragment and vertex shaders you can see a lot of "uniforms". A uniform is a value passed to each shader from your program that sets some additional values that you use in each stage of your shading. Uniform variables act as constants, at least for the duration of your OF applications *draw()* method. Your OF application feeds these variables to the graphics pipeline so that they're accessible in both stages of shading. Any shader can access any uniform variable as long as it declares the variable, like we do in both shaders in our example. Note though that these variables are read-only in the shaders. If you want to update the value of a uniform, you can do it in your OF application by calling: -->
 잠시 멈춰서 이 안에 것들을 약간 살펴보도록 하죠. 프래그먼트 쉐이더와 버텍스 쉐이더의 윗부분을 보시면 많은 "uniforms"이라는 것들을 볼 수 있습니다. uniform은 여러분의 프로그램에서 각 쉐이더에 전달되는 값입니다. 이것은 쉐이딩의 각 단계에서 사용되는 추가적인 값을 세팅합니다. uniform 변수들은 최소한 오픈프레임웍스 *draw()* 메소드의 내에서 상수처럼 동작합니다. 여러분의 오픈프레임웍스 어플리케이션은 그래픽 파이프라인으로 이 변수들을 넘기기 떄문에 두 쉐이딩 스테이지에서 접근될 수 있습니다. 예제 속 두 쉐이더에서 했던것 처럼, uniform 변수들이 변수로써 선언이 되는 한, 모든 쉐이더가 이것들에 대해 접근이 가능합니다.  쉐이더에서 이러한 변수들이 읽기전용이라는 사실을 기억하세요. 만약 uniform의 값을 업데이트 하고싶다면, 오픈프레임웍스 내에서 이렇게 호출하는것으로 가능합니다:

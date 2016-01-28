@@ -16,11 +16,11 @@
 
 본 튜토리얼은 *희망컨데* 기본 튜토리얼(오픈프레임웍스 세팅, 변수사용, 루프 생성 등등)은 익숙하면서  3D를 다루고 싶은 분들을 대상으로 합니다. 좀 폼내는 것처럼 보일지 모르겠지만, 이 가이드의 로직과 코드를 통해 아래의 이미지를 이용하여(참고로 이 이미지는 [허블갤러리](http://hubblesite.org/gallery/album/star/)에서 가져왔습니다.):
 
-![Original hubble image](/tutorials/03_graphics/generativemesh/stars_small.png) 
+![Original hubble image](stars_small.png) 
 
 아래와 같이 만들것입니다:
 
-![Generative hubble mesh](/tutorials/03_graphics/generativemesh/mesh_small.png)
+![Generative hubble mesh](mesh_small.png)
 
 본 튜토리얼은 네 섹션으로 나뉘어집니다:
 
@@ -33,7 +33,7 @@
 	* 이미지 불러오기 
     * 픽셀에서 메시 생성하기
     * ofEasyCam을 이용하여 메시 둘러보기
-3. [조작하기 : 메쉬를 수정하는 효과 추가하기 ](#manipulations)
+3. [조작하기 : 메쉬를 수정하는 효과 추가하기](#manipulations)
     * 진동 추가하기
     * 정점에 궤도를 추가하기
     * 상호작용하는 확대효과 생성
@@ -50,7 +50,7 @@ mesh는 다양한 방법으로 연결이 가능한 **정점들**(Vertices. Verte
 
 좀 더 확실한 이해를 위해, 아래의 메쉬를 살펴보시기 바랍니다. 주황색 점들이 바로 정점들입니다. 정점들은 회색으로 칠해진 세개의 점을 세트로 하는 '삼각형 그리기모드'로 연결되어 있습니다. 좀더 자세한 정보를 원하신다면, [오픈지엘 튜토리얼](http://www.openframeworks.kr/tutorials/graphics/opengl.html)을 살펴보시기 바랍니다.
 
-![Keenan Crane's public domain cow shown in wireframe](/tutorials/03_graphics/generativemesh/Keenan_Crane_Public_Domain_Cow_Small.png) 
+![Keenan Crane's public domain cow shown in wireframe](Keenan_Crane_Public_Domain_Cow_Small.png) 
 
 자 이제부터터 점과 선을 그리기 모드로 사용하는것에 집중해 보겠습니다. 화면에 뭔가를 그려보도록 하지요. 메쉬를 생성할때는 반드시 아래와 같은 절차를 거쳐 코드를 작성해야합니다:
 
@@ -87,7 +87,7 @@ void testApp::draw() {
 ~~~
 컴파일을 하고 실행하면, 검은 바탕위에 삼각형의 형태로 위치한 세 흰 점을 볼 수 있습니다.
 
-![Triangle Points](/tutorials/03_graphics/generativemesh/TrianglePoints.png) 
+![Triangle Points](TrianglePoints.png) 
 
 흰색이 좀 지루한가요? setup을 수정하여 다른 색을 추가해보죠:
 
@@ -121,7 +121,7 @@ void testApp::setup() {
     mesh.setMode(OF_PRIMITIVE_LINE_LOOP);
 ~~~
 
-![Triangle Points](/tutorials/03_graphics/generativemesh/TriangleLineMode.png) 
+![Triangle Points](TriangleLineMode.png) 
 
 각각의 모드들은 정점으로부터 다른 방식으로 선을 생성합니다:
 * **OF_PRIMITIVE_LINE**는 각각의 정점들을 쌍으로 하여 *독립적으로* 선을 그립니다.  만약 V<sub>1</sub>, V<sub>2</sub>, V<sub>3</sub>, V<sub>4</sub>, ... 와 같은 정점들을 갖고 있다면, V<sub>1</sub>은 V<sub>2</sub>로, V<sub>3</sub>은  V<sub>4</sub>로 연결됩니다.
@@ -179,7 +179,7 @@ mesh.[enableIndices()](http://www.openframeworks.kr/documentation/3d/ofMesh.html
 
 이번 섹션을 전부 읽어본 것에 대한 보상입니다:
 
-![Line Mode Smile](/tutorials/03_graphics/generativemesh/LineModeFace.png) 
+![Line Mode Smile](LineModeFace.png) 
 
 네 알아요. 대단한 보상은 아닙니다. 하지만 이것은 OF_PRIMITIVE_LINES를 사용하여 그려낼 수 있습니다. 다른 두 모드로는 그려낼 수 없지요. 별도의 분리된 선들로 그려내야 합니다. 다음 섹션에서 이것의 장점들에 대해 알아볼 것입니다.
 
@@ -229,7 +229,7 @@ mesh.[enableIndices()](http://www.openframeworks.kr/documentation/3d/ofMesh.html
 
 따라서 , 우리는 데이터와 규칙이 필요합니다. 그렇다면 허블망원경에서 '데이터'를 뽑아볼까요?:
 
-![Original hubble image](/tutorials/03_graphics/generativemesh/stars.png) 
+![Original hubble image](stars.png) 
 
 HubbleMesh라는 이름으로 [새 오픈프레임웍스 프로젝트](http://www.openframeworks.kr/tutorials/introduction/002_projectGenerator.html)를 생성하고, HubbleMesh/bin/data 디렉토리에 위 이미지를 'starts.png'로 저장합시다.
 
@@ -297,7 +297,7 @@ void testApp::draw(){
 }
 ~~~
 
-![Thresholded Stars Point Mesh](/tutorials/03_graphics/generativemesh/ThresholdedStarsSmall.png) 
+![Thresholded Stars Point Mesh](ThresholdedStarsSmall.png) 
 
 위 코드에서는, 그리기모드로 점을 사용하여 메쉬를 생성했습니다. 그리고 나서 이미지의 각 픽셀을 반복하면서 ([getWidth()](http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_getWidth) 와 [getHeight()](http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_getHeight)를 사용하여) [getLightness()](http://www.openframeworks.kr/documentation/types/ofColor.html#!show_getLightness)을 사용해 각 픽셀의 밝기를 체크합니다. 만약 밝기가 지정한 threshold를 넘어서면, 정점의 위치를 해당 픽셀의 위치로, 정점의 색을 해당픽셀의 색으로 지정해 생성합니다. 마지막으로 파란색 배경위에 메쉬를 그렸기 때문에 이미지의 어떤 픽셀들이 정점들로 쓰였는지 볼 수 있게 되었습니다. 정점의 갯수를 늘리거나 줄이기 위해서는 threshold값을 수정하면 됩니다.
 
@@ -367,7 +367,7 @@ cout << mesh.getNumVertices() << endl;  // 아마 64,000 개 이상일 것입니
 
 결과는 아마 아래 그림과 같을것입니다.(혹시 실행시 여러분의 컴퓨터에서 너무 많은 시간이 걸린다면, *intensityThreshold*값을 좀 키워보시길 바랍니다. 정점의 갯수를 더 줄여줄 것입니다.):
 
-![First Line Mesh](/tutorials/03_graphics/generativemesh/StarLinesFirstMeshSmall.png) 
+![First Line Mesh](StarLinesFirstMeshSmall.png) 
 
 코드를 다시한번 더 정리해볼까요?:
 
@@ -416,7 +416,7 @@ void testApp::draw(){
 [ofEasyCam](http://www.openframeworks.kr/documentation/3d/ofEasyCam.html)은 우리가 생성한 메쉬를 손쉽게 3차원으로 보여주게 해줍니다. [opengl tutorial](http://www.openframeworks.kr/tutorials/graphics/opengl.html)의 [ofPushMatrix()](http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofPushMatrix), [ofPopMatrix()](http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofPopMatrix) and [ofTranslate()](http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofTranslate)를 읽어보시길 바랍니다. 위 코드는 카메라의 시점을 메쉬의 중심에 맞추도록 합니다. 실행된 프로그램의 창에서 왼쪽버튼을 드래그를 하여 회전을 시켜보세요! 우측버튼을 드래그하면 확대할수 있습니다!
 
 
-![Line Mesh with Camera](/tutorials/03_graphics/generativemesh/cameraSmall.gif) 
+![Line Mesh with Camera](cameraSmall.gif) 
 
 
 
@@ -428,7 +428,7 @@ void testApp::draw(){
 ###진동 추가하기
 메쉬는 현미경에서 관찰할 수 있는 미생물과 닮았습니다. 그렇다면 이러한 '유기적인' 움직임을 정점들에 추가해보도록 하죠. 여러분의 컴퓨터상에서의 움직임은 아래 gif이미지에서 보이는 것보다 훨씬 빠를겠지만(웹브라우저에서는 gif의 최대 프레임이 정해져있기 떄문입니다), 적어도 어떤 움직임을 추가할지에 대한 힌트는 드릴수 있겠네요: 
 
-![Jitter](/tutorials/03_graphics/generativemesh/jitterSmall.gif) 
+![Jitter](jitterSmall.gif) 
 
 각각의 프레임에서, 우리는 각각의 정점들을 작은, 랜덤한 값을 주어 움직이게 할겁니다. 이를 위해 [ofRandom()](http://www.openframeworks.kr/documentation/math/ofMath.html#show_ofRandom)을 사용하지 않고, Perlin 노이즈를 생성해주는 [ofSignedNoise()](http://openframeworks.kr/documentation/math/ofMath.html#!show_ofSignedNoise)를 사용할 것입니다. Daniel Shiffman이 제공하는 온라인 튜토리얼 [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/#i6-perlin-noise-a-smoother-approach) 섹션을 참고해주시기 바랍니다.  Perlin 노이즈는 시간경과에 따라 스무스하게 변하는 랜덤값을 제공해줍니다. [figure 1.5](http://natureofcode.com/book/imgs/intro/intro_05.png)(연속적인 노이즈)와 [figure 1.6](http://natureofcode.com/book/imgs/intro/intro_06.png)(연속적인 랜덤값)를 살펴보면, 일반적인 랜덤값과 perlin n노이즈가 어떤 차이를 보이는지 이해할 수 있을것입니다.
 
@@ -514,7 +514,7 @@ setup에서, 우리는 두가지를 추가했습니다:
 ###정점에 궤도를 추가하기
 다음으로, 우리는 소용돌이치는 움직임을 추가할 수 있습니다. *원래* 별들이 이렇게 움직이니까 적절한것 같네요.
 
-![Orbit](/tutorials/03_graphics/generativemesh/orbitSmall.gif) 
+![Orbit](orbitSmall.gif) 
 
 이러한 궤도를 도는 움직임을 위해 우리는 삼각함수들을 사용할 것입니다. 꼼꼼한 분들이라면, Nature of Code의 [chapter 3](http://natureofcode.com/book/chapter-3-oscillation/)을 참고해보시기 바랍니다.
 
@@ -627,13 +627,13 @@ meshCopy = mesh;
 The last tweak we will add gives a bit of interactivity to the mesh.  We will add a magnifying glass effect:
 마지막으로 추가할 것은 메쉬에 약간의 상호작용을 추가하는것입니다. 우리는 확대효과를 추가할 것입니다:
 
-![Magnified](/tutorials/03_graphics/generativemesh/magnifierSmall.gif) 
+![Magnified](magnifierSmall.gif) 
 
 
 사실 기술적으로 확대효과는 잘못된 명칭입니다. 실제로는 광학분야의 [barrel distortion](http://en.wikipedia.org/wiki/Distortion_(optics))를 바탕으로 합니다. 이것을 그리드에 적용시키면 이렇습니다:
 
-![Grid](/tutorials/03_graphics/generativemesh/GridSmall.png) 
-![BarrelDistortedGrid](/tutorials/03_graphics/generativemesh/BarrelDistortedGridSmall.png) 
+![Grid](GridSmall.png) 
+![BarrelDistortedGrid](BarrelDistortedGridSmall.png) 
 
 우리가 해야 할 것들은:
 

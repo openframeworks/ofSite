@@ -37,7 +37,7 @@
 
 배경색과 그릴 도형의 색을 지정한 수, 지름이 30이고, 중심이 '100, 100'인 원을 그립니다.
 
-![Image: coordinates.jpg](/tutorials/02_first%20steps/001_My_first_particle_system/coordinates.png)
+![Image: coordinates.jpg](coordinates.png)
 
 아마도 알아차리셨겠지만, 'x'와 'y' 좌표는 화면의 좌측상단을 '0,0'으로 하고 있습니다.
 
@@ -64,7 +64,7 @@ openFrameworks의 문서을 보시면, 모든 함수와 클래스들이 일관�
 
 도전해보세요 : 문서[www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/)를 참조하셔서, 디지털 버젼의 칸딘스키 그림을 한번 그려보십시오. 약간의 고급 팁을 드리자면 'ofEnableSmoothing()'이라는 함수는 모든 경계를 부드럽게 만들어주고, 'ofBackgroundGradient(ofColor::white, ofColor(255, 255, 200), OF_GRADIENT_CIRCULAR);'는 멋진 그라디언트 배경을 그려줍니다.
 
-![Image:kandisky.jpg](/tutorials/02_first%20steps/001_My_first_particle_system/kandinsky.jpg)
+![Image:kandisky.jpg](kandinsky.jpg)
  
 
 ## 2. 물체를 움직여봅시다. 
@@ -178,7 +178,7 @@ Ball:
 
 이것이 바로 오브젝트를 만드는 리스트들이 들어있는 `.h`파일입니다. 우리의 프로젝트들에 두 파일을 한번 추가해봅시다.(방법은 여러분이 사용하는 IDE에 따라 다릅니다). 하나는 `ball.h`라는 `.h`파일이고(여기에 공의 요소들을 정의할 것입니다), 나머지 하나는 `ball.cpp`라는 `.cpp`파일입니다(여기에는 `.h`에서 정의한 요소들이 어떻게 동작하는지를 정의할 것입니다). 
 
-![Image:kandisky.jpg](/tutorials/02_first%20steps/001_My_first_particle_system/newFile.png)
+![Image:kandisky.jpg](newFile.png)
 
 `ball.h`파일은 이렇게 작성되어야 합니다:
 
