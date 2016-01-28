@@ -1,9 +1,10 @@
+## -*- coding: utf-8 -*-
 ---
-date: 2013/03/07 10:00:00
-title: stl::vector의 기본
-summary: 기본적인 vector사용법에 대하여 간략히 살펴봅시다.
-author: Chris Sugrue
-author_site: http://csugrue.com
+.. date: 2013/03/07 10:00:00
+.. title: stl::vector의 기본
+.. summary: 기본적인 vector사용법에 대하여 간략히 살펴봅시다.
+.. author: Chris Sugrue
+.. author_site: http://csugrue.com
 ---
 
 <!-- A c++ vector is a type of container (like an array) that allows the storage of multiple elements (numbers, strings, objects etc.) in a format that can grow or shrink dynamically. Once a vector is created, new elements can be added, others erased and the entire vector can be sorted or shuffled. This tutorial is an overview of the basics of using vectors and is geared towards openFrameworks programmers that may be new or coming from other platforms and languages. It is not a comprehensive guide to all the functions of c++ vectors (additional resource links are provided below).  -->

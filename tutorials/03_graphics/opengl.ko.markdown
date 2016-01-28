@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2013/09/01 00:00:00
 .. title: OpenGL의 기초

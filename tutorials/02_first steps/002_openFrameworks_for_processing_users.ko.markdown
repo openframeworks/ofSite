@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 ---
 .. date: 2008/06/30 14:16:00
 .. title: Processing 사용자들을 위한 openFrameworks

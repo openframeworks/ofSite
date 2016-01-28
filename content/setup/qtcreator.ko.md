@@ -1,5 +1,5 @@
 ## -*- coding: utf-8 -*-
-<%inherit file="/_templates/markdown.mako" />
+.. title: Qt creator
 
 Qt Creator
 ==========
