@@ -2,8 +2,6 @@
 <%inherit file="base.tmpl" />
 
 <%block name="extra_head">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-
 % if lang == 'en':
     <script src="/tipuesearch_content.js"></script>
 % else:
