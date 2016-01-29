@@ -14,7 +14,6 @@ import shutil
 import glob
 
 import pathlib
-import html2text
 from bs4 import BeautifulSoup
 
 sys.path.append( os.path.dirname(os.path.realpath(__file__))+"/tools" )
