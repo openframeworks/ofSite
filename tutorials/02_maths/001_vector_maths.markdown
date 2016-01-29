@@ -14,11 +14,8 @@ Let's jump into some technical details; Shhhhh, hush now, it will all be over so
 ###scalar multiplication
 Let's say we want to go 3.14 units "to the right" ("along x", "along the first basis"). We multiply by component, so the result is [1 * 3.14,0 * 3.14,0 * 3.14] = [3.14,0,0]. Similarly, if we want to go "up" ("along y", "along the second basis") by 1.71, we have [0,1,0] * 1.71 = [1 * 1.71,0 * 1.71,0 * 1.71] = [0,1.71,0]. We can see that multiplying by a scalar, fittingly, scales the vector, keeping the direction the same (or reversing it, if the scalar is negative).
 
-<script src="../../js/vectors.js" type = "text/javascript">
-</script>
-
-<script src = "../../js/math_tut/diagrams.js" type = "text/javascript">
-</script>
+<script src="/assets/js/vectors.js"></script>
+<script src="/assets/js/math_tut/diagrams.js"></script>
 
 <canvas id = "mult" width = "600" height = "250"> </canvas>
 
