@@ -24,11 +24,8 @@
 
 이처럼 스칼라 곱이란, 백터의 크기를 변화하기 위해, 방향의 변화 없이 스칼라 만큼 곱한다는 사실을 알 수 있습니다. (만약 스칼라 값이 음수라면, 반대방향이 됩니다.) 
 
-<script src="../../js/vectors.js" type = "text/javascript">
-</script>
-
-<script src = "../../js/math_tut/diagrams.js" type = "text/javascript">
-</script>
+<script src="/assets/js/vectors.js"></script>
+<script src="/assets/js/math_tut/diagrams.js"></script>
 
 <canvas id = "mult" width = "600" height = "250"> </canvas>
 
