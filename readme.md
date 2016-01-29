@@ -27,8 +27,8 @@ This site is based on [nikola](https://getnikola.com). There's some scripts in t
 
 - ./install.sh will install nikola and all the needed dependencies. By now is only tested on linux and osx. On osx, before to run this script, you need first to install these packages:
   ```bash
-  brew install
   brew install python3
+  sudo easy_install pip
   brew linkapps python3
   ```
   and add this to your .basrc or zhsrc file
