@@ -25,9 +25,17 @@ The `documentation` folder contains the OF API reference and are also in markdow
 
 This site is based on [nikola](https://getnikola.com). There's some scripts in the root folder to make it easier to install and use.
 
-- ./install.sh will install nikola and all the needed dependencies, by now is only tested on linux but should work in osx once python3, pip and asciidoc are installed in the system
+- ./install.sh will install nikola and all the needed dependencies. By now is only tested on linux and osx. On osx, before to run this script, you need first to install these packages:
+  ```bash
+  brew install
+  brew install python3
+  brew install asciidoc
+  brew linkapps python3
+  ```
+  and add this to your .basrc or zhsrc file
+  `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
 
-- ./auto_build.sh will run nikola and build the web every time any file is modified
+- ./auto_build.sh will run nikola and build the web every time any file is modified. If, on osx, you receive this error: `FileNotFoundError: [Errno 2] No such file or directory: 'asciidoctor'`, you need to install asciidoctor as explained [here](http://asciidoctor.org/docs/install-asciidoctor-macosx/), and then run the script again.
 
 - ./serve.sh will start a local web server that serves the site and opens it in the browser
 
