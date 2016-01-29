@@ -29,7 +29,6 @@ This site is based on [nikola](https://getnikola.com). There's some scripts in t
   ```bash
   brew install
   brew install python3
-  brew install asciidoc
   brew linkapps python3
   ```
   and add this to your .basrc or zhsrc file
