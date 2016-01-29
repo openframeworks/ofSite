@@ -47,12 +47,12 @@ On Windows, you will also need to install MinGW in order to build openFrameworks
 
 Download it from the downloads page:
 
-http://openframeworks.cc/download
+[Download](/download)
 
 You may also check out the openFrameworks source from GitHub (under master branch): http://github.com/openframeworks/openFrameworks
 
 Or download the latest nightly:
-http://openframeworks.cc/download (bottom of the page)
+[Download](/download) (bottom of the page)
 
 <h3>Configure the NDK</h3>
 

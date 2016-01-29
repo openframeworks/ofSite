@@ -19,7 +19,7 @@ What is OpenFrameworks?
 
 [quote, openframeworks.cc/about]
 __________________________
-openFrameworks is an http://www.openframeworks.cc/about/license.html[open source] http://en.wikipedia.org/wiki/C%2B%2B"[C++] toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
+openFrameworks is an link:/about/license/[open source] http://en.wikipedia.org/wiki/C%2B%2B"[C++] toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation. The toolkit is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
 
 - http://www.opengl.org/[OpenGL], http://glew.sourceforge.net/[GLEW], http://www.opengl.org/resources/libraries/glut/[GLUT], http://www.glfw.org/[GLFW], https://code.google.com/p/libtess2/[libtess2] and http://cairographics.org/[cairo] for graphics
 - http://www.music.mcgill.ca/~gary/rtaudio/[rtAudio], http://www.portaudio.com/[PortAudio] or http://www.fmod.org/[FMOD] and http://kissfft.sourceforge.net/[Kiss FFT] for audio input, output and analysis
@@ -32,7 +32,7 @@ The code is written to be massively cross-compatible. Right now we support five 
 
 Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
 
-openFrameworks is actively developed by http://thesystemis.com/[Zach Lieberman], http://muonics.net/[Theodore Watson], and http://arturocastro.net/[Arturo Castro], with help from the http://www.openframeworks.cc/community/[OF community]. openFrameworks is indebted to two significant precursors: the http://processing.org/[Processing development environment], created by http://reas.com/[Casey Reas], http://benfry.com/[Ben Fry] and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the http://acg.media.mit.edu/[MIT Media Lab's Aesthetics and Computation Group].
+openFrameworks is actively developed by http://thesystemis.com/[Zach Lieberman], http://muonics.net/[Theodore Watson], and http://arturocastro.net/[Arturo Castro], with help from the link:/community/[OF community]. openFrameworks is indebted to two significant precursors: the http://processing.org/[Processing development environment], created by http://reas.com/[Casey Reas], http://benfry.com/[Ben Fry] and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the http://acg.media.mit.edu/[MIT Media Lab's Aesthetics and Computation Group].
 __________________________
 
 
@@ -139,17 +139,17 @@ To get started working with openFrameworks, you will want to download and instal
 
 Windows
 ^^^^^^^
-- http://www.openframeworks.cc/setup/codeblocks/[Code::Blocks setup guide]
-- http://www.openframeworks.cc/setup/vs/[Visual Studio setup guide]
+- link:/setup/codeblocks/[Code::Blocks setup guide]
+- link:/setup/vs/[Visual Studio setup guide]
 
 Mac
 ^^^
-- http://www.openframeworks.cc/setup/xcode/[Xcode Setup Guide]
+- link:/setup/xcode/[Xcode Setup Guide]
 
 Linux
 ^^^^^
-- http://www.openframeworks.cc/setup/linux-codeblocks/[Linux Code::Blocks & makefiles]
-- http://www.openframeworks.cc/setup/raspberrypi/[Raspberry Pi]
+- link:/setup/linux-codeblocks/[Linux Code::Blocks & makefiles]
+- link:/setup/raspberrypi/[Raspberry Pi]
 
 What Can I Make with oF?
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -203,8 +203,8 @@ coming soon...
 
 Additional oF Resources
 ~~~~~~~~~~~~~~~~~~~~~~~
-- http://www.openframeworks.cc/about/[About openFrameworks] More about openFrameworks, including the design methodology.
-- http://www.openframeworks.cc/documentation/[Official Documentation] Where you can find descriptions of classes and functions that make up openFrameworks
+- link:/about/[About openFrameworks] More about openFrameworks, including the design methodology.
+- link:/documentation/[Official Documentation] Where you can find descriptions of classes and functions that make up openFrameworks
 - http://forum.openframeworks.cc/[oF Forum] Probably the best place to get your questions answered
 - http://www.amazon.com/Programming-Interactivity-Designers-Processing-Openframeworks/dp/0596154143[Programming Interactivity] A great book that covers openFrameworks, Processing, and Arduino.
 - http://www.creativeapplications.net/[Creative Applications]

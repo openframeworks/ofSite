@@ -14,8 +14,8 @@ MESSAGES = {
     "Grab the most recent release (${currentVersion}) and follow the setup guide to get openFrameworks running.": 
     "Grab the most recent release (${currentVersion}) and follow the setup guide to get openFrameworks running.",
     
-    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="http://openframeworks.cc/tutorials">tutorials section<a>.': 
-    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="http://openframeworks.cc/tutorials">tutorials section<a>.',
+    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="/tutorials">tutorials section<a>.': 
+    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="/tutorials">tutorials section<a>.',
     
     'The forum is a place to meet other people working with openFrameworks. It\'s a place to share your work, or find help solving problems.': 
     'The forum is a place to meet other people working with openFrameworks. It\'s a place to share your work, or find help solving problems.',

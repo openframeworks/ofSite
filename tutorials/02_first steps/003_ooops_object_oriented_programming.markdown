@@ -363,7 +363,7 @@ similarly when we want to draw and update the objects we've created we'll need '
 [8]: #objects-part-3 "Make objects from your own Classes - Part 3"
 [9]: #objects-part-4 "Make objects from your own Classes - Part 4"
 
-[11]: http://openframeworks.cc/forum/viewtopic.php?t=428 "http://openframeworks.cc/forum/viewtopic.php?t=428"
+[11]: /forum/viewtopic.php?t=428 "/forum/viewtopic.php?t=428"
 
 [14]: http://wiki.openframeworks.cc/index.php?title=OF_for_Processing_users "http://wiki.openframeworks.cc/index.php?title=OF_for_Processing_users"
 
