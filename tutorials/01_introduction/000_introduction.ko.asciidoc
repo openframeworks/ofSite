@@ -165,7 +165,6 @@ Mac
 
 Linux
 ^^^^^
-- link:/setup/linux-codeblocks/[Linux Code::Blocks & makefiles]
 - link:/setup/raspberrypi/[Raspberry Pi]
 
 
