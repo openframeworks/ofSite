@@ -166,6 +166,7 @@ class DocsTask(Task):
                 addons_index[functions_file.module].append(functions_file)
             
         
+        print("Copy images and create intros", directory)
         for root, dirs, files in os.walk(directory):
             """ copy images to their folders """
             for name in files:
@@ -193,8 +194,11 @@ class DocsTask(Task):
                             context["title"] = clazz.name
                             context["module"] = module
                             context["intro_content"] = module_intro_content
-                            context["permalink"] = self.kw['translations'][lang] + '/documentation/' + module + "/introduction.html"
-                            short_tdst = os.path.join(self.kw['translations'][lang], 'documentation', module, "introduction.html")
+                            context["permalink"] = self.kw['translations'][lang] + '/documentation/' + module + "/"
+                            if lang == self.site.config['DEFAULT_LANG']: 
+                                short_tdst = os.path.join('documentation', module, "index.html")
+                            else:
+                                short_tdst = os.path.join(self.kw['translations'][lang], 'documentation', module, "index.html")
                             tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))
                             if module.find("ofx") == 0:
                                 context["classes"] = addons_index[module]
