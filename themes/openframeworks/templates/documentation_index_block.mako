@@ -7,7 +7,7 @@
 			    <h2>${module}</h2>
 			    % if subtitle is not None:
     			    <h3>${subtitle}</h3>
-			        <a href="${module}/introduction.html">module documentation</a>
+			        <a href="${module}/">module documentation</a>
     			% endif
 			</div>
 	</div>
