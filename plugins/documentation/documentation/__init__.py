@@ -14,25 +14,79 @@ import shutil
 import glob
 
 import pathlib
+import html2text
+from bs4 import BeautifulSoup
 
 sys.path.append( os.path.dirname(os.path.realpath(__file__))+"/tools" )
 import markdown_file
 from markdown import markdown
 
-logger = logging.getLogger("blogofile.post")    
+logger = logging.getLogger("documentation")    
         
 def uniqify(seq):
     seen = set()
     seen_add = seen.add
     return [ x for x in seq if x not in seen and not seen_add(x)]
 
+entry_js = '"title": "{title}", "text": "{text}", "tags": "{tags}", "url": "{url}"'
+        
+def cleanhtml(html):
+    soup = BeautifulSoup(html,"html.parser")
+    # kill all script and style elements
+    for script in soup(["script", "style"]):
+        script.extract()    # rip it out
+    text = soup.get_text()
+    return text.replace("\n","<br/>").replace('"','\\"')
+    
+def lang_prefix(lang, site):
+    if lang == site.config['DEFAULT_LANG']: 
+        return ""
+    else:
+        return "/" + lang 
+    
+def function_to_js(function, functions_file, site, lang):
+    if len(function.description) > len(function.inlined_description):
+        reference = function.description
+    else:
+        reference = function.inlined_description
+    reference = cleanhtml(reference)
+    url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + functions_file.module + "/" + functions_file.name + "/#!show_" + function.name )
+    return "{" + entry_js.format(title=function.name, text=reference, tags="function " + functions_file.module + " " + functions_file.name, url=url) + "},\n"
+
+def functions_file_to_js(clazz, site, lang):
+    reference = cleanhtml(clazz.description)
+    url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/" )
+    return "{" + entry_js.format(title=clazz.name, text=reference, tags="class " + clazz.module + " " + clazz.name, url=url) + "},\n"
+    
+def class_to_js(clazz, site, lang):
+    if len(clazz.reference) > len(clazz.detailed_inline_description):
+        reference = clazz.reference
+    else:
+        reference = clazz.detailed_inline_description
+    reference = cleanhtml(reference)
+    url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/" )
+    return "{" + entry_js.format(title=clazz.name, text=reference, tags="class " + clazz.module + " " + clazz.name, url=url) + "},\n"
+
+def method_to_js(function, clazz, site, lang):
+    if len(function.description) > len(function.inlined_description):
+        reference = function.description
+    else:
+        reference = function.inlined_description
+    reference = cleanhtml(reference)
+    url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/#!show_" + function.name )
+    return "{" + entry_js.format(title=clazz.name+"::"+function.name, text=reference, tags="method " + clazz.module + " " + clazz.name, url=url) + "},\n"
+
+def module_to_js(module, module_intro_content, site, lang):
+    reference = cleanhtml(module_intro_content)
+    url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + module + "/" )
+    return "{" + entry_js.format(title=module, text=reference, tags="module " + module, url=url) + "},\n"
 
 class DocsTask(Task):
     """Generates the tutorials contents."""
 
     name = "documentation"
     description = "Generate OF docs"
-    
+      
     def create_docs(self):
         tasks = {}
         classes = []
@@ -49,6 +103,10 @@ class DocsTask(Task):
         
         docs_dir = os.path.join(self.site.original_cwd, "documentation")
         md_extensions = self.site.config.get("MARKDOWN_EXTENSIONS")
+        content_js = {}
+        
+        for lang in self.kw['translations']:
+            content_js[lang] = 'var tipuesearch = {"pages": ['
         
         # Create an index of which module each class is in for generated links to other classes
         for class_name in classes:
@@ -71,25 +129,32 @@ class DocsTask(Task):
                 rep = class_name + "[(]"
                 clazz.detailed_inline_description = re.sub(rep, "<a href=\"/documentation/"+module_lookup[class_name]+"/"+class_name+"\" class=\"docs_class\" >"+class_name+"</a>(", clazz.detailed_inline_description)
 
+            original_reference = clazz.reference
             clazz.reference = markdown(clazz.reference, md_extensions)
             for class_name in classes_simple_name:
                 rep = class_name + "[\s]"
                 clazz.reference = re.sub(rep, "<a href=\"/documentation/"+module_lookup[class_name]+"/"+class_name+"\" class=\"docs_class\" >"+class_name+"</a> ", clazz.reference)
                 rep = class_name + "[(]"
                 clazz.reference = re.sub(rep, "<a href=\"/documentation/"+module_lookup[class_name]+"/"+class_name+"\" class=\"docs_class\" >"+class_name+"</a>(", clazz.reference)
-
+            
             for function in clazz.function_list:
                 function.description = markdown(function.description, md_extensions)
                 function.inlined_description = markdown(function.inlined_description, md_extensions)
+                for lang in self.kw['translations']:
+                    content_js[lang] += method_to_js(function, clazz, self.site, lang)
                 
-            def gen_link(class_name): return "<a href=\"/documentation/" + module_lookup[class_name] + "/" + class_name + "\" class=\"docs_class\" >"+class_name+"</a> " if class_name in module_lookup else ""
-            def filter_out_empty(class_name): return class_name!="" 
+            def gen_link(class_name): 
+                return "<a href=\"/documentation/" + module_lookup[class_name] + "/" + class_name + "\" class=\"docs_class\" >"+class_name+"</a> " if class_name in module_lookup else ""
+            def filter_out_empty(class_name): 
+                return class_name!="" 
             clazz.extends = list(filter(filter_out_empty, map(gen_link, clazz.extends)))
                 
             functions_file = markdown_file.getfunctionsfile(clazz.name)
             for function in functions_file.function_list:
                 function.description = markdown(function.description, md_extensions)
                 function.inlined_description = markdown(function.inlined_description, md_extensions)
+                for lang in self.kw['translations']:
+                    content_js[lang] += function_to_js(function, functions_file, self.site, lang)
             #print clazz.name
             #print clazz.function_list 
             env = {
@@ -109,6 +174,7 @@ class DocsTask(Task):
                 short_tdst = os.path.join(self.kw['translations'][lang], 'documentation', clazz.module, clazz.name,"index.html")
                 tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))
                 self.site.render_template(template_name, tdst, env)
+                content_js[lang] += class_to_js(clazz, self.site, lang)
             
             if not clazz.module in addon_classes:
                 if not clazz.module in core_index.keys():
@@ -125,6 +191,7 @@ class DocsTask(Task):
                         clazz.function_list.append(function)
                 addons_index[clazz.module].append(clazz)
             
+            
         
         function_files = markdown_file.getfunctionsfiles_list()
         for functionfile_name in function_files:
@@ -136,9 +203,12 @@ class DocsTask(Task):
     #        functions_file.reference = str(functions_file.reference)
     #        for func in function_files:
     #            functions_file.reference = str.replace(functions_file.reference, class_name, "<a href=\"../"+clazz.module+"/"+class_name+".html\">"+class_name+"</a>")
+            
             for function in functions_file.function_list:
                 function.description = markdown(function.description, md_extensions)
                 function.inlined_description = markdown(function.inlined_description, md_extensions)
+                for lang in self.kw['translations']:
+                    content_js[lang] += function_to_js(function, functions_file, self.site, lang)
                 
             env = {
                 "modulename": functions_file.name,
@@ -155,6 +225,7 @@ class DocsTask(Task):
                 short_tdst = os.path.join(self.kw['translations'][lang], 'documentation', functions_file.module, functions_file.name,"index.html")
                 tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))
                 self.site.render_template(template_name, tdst, env)
+                content_js[lang] += functions_file_to_js(functions_file, self.site, lang)
             
             if not functions_file.module in addon_classes:
                 if not functions_file.module in core_index:
@@ -191,7 +262,7 @@ class DocsTask(Task):
                         for lang in self.kw['translations']:
                             context = {}
                             context["lang"] = lang
-                            context["title"] = clazz.name
+                            context["title"] = module
                             context["module"] = module
                             context["intro_content"] = module_intro_content
                             context["permalink"] = self.kw['translations'][lang] + '/documentation/' + module + "/"
@@ -206,11 +277,18 @@ class DocsTask(Task):
                             else:
                                 context["classes"] = core_index[module]
                                 self.site.render_template(template_name, tdst, context)
+                        
+                            content_js[lang] += module_to_js(module, module_intro_content, self.site, lang)
                     else:
                         module_subtitles[module] = None
                         print("couldn't find " + module_intro)
             
-
+        for lang in self.kw['translations']:
+            content_js[lang] += ']};'
+            content_js_file = open("output" + lang_prefix(lang, self.site) + "/tipuesearch_content.js","w")
+            content_js_file.write(content_js[lang])
+            content_js_file.close()
+        
         # process index file
         template_name = "documentation.mako"
         for lang in self.kw['translations']:
@@ -276,7 +354,7 @@ class DocsTask(Task):
         yield utils.apply_filters({
             'basename': self.name,
             'name': "documentation",
-            'file_dep': template_dep + docs_md + class_template_dep + index_block_template_dep + module_intro_template_dep + [__file__],
+            'file_dep': template_dep + docs_md + class_template_dep + index_block_template_dep + module_intro_template_dep + [__file__, 'conf.py'],
             'targets': tdst,
             'actions': [
                 (self.create_docs, ())

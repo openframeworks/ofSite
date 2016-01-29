@@ -244,6 +244,7 @@ PAGES = (
     ("tutorials/*.markdown", "tutorials", "tutorial.mako"),
     ("tutorials/*.asciidoc", "tutorials", "tutorial.mako"),
     ("content/setup/*.md", "setup", "setup_guide.mako"),
+    ("documentation/search_results.md", "documentation", "search_results.mako"),
 )
 # Below this point, everything is optional
 
@@ -1226,3 +1227,15 @@ GLOBAL_CONTEXT = {
 # GLOBAL_CONTEXT as parameter when the template is about to be
 # rendered
 GLOBAL_CONTEXT_FILLER = []
+
+
+# This is an example that works well with Nikola's default Bootstrap3 theme.
+# It displays the search field in the navigation bar, and the results
+# in a modal dialog.
+
+SEARCH_FORM = """
+<form action="/documentation/search_results">
+<input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
+</form>"""
+
+
