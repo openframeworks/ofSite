@@ -50,12 +50,20 @@ def function_to_js(function, functions_file, site, lang):
         reference = function.inlined_description
     reference = cleanhtml(reference)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + functions_file.module + "/" + functions_file.name + "/#!show_" + function.name )
-    return "{" + entry_js.format(title=function.name, text=reference, tags="function " + functions_file.module + " " + functions_file.name, url=url) + "},\n"
+    if function.name[:5] == "ofGet" or function.name[:5] == "ofSet":
+        shortname = function.name[5:]
+    elif function.name[:4] == "ofIs":
+        shortname = function.name[5:]
+    else:
+        shortname = function.name[2:]
+    tags = "function " + shortname.lower() + " " + functions_file.name + " " + functions_file.module
+    return "{" + entry_js.format(title=function.name, text=reference, tags=tags, url=url) + "},\n"
 
 def functions_file_to_js(clazz, site, lang):
     reference = cleanhtml(clazz.description)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/" )
-    return "{" + entry_js.format(title=clazz.name, text=reference, tags="class " + clazz.module + " " + clazz.name, url=url) + "},\n"
+    tags = "functions " + clazz.name[2:] + " " + clazz.module
+    return "{" + entry_js.format(title=clazz.name, text=reference, tags=tags, url=url) + "},\n"
     
 def class_to_js(clazz, site, lang):
     if len(clazz.reference) > len(clazz.detailed_inline_description):
@@ -64,7 +72,8 @@ def class_to_js(clazz, site, lang):
         reference = clazz.detailed_inline_description
     reference = cleanhtml(reference)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/" )
-    return "{" + entry_js.format(title=clazz.name, text=reference, tags="class " + clazz.module + " " + clazz.name, url=url) + "},\n"
+    tags = "class " + clazz.name[2:] + " " + clazz.module
+    return "{" + entry_js.format(title=clazz.name, text=reference, tags=tags, url=url) + "},\n"
 
 def method_to_js(function, clazz, site, lang):
     if len(function.description) > len(function.inlined_description):
@@ -73,7 +82,14 @@ def method_to_js(function, clazz, site, lang):
         reference = function.inlined_description
     reference = cleanhtml(reference)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/#!show_" + function.name )
-    return "{" + entry_js.format(title=clazz.name+"::"+function.name, text=reference, tags="method " + clazz.module + " " + clazz.name, url=url) + "},\n"
+    if function.name[:3] == "get" or function.name[:3] == "set":
+        shortname = function.name[3:]
+    elif function.name[:2] == "is":
+        shortname = function.name[2:]
+    else:
+        shortname = function.name
+    tags = "method " + shortname.lower() + clazz.name + " " + clazz.module
+    return "{" + entry_js.format(title=clazz.name+"::"+function.name, text=reference, tags=tags, url=url) + "},\n"
 
 def module_to_js(module, module_intro_content, site, lang):
     reference = cleanhtml(module_intro_content)
