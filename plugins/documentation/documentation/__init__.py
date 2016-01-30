@@ -42,22 +42,16 @@ def lang_prefix(lang, site):
         return ""
     else:
         return "/" + lang 
-
-def of_semantic_name(element):
-    if element.name[:5] == "ofGet" or element.name[:5] == "ofSet":
-        return element.name[5:].lower()
-    elif element.name[:4] == "ofIs":
-        return element.name[5:].lower()
-    else:
-        return element.name[2:].lower()
         
-def semantic_name(element):
-    if element.name[:3] == "get" or element.name[:5] == "set":
-        return element.name[3:].lower()
-    elif element.name[:2] == "is":
-        return element.name[2:].lower()
-    else:
-        return element.name.lower()
+def camel_case_to_words(name):
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower().split("_")
+    
+def tags_from_of_name(element):
+    return " ".join(camel_case_to_words(element.name[2:]))
+        
+def tags_from_method_name(element):
+    return " ".join(camel_case_to_words(element.name))
     
 def function_to_js(function, functions_file, site, lang):
     if len(function.description) > len(function.inlined_description):
@@ -66,13 +60,13 @@ def function_to_js(function, functions_file, site, lang):
         reference = function.inlined_description
     reference = cleanhtml(reference)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + functions_file.module + "/" + functions_file.name + "/#!show_" + function.name )
-    tags = of_semantic_name(function) + " " + of_semantic_name(functions_file) + " " + functions_file.name + " " + functions_file.module + " function"
+    tags = tags_from_of_name(function) + " " + tags_from_of_name(functions_file) + " " + functions_file.name + " " + functions_file.module + " function"
     return "{" + entry_js.format(title=function.name, text=reference, tags=tags, url=url) + "},\n"
 
 def functions_file_to_js(clazz, site, lang):
     reference = cleanhtml(clazz.description)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/" )
-    tags = clazz.name[2:] + " " + clazz.module + " functions"
+    tags = tags_from_of_name(clazz) + " " + clazz.module + " functions"
     return "{" + entry_js.format(title=clazz.name, text=reference, tags=tags, url=url) + "},\n"
     
 def class_to_js(clazz, site, lang):
@@ -82,7 +76,7 @@ def class_to_js(clazz, site, lang):
         reference = clazz.detailed_inline_description
     reference = cleanhtml(reference)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/" )
-    tags = clazz.name[2:] + " " + clazz.module + " class"
+    tags = tags_from_of_name(clazz) + " " + clazz.module + " class"
     return "{" + entry_js.format(title=clazz.name, text=reference, tags=tags, url=url) + "},\n"
 
 def method_to_js(function, clazz, site, lang):
@@ -92,7 +86,7 @@ def method_to_js(function, clazz, site, lang):
         reference = function.inlined_description
     reference = cleanhtml(reference)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/#!show_" + function.name )
-    tags = semantic_name(function) + " " + of_semantic_name(clazz) + " " + clazz.name + " " + clazz.module + " method"
+    tags = tags_from_method_name(function) + " " + tags_from_of_name(clazz) + " " + clazz.name + " " + clazz.module + " method"
     return "{" + entry_js.format(title=clazz.name+"::"+function.name, text=reference, tags=tags, url=url) + "},\n"
 
 def module_to_js(module, module_intro_content, site, lang):
