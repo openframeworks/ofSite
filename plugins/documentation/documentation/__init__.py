@@ -56,13 +56,13 @@ def function_to_js(function, functions_file, site, lang):
         shortname = function.name[5:]
     else:
         shortname = function.name[2:]
-    tags = "function " + shortname.lower() + " " + functions_file.name + " " + functions_file.module
+    tags = shortname.lower() + " " + functions_file.name + " " + functions_file.module + " function"
     return "{" + entry_js.format(title=function.name, text=reference, tags=tags, url=url) + "},\n"
 
 def functions_file_to_js(clazz, site, lang):
     reference = cleanhtml(clazz.description)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/" )
-    tags = "functions " + clazz.name[2:] + " " + clazz.module
+    tags = clazz.name[2:] + " " + clazz.module + " functions"
     return "{" + entry_js.format(title=clazz.name, text=reference, tags=tags, url=url) + "},\n"
     
 def class_to_js(clazz, site, lang):
@@ -72,7 +72,7 @@ def class_to_js(clazz, site, lang):
         reference = clazz.detailed_inline_description
     reference = cleanhtml(reference)
     url = site.abs_link( lang_prefix(lang, site) + '/documentation/' + clazz.module + "/" + clazz.name + "/" )
-    tags = "class " + clazz.name[2:] + " " + clazz.module
+    tags = clazz.name[2:] + " " + clazz.module + " class"
     return "{" + entry_js.format(title=clazz.name, text=reference, tags=tags, url=url) + "},\n"
 
 def method_to_js(function, clazz, site, lang):
@@ -88,7 +88,7 @@ def method_to_js(function, clazz, site, lang):
         shortname = function.name[2:]
     else:
         shortname = function.name
-    tags = "method " + shortname.lower() + clazz.name + " " + clazz.module
+    tags = shortname.lower() + clazz.name + " " + clazz.module + " method"
     return "{" + entry_js.format(title=clazz.name+"::"+function.name, text=reference, tags=tags, url=url) + "},\n"
 
 def module_to_js(module, module_intro_content, site, lang):
