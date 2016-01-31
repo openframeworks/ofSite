@@ -5,7 +5,7 @@
 =========
 
 <!-- as we update and change OF, you can download older versions of the framework here. As we start to have multiple version of OF, please try to be clear on the discussion forum as to which version you are using. -->
-오픈프레임웍스가 업데이트 되고 변경되었으므로, 이전버전의 프레임워크는 이곳에서 다운받으실 수 있습니다. 다양한 오픈프레임웍스를 제공하고 있으므로, 여러분이 어떤 버전을 사용해야할지는 포럼에서 의견을 나눠보고 결정하십시오.
+오픈프레임웍스가 업데이트 되고 변경되었으므로, 이전버전의 프레임워크는 이곳에서 다운받으실 수 있습니다. 다양한 버전의 오픈프레임웍스를 제공하고 있으므로, 여러분이 어떤 버전을 사용해야할지는 포럼에서 의견을 나눠보고 결정하십시오.
 
 --------------------------------
 
