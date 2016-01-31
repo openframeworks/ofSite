@@ -23,6 +23,7 @@ BLOG_TITLE = "openFrameworks"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "http://openframeworks.cc/"
+#SITE_URL = "http://localhost"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://openframeworks.cc/"
@@ -1215,10 +1216,10 @@ DEMOTE_HEADERS = 0
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    "currentVersion": "0.9.0",
-    "breaking": True,
+    "currentVersion": "0.9.1",
+    "breaking": False,
     "majorVersion": "0.9.0",
-    "olderVersion": "0.8.4",
+    "olderVersion": "0.9.0",
     "external_links": EXTERNAL_LINKS,
     "external_translations": {} if EXTERNAL_TRANSLATIONS==None else EXTERNAL_TRANSLATIONS,
 }
