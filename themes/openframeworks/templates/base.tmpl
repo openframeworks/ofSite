@@ -54,7 +54,7 @@ lang="${lang}">
     %if prevlink:
         <link rel="prev" href="${prevlink}" type="text/html">
     %endif
-        %if nextlink:
+    %if nextlink:
         <link rel="next" href="${nextlink}" type="text/html">
     %endif
 
@@ -78,7 +78,7 @@ lang="${lang}">
     
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
     <script type="text/javascript" src="/assets/js/jquery.timeago.js" type="text/javascript"></script>
 
@@ -122,15 +122,15 @@ lang="${lang}">
                         <ul>
                             %for suburl, text in url:
                                 % if rel_link(permalink, suburl) == "#":
-                                    <li><a href="${permalink}"  class="active">${text}</a></li>
+                                    <li><a href="${suburl}"  class="active">${text}</a></li>
                                 %else:
                                     <li><a href="${suburl}">${text}</a></li>
                                 %endif
                             %endfor
                         </ul>
                         % else:
-                            % if rel_link(permalink, url) == "#":
-                                <li><a href="${permalink}" class="active">${text}</a></li>
+                            % if url in permalink:
+                                <li><a href="${url}" class="active">${text}</a></li>
                             %else:
                                 <li><a href="${url}">${text}</a></li>
                             %endif
