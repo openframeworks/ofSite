@@ -480,7 +480,7 @@ class DocsTask(Task):
         yield utils.apply_filters({
             'basename': self.name,
             'name': "documentation",
-            'file_dep': template_dep + docs_md + class_template_dep + index_block_template_dep + module_intro_template_dep,
+            'file_dep': template_dep + docs_md + class_template_dep + index_block_template_dep + module_intro_template_dep + [__file__, 'conf.py'] ,
             'targets': tdst,
             'actions': [
                 (self.create_docs, ())
