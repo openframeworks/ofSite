@@ -98,7 +98,7 @@ TRANSLATIONS = {
 # specific language from here
 EXTERNAL_TRANSLATIONS = {    
     "ja": "http://openframeworks.jp",
-    "ko": "http://openframeworks.kr",
+#   "ko": "http://openframeworks.kr",
 }
 
 # What will translated input files be named like?

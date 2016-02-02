@@ -155,6 +155,7 @@ body {
 	margin: 0px;
 	padding: 10px 0px 0px 0px;
 	position: relative;
+	min-width:921.5px;
 }
 #head-right ul {
 	list-style: none;
