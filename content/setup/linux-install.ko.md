@@ -5,7 +5,7 @@
 ==========
 
 <!-- Before you can use OF in Linux you'll need to run a couple of scripts to install some dependencies and compile both the OF library itself and the project generator. -->
-오픈프레임웍스를 리눅스에서 사용하려면, 몇몇 의존성패키지들과 오픈프레임웍스 라이브러리 자체 및 프로젝트 생성기를 컴파일하기위해 몇몇 스크립트를 실행해야합니다.
+오픈프레임웍스를 리눅스에서 사용하려면, 몇몇 의존성패키지들과 오픈프레임웍스 라이브러리 자체 및 프로젝트 생성기를 컴파일하기 위해 몇몇 스크립트를 실행해야합니다.
 
 <!-- First of all you'll need to execute the install_dependencies.sh script for your distribution which is located in `scripts/linux/distro_name/install_dependencies.sh` -->
 우선 해야할 것은 `scripts/linux/distro_name/install_dependencies.sh`에 위치한 현재 사용중인 리눅스 배포판에 맞는 install_dependencies.sh 스크립트를 실행하는 것입니다.
