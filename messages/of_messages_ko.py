@@ -31,8 +31,8 @@ MESSAGES = {
     'Tweets about "#openframeworks"': 'Tweets about "#openframeworks"',
     
     'breaking': '은 가장 최근에 릴리즈된 버전입니다. 새 버젼은 상당한 새로운 기능과, 새 인터페이스, 그리고 몇가지의 중단된 변경이 있는데, 이는 ${currentVersion} 이 이전 프로젝트와 100% 호환되지 않기 떄문입니다.',
-    
-    'non_breaking': 'is the most recent release. It\'s a minor version, with bugfixes only, so it is fully compatible with projects developed for ${majorVersion} or any newer version.',
+
+    'non_breaking': '은 가장 최근의 릴리즈입니다. 또한 이 버전은 여러 버그 수정만 적용된 마이너 버전이므로, ${majorVersion}에서 개발된 프로젝트과 완벽하게 호환되며, 새로운 버전과도 호환됩니다.',
     
     'please_see': '<a href="https://raw.github.com/openframeworks/openFrameworks/${currentVersion}/CHANGELOG.md">변경사항</a> 을 읽어보시고 이전버전과의 변경사항을 살펴봐 주시기 바랍니다.',
     
@@ -50,5 +50,5 @@ MESSAGES = {
     
     'other_releases': '<h2>다른 릴리즈</h2>    오픈프레임웍스의 이전 릴리즈는 <a href="older/">이곳</a>에 보관되어 있습니다. 가장 최신버전의 오픈프레임웍스는 <a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>을 살펴봐주십시오. 오픈프레임웍스에 대해 공헌하고 싶으신 분들은, GitHub 저장소를 fork하신 뒤, <a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">오픈프레임웍스 GitHub 워크플로우</a> 가이드를 따라주십시오.',
     
-    'translation': 'translation'
+    'translation': '번역'
 }
