@@ -2,4 +2,4 @@
 
 [도큐먼트 제작설명서](/tutorials/developers/003_contributing_to_the_documentation.html)에 따라 GitHub에 있는 이 도큐먼트에 공헌하실 수도 있습니다.
 
-이 문서는 가장 최근에 릴리즈 된, __${currentVersion}__버전을 따릅니다.
+이 문서는 가장 최근에 릴리즈 된, __${currentVersion}__ 버전을 따릅니다.
