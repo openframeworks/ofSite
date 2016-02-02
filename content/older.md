@@ -8,6 +8,22 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**pre release v0.9.0** 
+
+windows: [msys2/qtcreator][151] | [visual studio 2015][152] 
+
+mac [x-code (10.7-10.10)][153]
+
+linux: [makefiles/qtcreator][154] | [(64 bit) makefiles/qtcreator][155]
+
+iOS: [iOS][156] 
+
+android: [Android][157]
+
+linux arm: [armv6][158] | [armv7][159]
+
+--------------------------------
+
 **pre release v0.8.4** 
 
 windows: [code blocks][142] | [visual studio 2012][143] 
@@ -392,3 +408,12 @@ changes: [changelog for 0.04][67]
 [148]: http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_android_release.tar.gz
 [149]: http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv6l_release.tar.gz
 [150]: http://www.openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv7l_release.tar.gz
+[142]: http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_msys2_release.zip
+[143]: http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_vs_release.zip
+[144]: http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_osx_release.zip
+[145]: http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linux_release.tar.gz
+[146]: http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linux64_release.tar.gz
+[147]: http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_ios_release.zip
+[148]: http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_android_release.tar.gz
+[149]: http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz
+[150]: http://www.openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv7l_release.tar.gz
