@@ -51,11 +51,11 @@ Let's use some of this new stuff we just learned about:
 ~~~~
 So, now when you resize the window this little blue world remains centered. Congratulations!!
 
-Now let's take a look at the "Graphics" section on  [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . There you will find lots of other methods like `ofDrawLine()`, `ofDrawRect()` that are related to drawing.
+Now let's take a look at the "Graphics" section on  [openframeworks.cc/documentation/](/documentation/) . There you will find lots of other methods like `ofDrawLine()`, `ofDrawRect()` that are related to drawing.
 
 In the documentation of openFrameworks you will notice that all the functions and classes have a consistent way of working. The more you try things and play with them sooner you will get this "oF style" and things will become pretty intuitive.
 
-CHALLENGE: Referring to the documention, try and make your a digital Kandinsky-style artwork. [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) . A little tip for super awesome results will be the use of: `ofEnableSmoothing();` for making smooth edges and something like `ofBackgroundGradient(ofColor::white,ofColor(255,255,200), OF_GRADIENT_CIRCULAR);` for a nice gradient background.
+CHALLENGE: Referring to the documention, try and make your a digital Kandinsky-style artwork. [openframeworks.cc/documentation/](/documentation/) . A little tip for super awesome results will be the use of: `ofEnableSmoothing();` for making smooth edges and something like `ofBackgroundGradient(ofColor::white,ofColor(255,255,200), OF_GRADIENT_CIRCULAR);` for a nice gradient background.
 
 ![Image:kandisky.jpg](kandinsky.jpg)
 
@@ -144,7 +144,7 @@ Use the following code in `ofApp.cpp`:
 Nice, isn't it?
 Other very typical interaction is using the the keyboard. openFrameworks has some default methods for capturing mouse and keyboard events. Take a look at the bottom of the `ofApp.cpp`. You will see `keyPress()`, `keyRelease()`, `mouseMove()`, `mouseDragged()`, `mousePressed()` and `mouseReleased()` events.
 
-At this point we can add some randomness to the interaction by using `ofRandom()` and `ofNoise()`. I highly recommend you take a look at the documentation ( [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) ) and also taking a look to Golan's ofNoise example at `openFrameworks/examples/math` directory.
+At this point we can add some randomness to the interaction by using `ofRandom()` and `ofNoise()`. I highly recommend you take a look at the documentation ( [openframeworks.cc/documentation/](/documentation/) ) and also taking a look to Golan's ofNoise example at `openFrameworks/examples/math` directory.
 So let's add something really simple. Here every time you press the mouse the ball will go to a random position.
 
 ~~~~{.cpp}
@@ -366,7 +366,7 @@ of when and how things change and the code tends to become cleaner overall.
 
 ## 4. Let's get physical
 
-Before we continue on our way to a proper particle system, I have good news: you don´t have to deal with heavy maths in order to create some nice physics-based effects. openFrameworks provides some very nice functionality that makes this much easier. If you want to dive into the details however, take a look at Keith´s tutorials at [Math Tutorials](http://openframeworks.cc/tutorials/maths/001_vector_maths.html) that can lead you to crazy awesome new things.
+Before we continue on our way to a proper particle system, I have good news: you don´t have to deal with heavy maths in order to create some nice physics-based effects. openFrameworks provides some very nice functionality that makes this much easier. If you want to dive into the details however, take a look at Keith´s tutorials at [Math Tutorials](/tutorials/maths/001_vector_maths.html) that can lead you to crazy awesome new things.
 
 Some of the most helpful classes are contained in ofVectorMath that allow us to work with forces very easily. Just like we have in our `Ball` class, `ofVec2f` has `x` and `y` values, and you can access to them in the same way we just do with `ball.x` and `ball.y`. There are other really handy methods in `ofVec2f` like `.dot()` and also operators `+`, `-`, `*` and `/` that do the math for you.
 

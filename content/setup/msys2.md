@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 .. title: msys2
 
-[openFrameworks](http://openframeworks.cc/) | [Documentation table of contents](table_of_contents.md)
+[openFrameworks](/) | [Documentation table of contents](table_of_contents.md)
 
 msys2
 =====

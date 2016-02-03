@@ -115,8 +115,8 @@ _field: value_ 로 작성된 필드를 수정하지 **마십시오**: 이부분�
 <!-- ## How to Modify the openFrameworks documentation, The Easy Way: -->
 ## 오픈프레임웍스 도큐먼트를 수정하는, 쉬운방법 :
 
-<!-- Much like the [openFrameworks](https://github.com/openframeworks/openFrameworks) project, the [openFrameworks Website](http://www.openframeworks.cc/) is on [Github](https://github.com/openframeworks/ofSite).  Github is a website, and it's also a massive online code repository built around the distributed version control system [git](http://git-scm.com).  Github is extremely open-source friendly and is a where an increasingly large amount of the world's open-source software is kept, modified, and updated. -->
-[오픈프레임웍스](https://github.com/openframeworks/openFrameworks) 프로젝트와 마찬가지로, [오픈프레임웍스 웹사이트](http://www.openframeworks.cc/)역시 [Github](https://github.com/openframeworks/ofSite)에 저장되어있습니다. Github는 웹사이트로, [깃](http://git-scm.com)시스템을 사용하는 거대한 분산 버전관리 온라인 코드 저장소입니다. Github는 오픈소스친화적이며, 이곳에 점점 많은 오픈소스 소프트웨어들이 저장, 수정, 업데이트되고 있습니다.
+<!-- Much like the [openFrameworks](https://github.com/openframeworks/openFrameworks) project, the [openFrameworks Website](/) is on [Github](https://github.com/openframeworks/ofSite).  Github is a website, and it's also a massive online code repository built around the distributed version control system [git](http://git-scm.com).  Github is extremely open-source friendly and is a where an increasingly large amount of the world's open-source software is kept, modified, and updated. -->
+[오픈프레임웍스](https://github.com/openframeworks/openFrameworks) 프로젝트와 마찬가지로, [오픈프레임웍스 웹사이트](/)역시 [Github](https://github.com/openframeworks/ofSite)에 저장되어있습니다. Github는 웹사이트로, [깃](http://git-scm.com)시스템을 사용하는 거대한 분산 버전관리 온라인 코드 저장소입니다. Github는 오픈소스친화적이며, 이곳에 점점 많은 오픈소스 소프트웨어들이 저장, 수정, 업데이트되고 있습니다.
 
 <!-- Anybody can submit [pull requests](https://help.github.com/articles/using-pull-requests) through Github to update the website.   If you're interested in changing something but aren't really sure how git works, Github has made it really easy to modify text files directly from their website.  All you need is a Github account, which is free for open-source projects, and for people working with open-source.   -->
 누구든지 Github를 통해 [pull requests](https://help.github.com/articles/using-pull-requests)를 하여 웹사이트를 업데이트 할 수 있습니다. 여러분이 뭔갈 바꾸고 싶으나 깃의 동작법에 대해서 잘 모른다 하더라도, Github은 웹 페이지에서 아주 쉽게 텍스트파일을 수정할 수 있는 방법을 제공하고 있습니다. Github계정을 만들기만 하면 말이죠. 이 계정이 있으면 무료로 오픈소스 프로젝트를 운영하거나, 사람들과 함께 오픈소스프로젝트를 진행 할 수 있습니다.
@@ -130,8 +130,8 @@ _field: value_ 로 작성된 필드를 수정하지 **마십시오**: 이부분�
 <!-- #### Step 1:  Find the Class -->
 #### 단계 1 : 클래스 찾기
 
-<!-- Within the [openFrameworks documentation](http://www.openframeworks.cc/documentation/), at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions": -->
-[오픈프레임웍스 도큐먼트 페이지](http://www.openframeworks.cc/documentation/)에서, 클래스의 매 페이지 상단에 보면, 두 개의 버튼이 있을겁니다. "Edit Clas" 그리고/혹은 "Edit Functions"입니다:
+<!-- Within the [openFrameworks documentation](/documentation/), at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions": -->
+[오픈프레임웍스 도큐먼트 페이지](/documentation/)에서, 클래스의 매 페이지 상단에 보면, 두 개의 버튼이 있을겁니다. "Edit Clas" 그리고/혹은 "Edit Functions"입니다:
 
 ![](editclass.png)
 

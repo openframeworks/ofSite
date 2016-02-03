@@ -11,7 +11,7 @@ ofTutorials - Chapter 1 - Getting Started
 =========================================
 
 ____________
-*Update! New project generator*: _As of openFrameworks 0072 we have a link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[new tool called projectGenerator] to create new openFrameworks projects, including addons. In previous versions, creating a new openFrameworks project involved duplicating an existing example app and adding the addons by hand as described in the tutorial below. With the project generator project creation is faster and less error-prone. We highly recommend it. link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[Check it out now!]_
+*Update! New project generator*: _As of openFrameworks 0072 we have a link:/tutorials/introduction/002_projectGenerator.html[new tool called projectGenerator] to create new openFrameworks projects, including addons. In previous versions, creating a new openFrameworks project involved duplicating an existing example app and adding the addons by hand as described in the tutorial below. With the project generator project creation is faster and less error-prone. We highly recommend it. link:/tutorials/introduction/002_projectGenerator.html[Check it out now!]_
 ____________
 
 This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...
@@ -19,7 +19,7 @@ This chapter will help you get started with the basics of openFrameworks, such a
 Your First Look inside oF
 -------------------------
 
-By this point, I assume that you've http://www.openframeworks.cc/download/[downloaded openFrameworks and followed the appropriate setup guide]. So the first thing you'll want to do is unpack the openFrameworks archive and place the resulting folder somewhere you can easily access. Personally, I like to drop it in my Documents folder and then put a shortcut in my sidebar, like this:
+By this point, I assume that you've link:/download/[downloaded openFrameworks and followed the appropriate setup guide]. So the first thing you'll want to do is unpack the openFrameworks archive and place the resulting folder somewhere you can easily access. Personally, I like to drop it in my Documents folder and then put a shortcut in my sidebar, like this:
 
 image:shortcut.png["Shortcut",width="600"]
 
@@ -151,11 +151,11 @@ Creating Your First Project
 This section focuses on XCode as the example IDE. All the general information provided here also applies to Code::Blocks and can be transferred accordingly. The Code::Blocks project file has the ".workspace" extension and is used instead of ".xcodeproj". Please consult the link:http://www.codeblocks.org/user-manual[Code::Blocks manual] if you have any IDE specific questions.
 =====================================================================
 
-As mentioned in the introduction, openFrameworks takes care of most of the tedious work of setting up a C++ project in your IDE of choice. However, unlike programs like Flash or Processing, there is no "File > New" that allows you to create a project. You should use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] to generate a new projects. Previously (before openFrameworks 0072), the preferred method was to duplicate one of the example projects.
+As mentioned in the introduction, openFrameworks takes care of most of the tedious work of setting up a C++ project in your IDE of choice. However, unlike programs like Flash or Processing, there is no "File > New" that allows you to create a project. You should use the link:/tutorials/introduction/002_projectGenerator.html[projectGenerator] to generate a new projects. Previously (before openFrameworks 0072), the preferred method was to duplicate one of the example projects.
 
 [IMPORTANT]
 =====================================================================
-By extension, duplicating an example project means that you should never edit any of the example projects or put your own apps into the examples folders. They are placed there to provide starting points for your own apps, but you'll want to keep them pristine so that you always have a working starting point for your projects. You'll see the importance of this more as you move forward ... or better use the link:http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html[projectGenerator] in the first place.
+By extension, duplicating an example project means that you should never edit any of the example projects or put your own apps into the examples folders. They are placed there to provide starting points for your own apps, but you'll want to keep them pristine so that you always have a working starting point for your projects. You'll see the importance of this more as you move forward ... or better use the link:/tutorials/introduction/002_projectGenerator.html[projectGenerator] in the first place.
 =====================================================================
 
 As simple as this seems, this can be a huge stumbling block for a lot of beginners, so first lets agree on some terminology.
