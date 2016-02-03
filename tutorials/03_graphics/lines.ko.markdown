@@ -136,9 +136,11 @@ void ofApp::mouseDragged(int x, int y, int button){
 `mouseDragged`메소드는 조금더 복잡합니다. 우선 가장 쉬운 부분인 `drawPoints.push_back(ofPoint(x,y))`부터 시작해보도록 합시다. 마우스를 드래그할 때마다, 마우스의 위치를 `drawnPoints`벡터에 저장합니다. 이 벡터는 화면상의 마우스의 움직임의 히스토리와 같은것이죠. 이제 `for(auto point : drawnPoints)`로 시작하는 반복문을 살펴봅시다. 이 반복문안에서는 마우스의 현재 위치인 `ofPoint mouse`를 취해서, 이것과 모든 이전의 위치를 대응하게 합니다. 만약 현재 위치와 이전의 마우스위치의 거리가 30픽셀 이하이면, 히스토리 벡터의 이전 위치부터 현재의 위치를 연결하는 `Line lineTemp`를 생성합니다. 이 `Line`을 `lines`벡터에 push하고 나면, 화면에 그려질 준비가 된 것입니다.
 
 마우스를 이리저리 움직여보시면, 아래와 같은 결과가 보일것입니다.
+
 ![IMG](web.png)
 
 <a name="ofNode"></a>
+
 ### 3D공간에서 움직일때 선을 부드럽게 그리기
 
 이제 `ofPolyline`의 사용법을 알았으니, `ofNode`와 조합하여, 화면에서 부드럽게 웁직이는 선을 그릴 수 있습니다. `ofNode`는 3D공간의 점을 선언하는 클래스로, 다른 노드(node)들과 연결될 수 있습니다. 만약 2개의 노드 A와 B를 만들면, 이것을 nodeA를 nodeB의 부모로 정의합니다. A 노드가 웁직이면 노드 B도 같이 움직이는 것이죠. `ofNode`와 `ofPolyline`이 어떻게 함께 움직이는지 살펴봅시다. 우선 `App.h`파일을 아래와 같이 작성합니다:
