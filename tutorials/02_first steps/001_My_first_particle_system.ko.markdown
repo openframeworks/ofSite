@@ -58,11 +58,11 @@
 ~~~~
 자, 이제 윈도우의 창크기를 변화시켜보면, 작은 파란색 원은 계속 화면의 중앙에 위치하게 됩니다. 축하!!
 
-이제 [openframeworks.kr/documentation/](/documentation/)에 있는 "Graphics"섹션을 한번 둘러봅시다. 'ofLine()'이나 'ofRect()'와 같이 그리는것과 관련된 엄청나게 많은 메서드(함수)들을 보실 수 있습니다.
+이제 [/documentation/](/documentation/)에 있는 "Graphics"섹션을 한번 둘러봅시다. 'ofLine()'이나 'ofRect()'와 같이 그리는것과 관련된 엄청나게 많은 메서드(함수)들을 보실 수 있습니다.
 
 openFrameworks의 문서을 보시면, 모든 함수와 클래스들이 일관성있게 동작함을 알아차릴 수 있을것 입니다. 자꾸 시도하고 갖고 놀다보면, "oF 스타일"에 금방 익숙해질 수 있을것입니다.
 
-도전해보세요 : 문서[openframeworks.kr/documentation/](/documentation/)를 참조하셔서, 디지털 버젼의 칸딘스키 그림을 한번 그려보십시오. 약간의 고급 팁을 드리자면 'ofEnableSmoothing()'이라는 함수는 모든 경계를 부드럽게 만들어주고, 'ofBackgroundGradient(ofColor::white, ofColor(255, 255, 200), OF_GRADIENT_CIRCULAR);'는 멋진 그라디언트 배경을 그려줍니다.
+도전해보세요 : 문서[/documentation/](/documentation/)를 참조하셔서, 디지털 버젼의 칸딘스키 그림을 한번 그려보십시오. 약간의 고급 팁을 드리자면 'ofEnableSmoothing()'이라는 함수는 모든 경계를 부드럽게 만들어주고, 'ofBackgroundGradient(ofColor::white, ofColor(255, 255, 200), OF_GRADIENT_CIRCULAR);'는 멋진 그라디언트 배경을 그려줍니다.
 
 ![Image:kandisky.jpg](kandinsky.jpg)
  

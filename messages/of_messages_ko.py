@@ -15,7 +15,7 @@ MESSAGES = {
     "가장 최신의 릴리즈(${currentVersion})를 받으시고, openFrameworks를 구동하기 위한 셋업 가이드를 따라주시기 바랍니다.",
     
     'Reference for openFrameworks classes, functions and addons. You can also check the <a href="/tutorials">tutorials section<a>.': 
-    'openFrameworks의 클래스, 함수, 애드온의 레퍼런스입니다. 또한 <a href="/tutorials">튜토리얼</a> 섹션을 살펴보실 수 있습니다.',
+    'openFrameworks의 클래스, 함수, 애드온의 레퍼런스입니다. 또한 <a href="/ko/tutorials/">튜토리얼</a> 섹션을 살펴보실 수 있습니다.',
     
     'The forum is a place to meet other people working with openFrameworks. It\'s a place to share your work, or find help solving problems.': 
     '오픈프레임웍스로 활동하는 다른 사람들을 만나볼 수 있는 포럼입니다. 여기서 여러분의 작업을 공유하거나 문제를 해결을 찾을 수 있습니다.',
