@@ -948,7 +948,7 @@ openFrameworks의 수학 관련 함수들은 실질적으로 3개의 분리된 �
 
 추가적으로 ofMath()는 난수를 얻기위한 함수들을 제공합니다
 
-[/documentation\#ofMath-about][78]
+[/documentation/math/ofMath/][78]
 
 <!--### Structs, what are they for, and how can we use them?-->
 
@@ -1143,7 +1143,7 @@ breaking point(debug point)를 제거하려면, 그냥 해당 포인트를 클�
 [66]: http://www.cplusplus.com/reference/clibrary/cstdio/printf.html "http://www.cplusplus.com/reference/clibrary/cstdio/printf.html"
 [68]: http://members.gamedev.net/sicrane/articles/iostream.html "http://members.gamedev.net/sicrane/articles/iostream.html"
 [75]: http://www.cplusplus.com/reference/clibrary/cmath/ "http://www.cplusplus.com/reference/clibrary/cmath/"
-[78]: /documentation#ofMath-about "/documentation#ofMath-about"
+[78]: /ko/documentation/math/ofMath/ "/documentation/math/ofMath/"
 [80]: http://richardbowles.tripod.com/cpp/linklist/linklist.htm "http://richardbowles.tripod.com/cpp/linklist/linklist.htm"
 
 

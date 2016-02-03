@@ -768,7 +768,7 @@ and Functions:
 
 additionally ofMath() provides functions for getting random values.
 
-[openframeworks.cc/documentation\#ofMath-about][78]
+[/documentation/math/ofMath/][78]
 
 ### Structs, what are they for, and how can we use them?
 
@@ -917,7 +917,7 @@ To remove a debug point just click on it and drag it out of the window. You'll g
 [66]: http://www.cplusplus.com/reference/clibrary/cstdio/printf.html "http://www.cplusplus.com/reference/clibrary/cstdio/printf.html"
 [68]: http://members.gamedev.net/sicrane/articles/iostream.html "http://members.gamedev.net/sicrane/articles/iostream.html"
 [75]: http://www.cplusplus.com/reference/clibrary/cmath/ "http://www.cplusplus.com/reference/clibrary/cmath/"
-[78]: /documentation#ofMath-about "/documentation#ofMath-about"
+[78]: /documentation/math/ofMath/ "/documentation/math/ofMath/"
 [80]: http://richardbowles.tripod.com/cpp/linklist/linklist.htm "http://richardbowles.tripod.com/cpp/linklist/linklist.htm"
 
 
