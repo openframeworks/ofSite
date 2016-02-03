@@ -21,7 +21,7 @@ What is OpenFrameworks?
 
 [quote, openframeworks.cc/about]
 __________________________
-오픈프레임웍스는 실험적인 작업을 위한 간단하고 직관적인 프레임워크를 제공하여 생산적인 프로세스를 돕는 창조적 http://www.openframeworks.cc/about/license.html[오픈소스] http://en.wikipedia.org/wiki/C%2B%2B"[C++] 저작도구입니다. 이 저작도구는 범용적인 "접착제" 의 역활을 하도록 디자인 되었으며 아래에 나열된 일반적으로 사용되는 라이브러리들을 포함하고 있습니다. 
+오픈프레임웍스는 실험적인 작업을 위한 간단하고 직관적인 프레임워크를 제공하여 생산적인 프로세스를 돕는 창조적 link:/about/license/[오픈소스] http://en.wikipedia.org/wiki/C%2B%2B"[C++] 저작도구입니다. 이 저작도구는 범용적인 "접착제" 의 역활을 하도록 디자인 되었으며 아래에 나열된 일반적으로 사용되는 라이브러리들을 포함하고 있습니다. 
 
 -   그래픽 : http://www.opengl.org/[OpenGL],
     http://glew.sourceforge.net/[GLEW],
@@ -47,7 +47,7 @@ openFrameworks는 강력한 크로스플랫폼을 지원합니다. 현재만 하
 
 간단히 요약하자면, openFrameworks는 코드를 사용하여 쉽게 무언가를 제작할 수 있는 도구라고 할 수 있습니다. 저희에게 상당히 유용한 이 툴이 여러분들께도 도움이 되었으면 좋겠습니다.
 
-openFrameworks는 http://thesystemis.com/[Zach Lieberman], http://muonics.net/[Theodore Watson], 그리고 http://arturocastro.net/[Arturo Castro] ("the core")에 의해 활발히 개발되었으며, http://www.openframeworks.kr/community/[OF community] 의 도움을 받았습니다. openFrameworks는 두 선지자들의 은혜를 입었습니다: http://reas.com/[Casey Reas], http://benfry.com/[Ben Fry] 에 의해 개발된 http://processing.org/[Processing development environment], 프로세싱 커뮤니티; 그리고 Ben Fry와 http://acg.media.mit.edu/[MIT Media Lab's Aesthetics and Computation Group] 의 구성원들에 의해 개발된 비공개 c++ 배포판 ACU Toolkit입니다.
+openFrameworks는 http://thesystemis.com/[Zach Lieberman], http://muonics.net/[Theodore Watson], 그리고 http://arturocastro.net/[Arturo Castro] ("the core")에 의해 활발히 개발되었으며, link:/community/[OF community] 의 도움을 받았습니다. openFrameworks는 두 선지자들의 은혜를 입었습니다: http://reas.com/[Casey Reas], http://benfry.com/[Ben Fry] 에 의해 개발된 http://processing.org/[Processing development environment], 프로세싱 커뮤니티; 그리고 Ben Fry와 http://acg.media.mit.edu/[MIT Media Lab's Aesthetics and Computation Group] 의 구성원들에 의해 개발된 비공개 c++ 배포판 ACU Toolkit입니다.
 __________________________
 
 
@@ -156,17 +156,16 @@ Note : PHP나 Python과 같은 몇몇 언어들은, "스크립트 언어"라고 
 
 Windows
 ^^^^^^^
-- http://www.openframeworks.kr/setup/codeblocks/[Code::Blocks 셋업가이드]
-- http://www.openframeworks.kr/setup/vs/[Visual Studio 셋업가이드]
+- link:/setup/codeblocks/[Code::Blocks 셋업가이드]
+- link:/setup/vs/[Visual Studio 셋업가이드]
 
 Mac
 ^^^
-- http://www.openframeworks.kr/setup/xcode/[Xcode 셋업가이드]
+- link:/setup/xcode/[Xcode 셋업가이드]
 
 Linux
 ^^^^^
-- http://www.openframeworks.kr/setup/linux-codeblocks/[Linux Code::Blocks & makefiles]
-- http://www.openframeworks.kr/setup/raspberrypi/[Raspberry Pi]
+- link:/setup/raspberrypi/[Raspberry Pi]
 
 
 What Can I Make with oF?
@@ -223,8 +222,8 @@ Why openFrameworks?
 Additional oF Resources
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-- http://www.openframeworks.kr/about/[오픈프레임웍스 소개] : 디자인 방법론을 포함하는 오픈프레임웍스에 관한 소개.
-- http://www.openframeworks.kr/documentation/[공식 도큐먼트] : 오픈프레임웍스를 구성하고 있는 클래스와 함수들에 대한 설명을 찾을수 있습니다,
+- link:/about/[오픈프레임웍스 소개] : 디자인 방법론을 포함하는 오픈프레임웍스에 관한 소개.
+- link:/documentation/[공식 도큐먼트] : 오픈프레임웍스를 구성하고 있는 클래스와 함수들에 대한 설명을 찾을수 있습니다,
 - http://forum.openframeworks.cc/[oF Forum] : 아마도 궁금한 질문에 대한 답을 구할수 있는 최적의 곳입니다
 - http://www.amazon.com/Programming-Interactivity-Designers-Processing-Openframeworks/dp/0596154143[Programming Interactivity] : 오픈프레임웍스, 프로세싱, 아두이노를 다루는 훌륭한 서적입니다.
 - http://www.creativeapplications.net/[Creative Applications]

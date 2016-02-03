@@ -94,7 +94,7 @@ Everything between the tildes will be formatted and highlighted as C++ code.
 
 ## How to Modify the openFrameworks documentation, The Easy Way:
 
-Much like the [openFrameworks](https://github.com/openframeworks/openFrameworks) project, the [openFrameworks Website](http://www.openframeworks.cc/) is on [Github](https://github.com/openframeworks/ofSite).  Github is a website, and it's also a massive online code repository built around the distributed version control system [git](http://git-scm.com).  Github is extremely open-source friendly and is a where an increasingly large amount of the world's open-source software is kept, modified, and updated.
+Much like the [openFrameworks](https://github.com/openframeworks/openFrameworks) project, the [openFrameworks Website](/) is on [Github](https://github.com/openframeworks/ofSite).  Github is a website, and it's also a massive online code repository built around the distributed version control system [git](http://git-scm.com).  Github is extremely open-source friendly and is a where an increasingly large amount of the world's open-source software is kept, modified, and updated.
 
 
 Anybody can submit [pull requests](https://help.github.com/articles/using-pull-requests) through Github to update the website.   If you're interested in changing something but aren't really sure how git works, Github has made it really easy to modify text files directly from their website.  All you need is a Github account, which is free for open-source projects, and for people working with open-source.  
@@ -105,7 +105,7 @@ Getting an account is easy—just go to [github.com](https://github.com) and sig
 
 #### Step 1:  Find the Class
 
-Within the [ openFrameworks documentation](http://www.openframeworks.cc/documentation/), at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions":
+Within the [ openFrameworks documentation](/documentation/), at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions":
 
 ![](003_images/editclass.png)
 

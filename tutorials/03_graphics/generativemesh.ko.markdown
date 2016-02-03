@@ -48,16 +48,16 @@ mesh는 다양한 방법으로 연결이 가능한 **정점들**(Vertices. Verte
 * 정점의 쌍을 선택하여 그것들끼리 선을 그린다.
 * 세개 혹은 그 이상의 정점들을 연결하여 삼각형, 혹은 사각형(다각형)을 그린다.
 
-좀 더 확실한 이해를 위해, 아래의 메쉬를 살펴보시기 바랍니다. 주황색 점들이 바로 정점들입니다. 정점들은 회색으로 칠해진 세개의 점을 세트로 하는 '삼각형 그리기모드'로 연결되어 있습니다. 좀더 자세한 정보를 원하신다면, [오픈지엘 튜토리얼](http://www.openframeworks.kr/tutorials/graphics/opengl.html)을 살펴보시기 바랍니다.
+좀 더 확실한 이해를 위해, 아래의 메쉬를 살펴보시기 바랍니다. 주황색 점들이 바로 정점들입니다. 정점들은 회색으로 칠해진 세개의 점을 세트로 하는 '삼각형 그리기모드'로 연결되어 있습니다. 좀더 자세한 정보를 원하신다면, [오픈지엘 튜토리얼](/tutorials/graphics/opengl.html)을 살펴보시기 바랍니다.
 
 ![Keenan Crane's public domain cow shown in wireframe](Keenan_Crane_Public_Domain_Cow_Small.png) 
 
 자 이제부터터 점과 선을 그리기 모드로 사용하는것에 집중해 보겠습니다. 화면에 뭔가를 그려보도록 하지요. 메쉬를 생성할때는 반드시 아래와 같은 절차를 거쳐 코드를 작성해야합니다:
 
-1. [ofMesh](http://www.openframeworks.kr/documentation/3d/ofMesh.html)변수를 선언합니다. 여기서는 mesh라고 선언하도록 하죠.
-2. mesh.[setMode()](http://www.openframeworks.kr/documentation/3d/ofMesh.html#!show_setMode)함수를 사용하여, 메쉬가 사용할 정점들을 연결할때 사용할 그리기모드를 지정합니다. (점, 선, 기타 등등..) 우리는 그리기 모드로 점을 사용할 것이므로, **OF_PRIMIRIVE_POINTS**라고 지정해주어야 합니다.
-3. mesh.[addVertex()](http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_addVertex)를 사용하여 정점들을 추가해줍니다. 정점은 [ofVec3f](http://www.openframeworks.kr/documentation/math/ofVec3f.html)형이므로, 이 클래스를 사용해본적이 없다면, 도큐먼트 페이지의 예제를 참고하시길 바랍니다.
-4. mesh.[draw()](http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_draw)를 사용하여 메쉬를 그립니다.
+1. [ofMesh](/documentation/3d/ofMesh.html)변수를 선언합니다. 여기서는 mesh라고 선언하도록 하죠.
+2. mesh.[setMode()](/documentation/3d/ofMesh.html#!show_setMode)함수를 사용하여, 메쉬가 사용할 정점들을 연결할때 사용할 그리기모드를 지정합니다. (점, 선, 기타 등등..) 우리는 그리기 모드로 점을 사용할 것이므로, **OF_PRIMIRIVE_POINTS**라고 지정해주어야 합니다.
+3. mesh.[addVertex()](/documentation/3d/ofMesh.html#show_addVertex)를 사용하여 정점들을 추가해줍니다. 정점은 [ofVec3f](/documentation/math/ofVec3f.html)형이므로, 이 클래스를 사용해본적이 없다면, 도큐먼트 페이지의 예제를 참고하시길 바랍니다.
+4. mesh.[draw()](/documentation/3d/ofMesh.html#show_draw)를 사용하여 메쉬를 그립니다.
 
 자 이제 코드를 직접 작성해보죠!
 
@@ -111,7 +111,7 @@ void testApp::setup() {
 }
 ~~~
 
-먼저 mesh.[enableColors()](http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_enableColors)를 이용하여 색을 사용할수 있게 합니다. 기본적으로 활성화 되어있긴 하지만, 이 코드를 작성하는것은 좋은 연습이 될것입니다. 그리고 나서 mesh.[addColor()](http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_addColor)를 사용하여 색을 추가합니다. 색은 ofFloatColor를 사용하여 지정하는데 이것은 [ofColor](http://www.openframeworks.kr/documentation/types/ofColor.html)과 비슷하지만 빨강, 파랑, 녹색, 투명도의 범위가 0.0에서 1.0사이의 float(부동소수점)으로 표현한다는 점에서 차이가 있습니다. (원한다면 ofColor로 사용이 *가능*합니다만, 반드시 ofFloatColor를 사용해야합니다.) 첫 번째로 추가한 색은 첫번째 정점에, 두번째 추가한 색은 두번째 정점에 적용됩니다.
+먼저 mesh.[enableColors()](/documentation/3d/ofMesh.html#show_enableColors)를 이용하여 색을 사용할수 있게 합니다. 기본적으로 활성화 되어있긴 하지만, 이 코드를 작성하는것은 좋은 연습이 될것입니다. 그리고 나서 mesh.[addColor()](/documentation/3d/ofMesh.html#show_addColor)를 사용하여 색을 추가합니다. 색은 ofFloatColor를 사용하여 지정하는데 이것은 [ofColor](/documentation/types/ofColor.html)과 비슷하지만 빨강, 파랑, 녹색, 투명도의 범위가 0.0에서 1.0사이의 float(부동소수점)으로 표현한다는 점에서 차이가 있습니다. (원한다면 ofColor로 사용이 *가능*합니다만, 반드시 ofFloatColor를 사용해야합니다.) 첫 번째로 추가한 색은 첫번째 정점에, 두번째 추가한 색은 두번째 정점에 적용됩니다.
 
 점이 좀 지루하죠? 선을 연결해볼 시간입니다. 그리기 모드를 선으로 바꿔야 합니다만, 선 모드에는 세가지 다른 옵션이 있습니다. 각각의 옵션을 setup함수의 첫번째 라인에 아래의 코드를 사용하여 직접 적용해보시기 바랍니다:
 
@@ -171,7 +171,7 @@ void testApp::setup() {
  
 indices(index의 복수형. 인덱스들)인덱스들은 추상화된 레이어를 추가합니다. 메쉬에 추가할 각각의 정점은 큰 고전적인 배열의 끝에 고정됩니다. 이 말은 즉 각각의 정점은 자신의 위치를 식별할수 있는 유일한 숫자를 갖는다는 뜻입니다. 0, 1, 2 이런식으로 붙여집니다. 특정 정점을 지정하기 위해서는 그것의 인덱스 넘버를 사용하면 되는것이지요.
 
-mesh.[enableIndices()](http://www.openframeworks.kr/documentation/3d/ofMesh.html#!show_enableIndices)를 호출하면, 오픈프레임웍스는 비어있는 인덱스 배열을 생성합니다. 이후 [addIndex()](http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_addIndex)를 호출하면, 배열의 끝에 값을 하나 추가하게 됩니다. 메쉬가 화면상에 그려질때, 오픈프레임웍스는 정점배열이 아닌, 인덱스 배열에 접근하여 루프를 돌며 그리기모드를 어떻게 생성할것인지를 결졍하게 됩니다.
+mesh.[enableIndices()](/documentation/3d/ofMesh.html#!show_enableIndices)를 호출하면, 오픈프레임웍스는 비어있는 인덱스 배열을 생성합니다. 이후 [addIndex()](/documentation/3d/ofMesh.html#show_addIndex)를 호출하면, 배열의 끝에 값을 하나 추가하게 됩니다. 메쉬가 화면상에 그려질때, 오픈프레임웍스는 정점배열이 아닌, 인덱스 배열에 접근하여 루프를 돌며 그리기모드를 어떻게 생성할것인지를 결졍하게 됩니다.
 
 따라서 OF_PRIMITIVE_LINE모드이고, 인덱스 배열이 (0, 1, 1, 2, 2, 0)이면, 0번째 정점과 1번째 정점이 연결되며, 1번째 정점과 2번째 정점이 연결되고, 2번째 정점과 0번째 정점이 연결됩니다. 고작 삼각형 하나를 그리는데 해줘야 하는 일이 뭐이리 많냐구요? 맞습니다. 하지만 이러한 인덱스의 개념은 상당히 강력하고 유용합니다.
 
@@ -231,7 +231,7 @@ mesh.[enableIndices()](http://www.openframeworks.kr/documentation/3d/ofMesh.html
 
 ![Original hubble image](stars.png) 
 
-HubbleMesh라는 이름으로 [새 오픈프레임웍스 프로젝트](http://www.openframeworks.kr/tutorials/introduction/002_projectGenerator.html)를 생성하고, HubbleMesh/bin/data 디렉토리에 위 이미지를 'starts.png'로 저장합시다.
+HubbleMesh라는 이름으로 [새 오픈프레임웍스 프로젝트](/tutorials/introduction/002_projectGenerator.html)를 생성하고, HubbleMesh/bin/data 디렉토리에 위 이미지를 'starts.png'로 저장합시다.
 
 자 이제 알록달록한 픽셀뭉치를 갖게 되었습니다. 하지만 저 픽셀들에서 메쉬로 변한하기 위해 어떠한 규칙들을 사용해야할까요? 일단 점을 그리는것으로 시작해 선을 그려볼까요? 우리의 이미지에는 엄청난 별들이 있으니, 저 별들이 위치한 곳에 정점을 생성해봅시다. 그리고 나면, 인접한 정점들과 선을 그려 일종의 거미줄을 생성할 수 있을 것입니다.
 
@@ -258,11 +258,11 @@ void testApp::draw(){
 }
 ~~~
 
-현재 [ofImage](http://www.oenframeworks.cc/documentation/graphics/ofImage.html)만다루는 튜토리얼은 아직 없습니다. 따라서 혹시 이미지를 가지고 어떤것을 더 할 수 있을지 궁금하신 분들은 [Processing 사용자들을 위한 openFrameworks](http://openframeworks.kr/tutorials/first%20steps/002_openFrameworks_for_processing_users.html)이나 [004 presentation](http://www.openframeworks.kr/tutorials/first%20steps/004_presentations.html)의 튜토리얼을 참고해주시기 바랍니다.
+현재 [ofImage](http://www.oenframeworks.cc/documentation/graphics/ofImage.html)만다루는 튜토리얼은 아직 없습니다. 따라서 혹시 이미지를 가지고 어떤것을 더 할 수 있을지 궁금하신 분들은 [Processing 사용자들을 위한 openFrameworks](/tutorials/first%20steps/002_openFrameworks_for_processing_users.html)이나 [004 presentation](/tutorials/first%20steps/004_presentations.html)의 튜토리얼을 참고해주시기 바랍니다.
 
-이제 남은것은 [loadImage()](http://www.openframeworks.kr/documentation/graphics/ofImage.html#!show_loadImage)함수를 이용하여 이미지를 불러와, 그것을 [draw(0,0)](http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_draw)함수를 이용해 화면의 좌측 상단에 그려는것만 남았습니다.
+이제 남은것은 [loadImage()](/documentation/graphics/ofImage.html#!show_loadImage)함수를 이용하여 이미지를 불러와, 그것을 [draw(0,0)](/documentation/graphics/ofImage.html#show_draw)함수를 이용해 화면의 좌측 상단에 그려는것만 남았습니다.
 
-훌륭하군요! 이미지가 로드되었습니다. 자 이제, 우리는 정점들을 사용하여 메쉬를 생성해야합니다.  이미지에서 별들의 위치에 정점들을 생성하고 싶다면, 이미지의 픽셀들을 훑어 그중에 '밝은'색들을 찾아서 수행하면 됩니다. 이렇게 하려면, 이미지의 픽셀 컬러 정보들에 접근할 필요가 있습니다. 바로 [getColor(x, y)](http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_getColor)함수입니다. 이미지의 픽셀을 따라 루프를 돌며 [threshold](http://en.wikipedia.org/wiki/Thresholding_%28image_processing%29)를 적용합니다. 이렇게 하면 다른 픽셀보다 밝은색이 있는 픽셀의 위치에만 정점을 추가할 수 있게 되는것입니다.
+훌륭하군요! 이미지가 로드되었습니다. 자 이제, 우리는 정점들을 사용하여 메쉬를 생성해야합니다.  이미지에서 별들의 위치에 정점들을 생성하고 싶다면, 이미지의 픽셀들을 훑어 그중에 '밝은'색들을 찾아서 수행하면 됩니다. 이렇게 하려면, 이미지의 픽셀 컬러 정보들에 접근할 필요가 있습니다. 바로 [getColor(x, y)](/documentation/graphics/ofImage.html#show_getColor)함수입니다. 이미지의 픽셀을 따라 루프를 돌며 [threshold](http://en.wikipedia.org/wiki/Thresholding_%28image_processing%29)를 적용합니다. 이렇게 하면 다른 픽셀보다 밝은색이 있는 픽셀의 위치에만 정점을 추가할 수 있게 되는것입니다.
 
 testApp.h에 메쉬를 추가합니다:
 ~~~.h
@@ -299,9 +299,9 @@ void testApp::draw(){
 
 ![Thresholded Stars Point Mesh](ThresholdedStarsSmall.png) 
 
-위 코드에서는, 그리기모드로 점을 사용하여 메쉬를 생성했습니다. 그리고 나서 이미지의 각 픽셀을 반복하면서 ([getWidth()](http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_getWidth) 와 [getHeight()](http://www.openframeworks.kr/documentation/graphics/ofImage.html#show_getHeight)를 사용하여) [getLightness()](http://www.openframeworks.kr/documentation/types/ofColor.html#!show_getLightness)을 사용해 각 픽셀의 밝기를 체크합니다. 만약 밝기가 지정한 threshold를 넘어서면, 정점의 위치를 해당 픽셀의 위치로, 정점의 색을 해당픽셀의 색으로 지정해 생성합니다. 마지막으로 파란색 배경위에 메쉬를 그렸기 때문에 이미지의 어떤 픽셀들이 정점들로 쓰였는지 볼 수 있게 되었습니다. 정점의 갯수를 늘리거나 줄이기 위해서는 threshold값을 수정하면 됩니다.
+위 코드에서는, 그리기모드로 점을 사용하여 메쉬를 생성했습니다. 그리고 나서 이미지의 각 픽셀을 반복하면서 ([getWidth()](/documentation/graphics/ofImage.html#show_getWidth) 와 [getHeight()](/documentation/graphics/ofImage.html#show_getHeight)를 사용하여) [getLightness()](/documentation/types/ofColor.html#!show_getLightness)을 사용해 각 픽셀의 밝기를 체크합니다. 만약 밝기가 지정한 threshold를 넘어서면, 정점의 위치를 해당 픽셀의 위치로, 정점의 색을 해당픽셀의 색으로 지정해 생성합니다. 마지막으로 파란색 배경위에 메쉬를 그렸기 때문에 이미지의 어떤 픽셀들이 정점들로 쓰였는지 볼 수 있게 되었습니다. 정점의 갯수를 늘리거나 줄이기 위해서는 threshold값을 수정하면 됩니다.
 
-이번엔 [ofBackgroundGradient](http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofBackgroundGradient)를 이용하여 배경색을 좀더 어울리게 바꿔봅시다...
+이번엔 [ofBackgroundGradient](/documentation/graphics/ofGraphics.html#!show_ofBackgroundGradient)를 이용하여 배경색을 좀더 어울리게 바꿔봅시다...
 
 ~~~.cpp
 void testApp::draw(){
@@ -314,7 +314,7 @@ void testApp::draw(){
 
 이제 선만 그리면 됩니다. 선만!
 
-메쉬에는 많은 정점들을 갖고 있습니다. 원한다면 [getNumVertices()](http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_getNumVertices)함수를 이용해서 몇개인지 확인할 수 있습니다:
+메쉬에는 많은 정점들을 갖고 있습니다. 원한다면 [getNumVertices()](/documentation/3d/ofMesh.html#show_getNumVertices)함수를 이용해서 몇개인지 확인할 수 있습니다:
 
 ~~~.cpp
 cout << mesh.getNumVertices() << endl;  // 아마 64,000 개 이상일 것입니다.
@@ -371,8 +371,8 @@ cout << mesh.getNumVertices() << endl;  // 아마 64,000 개 이상일 것입니
 
 코드를 다시한번 더 정리해볼까요?:
 
-1. 모든 정점들의 쌍을 얻어와야 합니다. 메쉬의 *i* 번째 정점의 위치를 얻기 위해 [getVertex()](http://www.openframeworks.kr/documentation/3d/ofMesh.html#show_getVertex)를 사용합니다. 그리고 나면 쌍을 위한 두개의 정점을 사용할 수 있겠죠? 여기서 왜 두번째 루프가 *b=a+1*인지 궁금하신 분들도 있을겁니다. 선을 만들때엔 정점들의 순서는 중요하지 않으므로, 정점 자신만 제외하면 되는것입니다.
-2. 자 이제 정점들간의 거리를 구해야 합니다. ofVec3f는 거리계산을 해주는 함수 [distance()](http://www.openframeworks.kr/documentation/math/ofVec3f.html#show_distance)를 제공합니다.
+1. 모든 정점들의 쌍을 얻어와야 합니다. 메쉬의 *i* 번째 정점의 위치를 얻기 위해 [getVertex()](/documentation/3d/ofMesh.html#show_getVertex)를 사용합니다. 그리고 나면 쌍을 위한 두개의 정점을 사용할 수 있겠죠? 여기서 왜 두번째 루프가 *b=a+1*인지 궁금하신 분들도 있을겁니다. 선을 만들때엔 정점들의 순서는 중요하지 않으므로, 정점 자신만 제외하면 되는것입니다.
+2. 자 이제 정점들간의 거리를 구해야 합니다. ofVec3f는 거리계산을 해주는 함수 [distance()](/documentation/math/ofVec3f.html#show_distance)를 제공합니다.
 3. 만약 정점들이 *connectionDistance*에 정의된 값보다 작으면, 두 정점을 선으로 연결하기 위해 선을 추가해주면 됩니다. 선을 추가하기 위해 메쉬의 인덱스 어레이 중 *a*와 *b*를 사용하면 됩니다.
 
 쨔잔! 제너러티브 메쉬입니다. 3D로 보이기 위해 두가지 처리를 더해줘봅시다. 첫번째로 z좌표를 변경하기 위해 색의 채도를 사용할 수 있습니다.
@@ -387,7 +387,7 @@ cout << mesh.getNumVertices() << endl;  // 아마 64,000 개 이상일 것입니
             }
 ~~~
 
-위 코드는 [ofMap()](http://www.openframeworks.kr/documentation/math/ofMath.html#!show_ofMap)함수를 이용하여 채도가 높은 색은 z의 +방향으로, 채도가 낮은 색은 z축의 - 방향으로 변경해줍니다. ofMap함수는 값을 하나의 범위에서(여기서는 0 에서 255) 새로운 값의 범위로(여기서는 -100 에서 100) 변경해줍니다.
+위 코드는 [ofMap()](/documentation/math/ofMath.html#!show_ofMap)함수를 이용하여 채도가 높은 색은 z의 +방향으로, 채도가 낮은 색은 z축의 - 방향으로 변경해줍니다. ofMap함수는 값을 하나의 범위에서(여기서는 0 에서 255) 새로운 값의 범위로(여기서는 -100 에서 100) 변경해줍니다.
 
 흠.. 코드를 변경했는데 많이 바뀐거 같진 않죠? 자, 이제 마지막으로 추가할 처리가 남아있습니다: 바로 카메라를 추가하는 것입니다.
 
@@ -413,7 +413,7 @@ void testApp::draw(){
 }
 ~~~
 
-[ofEasyCam](http://www.openframeworks.kr/documentation/3d/ofEasyCam.html)은 우리가 생성한 메쉬를 손쉽게 3차원으로 보여주게 해줍니다. [opengl tutorial](http://www.openframeworks.kr/tutorials/graphics/opengl.html)의 [ofPushMatrix()](http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofPushMatrix), [ofPopMatrix()](http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofPopMatrix) and [ofTranslate()](http://www.openframeworks.kr/documentation/graphics/ofGraphics.html#!show_ofTranslate)를 읽어보시길 바랍니다. 위 코드는 카메라의 시점을 메쉬의 중심에 맞추도록 합니다. 실행된 프로그램의 창에서 왼쪽버튼을 드래그를 하여 회전을 시켜보세요! 우측버튼을 드래그하면 확대할수 있습니다!
+[ofEasyCam](/documentation/3d/ofEasyCam.html)은 우리가 생성한 메쉬를 손쉽게 3차원으로 보여주게 해줍니다. [opengl tutorial](/tutorials/graphics/opengl.html)의 [ofPushMatrix()](/documentation/graphics/ofGraphics.html#!show_ofPushMatrix), [ofPopMatrix()](/documentation/graphics/ofGraphics.html#!show_ofPopMatrix) and [ofTranslate()](/documentation/graphics/ofGraphics.html#!show_ofTranslate)를 읽어보시길 바랍니다. 위 코드는 카메라의 시점을 메쉬의 중심에 맞추도록 합니다. 실행된 프로그램의 창에서 왼쪽버튼을 드래그를 하여 회전을 시켜보세요! 우측버튼을 드래그하면 확대할수 있습니다!
 
 
 ![Line Mesh with Camera](cameraSmall.gif) 
@@ -430,11 +430,11 @@ void testApp::draw(){
 
 ![Jitter](jitterSmall.gif) 
 
-각각의 프레임에서, 우리는 각각의 정점들을 작은, 랜덤한 값을 주어 움직이게 할겁니다. 이를 위해 [ofRandom()](http://www.openframeworks.kr/documentation/math/ofMath.html#show_ofRandom)을 사용하지 않고, Perlin 노이즈를 생성해주는 [ofSignedNoise()](http://openframeworks.kr/documentation/math/ofMath.html#!show_ofSignedNoise)를 사용할 것입니다. Daniel Shiffman이 제공하는 온라인 튜토리얼 [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/#i6-perlin-noise-a-smoother-approach) 섹션을 참고해주시기 바랍니다.  Perlin 노이즈는 시간경과에 따라 스무스하게 변하는 랜덤값을 제공해줍니다. [figure 1.5](http://natureofcode.com/book/imgs/intro/intro_05.png)(연속적인 노이즈)와 [figure 1.6](http://natureofcode.com/book/imgs/intro/intro_06.png)(연속적인 랜덤값)를 살펴보면, 일반적인 랜덤값과 perlin n노이즈가 어떤 차이를 보이는지 이해할 수 있을것입니다.
+각각의 프레임에서, 우리는 각각의 정점들을 작은, 랜덤한 값을 주어 움직이게 할겁니다. 이를 위해 [ofRandom()](/documentation/math/ofMath.html#show_ofRandom)을 사용하지 않고, Perlin 노이즈를 생성해주는 [ofSignedNoise()](/documentation/math/ofMath.html#!show_ofSignedNoise)를 사용할 것입니다. Daniel Shiffman이 제공하는 온라인 튜토리얼 [1.6 Perlin Noise (A Smoother Approach)](http://natureofcode.com/book/introduction/#i6-perlin-noise-a-smoother-approach) 섹션을 참고해주시기 바랍니다.  Perlin 노이즈는 시간경과에 따라 스무스하게 변하는 랜덤값을 제공해줍니다. [figure 1.5](http://natureofcode.com/book/imgs/intro/intro_05.png)(연속적인 노이즈)와 [figure 1.6](http://natureofcode.com/book/imgs/intro/intro_06.png)(연속적인 랜덤값)를 살펴보면, 일반적인 랜덤값과 perlin n노이즈가 어떤 차이를 보이는지 이해할 수 있을것입니다.
 
 ofRandom()을 사용하면, 값의 범위를 지정할수 있고, 지정한 범위내에서 무작위한 값을 리턴해줍니다. 이 함수를 여러번 호출하면, (거의, 아주 거의) 매번 새로운 값들을 얻을 수 있습니다. Perlin노이즈는 약간 다릅니다. ofSignedNoise()는 항상 -1.0에서 0.1사이의 값을 리턴하지만, 반드시 항상 함수의 입력값을 전달해주어야 합니다. 그래프 용지에 ofSignedNoise()를 사용해 구불구불한 곡선을 그린다 상상해보세요. 여러분은 좌표값으로 x값을 전달할것이고, 함수는 그에 해당하는 y값을 리턴할것입니다. 만약 ofSignedNoise(3.0)을 여러번 호출하면, 항상 같은 값을 얻을 수 있습니다.
 
-움직임을 생성하기 위해 Perlin 노이즈를 사용할때는, 일반적으로 현재의 시간을 입력값으로 전달합니다(앞서 설명했던 그래프에서의 x값). 따라서, 정점의 위치를 변경하기 위해서, 우리는 ofSignedNoise에 시간을 전달할 것입니다([ofGetElapsedTimef()](http://www.openframeworks.kr/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef])함수를 이용해서 말이죠). 이렇게 하면 결과의 값은 시간이 경과할수록 스무스한 값을 얻을수 있습니다. 주의할 점은, 우리는 각각의 정점들이 독립적으로 움직이도록 할것이라는 겁니다. 만약 모든 정점들에 대해 ofSignedNoise에 같은 시간값을 전달해 주게 되면, 모든 정점들이 똑같이 움직이게 될것입니다. 즉 정점 1을 움직였다면, 정점2는 다른 시간을 사용해야 한다는 것이죠.(정점 3, 4 또한 마찬가지입니다.)
+움직임을 생성하기 위해 Perlin 노이즈를 사용할때는, 일반적으로 현재의 시간을 입력값으로 전달합니다(앞서 설명했던 그래프에서의 x값). 따라서, 정점의 위치를 변경하기 위해서, 우리는 ofSignedNoise에 시간을 전달할 것입니다([ofGetElapsedTimef()](/documentation/utils/ofUtils.html#!show_ofGetElapsedTimef])함수를 이용해서 말이죠). 이렇게 하면 결과의 값은 시간이 경과할수록 스무스한 값을 얻을수 있습니다. 주의할 점은, 우리는 각각의 정점들이 독립적으로 움직이도록 할것이라는 겁니다. 만약 모든 정점들에 대해 ofSignedNoise에 같은 시간값을 전달해 주게 되면, 모든 정점들이 똑같이 움직이게 될것입니다. 즉 정점 1을 움직였다면, 정점2는 다른 시간을 사용해야 한다는 것이죠.(정점 3, 4 또한 마찬가지입니다.)
 
 코드로 넘어가봅시다. 헤더파일에 아래 코드를 추가해주세요:
 
@@ -500,14 +500,14 @@ ofRandom()을 사용하면, 값의 범위를 지정할수 있고, 지정한 범�
 
 setup에서, 우리는 두가지를 추가했습니다:
 
-1. [ofSetFrameRate(60)](http://openframeworks.kr/documentation/application/ofAppRunner.html#!show_ofSetFrameRate)을 사용하여, 프로그램이 최대 60프레임으로 동작하게 하였습니다. 없어도 상관없지만, 시간을 사용할때는 상당히 유용합니다.
+1. [ofSetFrameRate(60)](/documentation/application/ofAppRunner.html#!show_ofSetFrameRate)을 사용하여, 프로그램이 최대 60프레임으로 동작하게 하였습니다. 없어도 상관없지만, 시간을 사용할때는 상당히 유용합니다.
 2. offsets이라는 변수를 생성했습니다. 이것은 ofVec3f들의 벡터로써, 랜덤한 값을 갖습니다. 이 값들은 각각의 정점들이 랜덤한 x, y, z방향으로 다른 정점에 대해 독립적으로 움직일 수 있도록 해줍니다.
 
 그리고 update에서는:
 
-1. 메쉬를 이용해 정점의 위치를 얻어옵니다. [getVertex()](http://openframeworks.kr/documentation/3d/ofMesh.html#!show_getVertex)를 이용했고, 그 값을 vert라는 변수에 저장합니다.
+1. 메쉬를 이용해 정점의 위치를 얻어옵니다. [getVertex()](/documentation/3d/ofMesh.html#!show_getVertex)를 이용했고, 그 값을 vert라는 변수에 저장합니다.
 2. 몇가지의 파라메터와 함께 ofSignedNoise()를 이용해 ver의 x, y, z를 변경했습니다.
-3. 정점의 위치를 [mesh.setVertex()](http://openframeworks.kr/documentation/3d/ofMesh.html#show_setVertex)를 사용하여 업데이트 해주었습니다.
+3. 정점의 위치를 [mesh.setVertex()](/documentation/3d/ofMesh.html#show_setVertex)를 사용하여 업데이트 해주었습니다.
 
 좋아요! 우글거리는 메쉬가 완성되었습니다.
 
@@ -643,7 +643,7 @@ The last tweak we will add gives a bit of interactivity to the mesh.  We will ad
 	* 정점의 위치가 마우스와 가까울수록, 더 멀리 밀어낸다
 	* 정점의 위치가 마우스와 멀어질수록, 조금만 밀어낸다.
 
-이 트윅을 위해서는 몇가지의 벡터함수를 사용해야 합니다. 벡터함수에 대해 잘 모르신 분들은 [벡터 튜토리얼](http://openframeworks.kr/tutorials/maths/001_vector_maths.html)를 찹고해주시기 바랍니다. 코드를 작성할 시간입니다!
+이 트윅을 위해서는 몇가지의 벡터함수를 사용해야 합니다. 벡터함수에 대해 잘 모르신 분들은 [벡터 튜토리얼](/tutorials/maths/001_vector_maths.html)를 찹고해주시기 바랍니다. 코드를 작성할 시간입니다!
 
 헤더에 새로운 변수를 추가합니다:
 ~~~.h
@@ -700,7 +700,7 @@ setup함수의 끝에 아래 코드들을 추가하세요
 <a name="nextsteps"></a>
 ##다음 순서
 
-[opengl tutorial](http://openframeworks.kr/tutorials/graphics/opengl.html)을 읽어보시고, 다른 그리기모드를 한번 시도하여 놀아보세요.
+[opengl tutorial](/tutorials/graphics/opengl.html)을 읽어보시고, 다른 그리기모드를 한번 시도하여 놀아보세요.
 
 다른 데이터들을 사용해보세요. 다른 규칙을 적용해보세요. 뭔가 괴상한것들을 만들어서 포럼에 공유해보세요!
 
