@@ -48,7 +48,7 @@ mesh는 다양한 방법으로 연결이 가능한 **정점들**(Vertices. Verte
 * 정점의 쌍을 선택하여 그것들끼리 선을 그린다.
 * 세개 혹은 그 이상의 정점들을 연결하여 삼각형, 혹은 사각형(다각형)을 그린다.
 
-좀 더 확실한 이해를 위해, 아래의 메쉬를 살펴보시기 바랍니다. 주황색 점들이 바로 정점들입니다. 정점들은 회색으로 칠해진 세개의 점을 세트로 하는 '삼각형 그리기모드'로 연결되어 있습니다. 좀더 자세한 정보를 원하신다면, [오픈지엘 튜토리얼](/tutorials/graphics/opengl.html)을 살펴보시기 바랍니다.
+좀 더 확실한 이해를 위해, 아래의 메쉬를 살펴보시기 바랍니다. 주황색 점들이 바로 정점들입니다. 정점들은 회색으로 칠해진 세개의 점을 세트로 하는 '삼각형 그리기모드'로 연결되어 있습니다. 좀더 자세한 정보를 원하신다면, [오픈지엘 튜토리얼](/ko/tutorials/03_graphics/opengl/)을 살펴보시기 바랍니다.
 
 ![Keenan Crane's public domain cow shown in wireframe](Keenan_Crane_Public_Domain_Cow_Small.png) 
 
@@ -231,7 +231,7 @@ mesh.[enableIndices()](/ko/documentation/3d/ofMesh/#show_enableIndices)를 호�
 
 ![Original hubble image](stars.png) 
 
-HubbleMesh라는 이름으로 [새 오픈프레임웍스 프로젝트](/tutorials/introduction/002_projectGenerator.html)를 생성하고, HubbleMesh/bin/data 디렉토리에 위 이미지를 'starts.png'로 저장합시다.
+HubbleMesh라는 이름으로 [새 오픈프레임웍스 프로젝트](/ko/tutorials/01_introduction/002_projectGenerator/)를 생성하고, HubbleMesh/bin/data 디렉토리에 위 이미지를 'starts.png'로 저장합시다.
 
 자 이제 알록달록한 픽셀뭉치를 갖게 되었습니다. 하지만 저 픽셀들에서 메쉬로 변한하기 위해 어떠한 규칙들을 사용해야할까요? 일단 점을 그리는것으로 시작해 선을 그려볼까요? 우리의 이미지에는 엄청난 별들이 있으니, 저 별들이 위치한 곳에 정점을 생성해봅시다. 그리고 나면, 인접한 정점들과 선을 그려 일종의 거미줄을 생성할 수 있을 것입니다.
 
@@ -258,7 +258,7 @@ void testApp::draw(){
 }
 ~~~
 
-현재 [ofImage](/ko/documentation/graphics/ofImage/)만다루는 튜토리얼은 아직 없습니다. 따라서 혹시 이미지를 가지고 어떤것을 더 할 수 있을지 궁금하신 분들은 [Processing 사용자들을 위한 openFrameworks](/tutorials/first%20steps/002_openFrameworks_for_processing_users.html)이나 [004 presentation](/tutorials/first%20steps/004_presentations.html)의 튜토리얼을 참고해주시기 바랍니다.
+현재 [ofImage](/ko/documentation/graphics/ofImage/)만다루는 튜토리얼은 아직 없습니다. 따라서 혹시 이미지를 가지고 어떤것을 더 할 수 있을지 궁금하신 분들은 [Processing 사용자들을 위한 openFrameworks](/ko/tutorials/02_first%20steps/002_openFrameworks_for_processing_users/)이나 [004 presentation](/ko/tutorials/02_first%20steps/004_presentations/)의 튜토리얼을 참고해주시기 바랍니다.
 
 이제 남은것은 [loadImage()](/ko/documentation/graphics/ofImage/#!show_loadImage)함수를 이용하여 이미지를 불러와, 그것을 [draw(0,0)](/ko/documentation/graphics/ofImage/#show_draw)함수를 이용해 화면의 좌측 상단에 그려는것만 남았습니다.
 
@@ -413,7 +413,7 @@ void testApp::draw(){
 }
 ~~~
 
-[ofEasyCam](/ko/documentation/3d/ofEasyCam.html)은 우리가 생성한 메쉬를 손쉽게 3차원으로 보여주게 해줍니다. [opengl tutorial](/tutorials/graphics/opengl/)의 [ofPushMatrix()](/ko/documentation/graphics/ofGraphics/#!show_ofPushMatrix), [ofPopMatrix()](/ko/documentation/graphics/ofGraphics/#!show_ofPopMatrix) and [ofTranslate()](/ko/documentation/graphics/ofGraphics/#!show_ofTranslate)를 읽어보시길 바랍니다. 위 코드는 카메라의 시점을 메쉬의 중심에 맞추도록 합니다. 실행된 프로그램의 창에서 왼쪽버튼을 드래그를 하여 회전을 시켜보세요! 우측버튼을 드래그하면 확대할수 있습니다!
+[ofEasyCam](/ko/documentation/3d/ofEasyCam.html)은 우리가 생성한 메쉬를 손쉽게 3차원으로 보여주게 해줍니다. [opengl tutorial](/ko/tutorials/03_graphics/opengl/)의 [ofPushMatrix()](/ko/documentation/graphics/ofGraphics/#!show_ofPushMatrix), [ofPopMatrix()](/ko/documentation/graphics/ofGraphics/#!show_ofPopMatrix) and [ofTranslate()](/ko/documentation/graphics/ofGraphics/#!show_ofTranslate)를 읽어보시길 바랍니다. 위 코드는 카메라의 시점을 메쉬의 중심에 맞추도록 합니다. 실행된 프로그램의 창에서 왼쪽버튼을 드래그를 하여 회전을 시켜보세요! 우측버튼을 드래그하면 확대할수 있습니다!
 
 
 ![Line Mesh with Camera](cameraSmall.gif) 
@@ -643,7 +643,7 @@ The last tweak we will add gives a bit of interactivity to the mesh.  We will ad
 	* 정점의 위치가 마우스와 가까울수록, 더 멀리 밀어낸다
 	* 정점의 위치가 마우스와 멀어질수록, 조금만 밀어낸다.
 
-이 트윅을 위해서는 몇가지의 벡터함수를 사용해야 합니다. 벡터함수에 대해 잘 모르신 분들은 [벡터 튜토리얼](/tutorials/maths/001_vector_maths.html)를 찹고해주시기 바랍니다. 코드를 작성할 시간입니다!
+이 트윅을 위해서는 몇가지의 벡터함수를 사용해야 합니다. 벡터함수에 대해 잘 모르신 분들은 [벡터 튜토리얼](/ko/tutorials/02_maths/001_vector_maths/)를 찹고해주시기 바랍니다. 코드를 작성할 시간입니다!
 
 헤더에 새로운 변수를 추가합니다:
 ~~~.h
@@ -700,7 +700,7 @@ setup함수의 끝에 아래 코드들을 추가하세요
 <a name="nextsteps"></a>
 ##다음 순서
 
-[opengl tutorial](/tutorials/graphics/opengl.html)을 읽어보시고, 다른 그리기모드를 한번 시도하여 놀아보세요.
+[opengl 튜토리얼](/ko/tutorials/03_graphics/opengl/)을 읽어보시고, 다른 그리기모드를 한번 시도하여 놀아보세요.
 
 다른 데이터들을 사용해보세요. 다른 규칙을 적용해보세요. 뭔가 괴상한것들을 만들어서 포럼에 공유해보세요!
 

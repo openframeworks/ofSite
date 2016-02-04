@@ -43,7 +43,7 @@ A mesh is a collection of **vertices** - [points in 3D space](https://en.wikiped
 * You can choose to connect pairs of vertices and draw lines as the primitives.
 * You can connect three or four (or more) vertices and draw triangles or quads  (or polygons) as the primitives.
 
-To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored in gray.  For some deeper information, have a look at the [OpenGL tutorial](/tutorials/graphics/opengl.html).
+To make this a little more concrete, check out the below mesh.  The vertices are orange dots.  The vertices are connected up in sets of three points to form triangle primitives which were then colored in gray.  For some deeper information, have a look at the [OpenGL tutorial](/tutorials/03_graphics/opengl/).
 
 ![Keenan Crane's public domain cow shown in wireframe](Keenan_Crane_Public_Domain_Cow_Small.png)
 
@@ -230,7 +230,7 @@ So we need some data and some rules.  Let's grab some 'data' from the Hubble Tel
 
 ![Original hubble image](stars.png)
 
-Create a [new openFrameworks project](/tutorials/introduction/002_projectGenerator.html) called HubbleMesh. Inside that project create the bin/data directory ('bin' may already exist) and save the above image there as 'stars.png'.
+Create a [new openFrameworks project](/tutorials/01_introduction/002_projectGenerator/) called HubbleMesh. Inside that project create the bin/data directory ('bin' may already exist) and save the above image there as 'stars.png'.
 
 Now we have some colorful, pixely goodness, but what rules should we use to transform those pixels into a mesh?  We can start with drawing points and work our way up to drawing lines.  Our image has a ton of stars, so let's create some vertices where those stars are located.  Once we do that, we can connect up neighboring vertices with lines in order to create a web of sorts.
 
@@ -257,7 +257,7 @@ void ofApp::draw(){
 }
 ~~~
 
-There is no dedicated [ofImage](/documentation/graphics/ofImage/) tutorial at the moment, so you will have to poke around the [openFrameworks for Processing users](/tutorials/first%20steps/002_openFrameworks_for_processing_users.html) tutorial or [004 presentation](/tutorials/first%20steps/004_presentations.html) if you want to know more about what you can do with images.
+There is no dedicated [ofImage](/documentation/graphics/ofImage/) tutorial at the moment, so you will have to poke around the [openFrameworks for Processing users](/tutorials/02_first%20steps/002_openFrameworks_for_processing_users/ tutorial or [004 presentation](/tutorials/02_first%20steps/004_presentations/) if you want to know more about what you can do with images.
 
 We just need to load our image using [load()](/documentation/graphics/ofImage/#show_load) and draw it at the top left corner of the screen with [draw(0,0)](/documentation/graphics/ofImage/#show_draw).
 
@@ -414,7 +414,7 @@ void ofApp::draw(){
 }
 ~~~
 
-[ofEasyCam](/documentation/3d/ofEasyCam/) is a quick way to get a feel for that elusive 3rd dimension in your generative mesh.  The [opengl tutorial](/tutorials/graphics/opengl/) goes into cameras, [ofPushMatrix()](/documentation/graphics/ofGraphics/#!show_ofPushMatrix), [ofPopMatrix()](/documentation/graphics/ofGraphics/#!show_ofPopMatrix) and [ofTranslate()](/documentation/graphics/ofGraphics/#!show_ofTranslate).  This code will center you mesh in the camera's view.  Now you can left click and drag to rotate! And right click and drag to zoom!
+[ofEasyCam](/documentation/3d/ofEasyCam/) is a quick way to get a feel for that elusive 3rd dimension in your generative mesh.  The [opengl tutorial](/tutorials/03_graphics/opengl/) goes into cameras, [ofPushMatrix()](/documentation/graphics/ofGraphics/#!show_ofPushMatrix), [ofPopMatrix()](/documentation/graphics/ofGraphics/#!show_ofPopMatrix) and [ofTranslate()](/documentation/graphics/ofGraphics/#!show_ofTranslate).  This code will center you mesh in the camera's view.  Now you can left click and drag to rotate! And right click and drag to zoom!
 
 
 ![Line Mesh with Camera](cameraSmall.gif)
@@ -635,7 +635,7 @@ What we are going to do is:
     * If a vertex is close to the mouse, push it a large distance.
     * If a vertex is far away from the mouse, push it a small distance.
 
-This tweak will make use of some vector maths, so check out the [vector tutorial](/tutorials/maths/001_vector_maths.html) if you are feeling lost.  On to the code!
+This tweak will make use of some vector maths, so check out the [vector tutorial](/tutorials/02_maths/001_vector_maths/) if you are feeling lost.  On to the code!
 
 Add a new variable to your header:
 ~~~.h
@@ -690,7 +690,7 @@ You made it through the tutorial! (Or you just scrolled all the way down, which 
 <a name="nextsteps"></a>
 ##Next Steps
 
-Check out the [opengl tutorial](/tutorials/graphics/opengl.html), and start playing around with the other primitive modes.
+Check out the [opengl tutorial](/tutorials/03_graphics/opengl/), and start playing around with the other primitive modes.
 
 Go get some other data.  Make up some new rules.  Make something weird and share it in the forums!
 
