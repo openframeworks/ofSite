@@ -18,7 +18,7 @@
 ### Introducing ...
 
 In this tutorial we will have a look on how to draw lines with openFrameworks. Most of the code in this tutorial comes from [this](https://github.com/ofZach/VAW_workshop/tree/master/drawingWorkshop) workshop held by [Zach Lieberman](http://thesystemis.com/). 
-Lines are probably the most primitive abstract form of drawing. They are one of the first things kids learn to draw, and one of the most instinctive way we still use to draw on a surface. But in the end, they are just a bunch of points connected together; openFramework provides a class to easily draw lines connecting point: [ofPolyline](http://openframeworks.cc/documentation/graphics/ofPolyline/). Let's start to see how to use it!
+Lines are probably the most primitive abstract form of drawing. They are one of the first things kids learn to draw, and one of the most instinctive way we still use to draw on a surface. But in the end, they are just a bunch of points connected together; openFramework provides a class to easily draw lines connecting point: [ofPolyline](/documentation/graphics/ofPolyline/). Let's start to see how to use it!
 
 <a name="first"></a>
 ### Draw a line

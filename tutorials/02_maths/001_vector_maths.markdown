@@ -40,7 +40,7 @@ return v1*v2; // returns ofVec3f(2,6,12);
 // this is component-wise multiplication between two vectors, and is far less common than scalar multiplication
 ~~~~
 
-The OF reference can be found <a href = "/documentation/math/ofVec3f.html#scale">here</a>
+The OF reference can be found <a href = "/documentation/math/ofVec3f/#show_scale">here</a>
 
 ###addition
 Now let's say we want to go 3.14 units to the right, and then 1.71 units up; we can add the two vectors we've just created- [3.14,0,0] + [0,1.71,0] = [3.14 + 0,0 + 1.71,0 + 0] = [3.14,1.71,0]. This is called "component-wise addition", as we just add the different components of each vector (i.e. x + x, y + y, z + z). This can be visualized by putting one vector at the tip of the other vector
@@ -58,7 +58,7 @@ ofVec3f v2(0,1.71,0);
 return v1+v2; // returns ofVec3f(3.14,1.71,0);
 ~~~~
 
-The OF reference can be found <a href = "/documentation/math/ofVec3f.html#operator+">here</a>
+The OF reference can be found <a href = "/documentation/math/ofVec3f/#show_operator+">here</a>
 
 ###application
 Who cares? How is this useful? Let's take a simple example - we have two points a and b in space, and we want to move from one to the other. Remember that addition is like putting a vector at the tip of another vector? Well, we know that if we add the direction from a to b (we'll call it c) to a, we'll get b: a + c = b. The vector we're looking for is c = b - a.
@@ -113,7 +113,7 @@ return v1.dot(v2); // returns 1*4 + 2*5 + 3*6 = 32;
 ~~~~
 
 
-OF reference can be found <a href = "/documentation/math/ofVec3f.html#dot">here</a>
+OF reference can be found <a href = "/documentation/math/ofVec3f/#show_dot">here</a>
 
 ##hardcore nerding action for the math-minded
 For the hardcore, our "space" is a vector space, which must be "closed under addition and scalar multiplication," which is the fancy way of saying that all combinations of addition and scalar multiplication are also vectors in that same space. The standard bases are usually referred to by "e", ie e1, e2, e3, etc; we also note that we are most often discussing an orthonormal basis, which means that e1, e2, and e3 all have length 1, and are each at 90 degrees to one another. In the difference example, if we assume a and b are along a path, then c is one approximation of the path tangent.  ** Before  the uber-nerds out there slap my hand for being incomplete, there are a few other technical requirements to be a vector space; these can be found here http://en.wikipedia.org/wiki/Vector_space. The dot product is also called the inner product, and with length and this inner product defined, we get an "inner product space". In linear algebra terms, this inner product is described by transposing the object and multiplying; e.g. dot(a,b) = a(transpose) * b; the square length of a vector is often written as v(transpose) * v. Projection onto a subspace represented by a matrix is similar, A(transpose) * A * x (where A could represent the basis vectors of a plane, for example).
