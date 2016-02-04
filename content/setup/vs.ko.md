@@ -3,7 +3,6 @@
 
 visual studio 셋업 가이드
 =========================
-<!-- Here are the setup instructions for those of you who wish to work with Visual Studio 2012, Express for Windows Desktop version included. -->
 Visual Studio 2012 또는 Visual Studio 2012 Express for Windows Desktop에서 오픈프레임웍스를 사용하는 분들을 위한 셋업 가이드입니다.
 
 <!-- Download -->
