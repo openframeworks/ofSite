@@ -4,15 +4,13 @@
 .. summary: This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing.
 .. date: 2013/09/01 10:00:00
 .. author_site: http://www.jeffcrouse.info
-
+---
 
 ## Your First Look inside oF
 
 By this point, I assume that you've [downloaded openFrameworks and followed the appropriate setup guide](/download/). So the first thing you'll want to do is unpack the openFrameworks archive and place the resulting folder somewhere you can easily access. Personally, I like to drop it in my Documents folder and then put a shortcut in my sidebar, like this:
 
 ![IMG](shortcut.png)
-=======
-By this point, I assume that you've link:/download/[downloaded openFrameworks and followed the appropriate setup guide]. So the first thing you'll want to do is unpack the openFrameworks archive and place the resulting folder somewhere you can easily access. Personally, I like to drop it in my Documents folder and then put a shortcut in my sidebar, like this:
 
 No matter where you put it, when you open up the folder, you should see a set of folders that looks basically like this:
 
@@ -20,13 +18,13 @@ No matter where you put it, when you open up the folder, you should see a set of
 
 So what are these folders?
 
-- *addons*. The "core" openFrameworks contains only the most essential functionality. Everything in the addons folder can be added to an application piecemeal. This includes stuff like reading an XML file, loading a 3D model, or using the computer vision library, openCV.
+- **addons**: The "core" openFrameworks contains only the most essential functionality. Everything in the addons folder can be added to an application piecemeal. This includes stuff like reading an XML file, loading a 3D model, or using the computer vision library, openCV.
 
-- *apps*. This is where the applications that you make will be stored, and where you will be working most of the time. You will notice that there are already a folder in "apps" called "myApps".
+- **apps**: This is where the applications that you make will be stored, and where you will be working most of the time. You will notice that there are already a folder in "apps" called "myApps".
 
-- *examples*.This folder contains example applications that illustrate some of the things that openFrameworks can do.
+- **examples**: This folder contains example applications that illustrate some of the things that openFrameworks can do.
 
-- *libs*. This folder contains all the libraries that openFrameworks uses as well as the ofCore.
+- **libs**: This folder contains all the libraries that openFrameworks uses as well as the ofCore.
 
 
 ### Take a Tour of the Examples
@@ -83,6 +81,7 @@ to build and execute the code. In the end you should see the same with the metho
 ![IMG](graphicsExample03.png)
 
 The circle orange circle should constantly change its diameter, the rectangles should be drawn randomly, the upper red bar should fade and the lines should change smoothness. You can close this example by pressing Escape or Apple+Q.
+
 If you run
 
 ```bash
@@ -92,7 +91,7 @@ $ make clean
 
 ### Creating Your First Project
 
-As of openFrameworks 0072 we have a [new tool called projectGenerator](http://openframeworks.cc/tutorials/introduction/002_projectGenerator.html) to create new openFrameworks projects, including addons. Follow that tutorial and create a new project called `MyFirstProject`. When you are ready, continue reading the following part. 
+As of openFrameworks 0072 we have a [new tool called projectGenerator](/tutorials/01_introduction/002_projectgenerator/) to create new openFrameworks projects, including addons. Follow that tutorial and create a new project called `MyFirstProject`. When you are ready, continue reading the following part. 
 
 ### Writing Code
 
@@ -132,7 +131,6 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
 
 }
----------------------------------------------------------------------
 ```
 
 So what is going on here?
@@ -158,11 +156,9 @@ But enough with the reading. Let's see these things in action.
 We will start by drawing a simple circle in our gray window using the ofDrawCircle function. Type `ofDrawCircle(200, 200, 60);` on the blank line inside the draw() function so that your draw function look like this:
 
 ```cpp
----------------------------------------------------------------------
 void ofApp::draw(){
     ofDrawCircle(200, 300, 60);
 }
----------------------------------------------------------------------
 ```
 
 Notice the semicolon at the end of the line. All function calls must end with a semicolon. In addition, function names are always case sensitive, so OfSetColor will not work, nor OFsetcolor, etc. only ofSetColor.
@@ -175,17 +171,17 @@ Congratulations!  You just made something appear on the screen! It's all downhil
 
 But what did we just do?
 
-[ofDrawCircle](/documentation/graphics/ofGraphics.html#show_ofDrawCircle) is a function that comes with openFrameworks (hence the 'of' prefix). You can invoke the ofDrawCircle function inside your draw function as many times as you'd like. The numbers inside of the parenthesis after 'ofDrawCircle' are called [arguments](https://en.wikipedia.org/wiki/Parameter_(computer_programming)). They determine exactly what the function does. They answer the questions: "okay, you want to draw a circle, but where? and how big?" Functions can take any number of arguments, always separated by commas, but ofDrawCircle takes 3: an x coordinate, a y coordinate, and a radius. There are a few things you need to know to make sense of these arguments:
+[ofDrawCircle](/documentation/graphics/ofGraphics/#show_ofDrawCircle) is a function that comes with openFrameworks (hence the 'of' prefix). You can invoke the ofDrawCircle function inside your draw function as many times as you'd like. The numbers inside of the parenthesis after 'ofDrawCircle' are called [arguments](https://en.wikipedia.org/wiki/Parameter_(computer_programming)). They determine exactly what the function does. They answer the questions: "okay, you want to draw a circle, but where? and how big?" Functions can take any number of arguments, always separated by commas, but ofDrawCircle takes 3: an x coordinate, a y coordinate, and a radius. There are a few things you need to know to make sense of these arguments:
 
 - All measurements in openFrameworks are in pixels. By saying that our circle has a radius of 60, that means that it will take up `PI*60^2^` pixels total.
 - This may seem obvious, but the coordinates refer to the center of the circle. Other shapes (such as rectangles) use the upper left corner.
 - The "origin" of the coordinate system is in the upper left of the window. So, our circle appears 200 pixels from the left side of the screen, and 300 pixels from the top.
 
-If you hadn't just read about it here, you could have found information about ofDrawCircle on the link:/documentation/[openFrameworks documentation page], which you will be using more as we move on.
+If you hadn't just read about it here, you could have found information about ofDrawCircle on the [openFrameworks documentation page](/documentation/), which you will be using more as we move on.
 
 #### Adding some Color
 
-Your circle is great, but kind of boring. What if we want to introduce some color to our application? To do that, we need the the [ofSetColor](/documentation/graphics/ofGraphics.html#show_ofSetColor) function. Try adding `ofSetColor(255, 0, 255);` right above the ofDrawCircle line, so that your draw function looks like this:
+Your circle is great, but kind of boring. What if we want to introduce some color to our application? To do that, we need the the [ofSetColor](/documentation/graphics/ofGraphics/#show_ofSetColor) function. Try adding `ofSetColor(255, 0, 255);` right above the ofDrawCircle line, so that your draw function looks like this:
 
 ```cpp
 void ofApp::draw(){
@@ -198,9 +194,9 @@ Now try running your application.
 
 ![IMG](MyFirstProject02.png)
 
-Similar to ofDrawCircle, the ofSetColor function takes 3 arguments, but the numbers have very different meanings. If you look at the documentation for [ofSetColor](/documentation/graphics/ofGraphics.html#show_ofSetColor), you'll notice that they arguments actually represent the red, green, and blue values for the color that you want to use, on a scale of 0-255. The red, green and blue make up the [RGB color model or color space](https://en.wikipedia.org/w/index.php?title=RGB_color_model). So when we typed `ofSetColor(255, 0, 255);`, we were saying "until further notice, draw everything with 100% red, 0 green, and 100% blue."
+Similar to ofDrawCircle, the ofSetColor function takes 3 arguments, but the numbers have very different meanings. If you look at the documentation for [ofSetColor](/documentation/graphics/ofGraphics/#show_ofSetColor), you'll notice that they arguments actually represent the red, green, and blue values for the color that you want to use, on a scale of 0-255. The red, green and blue make up the [RGB color model or color space](https://en.wikipedia.org/w/index.php?title=RGB_color_model). So when we typed `ofSetColor(255, 0, 255);`, we were saying "until further notice, draw everything with 100% red, 0 green, and 100% blue."
 
-TIP: Try changing the values to get different color variations.
+**TIP**: Try changing the values to get different color variations.
 
 This last point is important: when we call "ofSetColor", it's like picking a crayon out of a box. Everything that gets drawn after that (below that line of code) will be drawn in that color until we call ofSetColor again. So if we want to draw another circle on the screen, we could simply call the ofDrawCircle function again:
 
@@ -231,16 +227,16 @@ void ofApp::draw(){
 
 Of course, oF can draw more than circles.
 
-[ofDrawRectangle](/documentation/graphics/ofGraphics.html#show_ofDrawRectangle) draws a rectangle. arguments are (x, y, width, height)
-[ofDrawRectRounded](/documentation/graphics/ofGraphics.html#show_ofDrawRectRounded) draws a rounded rectangle. arguments are (x, y, width, height, radius of rounded corners)
-[ofDrawTriangle](/documentation/graphics/ofGraphics.html#show_ofDrawTriangle) draws a triangle. arguments are the coordinates of the three points: (x1, y1, x2, y2, x3, y3)
-[ofDrawLine](/documentation/graphics/ofGraphics.html#show_ofDrawLine) draws a line. arguments are the start coordinate and the end coordinate (x1, y1, x2, y2)
-[ofDrawEllipse](/documentation/graphics/ofGraphics.html#show_ofDrawEllipse) arguments are: (x, y, width, height)
-[ofDrawCurve](/documentation/graphics/ofGraphics.html#show_ofDrawCurve) Draws a curve from point (x1, y1) to point (x2, y2). The curve is shaped by the two control points (x0,y0) and (x3,y3).
+[ofDrawRectangle](/documentation/graphics/ofGraphics/#show_ofDrawRectangle) draws a rectangle. arguments are (x, y, width, height)
+[ofDrawRectRounded](/documentation/graphics/ofGraphics/#show_ofDrawRectRounded) draws a rounded rectangle. arguments are (x, y, width, height, radius of rounded corners)
+[ofDrawTriangle](/documentation/graphics/ofGraphics/#show_ofDrawTriangle) draws a triangle. arguments are the coordinates of the three points: (x1, y1, x2, y2, x3, y3)
+[ofDrawLine](/documentation/graphics/ofGraphics/#show_ofDrawLine) draws a line. arguments are the start coordinate and the end coordinate (x1, y1, x2, y2)
+[ofDrawEllipse](/documentation/graphics/ofGraphics/#show_ofDrawEllipse) arguments are: (x, y, width, height)
+[ofDrawCurve](/documentation/graphics/ofGraphics/#show_ofDrawCurve) Draws a curve from point (x1, y1) to point (x2, y2). The curve is shaped by the two control points (x0,y0) and (x3,y3).
 
-NOTE: Control points can be tricky. If you've used the pen tool in photoshop or illustrator, you probably understand them. If not, check out http://www.actionscript.org/resources/articles/172/1/Understanding-curves-and-control-point-placement/Page1.html[this tutorial]. It's about ActionScript, but it gives a great overview of the concept of curves and control points.
+**NOTE**: Control points can be tricky. If you've used the pen tool in photoshop or illustrator, you probably understand them. If not, check out [this tutorial](http://www.actionscript.org/resources/articles/172/1/Understanding-curves-and-control-point-placement/Page1.html). It's about ActionScript, but it gives a great overview of the concept of curves and control points.
 
-TIP: Try making 3 different projects in your "MyFirstWorkspace" workspace. In each one, draw a different shape in a different location using a different color.
+**TIP**: Try making 3 different projects in your "MyFirstWorkspace" workspace. In each one, draw a different shape in a different location using a different color.
 
 #### Adding Movement
 
@@ -304,17 +300,23 @@ If you run your program now, you should see your circle move off the screen to t
 
 In this new line, we are using the "assignment operator" again, just like in the setup function. In English, that line would say "take the value of myCircleX plus one, and assign that to myCircleX". In other words, we are incrementing myCircleX by 1. `C++` provides a shortcut for the common task of incrementing a variable by another value: `myCircleX += value;`. In our case, we could write: `myCircleX += 1;` But because incremending a value by one is extremely common there is even a shorter way to do this: `myCircleX++`, so let's actually change our code to use this handy shortcut:
 
-....
+```cpp
 myCircleX = myCircleX + 1;
-....
+```
+
 becomes
-....
+
+
+```cpp
 myCircleX += 1;
-....
+```
+
 which in turn becomes
-....
+
+```cpp
 myCircleX++;
-....
+```
+
 
 
 There is just one thing we need to fix before moving on to more pressing aesthetic concerns. If you read back through the descriptions of what the update() and draw() functions are supposed to be used for, you'll notice that the draw function is for drawing (so far, so good), but the update() function is where we are supposed to take care of updating variables. There are some very good reasons for this that we will get into later, but for now, let's move the line we just wrote to the update function. So, your update and draw functions should look like this:
@@ -355,9 +357,9 @@ void ofApp::setup(){
 
 Add that and then run your program. You will notice that the circle moves considerably slower. Using this function is *not* a guarantee of 60 frames per second, but it is a guarantee that your framerate won't be any higher than that. And unless you have a really old computer, or your processor is already extremely taxed by some other program, it should have no problem running consistently at 60fps while doing something a simple as drawing a moving circle.
 
-TIP: SAT word problem #1: If we know that the update loop is happening (at most) 60 times/second, and we are incrementing the x coordinate of the circle by 1 pixel every time update is called, how long will it take for the circle to move 240px?
+**TIP**: SAT word problem #1: If we know that the update loop is happening (at most) 60 times/second, and we are incrementing the x coordinate of the circle by 1 pixel every time update is called, how long will it take for the circle to move 240px?
 
-TIP: Too bloody slow. It's true that we now have a good handle on the framerate, but 60px/second turns out to be really slow. To fix this problem, we *could* increase the framerate, but 60fps is a pretty good framerate. so instead, let's change the speed of the circle itself:  instead of just incrementing the x coordinate by 1 pixel every time, let's increment it by 4. Using the same "incrementing" shortcut, we can change our update() function like this:
+**TIP**: Too bloody slow. It's true that we now have a good handle on the framerate, but 60px/second turns out to be really slow. To fix this problem, we *could* increase the framerate, but 60fps is a pretty good framerate. so instead, let's change the speed of the circle itself:  instead of just incrementing the x coordinate by 1 pixel every time, let's increment it by 4. Using the same "incrementing" shortcut, we can change our update() function like this:
 
 ```cpp
 void ofApp::update(){
@@ -420,11 +422,11 @@ Create a new project in "myApps" called "keyboardInteraction". If you need to, g
 
 #### Introducing, cout!
 
-The easiest way to quickly see how these functions work is to print a message to the console. Remember when we printed "Hello, World!" to the console in the introduction? We did that using a `C++` thing called http://www.cplusplus.com/reference/iostream/cout/["cout"] (pronounced 'c out'). The syntax for using it is a bit weird because it's not technically a function (it's actually an object, which we will talk more about in later chapters), but if you can get beyond the syntax, it's actually very useful for debugging.
+The easiest way to quickly see how these functions work is to print a message to the console. Remember when we printed "Hello, World!" to the console in the introduction? We did that using a `C++` thing called ["cout"](http://www.cplusplus.com/reference/iostream/cout/)(pronounced 'c out'). The syntax for using it is a bit weird because it's not technically a function (it's actually an object, which we will talk more about in later chapters), but if you can get beyond the syntax, it's actually very useful for debugging.
 
-But first: you may be asking yourself: how will we see text output? We are dealing with a GUI interface now. Luckily, XCode/Code::Blocks provides a window where we can see anything text that your program outputs (also known as http://www.cplusplus.com/reference/clibrary/cstdio/stdout/[stdout]).
+But first: you may be asking yourself: how will we see text output? We are dealing with a GUI interface now. Luckily, XCode/Code::Blocks provides a window where we can see anything text that your program outputs (also known as [stdout](http://www.cplusplus.com/reference/clibrary/cstdio/stdout/)).
 
-So start by going to View->Debug Area->Activate Console, or press apple+shift+C when using XCode. Code::Blocks automatically opens a console window when you press F9 (to build and run your program).
+So start by going to View->Debug Area->Activate Console, or press apple+shift+C when using XCode. 
 
 ![IMG](activate-console.png)
 
@@ -451,7 +453,6 @@ The 'key' variable represents the key that was pressed or released. More about t
 Let's give it a try. Launch your program and type some keys. I will type "qwerty". You should see something like this in the console:
 
 ```bash
-...................................
 GNU gdb 6.3.50-20050815 (Apple version gdb-1708) (Thu Nov  3 21:59:02 UTC 2011)
 Copyright 2004 Free Software Foundation, Inc.
 GDB is free software, covered by the GNU General Public License, and you are
@@ -472,7 +473,6 @@ keyPressed 116
 keyReleased 116
 keyPressed 121
 keyReleased 121
-...................................
 ```
 
 Don't worry about the crap at the beginning -- that's added by the debugger.
@@ -483,7 +483,7 @@ The fact that the 'key' is supplied as an 'int' may seem a bit strange. Perhaps 
 
 On the right of each column in red, you will see a key on your keyboard. Under the corresponding "Dec" (decimal=base 10) column, you will see the number that you will receive in the key functions.
 
-TIP: You can actually use something called [type casting](http://www.cplusplus.com/doc/tutorial/typecasting/) to turn the int into a 'char', or letter. Simply put "(char)" before the "key" variable so that your cout statement looks like this:
+**TIP**: You can actually use something called [type casting](http://www.cplusplus.com/doc/tutorial/typecasting/) to turn the int into a 'char', or letter. Simply put "(char)" before the "key" variable so that your cout statement looks like this:
 
 ```cpp
 cout << "keyPressed " << (char)key << endl;
@@ -539,7 +539,7 @@ Notice the double equals sign. This signifies that we are performing a compariso
 
 Your challenge is to complete the function to respond to the 's' and 'd' keys.
 
-TIP: This also works!
+**TIP**: This also works!
 
 ```cpp
 if(key=='w')
@@ -633,7 +633,6 @@ mouseDragged: 433, 377 button: 0
 mouseReleased: 433, 377 button: 0
 mouseMoved: 434, 370
 mouseMoved: 433, 367
-...................................
 ```
 
 There are a few important things to notice about this output. First, you will probably see a ton of "mouseMoved" messages. Indeed, this function is called whenever the mouse is moved so much as a single pixel, so be aware of this when adding code to mouseMoved. Next, notice that you see a "mousePressed" before every "mouseDragged" event, and then a bunch of "mouseDragged" messages, and then "mouseReleased" before it switches back to "mouseMoved".
@@ -731,7 +730,7 @@ It may be unintuitive to make such distinctions when dealing with variables. A n
 
 There is one important kind of variable that is not covered in this chart: 'string'. A string can hold a sequence of characters. ... more to come ...
 
-TIP: Compile and run this program to see information about how your computer treats different kinds of variables.
+**TIP**: Compile and run this program to see information about how your computer treats different kinds of variables.
 
 ```cpp
 #include <iostream>
@@ -825,22 +824,26 @@ So what just happened?  Let's go through the code step by step as if we were the
 - Draw a circle at (20, 30) with a radius of 10
 - Increment x by 20 (it now equals 40)
 - Increment i by 1 (it now equals 1)
-- Is 1 less than 51? Yes!  Go back to the beginning of the loop, then:
-  Draw a circle at (40, 30) with a radius of 10
-  Increment x by 20 (it now equals 60)
-  Increment i by 1 (it now equals 2)
-- Is 2 less than 51? Yes!  Go back to the beginning of the loop, then:
-  Draw a circle at (60, 30) with a radius of 10
-  Increment x by 20 (it now equals 80)
-  Increment i by 1 (it now equals 3)
-Is 3 less than 51? Yes!  Go back to the beginning of the loop
-  [REPEAT 46 TIMES UNTIL i=50 and x=1000]
-  Draw a circle at (1000, 30) with a radius of 10
-  Increment x by 20 (it now equals 1020)
-  Increment i by 1 (it now equals 51)
-- Is 51 less than 51? NO!  Exit out of loop and continue on to whatever comes next
+- Is 1 less than 51? : **Yes!**
+    - Go back to the beginning of the loop, then:
+    - Draw a circle at (40, 30) with a radius of 10
+    - Increment x by 20 (it now equals 60)
+    - Increment i by 1 (it now equals 2)
+- Is 2 less than 51? : **Yes!**
+    - Go back to the beginning of the loop, then:
+    - Draw a circle at (60, 30) with a radius of 10
+    - Increment x by 20 (it now equals 80)
+    - Increment i by 1 (it now equals 3)
+- Is 3 less than 51? : **Yes! ** 
+    - Go back to the beginning of the loop
+    - *[REPEAT 46 TIMES UNTIL i=50 and x=1000]*
+    - Draw a circle at (1000, 30) with a radius of 10
+    - Increment x by 20 (it now equals 1020)
+    - Increment i by 1 (it now equals 51)
+- Is 51 less than 51? : **NO!**  
+    - Exit out of loop and continue on to whatever comes next
 
-TIP: We could actually make this even a bit more efficient and make the 'x' variable to double duty like this:
+**TIP**: We could actually make this even a bit more efficient and make the 'x' variable to double duty like this:
 
 ```cpp
 int x = 20;
@@ -912,7 +915,7 @@ We saw each of these things in the other kind of loops. The only difference here
 
 Another strength of computers is that they are encyclopedic: that is, they can keep track of a huge number of things at a time. Suppose we want to draw six thousand moving particles?  We know from the loop section that it is trivial to do something over and over again, but so far, we have only used loops to achieve a relatively consistent pattern. If we want do draw tons of particles, each with their own position, things get a little more complicated.
 
-.50000 particles!
+*50000 particles!*
 
 ![IMG](Arrays01.png)
 
@@ -964,7 +967,7 @@ void ofApp::draw(){
 }
 ```
 
-TIP: Notice the use of ofRandom(). This function will return a random number. It takes 2 arguments: the minimum possible value and the maximum possible value. What I am saying in this code is "give me a number between 0 and the width of the screen."
+**TIP**: Notice the use of ofRandom(). This function will return a random number. It takes 2 arguments: the minimum possible value and the maximum possible value. What I am saying in this code is "give me a number between 0 and the width of the screen."
 
 Technically this works, but we have only drawn 3 circles, and already the code is getting unwieldy. We want to draw 1000! We clearly have a bunch of variables that are used in very similar ways. Why not group, say, all of the x coordinates into a single set, and all of the y coordinates, etc.?
 
