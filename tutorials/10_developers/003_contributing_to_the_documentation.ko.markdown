@@ -131,7 +131,7 @@ _field: value_ 로 작성된 필드를 수정하지 **마십시오**: 이부분�
 #### 단계 1 : 클래스 찾기
 
 <!-- Within the [openFrameworks documentation](/documentation/), at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions": -->
-[오픈프레임웍스 도큐먼트 페이지](/documentation/)에서, 클래스의 매 페이지 상단에 보면, 두 개의 버튼이 있을겁니다. "Edit Clas" 그리고/혹은 "Edit Functions"입니다:
+[오픈프레임웍스 도큐먼트 페이지](/ko/documentation/)에서, 클래스의 매 페이지 상단에 보면, 두 개의 버튼이 있을겁니다. "Edit Clas" 그리고/혹은 "Edit Functions"입니다:
 
 ![](editclass.png)
 
