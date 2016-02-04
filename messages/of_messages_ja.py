@@ -36,7 +36,7 @@ MESSAGES = {
 
     'please_see': 'Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/${currentVersion}/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.',
 
-    'intro': 'openFrameworksを使用するためにはIDE(統合開発環境)が必要です。また、実際に試していくにはプラットフォームごとのセットアップガイドが必要となるでしょう。もしバグをみつけたら <a href="http://github.com/openframeworks/openFrameworks/issues">問題点</a> のページに投稿してください。その他質問があれば、<a href="http://forum.openframeworks.cc">フォーラム</a> に投稿してください。openFrameworksは、 <a href="../about/license.html">MITライセンス</a> で配布されています。',
+    'intro': 'openFrameworksを使用するためにはIDE(統合開発環境)が必要です。また、実際に試していくにはプラットフォームごとのセットアップガイドが必要となるでしょう。もしバグをみつけたら <a href="http://github.com/openframeworks/openFrameworks/issues">問題点</a> のページに投稿してください。その他質問があれば、<a href="http://forum.openframeworks.cc">フォーラム</a> に投稿してください。openFrameworksは、 <a href="../about/license/">MITライセンス</a> で配布されています。',
 
     'download_openframeworks': 'download<br/>openFrameworks for',
 

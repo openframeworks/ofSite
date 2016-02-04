@@ -36,7 +36,7 @@ MESSAGES = {
     
     'please_see': '<a href="https://raw.github.com/openframeworks/openFrameworks/${currentVersion}/CHANGELOG.md">변경사항</a> 을 읽어보시고 이전버전과의 변경사항을 살펴봐 주시기 바랍니다.',
     
-    'intro': '오픈프레임웍스를 사용하기 위해서는 IDE가 필요하며, 여러분의 플랫폼을 위한 셋업가이드를 따라 주시면 됩니다. <a href="http://github.com/openframeworks/openFrameworks/issues">이슈</a> 페이지에 발견된 버그들을 보고해주시길 바라며, 다른 질문들은 <a href="http://forum.openframeworks.cc">포럼</a> 에 작성해주시기 바랍니다. 오픈프레임웍스는 <a href="../about/license.html">MIT 라이센스</a> 를 따릅니다.',
+    'intro': '오픈프레임웍스를 사용하기 위해서는 IDE가 필요하며, 여러분의 플랫폼을 위한 셋업가이드를 따라 주시면 됩니다. <a href="http://github.com/openframeworks/openFrameworks/issues">이슈</a> 페이지에 발견된 버그들을 보고해주시길 바라며, 다른 질문들은 <a href="http://forum.openframeworks.cc">포럼</a> 에 작성해주시기 바랍니다. 오픈프레임웍스는 <a href="../about/license/">MIT 라이센스</a> 를 따릅니다.',
     
     'download_openframeworks': '오픈프레임웍스 <br/>다운로드',
     
