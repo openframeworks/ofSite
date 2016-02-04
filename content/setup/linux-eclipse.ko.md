@@ -8,13 +8,10 @@
 
 **노트**: 만약 문제가 발생할 경우 페이지 하단의 [FAQ](#faq)를 살펴보세요.
 
-<!-- This guide describes how to get started with openframeworks using Eclipse as IDE. Eclipse is very powerful, however it is a complex and somewhat resource heavy environment. Since version 0.9.0 Qt Creator is the recomended IDE. -->
 이 가이드는 오픈프레임웍스를 IDE로 Eclipse를 사용하는 방법에 대해서 설명합니다. 이클립스는 아주 강력하지만, 복잡하고 리소스를 많이 사용하므로 무겁습니다.0.9.0부터는 Qt Creator를 IDE로 추천해 드립니다.
 
-<!-- This guide was tested on Ubuntu 15.10 64 bit installation with Eclipse Mars and the openFrameworks version 0.9.0 for 64bit. -->
 이 가이드는 Ubuntu 15.10 64비트 배포판에서 테스트 되었으며, Elipse Mars와 오픈프레임웍스 0.9.0 64비트를 사용했습니다.
 
-<!-- To use it you will need Eclipse for C++ and openframeworks. -->
 사용하기 위해 Eclipse for C++와 오픈프레임웍스가 필요합니다.
 
 요약
