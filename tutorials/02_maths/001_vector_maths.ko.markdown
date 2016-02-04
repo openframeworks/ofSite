@@ -24,11 +24,8 @@
 
 이처럼 스칼라 곱이란, 백터의 크기를 변화하기 위해, 방향의 변화 없이 스칼라 만큼 곱한다는 사실을 알 수 있습니다. (만약 스칼라 값이 음수라면, 반대방향이 됩니다.) 
 
-<script src="../../js/vectors.js" type = "text/javascript">
-</script>
-
-<script src = "../../js/math_tut/diagrams.js" type = "text/javascript">
-</script>
+<script src="/assets/js/vectors.js"></script>
+<script src="/assets/js/math_tut/diagrams.js"></script>
 
 <canvas id = "mult" width = "600" height = "250"> </canvas>
 
@@ -54,7 +51,7 @@ return v1\*v2; // 리턴값은 ofVec3f(2,6,12) 가 됩니다;
 // 이것은 두백터의 행렬곱을 수행하는 예제이며, 이 챕터에서 설명하는 것과는 완전히 다른 것입니다.
 ~~~~
 
-이와 관련된 OF 예제는 <a href = "http://www.openframeworks.cc/documentation/math/ofVec3f.html#scale">여기</a>에서 확인하실 수 있습니다.
+이와 관련된 OF 예제는 <a href = "/documentation/math/ofVec3f.html#scale">여기</a>에서 확인하실 수 있습니다.
 
 ###덧셈
 자 이제, 우측으로 3.14만큼 간 뒤, 위로 1.71만큼 가자 라고 해봅시다. 우리는 우리가 방금 생성한 두 벡터들을 더할 수 있습니다. 
@@ -75,7 +72,7 @@ ofVec3f v2(0,1.71,0);
 return v1+v2; // returns ofVec3f(3.14,1.71,0);
 ~~~~
 
-이와 관련된 OF 예제는 <a href = "http://www.openframeworks.cc/documentation/math/ofVec3f.html#operator+">여기</a>에서 확인하실 수 있습니다.
+이와 관련된 OF 예제는 <a href = "/documentation/math/ofVec3f.html#operator+">여기</a>에서 확인하실 수 있습니다.
 
 ###응용
 흠.. 이게 대체 어디에 쓰일것 같냐구요? 간단한 예를 한번 들어봅시다. a와 b 두개의 점이 공간에 있다고 가정하고, 한 점이 다른 점으로 이동한다 생각해봅시다. 아까 한 벡터의 시작점을 다른 벡터의 끝에 둔다고 생각한것 기억나시나요? 자, 만약 벡터 a에 어떤 벡터를 더해야 벡터 b가 될까 라고 생각해 본다면(여기서 어떤 벡터를 c라고 해봅시다) b : a + c = b 라고 할 수 있습니다. 따라서 우리가 구할 벡터 c = b - a가 됩니다.
@@ -147,7 +144,7 @@ ofVec3f v2(4,5,6);
 return v1.dot(v2); //  1*4 + 2*5 + 3*6 = 32; 을 리턴합니다.
 ~~~~
 
-이와 관련된 OF 예제는 <a href = "http://www.openframeworks.cc/documentation/math/ofVec3f.html#dot">이곳</a>에서 확인하실 수 있습니다.
+이와 관련된 OF 예제는 <a href = "/documentation/math/ofVec3f.html#dot">이곳</a>에서 확인하실 수 있습니다.
 
 ##수학 nerd들을 위하여(hardcore nerding action for the math-minded)
 For the hardcore, our "space" is a vector space, which must be "closed under addition and scalar multiplication," which is the fancy way of saying that all combinations of addition and scalar multiplication are also vectors in that same space. The standard bases are usually referred to by "e", ie e1, e2, e3, etc; we also note that we are most often discussing an orthonormal basis, which means that e1, e2, and e3 all have length 1, and are each at 90 degrees to one another. In the difference example, if we assume a and b are along a path, then c is one approximation of the path tangent.  ** Before  the uber-nerds out there slap my hand for being incomplete, there are a few other technical requirements to be a vector space; these can be found here http://en.wikipedia.org/wiki/Vector_space. The dot product is also called the inner product, and with length and this innner product defined, we get an "inner product space". In linear algebra terms, this inner product is described by transposing the object and multiplying; e.g. dot(a,b) = a(transpose) * b; the square length of a vector is often written as v(transpose) * v. Projection onto a subspace represented by a matrix is similar, A(transpose) * A * x (where A could represent the basis vectors of a plane, for example).

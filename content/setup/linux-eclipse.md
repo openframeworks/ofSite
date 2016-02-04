@@ -145,7 +145,7 @@ Notes
 [1]: http://wiki.eclipse.org/Eclipse/Installation#Install_a_JVM
 [2]: http://developer.android.com/sdk/index.html
 [3]: http://developer.android.com/sdk/ndk/index.html
-[4]: http://openframeworks.cc/download
+[4]: /download
 [5]: http://ant.apache.org/bin/download.cgi
 [6]: http://developer.android.com/sdk/eclipse-adt.html
 [7]: http://developer.android.com/guide/developing/device.html

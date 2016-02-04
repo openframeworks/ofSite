@@ -58,11 +58,11 @@
 ~~~~
 자, 이제 윈도우의 창크기를 변화시켜보면, 작은 파란색 원은 계속 화면의 중앙에 위치하게 됩니다. 축하!!
 
-이제 [www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/)에 있는 "Graphics"섹션을 한번 둘러봅시다. 'ofLine()'이나 'ofRect()'와 같이 그리는것과 관련된 엄청나게 많은 메서드(함수)들을 보실 수 있습니다.
+이제 [도큐먼트](/ko/documentation/)에 있는 "Graphics"섹션을 한번 둘러봅시다. 'ofLine()'이나 'ofRect()'와 같이 그리는것과 관련된 엄청나게 많은 메서드(함수)들을 보실 수 있습니다.
 
 openFrameworks의 문서을 보시면, 모든 함수와 클래스들이 일관성있게 동작함을 알아차릴 수 있을것 입니다. 자꾸 시도하고 갖고 놀다보면, "oF 스타일"에 금방 익숙해질 수 있을것입니다.
 
-도전해보세요 : 문서[www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/)를 참조하셔서, 디지털 버젼의 칸딘스키 그림을 한번 그려보십시오. 약간의 고급 팁을 드리자면 'ofEnableSmoothing()'이라는 함수는 모든 경계를 부드럽게 만들어주고, 'ofBackgroundGradient(ofColor::white, ofColor(255, 255, 200), OF_GRADIENT_CIRCULAR);'는 멋진 그라디언트 배경을 그려줍니다.
+도전해보세요 : [도큐먼트](/ko/documentation/)를 참조하셔서, 디지털 버젼의 칸딘스키 그림을 한번 그려보십시오. 약간의 고급 팁을 드리자면 'ofEnableSmoothing()'이라는 함수는 모든 경계를 부드럽게 만들어주고, 'ofBackgroundGradient(ofColor::white, ofColor(255, 255, 200), OF_GRADIENT_CIRCULAR);'는 멋진 그라디언트 배경을 그려줍니다.
 
 ![Image:kandisky.jpg](kandinsky.jpg)
  
@@ -151,7 +151,7 @@ openFrameworks의 문서을 보시면, 모든 함수와 클래스들이 일관�
 멋지죠? <br/>
 아주 흔한 또다른 인터랙션은 키보드를 사용하는 것입니다. openFrameworks는 키보드와 마우스 이벤트를 받기 위한 기본 메서드들을 가지고 있습니다. 'ofApp.cpp'파일의 하단부을 살펴봐 주십시오. 'keyPress()', 'keyRelease()', 'mouseMove()', 'mouseDragged()', mousePressed()', 'mouseReleased()'이벤트들을 보실 수 있을것입니다.
 
-여기서는 'ofRandom()'과 'ofNoise()'를 이용하여 랜덤한 인터랙션을 추가할 수 있습니다. 저는 문서를 읽어보시는걸 강력히 추천하고 싶네요([www.openframeworks.cc/documentation/](http://www.openframeworks.cc/documentation/) ) 또한 `openFrameworks/examples/math`에 위치한 Golan의 ofNoise 예제도 한번 확인해보시기 바랍니다. 
+여기서는 'ofRandom()'과 'ofNoise()'를 이용하여 랜덤한 인터랙션을 추가할 수 있습니다. 저는 문서를 읽어보시는걸 강력히 추천하고 싶네요([도큐먼트](/ko/documentation/)) 또한 `openFrameworks/examples/math`에 위치한 Golan의 ofNoise 예제도 한번 확인해보시기 바랍니다. 
 
 자, 뭔가 정말 간단한 것들을 추가해봅시다. 마우스를 누를때마다 공은 랜덤한 위치로 이동합니다.
 ~~~~{.cpp}
@@ -327,7 +327,7 @@ ofApp 프로젝트에서는 이렇게 사용합니다.
 
 ## 4. 물리를 적용해봅시다.
 
-앞으로 진행할 파티클 시스템을 만드는 법을 알아보기 전에 알려드릴 좋은 소식이 있습니다. 여러분이 뭔가 멋진 물리적인 효과들을 적용하기 위해 복잡한 수학같은것들을 다룰 필요는 없습니다. openFrameworks는 이런 물리적인 효과들을 쉽게 적용시킬수 있는 아주 멋진 몇몇 함수들을 제공합니다. 만약 좀더 상세한 정보를 원하신다면 Keith가 작성한 튜토리얼인 [Math Tutorials](http://openframeworks.cc/tutorials/maths/001_vector_maths.html)을 살펴보시기 바랍니다. 아마도 엄청나게 멋진 새로운 것들로 여러분께 알려줄 것입니다.
+앞으로 진행할 파티클 시스템을 만드는 법을 알아보기 전에 알려드릴 좋은 소식이 있습니다. 여러분이 뭔가 멋진 물리적인 효과들을 적용하기 위해 복잡한 수학같은것들을 다룰 필요는 없습니다. openFrameworks는 이런 물리적인 효과들을 쉽게 적용시킬수 있는 아주 멋진 몇몇 함수들을 제공합니다. 만약 좀더 상세한 정보를 원하신다면 Keith가 작성한 튜토리얼인 [Math Tutorials](/tutorials/maths/001_vector_maths.html)을 살펴보시기 바랍니다. 아마도 엄청나게 멋진 새로운 것들로 여러분께 알려줄 것입니다.
 
 가장 도움이 되는 몇몇 클래스들의 대부분은 ofVectorMath에 들어있습니다. force(물리에서의 힘)와 관련된 작업들을 아주 쉽게 가능케 해주지요. 우리의 `Ball`클래스와 마찬가지로, `ofVec2f`는 `x`와 `y`값을 갖고 있고, `ball.x`나 `ball.y`와 같은 방식으로 x와 y에 접근할 수 있습니다. `ofVec2f`는 또한 `.dot()`과 같은 메서드와 계산을 하기 위한 `+`, `-`, `*`, `/`과 같은 연산자들을 갖고 있습니다.
  

@@ -20,9 +20,19 @@
 
 이 사이트는 [nikola](https://getnikola.com)를 기반으로 합니다. 손쉬운 구축 및 설치, 사용을 위한 스크립트가 최상위 폴더에 준비되어 있습니다.
 
-- ./install.sh는 nikola및 필요한 의존성을 설치합니다. 현재 리눅스에서만 테스트 되었지만, python3, pip, asciidoc이 설치된 맥킨토시라면 동작할 것입니다.
+- ./install.sh는 nikola및 필요한 의존성 패키지를 설치해줍니다. 현재는 리눅스와 매킨토시에서 테스트되었습니다. 매킨토시에서는, 스크립트를 실행하기 전에, 우선 아래 패키지들을 설치해주어야 합니다.
 
-- ./auto_build.sh는 수정된 파일이 있을때마다 nikola를 구동하고 수정된 파일이 있을 때마다 웹을 빌드합니다.
+  ```bash
+  brew install python3
+  sudo easy_install pip
+  brew linkapps python3
+  ```
+
+  그리고 나서 .bashrc 또는 zhsrc 파일에 아래 코드를 추가해주시면 됩니다.
+
+  `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
+
+- ./auto_build.sh는 수정된 파일이 있을때마다 nikola를 구동하고 수정된 파일이 있을 때마다 웹을 빌드합니다. 만약 매킨토시에서 `FileNotFoundError: [Errno 2] No such file or directory: 'asciidoctor'` 에러가 발생할 경우, [이곳](http://asciidoctor.org/docs/install-asciidoctor-macosx/)에서 설명하는 가이드를 따라 asciidoctor를 설치하고 난 뒤, 스크립트를 다시 실행해주십시오.
 
 - ./serve.sh는 브라우저에서 확인할 수 있도록 로컬 웹서버를 시작하여 웹사이트를 제공합니다. 
 
@@ -47,5 +57,5 @@
 
     ![Image Title](filename.png "alt text")
 
-도큐먼트 공헌에 관한 최종 설명은, [문서 공헌하기](http://www.openframeworks.kr/tutorials/developers/003_contributing_to_the_documentation.html) 튜토리얼을 참고해주시기 바랍니다.
+도큐먼트 공헌에 관한 최종 설명은, [문서 공헌하기](http://openframeworks.cc/ko/tutorials/10_developers/003_contributing_to_the_documentation/) 튜토리얼을 참고해주시기 바랍니다.
 

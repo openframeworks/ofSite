@@ -14,8 +14,8 @@ MESSAGES = {
     "Grab the most recent release (${currentVersion}) and follow the setup guide to get openFrameworks running.": 
     "가장 최신의 릴리즈(${currentVersion})를 받으시고, openFrameworks를 구동하기 위한 셋업 가이드를 따라주시기 바랍니다.",
     
-    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="http://openframeworks.cc/tutorials">tutorials section<a>.': 
-    'openFrameworks의 클래스, 함수, 애드온의 레퍼런스입니다. 또한 <a href="http://openframeworks.cc/tutorials">튜토리얼</a> 섹션을 살펴보실 수 있습니다.',
+    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="/tutorials">tutorials section<a>.': 
+    'openFrameworks의 클래스, 함수, 애드온의 레퍼런스입니다. 또한 <a href="/ko/tutorials/">튜토리얼</a> 섹션을 살펴보실 수 있습니다.',
     
     'The forum is a place to meet other people working with openFrameworks. It\'s a place to share your work, or find help solving problems.': 
     '오픈프레임웍스로 활동하는 다른 사람들을 만나볼 수 있는 포럼입니다. 여기서 여러분의 작업을 공유하거나 문제를 해결을 찾을 수 있습니다.',
@@ -31,12 +31,12 @@ MESSAGES = {
     'Tweets about "#openframeworks"': 'Tweets about "#openframeworks"',
     
     'breaking': '은 가장 최근에 릴리즈된 버전입니다. 새 버젼은 상당한 새로운 기능과, 새 인터페이스, 그리고 몇가지의 중단된 변경이 있는데, 이는 ${currentVersion} 이 이전 프로젝트와 100% 호환되지 않기 떄문입니다.',
-    
-    'non_breaking': 'is the most recent release. It\'s a minor version, with bugfixes only, so it is fully compatible with projects developed for ${majorVersion} or any newer version.',
+
+    'non_breaking': '은 가장 최근의 릴리즈입니다. 또한 이 버전은 여러 버그 수정만 적용된 마이너 버전이므로, ${majorVersion}에서 개발된 프로젝트과 완벽하게 호환되며, 새로운 버전과도 호환됩니다.',
     
     'please_see': '<a href="https://raw.github.com/openframeworks/openFrameworks/${currentVersion}/CHANGELOG.md">변경사항</a> 을 읽어보시고 이전버전과의 변경사항을 살펴봐 주시기 바랍니다.',
     
-    'intro': '오픈프레임웍스를 사용하기 위해서는 IDE가 필요하며, 여러분의 플랫폼을 위한 셋업가이드를 따라 주시면 됩니다. <a href="http://github.com/openframeworks/openFrameworks/issues">이슈</a> 페이지에 발견된 버그들을 보고해주시길 바라며, 다른 질문들은 <a href="http://forum.openframeworks.cc">포럼</a> 에 작성해주시기 바랍니다. 오픈프레임웍스는 <a href="../about/license.html">MIT 라이센스</a> 를 따릅니다.',
+    'intro': '오픈프레임웍스를 사용하기 위해서는 IDE가 필요하며, 여러분의 플랫폼을 위한 셋업가이드를 따라 주시면 됩니다. <a href="http://github.com/openframeworks/openFrameworks/issues">이슈</a> 페이지에 발견된 버그들을 보고해주시길 바라며, 다른 질문들은 <a href="http://forum.openframeworks.cc">포럼</a> 에 작성해주시기 바랍니다. 오픈프레임웍스는 <a href="../about/license/">MIT 라이센스</a> 를 따릅니다.',
     
     'download_openframeworks': '오픈프레임웍스 <br/>다운로드',
     
@@ -50,5 +50,5 @@ MESSAGES = {
     
     'other_releases': '<h2>다른 릴리즈</h2>    오픈프레임웍스의 이전 릴리즈는 <a href="older/">이곳</a>에 보관되어 있습니다. 가장 최신버전의 오픈프레임웍스는 <a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>을 살펴봐주십시오. 오픈프레임웍스에 대해 공헌하고 싶으신 분들은, GitHub 저장소를 fork하신 뒤, <a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">오픈프레임웍스 GitHub 워크플로우</a> 가이드를 따라주십시오.',
     
-    'translation': 'translation'
+    'translation': '번역'
 }

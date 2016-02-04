@@ -65,7 +65,7 @@ On Windows, you will also need to install MinGW in order to build openFrameworks
 
 **d) openFrameworks for Android package**: Download it from the downloads page:
 
-http://openframeworks.cc/download
+[Download](/download)
 
 You may also check out the openFrameworks source from GitHub (under master branch): http://github.com/openframeworks/openFrameworks
 

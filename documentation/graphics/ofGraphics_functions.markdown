@@ -580,7 +580,7 @@ void ofApp::draw() {
 
 ofClear() is based on [glClear][2].
 
-[1]: http://www.openframeworks.cc/documentation/gl/ofFbo.html
+[1]: /documentation/gl/ofFbo.html
 [2]: http://www.opengl.org/sdk/docs/man/xhtml/glClear.xml
 
 
@@ -601,7 +601,7 @@ void ofApp::draw() {
 }
 ~~~~
 
-When using the opengl renderer and drawing into an [FBO](http://www.openframeworks.cc/documentation/gl/ofFbo.html), ofClear(...) will clear that buffer rather than the main screen.
+When using the opengl renderer and drawing into an [FBO](/documentation/gl/ofFbo.html), ofClear(...) will clear that buffer rather than the main screen.
 
 ~~~~{.cpp}
 void ofApp::draw() {

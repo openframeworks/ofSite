@@ -23,6 +23,7 @@ BLOG_TITLE = "openFrameworks"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "http://openframeworks.cc/"
+#SITE_URL = "http://localhost"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://openframeworks.cc/"
@@ -97,7 +98,7 @@ TRANSLATIONS = {
 # specific language from here
 EXTERNAL_TRANSLATIONS = {    
     "ja": "http://openframeworks.jp",
-    "ko": "http://openframeworks.kr",
+#   "ko": "http://openframeworks.kr",
 }
 
 # What will translated input files be named like?
@@ -188,7 +189,7 @@ EXTERNAL_LINKS = {
 
     "ko": (
         ("https://forum.openframeworks.cc", "포럼(EN)"),
-        ("https://forum.openframeworks.kr", "포럼(KR)"),
+        ("http://forum.openframeworks.kr", "포럼(KR)"),
         ("http://ofxaddons.com", "애드온"),
         ("https://github.com/openframeworks", "github"),
         ("http://openframeworks.cc/list-info", "메일링 리스트"),
@@ -244,6 +245,7 @@ PAGES = (
     ("tutorials/*.markdown", "tutorials", "tutorial.mako"),
     ("tutorials/*.asciidoc", "tutorials", "tutorial.mako"),
     ("content/setup/*.md", "setup", "setup_guide.mako"),
+    ("documentation/search_results.md", "documentation", "search_results.mako"),
 )
 # Below this point, everything is optional
 
@@ -1214,10 +1216,10 @@ DEMOTE_HEADERS = 0
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    "currentVersion": "0.9.0",
-    "breaking": True,
+    "currentVersion": "0.9.1",
+    "breaking": False,
     "majorVersion": "0.9.0",
-    "olderVersion": "0.8.4",
+    "olderVersion": "0.9.0",
     "external_links": EXTERNAL_LINKS,
     "external_translations": {} if EXTERNAL_TRANSLATIONS==None else EXTERNAL_TRANSLATIONS,
 }
@@ -1226,3 +1228,15 @@ GLOBAL_CONTEXT = {
 # GLOBAL_CONTEXT as parameter when the template is about to be
 # rendered
 GLOBAL_CONTEXT_FILLER = []
+
+
+# This is an example that works well with Nikola's default Bootstrap3 theme.
+# It displays the search field in the navigation bar, and the results
+# in a modal dialog.
+
+SEARCH_FORM = """
+<form action="/documentation/search_results">
+<input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
+</form>"""
+
+

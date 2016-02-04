@@ -6,13 +6,13 @@
 .. author_site: http://www.jeffcrouse.info
 
 
-*Update! New project generator*: This chapter will help you get started with the basics of openFrameworks, such as the proper method for creating a project, setting window size, and basic drawing. But first...
-
 ## Your First Look inside oF
 
 By this point, I assume that you've [downloaded openFrameworks and followed the appropriate setup guide](/download/). So the first thing you'll want to do is unpack the openFrameworks archive and place the resulting folder somewhere you can easily access. Personally, I like to drop it in my Documents folder and then put a shortcut in my sidebar, like this:
 
 ![IMG](shortcut.png)
+=======
+By this point, I assume that you've link:/download/[downloaded openFrameworks and followed the appropriate setup guide]. So the first thing you'll want to do is unpack the openFrameworks archive and place the resulting folder somewhere you can easily access. Personally, I like to drop it in my Documents folder and then put a shortcut in my sidebar, like this:
 
 No matter where you put it, when you open up the folder, you should see a set of folders that looks basically like this:
 

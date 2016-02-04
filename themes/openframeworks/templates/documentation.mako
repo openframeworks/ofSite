@@ -5,6 +5,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
     <script src="/assets/js/documentation_index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/tipuesearch.css">
 </%block>
 
 
@@ -19,13 +20,17 @@
 
                 
                 <h1 class="documentation">reference</h1> 
+                
+                %if search_form:
+                    ${search_form} 
+                %endif
                 <!--ul class="docsadvanced">
                     <li><a href="/documentation" class="active">basic</a></li> 
                     <li><a href="/doxygen/annotated.html">advanced</a></li> 
                 </ul-->
             </div>  
 		    <div class="page-right-narrow">
-			    ${ docs_intro }
+			    ${ docs_intro } 
 		    </div>
 	   </div>
 

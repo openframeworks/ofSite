@@ -23,3 +23,4 @@ source nikola/bin/activate
 pip install --upgrade "Nikola[extras]"
 pip install --upgrade python-Levenshtein
 pip install --upgrade pathlib
+pip install --upgrade beautifulsoup4

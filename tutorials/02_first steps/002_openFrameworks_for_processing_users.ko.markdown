@@ -621,7 +621,8 @@ ofImage는 두가지 데이터 구조를 가지고 있기 떄문에 ofImage의 �
 
 만약 불러온 이미지를 사실상 화면상에 그릴 일이 없다면 메모리를 절약하기 위해 ofImage의 텍스쳐를 끌 수도 있습니다. 이는 이미지의 픽셀값에만 접근하기위해 파일을 불러올 때나, 혹은 화면을 캡쳐해 하드드라이브에 저장만 하지 화면에 그려낼 필요가 없을때 유용합니다.
 
-이 문서를 한번 읽어보세요: [http://www.openframeworks.cc/documentation\#ofImage-setUseTexture][58]
+
+이 문서를 한번 읽어보세요: [/documentation/graphics/ofImage/#!show_setUseTexture][58]
 
 ### Color 오브젝트 없이 어떻게 픽셀값들이 저장되나요?
 
@@ -947,7 +948,7 @@ openFrameworks의 수학 관련 함수들은 실질적으로 3개의 분리된 �
 
 추가적으로 ofMath()는 난수를 얻기위한 함수들을 제공합니다
 
-[http://www.openframeworks.cc/documentation\#ofMath-about][78]
+[/documentation/math/ofMath/][78]
 
 <!--### Structs, what are they for, and how can we use them?-->
 
@@ -1138,11 +1139,11 @@ breaking point(debug point)를 제거하려면, 그냥 해당 포인트를 클�
 [38]: #accidental-breakpoints-in-xcode-and-why-having-a-debugger-rocks
 [48]: http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/CLASSES-INTRO.html "http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/CLASSES-INTRO.html"
 [51]: http://www.cplusplus.com/doc/tutorial/pointers.html "http://www.cplusplus.com/doc/tutorial/pointers.html"
-[58]: http://www.openframeworks.cc/documentation#ofImage-setUseTexture "http://www.openframeworks.cc/documentation#ofImage-setUseTexture"
+[58]: /ko/documentation/graphics/ofImage/#!show_setUseTexture "/documentation/graphics/ofImage/#!show_setUseTexture"
 [66]: http://www.cplusplus.com/reference/clibrary/cstdio/printf.html "http://www.cplusplus.com/reference/clibrary/cstdio/printf.html"
 [68]: http://members.gamedev.net/sicrane/articles/iostream.html "http://members.gamedev.net/sicrane/articles/iostream.html"
 [75]: http://www.cplusplus.com/reference/clibrary/cmath/ "http://www.cplusplus.com/reference/clibrary/cmath/"
-[78]: http://www.openframeworks.cc/documentation#ofMath-about "http://www.openframeworks.cc/documentation#ofMath-about"
+[78]: /ko/documentation/math/ofMath/ "/documentation/math/ofMath/"
 [80]: http://richardbowles.tripod.com/cpp/linklist/linklist.htm "http://richardbowles.tripod.com/cpp/linklist/linklist.htm"
 
 
