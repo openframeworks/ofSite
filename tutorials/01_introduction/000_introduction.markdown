@@ -1,7 +1,6 @@
 ---
 .. author: Jeff Crouse <jeff@crouse.cc>
 .. title: ofTutorials - Introduction
-.. date: September 2013
 .. date: 2013/09/01 10:00:00
 .. author_site: http://www.jeffcrouse.info
 .. summary: This chapter will introduce openFrameworks and prepare you to start your first project.
