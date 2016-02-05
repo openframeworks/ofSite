@@ -25,9 +25,20 @@ Webページやドキュメントの修正に協力するには、このリポ�
 
 このサイトは、[nikola](https://getnikola.com)を使用しています。先頭の階層に、nikolaを簡単にインストールして使用することが可能ないくつかのスクリプトが用意してあります。
 
-- ./install.sh は、nikolaをインストールして必要な依存関係を構築します。現状ではLinuxでしかテストしていませんが、osxでもpython3とpipとasciidocをシステムにインストールすれば動作するはずです。
+- ./install.sh は、nikolaをインストールして必要な依存関係を構築します。現状ではLinuxとOS Xでしかテストしていません。OS Xでこれらのスクリプトを使用するには、まず初めに下記のパッケージをインストールする必要があります。
 
-- ./auto_build.sh はnikolaを起動して、毎回更新したファイルのみをwebにビルドします。
+```bash
+brew install python3
+sudo easy_install pip
+brew linkapps python3
+```
+
+そして、下記の内容を、.bashrc 、もしくは .zhsrc ファイルに書き加えます。
+
+`export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
+
+
+- ./auto_build.sh はnikolaを起動して、毎回更新したファイルのみをwebにビルドします。もしOS Xを利用していて、  `FileNotFoundError: [Errno 2] No such file or directory: 'asciidoctor'` というエラーになった場合は、asciidoctorをインストールする必要があります。[ここ](http://asciidoctor.org/docs/install-asciidoctor-macosx/)の解説を参考にしてください。インストール後、スクリプトを再度実行します。
 
 - ./serve.sh は、サイトを表示するためのローカルにwebサーバーを起動し、ブラウザで表示します。
 
