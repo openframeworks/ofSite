@@ -179,7 +179,8 @@ def relative_urls(text):
     
 def of_classes_to_links(text, classes_simple_name, module_lookup):
     for class_name in classes_simple_name:
-        rep = class_name + "[\s(]"
+        rep = "(?!\[[^[\]]*)"+class_name+"(?![^[\]]*\])"
+        #rep = "/("+class_name + "[\s(])(?![^\[]*\])/g"
         dst_pattern = "<a href=\"/documentation/"+module_lookup[class_name]+"/"+class_name+"\" class=\"docs_class\" >"+class_name+"</a> "
         text = re.sub(rep,dst_pattern,text)
     return text
@@ -241,13 +242,13 @@ class DocsTask(Task):
             # methods in class
             for function in clazz.function_list:
                 function.description = relative_urls(function.description)
-                function.description = markdown(function.description, md_extensions)
                 function.description = of_classes_to_links(function.description, classes_simple_name, module_lookup)
+                function.description = markdown(function.description, md_extensions)
                 
                 function.inlined_description = relative_urls(function.inlined_description)
-                function.inlined_description = markdown(function.inlined_description, md_extensions)
                 function.inlined_description = of_classes_to_links(function.inlined_description, classes_simple_name, module_lookup)
-                for lang in self.kw['translations']:
+                function.inlined_description = markdown(function.inlined_description, md_extensions)
+                for lang in self.kw['translations']: 
                     content_js[lang] += method_to_js(function, clazz, self.site, lang)
                 
             # inheritance
@@ -261,12 +262,12 @@ class DocsTask(Task):
             functions_file = markdown_file.getfunctionsfile(clazz.name)
             for function in functions_file.function_list:
                 function.description = relative_urls(function.description)
-                function.description = markdown(function.description, md_extensions)
                 function.description = of_classes_to_links(function.description, classes_simple_name, module_lookup)
+                function.description = markdown(function.description, md_extensions)
                 
                 function.inlined_description = relative_urls(function.inlined_description)
-                function.inlined_description = markdown(function.inlined_description, md_extensions)
                 function.inlined_description = of_classes_to_links(function.inlined_description, classes_simple_name, module_lookup)
+                function.inlined_description = markdown(function.inlined_description, md_extensions)
                 for lang in self.kw['translations']:
                     content_js[lang] += function_to_js(function, functions_file, self.site, lang)
                     
@@ -332,12 +333,12 @@ class DocsTask(Task):
             
             for function in functions_file.function_list:
                 function.description = relative_urls(function.description)
-                function.description = markdown(function.description, md_extensions)
                 function.description = of_classes_to_links(function.description, classes_simple_name, module_lookup)
+                function.description = markdown(function.description, md_extensions)
                 
                 function.inlined_description = relative_urls(function.inlined_description)
-                function.inlined_description = markdown(function.inlined_description, md_extensions)
                 function.inlined_description = of_classes_to_links(function.inlined_description, classes_simple_name, module_lookup)
+                function.inlined_description = markdown(function.inlined_description, md_extensions)
                 for lang in self.kw['translations']:
                     content_js[lang] += function_to_js(function, functions_file, self.site, lang)
                 
