@@ -172,6 +172,6 @@ See... Not so bad... Now go make something awesome!
 [2]: http://wiki.openframeworks.cc/index.php?title=OfxiPhone_comprehensive_guide
 [3]: http://www.jeffcrouse.info/uncategorized/openframeworks-on-iphone/
 [4]: http://personal-editor.com/#skipProvisioning
-[5]: http://openframeworks.cc/download
+[5]: /download
 [6]: http://developer.apple.com
 

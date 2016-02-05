@@ -524,7 +524,7 @@ But how do I edit the pixels of something that is in the ram you may ask? The sh
 You can edit the pixels of an ofImage because ofImages contain two data structures. One of these is an array of Unsigned Characters which represent all of the colors of every pixel, and the other is an ofTexture, which is used to upload those pixels into the ram after changes.
 
 You can actually turn off this texture in an ofImage to save RAM if you know you won't ever have to draw what you are loading to the screen. This could be useful if you only need to load an image to access pixel color values in it, or if you are taking a screenshot that you will save to your hard drive but never draw.
-see: [http://www.openframeworks.cc/documentation\#ofImage-setUseTexture][58]
+see: [/documentation/graphics/ofImage/#!show_setUseTexturee][58]
 
 ### How are pixel values stored without a Color object?
 
@@ -768,7 +768,7 @@ and Functions:
 
 additionally ofMath() provides functions for getting random values.
 
-[http://www.openframeworks.cc/documentation\#ofMath-about][78]
+[/documentation/math/ofMath/][78]
 
 ### Structs, what are they for, and how can we use them?
 
@@ -913,11 +913,11 @@ To remove a debug point just click on it and drag it out of the window. You'll g
 [38]: #accidental-breakpoints-in-xcode-and-why-having-a-debugger-rocks
 [48]: http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/CLASSES-INTRO.html "http://pages.cs.wisc.edu/~hasti/cs368/CppTutorial/NOTES/CLASSES-INTRO.html"
 [51]: http://www.cplusplus.com/doc/tutorial/pointers.html "http://www.cplusplus.com/doc/tutorial/pointers.html"
-[58]: http://www.openframeworks.cc/documentation#ofImage-setUseTexture "http://www.openframeworks.cc/documentation#ofImage-setUseTexture"
+[58]: /documentation/graphics/ofImage/#!show_setUseTexture "/documentation/graphics/ofImage/#!show_setUseTexture"
 [66]: http://www.cplusplus.com/reference/clibrary/cstdio/printf.html "http://www.cplusplus.com/reference/clibrary/cstdio/printf.html"
 [68]: http://members.gamedev.net/sicrane/articles/iostream.html "http://members.gamedev.net/sicrane/articles/iostream.html"
 [75]: http://www.cplusplus.com/reference/clibrary/cmath/ "http://www.cplusplus.com/reference/clibrary/cmath/"
-[78]: http://www.openframeworks.cc/documentation#ofMath-about "http://www.openframeworks.cc/documentation#ofMath-about"
+[78]: /documentation/math/ofMath/ "/documentation/math/ofMath/"
 [80]: http://richardbowles.tripod.com/cpp/linklist/linklist.htm "http://richardbowles.tripod.com/cpp/linklist/linklist.htm"
 
 

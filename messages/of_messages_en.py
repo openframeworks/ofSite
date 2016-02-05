@@ -14,8 +14,8 @@ MESSAGES = {
     "Grab the most recent release (${currentVersion}) and follow the setup guide to get openFrameworks running.": 
     "Grab the most recent release (${currentVersion}) and follow the setup guide to get openFrameworks running.",
     
-    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="http://openframeworks.cc/tutorials">tutorials section<a>.': 
-    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="http://openframeworks.cc/tutorials">tutorials section<a>.',
+    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="/tutorials">tutorials section<a>.': 
+    'Reference for openFrameworks classes, functions and addons. You can also check the <a href="/tutorials">tutorials section<a>.',
     
     'The forum is a place to meet other people working with openFrameworks. It\'s a place to share your work, or find help solving problems.': 
     'The forum is a place to meet other people working with openFrameworks. It\'s a place to share your work, or find help solving problems.',
@@ -36,7 +36,7 @@ MESSAGES = {
     
     'please_see': 'Please see the <a href="https://raw.github.com/openframeworks/openFrameworks/${currentVersion}/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.',
     
-    'intro': 'To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license.html">MIT License</a>.',
+    'intro': 'To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license/">MIT License</a>.',
     
     'download_openframeworks': 'download<br/>openFrameworks for',
     

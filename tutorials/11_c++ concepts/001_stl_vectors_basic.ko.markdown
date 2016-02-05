@@ -386,8 +386,8 @@ vector에서 오브젝트를 가리키는 pointer를 삭제할 때, erase될 뿐
     }
 ~~~~ 
 
-<!-- Note that this means erase and remove_if demonstrated above will not be sufficient. If pointers are needed, it is worthwhile to consider using shared pointers instead. <a href="http://www.openframeworks.cc/documentation/types/ofPtr.html">See ofPtr</a> -->
-위에서의 erase와 remove_if 시연으로는 충분하지 않음을 명심하십시오. 만약 포인터를 사용해야 한다면, 공용 포인터(shared pointers)를 대신 사용하는 편이 낫습니다. <a href="http://www.openframeworks.cc/documentation/types/ofPtr.html">ofPtr를 살펴보세요</a>.
+<!-- Note that this means erase and remove_if demonstrated above will not be sufficient. If pointers are needed, it is worthwhile to consider using shared pointers instead. <a href="/documentation/types/ofPtr.html">See ofPtr</a> -->
+위에서의 erase와 remove_if 시연으로는 충분하지 않음을 명심하십시오. 만약 포인터를 사용해야 한다면, 공용 포인터(shared pointers)를 대신 사용하는 편이 낫습니다. <a href="/documentation/types/ofPtr.html">ofPtr를 살펴보세요</a>.
 
 ----------------------------------------------------------------------------------------------------------------------------
 <a name="optimizing"></a>

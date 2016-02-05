@@ -98,7 +98,7 @@ TRANSLATIONS = {
 # specific language from here
 EXTERNAL_TRANSLATIONS = {    
     "ja": "http://openframeworks.jp",
-    "ko": "http://openframeworks.kr",
+#   "ko": "http://openframeworks.kr",
 }
 
 # What will translated input files be named like?
@@ -189,7 +189,7 @@ EXTERNAL_LINKS = {
 
     "ko": (
         ("https://forum.openframeworks.cc", "포럼(EN)"),
-        ("https://forum.openframeworks.kr", "포럼(KR)"),
+        ("http://forum.openframeworks.kr", "포럼(KR)"),
         ("http://ofxaddons.com", "애드온"),
         ("https://github.com/openframeworks", "github"),
         ("http://openframeworks.cc/list-info", "메일링 리스트"),
