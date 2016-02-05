@@ -158,7 +158,7 @@ Create an arc at centre, which has the radiusX, radiusY, and begins at
 angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels
 at 100, 100:
 
-\note angleBegin needs to be larger than angleEnd, i.e. 0,180 is ok,
+\note angleEnd needs to be larger than angleBegin, i.e. 0,180 is ok,
 while 180,0 is not.
 
 
@@ -173,7 +173,7 @@ Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBeg
 path.arc( 100, 100, 50, 50, 0, 360);
 ~~~~
 
-Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
+Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
 
 
 
@@ -248,7 +248,7 @@ path.arc( 300, 300, 200, 200, 0, 271); // note 271, not 270 for precision
 
 ![ofPath arc](graphics/ofPath_arc.jpg)
 
-\note angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok,
+\note angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok,
 while 180,0 is not.
 
 
@@ -266,7 +266,7 @@ path.arc( 300, 300, 200, 200, 0, 271); // note 271, not 270 for precision
 
 ![ofPath arc](ofPath_arc.png)
 
-Note that angleBegin needs to be larger than angleEnd, i.e. 0, 180 is ok, while 180,0 is not.
+Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
 
 
 
