@@ -44,15 +44,15 @@ openframeworksが自己完結できる構造のために、appsフォルダを�
 
 推奨されるファイル構造はこのようになります。
 
-  /.../apps/myApps/
+	/.../apps/myApps/
 		/myApp1
 		/myApp2
 		...
-  /.../apps/myBigInstallation
+	/.../apps/myBigInstallation
 		/myProject1
 		/myProject2
 		...
-  /.../apps/myAddonsTests/
+	/.../apps/myAddonsTests/
 		/ofxGifEncoderTests
 		/ofxFlashTests
 		...
