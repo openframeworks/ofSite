@@ -179,9 +179,9 @@ def relative_urls(text):
     
 def of_classes_to_links(text, classes_simple_name, module_lookup):
     for class_name in classes_simple_name:
-        rep = "(?!\[[^[\]]*)"+class_name+"(?![^[\]]*\])"
+        rep = "(?!\[[^[\]]*)"+class_name+"(?=[\s(])(?![^[\]]*\])"
         #rep = "/("+class_name + "[\s(])(?![^\[]*\])/g"
-        dst_pattern = "<a href=\"/documentation/"+module_lookup[class_name]+"/"+class_name+"\" class=\"docs_class\" >"+class_name+"</a> "
+        dst_pattern = "<a href=\"/documentation/"+module_lookup[class_name]+"/"+class_name+"\" class=\"docs_class\" >"+class_name+"</a>"
         text = re.sub(rep,dst_pattern,text)
     return text
     
