@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 import time
 import markdown
+import socket
 
 # !! This is the configuration of Nikola. !! #
 # !!  You should edit it to your liking.  !! #
@@ -22,8 +23,10 @@ BLOG_AUTHOR = "openFrameworks"  # (translatable)
 BLOG_TITLE = "openFrameworks"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "http://openframeworks.cc/"
-#SITE_URL = "http://localhost"
+if socket.gethostbyname(socket.gethostname()) == socket.gethostbyname('openframeworks.cc'):
+    SITE_URL = "http://openframeworks.cc/"
+else:
+    SITE_URL = "http://localhost/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://openframeworks.cc/"
