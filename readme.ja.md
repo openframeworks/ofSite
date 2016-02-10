@@ -4,8 +4,8 @@
 
 他の言語でこの文書を閲覧するには、下記のリンクを参照してください
 
-- English : [readme.md](readme.md)
-- Korean(한국어) : [readme_ko-KR.md](readme_ko-KR.md)
+- 英語 : [readme.md](readme.md)
+- 韓国語 (한국어) : [readme.ko.md](readme.ko.md)
 
 ## 貢献
 
