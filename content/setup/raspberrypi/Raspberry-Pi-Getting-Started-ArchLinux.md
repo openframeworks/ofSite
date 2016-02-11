@@ -62,7 +62,7 @@ Use the serial console or SSH to the IP address given to the board by your route
 Login as the default user alarm with the password alarm.
 The default root password is root.
 
-#Acomodate ?
+#Accommodate ?
 ---
 
 1. Login as **root**
