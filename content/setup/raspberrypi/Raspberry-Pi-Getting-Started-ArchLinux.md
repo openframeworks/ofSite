@@ -195,7 +195,7 @@ The default root password is root.
 	
 + Run scripts
 
-	* cd scripts/linux/archlinux
+	* cd of_v0.9.2_linuxarmv7l/scripts/linux/archlinux
 	
 	* sudo ./install_dependencies.sh
 	
