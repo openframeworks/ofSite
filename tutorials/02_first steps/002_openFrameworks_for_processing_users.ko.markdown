@@ -75,7 +75,7 @@
 
 ## 프로세싱은 실제로 어떻게 동작하는가
 
-만약 여러분이 한동안 Processing에서 프로그래밍을 해왔다면(그리고 별생각 없이 만들어 왔었다면), 이전에 클래스를 사용해봤었다라고 말해도 클린말은 아닙니다. 설령 여러분이 사용하지 않았다 할지도 모를 Java 클래스의 한 특징은 바로 polyMorphism(다형성)입니다. (클래스 상속)
+만약 여러분이 한동안 Processing에서 프로그래밍을 해왔다면(그리고 별생각 없이 만들어 왔었다면), 이전에 클래스를 사용해봤었다라고 말해도 틀린말은 아닙니다. 설령 여러분이 사용하지 않았다 할 지도 모를 Java 클래스의 한 특징은 바로 polyMorphism(다형성)입니다. (클래스 상속)
 
 ### 클래스 상속이란 무엇인가요? (부모클래스와 자식클래스)
 
@@ -107,7 +107,7 @@
 
 하지만 만약 여러분이 Enemy의 여러 타입을 만들고, 각각 그들을 다르게 보여주고 싶다면 어떻게 해야할까요? 바로 여기서 클래스 상속을 사용합니다. (역자 추가 : 클래스 상속을 사용하게 되면 부모클래스가 갖고 있는 변수/함수들을 모두 상속받게 됩니다. 다만 상속받는 함수중에 변경하고 싶은것만 재정의 하여 사용할 수 있습니다. 따라서..) 모든 캐릭터들은 여전히 자신만의 초기화 함수 init()과 움직임을 구현하는 move()함수를 가질 것입니다. 따라서 우리가 변화를 주어야 할것은 실제 Enemy를 그리는 draw()함수일 것입니다.
 
-여기서 Enemy 클래스를 부모 클래스로 사용할 것입니다. 부모 클래스는 아마도 절대 인스턴스화되지 않을것입니다. 대신에 상속받은 다른 클래스만 인스턴스화 됩니다. draw()만이 우리가 변경할 유일한 함수이기 때문에, init()이나 move()함수들은 새로 작성할 필요가 없습니다. draw()함수를 다시 작성할때 하는 작업을, **함수 재정의**라 합니다. Enemy클래스의 자식클래스에 이미 정의된 함수를 재정의 함으로써, 함수를 덮어씌우는 효과를 가져오는 것입니다.
+여기서 Enemy 클래스를 부모 클래스로 사용할 것입니다. 부모 클래스는 아마도 절대 인스턴스화되지 않을것입니다. blogofile 301 redirect 대신에 상속받은 다른 클래스만 인스턴스화 됩니다. draw()만이 우리가 변경할 유일한 함수이기 때문에, init()이나 move()함수들은 새로 작성할 필요가 없습니다. draw()함수를 다시 작성할때 하는 작업을, **함수 재정의**라 합니다. Enemy클래스의 자식클래스에 이미 정의된 함수를 재정의 함으로써, 함수를 덮어씌우는 효과를 가져오는 것입니다.
 
 Java에서의 예는 아래와 같습니다.
 
@@ -278,7 +278,7 @@ JAVA/P5:
 
 [http://www.cplusplus.com/doc/tutorial/pointers.html][51]
 
-One of the largest differences between C\+\+ and Java is that in Java, except for the basic data-types (byte, short, int, long, float, double, boolean, and char), all values are passed by reference. One important note is that Processing copies Strings by value, whereas C++ copies them by reference like all other classes.
+C\+\+와 Java 의 가장 큰 차이점이라면, Java에서는 기본적인 자료형(byte, short, int, long, float, double, boolean, char)을 제외한 모든 다른 자료형들은 값이 참조(reference)로 전달된다는 점입니다. Processing에서 String은 값으로 전달되지만, C++에서는 다른 클래스들과 마찬가지로 참조(reference)가 복사되어 전달되는 것이죠.
 
 ### 값 vs. 참조 (Value vs. Reference)
 
@@ -328,7 +328,6 @@ Processing은 여러분이 int형을 사용하고 그것을 값으로 전달하�
 
 놀랄것도 없이, 프로그램은 당연히 "1"을 출력합니다. 함수에 변수 num을 전달했기 때문에 이렇게 동작할 것이라 당연히 예상할 수 있습니다. 함수는 num를 복사하고, 원본을 수정하지 않습니다. 이것을 값에 의한 전달이라고 합니다.
 
-  
 다른 예제를 한번 살펴보죠. 정수를 전달하는 대신에, 정수형을 포함하고 있는 클래스를 한번 전달해볼려고 합니다. 아래 코드를 Processing에서 작성하고 실행해 보세요:
 
 ~~~~{.cpp}
