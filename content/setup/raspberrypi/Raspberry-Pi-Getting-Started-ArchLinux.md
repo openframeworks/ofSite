@@ -141,7 +141,8 @@ The default root password is root.
 	* curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/rtmidi.tar.gz
 	
 + Edit PKGBUILD file
-
+	
+	* cd rtmidi
 	* nano PKGBUILD
 
 + Edit line where it says [ **arch=('i686' 'x86_64')** ] into [ **arch=('armv7h')** ]
@@ -157,7 +158,7 @@ The default root password is root.
 	* curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/rtaudio.tar.gz
 	
 + Edit PKGBUILD file 
-
+	* cd rtaudio
 	* nano PKGBUILD
 
 + Edit line where it says [ arch=('i686' 'x86_64') ] into [ arch=('armv7h') ]
