@@ -8,7 +8,6 @@ Getting your Raspberry Pi 2 B ready for openFrameworks
 
 _*This has to be done under a linux computer (you can use raspbian :D)_
 
-
 ---
 
 Replace **sdX** in the following instructions with the device name for the SD card as it appears on your computer.
@@ -19,41 +18,41 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 
 2. At the fdisk prompt, delete old partitions and create a new one:
 
-Type **o**. This will clear out any partitions on the drive.
+	Type **o**. This will clear out any partitions on the drive.
  
-Type **p** to list partitions. There should be no partitions left.
+	Type **p** to list partitions. There should be no partitions left.
 
-Type **n**, then **p** for primary, **1** for the first partition on the drive, press **ENTER** to accept the default first sector, then type **+100M** for the last sector
+	Type **n**, then **p** for primary, **1** for the first partition on the drive, press **ENTER** to accept the default first sector, then type **+100M** for the last sector
 
-Type **t**, then **c** to set the first partition to type **W95 AT32 (LBA)**
+	Type **t**, then **c** to set the first partition to type **W95 AT32 (LBA)**
 
-Type **n**, then **p** for primary, **2** for the second partition on the drive, and then press **ENTER** twice to accept the default first andast sect
+	Type **n**, then **p** for primary, **2** for the second partition on the drive, and then press **ENTER** twice to accept the default first andast sect
 
-Write the partition table and exit by typing **w**.
+3. Write the partition table and exit by typing **w**.
 
-+ Create and mount the FAT filesystem:
+4. Create and mount the FAT filesystem:
 
 		mkfs.vfat /dev/sdX1
 		mkdir boot
 		mount /dev/sdX1 boot
 
-+ Create and mount the ext4 filesystem:
+5. Create and mount the ext4 filesystem:
 
 		mkfs.ext4 /dev/sdX2
 		mkdir root
 		mount /dev/sdX2 root
 
-+ Download and extract the root filesystem (as root, not via sudo):
+6. Download and extract the root filesystem (as root, not via sudo):
 
 		wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz
 		bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
 		sync
 
-+ Move boot files to the first partition:
+7. Move boot files to the first partition:
 
 		mv root/boot/* boot
 
-+ Unmount the two partitions:
+8. Unmount the two partitions:
 	
 		umount boot root
 
@@ -62,7 +61,7 @@ Use the serial console or SSH to the IP address given to the board by your route
 Login as the default user alarm with the password alarm.
 The default root password is root.
 
-#Accommodate ?
+##Accommodate
 ---
 
 1. Login as **root**
@@ -101,11 +100,12 @@ The default root password is root.
 	
 	* nano .bashrc
 	
-			# This reads .bash_aliases file for aliases
-			if [ -f ~/.bash_aliases ]; then			 		
-			. ~/.bash_aliases
-			fi
-	 * nano .bash_aliases
+		# This reads .bash_aliases file for aliases
+		if [ -f ~/.bash_aliases ]; then			 		
+		. ~/.bash_aliases
+		fi
+
+	* nano .bash_aliases
 
 			  #Enter openFrameworks folder just by typing "oF"
 			  alias oF='cd /home/pi/of_v0.9.2_linuxarmv7l'
@@ -136,7 +136,7 @@ The default root password is root.
 	* sudo pacman -S --needed base-devel
 	
 		
-+ ######Install rtMIDI
++ #####Install rtMIDI
 
 	* curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/rtmidi.tar.gz
 	
@@ -147,13 +147,11 @@ The default root password is root.
 
 + Edit line where it says [ **arch=('i686' 'x86_64')** ] into [ **arch=('armv7h')** ]
 
-	* arch=('i686' 'x86_64') ----> arch=('armv7h')
-	
 + Make
 
 	* makepkg -si
 
-+ ######Install rtAudio
++ #####Install rtAudio
 
 	* curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/rtaudio.tar.gz
 	
@@ -163,8 +161,6 @@ The default root password is root.
 
 + Edit line where it says [ arch=('i686' 'x86_64') ] into [ arch=('armv7h') ]
 
-	* arch=('i686' 'x86_64') ----> arch=('armv7h')
-	
 + Make
 
 	* makepkg -si
@@ -174,7 +170,7 @@ The default root password is root.
 + Reboot and then you can delete the builds folder (packages have been already installed)
 	
 
-#openFramewokrs
+##openFrameworks
 ---
 
 
