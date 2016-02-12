@@ -15,7 +15,7 @@ Many otherwise inexplicable problems seem to be the result of inadequate power. 
 Sometimes the Raspbian mirrors can be extremely slow. You may want to edit your `/etc/apt/sources.list` to use [one of these](https://www.raspbian.org/RaspbianMirrors)
 
 #### Compiling openFrameworks hangs on ofColor?  
-Make sure you have at least 128MB of RAM given to the CPU. Check the _**Configure the Raspberry Pi**_ section in [Getting Started](Raspberry-Pi-Getting-Started.html)
+Make sure you have at least 128MB of RAM given to the CPU. Check the _**Configure the Raspberry Pi**_ section in [Getting Started](../raspberry-pi-getting-started/)
 
 #### Debugging your app and/or openFrameworks
 
