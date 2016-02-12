@@ -140,7 +140,7 @@ The default root password is root.
 	* sudo pacman -S --needed base-devel
 	
 		
-+ #####Install rtMIDI
++ **Install rtMIDI**
 
 	* curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/rtmidi.tar.gz
 	
@@ -155,7 +155,7 @@ The default root password is root.
 
 	* makepkg -si
 
-+ #####Install rtAudio
++ **Install rtAudio**
 
 	* curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/rtaudio.tar.gz
 	
