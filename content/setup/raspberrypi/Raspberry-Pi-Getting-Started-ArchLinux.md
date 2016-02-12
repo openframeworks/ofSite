@@ -58,13 +58,17 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 
 Insert the SD card into the Raspberry Pi, connect ethernet, and apply 5V power.
 Use the serial console or SSH to the IP address given to the board by your router.
-Login as the default user alarm with the password alarm.
+Login as **root** with the default password **_root_**.
 The default root password is root.
 
 ##Accommodate
 ---
 
 1. Login as **root**
+
++ Change password
+	
+	* passwd
 
 + Install sudo
 
