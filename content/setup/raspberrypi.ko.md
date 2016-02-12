@@ -21,6 +21,7 @@
 
 * [라즈베리파이 워크플로우 개요](Raspberry-Pi-Workflow-Overview.html)
 * [라즈베리파이 시작하기](Raspberry-Pi-Getting-Started.html)
+* [라즈베리파이 2 B 시작하기 - ArchLinux](../raspberry-pi-getting-started-archlinux/)
 * [라즈베리파이 문제해결](Raspberry-Pi-Troubleshooting.html)
 
 ## 고급

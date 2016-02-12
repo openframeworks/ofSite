@@ -22,6 +22,7 @@ If you are an existing openFrameworks/RPi user you may wish to read [what's diff
 
 * [Raspberry Pi Workflow Overview](raspberry-pi-workflow-overview/)
 * [Raspberry Pi Getting Started](raspberry-pi-getting-started/)
+* [Raspberry Pi 2 B Getting Started with ArchLinux](../raspberry-pi-getting-started-archlinux/)
 * [Raspberry Pi Troubleshooting](raspberry-pi-troubleshooting/)
 
 ## Advanced
