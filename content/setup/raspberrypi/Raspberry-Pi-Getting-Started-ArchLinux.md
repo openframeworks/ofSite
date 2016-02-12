@@ -100,10 +100,10 @@ The default root password is root.
 	
 	* nano .bashrc
 	
-		# This reads .bash_aliases file for aliases
-		if [ -f ~/.bash_aliases ]; then			 		
-		. ~/.bash_aliases
-		fi
+			# This reads .bash_aliases file for aliases
+			if [ -f ~/.bash_aliases ]; then			 		
+			. ~/.bash_aliases
+			fi
 
 	* nano .bash_aliases
 
