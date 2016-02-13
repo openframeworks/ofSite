@@ -99,8 +99,8 @@ TRANSLATIONS = {
 # Provisional links to current external sites until translations
 # are ready. To test local translations comment out or remove the
 # specific language from here
-EXTERNAL_TRANSLATIONS = {    
-    "ja": "http://openframeworks.jp",
+EXTERNAL_TRANSLATIONS = {
+#   "ja": "http://openframeworks.jp",
 #   "ko": "http://openframeworks.kr",
 }
 
@@ -1241,5 +1241,3 @@ SEARCH_FORM = """
 <form action="/documentation/search_results">
 <input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
 </form>"""
-
-
