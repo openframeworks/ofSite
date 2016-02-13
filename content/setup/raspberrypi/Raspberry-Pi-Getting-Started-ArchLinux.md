@@ -61,8 +61,8 @@ Use the serial console or SSH to the IP address given to the board by your route
 Login as **root** with the default password **_root_**.
 The default root password is root.
 
-##Accommodate
 ---
+##Accommodate
 
 1. Login as **root**
 
@@ -88,6 +88,7 @@ The default root password is root.
 	
 			## Uncomment to allow members of group sudo to execute any command
 			#%sudo ALL=(ALL) NOPASSWD: ALL
+			
 	* Uncomment the second of the above lines, so that it reads as follows:
 	
 			## Uncomment to allow members of group sudo to execute any command
@@ -126,9 +127,9 @@ The default root password is root.
 			export MAKEFLAGS=-j4 PLATFORM_ARCH=armv7l PLATFORM_VARIANT=raspberry2
 
 
-
-##Preliminary work
 ---
+##Preliminary work
+
 
 1. Make a directory to not make a mess (you can delete it afterwards)
 
@@ -173,9 +174,8 @@ The default root password is root.
 
 + Reboot and then you can delete the builds folder (packages have been already installed)
 	
-
-##openFrameworks
 ---
+##openFrameworks
 
 
 1. Get openframeworks from website:
@@ -218,4 +218,4 @@ The default root password is root.
 	
 	*make && make run
 
-######Have lots of fun ! **:)**
+Have lots of fun ! **:)**
