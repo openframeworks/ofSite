@@ -7,7 +7,7 @@ Cross-compiling for the Raspberry Pi
 
 ## Introduction
 
-Creating a cross-compiler is a fairly advanced process but can be useful for heavy use. This guide will give some details on how to create a cross-compiler for use with openFrameworks 0.9.0. For older releases (OF 0.8.4/Wheezy) see [Raspberry Pi Cross-compiling Guide for Wheezy](Raspberry-Pi-Cross-compiling-guide-Wheezy.html)
+Creating a cross-compiler is a fairly advanced process but can be useful for heavy use. This guide will give some details on how to create a cross-compiler for use with openFrameworks 0.9.0. For older releases (OF 0.8.4/Wheezy) see [Raspberry Pi Cross-compiling Guide for Wheezy](../raspberry-pi-cross-compiling-guide-wheezy/)
 
 ## Do you need it?
 The RPI2/arm7 is much faster and can natively compile openFrameworks in about 15 minutes by utilizing all 4 cores (`make -j4`). Applications are typically much faster depending on complexity, use of ofxAddons, etc.

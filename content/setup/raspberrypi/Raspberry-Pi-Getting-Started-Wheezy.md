@@ -57,8 +57,8 @@ You are now ready to compile openFrameworks!
 ## Speeding up compiling
 Compiling natively on the Raspberry Pi takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time. 
 
-[Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html)    
-[Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide.html)
+[Raspberry Pi DISTCC Guide](../raspberry-pi-distcc-guide/)    
+[Raspberry Pi Cross Compiling Guide](../raspberry-pi-cross-compiling-guide/)
 
 ## Compile your first app
 Like on other platforms, openFrameworks ships with a bunch of examples located in the `openFrameworks/examples` folder. Inside examples the projects are sorted by the categories: 

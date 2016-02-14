@@ -4,9 +4,9 @@
 Raspberry Pi
 ============
 
-[Getting Started with Wheezy and openFrameworks 0.84](Raspberry-Pi-Getting-Started-Wheezy.html)
+[Getting Started with Wheezy and openFrameworks 0.84](../raspberry-pi-getting-started-wheezy/)
 
-[Raspberry Pi DISTCC Guide](Raspberry-Pi-DISTCC-guide.html)
+[Raspberry Pi DISTCC Guide](../raspberry-pi-distcc-guide/)
 
-[Raspberry Pi Cross Compiling Guide](Raspberry-Pi-Cross-compiling-guide-Wheezy.html)
+[Raspberry Pi Cross Compiling Guide](../raspberry-pi-cross-compiling-guide-wheezy/)
 
