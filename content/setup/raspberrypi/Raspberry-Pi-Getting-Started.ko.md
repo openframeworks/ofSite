@@ -43,17 +43,11 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 ## 오픈프레임웍스 다운받기
 이제 오픈프레임웍스를 다운받아 폴더에 압축을 풀 수 있습니다. 쉘에서 아래의 명령을 입력하여, 오픈프레임웍스를 다운받고 `/home/pi/openFrameworks`의 폴더에 압축을 풉니다.
  
-<h3> 라즈베리파이2/arm7</h3>
+<h3> 라즈베리파이2/arm7/arm6</h3>
 0. `cd` 
-0. `curl -O http://openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv7l_release.tar.gz` 
+0. `curl -O http://openframeworks.cc/versions/v0.9.2/of_v0.9.2_linuxarmv6l_release.tar.gz` 
 0.  `mkdir openFrameworks`
-0.  `tar vxfz of_v0.9.0_linuxarmv7l_release.tar.gz -C openFrameworks --strip-components 1`
-
-<h3> For the Raspberry Pi using OF for arm6</h3>
- 0. `cd` 
- 0. `curl -O http://openframeworks.cc/versions/v0.9.0/of_v0.9.0_linuxarmv6l_release.tar.gz` 
- 0. `mkdir openFrameworks`
- 0.	`tar vxfz of_v0.9.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
+0.  `tar vxfz of_v0.9.2_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 
 
 ## 패키지 인스톨 및 오픈프레임웍스 컴파일하기
