@@ -2257,7 +2257,7 @@ _inlined_description: _
 Draws a rectangle from point x,y with a given width and height.
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofDrawRect(10,10,100,100);
+    ofDrawRectangle(10,10,100,100);
 }
 ~~~~
 
@@ -2949,7 +2949,7 @@ Draw shapes filled with the current draw color.
 void ofApp::draw(){
     ofSetColor(0,0,255);
     ofFill();
-    ofDrawRect(10,10,100,100);  //draws the rectangle filled in blue
+    ofDrawRectangle(10,10,100,100);  //draws the rectangle filled in blue
 }
 ~~~~
 
