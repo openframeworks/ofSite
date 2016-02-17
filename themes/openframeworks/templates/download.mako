@@ -110,7 +110,7 @@ $(document).ready(function(){
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linuxarmv7l_release.tar.gz">linux armv7</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
-	        <p><a href="../setup/raspberrypi/Raspberry-Pi-Getting-Started-ArchLinux">raspberry pi(rpi2/archlinux)</a></p>
+	        <p><a href="../setup/raspberrypi/raspberry-pi-getting-started-archlinux">raspberry pi(rpi2/archlinux)</a></p>
 	        <p><a href="../setup/pandaboard">pandaboard</a></p>
 	        <p><a href="../setup/armv7">generic armv7</a></p>
         </div>
