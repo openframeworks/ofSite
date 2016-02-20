@@ -11,29 +11,34 @@ _extends: _
 ##InlineDescription
 
 
-ofColor represents a color in openFrameworks. Colors are usually defined by
-specifying a red, green, and blue component (RGB), and a transparency
-(alpha) component. You can also specify colors using hue, saturation, and
-brightness (HSB).
+##Description
+
+ofColor represents a color in openFrameworks.
+Colors are usually defined by specifying a red, green, blue and optionally 
+an alpha value (r,g,b,[a]), or a hue, saturation, brightness and optionally 
+an alpha value (h,s,b,[a]) or hexadecimal value with an optional alpha 
+value (0x________, a).
+
 
 For example:
+
 ~~~~{.cpp}
-    // Set red, component by component
-    ofColor red;
-    red.r=255;
-    red.g=0;
-    red.b=0;
-    ofSetColor(red);
-    // Draw color is now red.
+// set red, component by component
+ofColor red;
+red.r=255;
+red.g=0;
+red.b=0;
+ofSetColor(red);
+// draw color is now red
 
-    // Shorter notation is also possible.
-    ofColor green(0, 255, 0);
-    ofSetColor(green);
-    // Draw color is now green.
+// shorter notation is also possible
+ofColor green(0, 255, 0);
+ofSetColor(green);
+// draw color is now green
 
-    // ... or even shorter.
-    ofSetColor( ofColor(0, 0, ofRandom( 128, 255 ) );
-    // Draw color is now a random blue.
+// or even shorter
+ofSetColor( ofColor(0, 0, ofRandom( 128, 255 ) );
+// draw color is now a random blue
 ~~~~
 
 ofColor also enables a lot of extra functionality like using HSB instead of
@@ -60,7 +65,7 @@ ofColor. It uses a *hue* value (for the standard ofColor the range for this
 value is between 0 and 255) to determine what the hue (the 'color' in the
 sense of a color in the rainbow) will be:
 
-![HSB](types/hsb.jpg)
+![HSB](types/hsb.png)
 
 Approximate hues for some common colors:
 
@@ -87,61 +92,6 @@ is 0 the resulting color will be black, regardless of the values of hue or
 saturation.
 
 \tparam PixelType The data type used to represent a single pixel value.
-
-
-
-
-
-##Description
-
-ofColor represents a color in openFrameworks. Colors are usually defined by specifying a red, green, and blue component (RGB), and a transparency (alpha) component. You can also specify colors using hue, saturation and brightness (HSB).
-
-For example:
-
-~~~~{.cpp}
-// set red, component by component
-ofColor red;
-red.r=255;
-red.g=0;
-red.b=0;
-ofSetColor(red);
-// draw color is now red
-
-// shorter notation is also possible
-ofColor green(0, 255, 0);
-ofSetColor(green);
-// draw color is now green
-
-// or even shorter
-ofSetColor( ofColor(0, 0, ofRandom( 128, 255 ) );
-// draw color is now a random blue
-~~~~
-
-ofColor also enables a lot of extra functionality like using HSB instead of color spectrums, lerping or linearly interpolating between colors, and inverting colors, among other things.
-
-ofColor is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds typedefed for you. The default ofColor uses unsigned char values (0 to 255), but you can make an ofFloatColor if you want to work with floating point numbers between 0 and 1, or ofShortColor if you want to work with integers between 0 and 65,535.
-
-### HSB
-
-You're probably familiar with RGB colors already, but HSB is a big part of ofColor. It uses a *hue* value (for the standard ofColor the range for this value is between 0 and 255) to determine what the hue (the 'color' in the sense of a color in the rainbow) will be:
-
-![HSB](../types/hsb.png)
-
-Approximate hues for some common colors:
-
-* Red: 0 (wrapped round from 255)
-* Orange: 25
-* Yellow: 42
-* Green: 85
-* Blue: 170
-* Purple: 205
-* Red: 255 (wraps round to 0)
-
-Once you've selected a hue, you can use the *saturation* and *brightness* values to further refine the color. The saturation determines how much of the hue versus white is present and brightness determines how much hue versus black is present:
-
-![SB](../types/hsb-cone.jpg)
-
-In other words, saturation refers to the intensity of the color: high saturation means intense color, low saturation means washed out or black and white. Brightness refers to how light or dark the color is: high brightness means a bright color, low brightness means a dark color. If the brightness is 0 the resulting color will be black, regardless of the values of hue or saturation.
 
 
 
@@ -176,29 +126,29 @@ Clamp values between 0 and the limit().
 Clamps the value of each component, R, G, B and A to a maximum of
 limit() and a minimum of zero.
 
-~~~~{.cpp}
-    ofColor c( 300, 0, 0 );
-    // r component is above the limit() of 255.
-    c.clamp(); // c.r has now been clamped so its value is 255.
-~~~~
-
-
-Returns: A reference to itself.
-
-
 
 
 
 _description: _
 
-This clamps the values of your color in case they're too high or low for their types, in case you go negative or too use values that are too high, like anything >1.0 in the case of ofFloatColor.
+This clamps the values of your color in case they're too high or low for their 
+types, in case you go negative or too use values that are too high, like 
+anything < 0 or >1.0 in the case of ofFloatColor.
 
 ~~~~{.cpp}
 ofFloatColor c( 1, 0, 0 );
 c.g = 2; // g now has 2: this is usually invalid!
 c.clamp(); // c.g has now been clamped so its value is 1.
 ~~~~
+Also for ofColor anything <0 or >255.
 
+~~~~{.cpp}
+    ofColor c( 300, 0, 0 );
+    // r component is above the limit() of 255.
+    c.clamp(); // c.r has now been clamped so its value is 255.
+~~~~
+
+Returns: A reference to itself.
 
 
 
@@ -263,6 +213,16 @@ _inlined_description: _
 
 Create an ofColor_ from a hexadecimal value.
 
+Parameters:
+hexColor A color in hexadecimal form.
+alpha The alpha value of the color.
+
+
+
+
+_description: _
+
+Convenience method to construct an ofColor from a 24 bit hex value.
 In some cases, it is convenient to represent colors using a hexadecimal
 number. In this case, red, green, and blue values are packed into a
 single integer.
@@ -273,24 +233,6 @@ PixelType's maximum, resulting in an opaque color.
 ~~~~{.cpp}
     ofColor c = ofColor::fromHex(0xFFFF00); // c is yellow.
 ~~~~
-
-
-Parameters:
-hexColor A color in hexadecimal form.
-alpha The alpha value of the color.
-
-
-
-
-
-_description: _
-
-Convenience method to construct an ofColor from a 24 bit hex value.
-
-~~~~{.cpp}
-ofColor c = ofColor::fromHex(0xFFFF00); // c is yellow
-~~~~
-
 
 
 
@@ -319,6 +261,16 @@ _inlined_description: _
 
 Create an ofColor_ from an HSB representation.
 
+Parameters:
+hue The hue of the color.
+saturation The saturation of the color.
+brightness The brightness of the color.
+alpha The alpha value of the color.
+
+_description: _
+
+Convenience method to construct an ofColor from Hsb values.
+
 While ofColor_ represents color using R, G, B, and A components, other
 representations are available.  This method allows the user to construct
 an ofColor_ from a Hue (H), Saturation (S), and Brightness (B) and an
@@ -327,33 +279,13 @@ optional alpha value.
 The alpha channel is specified separately and will default to the
 PixelType's maximum, resulting in an opaque color.
 
+For more information about HSB, see:
+    http://en.wikipedia.org/wiki/HSV_color_space
+
 ~~~~{.cpp}
     ofColor c = ofColor::fromHsb(128, 255, 255);
     // c is bright saturated cyan.
 ~~~~
-
-For more information about HSB, see:
-    http://en.wikipedia.org/wiki/HSV_color_space
-
-
-Parameters:
-hue The hue of the color.
-saturation The saturation of the color.
-brightness The brightness of the color.
-alpha The alpha value of the color.
-
-
-
-
-
-_description: _
-
-Convenience method to construct an ofColor from Hsb values.
-
-~~~~{.cpp}
-ofColor c = ofColor::fromHsb(128, 255, 255); // c is bright saturated cyan
-~~~~
-
 
 
 
@@ -382,21 +314,19 @@ _inlined_description: _
 
 Calculate the brightness of of the R, G and B components.
 
-Brightness is simply the maximum of the three color components. This
-method of calculating brightness is used by Photoshop (HSB) and
-Processing (HSB).  Note that brightness is also called "Value".
-
 
 Returns: the brightness in the range 0 - limit().
 
 
-
-
-
 _description: _
 
-Return the brightness component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
 
+Return the brightness component of the HSB representation of this color. 
+Refer the [discussion of HSB](#HSB) above.
+
+Brightness is simply the maximum of the three color components. This
+method of calculating brightness is used by Photoshop (HSB) and
+Processing (HSB).  Note that brightness is also called "Value".
 
 
 
@@ -432,11 +362,17 @@ Returns: A copy of this color, clamped.
 
 
 
-
 _description: _
 
-Returns a clamped version of this color, without modifying the original. See [clamp](#clamp) for more info.
+Returns a clamped version of this color, without modifying the original. 
+See [clamp](#clamp) for more info.
 
+~~~~{.cpp}
+    ofColor c( 300, 200, 0 );
+    // r component is above the limit() of 255.
+    ofColor g = c.getClamped(); // c.r is still 300.
+    //g has the RGB value (255, 200, 0) 
+~~~~
 
 
 
@@ -465,17 +401,9 @@ _inlined_description: _
 
 Get a 24-bit hexadecimal representation of the RGB color.
 
-~~~~{.cpp}
-    ofColor c( 255, 255, 0 ); // Yellow.
-    int hex = c.getHex(); // Hex is 0xffff00 (or 16776960 in decimal).
-~~~~
-
-
 Warning: This method does _not_ encode the alpha component.
 
-
 Returns: An integer representing an RGB color.
-
 
 
 
@@ -489,7 +417,8 @@ ofColor c( 255, 255, 0 ); // yellow
 int hex = c.getHex(); // hex is 0xffff00 (or 16776960 in decimal)
 ~~~~
 
-Usually when we look at these colors in print they're hex, so don't be surprised if they don't look familiar when you print them as decimal.
+Usually when we look at these colors in print they're hex, so don't be 
+surprised if they don't look familiar when you print them as decimal.
 
 
 
@@ -519,14 +448,6 @@ _inlined_description: _
 
 Extract the hue, saturation and brightness (HSB) from this color.
 
-~~~~{.cpp}
-    ofColor red(255,0,0);
-    float hue = 0;  // The hue value to set.
-    float saturation = 0; // The saturation value to set.
-    float brightness = 0; The brightness value to set.
-    red.getHsb(hue, saturation, brightness);
-    // Hue is now 0 (for red), saturation is 255, brightness is 255.
-~~~~
 
 
 Parameters:
@@ -540,16 +461,18 @@ brightness A reference to the brightness to fill. Will be in the
 
 
 
-
 _description: _
 
-Return all three components of the HSB representation of this color at the same time.
+Return all three components of the HSB representation of this color 
+at the same time.
 
 ~~~~{.cpp}
-ofColor red(255,0,0);
-float hue, saturation, brightness;
-red.getHsb( hue, saturation, brightness );
-// hue is now 0 (for red), saturation is 255, brightness is 255
+    ofColor red(255,0,0);
+    float hue = 0;  // The hue value to set.
+    float saturation = 0; // The saturation value to set.
+    float brightness = 0; // The brightness value to set.
+    red.getHsb(hue, saturation, brightness);
+    // Hue is now 0 (for red), saturation is 255, brightness is 255.
 ~~~~
 
 Refer the [discussion of HSB](#HSB) above.
@@ -582,10 +505,6 @@ _inlined_description: _
 
 Get the Hue of this color.
 
-The color is converted from the default RGB to an HSB color space and
-the resulting Hue value is returned.  The resulting hue value will
-always be returned in the range 0 - limit().
-
 
 Returns: The Hue value in the range 0 - limit().
 
@@ -595,7 +514,12 @@ Returns: The Hue value in the range 0 - limit().
 
 _description: _
 
-Return the hue component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
+Return the hue component of the HSB representation of this color. 
+Refer the [discussion of HSB](#HSB) above.
+
+The color is converted from the default RGB to an HSB color space and
+the resulting hue value is returned.  The resulting hue value will
+always be returned in the range 0 - limit().
 
 
 
@@ -625,9 +549,6 @@ _inlined_description: _
 
 Get the Hue angle of this color.
 
-The color is converted from the default RGB to an HSB color space and
-the resulting Hue angle is returned.  The resulting hue value will
-always be returned in degrees in the range 0 - 360.
 
 
 Returns: The Hue angle in the range 0 - 360.
@@ -638,7 +559,11 @@ Returns: The Hue angle in the range 0 - 360.
 
 _description: _
 
+The color is converted from the default RGB to an HSB color space and
+the resulting hue angle is returned.  The resulting hue value will
+always be returned in degrees in the range 0 - 360.
 
+![hc](hue_circle.jpg)
 
 
 
@@ -678,10 +603,15 @@ Returns: A copy of this color, inverted.
 
 _description: _
 
-Returns the color that is the inverted version (complement) to this color, without modifying the original. See [invert](#invert) for more info.
+Returns the color that is the inverted version (complement) to this color, 
+without modifying the original. See [invert](#invert) for more info.
 
-
-
+~~~~{cpp.}
+    ofColor c(255, 200, 0);
+    ofColor i = c.getInverted(); 
+    // c still has RGB value of (255,200,0)
+    // i has the RGB value (0, 55, 255)
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -718,10 +648,15 @@ Returns: A copy of this color, lerped.
 
 _description: _
 
-Returns this color lerped towards target by amount, without modifying the original. See [lerp](#lerp) for more info.
+Returns this color lerped towards target by amount, without modifying the original. 
+See [lerp](#lerp) for more info.
 
-
-
+~~~~{.cpp}
+    ofColor r = ofColor::red;
+    ofColor b = ofColor::blue;
+    ofColor p = b.getLerped(r, 0.5); 
+    // p is purple, r is still red and b is still blue
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -752,7 +687,7 @@ Lightness is simply the average of the three color components. This
 method of calculating lightness is used by the Lab and HSL color spaces.
 
 
-Returns: the lightness in the range 0 - limit().
+Returns: the lightness as a float in the range 0 - limit().
 
 
 
@@ -760,9 +695,14 @@ Returns: the lightness in the range 0 - limit().
 
 _description: _
 
-Return the average of the three color components. This is used by the Lab and HSL color spaces.
+Return a float that is the average of the three color components. This is used by 
+the Lab and HSL color spaces.
 
-
+~~~~{.cpp}
+    ofColor c( 100, 200, 0 );
+    float l = c.getLightness();
+    // l is 100.f
+~~~~
 
 
 
@@ -800,8 +740,15 @@ Returns: A copy of this color, normalized.
 
 _description: _
 
-Returns the normalized version of this color, without modifying the original. See [normalize](#normalize) for more info.
+Returns the normalized version of this color, without modifying the original. 
+See [normalize](#normalize) for more info.
 
+~~~~{.cpp}
+    ofColor c(120, 200, 0);
+    ofColor n = c.getNormalized(); // Returns c / (200/255)
+    // n now has RGB value of (153,255,0)
+    // c still has the RGB value of (120, 200, 0)
+~~~~
 
 
 
@@ -828,11 +775,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the Saturation of this color.
+Get the saturation of this color.
 
 The color is converted from the default RGB to an HSB color space and
-the resulting saturation is returned.  The resulting saturation value
-will always be returned in the range 0 - limit().
+the resulting saturation is returned.  
 
 
 Returns: The saturation in the range 0 - limit().
@@ -843,7 +789,9 @@ Returns: The saturation in the range 0 - limit().
 
 _description: _
 
-Return the saturation component of the HSB representation of this color. Refer the [discussion of HSB](#HSB) above.
+Return the saturation component of the HSB representation of this color. 
+The resulting saturation value will always be returned in the range 0 - limit().
+Refer the [discussion of HSB](#HSB) above.
 
 
 
@@ -873,6 +821,14 @@ _inlined_description: _
 
 Invert the R, G and B components.
 
+Returns: A reference to itself.
+
+
+
+
+
+_description: _
+
 Performs an inversion operation on the color by replacing the red, green
 and blue components with their original value subtracted from the
 limit().  For example, an ofColor value of:
@@ -894,22 +850,6 @@ Example usage:
     ofColor c(0, 0, 255); // Blue.
     c.invert();
     // c is now (255,255,0), or yellow, which is blue's complement.
-~~~~
-
-
-Returns: A reference to itself.
-
-
-
-
-
-_description: _
-
-Invert the color, which turns it into its complement.
-
-~~~~{.cpp}
-ofColor c(0, 0, 255); // blue
-c.invert(); // c is now (255,255,0), or yellow, which is blue's complement
 ~~~~
 
 
@@ -940,22 +880,6 @@ _inlined_description: _
 
 A linear interpolation between all components of two colors.
 
-The lerp method performs a linear interpolation (or [lerp][1]) between
-this color and a target color.  In contrast to many of the mathematical
-functions found in ofColor_, The linear interpolation is carried out
-on _all_ components, R, G, B _and_ A.  The amount is typically a value
-between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0
-yielding a color identical to the target color.
-
-~~~~{.cpp}
-    ofColor r = ofColor::red;
-    ofColor b = ofColor::blue;
-    b.lerp(r, 0.5); // now purple
-~~~~
-
-[1]: http://en.wikipedia.org/wiki/Lerp_(computing) "Lerp"
-
-
 Parameters:
 target The target color corresponding to an amount of 1.0.
 amount The amount (between 0.0 and 1.0) to interpolate.
@@ -970,16 +894,23 @@ Returns: A reference to itself.
 
 _description: _
 
-Perform a linear interpolation (lerp) between this color and the target. Amount is a percentage represented by a float from 0 to 1.
+The lerp method performs a linear interpolation (or [lerp][1]) between
+this color and a target color.  In contrast to many of the mathematical
+functions found in ofColor_, The linear interpolation is carried out
+on _all_ components, R, G, B _and_ A.  The amount is typically a value
+between 0.0 and 1.0, with 0.0 yielding an unchanged color and 1.0
+yielding a color identical to the target color.
 
-This function allows to blend between colors. For instance, if you have red and you want halfway between red and blue, you can do this:
+This function allows to blend between colors. For instance, if you have 
+red and you want halfway between red and blue, you can do this:
+
 ~~~~{.cpp}
 ofColor r = ofColor::red;
 ofColor b = ofColor::blue;
 b.lerp(r, 0.5); // now purple!
 ~~~~
 
-
+[1]: http://en.wikipedia.org/wiki/Lerp_(computing) "Lerp"
 
 
 
@@ -1007,13 +938,6 @@ _inlined_description: _
 
 Get the maximum value of a color component.
 
-Based on the type of PixelType (whether its a ofColor, ofFloatColor or
-ofShortColor), the maximum value different. For a ofFloatColor the
-maximum is `1.0`, but for a ofColor it's `255`.
-
-Use this function to get this maximum number.
-
-
 Returns: The value associated with a fully saturated color component.
 
 
@@ -1022,7 +946,12 @@ Returns: The value associated with a fully saturated color component.
 
 _description: _
 
-Returns the maximum value for a component for this color. For standard ofColor returns 255, for ofFloatColor returns 1.0, for ofShortColor returns 65,536.
+Based on the type of PixelType (whether its a ofColor, ofFloatColor or
+ofShortColor), the maximum value different. For a ofFloatColor the
+maximum is `1.0`, but for a ofColor it's `255`, and for ofShortColor 
+returns `65,536`.
+
+Use this function to get this maximum number.
 
 
 
@@ -1052,11 +981,25 @@ _inlined_description: _
 
 Normalize the R, G and B components.
 
-Performs a normalization operation on the red, green and blue components
-by scaling them by brightness of the original color divided by the
-limit().  The brightness is calculated by finding the maximum of
-original red, green and blue components.  This operation is equivalent
-to the following:
+Performs a normalization operation on the red, green and blue components 
+by scaling them by brightness of the original color divided by the 
+limit().  The brightness is calculated by finding the maximum of original 
+red, green and blue components.
+
+
+Returns: A reference to itself.
+
+
+
+
+
+_description: _
+
+Divide all color components by brightness. This has the effect of conforming 
+the color to the outer surface of the hue/saturation/brightness spherical 
+color space, by forcing a unit radius (brightness).
+
+This operation is equivalent to the following:
 
 ~~~~~{.cpp}
     ofColor myColor(127, 0, 0, 127);
@@ -1069,18 +1012,7 @@ to the following:
                                 // components by the scale factor.
 ~~~~~
 
-
-Returns: A reference to itself.
-
-
-
-
-
-_description: _
-
-Divide all color components by brightness. This has the effect of conforming the color to the outer surface of the hue/saturation/brightness spherical color space, by forcing a unit radius (brightness).
-
-The following
+The following:
 ~~~~{.cpp}
 	ofColor c(122, 122, 0);
 	ofSetColor(c);
@@ -1122,10 +1054,7 @@ _inlined_description: _
 
 Construct a default white color.
 
-~~~~{.cpp}
-    ofColor c;
-    ofSetColor(c); // Draw color is now white.
-~~~~
+
 
 
 
@@ -1136,8 +1065,8 @@ _description: _
 Creates a color and sets it to white.
 
 ~~~~{.cpp}
-ofColor c;
-ofSetColor( c ); // draw color is now white
+    ofColor c;
+    ofSetColor(c); // Draw color is now white.
 ~~~~
 
 
@@ -1168,14 +1097,7 @@ _inlined_description: _
 
 Construct an ofColor_ by using channel values.
 
-When creating an instance of ofColor_ the channel values must fall
-within the range represented by the PixelType.  By default, the alpha
-component will take the PixelType's maximum, producing an opaque color.
 
-~~~~{.cpp}
-    ofColor c1(255, 0, 0); // Red with 100% alpha.
-    ofColor c2(255, 0, 0, 128); // Red with 50% alpha.
-~~~~
 
 Parameters:
 red The red component.
@@ -1189,11 +1111,12 @@ alpha The alpha component.
 
 _description: _
 
-Creates a color using RGB values and optional alpha value. The default alpha value makes a completely opaque color:
+Creates a color using RGB values and optional alpha value. The default alpha 
+value makes a completely opaque color:
 
 ~~~~{.cpp}
-ofColor c1(255, 0, 0); // red with 100% alpha
-ofColor c2(255, 0, 0, 128); // red with 50% alpha.
+    ofColor c1(255, 0, 0); // Red with 100% alpha.
+    ofColor c2(255, 0, 0, 128); // Red with 50% alpha.
 ~~~~
 
 
@@ -1224,15 +1147,6 @@ _inlined_description: _
 
 Construct a grayscale ofColor_ by specifying a single number.
 
-This constructor will use a single value to describe a grayscale color.
-This single value will be taken by each of the R, G and B components.
-The alpha channel is specified separately and will and will default to
-the PixelType's maximum resulting in an opaque color.
-
-~~~~{.cpp}
-    ofColor c(0.5); // c is now gray.
-~~~~
-
 Parameters:
 gray A grayscale value.
 alpha The opacity of the color.
@@ -1243,10 +1157,16 @@ alpha The opacity of the color.
 
 _description: _
 
-Creates a gray color from the value of gray. _a defaults to completely opaque.
+Creates a gray color from a single value to describe a grayscale color. 
+This single value will be taken by each of the R, G and B components. 
+Alpha value defaults to completely opaque.
 
 ~~~~{.cpp}
-ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
+    ofColor c(0.5); // c is now gray.
+~~~~
+
+~~~~{.cpp}
+    ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
 ~~~~
 
 
@@ -1280,12 +1200,6 @@ Construct an ofColor_ from an existing ofColor_.
 This constructor will attempt to convert between color instances of
 differing precision.
 
-~~~~{.cpp}
-    ofColor colorA(255, 0, 0);
-    ofColor colorB(colorA); // colorB is now equal to colorA.
-~~~~
-
-
 Warning: Depending on the PixelType and SrcType used, color precision
          may be lost when converting a higher precision to a lower
          precision representation.
@@ -1303,12 +1217,15 @@ _description: _
 Creates a color by copying another color with a different type (for example when copying from a standard ofColor using unsigned chars to an ofFloatColor):
 
 ~~~~{.cpp}
-ofColor c1(255, 128, 0); // orange
-ofFloatColor c2(c1);
-float g = c2.g; // g is now 0.5
+    ofColor c1(255, 128, 0); // orange
+    ofFloatColor c2(c1);
+    float g = c2.g; // g is now 0.5
 ~~~~
 
-
+~~~~{.cpp}
+    ofColor colorA(255, 0, 0);
+    ofColor colorB(colorA); // colorB is now equal to colorA.
+~~~~
 
 
 
@@ -1351,7 +1268,7 @@ alpha The new alpha value to replace the alpha value in color.
 
 _description: _
 
-Creates a color by copying another color, overriding the existing alpha value with the value of _a:
+Creates a color by copying another color, overriding the existing alpha value with the given alpha value.
 
 ~~~~{.cpp}
 ofColor mom(255, 0, 0); // red
@@ -1394,7 +1311,14 @@ Returns: true iff any of the R, G, B or A components are not equal.
 
 _description: _
 
+Returns true iff any of the R, G, B or A components are not equal.
 
+~~~~{cpp.}
+    ofColor c1(255, 0, 0); // Red with 100% alpha.
+    ofColor c2(255, 0, 0, 128); // Red with 50% alpha.
+    bool not_equal = (c1 != c2);
+    // not_equal is true
+~~~~
 
 
 
@@ -1442,8 +1366,15 @@ Returns: The new clamped color.
 
 _description: _
 
+Creates a new color by taking two colors and multiplying and clamping their R, 
+G and B components. The alpha component is ignored.
 
-
+~~~~{cpp.}
+    ofColor c1(100, 1, 2); 
+    ofColor c2(255, 30, 20);
+    ofColor c3 = c1 * c2;
+    // c3 has the RGB value of (255,30,40)
+~~~~
 
 
 
@@ -1489,8 +1420,13 @@ Returns: The new clamped color.
 
 _description: _
 
+Multiplys R, G and B components by a scaler and clamps each to be > 0 and < limit().
 
-
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c2 = c1 * 2.f;
+    // c2 has the RGB value of (255,60,40)
+~~~~
 
 
 
@@ -1537,7 +1473,15 @@ Returns: A reference to itself, the new clamped color.
 
 _description: _
 
+Set a color to the cumulative product of that color and another color's R, G 
+and B components, then clamps each to be > 0 and < limit().
 
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c2(0,30,10);
+    ofColor c2 *= c1;
+    // c2 has the RGB value of (0,255,200)
+~~~~
 
 
 
@@ -1584,7 +1528,14 @@ Returns: A reference to itself, the new clamped color.
 
 _description: _
 
+Set a color to the cumulative product of that color and a scaler, 
+then clamps each to be > 0 and < limit().
 
+~~~~{cpp.}
+    ofColor c1(255, 0, 20);
+    ofColor c1 *= 10.f;
+    // c1 has the RGB value of (255,0,200)
+~~~~
 
 
 
@@ -1631,6 +1582,16 @@ Returns: The new clamped color.
 
 _description: _
 
+Creates a color that is a sum of two color's R, G and B components, 
+then clamps each to be > 0 and < limit().
+
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c2(1,30,10);
+    ofColor c3 = c2 + c1;
+    // c3 has the RGB value of (255,60,30)
+~~~~
+
 
 
 
@@ -1639,7 +1600,7 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > operator+(&color)
+###ofColor_< PixelType > operator+(&value)
 
 <!--
 _syntax: operator+(&color)_
@@ -1678,7 +1639,14 @@ Returns: The new clamped color.
 
 _description: _
 
+Creates a color that is a sum of one color's R, G and B components and a value, 
+then clamps each to be > 0 and < limit().
 
+~~~~{cpp.}
+    ofColor c1(100, 255, 20);
+    ofColor c2 = c1 + 30.f
+    // c2 has the RGB value of (130,255,50)
+~~~~
 
 
 
@@ -1725,6 +1693,15 @@ Returns: A reference to itself, the new clamped color.
 
 _description: _
 
+Set a color to the cumulative sum of that color and another color's R, G 
+and B components, then clamps each to be > 0 and < limit().
+
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c2(0,30,10);
+    ofColor c2 += c1;
+    // c2 has the RGB value of (255,60,30)
+~~~~
 
 
 
@@ -1733,7 +1710,7 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator+=(&color)
+###ofColor_< PixelType > & operator+=(&value)
 
 <!--
 _syntax: operator+=(&color)_
@@ -1772,7 +1749,14 @@ Returns: A reference to itself, the new clamped color.
 
 _description: _
 
+Set a color to the cumulative sum of that color's R, G and B components
+and a value, then clamps each to be > 0 and < limit().
 
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c1 += 10.f;
+    // c1 has the RGB value of (255,40,30)
+~~~~
 
 
 
@@ -1820,6 +1804,15 @@ Returns: The new clamped color.
 
 _description: _
 
+Creates a color that is the difference between two color's R, G and B components, 
+then clamps each to be > 0 and < limit().
+
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c2(1, 40, 10);
+    ofColor c3 = c1 - c2;
+    // c3 has the RGB value of (254, 0, 10)
+~~~~
 
 
 
@@ -1867,7 +1860,14 @@ Returns: The new clamped color.
 
 _description: _
 
+Creates a color that is the difference between one color's R, G and B components
+and a value, then clamps each to be > 0 and < limit().
 
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c2 = c1 - 25.f;
+    // c2 has the RGB value of (230, 5, 0)
+~~~~
 
 
 
@@ -1911,7 +1911,16 @@ Returns: A reference to itself, the new clamped color.
 
 _description: _
 
+sets a color to the difference between that color's R, G and B 
+components and another color's R, G and B components, then 
+clamps each to be > 0 and < limit().
 
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c2(1, 40, 10);
+    ofColor c1 -= c2;
+    // c1 has the RGB value of (254, 0, 10)
+~~~~
 
 
 
@@ -1958,6 +1967,14 @@ Returns: A reference to itself, the new clamped color.
 
 _description: _
 
+Sets a color's R, G and B components to the difference between each component
+and a value, then clamps each to be > 0 and < limit().
+
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c1 -= 25.f;
+    // c1 has the RGB value of (230, 5, 0)
+~~~~
 
 
 
@@ -2005,7 +2022,15 @@ Returns: The new clamped color.
 
 _description: _
 
+Creates a new color by taking two colors and dividing and clamping their R, 
+G and B components. The alpha component is ignored.
 
+~~~~{cpp.}
+    ofColor c1(100, 200, 20); 
+    ofColor c2(10, 20, 2);
+    ofColor c3 = c1 / c2;
+    // c3 has the RGB value of (10,10,10)
+~~~~
 
 
 
@@ -2052,7 +2077,14 @@ Returns: The new clamped color.
 
 _description: _
 
+Creates a new color that is the quotient of a color's R, G and B 
+components and a divisor value and clamps each to be > 0 and < limit().
 
+~~~~{cpp.}
+    ofColor c1(200, 30, 20);
+    ofColor c2 = c1 / 2.f;
+    // c2 has the RGB value of (100,15,10)
+~~~~
 
 
 
@@ -2095,6 +2127,16 @@ Returns: A reference to itself, the new clamped color.
 
 
 _description: _
+
+Set a color to the quotient of that color's and another color's R, G 
+and B components, then clamps each to be > 0 and < limit().
+
+~~~~{cpp.}
+    ofColor c1(200, 30, 20);
+    ofColor c2(2,2,10);
+    ofColor c2 /= c1;
+    // c2 has the RGB value of (100,15,2)
+~~~~
 
 
 
@@ -2143,6 +2185,15 @@ Returns: A reference to itself, the new clamped color.
 
 _description: _
 
+Set a color to the cumulative product of that color and a scaler, 
+then clamps each to be > 0 and < limit().
+
+~~~~{cpp.}
+    ofColor c1(200, 0, 20);
+    ofColor c1 /= 10.f;
+    // c1 has the RGB value of (20,0,2)
+~~~~
+
 
 
 
@@ -2173,8 +2224,6 @@ _inlined_description: _
 
 Assign a color using an existing color.
 
-R, G, B and A components are set to the the values of the assigned
-color.
 
 
 Warning: Depending on the PixelType and SrcType used, color precision
@@ -2193,6 +2242,15 @@ Returns: A reference to itself.
 
 _description: _
 
+R, G, B and A components are set to the the values of the assigned
+color.
+
+~~~~{cpp.}
+    ofColor c1(255, 30, 20);
+    ofColor c2(0,30,10);
+    ofColor c2 = c1;
+    // c2 has the RGB value of (255, 30, 20)
+~~~~
 
 
 
@@ -2223,19 +2281,6 @@ _inlined_description: _
 
 Assign a color using a grayscale value.
 
-R, G and B components are set to the grayscale value and alpha is
-set to limit().
-
-~~~~~{.cpp}
-    ofColor myColor = 127;
-~~~~~
-
-is equivalent to:
-
-~~~~~{.cpp}
-    ofColor myColor(127, 127, 127, 255);
-~~~~~
-
 
 Parameters:
 value The grayscale value.
@@ -2248,7 +2293,18 @@ Returns: A reference to itself.
 
 _description: _
 
+R, G and B components are set to the grayscale value and alpha is
+set to limit().
 
+~~~~~{.cpp}
+    ofColor myColor = 127;
+~~~~~
+
+is equivalent to:
+
+~~~~~{.cpp}
+    ofColor myColor(127, 127, 127, 255);
+~~~~~
 
 
 
@@ -2286,7 +2342,15 @@ Returns: true iff the R, G, B and A components are all equal.
 
 _description: _
 
-
+~~~~{cpp.}
+    ofColor c1(255, 0, 0); // Red with 100% alpha.
+    ofColor c2(255, 0, 0, 128); // Red with 50% alpha.
+    bool is_equal = (c1 == c2);
+    // is_equal is false
+    c2.a = 255;
+    is_equal = (c1 == c2);
+    // is_equal is true
+~~~~
 
 
 
@@ -2316,14 +2380,6 @@ _inlined_description: _
 
 Array subscript operator.
 
-If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
-alpha.
-
-~~~~{.cpp}
-    ofColor c(128, 64, 255);
-    float red = c[0]; // Red is 128.
-~~~~
-
 
 Parameters:
 n An index 0-3 of the component to get.
@@ -2336,7 +2392,13 @@ Returns: The value of the requested component.
 
 _description: _
 
+If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
+alpha.
 
+~~~~{.cpp}
+    ofColor c(128, 64, 255);
+    float red = c[0]; // Red is 128.
+~~~~
 
 
 
@@ -2366,14 +2428,6 @@ _inlined_description: _
 
 Array subscript operator.
 
-If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
-alpha.
-
-~~~~{.cpp}
-    ofColor c(128, 64, 255);
-    float red = c[0]; // Red is 128.
-~~~~
-
 
 Parameters:
 n An index 0-3 of the component to get.
@@ -2389,8 +2443,119 @@ _description: _
 Array subscript operator. If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha.
 
 ~~~~{.cpp}
-ofColor c(128, 64, 255);
-float red = c[0]; // red is 128
+	ofColor c(128, 64, 255);
+	float red = c[0]; // red is 128
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###PixelType & operator<<(n)
+
+<!--
+_syntax: operator<<(n)_
+_name: operator<<_
+_returns: ostream &_
+_returns_description: _
+_parameters: size_t n_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+An output stream operator.
+
+Parameters:
+os An output stream reference.
+color The color to write to the output stream.
+
+Returns:
+The passed output stream reference, useful for method chaining.
+
+_description: _
+
+Colors can be serialized into comma separated values (CSV) using the
+output stream operator.  Input stream values are written in the
+following form
+    RED_VALUE, GREEN_VALUE, BLUE_VALUE, ALPHA_VALUE
+For example, to write output into a std::stringstream for later
+retrieval using the ofColor_ input stream operator one might use the
+following:
+~~~~{.cpp}
+    std::stringstream ss;     // Create an empty std::string stream.
+                              // Note: std::stringstream is just one
+                              // option for an output stream.  Another
+                              // popular output stream std::cout.
+    ofColor myColor(255, 255, 0, 255);
+                              // Create an ofColor to output.
+    ss << myColor;            // Write the color to the output stream.
+~~~~
+
+
+
+<!----------------------------------------------------------------------------->
+
+###PixelType & operator>>(n)
+
+<!--
+_syntax: operator>>(n)_
+_name: operator>>_
+_returns: istream &_
+_returns_description: _
+_parameters: size_t n_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+An input stream operator.
+
+Parameters:
+An input stream reference.
+color The color to fill with the input stream.
+
+Returns:
+The passed input stream reference, useful for method chaining.
+
+
+
+_description: _
+
+Colors can be deserialized from comma separated values (CSV) input
+stream using the input stream operator.  Input stream values are read
+in the following form:
+    RED_VALUE, GREEN_VALUE, BLUE_VALUE, ALPHA_VALUE
+For example, to read input from a std::stringstream into an ofColor
+one might use the following:
+~~~~{.cpp}
+    std::stringstream ss;     // Create an empty std::string stream.
+                              // Note: std::stringstream is just one
+                              // option for an input stream.
+    ss << "255, 255, 0, 255"; // Write the color to the stringstream.
+    ofColor myColor;          // Create an ofColor instance to fill.
+    ss >> myColor;            // myColor is now filled with a yellow.
+~~~~
+
+~~~~{.cpp}
+	ofColor c(128, 64, 255);
+	float red = c[0]; // red is 128
 ~~~~
 
 
@@ -2425,10 +2590,6 @@ When modifying an instance of ofColor_ the channel values must fall
 within the range represented by the PixelType.  By default, the alpha
 component will take the PixelType's maximum, producing an opaque color.
 
-~~~~{.cpp}
-    ofColor c(255, 0, 0); // Red ...
-    c.set(0, 255, 0); // ... and now green.
-~~~~
 
 
 Parameters:
@@ -2443,12 +2604,16 @@ alpha The alpha component.
 
 _description: _
 
-Creates a color using RGB values and optional alpha value. The default alpha value makes a completely opaque color.
+Creates a color using RGB values and optional alpha value. The default 
+alpha value makes a completely opaque color. By default, the alpha
+component will take the PixelType's maximum, producing an opaque color.
+The channel values must fall within the range represented by the PixelType
 
 ~~~~{.cpp}
-ofColor c(255, 0, 0); // red
-c.set(0, 255, 0); // and now green
+    ofColor c(255, 0, 0); // Red ...
+    c.set(0, 255, 0); // ... and now green.
 ~~~~
+
 
 
 
@@ -2478,11 +2643,6 @@ _inlined_description: _
 
 Set a grayscale ofColor_ by specifying a single number.
 
-When modifying an instance of ofColor_ you can use a single value to
-describe a grayscale color. This single value will be taken by each of
-the R, G and B components. The alpha channel is specified separately
-and will and will default to the PixelType's maximum resulting in an
-opaque color.
 
 ~~~~{.cpp}
     ofColor c(255, 0, 0); // Red ...
@@ -2500,13 +2660,12 @@ alpha The opacity of the color.
 
 _description: _
 
-Creates a gray color from the value of gray. _a defaults to completely opaque.
+Creates a gray color from the value of gray. This single value will be taken by each of the R, G and B components. The alpha value defaults to completely opaque.
+
 ~~~~{.cpp}
-ofColor c(255, 0, 0); // red
-c.set( 128, 128 ); // now 50% gray with 50% alpha
+    ofColor c(255, 0, 0); // Red ...
+    c.set(128, 128); // ... and now 50% gray with 50% alpha.
 ~~~~
-
-
 
 
 
@@ -2546,9 +2705,13 @@ color The ofColor_ to copy.
 
 _description: _
 
+This will use the R, G, B and A components from the passed color.
 
-
-
+~~~~{.cpp}
+    ofColor r(255, 0, 0); // Red 
+    ofColor b(0,0,255); // Blue
+    r.set(b); // now the RGB value of r is (0,0,255)
+~~~~
 
 
 
@@ -2591,14 +2754,14 @@ brightness A brightness value to set in the range of 0 - limit().
 
 _description: _
 
-Change the current brightness, leaving hue and saturation intact.
+Change the current brightness, leaving hue and saturation the same.
 
 ~~~~{.cpp}
-ofColor c( 0, 0, 255 ); // bright blue
-c.setBrightness( 128 ); // dark blue
+    ofColor c(0, 0, 255); // Bright blue ...
+    c.setBrightness(128); // ... dark blue.
 ~~~~
 
-Refer the [discussion of HSB](#HSB) above.
+Refer the [discussion of HSB](#HSB).
 
 
 
@@ -2628,24 +2791,8 @@ _inlined_description: _
 
 Set an ofColor_ from a hexadecimal representation.
 
-In some cases, it is convenient to represent colors using a hexadecimal
-number.  In this case, red, green and blue values are packed into a
-integer.
-
-The alpha channel is specified separately and will default to the
-PixelType's maximum, resulting in an opaque color.
-
-~~~~{.cpp}
-    ofColor c;
-    c.setHex(0xFFFFFF); // White.
-    c.setHex(0x00FF00); // Green.
-    c.setHex(0xFF8000, 128); // Orange, 50% alpha.
-~~~~
-
-
 Warning: The alpha value _should not_ be packed in the hexColor and
     must be specified separately.
-
 
 Parameters:
 hexColor An RGB color in hexadecimal form.
@@ -2657,14 +2804,20 @@ alpha The alpha value of the color.
 
 _description: _
 
-Set this color to hexColor using a 24 bit hex-style color as normally used in web development.  alpha defaults to completely opaque.
-~~~~{.cpp}
-ofColor c;
-c.setHex( 0xFFFFFF ); // white
-c.setHex( 0x00FF00 ); // green
-c.setHex( 0xFF8000, 128 ); // orange, 50% alpha
-~~~~
+In some cases, it is convenient to represent colors using a hexadecimal
+number. In this case, red, green and blue values are packed into a
+integer.
 
+Set this color to hexColor using a 24 bit hex-style color as normally 
+used in web development. The alpha channel is specified separately 
+and will default to the PixelType's maximum, resulting in an opaque color.
+
+~~~~{.cpp}
+    ofColor c;
+    c.setHex(0xFFFFFF); // White.
+    c.setHex(0x00FF00); // Green.
+    c.setHex(0xFF8000, 128); // Orange, 50% alpha.
+~~~~
 
 
 
@@ -2705,10 +2858,24 @@ alpha An alpha value to set in the range of 0 - limit().
 
 _description: _
 
-Set this color using a HSB representation. Refer the [discussion of HSB](#HSB) above. **Note** that the hue value has a range that matches the base data type (ie **0 to 255** for the standard ofColor), rather than 0 to 360, 0 to 100 or float 0 to 1, as may be expected.
+In some cases, it is convenient to represent colors using a HSB
+value. In this case, red, green and blue values are represented by their hue, 
+saturation and brightness.
+
+Set this color using a HSB representation. Refer the [discussion of HSB](#HSB) 
+above. **Note** that the hue value has a range that matches the base data type 
+(ie **0 to 255** for the standard ofColor), rather than 0 to 360, 0 to 100 or 
+float 0 to 1, as may be expected. The alpha channel is specified separately  
+and will default to the PixelType's maximum, resulting in an opaque color.
 
 
-
+~~~~{.cpp}
+    ofColor c = ofColor(0); // c is black
+    c.setHsb(0, 255, 255); // c is now bright red
+    c.setHsb(255, 255, 255); // c is still bright red (colors wrap around)
+    c.setHsb(255, 255, 100); // c is dark red
+    c.setHsb(255, 100, 255); // c is dull light red
+~~~~
 
 
 <!----------------------------------------------------------------------------->
@@ -2735,11 +2902,6 @@ _inlined_description: _
 
 Set the hue of this color.
 
-~~~~{.cpp}
-    ofColor c = ofColor::fromHsb(0, 255, 255); // Bright red ...
-    c.setHue(128); // ... now bright cyan.
-~~~~
-
 
 Parameters:
 hue A hue value to set in the range of 0 - limit().
@@ -2750,7 +2912,7 @@ hue A hue value to set in the range of 0 - limit().
 
 _description: _
 
-Change the current hue, leaving saturation and brightness intact.
+Change the current hue, leaving saturation and brightness the same.
 
 ~~~~{.cpp}
 ofColor c = ofColor::fromHsb( 0, 255, 255 ); // bright red
@@ -2797,7 +2959,12 @@ angle A hue angle value to set in the range of 0 - 360 degrees.
 _description: _
 
 
+The hue field in setHsb() and in setHue() represents hue as a range between 0 and 
+255 because the hue value has a range that matches the base data type, 
+setHueAngle() sets hue using the conventional way to represent hue: with the 
+range between 0 and 360.
 
+![hc](hue_circle.jpg)
 
 
 
@@ -2828,16 +2995,9 @@ Set the saturation of this color.
 
 This method uses HSB not HSL. So red desaturated is white, not gray
 
-~~~~{.cpp}
-    ofColor c(0, 0, 255); // Vibrant blue ...
-    c.setSaturation( 128 ); // ... pale blue.
-~~~~
-
-
 Parameters:
 saturation A saturation value value in the range of 0 - limit().
 
-See also: http://en.wikipedia.org/wiki/HSL_and_HSV
 
 
 
@@ -2848,12 +3008,13 @@ _description: _
 Change the current saturation, leaving hue and brightness intact.
 
 ~~~~{.cpp}
-ofColor c( 0, 0, 255 ); // vibrant blue
-c.setSaturation( 128 ); // pale blue
+    ofColor c(0, 0, 255); // Vibrant blue ...
+    c.setSaturation( 128 ); // ... pale blue.
 ~~~~
 
 Refer the [discussion of HSB](#HSB) above.
 
+See also: http://en.wikipedia.org/wiki/HSL_and_HSV
 
 
 
@@ -2891,7 +3052,10 @@ _description: _
 The alpha value (transparency) of a color. 0 is completely transparent, 255 is completely opaque.
 
 
-
+~~~~{cpp.}
+    ofColor c = ofColor(255,0,0); // Bright red with default limit() value (this case its 255)
+    c.a = 50; // now the color is bright red with the opacity set to 50 (mostly see through)
+~~~~
 
 
 <!----------------------------------------------------------------------------->
