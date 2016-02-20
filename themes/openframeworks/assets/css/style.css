@@ -729,6 +729,13 @@ div.sectiontitle{
 div.sectiontitle h2{
     padding-top:.3em;
 }
+
+.page-wide.sectiontitle small {
+	font-size: 0.65em;
+	color: #666;
+	margin-left: 15px;
+}
+
 .documentation_detail {
 	float: left;
 	line-height: 20px;

@@ -10,8 +10,8 @@
 
 
         <div id="how_tos" class="page-wide sectiontitle">
-          <h2>how-tos <small>quick reference for common questions</small></h2>
-        </div>
+          <h2>how-tos <small>a quick reference for common questions</small></h2>
+        </div> 
 
         <div class="page-wide">
         % for category in categories:
