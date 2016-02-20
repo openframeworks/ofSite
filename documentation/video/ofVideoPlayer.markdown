@@ -1493,7 +1493,7 @@ _inlined_description: _
 
 _description: _
 
-If the movie has been stopped or paused it will the continue playback at the point it was stopped. You still need to call update() periodically to ensure that you're copying frames to an ofTexture so that they can be drawn.
+
 
 
 
@@ -1673,7 +1673,7 @@ _inlined_description: _
 
 _description: _
 
-Should be used only if you know the bounds of the movie (using `totalNumberFrames()`). Also used often to store a playhead position location using `getCurrentFrame()`.
+
 
 
 
@@ -1709,7 +1709,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the looping state of the movie. Default behavior is `OF_LOOP_NORMAL`. There are three options:
+
 ~~~~{.cpp}
 
 OF_LOOP_NONE - don't loop, the movie will stop when it gets to the last frame (or first frame, if playing backwards)
@@ -1895,7 +1895,7 @@ _inlined_description: _
 
 _description: _
 
-The speed can also be set so as to reverse playback with a negative number (i.e. -1.0).
+
 
 
 
