@@ -2,36 +2,53 @@
 <%inherit file="base.tmpl" />
 
 <%block name="content">
-      <div id="body-wrap">	
-	    <div class="page-wide">        
-	        <!--h1>tutorials</h1-->
-            <h3>${tutorials_intro}</h3>
-        </div><!-- End Page Wide -->  
+      <div id="body-wrap">
+
+        <div id="getting_started" class="page-wide">
+          ${getting_started}
+        </div>
+
+
+        <div id="how_tos" class="page-wide sectiontitle">
+          <h2>how-tos</h2>
+        </div>
+
+        <div class="page-wide">
         % for category in categories:
             % if len(category["articles"]) > 0:
-                <div class="page-wide sectiontitle">  
+              <div style="width: 30% !important; float: left; height: 200px;">
+                <div style="background: #eee;">  
                         <h2>${category["category"]}</h2>
                     </div><!-- End Page Wide -->
-                <div class="page-wide">  
-                    <ul class="articles">
+                    <ul>
                     % for article in category["articles"]:
+                      % if article.type == "howto":
                          %if lang in article.translations.keys():
-                             <li><a href="${article.translations[lang].path}"> ${article.translations[lang].title} </a></br>
+                             <li>&gt; <a href="${article.translations[lang].path}"> ${article.translations[lang].title} </a></br>
                                  <p>${article.translations[lang].summary}</p>
                              </li>
                          %else:
                              <li><a href="${article.path}"> ${article.title} </a></br>
-                                 <p>${article.summary}</p>
+                                 <!--<p>${article.summary}</p> -->
                              </li>
                          %endif
+
+                      % endif
                     % endfor
                     </ul>
-                </div><!-- End Page Wide -->
+              </div>
             % endif
         % endfor
-          
+        </div>
 
-        <div id="wishlist" class="page-wide sectiontitle">  
+        <div id="ofBook" class="page-wide sectiontitle">
+          <h2>ofBook – a collection of guides to openFrameworks</h2>
+        </div>
+        <div class="page-wide">
+          ${of_book}
+        </div>
+
+        <div id="wishlist" class="page-wide sectiontitle">
           <h2>tutorial wish list</h2>
         </div>
         <div class="page-wide">
@@ -63,4 +80,3 @@
 
      </div>
 </%block>
-
