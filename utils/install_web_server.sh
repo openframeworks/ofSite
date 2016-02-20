@@ -59,7 +59,7 @@ read -d '' cronlines <<-"_EOF_"
 # m h  dom mon dow   command
 
 * * * * * /home/$USER/ofSite/build_server.sh
-* * * * * /home/$USER/ofBook/web/build.sh
+* * * * * /home/$USER/ofBook/web/build.sh >> /home/ofadmin/logs/book.log 2>&1
 * * * * * /home/$USER/ofSite/import_release.sh
 _EOF_
 
