@@ -10,7 +10,7 @@
 
 
         <div id="how_tos" class="page-wide sectiontitle">
-          <h2>how-tos</h2>
+          <h2>how-tos <small>quick reference for common questions</small></h2>
         </div>
 
         <div class="page-wide">
@@ -42,7 +42,7 @@
         </div>
 
         <div id="ofBook" class="page-wide sectiontitle">
-          <h2>ofBook – a collection of guides to openFrameworks</h2>
+          <h2>ofBook <small>a collection of guides to openFrameworks</small></h2>
         </div>
         <div class="page-wide">
           ${of_book}

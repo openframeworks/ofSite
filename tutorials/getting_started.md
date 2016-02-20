@@ -2,17 +2,18 @@
 <div style="width: 50%; float: left;">
     <h2>Getting Started!</h2>
 
-<ul>
-<li> Introduction</li>
-<li> Getting Started</li>
-<li> Create a new project with the projectGenerator</li>
-</ul>
+<ol>
+<li> Download openFrameworks </li>
+<li> Set up your IDE </li>
+<li> Create a new project </li>
+<li> *** link down to ofBook *** </li>
+</ol>
 
 </div>
 
 <div style="width: 50%; float: left;">
 
-<h2>Online Resources</h2>
+<h2>External Resources</h2>
 
 <ul>
 <li> YouTube video series (Lewis Lepton) </li>
