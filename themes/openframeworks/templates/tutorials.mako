@@ -32,7 +32,6 @@
                                  <!--<p>${article.summary}</p> -->
                              </li>
                          %endif
-
                       % endif
                     % endfor
                     </ul>

@@ -1,5 +1,6 @@
 <div style="width: 50%; float: left;">
 
+
 <ul>
 <li>Foreword
 
@@ -33,21 +34,45 @@
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/network.html">Network</a></li>
 </ul>
 </li>
+<li>Graphics
+
+<ul>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/openGL.html">Introducing OpenGL for OF</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/lines.html">Drawing Lines</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/generativemesh.html">Basics of Generating Meshes from an Image</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/advanced_graphics.html">Advanced graphics</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/shaders.html">Introducing Shaders</a></li>
+</ul>
+</li>
+
 
 </ul> 
 </div>
 <div style="width: 50%; float: left;">
 <ul>
 
+<li>C++
+
+<ul>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/threads.html">Threads</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/memory.html">Memory in C++</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/stl_vector.html">Introduction to vectors</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/stl_map.html">Having fun with Maps, specifically std::map</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/c++11.html">C++ 11</a></li>
+</ul>
+</li>
+
+
 <li>Advanced topics
 
 <ul>
-<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/advanced_graphics.html">Advanced graphics</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/math.html">Math: From 1D to 4D</a></li>
-<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/memory.html">Memory in C++</a></li>
-<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/threads.html">Threads</a></li>
+</ul>
+</li>
+<li>Platforms
+
+<ul>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/ios.html">ofxiOS</a></li>
-<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/c++11.html">C++ 11</a></li>
 </ul>
 </li>
 <li>Tools
@@ -67,4 +92,8 @@
 </ul>
 </li>
 </ul>
+
+
+
+
 </div>
