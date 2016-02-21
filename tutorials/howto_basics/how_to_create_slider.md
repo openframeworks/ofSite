@@ -1,6 +1,7 @@
-#How to make a GUI slider to control a variable
-
---
+---
+.. title: How to make a GUI slider to control a variable
+.. type: howto
+---
 
 Creating a GUI slider is very simple. You simply generate a project with the GUI add on, initialize an ofxFloatSlider and gui, draw the gui, and link the slidr to a specific variable.
 
