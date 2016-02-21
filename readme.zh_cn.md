@@ -46,7 +46,6 @@
 - ./serve.sh 会在本地运行网站服务器，这样就可以在浏览器访问本地地址查看网站效果.
 
 修改文档源文件或翻译文档时先运行 `./auto_build.sh`后再运行 `./serve.sh`两个同时运行。这时有任何文件变化时网站会自动更新。
-번역에 참여하는 것과 같이 큰 수정을 할 계획이 있으시다면, 가장 쉬운 방법은 위에서 언급한 마지막 2개의 스크립트를 실행시켜둔 상태에서 콘텐츠 파일을 수정하는 것입니다. 파일의 변경이 있으면 사이트는 자동으로 업데이트 됩니다。
 
 ## Markdown 语法
 
@@ -67,6 +66,6 @@
 
 插入图片时使用`Markdown`语法：
 
-  ![Image Title](filename.png "alt text")
+    ![Image Title](filename.png "alt text")
 
 关于贡献文档具体事项请参考, [贡献文档](http://openframeworks.cc/ko/tutorials/10_developers/003_contributing_to_the_documentation/)教程。
