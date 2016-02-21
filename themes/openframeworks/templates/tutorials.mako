@@ -13,7 +13,7 @@
           <h2>how-tos <small>a quick reference for common questions</small></h2>
         </div>
 
-        <div class="page-wide">
+        <div class="page-wide how-tos">
         % for category in categories:
             % if len(category["articles"]) > 0 and category["isHowTo"]:
               <div style="width: 30% !important; float: left; height: 200px; margin: 5px;">
