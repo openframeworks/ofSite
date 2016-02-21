@@ -50,5 +50,31 @@ MESSAGES = {
     
     'other_releases': '<h2>다른 릴리즈</h2>    오픈프레임웍스의 이전 릴리즈는 <a href="older/">이곳</a>에 보관되어 있습니다. 가장 최신버전의 오픈프레임웍스는 <a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>을 살펴봐주십시오. 오픈프레임웍스에 대해 공헌하고 싶으신 분들은, GitHub 저장소를 fork하신 뒤, <a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">오픈프레임웍스 GitHub 워크플로우</a> 가이드를 따라주십시오.',
     
-    'translation': '번역'
+    'translation': '번역',
+    
+    'how-tos': 'how-tos',
+    
+    'a quick reference for common questions': 'a quick reference for common questions',
+    
+    'a collection of openFrameworks guides': 'a collection of openFrameworks guides',
+    
+    'Getting Started!': 'Getting Started!',
+    
+    'Download & set up openFrameworks': 'Download & set up openFrameworks',
+    
+    'Explore the examples': 'Explore the examples',
+    
+    'Create a new project': 'Create a new project',
+    
+    'Check out the how-tos!': 'Check out the how-tos!',
+    
+    'External Resources': 'External Resources',
+    
+    'Code Liberation OF workshops': 'Code Liberation OF workshops',
+    
+    'OF video series': 'OF video series',
+    
+    'ofBook': 'ofBook',
+    
+    '... and many more! (GitHub wiki)': '... and many more! (GitHub wiki)',
 }

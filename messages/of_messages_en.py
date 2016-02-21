@@ -50,5 +50,31 @@ MESSAGES = {
     
     'other_releases': '<h2>other releases</h2>    Older releases of openFrameworks are archived <a href="older/">here</a>. For the absolute latest version of openFrameworks, see the <a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>. If you\'re interested in contributing to openFrameworks, you should fork the GitHub repository and follow the guidelines for the <a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">openFrameworks GitHub workflow</a>.',
     
-    'translation': 'translation'
+    'translation': 'translation',
+    
+    'how-tos': 'how-tos',
+    
+    'a quick reference for common questions': 'a quick reference for common questions',
+    
+    'a collection of openFrameworks guides': 'a collection of openFrameworks guides',
+    
+    'Getting Started!': 'Getting Started!',
+    
+    'Download & set up openFrameworks': 'Download & set up openFrameworks',
+    
+    'Explore the examples': 'Explore the examples',
+    
+    'Create a new project': 'Create a new project',
+    
+    'Check out the how-tos!': 'Check out the how-tos!',
+    
+    'External Resources': 'External Resources',
+    
+    'Code Liberation OF workshops': 'Code Liberation OF workshops',
+    
+    'OF video series': 'OF video series',
+    
+    'ofBook': 'ofBook',
+    
+    '... and many more! (GitHub wiki)': '... and many more! (GitHub wiki)',
 }

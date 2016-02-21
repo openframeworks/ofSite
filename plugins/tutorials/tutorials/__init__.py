@@ -234,30 +234,6 @@ class TutorialsTask(Task):
         for lang in self.kw['translations']:
 
             ### -----------------------------------
-            ### 1) TOP SECTION: GETTING STARTED ###
-
-            getting_started_path = os.path.join(directory, "getting_started.md")
-            if lang != self.site.config['DEFAULT_LANG']:
-                getting_started_lang_path = utils.get_translation_candidate(self.site.config, getting_started_path, lang)
-                p = pathlib.Path(getting_started_lang_path)
-                if p.exists():
-                    getting_started_path = getting_started_lang_path
-            getting_started = open(getting_started_path).read()
-
-
-            ### -----------------------------------
-            ### 2) MIDDLE SECTION: HOW-TOs ###
-            ### are generated from the folders
-
-            tutorials_intro_path = os.path.join(directory, "index.md")
-            if lang != self.site.config['DEFAULT_LANG']:
-                tutorials_intro_lang_path = utils.get_translation_candidate(self.site.config, tutorials_intro_path, lang)
-                p = pathlib.Path(tutorials_intro_lang_path)
-                if p.exists():
-                    tutorials_intro_path = tutorials_intro_lang_path
-            tutorials_intro = open(tutorials_intro_path).read()
-
-            ### -----------------------------------
             ### 3) BOTTOM SECTION: GUIDES FROM OF-BOOK ###
 
             of_book_path = os.path.join(directory, "of_book.md")
@@ -277,8 +253,6 @@ class TutorialsTask(Task):
                 context["permalink"] = '/tutorials/'
             else:
                 context["permalink"] = '/' + lang + '/tutorials/'
-            context["getting_started"] = getting_started
-            context["tutorials_intro"] = tutorials_intro
             context["of_book"] = of_book
             context["title"] = "learning"
             context['categories'] = categories
