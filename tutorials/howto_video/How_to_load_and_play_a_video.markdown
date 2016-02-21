@@ -15,21 +15,47 @@ Add an instance variable of type ```ofVideoPlayer``` for the video you wish to l
 
 ####In the ```ofApp.cpp``` file:
 
+In the ```setup``` function:
+
 Load the video by calling the ```load()``` method of ```ofVideoPlayer ```, with the relative path to the video:
 
 	videoName.load("INSERT FILE PATH HERE")
 	
-example:
 
-	void ofApp::setup(){
-		fingerMovie.load("movies/fingers.mov");
-	}
-	
-To start playing the video, simply call the ```play()``` method of ```ofVideoPlayer```:
+Start playing the video:
+
+	videoName.play()
+
+Example:
 
 	void ofApp::setup(){
 		fingerMovie.load("movies/fingers.mov");
 		fingerMovie.play();
+	}
+	
+	
+In your ``update()`` function:
+
+
+	videoPlayer.update();
+
+
+Example:
+
+	void ofApp::update(){
+		fingerMovie.update();
+	}
+
+In your ``draw()`` function:
+
+
+	videoPlayer.draw(xPosition, yPosition, width, height);
+
+
+Example:
+
+	void ofApp::draw(){
+		fingerMovie.draw(0, 0, 400, 300);
 	}
 	
 ###For more information:
