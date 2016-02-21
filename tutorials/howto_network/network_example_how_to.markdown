@@ -1,5 +1,4 @@
 ---
-.. author: 
 .. title: network
 .. summary: how to ...
 .. type: howto

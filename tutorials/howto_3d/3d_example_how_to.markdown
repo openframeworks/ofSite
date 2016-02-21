@@ -1,7 +1,5 @@
 ---
-.. author: 
 .. title: 3d example how-to
-.. summary: how to ...
 .. type: howto
 ---
 

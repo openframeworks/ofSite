@@ -1,8 +1,5 @@
 ---
-.. author: Sarah Howorka <sarah.howorka@gmail.com>
 .. title: Load and play a video file
-.. author_site: http://www.sarahhoworka.com
-.. summary: how to load and play a video file
 .. type: howto
 ---
 

@@ -1,7 +1,6 @@
 ---
 .. author: 
 .. title: Event Example how-to
-.. summary: how to ...
 .. type: howto
 ---
 
