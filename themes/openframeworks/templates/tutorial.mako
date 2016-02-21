@@ -12,14 +12,14 @@
 <%block name="content">
       <div id="body-wrap">	
 	    <div class="page-wide-tutorial">
+            &lt; <a href="/tutorials#how_tos">back to all how-tos</a>
             <!--ul class="submenu">
                 <li><a href="/documentation">reference</a></li>
                 <li><a href="/tutorials">tutorials</a></li>
             </ul-->
+
     	    <h1>${post.title()}</h1>
     	    
-    	    <span class="article_meta">${post.date}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-        	<a href="${post.meta[lang]['author_site']}">${post.author()}</a></span><br/>
         	% if post.meta[lang]["translator"] != "":
             	<span class="article_meta">${of.msg("translation", locals())}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="${post.meta[lang]["translator_site"]}">${post.meta[lang]["translator"]}</a></span><br/>
         	% endif
@@ -30,5 +30,3 @@
         </div><!-- End Page Wide -->      
       </div><!-- End Body Wrap -->
 </%block>
-
-
