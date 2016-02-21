@@ -144,7 +144,7 @@ NAVIGATION_LINKS = {
         ("/about/", "about"),
         ("/download/", "download"),
         ("/documentation/", "documentation"),
-        ("/tutorials/", "tutorials"),
+        ("/tutorials/", "learning"),
         ("/gallery/", "gallery"),
         ("/community/", "community"),
         ("/development/", "development"),

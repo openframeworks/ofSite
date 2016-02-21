@@ -122,7 +122,7 @@ lang="${lang}">
                         <ul>
                             %for suburl, text in url:
                                 % if rel_link(permalink, suburl) == "#":
-                                    <li><a href="${suburl}"  class="active">${text}</a></li>
+                                    <li><a href="${suburl}" class="active">${text}</a></li>
                                 %else:
                                     <li><a href="${suburl}">${text}</a></li>
                                 %endif
