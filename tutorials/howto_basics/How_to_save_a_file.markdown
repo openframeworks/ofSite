@@ -18,8 +18,7 @@ You can save a file anywhere in your application, but you may want to trigger it
 
 	void ofApp::keyPressed  (int key){
 		if(key == 's'){
-		}
-			// save your file in here!!
+		// save your file in here!!
 		}
 	}
 
