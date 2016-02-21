@@ -7,7 +7,7 @@ Creating a GUI slider is very simple. You simply generate a project with the GUI
 
 When you generate your project, include the ofxGui addon.
 
-![Screenshot of Example)](guiScreenshot.png)
+![Screenshot of Example)](newGui.png)
 
 When you open your app in xCode, you should see the gui add on source files here:
 

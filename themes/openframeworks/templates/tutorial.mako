@@ -12,12 +12,8 @@
 <%block name="content">
       <div id="body-wrap">	
 	    <div class="page-wide-tutorial">
-            &lt; <a href="/tutorials#how_tos">back to all how-tos</a>
-            <!--ul class="submenu">
-                <li><a href="/documentation">reference</a></li>
-                <li><a href="/tutorials">tutorials</a></li>
-            </ul-->
-
+            &lt; <a href="/learning#how_tos">${ of.msg("back to all how-tos", locals()) }</a>
+            
     	    <h1>${post.title()}</h1>
     	    
         	% if post.meta[lang]["translator"] != "":
