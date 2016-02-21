@@ -24,6 +24,12 @@ With the third parameter, you can specify how you want the window to be displaye
 
 	ofSetupOpenGL(1024, 768, OF_FULLSCREEN);
 
-```OF_GAME_MODE``` mode will strech your project full screen respecting the aspect ratio specified by width and height.
+Alternatively, you can set the window size (and position) in the setup function of ofApp, which gets called right at the start: 
 
-	ofSetupOpenGL(1024, 768, OF_GAME_MODE);
+```cpp
+void ofApp::setup(){
+    ofSetWindowShape(500, 500);
+    ofSetWindowPosition(10, 10);
+}
+```
+    
