@@ -4,14 +4,12 @@
 .. type: howto
 ---
 
-#How to load & play sound
-
 
 Loading and playing sound is very simple. You simply initialize an ofSoundPlayer, load the sound file, and play the sound file.
 
 Before starting save your sound file in your bin/data folder.
 
-![Screenshot of Example)](play_a_sound/screenshot.png)
+![Screenshot of Example)](screenshot.png)
 
 ### in the header file (.h)
 
