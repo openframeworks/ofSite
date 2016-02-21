@@ -5,19 +5,18 @@
 
 openFrameworks will save to your bin/data folder unless you specify another filepath. 
 
-![File location bin/data](whereTo.png)
+![File location bin/data](How_to_save_a_file_output_whereTo.png)
 
 If you want to save many files, each file will need to have its own unique file name. A quick way of doing this is to use the current timestamp because it is never the same. So instead of naming it ```"myFile.xml" ```, which will write over itself everytime you save, you can do ```"myFile_" + ofGetTimestampString() + ".xml"``` to give each file its own name. 
 
-![using timeStamps versus not](usingTimeStamps.png)
+![using timeStamps versus not](How_to_save_a_file_usingTimeStamps.png)
 
 
 You can save a file anywhere in your application, but you may want to trigger it at a specific moment. You might want to your file to save everytime you press a specific key.
 
 	void ofApp::keyPressed  (int key){
 		if(key == 's'){
-		}
-			// save your file in here!!
+		// save your file in here!!
 		}
 	}
 
@@ -98,7 +97,7 @@ the default is ```OF_IMAGE_QUALITY_BEST``` and all the options are: ```OF_IMAGE_
 
 Here is what the output should look like in this case. 
 
-![image of outpu](output.jpg)
+![image of outpu](How_to_save_a_file_output.jpg)
 
 For more info refer to the examples/graphics/imageSaverExample.
 
