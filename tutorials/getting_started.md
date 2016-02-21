@@ -16,7 +16,7 @@
 <h2>External Resources</h2>
 
 <ul>
-    <li> <a target="_blank"href="http://codeliberation.github.io/CLF-slides/"> Code Liberation OF workshops</a> </li>
+    <li> <a href="http://codeliberation.github.io/CLF-slides/" target="_blank"> Code Liberation OF workshops</a> </li>
     <li> <a href="https://www.youtube.com/watch?v=IKSTo_0pB28&index=51&list=PL4neAtv21WOmrV8z9rSzL20QpdLU1zJLr" target="_blank">OF video series</a></li>
     <li> <a href="#ofBook"> ofBook </a> </li>
     <li> <a href="https://github.com/openframeworks/openFrameworks/wiki/Resources-for-Learning"> ... and many more! (GitHub wiki) </a></li>
