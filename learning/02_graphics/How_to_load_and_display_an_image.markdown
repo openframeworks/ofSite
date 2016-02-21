@@ -1,5 +1,5 @@
 ---
-.. title: How to load and display an image
+.. title: Load and display an image
 .. type: howto
 ---
 
