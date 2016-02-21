@@ -1,5 +1,5 @@
 ---
-.. title: How to load and play a video
+.. title: Load and play a video
 .. type: howto
 ---
 

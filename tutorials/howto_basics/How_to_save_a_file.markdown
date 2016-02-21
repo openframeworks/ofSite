@@ -1,9 +1,7 @@
 ---
-.. title: How To Save a File
+.. title: Save/export files
 .. type: howto
 ---
-​
-#How To Save a File 
 
 openFrameworks will save to your bin/data folder unless you specify another filepath. 
 

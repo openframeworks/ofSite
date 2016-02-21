@@ -1,5 +1,5 @@
 ---
-.. title: How to Take a screenshot
+.. title: Take a screenshot
 .. summary: How to take a screenshot of your work
 .. type: howto
 ---

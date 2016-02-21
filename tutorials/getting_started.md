@@ -3,9 +3,9 @@
     <h2>Getting Started!</h2>
 
 <ol>
-<li> <a href="/download/"> Download openFrameworks </a> </li>
-<li> <a href="/download/"> Set up your IDE </a> </li>
-<li> <a href="/download/"> Create a new project </a> </li>
+<li> <a href="/download/"> Download &amp; set up openFrameworks </a> </li>
+<li> <a href="https://github.com/openframeworks/openFrameworks/tree/master/examples" target="_blank"> Explore the examples
+<li> <a href="/tutorials/howto_basics/create_a_new_project"> Create a new project </a> </li>
 <li> <a href="#how_tos">Check out the how-tos!</a> </li>
 </ol>
 

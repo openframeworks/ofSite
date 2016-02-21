@@ -1,6 +1,5 @@
 ---
-.. title: How to load & play sound
-.. summary: How to load & play sound
+.. title: Load and play sound
 .. type: howto
 ---
 

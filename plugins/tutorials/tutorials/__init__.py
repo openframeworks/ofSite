@@ -280,7 +280,7 @@ class TutorialsTask(Task):
             context["getting_started"] = getting_started
             context["tutorials_intro"] = tutorials_intro
             context["of_book"] = of_book
-            context["title"] = "tutorials"
+            context["title"] = "learning"
             context['categories'] = categories
             short_tdst = os.path.join(self.kw['translations'][lang], "tutorials", "index.html")
             tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))

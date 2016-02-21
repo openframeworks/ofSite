@@ -1,12 +1,12 @@
 ---
 .. author: 
-.. title: Event Example how-to
+.. title: Listen to events
 .. type: howto
 ---
-
-
-Something something event events are wonderful.
     
+
+not like this:
+
 ```cpp
 EVENT EVENT event event; // YAY
 ```
