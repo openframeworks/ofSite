@@ -164,7 +164,7 @@ NAVIGATION_LINKS = {
         ("/ko/about/", "소개"),
         ("/ko/download/", "다운로드"),
         ("/ko/documentation/", "도큐먼트"),
-        ("/ko/learning/", "learning"),
+        ("/ko/learning/", "배우기"),
         ("/ko/gallery/", "갤러리"),
         ("/ko/community/", "커뮤니티"),
         ("/ko/development/", "개발"),
