@@ -149,7 +149,8 @@ class TutorialsTask(Task):
         }
         tasks = {}
         classes = []
-        directory = os.path.join(self.site.original_cwd, "tutorials")
+        folder_name = "learning"
+        directory = os.path.join(self.site.original_cwd, folder_name)
         template_name = "tutorials.mako"
         categories = []
         
@@ -190,9 +191,9 @@ class TutorialsTask(Task):
                 elif os.path.isdir(folder):
                     for lang in self.kw['translations']:
                         if lang == self.site.config['DEFAULT_LANG']: 
-                            out_folder = os.path.join(self.site.original_cwd, 'output','tutorials',catfolder,article.lower())
+                            out_folder = os.path.join(self.site.original_cwd, 'output',folder_name,catfolder,article.lower())
                         else:
-                            out_folder = os.path.join(self.site.original_cwd, 'output',lang,'tutorials',catfolder,article.lower())
+                            out_folder = os.path.join(self.site.original_cwd, 'output',lang,folder_name,catfolder,article.lower())
                             
                         for root, dirs, file_ins in os.walk(folder):
                             for f in file_ins:
@@ -227,9 +228,8 @@ class TutorialsTask(Task):
                 
             articles = list(map(collect_translations, articles))
 
-            howToIndexInFolderName = catfolder.find("howto_")
 
-            categories.append({'category': category, 'articles': articles, 'isHowTo': howToIndexInFolderName > -1});
+            categories.append({'category': category, 'articles': articles});
             
         for lang in self.kw['translations']:
 
@@ -250,13 +250,13 @@ class TutorialsTask(Task):
             context = {}
             context["lang"] = lang
             if lang == self.site.config['DEFAULT_LANG']: 
-                context["permalink"] = '/tutorials/'
+                context["permalink"] = '/' + folder_name + '/'
             else:
-                context["permalink"] = '/' + lang + '/tutorials/'
+                context["permalink"] = '/' + lang + '/' + folder_name + '/'
             context["of_book"] = of_book
             context["title"] = "learning"
             context['categories'] = categories
-            short_tdst = os.path.join(self.kw['translations'][lang], "tutorials", "index.html")
+            short_tdst = os.path.join(self.kw['translations'][lang], folder_name, "index.html")
             tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))
             template_dep = self.site.template_system.template_deps(template_name)
             template_dep += files

@@ -16,14 +16,13 @@
 
         <div class="page-wide how-tos">
         % for category in categories:
-            % if len(category["articles"]) > 0 and category["isHowTo"]:
+            % if len(category["articles"]) > 0:
               <div style="width: 32% !important; float: left; min-height: 200px; margin: 5px;">
                 <div style="background: #eee;">  
                         <h2>${category["category"]}</h2>
                     </div><!-- End Page Wide -->
                     <ul>
                     % for article in category["articles"]:
-                      % if article.type == "howto":
                          %if lang in article.translations.keys():
                              <li>&gt; <a href="${article.translations[lang].path}"> ${article.translations[lang].title} </a></br>
                                  <p>${article.translations[lang].summary}</p>
@@ -33,7 +32,6 @@
                                  <!--<p>${article.summary}</p> -->
                              </li>
                          %endif
-                      % endif
                     % endfor
                     </ul>
               </div>
