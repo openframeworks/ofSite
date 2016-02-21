@@ -28,7 +28,7 @@ Load your sound file in the setup method. You can load a variety of different so
 		mySound.load("fileName.mp3");
 	}
 
-Next, play the sound file. If you add this to the setup method, the sound will play continuously after you run your app. 
+Next, play the sound file. If you add this to the setup method, the sound will play once right when you start your app.  You can also send your sound to loop if you want it to play continuously. 
 
 	void ofApp:setup(){
 		mySound.load("fileName.mp3");
