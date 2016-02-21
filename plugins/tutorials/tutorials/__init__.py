@@ -43,6 +43,7 @@ class MarkdownArticle:
         self.body = ''
         self.type = 'markdown'
         self.lang = lang
+        self.type = 'tutorial'
         self.translations = {}
         for line in mdfile:
             #line = line.decode('utf-8','replace')
@@ -69,6 +70,9 @@ class MarkdownArticle:
                 continue
             if state=='header' and line.find('translator_site:')!=-1:
                 self.translator_site = stripFileLine(line[line.find(':')+1:]).strip(' ')
+                continue
+            if state=='header' and line.find('type:')!=-1:
+                self.type = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
             if state=='header' and stripFileLine(line).strip(' ')=='---':
                 return  
@@ -124,6 +128,8 @@ def create_file(in_path, out_path):
         pass
     shutil.copyfile(in_path, out_path)
     
+
+
 class TutorialsTask(Task):
     """Generates the tutorials contents."""
 
@@ -220,25 +226,60 @@ class TutorialsTask(Task):
                 return article
                 
             articles = list(map(collect_translations, articles))
-            
-            categories.append({'category': category, 'articles': articles});
+
+            howToIndexInFolderName = catfolder.find("howto_")
+
+            categories.append({'category': category, 'articles': articles, 'isHowTo': howToIndexInFolderName > -1});
             
         for lang in self.kw['translations']:
-            tutorials_intro_path = os.path.join(directory, "index.md")   
-            if lang != self.site.config['DEFAULT_LANG']: 
+
+            ### -----------------------------------
+            ### 1) TOP SECTION: GETTING STARTED ###
+
+            getting_started_path = os.path.join(directory, "getting_started.md")
+            if lang != self.site.config['DEFAULT_LANG']:
+                getting_started_lang_path = utils.get_translation_candidate(self.site.config, getting_started_path, lang)
+                p = pathlib.Path(getting_started_lang_path)
+                if p.exists():
+                    getting_started_path = getting_started_lang_path
+            getting_started = open(getting_started_path).read()
+
+
+            ### -----------------------------------
+            ### 2) MIDDLE SECTION: HOW-TOs ###
+            ### are generated from the folders
+
+            tutorials_intro_path = os.path.join(directory, "index.md")
+            if lang != self.site.config['DEFAULT_LANG']:
                 tutorials_intro_lang_path = utils.get_translation_candidate(self.site.config, tutorials_intro_path, lang)
                 p = pathlib.Path(tutorials_intro_lang_path)
                 if p.exists():
-                    tutorials_intro_path = tutorials_intro_lang_path 
+                    tutorials_intro_path = tutorials_intro_lang_path
             tutorials_intro = open(tutorials_intro_path).read()
+
+            ### -----------------------------------
+            ### 3) BOTTOM SECTION: GUIDES FROM OF-BOOK ###
+
+            of_book_path = os.path.join(directory, "of_book.md")
+            if lang != self.site.config['DEFAULT_LANG']:
+                of_book_lang_path = utils.get_translation_candidate(self.site.config, of_book_path, lang)
+                p = pathlib.Path(of_book_lang_path)
+                if p.exists():
+                    of_book_path = of_book_lang_path
+            of_book = open(of_book_path).read()
             
+
+            ### -----------------------------------
+
             context = {}
             context["lang"] = lang
             if lang == self.site.config['DEFAULT_LANG']: 
                 context["permalink"] = '/tutorials/'
             else:
                 context["permalink"] = '/' + lang + '/tutorials/'
+            context["getting_started"] = getting_started
             context["tutorials_intro"] = tutorials_intro
+            context["of_book"] = of_book
             context["title"] = "tutorials"
             context['categories'] = categories
             short_tdst = os.path.join(self.kw['translations'][lang], "tutorials", "index.html")
@@ -259,3 +300,5 @@ class TutorialsTask(Task):
                     1: self.kw,
                 })],
             }, self.kw['filters'])
+
+
