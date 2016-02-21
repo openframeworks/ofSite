@@ -10,9 +10,11 @@
 </%block>
 
 <%block name="content">
-      <div id="body-wrap">	
-	    <div class="page-wide-tutorial">
-            &lt; <a href="/learning#how_tos">${ of.msg("back to all how-tos", locals()) }</a>
+      <div id="body-wrap">
+	    <div class="page-left-verywide tutorial">
+            <div id="back-link">
+                &lt; <a href="/learning#how_tos">${ of.msg("back to all how-tos", locals()) }</a>
+            </div>
             
     	    <h1>${post.title()}</h1>
     	    

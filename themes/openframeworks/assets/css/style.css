@@ -1493,3 +1493,13 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 .how-tos h2 {
 	padding: 5px 10px;
 }
+
+.tutorial #back-link {
+	margin-bottom: 2.5em;
+}
+
+
+.tutorial h1 {
+	font-size: 3em;
+	margin-bottom: 0.1em;
+}
