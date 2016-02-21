@@ -84,3 +84,16 @@ post sort
 0 100
 1 1000
 ```
+
+Note you can change the boolean function -- this, for example, would sort the objects from oldest to youngest (we've switched the < to a > : 
+
+```
+bool sortMe(myObject & a, myObject & b){
+    if (a.age > b.age){
+        return true;
+    } else {
+        return false;
+    }
+}
+```
+
