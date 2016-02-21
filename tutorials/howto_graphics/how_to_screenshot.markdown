@@ -1,6 +1,8 @@
-#How to Take a screenshot
-
---
+---
+.. title: How to Take a screenshot
+.. summary: How to take a screenshot of your work
+.. type: howto
+---
 
 Creating a screenshot of your work is very simple. You simply initialize an ofImage, draw something, and then use ```img.grabScreen();``` to capture what you drew. 
 
