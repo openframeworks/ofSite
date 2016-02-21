@@ -24,7 +24,9 @@ With the third parameter, you can specify how you want the window to be displaye
 
 	ofSetupOpenGL(1024, 768, OF_FULLSCREEN);
 
-Alternatively, you can set the window size (and position) in the setup function of ofApp, which gets called right at the start: 
+####Alternative, using ofApp::setup():
+
+Alternatively, you can set the window size (and position) in the setup function of ofApp, which gets called right at the start as the app launches: 
 
 ```cpp
 void ofApp::setup(){
