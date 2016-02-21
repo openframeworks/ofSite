@@ -11,12 +11,12 @@
 
         <div id="how_tos" class="page-wide sectiontitle">
           <h2>how-tos <small>a quick reference for common questions</small></h2>
-        </div> 
+        </div>
 
         <div class="page-wide">
         % for category in categories:
-            % if len(category["articles"]) > 0:
-              <div style="width: 30% !important; float: left; height: 200px;">
+            % if len(category["articles"]) > 0 and category["isHowTo"]:
+              <div style="width: 30% !important; float: left; height: 200px; margin: 5px;">
                 <div style="background: #eee;">  
                         <h2>${category["category"]}</h2>
                     </div><!-- End Page Wide -->

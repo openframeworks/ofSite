@@ -226,8 +226,10 @@ class TutorialsTask(Task):
                 return article
                 
             articles = list(map(collect_translations, articles))
-            
-            categories.append({'category': category, 'articles': articles});
+
+            howToIndexInFolderName = catfolder.find("howto_")
+
+            categories.append({'category': category, 'articles': articles, 'isHowTo': howToIndexInFolderName > -1});
             
         for lang in self.kw['translations']:
 
