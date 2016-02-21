@@ -1,8 +1,7 @@
 ---
-.. title: Load and play a video file
+.. title: Load and play a video
 .. type: howto
 ---
-
 
 In your header file (``*.h``), add this line:
     

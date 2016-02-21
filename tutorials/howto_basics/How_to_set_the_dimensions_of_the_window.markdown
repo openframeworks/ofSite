@@ -1,5 +1,5 @@
 ---
-.. title: How do I set the dimensions of the window
+.. title: Set the dimensions of the window
 .. type: howto
 ---
 

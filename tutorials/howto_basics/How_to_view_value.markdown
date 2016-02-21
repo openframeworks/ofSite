@@ -1,5 +1,5 @@
 ---
-.. title: How to view the value of a variable
+.. title: View the value of a variable
 .. type: howto
 ---
 

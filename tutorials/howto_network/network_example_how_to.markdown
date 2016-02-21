@@ -1,12 +1,8 @@
 ---
-.. title: network
-.. summary: how to ...
+.. title: Send data via OSC
 .. type: howto
 ---
-
-
-Network networks network.
     
 ```cpp
-// network code example
+// osc example coming soon!
 ```

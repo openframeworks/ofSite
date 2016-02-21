@@ -1,5 +1,5 @@
 ---
-.. title: How to create a new project
+.. title: Create a new project
 .. type: howto
 ---
 
