@@ -1,8 +1,7 @@
-Category: basic
-
-Title: How to view the value of a variable
-
-# How to view the value of a variable
+---
+.. title: How to view the value of a variable
+.. type: howto
+---
 
 There are multiple ways on how to display values of a variable.
 
