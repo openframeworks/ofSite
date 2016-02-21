@@ -3,8 +3,6 @@
 .. type: howto
 ---
 
-# How to load and play a video file
-
 
 In your header file (``*.h``), add this line:
     

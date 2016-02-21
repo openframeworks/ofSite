@@ -3,5 +3,8 @@
 .. type: howto
 ---
 
-# How to load and display an image
 
+
+```cpp
+// how to load an image! code example
+```
