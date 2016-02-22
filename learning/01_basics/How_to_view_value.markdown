@@ -73,7 +73,7 @@ void draw() {
 ![Screenshot of drawing string to screen](How_to_view_value_drawstring.png)
 
 ### Using ofxGui
-Another nice way of viewing your variable that also gives you the ability to change it is using [ofParameter](http://openframeworks.cc/documentation/types/ofParameter/) and the core addon [ofxGui](http://openframeworks.cc/documentation/ofxGui/ofxGui/). Read [link to not existing how-to]() on how to add an existing addon.
+Another nice way of viewing your variable that also gives you the ability to change it is using [ofParameter](http://openframeworks.cc/documentation/types/ofParameter/) and the core addon [ofxGui](http://openframeworks.cc/documentation/ofxGui/ofxGui/). Read [how to add an existing addon](http://openframeworks.cc/learning/01_basics/how_to_add_addon_to_project/) for details on how to add ofxGui to your project.
 
 In the header file, wrap your variable with [ofParameter](http://openframeworks.cc/documentation/types/ofParameter/). You can still work with this variable as you were used to, but it makes you able to add listeners to the variable or to add the variable to a GUI that will interact with it.
 
