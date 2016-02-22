@@ -22,7 +22,7 @@
 
 <ul>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/animation.html">애니메이션</a></li>
-<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/game_design.html">실헙적인 게임 개발</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/game_design.html">실험적인 게임 개발</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html">이미지 처리와 컴퓨터 비젼</a></li>
 </ul>
 </li>
@@ -39,7 +39,7 @@
 <ul>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/openGL.html">오픈프레임웍스를 위한 OpenGL 소개</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/lines.html">선 그리기</a></li>
-<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/generativemesh.html">이미지에서 메시 생성하기 기초</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/generativemesh.html">이미지에서 메쉬 생성하기 기초</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/advanced_graphics.html">그래픽스 고급</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/shaders.html">쉐이더 소개</a></li>
 </ul>
