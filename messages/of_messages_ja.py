@@ -51,32 +51,32 @@ MESSAGES = {
     'other_releases': '<h2>その他のリリース</h2>  さらに古いバージョンのopenFrameworksは、<a href="older/">ここ</a>にアーカイブしてあります。完璧に最新のバージョンは、<a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>です。ですので、もしopenFrameworksの開発に貢献したいと考えたとしたら、GitHugのリポジトリをフォークしてください。そして、<a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">openFrameworks GitHub workflow</a>にあるガイドラインに従うようにしてください。',
 
     'translation': '翻訳',
-    
-    'how-tos': 'how-tos',
-    
-    'a quick reference for common questions': 'a quick reference for common questions',
-    
-    'a collection of openFrameworks guides': 'a collection of openFrameworks guides',
-    
-    'Getting Started!': 'Getting Started!',
-    
-    'Download & set up openFrameworks': 'Download & set up openFrameworks',
-    
-    'Explore the examples': 'Explore the examples',
-    
-    'Create a new project': 'Create a new project',
-    
-    'Check out the how-tos!': 'Check out the how-tos!',
-    
-    'External Resources': 'External Resources',
-    
-    'Code Liberation OF workshops': 'Code Liberation OF workshops',
-    
-    'OF video series': 'OF video series',
-    
+
+    'how-tos': 'ハウトゥー',
+
+    'a quick reference for common questions': 'よくある疑問へのクイックリファレンス',
+
+    'a collection of openFrameworks guides': 'openFrameworksのガイド集',
+
+    'Getting Started!': 'はじめてみよう!',
+
+    'Download & set up openFrameworks': 'openFramewroksのダウンロードとセットアップ',
+
+    'Explore the examples': 'サンプルを調べる',
+
+    'Create a new project': '新規プロジェクトの作成方法',
+
+    'Check out the how-tos!': 'ハウトゥーを確認してみる!',
+
+    'External Resources': '外部のリソース',
+
+    'Code Liberation OF workshops': 'Code Liberationによるワークショップ資料',
+
+    'OF video series': 'OFビデオチュートリアル',
+
     'ofBook': 'ofBook',
-    
-    '... and many more! (GitHub wiki)': '... and many more! (GitHub wiki)',
-    
-    'back to all how-tos': 'back to all how-tos',
+
+    '... and many more! (GitHub wiki)': '... もっと詳しく! (GitHub wiki)',
+
+    'back to all how-tos': 'ハウトゥー一覧に戻る',
 }
