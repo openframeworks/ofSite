@@ -261,6 +261,7 @@ class TutorialsTask(Task):
             template_dep = self.site.template_system.template_deps(template_name)
             template_dep += files
             template_dep += [__file__]
+            template_dep += [os.path.join(self.site.original_cwd, "messages", "of_messages_" + lang + ".py")]
             yield utils.apply_filters({
                 'basename': self.name,
                 'name': tdst,
