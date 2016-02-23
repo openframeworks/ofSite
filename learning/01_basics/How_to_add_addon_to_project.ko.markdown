@@ -1,5 +1,5 @@
 ---
-.. title: How to add an addon to a project
+.. title: 프로젝트에 애드온 추가하기
 .. type: howto
 .. translator: Yi donghoon
 .. translator_site: http://icq4ever.net
