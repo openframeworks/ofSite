@@ -13,9 +13,6 @@
 
 ![using timeStamps versus not](How_to_save_a_file_usingTimeStamps.png)
 
-
-You can save a file anywhere in your application, but you may want to trigger it at a specific moment. You might want to your file to save everytime you press a specific key.
-
 어플리케이션의 어느 부분에서라도 파일을 저장할 수 있습니다만, 아마도 특정한 상황에 동작하게 하고 싶으실겁니다. 아마 특정 키를 눌렀을때마다 파일을 저장하게 할 수 있겠죠.
 
 	void ofApp::keyPressed  (int key){
@@ -36,8 +33,11 @@ Or you might want to call it everytime you exit your application.
 ## 텍스트 파일
 
 ### 헤더파일에서 (.h)
+
 ```ofFile myTextFile;```
+
 ### 구현파일에서 (.cpp)
+
 파일을 생성하기 위해 setup에. 
 
 ```myTextFile.open("text.txt",ofFile::WriteOnly);```
@@ -50,7 +50,6 @@ Or you might want to call it everytime you exit your application.
 
 ```myTextFile << "some text"```
 
-This will automatically save, so there is no need to call a save function. 
 이는 자동으로 저장하기 떄문에, 별도로 저장 함수를 호출할 필요가 없습니다.
 
 ## XML 세팅

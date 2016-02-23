@@ -48,8 +48,6 @@ value: 0.200
 
 ### ofLog() 사용하기
 
-The best way to integrate with the openFrameworks workflow is to use the implemented logging functions. There are different log levels and multple ways of usage - have a look at the [ofLog() documentation](http://openframeworks.cc/documentation/utils/ofLog/). Here is one example:
-
 오픈프레임웍스의 작업흐름에 맞추는 최선의 방법은 구현된 로깅 함수를 사용하는 것입니다. 다양한 로그 레벨이 있으며 다양한 방법으로 사용이 가능합니다 - [ofLog() 도큐먼트](http://openframeworks.cc/documentation/utils/ofLog/)를 살펴보시기 바랍니다. 예제 하나를 살펴봅시다:
 
 ```c++
