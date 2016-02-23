@@ -19,12 +19,12 @@ In the ```setup``` function:
 
 Load the video by calling the ```load()``` method of ```ofVideoPlayer ```, with the relative path to the video:
 
-	videoName.load("INSERT FILE PATH HERE")
+	videoName.load("INSERT FILE PATH HERE");
 	
 
 Start playing the video:
 
-	videoName.play()
+	videoName.play();
 
 Example:
 
