@@ -79,4 +79,6 @@ MESSAGES = {
     '... and many more! (GitHub wiki)': '... もっと詳しく! (GitHub wiki)',
 
     'back to all how-tos': 'ハウトゥーの一覧に戻る',
+    
+    'Links to newer original article': 'Links to newer original article',
 }

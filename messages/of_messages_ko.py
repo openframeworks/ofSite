@@ -79,4 +79,6 @@ MESSAGES = {
     '... and many more! (GitHub wiki)': '... 그리고 더 있습니다! (깃허브 위키)',
     
     'back to all how-tos': '가이드로 돌아가기',
+    
+    'Links to newer original article': 'Links to newer original article',
 }

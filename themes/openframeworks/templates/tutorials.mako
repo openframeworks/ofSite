@@ -24,19 +24,25 @@
                     <ul>
                     % for article in category["articles"]:
                          %if lang in article.translations.keys():
-                             <li><a href="${article.translations[lang].path}"> ${article.translations[lang].title} </a></br>
-                                 <p>${article.translations[lang].summary}</p>
+                             <li>
+                                <a href="${article.translations[lang].path}"> ${article.translations[lang].title} </a>
+                                % if article.modification_date > article.translations[lang].modification_date:
+                                    <a href="../../learning/${article.path}">*</a>
+                                % endif
                              </li>
                          %else:
-                             <li><a href="${article.path}"> ${article.title} </a></br>
-                                 <!--<p>${article.summary}</p> -->
-                             </li>
+                             <li><a href="${article.path}"> ${article.title} </a></li>
                          %endif
                     % endfor
                     </ul>
               </div>
             % endif
         % endfor
+        </div>
+        <div class="page-wide">
+        % if lang != "en":
+            <span style="float: right; font-size:0.8em; font-color: #ccc">* Links to newer original article</span>
+        % endif
         </div>
 
         <div id="ofBook" class="page-wide sectiontitle">

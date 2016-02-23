@@ -79,4 +79,6 @@ MESSAGES = {
     '... and many more! (GitHub wiki)': '... and many more! (GitHub wiki)',
     
     'back to all how-tos': 'back to all how-tos',
+    
+    'Links to newer original article': 'Links to newer original article',
 }

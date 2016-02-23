@@ -1,6 +1,7 @@
 from nikola.plugin_categories import Task
 from nikola import utils
 import os
+import time
 import re
 import logging
 
@@ -40,11 +41,14 @@ class MarkdownArticle:
         self.author_site = ''
         self.translator = ''
         self.translator_site = ''
+        self.translated_from = ''
         self.body = ''
         self.type = 'markdown'
         self.lang = lang
         self.type = 'tutorial'
+        self.modification_date = time.ctime(os.path.getmtime(markdown))
         self.translations = {}
+        self.original_newer = False
         for line in mdfile:
             #line = line.decode('utf-8','replace')
             if state=='begin' and stripFileLine(line).strip(' ') =='---':
@@ -70,6 +74,9 @@ class MarkdownArticle:
                 continue
             if state=='header' and line.find('translator_site:')!=-1:
                 self.translator_site = stripFileLine(line[line.find(':')+1:]).strip(' ')
+                continue
+            if state=='header' and line.find('translated_from:')!=-1:
+                self.translated_from = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
             if state=='header' and line.find('type:')!=-1:
                 self.type = stripFileLine(line[line.find(':')+1:]).strip(' ')
@@ -219,6 +226,8 @@ class TutorialsTask(Task):
                 it = filter((lambda possible_translation: os.path.splitext(os.path.splitext(possible_translation.file)[0])[0] == article_file_name), translations)
                 article_translations = {}
                 for translation in it:
+                    if article.modification_date > translation.modification_date:
+                        translation.original_newer = True
                     article_translations[translation.lang] = translation
                 return article_translations
                 
