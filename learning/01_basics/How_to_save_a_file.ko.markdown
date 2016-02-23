@@ -1,6 +1,8 @@
 ---
-.. title: Save/export files
+.. title: 파일 저장/내보내기
 .. type: howto
+.. translator: Yi donghoon
+.. translator_site: http://icq4ever.net
 ---
 
 오픈프레임웍스는 파일경로를 별도로 지정해주지 않는 한 bin/data에 저장하게 됩니다.

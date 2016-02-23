@@ -3,7 +3,7 @@
 .. type: howto
 ---
 
-Creating a GUI slider is very simple. You simply generate a project with the GUI add on, initialize an ofxFloatSlider and gui, draw the gui, and link the slidr to a specific variable.
+Creating a GUI slider is very simple. You simply generate a project with the GUI add on, initialize an ofxFloatSlider and gui, draw the gui, and link the slider to a specific variable.
 
 When you generate your project, include the ofxGui addon.
 
