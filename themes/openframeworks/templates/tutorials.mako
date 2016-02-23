@@ -17,7 +17,7 @@
         <div class="page-wide how-tos">
         % for category in categories:
             % if len(category["articles"]) > 0:
-              <div style="width: 32% !important; float: left; min-height: 200px; margin: 5px;">
+              <div style="width: 32% !important; float: left; min-height: 250px; margin: 5px;">
                 <div style="background: #eee;">  
                         <h2>${category["category"]}</h2>
                     </div><!-- End Page Wide -->
