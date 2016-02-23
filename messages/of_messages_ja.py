@@ -78,5 +78,5 @@ MESSAGES = {
 
     '... and many more! (GitHub wiki)': '... もっと詳しく! (GitHub wiki)',
 
-    'back to all how-tos': 'ハウトゥー一覧に戻る',
+    'back to all how-tos': 'ハウトゥーの一覧に戻る',
 }
