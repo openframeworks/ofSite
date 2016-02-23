@@ -48,6 +48,7 @@ class MarkdownArticle:
         self.type = 'tutorial'
         self.modification_date = time.ctime(os.path.getmtime(markdown))
         self.translations = {}
+        self.original = None
         self.original_newer = False
         for line in mdfile:
             #line = line.decode('utf-8','replace')
@@ -226,8 +227,7 @@ class TutorialsTask(Task):
                 it = filter((lambda possible_translation: os.path.splitext(os.path.splitext(possible_translation.file)[0])[0] == article_file_name), translations)
                 article_translations = {}
                 for translation in it:
-                    if article.modification_date > translation.modification_date:
-                        translation.original_newer = True
+                    translation.original = article
                     article_translations[translation.lang] = translation
                 return article_translations
                 

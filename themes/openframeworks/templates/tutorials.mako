@@ -41,7 +41,7 @@
         </div>
         <div class="page-wide">
         % if lang != "en":
-            <span style="float: right; font-size:0.8em; font-color: #ccc">* Links to newer original article</span>
+            <span style="float: right; font-size:0.8em; font-color: #ccc">* ${ of.msg("Links to newer original article", locals()) }</span>
         % endif
         </div>
 

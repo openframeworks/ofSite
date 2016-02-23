@@ -871,6 +871,14 @@ code {
   border-radius: 11px;
   box-shadow: 2px 2px 2px #eee; 
 }
+#edithowto{
+    float:right;
+}
+#edithowto img {
+  border: 1px solid rgba(238, 57, 135, 0.3);
+  border-radius: 11px;
+  box-shadow: 2px 2px 2px #eee; 
+}
 
 #docstitle{
     width:60%;

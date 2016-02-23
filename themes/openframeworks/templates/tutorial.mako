@@ -11,13 +11,18 @@
 
 <%block name="content">
       <div id="body-wrap">
+	    <div class="page-wide tutorial">
+            &lt; <a href="/learning#how_tos">${ of.msg("back to all how-tos", locals()) }</a>
+            <span id="edithowto">
+                % if lang=="en":
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/${post.source_path}" class="nohover"><img title="edit howto on GitHub" src="/images/edithowto.png"/></a>
+                % else:
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/${post.translated_source_path(lang)}" class="nohover"><img title="edit howto on GitHub" src="/images/edithowto.png"/></a>
+                % endif
+            </span>
+    	</div>
 	    <div class="page-left-verywide tutorial">
-            <div id="back-link">
-                &lt; <a href="/learning#how_tos">${ of.msg("back to all how-tos", locals()) }</a>
-            </div>
-            
     	    <h1>${post.title()}</h1>
-    	    
         	% if post.meta[lang]["translator"] != "":
             	<span class="article_meta">${of.msg("translation", locals())}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;<a href="${post.meta[lang]["translator_site"]}">${post.meta[lang]["translator"]}</a></span><br/>
         	% endif
