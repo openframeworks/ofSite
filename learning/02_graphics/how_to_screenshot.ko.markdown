@@ -1,6 +1,5 @@
 ---
 .. title: 스크린샷 찍기
-.. summary: How to take a screenshot of your work
 .. type: howto
 .. translator: Yi donghoon
 .. translator_site: http://icq4ever.net
