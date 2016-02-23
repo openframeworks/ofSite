@@ -24,7 +24,7 @@
                     <ul>
                     % for article in category["articles"]:
                          %if lang in article.translations.keys():
-                             <li>&gt; <a href="${article.translations[lang].path}"> ${article.translations[lang].title} </a></br>
+                             <li><a href="${article.translations[lang].path}"> ${article.translations[lang].title} </a></br>
                                  <p>${article.translations[lang].summary}</p>
                              </li>
                          %else:
