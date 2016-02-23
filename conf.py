@@ -94,6 +94,7 @@ TRANSLATIONS = {
     DEFAULT_LANG: "",
     "ja": "./ja",
     "ko": "./ko",
+    "zh_cn": "./zh_cn",
 }
 
 # Provisional links to current external sites until translations
@@ -102,6 +103,7 @@ TRANSLATIONS = {
 EXTERNAL_TRANSLATIONS = {
 #   "ja": "http://openframeworks.jp",
 #   "ko": "http://openframeworks.kr",
+#   "zh_cn": "http://openframeworks.cn",
 }
 
 # What will translated input files be named like?
@@ -169,6 +171,15 @@ NAVIGATION_LINKS = {
         ("/ko/community/", "커뮤니티"),
         ("/ko/development/", "개발"),
     ),
+    "zh_cn": (
+        ("/zh_cn/about/", "介绍"),
+        ("/zh_cn/download/", "下载"),
+        ("/zh_cn/documentation/", "文档"),
+        ("/zh_cn/tutorials/", "教程"),
+        ("/zh_cn/gallery/", "案例"),
+        ("/zh_cn/community/", "交流"),
+        ("/zh_cn/development/", "开发"),
+    ),
 }
 
 EXTERNAL_LINKS = {
@@ -198,6 +209,16 @@ EXTERNAL_LINKS = {
         ("http://openframeworks.cc/list-info", "메일링 리스트"),
         ("http://forum.openframeworks.kr/t/slack/32", "slack"),
         ("http://blog.openframeworks.cc/", "블로그"),
+    ),
+    "zh_cn": (
+        ("https://forum.openframeworks.cc", "论坛(EN)"),
+        # ("http://forum.openframeworks.cn", "论坛(CN)"),
+        ("http://ofxaddons.com", "插件"),
+        ("https://github.com/openframeworks", "github"),
+        ("http://openframeworks.cc/list-info", "邮件列表"),
+        ("http://forum.openframeworks.kr/t/slack/32", "slack"),
+        ("https://guest.jianliao.com/rooms/d9640eb07f", "翻译讨论群"),
+        ("http://blog.openframeworks.cc/", "博客"),
     ),
 }
 
