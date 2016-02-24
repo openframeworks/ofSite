@@ -13,7 +13,6 @@
 
 ### std::cout 사용하기
 
-Probably the simplest way is to use [std::cout](http://en.cppreference.com/w/cpp/io/cout). This command lets you combine different types of values with strings. Appending  ```endl``` creates a line break.
 아마도 가장 간단한 방법은 [std::cout](http://en.cppreference.com/w/cpp/io/cout)를 사용하는 방법일 것입니다. 또한 이 명령은 다양한 자료형을 문자열과 조함할 수 도 있습니다. ```endl```을 붙이면, line break를 추가해줍니다.
 
 ```c++

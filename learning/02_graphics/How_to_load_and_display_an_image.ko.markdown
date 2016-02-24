@@ -34,7 +34,7 @@
 
 	imageName.draw(xPosition, yPosition)
 
-example:
+예제:
 
 	void ofApp::draw(){
 		bikers.draw(0, 0);
@@ -45,7 +45,7 @@ example:
 
 	imageName.getColor(xPosition, yPosition, width, height)
 	
-example:
+예제:
 	
 	void ofApp::draw(){
 		bikeIcon.draw(190, 490, 20, 20);
