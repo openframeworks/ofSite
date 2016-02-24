@@ -5,7 +5,7 @@
 <%block name="content">
       <div id="body-wrap">
 
-        <div id="getting_started" class="page-wide"> 
+        <div id="getting_started" class="page-wide">
           <%include file="tutorials_getting_started.mako" args="parent_locals=locals()" />
         </div>
 
