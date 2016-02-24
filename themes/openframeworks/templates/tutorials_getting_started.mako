@@ -5,9 +5,9 @@
     <h2>${ of.msg("Getting Started!", parent_locals) }</h2>
 
 <ol>
-<li> <a href="/download/"> ${ of.msg("Download & set up openFrameworks", parent_locals) } </a> </li>
+<li> <a href="link://slug/download"> ${ of.msg("Download & set up openFrameworks", parent_locals) } </a> </li>
 <li> <a href="https://github.com/openframeworks/openFrameworks/tree/master/examples" target="_blank"> ${ of.msg("Explore the examples", parent_locals) } </a> </li>
-<li> <a href="/learning/01_basics/create_a_new_project/"> ${ of.msg("Create a new project", parent_locals) } </a> </li>
+<li> <a href="link://slug/learning/01_basics/create_a_new_project/"> ${ of.msg("Create a new project", parent_locals) } </a> </li>
 <li> <a href="#how_tos">${ of.msg("Check out the how-tos!", parent_locals) }</a> </li>
 </ol>
 
