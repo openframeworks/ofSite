@@ -54,7 +54,7 @@ MESSAGES = {
     
     'how-tos': '入門指南',
     
-    'a quick reference for common questions': 'よくある疑問へのクイックリファレンス',
+    'a quick reference for common questions': '常見問題集',
     
     'a collection of openFrameworks guides': 'openFrameworks指引集',
     
