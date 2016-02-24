@@ -51,4 +51,33 @@ MESSAGES = {
     'other_releases': '<h2>other releases</h2>    Older releases of openFrameworks are archived <a href="older/">here</a>. For the absolute latest version of openFrameworks, see the <a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>. If you\'re interested in contributing to openFrameworks, you should fork the GitHub repository and follow the guidelines for the <a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">openFrameworks GitHub workflow</a>.',
 
     'translation': '翻譯'
+    
+    'how-tos': '入門指南',
+    
+    'a quick reference for common questions': 'よくある疑問へのクイックリファレンス',
+    
+    'a collection of openFrameworks guides': 'openFrameworks指引集',
+    
+    'Getting Started!': '從這裡開始!',
+    
+    'Download & set up openFrameworks': '下載與安裝openFramewroks',
+    
+    'Explore the examples': '探索範例',
+    
+    'Create a new project': '建立新專案',
+    
+    'Check out the how-tos!': '查看一下入門指南!',
+    
+    'External Resources': '額外資源',
+    
+    'Code Liberation OF workshops': 'Code Liberation OF工作坊',
+    
+    'OF video series': 'OF頻道',
+    
+    'ofBook': 'ofBook',
+    
+    '... and many more! (GitHub wiki)': '... 以及更多! (GitHub wiki)',
+    
+    'back to all how-tos': '返回入門指南',
+
 }
