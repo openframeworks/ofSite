@@ -1493,8 +1493,9 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 .admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
 
 
-.how-tos ul {
+.how-tos ul, .getting_started ul, .getting_started ol {
 	padding-left: 0px;
+	list-style-position: inside;
 }
 
 

@@ -1,7 +1,7 @@
 <%page args="parent_locals"/>
 <%namespace name="of" file="of_helpers.tmpl"/>
 
-<div style="width: 50%; float: left;">
+<div style="width: 70%; float: left;">
     <h2>${ of.msg("Getting Started!", parent_locals) }</h2>
 
 <ol>
@@ -13,7 +13,7 @@
 
 </div>
 
-<div style="width: 50%; float: left;">
+<div style="width: 30%; float: left;">
 
 <h2>${ of.msg("External Resources", parent_locals) }</h2>
 
