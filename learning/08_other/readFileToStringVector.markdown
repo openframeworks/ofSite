@@ -13,3 +13,12 @@ for (auto line : buffer.getLines()){
 }
 // now linesOfTheFile has each line of the file as an element in the vector
 ```
+
+note you can also do:
+
+```
+auto lines = ofSplitString(ofBufferFromFile("file.txt").getText(), "\n");
+```
+
+which avoids the for loop.  The only downside is that on windows it could be problematic since it leaves the `\r` if there's windows breaklines.
+
