@@ -6,6 +6,7 @@
 
 - 英語 : [readme.md](readme.md)
 - 韓国語 (한국어) : [readme.ko.md](readme.ko.md)
+- 中国語 (簡體中文) : [readme.zh_cn.md](readme.zh_cn.md)
 
 ## 貢献
 
