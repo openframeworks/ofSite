@@ -69,17 +69,17 @@ lang="${lang}">
     <script>hljs.initHighlightingOnLoad();</script>
 
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" media="all" />
-    
+
     <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-    
+
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="openFrameworks" />
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    
+
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
     <script type="text/javascript" src="/assets/js/jquery.timeago.js" type="text/javascript"></script>
 
     <meta name="google-site-verification" content="RiGtl9pFuFnUeEQ4MU1miiutTR5mmCPUi38YLCn-M-g" />
@@ -93,7 +93,7 @@ lang="${lang}">
         ga('create', 'UA-43083059-1', 'auto');
         ga('send', 'pageview');
     </script>
-    
+
     ${extra_head_data}
 
     <%block name="extra_head">
@@ -105,7 +105,7 @@ lang="${lang}">
 <body>
     <div id="content">
          <div id="head">
-         
+
 		    <div id="head-left">
 		        % if lang != 'en':
 			        <a href="/${lang}" class="nohover"><img src="/assets/images/of-logo.svg" border="0" alt="openFrameworks" /></a>
@@ -113,7 +113,7 @@ lang="${lang}">
 			        <a href="/" class="nohover"><img src="/assets/images/of-logo.svg" border="0" alt="openFrameworks" /></a>
 			    % endif
 		    </div>
-		
+
              <div id="head-right">
                  <ul>
                      %for url, text in navigation_links[lang]:
@@ -165,9 +165,9 @@ lang="${lang}">
                  </ul>
              </div>
          </div>
-         
+
          <%block name="content"></%block>
-          
+
           <div id="footer">
              <%include file="footer.mako"/>
           </div>
@@ -176,4 +176,3 @@ lang="${lang}">
     ${template_hooks['body_end']()}
 </body>
 </html>
-
