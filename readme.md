@@ -6,7 +6,7 @@ for other language, please read below.
 
 - korean(한국어) : [readme.ko.md](readme.ko.md)
 - japanese(日本語) : [readme.ja.md](readme.ja.md)
-
+- traditional chinese(繁體中文) : [readme.zh_cn.md](readme.zh_cn.md)
 ## Contributing
 
 To contribute fixes to the webpage or documentation you can usually just fork this repository and send contributions directly from github.
