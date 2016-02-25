@@ -6,6 +6,7 @@
 
 - 영어(English) : [readme.md](readme.md)
 - 일본어(日本語) : [readme.ja.md](readme.ja.md)
+- 중국어-번체(繁體中文) : [readme.zh_cn.md](readme.zh_cn.md)
 
 ## 참여하기
 
