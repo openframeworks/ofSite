@@ -52,7 +52,7 @@ MESSAGES = {
 
     'translation': '翻訳',
 
-    'how-tos': 'ハウトゥー',
+    'how-tos': 'How to',
 
     'a quick reference for common questions': 'よくある疑問へのクイックリファレンス',
 
@@ -64,9 +64,9 @@ MESSAGES = {
 
     'Explore the examples': 'サンプルを調べる',
 
-    'Create a new project': '新規プロジェクトの作成方法',
+    'Create a new project': '新規プロジェクトの作成',
 
-    'Check out the how-tos!': 'ハウトゥーを確認してみる!',
+    'Check out the how-tos!': 'How toを確認してみる!',
 
     'External Resources': '外部のリソース',
 
@@ -78,7 +78,7 @@ MESSAGES = {
 
     '... and many more! (GitHub wiki)': '... もっと詳しく! (GitHub wiki)',
 
-    'back to all how-tos': 'ハウトゥーの一覧に戻る',
+    'back to all how-tos': 'How toの一覧に戻る',
     
-    'Links to newer original article': 'Links to newer original article',
+    'Links to newer original article': 'より新しいオリジナル(英語)へのリンク',
 }
