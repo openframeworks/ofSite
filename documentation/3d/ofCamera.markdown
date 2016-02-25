@@ -827,6 +827,7 @@ Construct a default camera.
 
 _description: _
 
+The default camera is positioned at (0, 0, 0) with a 60 degree field of view.  Its up vector is the positive y-axis, and it is looking down the negative z-axis.  Near and far planes are determined by the current viewport size.
 
 
 
