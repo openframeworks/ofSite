@@ -29,7 +29,7 @@ Next, trigger grabbing and saving the screen. Here, when "x" is pressed, a recta
 	void ofApp:keyPressed(int key){
 		if(key == 'x'){
 			img.grabScreen(0, 0 , ofGetWidth(), ofGetHeight());
-			img.saveImage("screenshot.png");
+			img.save("screenshot.png");
 		}
 	}
 
