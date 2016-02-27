@@ -30,6 +30,14 @@
 
 -------------------------------
 
+## Raspberry PI 2
+
+The Raspberry PI 2 chip has armv7 architecture but the officially supported distribution, Raspbian, is compiled with armv6 settings so using it with armv7 is not recomended. Archlinux and others come compiled with armv7 flags and should work, but are not officially supported at the moment. Here's a [guide to install openFrameworks armv7 on Archlinux on the RPI2](raspberrypi/raspberry-pi-getting-started-archlinux) but most people have reported problems with it. If you manage to make it work without problem please report it on a github issue or send a pull request with your fixes.
+
+
+
+-------------------------------
+
 ## Headless applications
 
 만약 그래픽카드 드라이버를 찾지 못하거나 비디오출력이 없는 경우(가령 dvi출력포트가 없는 비글보드의 경우), 혹은 그래픽 출력이 전혀 필요하지 않을 경우, ofAppNoWindow클래스를 사용하여 openGL없이 어플리케이션을 생성할 수 있습니다. 
