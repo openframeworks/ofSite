@@ -81,4 +81,6 @@ MESSAGES = {
     'back to all how-tos': 'back to all how-tos',
     
     'Links to newer original article': 'Links to newer original article',
+    
+    '(experimental)': '(experimental)',
 }

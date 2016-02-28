@@ -79,5 +79,7 @@ MESSAGES = {
     '... and many more! (GitHub wiki)': '... 以及更多! (GitHub wiki)',
     
     'back to all how-tos': '返回入門指南',
+    
+    '(experimental)': '(experimental)',
 
 }

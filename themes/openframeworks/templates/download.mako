@@ -38,7 +38,7 @@ $(document).ready(function(){
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/xcode">xcode</a></p>
-	        <p><a href="../setup/qtcreator">qt creator</a></p>
+	        <p><a href="../setup/qtcreator">qt creator ${of.msg("(experimental)", locals())}</a></p>
 	        <p><a href="../setup/emscripten">emscripten</a></p>
         </div>
 

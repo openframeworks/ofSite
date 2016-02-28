@@ -81,4 +81,6 @@ MESSAGES = {
     'back to all how-tos': '가이드로 돌아가기',
     
     'Links to newer original article': 'Links to newer original article',
+    
+    '(experimental)': '(experimental)',
 }

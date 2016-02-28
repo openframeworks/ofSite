@@ -81,4 +81,6 @@ MESSAGES = {
     'back to all how-tos': 'How toの一覧に戻る',
     
     'Links to newer original article': 'より新しいオリジナル(英語)へのリンク',
+    
+    '(experimental)': '(experimental)',
 }
