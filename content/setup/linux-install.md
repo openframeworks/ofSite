@@ -50,3 +50,63 @@ Run the commandline project generator without any arguments to see how to use it
 ```sh
 projectGenerator
 ```
+
+---
+
+## Install on Thid-Party Linux Distribution
+
+if your linux is thrid-party distribution, maybe you can see some error while install openFrameworks. this is because installing scripts are using information of kerner and vertion number that you can check with `lsb_release -a` command on your machine. in this situation, you can install openFrameworks by modifying this information temporarily.
+
+for example, **Elementary OS 0.3 freya** is based on **Ubuntu 14.04 LTS**. you can check your linux distro information on official distro websites.
+
+### 1. get your distribution information
+for revert to back after install oF successfully, you need to copy or make a backup as a file (.bak) of this information.
+
+```sh
+$ cat /etc/lsb-release
+DISTRIB_ID="elementary OS"
+DISTRIB_RELEASE=0.3.2
+DISTRIB_CODENAME=freya
+DISTRIB_DESCRIPTION="elementar
+```
+
+### 2. get based disribution information
+run this command on based ditribution machine.
+this example is **Ubuntu 14.04 LTS**:
+
+```sh
+$ cat /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
+```
+
+### 3. modifying kerner information on linux machine will install openFrameworks 
+modifying `/etc/lsb-release` with information from *step 2*.
+
+```sh
+$ sudo vi /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
+```
+
+### 4. install openFrameworks.
+install dependencies, codecs and compile openFrameworks and projectGenerator
+
+```sh
+$ ls {OF_DIRECTORY}/scripts/linux/ubuntu
+$ sudo ./install_dependencies.sh
+$ sudo ./install_codecs.sh
+$ sudo {OF_DIRECTORY}/scripts/linux
+$ sudo ./compileOF.sh 
+$ sudo ./compilePG.sh 
+```
+### 5. revert to original 
+**don't forget this step!**
+
+```sh
+$ sudo cp /etc/lsb-release.bak /etc/lsb-release
+```
