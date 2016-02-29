@@ -55,7 +55,7 @@ projectGenerator
 
 ## Install on Thid-Party Linux Distribution
 
-if your linux is thrid-party distribution, maybe you can see some error while install openFrameworks. this is because installing scripts are using information of kerner and vertion number that you can check with `lsb_release -a` command on your machine. in this situation, you can install openFrameworks by modifying this information temporarily.
+if your linux is thrid-party distribution, maybe you can see some error while install openFrameworks. this is because installing scripts are using information of kernel and version number that you can check with `lsb_release -a` command on your machine. in this situation, you can install openFrameworks by modifying this information temporarily.
 
 for example, **Elementary OS 0.3 freya** is based on **Ubuntu 14.04 LTS**. you can check your linux distro information on official distro websites.
 
@@ -82,7 +82,7 @@ DISTRIB_CODENAME=trusty
 DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
 ```
 
-### 3. modifying kerner information on linux machine will install openFrameworks 
+### 3. modifying kernel information on linux machine will install openFrameworks 
 modifying `/etc/lsb-release` with information from *step 2*.
 
 ```sh
