@@ -107,7 +107,7 @@ DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
 $ ls {OF_DIRECTORY}/scripts/linux/ubuntu
 $ sudo ./install_dependencies.sh
 $ sudo ./install_codecs.sh
-$ sudo {OF_DIRECTORY}/scripts/linux
+$ ls {OF_DIRECTORY}/scripts/linux
 $ sudo ./compileOF.sh 
 $ sudo ./compilePG.sh 
 ```
