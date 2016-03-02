@@ -6,7 +6,7 @@
 
 - 英文(English) : [readme.md](readme.md)
 - 日本语(日本語) : [readme.ja.md](readme.ja.md)
-- 韩国语(日本語) : [readme.kr.md](readme.kr.md)
+- 韩国语(韩国語) : [readme.ko.md](readme.ko.md)
 
 ## 贡献你的一份力量
 
