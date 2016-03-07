@@ -11,6 +11,7 @@ Raspberry Pi
 
 ### Create a mount point
 In order to avoid permissions problems in creating, deleting and moving files the following commands create a shortcut to the root file system and mount it as a virtual drive.
+
 * `cd /`
 * `sudo -i`
 * `mkdir /rootfs`
