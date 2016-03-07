@@ -66,7 +66,7 @@ _EOF_
 echo "$cronlines" | crontab -
 
 # Install cron tasks
-read -d '' cronlines <<-"_EOF_"
+read -d '' cronlines_root <<-"_EOF_"
 # Edit this file to introduce tasks to be run by cron.
 #
 # Each task to run has to be defined through a single line
@@ -90,10 +90,10 @@ read -d '' cronlines <<-"_EOF_"
 #
 # m h  dom mon dow   command
 
-0 0 * * * /home/$USER/ofSite/utils/collect_stats.sh > /home/$USER/logs/stats_$(date +%Y%m%$
+0 0 * * * /home/$USER/ofSite/utils/collect_stats.sh >> /home/$USER/logs/stats.log
 _EOF_
 
-sudo cho "$cronlines" | crontab -
+sudo cho "$cronlines_root" | crontab -
 
 # Install locales
 sudo sed -i "s/# ja_JP.UTF-8 UTF-8/ja_JP.UTF-8 UTF-8/g" /etc/locale.gen
