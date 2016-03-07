@@ -90,7 +90,7 @@ read -d '' cronlines <<-"_EOF_"
 #
 # m h  dom mon dow   command
 
-0 0 * * * sudo /home/$USER/ofSite/utils/collect_stats.sh > /home/$USER/logs/stats_$(date +%Y%m%$
+0 0 * * * /home/$USER/ofSite/utils/collect_stats.sh > /home/$USER/logs/stats_$(date +%Y%m%$
 _EOF_
 
 sudo cho "$cronlines" | crontab -
