@@ -212,7 +212,7 @@ EXTERNAL_LINKS = {
     ),
     "zh_cn": (
         ("https://forum.openframeworks.cc", "论坛(EN)"),
-        # ("http://forum.openframeworks.cn", "论坛(CN)"),
+        ("http://forum.openframeworks.cn", "论坛(CN)"),
         ("http://ofxaddons.com", "插件"),
         ("https://github.com/openframeworks", "github"),
         ("http://openframeworks.cc/list-info", "邮件列表"),
