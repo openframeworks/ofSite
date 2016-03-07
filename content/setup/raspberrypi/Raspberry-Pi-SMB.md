@@ -9,6 +9,35 @@ Raspberry Pi
     
 **WARNING: This is a very permissive file sharing configuration that gives you read/write/delete permissions across the entire file system. It is not recommended if you are the least bit concerned about being able to delete important files over a network.**
 
+### Create a mount point
+In order to avoid permissions problems in creating, deleting and moving files the following commands create a shortcut to the root file system and mount it as a virtual drive.
+* `cd /`
+* `sudo -i`
+* `mkdir /rootfs`
+* `mount --bind / /rootfs`
+
+The following steps will allow the above mount command to run everytime the RPi is rebooted. Otherwise you will have to run it manually
+
+* `sudo nano /etc/fstab`
+
+add the line
+
+    /               /rootfs         none    bind
+
+
+It should look something like this:
+
+    proc            /proc           proc    defaults          0       0
+    /dev/mmcblk0p1  /boot           vfat    defaults          0       2
+    /dev/mmcblk0p2  /               ext4    defaults,noatime  0       1
+    /               /rootfs         none    bind
+    # a swapfile is not a swap partition, no line here
+    #   use  dphys-swapfile swap[on|off]  for that
+
+* Press CTRL+o to save the file
+* Press CTRL+x to exit `nano`
+
+
 ### Install Samba
 From a Shell run these commands
 
@@ -38,7 +67,7 @@ You should now be editing the configuration file. Paste this into it:
 
     # Share
     [Data]
-	path = /
+	path = /rootfs
 	valid users = pi
 	read only = No
 	create mask = 0777
