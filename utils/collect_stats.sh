@@ -85,8 +85,8 @@ done
 echo
 echo
 echo ---------------------------------------
-zcat /var/log/nginx/access.log.7.gz | tail -n1 | sed "s/[^-]* - - \[\([^]]*\)\].*/\1/"
-head -n1 /var/log/nginx/access.log | sed "s/[^-]* - - \[\([^]]*\)\].*/\1/"
+zcat /var/log/nginx/access.log.7.gz | head -n1 | sed "s/[^-]* - - \[\([^]]*\)\].*/\1/"
+tail -n1 /var/log/nginx/access.log | sed "s/[^-]* - - \[\([^]]*\)\].*/\1/"
 echo linux $linux
 echo linux64 $linux64
 echo vs $vs
