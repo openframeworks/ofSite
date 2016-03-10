@@ -5,6 +5,7 @@ Android Studio
 ==============
 
 The Android distribution of openFrameworks is setup to work with either the Eclipse IDE or experimentally Android Studio IDE. The projects are currently using a custom toolchain based on Makefiles to compile and install applications.
+오픈프레임웍스의 안드로이드 배포판은 이클립스 IDE 혹은 약간 실험적인 안드로이드 스튜디오 IDE를 사용할 수 있습니다. 프로젝트들은 앱을 컴파일, 설치하기위해 현재 Makefiles를 기반으로 한 커스텀 툴체인을 사용합니다.
 
 Android studio support in openFrameworks is still experimental. The latest version of android studio still doesn't have full support for c++ development so even if it's deprecated we still recomend to use eclipse and the ADT plugin if you want to have code completeion in c++. See android-eclipse.md in the docs folder or the corresponding guide in the download page.
 
