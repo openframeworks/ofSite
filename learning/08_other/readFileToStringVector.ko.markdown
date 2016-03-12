@@ -5,8 +5,7 @@
 .. translator_site: http://icq4ever.net
 ---
 
-here's a quick snippet that shows how to read a text file into a vector of strings (where each line of the file is a seperate string in the vector).  We use ofBufferFromFile to load the file into an ofBuffer and ofBuffer::getLines() to get an iterable collection of the lines of the file: 
-본 문서에서는 텍스트 파일을 읽어서 문자열의 벡터로 넣는 방법(파일의 각 라인이 벡터에 담깁니다.)을 간략하게 다룹니다. 
+본 문서에서는 텍스트 파일을 읽어서 문자열의 벡터로 넣는 방법(파일의 각 라인이 벡터에 담깁니다.)을 간략하게 다룹니다. ofBufferFromFile을 사용하여 파일을 ofBuffer로 로드한 다음 ofBuffer::getlines()을 반복하여 라인을 얻습니다:
 
 ```
 vector < string > linesOfTheFile;
