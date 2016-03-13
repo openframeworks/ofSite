@@ -14,6 +14,7 @@ import glob
 import logging
 import collections
 import pathlib
+import markdown
 
 """
 sys.path.append(os.path.join(os.path.dirname(__file__),"asciidoc_template"))
@@ -255,6 +256,16 @@ class TutorialsTask(Task):
             
 
             ### -----------------------------------
+            ### 4) BOTTOM SECTION: how to improve the doc ###
+
+            contributing_to_docs_path = os.path.join(directory, "contributing_to_docs.md")
+            if lang != self.site.config['DEFAULT_LANG']:
+                contributing_to_docs_lang_path = utils.get_translation_candidate(self.site.config, contributing_to_docs_path, lang)
+                p = pathlib.Path(contributing_to_docs_lang_path)
+                if p.exists():
+                    contributing_to_docs_path = contributing_to_docs_lang_path
+            contributing_to_docs = markdown.markdown(open(contributing_to_docs_path).read())
+
 
             context = {}
             context["lang"] = lang
@@ -263,6 +274,7 @@ class TutorialsTask(Task):
             else:
                 context["permalink"] = '/' + lang + '/' + folder_name + '/'
             context["of_book"] = of_book
+            context["contributing_to_docs"] = contributing_to_docs
             context["title"] = "learning"
             context['categories'] = categories
             short_tdst = os.path.join(self.kw['translations'][lang], folder_name, "index.html")

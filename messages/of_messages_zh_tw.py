@@ -57,6 +57,10 @@ MESSAGES = {
     'a quick reference for common questions': '常見問題集',
     
     'a collection of openFrameworks guides': 'openFrameworks指引集',
+
+    'Contribute' : 'Contribute',
+
+    'How to improve the documentation': 'How to improve the documentation',
     
     'Getting Started!': '從這裡開始!',
     

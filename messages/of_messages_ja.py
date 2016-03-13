@@ -58,6 +58,10 @@ MESSAGES = {
 
     'a collection of openFrameworks guides': 'openFrameworksのガイド集',
 
+    'Contribute' : 'Contribute',
+
+    'How to improve the documentation': 'How to improve the documentation',
+
     'Getting Started!': 'はじめてみよう!',
 
     'Download & set up openFrameworks': 'openFramewroksのダウンロードとセットアップ',
