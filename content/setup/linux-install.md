@@ -67,7 +67,8 @@ $ cat /etc/lsb-release
 DISTRIB_ID="elementary OS"
 DISTRIB_RELEASE=0.3.2
 DISTRIB_CODENAME=freya
-DISTRIB_DESCRIPTION="elementar
+DISTRIB_DESCRIPTION="elementary OS Freya"
+$ sudo cp /etc/lsb-release /etc/lsb-release.bak
 ```
 
 ### 2. get based disribution information
