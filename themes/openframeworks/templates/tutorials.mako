@@ -52,5 +52,12 @@
           ${of_book}
         </div>
 
+        <div id="contribute" class="page-wide sectiontitle">
+          <h2>${ of.msg("Contribute", locals()) }<small>${ of.msg("How to improve the documentation", locals()) }</small></h2>
+        </div>
+        <div class="page-wide">
+          ${contributing_to_docs}
+        </div>
+
      </div>
 </%block>
