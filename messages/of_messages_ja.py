@@ -58,9 +58,9 @@ MESSAGES = {
 
     'a collection of openFrameworks guides': 'openFrameworksのガイド集',
 
-    'Contribute' : 'Contribute',
+    'Contribute' : '貢献',
 
-    'How to improve the documentation': 'How to improve the documentation',
+    'How to improve the documentation': 'ドキュメンテーションの改善方法',
 
     'Getting Started!': 'はじめてみよう!',
 
@@ -83,8 +83,8 @@ MESSAGES = {
     '... and many more! (GitHub wiki)': '... もっと詳しく! (GitHub wiki)',
 
     'back to all how-tos': 'How toの一覧に戻る',
-    
+
     'Links to newer original article': 'より新しいオリジナル(英語)へのリンク',
-    
+
     '(experimental)': '(experimental)',
 }
