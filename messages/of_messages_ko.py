@@ -58,9 +58,9 @@ MESSAGES = {
     
     'a collection of openFrameworks guides': '오픈프레임웍스 가이드 모음',
 
-    'Contribute' : 'Contribute',
+    'Contribute' : '공헌',
 
-    'How to improve the documentation': 'How to improve the documentation',
+    'How to improve the documentation': '문서를 보완하는 법',
     
     'Getting Started!': '시작하기!',
     
