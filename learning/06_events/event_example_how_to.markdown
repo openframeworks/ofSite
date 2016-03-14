@@ -44,5 +44,5 @@ You don't need to add the listeners for this handlers, because they are already 
 
 ### Resources
 
-* If you want to create listener for your class (not in `ofApp.ccp`), have a look at the example `examples/events/SimpleEventsExample`. In general, in the folder `examples/events` there are a lot of usefull resources about events, also about how to create custom events.
+* If you want to create listener for your class (not in `ofApp.ccp`), have a look at the example `examples/events/SimpleEventsExample`. In general, in the folder `examples/events` there are a lot of useful resources about events, also about how to create custom events.
 * The openframeworks documentation has a section for [events](/documentation/events/)
