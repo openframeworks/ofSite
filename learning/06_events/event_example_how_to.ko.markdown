@@ -1,6 +1,6 @@
 ---
 .. author: 
-.. title: Listen to events
+.. title: 이벤트 리스닝하기
 .. type: howto
 .. translator: Yi donghoon
 .. translator_site: http://icq4ever.net
