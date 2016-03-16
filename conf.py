@@ -270,6 +270,7 @@ PAGES = (
     ("learning/*.asciidoc", "learning", "tutorial.mako"),
     ("content/setup/*.md", "setup", "setup_guide.mako"),
     ("documentation/search_results.md", "documentation", "search_results.mako"),
+    ("documentation/contributing.md", "documentation", "tutorial.mako"),
 )
 # Below this point, everything is optional
 
