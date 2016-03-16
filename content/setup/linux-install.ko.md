@@ -71,7 +71,7 @@ DISTRIB_ID="elementary OS"
 DISTRIB_RELEASE=0.3.2
 DISTRIB_CODENAME=freya
 DISTRIB_DESCRIPTION="elementary OS Freya"
-
+$ sudo cp /etc/lsb-release /etc/lsb-release.bak
 ```
 
 ### 2. 기반이 되는 배포판의 정보 확인 
@@ -84,9 +84,6 @@ DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=14.04
 DISTRIB_CODENAME=trusty
 DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
-
-$ sudo cp /etc/lsb-release /etc/lsb-release.bak
-
 ```
 
 ### 3. 오픈프레임웍스를 설치할 리눅스 시스템의 커널배포판 정보 변경
