@@ -16,6 +16,7 @@
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html">오픈프레임웍스 구조</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/intro_to_graphics.html">그래픽스</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/OOPs!.html">웁쓰! = 객체지향프로그래밍 + 클래스</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/how_of_works.html">오픈프레임웍스는 어떻게 동작하는가</a></li>
 </ul>
 </li>
 <li>접근하기

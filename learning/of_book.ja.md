@@ -16,6 +16,7 @@
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html">oFの構造</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/intro_to_graphics.html">グラフィクス</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/OOPs!.html">Ooops! = オブジェクト指向プログラミング(Object Oriented Programming) + クラス</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/how_of_works.html">How OF works</a></li>
 </ul>
 </li>
 <li>手引き

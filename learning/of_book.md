@@ -16,6 +16,7 @@
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html">oF structure</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/intro_to_graphics.html">Graphics</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/OOPs!.html">Ooops! = Object Oriented Programming + Classes</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/how_of_works.html">How OF works</a></li>
 </ul>
 </li>
 <li>Approaches
