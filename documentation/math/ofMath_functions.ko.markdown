@@ -70,7 +70,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###float ofAngleDifferenceRadians(currentAngle, targetAngle)
