@@ -19,7 +19,7 @@ The classes in this module allow to work with vector math, [ofVec2f](ofVec2f.htm
 [ofMath](ofMath.html) contains functions for various mathematical operations like generating a random number with ofRandom, or calculating the intersection of two line segments with ofLineSegmentIntersection.</br>
 [ofMath](ofMath.html)는 랜덤숫자 생성기과 같은 다양한 수학적 기능과, ofLineSegmentIntersection 의 라인 세그먼트들의 충돌 계산을 포함 합니다.
 
-
+=====
 ###### 코멘트 (완료시 지울것) </br>
 ..* c++ Vector와 혼선을 방지 하고자 Vector math 를 단순하게 수학 벡터 로 번역 하였습니다.  
 ..* 한국어로 옮기려니, 한국말 능력자가 필요 한가 봅니다 ^^; 
