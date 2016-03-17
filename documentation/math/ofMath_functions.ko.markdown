@@ -246,11 +246,12 @@ _advanced: False_
 _inlined_description: _
 
 Clamp a value between min and max.
-
+</br>최대값 과 최소값 사이를 고정 합니다</br>
 Restricts a value to be within a specified range defined by values min and
 max. If the value is min <= value <= max, returns value.  If the value is
 greater than max, return max; if the value is less than min, return min.
 Otherwise, return the value unchanged.
+</br>최대값과 최소값의 특정 영역을 지정 하여 값을 제한시킵니다. 만약 값이 min <= value <= max 라면 (영역안에 포함 된다면) , 그 값을 반환 합니다. 만약 값이 최대값 보다 크다면 최대값을 반환 합니다. 만약 값이 최소값보다 작다면 최소값을 반환 합니다. 그외에는, 변하지 않은 값을 반환 합니다.(??마지막줄의 의미를 잘 모르겠네요??)</br>
 
 ~~~~{.cpp}
 		float val = 10;
@@ -265,9 +266,12 @@ Parameters:
 value The number to be clamped.
 min The lower bound of the range.
 max The upper bound of the range.
-
+</br>Parameters : </br>
+</br>클램프 시킬 값 입니다.</br>
+</br>영역의 최소값 입니다. </br>
+</br>영역의 최대값 입니다.</br>
 Returns: a floating point number in the range [min, max].
-
+</br>Returns : 최대, 최소 값에 의한 숫자를 띄움니다.</br>
 
 
 
