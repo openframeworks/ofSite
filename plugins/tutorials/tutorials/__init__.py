@@ -280,6 +280,7 @@ class TutorialsTask(Task):
             short_tdst = os.path.join(self.kw['translations'][lang], folder_name, "index.html")
             tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))
             template_dep = self.site.template_system.template_deps(template_name)
+            template_dep += [contributing_to_docs_path]
             template_dep += files
             template_dep += [__file__]
             template_dep += [os.path.join(self.site.original_cwd, "messages", "of_messages_" + lang + ".py")]
