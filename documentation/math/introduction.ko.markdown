@@ -10,7 +10,7 @@
 This module contains classes and functions that provide mathematical utilities helpful to work with graphics and other media. 
 이 모듈은 그래픽과 미디어작업에 도움을 주는 수학과 관련된 유틸리티 클래스와 함수들을 포함 하고 있습니다. 
 
-The classes in this module allow to work with vector math, [ofVec2f](ofVec2f.html), [ofVec3f](ofVec3f.html) and [ofVec4f](ofVec4f.html) for example represent vectors in 2, 3 and 4 dimensions. 
+The classes in this module allow to work with vector math, [ofVec2f](ofVec2f.html), [ofVec3f](ofVec3f.html) and [ofVec4f](ofVec4f.html) for example represent vectors in 2, 3 and 4 dimensions. </br>
 이 클래스들은 수학벡터인  [ofVec2f](ofVec2f.html), [ofVec3f](ofVec3f.html), [ofVec4f](ofVec4f.html)을 사용 하게 합니다. 예를들어 2차원 3차원 혹은 4차원 벡터들을 대표 합니다. 
 
 [ofMatrix4x4](ofMatrix4x4.html) allows to represent scaling, rotations, translations and perspective transformations in an way that allows to transform any point in 3D space just by multiplying it by the matrix, [ofMatrix4x4](ofMatrix4x4.html) can be easily uploaded to the graphics card through shaders or the ofLoadMatrix functions in [ofGraphics](../graphics/ofGraphics.html).
