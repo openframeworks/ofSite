@@ -41,7 +41,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates the difference between two angles in degrees.
-두개의 다른 각도를 계산 합니다.
+</br>두개의 다른 각도를 계산 합니다.</br>
 This will calculate the actual difference, taking into account multiple
 revolutions. For example:
 
