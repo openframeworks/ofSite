@@ -107,17 +107,17 @@ Getting an account is easy—just go to [github.com](https://github.com) and sig
 
 Within the [ openFrameworks documentation](/documentation/), at the top of every class's page, there are two buttons on the top of the page for "Edit Class" and/or "Edit Functions":
 
-![](/documentation/contributing/editclass.png)
+![](editclass.png)
 
 If you click either of these buttons, you'll be taken to a page on github with a text area containing the entire documentation for that class or set of functions.  It will look something like this:
 
-![](/documentation/contributing/editscreen.png)
+![](editscreen.png)
 
 #### Step 2:  Edit the Documentation
 
 Within that block of text, you'll find the method, variable, or function that you're interested in editing.  Directly edit the text.  When you've made your changes, you can propose the edit using the box below the text:
 
-![](/documentation/contributing/edit_save.png)
+![](edit_save.png)
 
 Write a summary and an optional brief description of the changes you made, and click the "Propose File Change" button.
 
@@ -125,7 +125,7 @@ Write a summary and an optional brief description of the changes you made, and c
 
 You'll end up on the following page, which will let you review your changes:
 
-![](/documentation/contributing/review.png)
+![](review.png)
 
 Below that will be a list of all of the lines of text that you've changed.   It's a good practice to go through the changes and make sure that you didn't accidentally delete something and that your changes are what you thought they were.  If you'd like to write a message to the person who will be reviewing your changes, you can do that, too.
 

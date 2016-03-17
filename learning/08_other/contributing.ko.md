@@ -109,17 +109,17 @@ _field: value_ 로 작성된 필드를 수정하지 **마십시오**: 이부분�
 
 [오픈프레임웍스 도큐먼트 페이지](/ko/documentation/)에서, 클래스의 매 페이지 상단에 보면, 두 개의 버튼이 있을겁니다. "Edit Clas" 그리고/혹은 "Edit Functions"입니다:
 
-![](/documentation/contributing/editclass.png)
+![](editclass.png)
 
 두 버튼중 하나를 클릭하면, github의 문서 전체의 내용이 담긴 텍스트 편집창으로 이동할것입니다. 이 텍스트들은 클래스 혹은 함수들의 세트입니다. 아마도 이렇게 보일것입니다:
 
-![](/documentation/contributing/editscreen.png)
+![](editscreen.png)
 
 #### 단계 2: 문서 편집하기 
 
 텍스트의 블록에서, 편집하고 싶은 메소드, 편수, 함수를 찾습니다. 텍스트를 바로 편집하세요. 편집이 완료되었다면, 텍스트박스 하단에서 편집을 완료할 수 있습니다.
 
-![](/documentation/contributing/edit_save.png)
+![](edit_save.png)
 
 여러분이 변형한 내용들에 대해서 간단한 설명이나 요약을 덧붙일 수 있습니다. "Propose File Change"버튼을 클릭하시면 됩니다.
 
@@ -127,7 +127,7 @@ _field: value_ 로 작성된 필드를 수정하지 **마십시오**: 이부분�
 
 과정이 완료되고 나면, 변경된 내용을 리뷰할 수 있습니다:
 
-![](/documentation/contributing/review.png)
+![](review.png)
 
 아레에 보시면 변경된 텍스트들의 모든 내용이 있습니다. 변경한 내용들을 쭉 훑어보면서 실수로 삭제했거나 잘못 작성한 곳이 있는지 확인해보세요. 여러분의 코드를 리뷰한
 사람에게 메시지를 보내고 싶다면 그것도 가능합니다. 
