@@ -41,9 +41,10 @@ _advanced: False_
 _inlined_description: _
 
 Calculates the difference between two angles in degrees.
-</br>두개의 다른 각도를 계산 합니다.</br>
+</br>두개의 호도(degree)의 실제 차이를 계산 합니다.</br>
 This will calculate the actual difference, taking into account multiple
 revolutions. For example:
+</br>이것은 실제 차이를 계산 하며, 여러가지 결과를 가져 옵니다. 예를들어</br>
 
 ~~~~{.cpp}
 		ofAngleDifferenceDegrees(0, 90); // Returns 90.
@@ -54,9 +55,10 @@ revolutions. For example:
 Parameters:
 currentAngle The current angle in degrees.
 targetAngle the angle to be compared to in degrees.
-
+</br> Parameters :  현재 호도(degree) , 비교할 대상의 호도(degree)  </br>
 Returns: The difference between two angles in degrees.
-
+</br> Returns : 두 호도(degree)의 차이를 반환합니다. </br>
+###### 코멘트 : angles in degrees 이부분을 한국말로 옮기는게 다소 애매모호 하네요. 그래서 그냥 호도 라고 했습니다. 사실 호도 라는 한자어 보다 degree 를 더 많이 쓰긴 합니다... 
 
 
 
@@ -91,9 +93,10 @@ _advanced: False_
 _inlined_description: _
 
 Calculates the difference between two angles in radians.
-
+</br>두 라디안의 실제 차이를 계산 합니다.</br>
 This will calculate the actual difference, taking into account multiple
 revolutions. For example:
+</br>이것은 실제 차이를 계산 하며, 여러가지 결과를 가져 옵니다. 예를들어</br>
 
 ~~~~{.cpp}
 		ofAngleDifferenceRadians(0, PI); // Returns -PI.
@@ -104,9 +107,9 @@ revolutions. For example:
 Parameters:
 currentAngle The current angle in radians.
 targetAngle the angle to be compared to in radians.
-
+</br>Parameters: 현재 라디안, 비교할 대상의 라디안 </br>
 Returns: The difference between two angles in radians.
-
+</br>Returns: 두 라디안의 차이를 반환합니다.  </br>
 
 
 
