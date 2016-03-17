@@ -452,7 +452,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates the 3D distance between two points.
-
+</br>3D 포인트의 2점의 거리를 계산 합니다</br>
 Uses the [Pythagorean theorem](http://en.wikipedia.org/wiki/Pythagorean_theorem).
 
 
@@ -463,9 +463,10 @@ z1 Z position of first point.
 x2 X position of second point.
 y2 Y position of second point.
 z2 Z position of second point.
+</br>x1 , y1 , z1 , x2 , y2 , z2</br>
 
 Returns: float Distance between points.
-
+</br>Returns : 두 점의 거리를 반환 합니다</br>
 
 
 
@@ -500,7 +501,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates the 2D distance between two points.
-
+두개의 2D점의 거리를 계산 합니다.
 Uses the [Pythagorean theorem](http://en.wikipedia.org/wiki/Pythagorean_theorem).
 
 
@@ -546,10 +547,12 @@ _advanced: False_
 _inlined_description: _
 
 Calculates the squared 3D distance between two points.
-
+</br>두개의 점에 의한 3D 정사각형 공간의 거리를 계산 합니다.</br>
 Same as ofDist() but doesn't take the square root sqrt() of the result,
 which is a faster operation if you need to calculate and compare multiple
 distances.
+</br>ofDist() 와 같으나, 결과는 square root sqrt()를 갖지 않습니다(와 같지 않습니다)(??안써봐서 이게 맞는지 잘 모르겠음??) </br>
+</br>만약 여러 거리를 비교 하거나 계산 할때, 빠른게 수행 할 수 있습니다.</br>
 
 
 Parameters:
@@ -561,7 +564,7 @@ y2 Y position of second point.
 z2 Z position of second point.
 
 Returns: distance-squared between two points.
-
+</br>두점 사이의 distance-squared 를 반환함 </br>
 
 
 
@@ -596,11 +599,12 @@ _advanced: False_
 _inlined_description: _
 
 Calculates the squared 2D distance between two points.
-
+</br>두점 사이의 2D 정사각형 거리를 계산 합니다.</br>
 Same as ofDist() but doesn't take the square root sqrt() of the result,
 which is a faster operation if you need to calculate and compare multiple
 distances.
-
+</br>ofDist() 와 같으나, 결과는 square root sqrt()를 갖지 않습니다(와 같지 않습니다)(??안써봐서 이게 맞는지 잘 모르겠음??) </br>
+</br>만약 여러 거리를 비교 하거나 계산 할때, 빠른게 수행 할 수 있습니다.</br>
 
 Parameters:
 x1 X position of first point.
@@ -609,7 +613,7 @@ x2 X position of second point.
 y2 Y position of second point.
 
 Returns: distance-squared between two points.
-
+</br>두점 사이의 distance-squared 를 반환함 </br>
 
 
 
@@ -644,14 +648,14 @@ _advanced: False_
 _inlined_description: _
 
 Determine if a number is inside of a given range.
-
+</br>값(Number)가 주어진 영역안에 있는지 알아냅니다</br>
 Parameters:
 t The value to test.
 min The lower bound of the range.
 max The upper bound of the range.
 
 Returns: true if the number t is the range of [min, max].
-
+</br> Returns : 그 값(number)이 [min, max]의 영역역 이면 true 를 반환합니다</br>
 
 
 
@@ -686,14 +690,14 @@ _advanced: False_
 _inlined_description: _
 
 Determine if an (x,y) coordinate is within the polygon defined by a vector of ofPoints.
-
+</br> ofPoints 의 벡터배열에 의하여 결정된 폴리곤의 영역안에 좌표(x,y)가 있는지 알아냅니다</br>
 Parameters:
 x The x dimension of the coordinate.
 y The y dimension of the coordinate.
 poly a vector of ofPoints defining a polygon.
 
 Returns: True if the point defined by the coordinates is enclosed, false otherwise.
-
+</br>설정한 점(x,y)가 안에 있다면 true , 그렇지 않다면 false 를 반환합니다.</br>
 
 
 
@@ -728,13 +732,13 @@ _advanced: False_
 _inlined_description: _
 
 Determine if an ofPoint is within the polygon defined by a vector of ofPoints.
-
+</br> ofPoints 의 벡터배열에 의하여 결정된 폴리곤의 영역안에 좌표(x,y)가 있는지 알아냅니다</br>
 Parameters:
 p A point to check.
 poly A vector of ofPoints defining a polygon.
 
 Returns: True if the ofPoint is enclosed, false otherwise.
-
+</br>설정한 점(x,y)가 안에 있다면 true , 그렇지 않다면 false 를 반환합니다.</br>
 
 
 
@@ -944,12 +948,12 @@ _advanced: False_
 _inlined_description: _
 
 Linearly interpolate a value within a range.
-
+</br>영역의 값을 선형보간 합니다.</br>
 Calculates a number between two numbers [start, stop] at a specific increment
 (amt).  If we want the new number to be between start and stop numbers, amt
 needs to be a number between 0 and 1, inclusive.  ofLerp() does not clamp
 the values.
-
+</br>두 숫자[start, stop]사이의 특정한 증가값을 계산 합니다. 만약 start 와 stop사이의 새로운 숫자를 원한다면, 대략 0과 1사이의 포괄적인 숫자가 필요 합니다. ofLerp()은 값들을 clamp 하지 않습니다. 역주) 두 값 사이의 비율을 0.0 ~ 1.0의 사이값으로 비중을 계산 합니다. 0.5 이면 두 값의 중간값이 반환 됩니다. 사이값은 1을 넘어가도 됩니다.</br>
 ~~~~{.cpp}
 		float init = 1;
 		float end = 2;
