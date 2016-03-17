@@ -18,7 +18,7 @@ The classes in this module allow to work with vector math, [ofVec2f](ofVec2f.htm
 [ofMatrix4x4](ofMatrix4x4.html)는 3차원 공간의 메트릭스에 의한 곱샘과 3D 공간상의 어떠한 점의 스케일 , 회전 ,평행이동과 투시 변환에 사용할 수 있고, [ofMatrix4x4](ofMatrix4x4.html) 는 [ofGraphics](../graphics/ofGraphics.html)의 ofLoadMatrix 함수들과 그래픽 카드의 쉐이더를 통하여 쉽게 업로드 됩니다.
 
 [ofMath](ofMath.html) contains functions for various mathematical operations like generating a random number with ofRandom, or calculating the intersection of two line segments with ofLineSegmentIntersection.
-
+[ofMath](ofMath.html)는 랜덤숫자 생성기과 같은 다양한 수학적 기능과, ofLineSegmentIntersection 의 라인 세그먼트들의 충돌 계산을 포함 합니다.
 
 
 ###### 코멘트 : c++ Vector와 혼선을 방지 하고자 Vector math 를 단순하게 수학 벡터 로 번역 하였습니다.  
