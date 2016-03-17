@@ -306,16 +306,21 @@ _advanced: False_
 _inlined_description: _
 
 Given the four points that determine a Catmull Rom curve, return an interpolated point on the curve.
-
+</br>4개의 점으로 Catmull Rom 커브를 결정 합니다. 보간된 커브위의 점을 반환 합니다 </br>
 Parameters:
 a The first control point.
 b The beginning point of the curve.
 c The end point of the curve.
 d The second control point.
 t an offset along the curve, normalized between 0 and 1.
-
+</br>Parameters</br>
+</br>a : 첫번째 컨트롤 포인트 </br>
+</br>b : 커브의 시작점 </br>
+</br>c : 커브의 종료점</br>
+</br>d : 두번째 컨트롤 포인트</br>
+</br>t : 커브의 오프셋을 따라 0과 1사이를 노멀라이즈 합니다. </br>
 Returns: A ofPoint on the curve.
-
+</br>Returns : 커브위의 ofPoint를 반환 합니다</br>
 
 
 
@@ -350,16 +355,22 @@ _advanced: False_
 _inlined_description: _
 
 Return a tangent point for an offset along a Catmull Rom curve.
-
+</br>Catmull Rom 커브 오프셋에 따른 탄젠트 포인트를 반환 합니다.</br>
 Parameters:
 a The first control point.
 b The beginning point of the curve.
 c The end point of the curve.
 d The second control point.
 t an offset along the curve, normalized between 0 and 1.
+</br>Parameters</br>
+</br>a : 첫번째 컨트롤 포인트 </br>
+</br>b : 커브의 시작점 </br>
+</br>c : 커브의 종료점</br>
+</br>d : 두번째 컨트롤 포인트</br>
+</br>t : 커브의 오프셋을 따라 0과 1사이를 노멀라이즈 합니다. </br>
 
 Returns: A ofPoint on the curve.
-
+</br>Returns : 커브위의 ofPoint를 반환 합니다</br>
 
 
 
@@ -394,7 +405,7 @@ _advanced: False_
 _inlined_description: _
 
 Convert degrees to radians.
-
+</br>호도(degree) 와 라디안을 변환 합니다.</br>
 Example:
 ~~~~{.cpp}
 		float result = ofDegToRad(90); // The result will be PI/2.
@@ -403,9 +414,10 @@ Example:
 
 Parameters:
 degrees An angle in degrees.
+</br>Parameters : 호도값(degree) </br>
 
 Returns: the angle in radians.
-
+</br>Returns : 라디안을 반환 합니다 </br>
 
 
 
