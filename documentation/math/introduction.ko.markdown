@@ -1,8 +1,8 @@
 ---
-.. title: 프로젝트에 애드온 추가하기
-.. type: howto
-.. translator: Yi donghoon
-.. translator_site: http://icq4ever.net
+.. title: Introdution Math api
+.. type: documentation
+.. translator: jongun won
+.. translator_site: http://scripter.co.kr
 ---
 ## Vector math classes, geometry utils and other mathematical functions
 
