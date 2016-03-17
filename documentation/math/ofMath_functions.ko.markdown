@@ -1,3 +1,9 @@
+---
+.. title: ofMath functions
+.. type: documentation
+.. translator: jongun won
+.. translator_site: http://scripter.co.kr
+---
 #functions
 
 
