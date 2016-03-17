@@ -1008,11 +1008,11 @@ _advanced: False_
 _inlined_description: _
 
 Linearly interpolate a value between two angles in degrees.
-
-Calculates a number between two numbers [start, stop) at a specific
+</br>영역의 호도값(degree)을 선형보간 합니다.</br>
+Calculates a number between two numbers [start, stop] at a specific
 increment (amt). This does constrain the result into a single rotation,
 but does not clamp the values
-
+</br>start와 stop값 사이이의 특정 증가분을 계산 합니다. 이것은 단일 rotation값을 반환 하며 clamp 하지 않습니다 </br>
 
 Parameters:
 currentAngle The lower bound of the range in degrees.
@@ -1055,11 +1055,11 @@ _advanced: False_
 _inlined_description: _
 
 Linearly interpolate a value between two angles in radians.
-
+</br>영역의 라디안 값을 선형보간 합니다.</br>
 Calculates a number between two numbers (start, stop) at a specific
 increment (amt).  This does constrain the result into a single rotation, but
 does not clamp the values
-
+</br>start와 stop값 사이이의 특정 증가분을 계산 합니다. 이것은 단일 rotation값을 반환 하며 clamp 하지 않습니다 </br>
 
 Parameters:
 currentAngle The lower bound of the range in radians.
@@ -1102,7 +1102,7 @@ _advanced: False_
 _inlined_description: _
 
 Determine the intersection between two lines.
-
+</br>두 선의 교차여부를 알아냅니다.</br>
 Parameters:
 line1Start Starting point for first line.
 line1End End point for first line.
@@ -1111,7 +1111,7 @@ line2End End point for second line.
 intersection ofPoint reference in which to store the computed intersection point.
 
 Returns: True if the lines intersect.
-
+</br>두 션이 교차 한다면 true를 반환 합니다.</br>
 
 
 
@@ -1146,7 +1146,7 @@ _advanced: False_
 _inlined_description: _
 
 Given a value and an input range, map the value to an output range.
-
+</br>input 영역의 값을 ouput 영역으로 맵핑 합니다.</br>
 ofMap linearly maps the given value to a new value given an input and output
 range.  Thus if value is 50% of the way between inputMin and inputMax, the
 output value will be 50% of the way between outpuMin and outputMax. For
@@ -1157,6 +1157,8 @@ the input value is 150 and the input range is 0 - 100 and the output range
 user can avoid mapping outside of the input range by clamping the output
 value.  Clamping is disabled by default and ensures that the output value
 always stays in the range [outputMin, outputMax).
+</br>ofMap 은 input 영역과 output영역의 값을 연속적으로 맵핑(대입) 하여 새로운 값을 가집니다. 만약 inputMin과 inputMax 사이의 50%의 값이라면, outputMin과 outputMax의 50%의 값을 반환 합니다.  intputMin 과 inputMax 의 밖의 값을 위하여, 음수의 퍼센테이지와 100# 이상의 퍼센테이지가 사용되었습니다. 예를들어, 만약 값이 150 이고, input영역이 0 ~ 100 이고 output영역이 0 ~ 1000 dlfkaus, 총 영역의 1500 또는 150%를 반환 할 것 입니다. 반환값의 클램핑으로 input영역 밖의 값을 피할수 있습니다. 클램핑(Clamping)은 기본적으로 비활성화 되어 있고, 항상 그 영역[outputMin, outputMax]안의 영역을 보장 해 줍니다. </br>
+
 
 Example:
 ~~~~~{.cpp}
@@ -1177,6 +1179,12 @@ clamp True if the value should be clamped to [outputMin, outputMax).
 \note If the absolute difference between inputMin and inputMax is less than
 		  FLT_EPSILON, outputMin will be returned to prevent divide by zero
 		  errors.
+	
+</br>	  
+\note 만약 절대적으로 nputMin and inputMax 의 사이가 FLT_EPSILON 보다 작다면, "divide by zero
+		  errors"를 방지 하기위하여 outputMin이 그대로 반한 됩니다.
+		  
+</br>
 
 Returns: a mapped floating point number.
 
