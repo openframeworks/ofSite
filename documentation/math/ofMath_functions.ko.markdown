@@ -1222,9 +1222,9 @@ _advanced: False_
 _inlined_description: _
 
 Calculates the next larger power of 2.
-
+</br>지정된 숫자보다 바로 큰 2의 제곱을 반환 합니다. </br>
 If the input is already a power of 2, it will return itself.
-
+</br> 만약 값이 이미 2의 제곱이라면 , 그것이 그대로 반환 됩니다.</br>
 Example:
 ~~~~{.cpp}
 ofNextPow2(50); // returns 64
@@ -1272,7 +1272,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a one dimensional Perlin noise value between 0.0...1.0.
-
+</br> 0.0 ~ 1.0사이의 1차원 펄린노이즈를 계산합니다.</br>
 
 
 
@@ -1307,7 +1307,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a two dimensional Perlin noise value between 0.0...1.0.
-
+</br> 0.0 ~ 1.0사이의 2차원 펄린노이즈를 계산합니다.</br>
 
 
 
@@ -1342,7 +1342,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a three dimensional Perlin noise value between 0.0...1.0.
-
+</br> 0.0 ~ 1.0사이의 3차원 펄린노이즈를 계산합니다.</br>
 
 
 
@@ -1377,7 +1377,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a four dimensional Perlin noise value between 0.0...1.0.
-
+</br> 0.0 ~ 1.0사이의 4차원 펄린노이즈를 계산합니다.</br>
 
 
 
@@ -1412,7 +1412,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a two dimensional Perlin noise value between 0.0...1.0.
-
+</br> 0.0 ~ 1.0사이의 2차원 펄린노이즈를 계산합니다.</br>
 
 
 
@@ -1447,7 +1447,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a three dimensional Perlin noise value between 0.0...1.0.
-
+</br> 0.0 ~ 1.0사이의 3차원 펄린노이즈를 계산합니다.</br>
 
 
 
@@ -1482,7 +1482,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a four dimensional Perlin noise value between 0.0...1.0.
-
+</br> 0.0 ~ 1.0사이의 4차원 펄린노이즈를 계산합니다.</br>
 
 
 
@@ -1517,12 +1517,12 @@ _advanced: False_
 _inlined_description: _
 
 Given a value and an input range, map the value to be within 0 and 1.
-
+</br>특정 값과 input영역의 값을 0과1로 맵핑 합니다.</br>
 Often, you'll need to work with percentages or other methods that expect a
 value between 0 and 1.  This function will take a minimum and maximum and
 then finds where within that range a value sits.  If the value is outside
 the range, it will be mapped to 0 or 1.
-
+</br> 종종, 0 과 1 사이의 값을 예상하거나, 퍼센테이지된 작업을 필요로 합니다. 이 함수는 최소 와 최대, 그 영역의 값에 있는지를 알 수 있습니다.(????) 만약 영역 밖의 값이라면 0 혹은 1로 맵핑됩니다.</br>
 
 Parameters:
 value The number to be normalized.
@@ -1565,7 +1565,7 @@ _advanced: False_
 _inlined_description: _
 
 Convert radians to degrees.
-
+</br>라디안을 호도(degrees)로 변환 합니다.</br>
 Example:
 ~~~~{.cpp}
 		float result = ofRadToDeg(PI/2); // The result will be 90.
@@ -1611,9 +1611,9 @@ _advanced: False_
 _inlined_description: _
 
 Get a random number between two values.
-
+</br>두 숫자 사이의 무작위 수를 반환 합니다.</br>
 A random number in the range [min, max) will be returned.
-
+</br>무작위 숫자가 영역(min,max)에서 반환 됩니다.</br>
 Example:
 	~~~~~{.cpp}
 // Return a random floating point number between -30 and 20.
@@ -1622,7 +1622,7 @@ float randomNumber = ofRandom(-30, 20);
 
 
 Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
-
+</br>경고: ofRandom은 C++의 'rand()'를 랩핑 하여 반복(???) 스레드에 안전하지 않습니다. </br>
 
 Parameters:
 val0 the minimum value of the random number.
@@ -1664,7 +1664,7 @@ _advanced: False_
 _inlined_description: _
 
 Get a random floating point number between 0 and max.
-
+</br>0과 max 사이의 무작위 숫자를 반환합니다.</br>
 A random number in the range [0, max) will be returned.
 
 Example:
@@ -1675,7 +1675,7 @@ float randomNumber = ofRandom(20);
 
 
 Warning: ofRandom wraps C++'s `rand()` which is not reentrant or thread safe.
-
+</br>경고: ofRandom은 C++의 'rand()'를 랩핑 하여 반복(???) 스레드에 안전하지 않습니다. </br>
 
 Parameters:
 max The maximum value of the random number.
@@ -1714,12 +1714,12 @@ _advanced: False_
 _inlined_description: _
 
 Get a random floating point number between 0 and the screen height.
-
+</br>0과 스크린의 높이 사이의 무작위 숫자를 반환합니다.</br>
 A random number in the range [0, ofGetHeight()) will be returned.
 
 
 Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
-
+</br>경고: ofRandom은 C++의 'rand()'를 랩핑 하여 반복(???) 스레드에 안전하지 않습니다. </br>
 
 Returns: a random number between 0 and ofGetHeight().
 
@@ -1757,12 +1757,12 @@ _advanced: False_
 _inlined_description: _
 
 Get a random floating point number between 0 and the screen width.
-
+</br>0과 스크린의 너비 사이의 무작위 숫자를 반환합니다.</br>
 A random number in the range [0, ofGetWidth()) will be returned.
 
 
 Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
-
+</br>경고: ofRandom은 C++의 'rand()'를 랩핑 하여 반복(???) 스레드에 안전하지 않습니다. </br>
 
 Returns: a random number between 0 and ofGetWidth().
 
@@ -1800,10 +1800,10 @@ _advanced: False_
 _inlined_description: _
 
 Get a random floating point number.
-
+</br>소수점으로 된 무작이 숫자를 반환 합니다</br>
 
 Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
-
+</br>경고: ofRandom은 C++의 'rand()'를 랩핑 하여 반복(???) 스레드에 안전하지 않습니다. </br>
 
 Returns: A random floating point number between -1 and 1.
 
@@ -1841,10 +1841,10 @@ _advanced: False_
 _inlined_description: _
 
 Get a random unsigned floating point number.
-
+</br>unsigned 소수점으로 된 무작이 숫자를 반환 합니다</br>
 
 Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
-
+</br>경고: ofRandom은 C++의 'rand()'를 랩핑 하여 반복(???) 스레드에 안전하지 않습니다. </br>
 
 Returns: A random floating point number between 0 and 1.
 
@@ -1882,10 +1882,10 @@ _advanced: False_
 _inlined_description: _
 
 Seed the seeds the random number generator with a unique value.
-
+</br> Seed는 랜덤 생성기의 유니크한 값의 seed입니다. (한국말이 참 어렵군요...)</br>
 This seeds the random number generator with an acceptably random value,
 generated from clock time and the PID.
-
+</br> 이 seed는 PID 와 생성기의 클록 타임으로 부터 랜덤 생성기의 무작위 수용값 입니다.(????)(역주 : seed 에 의하여 랜덤 함수가 반환 하는 숫자를 결정 하게 됩니다. 사실 현대 컴퓨팅은 절대적인 랜덤을 반환 하지 못하여 PID 와 클록 타임에 의존 한 훼이크입니다.)</br>
 
 
 
@@ -1920,11 +1920,11 @@ _advanced: False_
 _inlined_description: _
 
 Seed the random number generator.
-
+</br>랜덤 생성기의 seed 입니다.</br>
 If the user would like to repeat the same random sequence, a known random
 seed can be used to initialize the random number generator during app
 setup.  This can be useful for debugging and testing.
-
+</br> 만약 반복적으로 같은 랜덤 함수를 나열 할때, 확실한 핸덤 seed는 app이 setup되는 동안 랜덤 생성기의 숫자를 초기화 할 수 있습니다. 테스트와 디버깅에 유용합니다.</br>
 
 Parameters:
 val The value with which to seed the generator.
@@ -1963,9 +1963,9 @@ _advanced: False_
 _inlined_description: _
 
 Returns the sign of a number.
-
+</br> sign 넘버를 반환 합니다. </br>
 Returns: int -1 if n is negative, 1 if n is positive, and 0 is n == 0;
-
+</br> 음수 이면 -1을 , 양수이면 1을 , 0 이면 0 을 반환 합니다 </br>
 
 
 
@@ -2000,7 +2000,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a one dimensional Perlin noise value between -1.0...1.0.
-
+</br>1차원 의 펄린노이즈 값(-1.0 ~ 1.0)사이를 계산 합니다.</br>
 
 
 
@@ -2035,7 +2035,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a two dimensional Perlin noise value between -1.0...1.0.
-
+</br>2차원 의 펄린노이즈 값(-1.0 ~ 1.0)사이를 계산 합니다.</br>
 
 
 
@@ -2070,7 +2070,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a three dimensional Perlin noise value between -1.0...1.0.
-
+</br>3차원 의 펄린노이즈 값(-1.0 ~ 1.0)사이를 계산 합니다.</br>
 
 
 
@@ -2105,7 +2105,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a four dimensional Perlin noise value between -1.0...1.0.
-
+</br>4차원 의 펄린노이즈 값(-1.0 ~ 1.0)사이를 계산 합니다.</br>
 
 
 
@@ -2140,7 +2140,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a two dimensional Perlin noise value between -1.0...1.0.
-
+</br>2차원 의 펄린노이즈 값(-1.0 ~ 1.0)사이를 계산 합니다.</br>
 
 
 
@@ -2175,7 +2175,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a three dimensional Perlin noise value between -1.0...1.0.
-
+</br>3차원 의 펄린노이즈 값(-1.0 ~ 1.0)사이를 계산 합니다.</br>
 
 
 
@@ -2210,7 +2210,7 @@ _advanced: False_
 _inlined_description: _
 
 Calculates a four dimensional Perlin noise value between -1.0...1.0.
-
+</br>4차원 의 펄린노이즈 값(-1.0 ~ 1.0)사이를 계산 합니다.</br>
 
 
 
@@ -2245,10 +2245,10 @@ _advanced: False_
 _inlined_description: _
 
 Find a value within a given range, wrapping the value if it overflows.
-
+</br>주어진 영역에서 값을 찾고, 만약 초과한다면 값을 랩핑 합니다 </br>
 If a value is between from and to, return that value.
 If a value is NOT within that range, wrap it.
-
+</br>만약 from 과 todml 값사이에 있다면, 그 값을 반환 합니다. 그렇지 않다면, 그 값을 랩핑 합니다 </br>
 Example:
 ~~~~{.cpp}
 		ofWrap(5, 0, 10); // Returns 5.
