@@ -19,4 +19,4 @@ The classes in this module allow to work with vector math, [ofVec2f](ofVec2f.htm
 
 
 
-####### 코멘트 : c++ Vector와 혼선을 방지 하고자 Vector math 를 단순하게 수학 벡터 로 번역 하였습니다.  
+######### 코멘트 : c++ Vector와 혼선을 방지 하고자 Vector math 를 단순하게 수학 벡터 로 번역 하였습니다.  
