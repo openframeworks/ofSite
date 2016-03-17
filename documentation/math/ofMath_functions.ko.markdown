@@ -144,7 +144,7 @@ _advanced: False_
 _inlined_description: _
 
 Given the four points that determine a bezier curve, return an interpolated point on the curve.
-</br>베지어와 커브의 4점을 결정 하고, 보간된 커브의 점을 반환 합니다</br>
+</br>베지어 커브의 4점을 결정 하고, 보간된 커브의 점을 반환 합니다</br>
 Parameters:
 a The beginning point of the curve.
 b The first control point.
@@ -195,15 +195,22 @@ _inlined_description: _
 
 Given the four points that determine a bezier curve and an offset along the curve, return an tangent vector to a point on the curve.
 Currently this is not a normalized point, and will need to be normalized.
-
+</br>베이저 커브의 4점을 결정 하고, 커브의 오프셋을 따라 커브의 탄젠트 벡터를 반환합니다. 현재 이것은 노멀라이즈 포인트가 아니고, 노멀라이즈 포인트가 될 필요가 있습니다</br>
 Parameters:
 a The beginning point of the curve.
 b The first control point.
 c The second control point.
 d The end point of the curve.
 t an offset along the curve, normalized between 0 and 1.
+</br>Parameters</br>
+</br>a : 커브의 시작점 </br>
+</br>b : 첫번째 컨트롤 포인트 </br>
+</br>c : 두번째 컨트롤 포인트</br>
+</br>d : 커브의 종료점 </br>
+</br>t : 커브의 오프셋을 따라 0과 1사이를 노멀라이즈 합니다. </br>
 
 Returns: A ofPoint on the curve.
+</br>Returns : 커브위의 ofPoint를 반환 합니다</br>
 
 
 
