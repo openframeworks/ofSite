@@ -863,6 +863,8 @@ and returns (also as an ofVec3f) the 3D world coordinates of that point.
 You'll also need to specify a Z value when providing your screen point.
 This Z value is interpreted as a distance into or away from the screen.
 
+It's important not to call this within a cam.begin()...cam.end() section as it will not work. 
+It must be called before or afterward.
 
 Parameters:
 ScreenXYZ A point on your screen, whose 3D world coordinates you wish to know.
@@ -1347,6 +1349,8 @@ and returns the location (also as an ofVec3f) where this point would
 appear on your (two-dimensional) display. The screen position's "Z
 coordinate" is set to be the same as your camera's.
 
+It's important not to call this within a cam.begin()...cam.end() section as it will not work. 
+It must be called before or afterward.
 
 Parameters:
 WorldXYZ A 3D point in the world, whose screen coordinates you wish to know.
