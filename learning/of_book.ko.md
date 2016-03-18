@@ -81,8 +81,8 @@
 <ul>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/version_control_with_git.html">Git으로 버전 관리하기</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/ofSketch.html">ofSketch</a></li>
-<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/installation_up_4evr_macosx.html">인스톨레이션 최적화</a></li>
-<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/installation_up_4evr_linux.html">인스톨레이션 최적화 - 리눅스</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/installation_up_4evr_macosx.html">불멸의 설치 세팅법 - 맥</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/installation_up_4evr_linux.html">불멸의 설치 세팅법 - 리눅스</a></li>
 </ul>
 </li>
 <li>적용 사례 소개
