@@ -76,7 +76,7 @@ viewport The camera's rendering viewport.
 
 _description: _
 
-set the matrices that the camera will use.
+This function pushes the cameras view and projection matrix to a stack of transformations so that draw calls done within begin() and end() will appear to be viewed from the cameras perspective.
 
 
 
@@ -256,7 +256,7 @@ Ends rendering with the camera.
 
 _description: _
 
-set the matrices
+This removes the cameras view and projection matrix transformations from the stack so that draw calls performed afterward will not be viewed from the perspective of the camera. This is equivalent to performing an openGL PopMatrix call.
 
 
 
@@ -863,6 +863,8 @@ and returns (also as an ofVec3f) the 3D world coordinates of that point.
 You'll also need to specify a Z value when providing your screen point.
 This Z value is interpreted as a distance into or away from the screen.
 
+It's important note that if you use the values from this function in a draw call within a cam.begin()...cam.end() section you are transforming the point twice, once from screenToWorld and the second by cam so you may
+not get the results you expect. 
 
 Parameters:
 ScreenXYZ A point on your screen, whose 3D world coordinates you wish to know.
@@ -1346,6 +1348,8 @@ Takes an (X,Y,Z) point in your 3D world, encoded as an ofVec3f,
 and returns the location (also as an ofVec3f) where this point would
 appear on your (two-dimensional) display. The screen position's "Z
 coordinate" is set to be the same as your camera's.
+
+It's important note that if you use the values returned by this function to draw content to the screen within a cam.begin()...cam.end() section then you are transforming the point twice, once from worldToScreen and the second by cam so you may not get the results you expect. It is recommended to use the values from this function outside of cam.begin()...cam.end().
 
 
 Parameters:
