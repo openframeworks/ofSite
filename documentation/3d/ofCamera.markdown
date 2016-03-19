@@ -76,7 +76,7 @@ viewport The camera's rendering viewport.
 
 _description: _
 
-set the matrices that the camera will use.
+This function pushes the cameras view and projection matrix to a stack of transformations so that draw calls done within begin() and end() will appear to be viewed from the cameras perspective.
 
 
 
@@ -256,7 +256,7 @@ Ends rendering with the camera.
 
 _description: _
 
-set the matrices
+This removes the cameras view and projection matrix transformations from the stack so that draw calls performed afterward will not be viewed from the perspective of the camera. This is equivalent to performing an openGL PopMatrix call.
 
 
 
