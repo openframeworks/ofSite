@@ -32,9 +32,7 @@
 
 ## Raspberry PI 2
 
-The Raspberry PI 2 chip has armv7 architecture but the officially supported distribution, Raspbian, is compiled with armv6 settings so using it with armv7 is not recomended. Archlinux and others come compiled with armv7 flags and should work, but are not officially supported at the moment. Here's a [guide to install openFrameworks armv7 on Archlinux on the RPI2](raspberrypi/raspberry-pi-getting-started-archlinux) but most people have reported problems with it. If you manage to make it work without problem please report it on a github issue or send a pull request with your fixes.
-
-
+라즈베리파이 2는 armv7 아키텍쳐를 사용하지만 공식적으로 지원되는 배포판은 armv6 세팅으로 컴파일된 Raspbian이므로, Raspbian을 사용하는것은 권장되지 않습니다. 아키리눅스와 armv7 플래그로 컴파일된 다른 배포판을 사용하면 잘 동작하지만 이는 현재로써는 공식적인 지원은 아닙니다. [라즈베리파이2에 아키리눅스와 armv7 오픈프레임웍스를 설치하기 가이드](../raspberrypi/raspberry-pi-getting-started-archlinux)가 있습니다만 사용자의 대부분으로부터 문제가 보고되어 왔습니다. 혹시 문제없이 사용하는 방법을 알고 계신다면 깃허브에 이슈로 알려주시거나 해결 방법을 pull reauest로 작성해주십시오. 
 
 -------------------------------
 
