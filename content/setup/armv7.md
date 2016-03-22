@@ -32,7 +32,7 @@ Now you can compile applications:
 
 ## Raspberry PI 2
 
-The Raspberry PI 2 chip has armv7 architecture but the officially supported distribution, Raspbian, is compiled with armv6 settings so using it with armv7 is not recomended. Archlinux and others come compiled with armv7 flags and should work, but are not officially supported at the moment. Here's a [guide to install openFrameworks armv7 on Archlinux on the RPI2](raspberrypi/raspberry-pi-getting-started-archlinux) but most people have reported problems with it. If you manage to make it work without problem please report it on a github issue or send a pull request with your fixes.
+The Raspberry PI 2 chip has armv7 architecture but the officially supported distribution, Raspbian, is compiled with armv6 settings so using it with armv7 is not recomended. Archlinux and others come compiled with armv7 flags and should work, but are not officially supported at the moment. Here's a [guide to install openFrameworks armv7 on Archlinux on the RPI2](../raspberrypi/raspberry-pi-getting-started-archlinux) but most people have reported problems with it. If you manage to make it work without problem please report it on a github issue or send a pull request with your fixes.
 
 
 
