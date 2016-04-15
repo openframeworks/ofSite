@@ -32,7 +32,7 @@ This site is based on [nikola](https://getnikola.com). There's some scripts in t
   sudo easy_install pip
   brew linkapps python3
   ```
-  and add this to your .basrc or zhsrc file
+  and add this to your .basrc or .zshrc file
   `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
 
 - ./auto_build.sh will run nikola and build the web every time any file is modified. If, on osx, you receive this error: `FileNotFoundError: [Errno 2] No such file or directory: 'asciidoctor'`, you need to install asciidoctor as explained [here](http://asciidoctor.org/docs/install-asciidoctor-macosx/), and then run the script again.
