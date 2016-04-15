@@ -34,7 +34,7 @@
   brew linkapps python3
   ```
 
-  그리고 나서 .bashrc 또는 zhsrc 파일에 아래 코드를 추가해주시면 됩니다.
+  그리고 나서 .bashrc 또는 .zshrc 파일에 아래 코드를 추가해주시면 됩니다.
 
   `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
 
