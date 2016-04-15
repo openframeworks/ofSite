@@ -63,5 +63,5 @@
 
     ![Image Title](filename.png "alt text")
 
-도큐먼트 공헌에 관한 최종 설명은, [문서 공헌하기](http://openframeworks.cc/ko/tutorials/10_developers/003_contributing_to_the_documentation/) 튜토리얼을 참고해주시기 바랍니다.
+도큐먼트 공헌에 관한 최종 설명은, [문서 공헌하기](http://openframeworks.cc/ko/learning/08_other/contributing/) 튜토리얼을 참고해주시기 바랍니다.
 
