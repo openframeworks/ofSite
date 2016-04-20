@@ -1867,7 +1867,7 @@ to represent a pure direction (heading).
 
 ~~~~{.cpp}
 ofVec3f v1(5, 0, 0);
-v1.normalize(); // v2 is now (1, 0, 0)
+v1.normalize(); // v1 is now (1, 0, 0)
 ofVec3f v2(5, 0, 5);
 v2.normalize(); // v2 is now (√2, 0, √2)
 ~~~~
