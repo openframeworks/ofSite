@@ -138,11 +138,11 @@ by Emily Gobeille and Theo Watson
 
 #### Interactive Wall at UD
 
-> Dayton 대학의 입학센터 있는 36피트의 벽은 대학내의 유망한 학생들의 일상을 담은 비디오를 보여준다. 벽에 비친 화면에는 생성된 패턴 그래픽이 벽을 마주본 사람들에 반응하여 계속 변화한다.
+> Dayton 대학의 입학센터 있는 36피트의 벽은 대학내의 유망한 학생들의 일상을 담은 비디오를 보여줍니다. 벽에 비친 화면에는 생성된 패턴 그래픽이 벽을 마주본 사람들에 반응하여 계속 변화합니다.
 
-> 화면에 가득찬 정육면체는 파도 모양으로 애니메이션되고, 관객의 존재 유무에 따라 각각이 회전하며 학생들의 경험을 담은 영상이 드러난다. 관객들은 벽 주변을 돌아다니며 각각의 다른 영상들의 내용을 찾아내고, 탐색할 수 있다. 관객들이 함께 서있는 경우 그들의 실루엣은 하나가 되서 더 많은 영상을 찾아낼 수 있다. 만약 벽 앞에 아무도 없을경우, 작품은 타이포그래픽 애니메이션을 동적으로 애니메이션되는 그래픽 패턴을 덮어 보여주게 된다.
+> 화면에 가득찬 정육면체는 파도 모양으로 애니메이션되고, 관객의 존재 유무에 따라 각각이 회전하며 학생들의 경험을 담은 영상이 드러납니다. 관객들은 벽 주변을 돌아다니며 각각의 다른 영상들의 내용을 찾아내고, 탐색할 수 있습니다. 관객들이 함께 서있는 경우 그들의 실루엣은 하나가 되서 더 많은 영상을 찾아낼 수 깄습니다.  만약 벽 앞에 아무도 없을경우, 작품은 타이포그래픽 애니메이션을 동적으로 애니메이션되는 그래픽 패턴이 덮혀 보여집니다.
 
-디자인과 개발에 대한 더 많은 영상과 자세한내용들은 [케이스 스터디](the http://www.flightphase.com/main_wp/case-studies/ud-interactive-wall)를 보면된다.
+디자인과 개발에 대한 더 많은 영상과 자세한 내용들은 [사례연구](the http://www.flightphase.com/main_wp/case-studies/ud-interactive-wall)에서 보실 수 있습니다.
 
 <iframe src="http://player.vimeo.com/video/27500054?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
@@ -151,7 +151,7 @@ by Emily Gobeille and Theo Watson
 #### Scramble Suit
 by Arturo Castro and Kyle McDonald
 
-오픈프레임웍스의 장점중 하나는 C++로 작성된 대부분의 라이브러리와 쉽게 통합 할 수 있다는 점 입니다. 이러한 장점때문에 Arturo 와 Kyle은 Kyle이 "Scramble Suit"라고 이름붙인  필립K 딕의 1977년작 소설 "A Scanner Darkly"에서 등장한 허구의 얼굴 교체 기술을 위해 [Face Tracker library by Jason Saragih](http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html)을 사용할 수 있었습니다. "A Scanner Darkly"는  착용자를 기억하지 못하게 하고 설명을 불가능하게 하는 효과적인 망토 입니다.
+오픈프레임웍스의 장점중 하나는 C++로 작성된 대부분의 라이브러리와 쉽게 통합 할 수 있다는 점 입니다. 이러한 장점때문에 Arturo 와 Kyle은 Kyle이 "Scramble Suit" 라고 이름붙인 필립K 딕의 1977년작 소설 "A Scanner Darkly"에서 등장한 허구의 얼굴 교체 기술을 위해 [Face Tracker library by Jason Saragih](http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html)을 사용할 수 있었습니다. "A Scanner Darkly"는 착용자를 기억하지 못하게 하고 설명을 불가능하게 하는 효과적인 망토 입니다.
 
 <iframe src="http://player.vimeo.com/video/29391633?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
