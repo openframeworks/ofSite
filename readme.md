@@ -73,4 +73,4 @@ Images are added using normal markdown format:
 
     ![Image Title](filename.png "alt text")
 
-For a more complete description of how to contribute documentation, please see the [Contributing to the Documentation ](http://www.openframeworks.cc/tutorials/developers/003_contributing_to_the_documentation.html) tutorial.
+For a more complete description of how to contribute documentation, please see the [Contributing to the Documentation ](http://openframeworks.cc/learning/08_other/contributing/) tutorial.
