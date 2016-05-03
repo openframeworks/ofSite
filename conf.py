@@ -184,34 +184,34 @@ NAVIGATION_LINKS = {
 
 EXTERNAL_LINKS = {
     DEFAULT_LANG: (
-        ("https://forum.openframeworks.cc", "Forums"),
-		("https://github.com/openframeworks", "Github"),
-        ("http://ofxaddons.com", "Addons"),
-		("http://openframeworks.slack.com", "Slack"),
-        ("http://blog.openframeworks.cc/", "Blog"),
+        ("https://forum.openframeworks.cc", "forums"),
+		("https://github.com/openframeworks", "github"),
+        ("http://ofxaddons.com", "addons"),
+		("http://openframeworks.slack.com", "slack"),
+        ("http://blog.openframeworks.cc/", "blog"),
     ),
 
     "ja": (
-        ("https://forum.openframeworks.cc", "Forums"),
-        ("https://github.com/openframeworks", "Github"),		
-        ("http://ofxaddons.com", "Addons"),
-        ("http://blog.openframeworks.cc/", "Blog"),
+        ("https://forum.openframeworks.cc", "forums"),
+        ("https://github.com/openframeworks", "github"),		
+        ("http://ofxaddons.com", "addons"),
+        ("http://blog.openframeworks.cc/", "blog"),
     ),
 
     "ko": (
         ("https://forum.openframeworks.cc", "포럼(EN)"),
         ("http://forum.openframeworks.kr", "포럼(KR)"),
-        ("https://github.com/openframeworks", "Github"),
+        ("https://github.com/openframeworks", "github"),
         ("http://ofxaddons.com", "애드온"),
-        ("http://forum.openframeworks.kr/t/slack/32", "Slack"),
+        ("http://forum.openframeworks.kr/t/slack/32", "slack"),
         ("http://blog.openframeworks.cc/", "블로그"),
     ),
     "zh_cn": (
         ("https://forum.openframeworks.cc", "论坛(EN)"),
         ("http://forum.openframeworks.cn", "论坛(CN)"),
-        ("https://github.com/openframeworks", "Github"),
+        ("https://github.com/openframeworks", "github"),
         ("http://ofxaddons.com", "插件"),
-        ("http://forum.openframeworks.kr/t/slack/32", "Slack"),
+        ("http://forum.openframeworks.kr/t/slack/32", "slack"),
         ("https://guest.jianliao.com/rooms/d9640eb07f", "翻译讨论群"),
         ("http://blog.openframeworks.cc/", "博客"),
     ),
