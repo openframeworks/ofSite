@@ -184,15 +184,15 @@ NAVIGATION_LINKS = {
 
 EXTERNAL_LINKS = {
     DEFAULT_LANG: (
-        ("https://forum.openframeworks.cc", "forums"),
-		("https://github.com/openframeworks", "github"),
+        ("https://forum.openframeworks.cc", "forum"),
+	("https://github.com/openframeworks", "github"),
         ("http://ofxaddons.com", "addons"),
-		("http://openframeworks.slack.com", "slack"),
+	("http://openframeworks.slack.com", "slack"),
         ("http://blog.openframeworks.cc/", "blog"),
     ),
 
     "ja": (
-        ("https://forum.openframeworks.cc", "forums"),
+        ("https://forum.openframeworks.cc", "forum"),
         ("https://github.com/openframeworks", "github"),		
         ("http://ofxaddons.com", "addons"),
         ("http://blog.openframeworks.cc/", "blog"),
