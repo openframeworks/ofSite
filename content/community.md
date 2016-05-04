@@ -47,6 +47,7 @@
 	<li><a href="https://www.instagram.com/explore/tags/openframeworks/">Instagram</a></li>
     <li><a href="https://twitter.com/search?f=tweets&vertical=default&q=%23openframeworks">Twitter</a></li>
 	<li><a href="https://www.behance.net/search?content=projects&sort=published_date&time=all&search=openframeworks">Behance</a></li>
+	<li><a href="https://www.flickr.com/groups/openframeworks/">Flickr</a></li>	
 	<li><a href="http://www.creativeapplications.net/category/openframeworks/">Creative Applications Network</a></li>
 </ul></p>	
 	
