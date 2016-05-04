@@ -185,37 +185,32 @@ NAVIGATION_LINKS = {
 EXTERNAL_LINKS = {
     DEFAULT_LANG: (
         ("https://forum.openframeworks.cc", "forum"),
+	("https://github.com/openframeworks", "github"),
         ("http://ofxaddons.com", "addons"),
-        ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "mailing list"),
-        ("http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39", "IRC"),
+	("http://openframeworks.slack.com", "slack"),
         ("http://blog.openframeworks.cc/", "blog"),
     ),
 
     "ja": (
         ("https://forum.openframeworks.cc", "forum"),
+        ("https://github.com/openframeworks", "github"),		
         ("http://ofxaddons.com", "addons"),
-        ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "mailing list"),
-        ("http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39", "IRC"),
         ("http://blog.openframeworks.cc/", "blog"),
     ),
 
     "ko": (
         ("https://forum.openframeworks.cc", "포럼(EN)"),
         ("http://forum.openframeworks.kr", "포럼(KR)"),
-        ("http://ofxaddons.com", "애드온"),
         ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "메일링 리스트"),
+        ("http://ofxaddons.com", "애드온"),
         ("http://forum.openframeworks.kr/t/slack/32", "slack"),
         ("http://blog.openframeworks.cc/", "블로그"),
     ),
     "zh_cn": (
         ("https://forum.openframeworks.cc", "论坛(EN)"),
         ("http://forum.openframeworks.cn", "论坛(CN)"),
-        ("http://ofxaddons.com", "插件"),
         ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "邮件列表"),
+        ("http://ofxaddons.com", "插件"),
         ("http://forum.openframeworks.kr/t/slack/32", "slack"),
         ("https://guest.jianliao.com/rooms/d9640eb07f", "翻译讨论群"),
         ("http://blog.openframeworks.cc/", "博客"),
