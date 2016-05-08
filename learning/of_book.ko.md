@@ -58,7 +58,7 @@
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/threads.html">스레드</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/memory.html">C++의 메모리</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/stl_vector.html">벡터 소개</a></li>
-<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/stl_map.html">Map과 함께 놀아봅시다, 정확히 stl::map 말이죠</a></li>
+<li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/stl_map.html">Map과 함께 놀아봅시다, 정확히 std::map 말이죠</a></li>
 <li><a target="_blank" href="http://openframeworks.cc/ofBook/chapters/c++11.html">C++ 11</a></li>
 </ul>
 </li>
