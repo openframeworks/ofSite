@@ -40,6 +40,7 @@ For the sake of example, draw a circle in the  ```draw()``` function and pass th
 
 	void ofApp:draw(){
 		ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, radius);
+		gui.draw();
 	}
 
 When you run the app, move the radius slider back and forth to change the size of the circle. 
