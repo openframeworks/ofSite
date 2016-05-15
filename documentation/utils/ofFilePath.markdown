@@ -197,7 +197,10 @@ _inlined_description: _
 
 _description: _
 
-
+~~~~{.cpp}
+string baseName = ofFilePath::getBaseName("/path/to/your-file.ext");
+// baseName = "your-file"
+~~~~
 
 
 
@@ -377,7 +380,10 @@ _inlined_description: _
 
 _description: _
 
-
+~~~~{.cpp}
+string ext = ofFilePath::getFileExt("/path/to/your-file.jpg");
+// ext = "jpg"
+~~~~
 
 
 
@@ -413,7 +419,10 @@ _inlined_description: _
 
 _description: _
 
-
+~~~~{.cpp}
+string fN = ofFilePath::getFileName("/path/to/your-file.ext");
+// fN = "your-file.ext"
+~~~~
 
 
 
