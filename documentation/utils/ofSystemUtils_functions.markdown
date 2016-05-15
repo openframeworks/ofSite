@@ -50,7 +50,7 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFileDialogResult ofSystemLoadDialog(windowTitle = "", bFolderSelection = false, defaultPath = "")
+###[ofFileDialogResult](ofFileDialogResult) ofSystemLoadDialog(windowTitle = "", bFolderSelection = false, defaultPath = "")
 
 <!--
 _syntax: ofSystemLoadDialog(windowTitle = "", bFolderSelection = false, defaultPath = "")_
@@ -77,7 +77,13 @@ _inlined_description: _
 
 _description: _
 
-
+~~~~{.cpp}
+ofFileDialogResult result = ofSystemLoadDialog("Load file");
+if(result.bSuccess) {
+  string path = result.getPath();
+  // load your file at `path`
+}
+~~~~
 
 
 
@@ -85,7 +91,7 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFileDialogResult ofSystemSaveDialog(defaultName, messageName)
+###[ofFileDialogResult](ofFileDialogResult) ofSystemSaveDialog(defaultName, messageName)
 
 <!--
 _syntax: ofSystemSaveDialog(defaultName, messageName)_
@@ -112,7 +118,13 @@ _inlined_description: _
 
 _description: _
 
-
+~~~~{.cpp}
+ofFileDialogResult result = ofSystemSaveDialog("default.jpg", "Save");
+if(result.bSuccess) {
+  string path = result.getPath();
+  // save your file to `path`
+}
+~~~~
 
 
 
@@ -147,7 +159,7 @@ _inlined_description: _
 
 _description: _
 
-
+Shows a dialog for text input by the user.
 
 
 
