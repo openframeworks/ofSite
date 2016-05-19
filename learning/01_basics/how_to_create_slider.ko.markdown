@@ -40,6 +40,7 @@ xCode에서 여러분의 프로젝트를 열 때, gui 애드온의 소스파일�
 
 	void ofApp:draw(){
 		ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, radius);
+		gui.draw();
 	}
 
 앱을 실행하면, radius슬라이더를 앞뒤로 움직여 원의 크기를 변경시킬 수 있습니다.
