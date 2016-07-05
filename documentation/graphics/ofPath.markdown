@@ -51,7 +51,7 @@ for( int i = 0; i < 5; i++) {
 To use ofPolyline instances, simply set the mode to POLYLINES
 
 ~~~~{.cpp}
-path.setMode(POLYLINES);
+path.setMode(ofPath::POLYLINES);
 ~~~~
 
 
