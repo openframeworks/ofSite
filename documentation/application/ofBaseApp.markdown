@@ -526,7 +526,7 @@ moved with a button pressed
 
 _description: _
 
-This function gets called when the mouse is moving and the button is down. The button variable can be used to test against left or right button drags. You also receive the x and y coordinates of the mouse.
+This function gets called when the mouse is moving and the button is down. The button (left 0, center 1, right 2) variable can be used to test against left or right button drags. You also receive the x and y coordinates of the mouse.
 
 
 
@@ -822,7 +822,7 @@ Called on the active window when a mouse button is pressed
 
 _description: _
 
-This function gets called when the mouse is pushed down. The button (left, right, center) is passed in, along with the x and y coordinate.
+This function gets called when the mouse is pushed down. The button (left 0, center 1, right 2) is passed in, along with the x and y coordinate.
 
 
 
@@ -894,7 +894,7 @@ Called on the active window when a mouse button is released
 
 _description: _
 
-This function gets called when the mouse is released. The button (left, right, center) is passed in, along with the x and y coordinate.
+This function gets called when the mouse is released. The button  (left 0, center 1, right 2) is passed in, along with the x and y coordinate.
 
 
 
