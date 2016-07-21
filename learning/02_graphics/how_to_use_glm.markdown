@@ -93,7 +93,7 @@ std::vector<ofDefaultVec3>
 
 will be `std::vector<ofVec3f>` in legacy mode or `std::vector<glm::vec3>` in glm mode
 
-### Caveats when using ofNode
+### Caveats when using ofVec
 
 All the old ofVec (and matrices) classes autoconvert and can be created from glm so although everything in the core now returns or accepts as parameters glm you can still use ofVec even in pure glm mode:
 
