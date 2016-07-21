@@ -43,7 +43,7 @@ auto normals = mesh.getNormals();
 
 ### Methods names
 
-Most methods have the exact same name but without camel case and others are slightly different:
+Methods are now plain `c` functions. Most methods have the exact same name but without camel case and others are slightly different:
 
 ```c++
 v.length()
