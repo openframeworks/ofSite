@@ -1889,7 +1889,7 @@ _inlined_description: _
 Resamples the line based on the count passed in. The lower the
 count passed in, the more points will be eliminated.
 
-This doesn't add new points to the line.
+New points are added if necessary to match count.
 
 
 
@@ -1897,7 +1897,7 @@ This doesn't add new points to the line.
 
 _description: _
 
-This resamples the line based on the spacing passed in. The lower the count passed in, the more points will be eliminated. This doesn't add new points to the line though.
+This resamples the line based on the spacing passed in. The lower the count passed in, the more points will be eliminated. New points are added if necessary to match count.
 
 
 
