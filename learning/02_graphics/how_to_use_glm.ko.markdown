@@ -15,7 +15,6 @@
 이렇게 하면, ofPolyline과 ofMesh에서 glm은 비활성화됩니다.
 
 그렇지 않고, GLM를 사용하고 싶고, 오픈프레임웍스가 채택한 새 문법을 사용할 준비가 되신 분들이 있으시다면, 변경된 내용은 아래와 같습니다:
-Instead, if you want to use GLM and prepare yourself for what will be the future syntax adopted by openFrameworks, these are the things that are changed:
 
 ### 벡터의 선언
 
