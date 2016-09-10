@@ -1,6 +1,6 @@
 ---
-.. title: The new GLM syntax 
-.. summary: How to use glm vectors instead the legacy ones
+.. title: 새로운 GLM 문법 
+.. summary: 예전의 방법 대신 glm벡터를 사용하는 방법
 .. type: howto
 .. translator: Yi donghoon
 .. translator_site: http://icq4ever.net
