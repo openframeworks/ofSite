@@ -6,9 +6,9 @@ Qt Creator
 
 Since version 0.9.0 we have support for Qt Creator in Linux, Windows and OSX. This guide is based on Qt Creator 3.5.1 and a different version might have different steps to follow or not work as expected.
 
-You can download the most recent versions of Qt Creator from: [http://www.qt.io/download-open-source/#section-6](http://www.qt.io/download-open-source/#section-6)
+You can download recent versions of Qt Creator from: [http://www.qt.io/download-open-source/#section-6](http://www.qt.io/download-open-source/#section-6)
 
-Older releases can be downloaded from:
+Older releases can be downloaded here:
 [http://download.qt.io/official_releases/qtcreator/](http://download.qt.io/official_releases/qtcreator/)
 
 The current openFrameworks release (0.9.3) requires qtcreator 3.6.1. The nightly builds support version 4.1.
