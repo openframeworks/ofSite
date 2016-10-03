@@ -893,7 +893,7 @@ Draws the path at 0,0. Calling draw() also calls tessellate()
 
 _description: _
 
-Draws the path at 0,0. Calling draw() also calls tessllate().
+Draws the path at 0,0. Calling draw() also calls tessellate().
 
 
 
@@ -929,7 +929,7 @@ Draws the path at x,y. Calling draw() also calls tessellate()
 
 _description: _
 
-Draws the path at x,y. Calling draw() also calls tessllate().
+Draws the path at x,y. Calling draw() also calls tessellate().
 
 
 
