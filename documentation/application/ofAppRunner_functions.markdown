@@ -295,12 +295,16 @@ ie:
 
 //ofApp.h
 class ofApp: public ofBaseApp{
-   // ...
-   int someVar;
+    // ...
+    int someVar;
 }
+
 //myClass.cpp
+#include myClass.h
+#include "ofApp.h" // don't forget to add this line!
+
 void myClass::method(){
-   doSomething( ((ofApp*)ofGetAppPtr())->someVar );
+    ofLog() << "Value from main app: " << ((ofApp*)ofGetAppPtr())->someVariable;
 }
 ~~~~
 
