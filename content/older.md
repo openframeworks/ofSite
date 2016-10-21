@@ -8,6 +8,38 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**pre release v0.9.5** 
+
+windows: [msys2/qtcreator][196] | [visual studio 2015][197] 
+
+mac [x-code (10.7-10.10)][198]
+
+linux: [makefiles/qtcreator][199] | [(64 bit) makefiles/qtcreator][200]
+
+iOS: [iOS][201] 
+
+android: [Android][202]
+
+linux arm: [armv6][203] | [armv7][204]
+
+--------------------------------
+
+**pre release v0.9.4** 
+
+windows: [msys2/qtcreator][187] | [visual studio 2015][188] 
+
+mac [x-code (10.7-10.10)][189]
+
+linux: [makefiles/qtcreator][190] | [(64 bit) makefiles/qtcreator][191]
+
+iOS: [iOS][192] 
+
+android: [Android][193]
+
+linux arm: [armv6][194] | [armv7][195]
+
+--------------------------------
+
 **pre release v0.9.3** 
 
 windows: [msys2/qtcreator][178] | [visual studio 2015][179] 
@@ -492,3 +524,21 @@ changes: [changelog for 0.04][67]
 [184]: http://www.openframeworks.cc/versions/v0.9.3/of_v0.9.3_android_release.tar.gz
 [185]: http://www.openframeworks.cc/versions/v0.9.3/of_v0.9.3_linuxarmv6l_release.tar.gz
 [186]: http://www.openframeworks.cc/versions/v0.9.3/of_v0.9.3_linuxarmv7l_release.tar.gz
+[187]: http://www.openframeworks.cc/versions/v0.9.4/of_v0.9.4_msys2_release.zip
+[188]: http://www.openframeworks.cc/versions/v0.9.4/of_v0.9.4_vs_release.zip
+[189]: http://www.openframeworks.cc/versions/v0.9.4/of_v0.9.4_osx_release.zip
+[190]: http://www.openframeworks.cc/versions/v0.9.4/of_v0.9.4_linux_release.tar.gz
+[191]: http://www.openframeworks.cc/versions/v0.9.4/of_v0.9.4_linux64_release.tar.gz
+[192]: http://www.openframeworks.cc/versions/v0.9.4/of_v0.9.4_ios_release.zip
+[193]: http://www.openframeworks.cc/versions/v0.9.4/of_v0.9.4_android_release.tar.gz
+[194]: http://www.openframeworks.cc/versions/v0.9.4/of_v0.9.4_linuxarmv6l_release.tar.gz
+[195]: http://www.openframeworks.cc/versions/v0.9.4/of_v0.9.4_linuxarmv7l_release.tar.gz
+[196]: http://www.openframeworks.cc/versions/v0.9.5/of_v0.9.5_msys2_release.zip
+[197]: http://www.openframeworks.cc/versions/v0.9.5/of_v0.9.5_vs_release.zip
+[198]: http://www.openframeworks.cc/versions/v0.9.5/of_v0.9.5_osx_release.zip
+[199]: http://www.openframeworks.cc/versions/v0.9.5/of_v0.9.5_linux_release.tar.gz
+[200]: http://www.openframeworks.cc/versions/v0.9.5/of_v0.9.5_linux64_release.tar.gz
+[201]: http://www.openframeworks.cc/versions/v0.9.5/of_v0.9.5_ios_release.zip
+[202]: http://www.openframeworks.cc/versions/v0.9.5/of_v0.9.5_android_release.tar.gz
+[203]: http://www.openframeworks.cc/versions/v0.9.5/of_v0.9.5_linuxarmv6l_release.tar.gz
+[204]: http://www.openframeworks.cc/versions/v0.9.5/of_v0.9.5_linuxarmv7l_release.tar.gz
