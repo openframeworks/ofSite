@@ -12,12 +12,12 @@
 			</div>
 	</div>
 	% endif
-	
+
 
 	<!-- CLASSES -->
 
     <div class="documentation_index_group">
-        % for clazz in sorted(classes, key=lambda clazz: clazz.name):   
+        % for clazz in sorted(classes, key=lambda clazz: clazz.name):
         	% if clazz.visible and not clazz.advanced:
         	<div class="box">
         	<ul class="documentation_class">
@@ -29,7 +29,7 @@
                     <img src="/icons/functions.png" alt="Functions file"/>
                 % endif
                 </li>
-                
+
         	    <!-- class methods -->
                 <% prevmethod = "" %>
                 % for method in clazz.function_list:
@@ -42,11 +42,11 @@
                         <% prevmethod = method.name %>
                     % endif
                 % endfor
-                
-                
+
+
                 <!--hr/-->
-                
-                
+
+
         	    <!-- class variables -->
         	    % if hasattr(clazz,'var_list'):
                     % for variable in clazz.var_list:
@@ -59,13 +59,13 @@
                         % endif
                     % endfor
                 % endif
-                
-                
+
+
             <!--div-->
             </ul>
             </div>
             % endif
         % endfor
     </div>
-    
+
 </div>

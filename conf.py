@@ -185,37 +185,32 @@ NAVIGATION_LINKS = {
 EXTERNAL_LINKS = {
     DEFAULT_LANG: (
         ("https://forum.openframeworks.cc", "forum"),
+	("https://github.com/openframeworks", "github"),
         ("http://ofxaddons.com", "addons"),
-        ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "mailing list"),
-        ("http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39", "IRC"),
+	("http://openframeworks.slack.com", "slack"),
         ("http://blog.openframeworks.cc/", "blog"),
     ),
 
     "ja": (
         ("https://forum.openframeworks.cc", "forum"),
+        ("https://github.com/openframeworks", "github"),		
         ("http://ofxaddons.com", "addons"),
-        ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "mailing list"),
-        ("http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39", "IRC"),
         ("http://blog.openframeworks.cc/", "blog"),
     ),
 
     "ko": (
         ("https://forum.openframeworks.cc", "포럼(EN)"),
         ("http://forum.openframeworks.kr", "포럼(KR)"),
-        ("http://ofxaddons.com", "애드온"),
         ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "메일링 리스트"),
+        ("http://ofxaddons.com", "애드온"),
         ("http://forum.openframeworks.kr/t/slack/32", "slack"),
         ("http://blog.openframeworks.cc/", "블로그"),
     ),
     "zh_cn": (
         ("https://forum.openframeworks.cc", "论坛(EN)"),
         ("http://forum.openframeworks.cn", "论坛(CN)"),
-        ("http://ofxaddons.com", "插件"),
         ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "邮件列表"),
+        ("http://ofxaddons.com", "插件"),
         ("http://forum.openframeworks.kr/t/slack/32", "slack"),
         ("https://guest.jianliao.com/rooms/d9640eb07f", "翻译讨论群"),
         ("http://blog.openframeworks.cc/", "博客"),
@@ -1241,10 +1236,10 @@ DEMOTE_HEADERS = 0
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    "currentVersion": "0.9.3",
+    "currentVersion": "0.9.7",
     "breaking": False,
     "majorVersion": "0.9.0",
-    "olderVersion": "0.9.2",
+    "olderVersion": "0.9.6",
     "external_links": EXTERNAL_LINKS,
     "external_translations": {} if EXTERNAL_TRANSLATIONS==None else EXTERNAL_TRANSLATIONS,
 }

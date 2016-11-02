@@ -145,7 +145,7 @@ images.insert(map<string, ofTexture>::value_type("Paris", pImage));
 ### map에서 요소 삭제하기
 
 <!-- To delete an element from a map we use `erase` -->
-map에서 요소를 살제할려면, `erase`를 사용합니다.
+map에서 요소를 삭제할려면, `erase`를 사용합니다.
 
 ~~~~{.cpp}
 images.erase("London");

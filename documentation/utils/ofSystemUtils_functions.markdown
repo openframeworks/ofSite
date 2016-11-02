@@ -77,7 +77,15 @@ _inlined_description: _
 
 _description: _
 
+~~~~{.cpp}
+ofFileDialogResult result = ofSystemLoadDialog("Load file");
+if(result.bSuccess) {
+  string path = result.getPath();
+  // load your file at `path`
+}
+~~~~
 
+See also: [ofFileDialogResult](ofFileDialogResult).
 
 
 
@@ -112,8 +120,15 @@ _inlined_description: _
 
 _description: _
 
+~~~~{.cpp}
+ofFileDialogResult result = ofSystemSaveDialog("default.jpg", "Save");
+if(result.bSuccess) {
+  string path = result.getPath();
+  // save your file to `path`
+}
+~~~~
 
-
+See also: [ofFileDialogResult](ofFileDialogResult).
 
 
 

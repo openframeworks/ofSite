@@ -2027,8 +2027,8 @@ Example:
 ~~~~{.cpp}
 
 string filename;
-fileName = "screen1.png";
-ofSaveScreen(fileName);
+filename = "screen1.png";
+ofSaveScreen(filename);
 ~~~~
 
 

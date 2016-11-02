@@ -51,7 +51,7 @@ for( int i = 0; i < 5; i++) {
 To use ofPolyline instances, simply set the mode to POLYLINES
 
 ~~~~{.cpp}
-path.setMode(POLYLINES);
+path.setMode(ofPath::POLYLINES);
 ~~~~
 
 
@@ -893,7 +893,7 @@ Draws the path at 0,0. Calling draw() also calls tessellate()
 
 _description: _
 
-Draws the path at 0,0. Calling draw() also calls tessllate().
+Draws the path at 0,0. Calling draw() also calls tessellate().
 
 
 
@@ -929,7 +929,7 @@ Draws the path at x,y. Calling draw() also calls tessellate()
 
 _description: _
 
-Draws the path at x,y. Calling draw() also calls tessllate().
+Draws the path at x,y. Calling draw() also calls tessellate().
 
 
 

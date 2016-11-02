@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 OS=$(uname -s)
 PIP=pip
 if [ "$OS" == "Linux" ]; then
