@@ -11,7 +11,7 @@ You can download recent versions of Qt Creator from: [http://www.qt.io/download-
 Older releases can be downloaded here:
 [http://download.qt.io/official_releases/qtcreator/](http://download.qt.io/official_releases/qtcreator/)
 
-The current openFrameworks release (0.9.6) requires qtcreator 4.1.0.
+The current openFrameworks release (0.9.7) requires qtcreator 4.1.0.
 
 Linux
 -----
