@@ -170,7 +170,7 @@ Adds a child to the ofXml object. So if you have:
 you can add a path like so:
 
 ~~~~{.cpp}
-xml.addPath("pictures/picture/views");
+xml.addChild("pictures/picture/views");
 ~~~~
 
 and that would create:
@@ -235,7 +235,7 @@ Adds a child to the ofXml object. So if you have:
 you can add a path like so:
 
 ~~~~{.cpp}
-xml.addPath("pictures/picture/views", "100");
+xml.addValue("pictures/picture/views", "100");
 ~~~~
 
 and that would create:
