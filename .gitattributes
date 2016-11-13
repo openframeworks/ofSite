@@ -1,2 +1,0 @@
-# this is to avoid problems between the python parser and the github editor
-*.markdown text eol=lf

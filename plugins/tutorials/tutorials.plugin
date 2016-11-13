@@ -1,9 +1,0 @@
-[Core]
-Name = tutorials
-Module = tutorials
-
-[Documentation]
-Author = Arturo Castro
-Version = 0.1
-Website = http://openframeworks.cc
-Description = Generate the openframeworks tutorials
