@@ -1,0 +1,1 @@
+This section contains tutorials about specific tasks in openFrameworks. If you want to contribute one, you can do it through the <a href="http://github.com/openframeworks/ofSite">ofSite repository in github</a>. Add your tutorial in markdown format inside the tutorials folder.

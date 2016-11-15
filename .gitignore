@@ -1,0 +1,9 @@
+*~
+*.pyc
+.DS_Store
+output
+__pycache__
+cache
+.doit.db
+.doit.db.db
+/nikola
