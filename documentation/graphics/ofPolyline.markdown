@@ -18,15 +18,36 @@ _extends: _
 ##Description
 
 ofPolyLine allows you to combine multiple points into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other ofPolyline instances. It is less complex than the [ofPath](ofPath.html) and generally represents a single line or vector shape rather than multiple lines or shapes.
-
-You can add points to an ofPolyline by adding vertices:
+The line described by `ofPolyline` is composed by the vectors that it contains.
+By default, the constructor of ofPolyline accepts a 3D vector of type `glm::vec3`. For example, to add create a `ofPolyline` with 2 vectors, you simply have to:
+~~~~{.cpp}
+ofPolyline line;
+vector <glm::vec3> vecs;
+vec.push_back(glm::vec3(0, 0, 200));
+vec.push_back(gml::vec3(100, 100, 50));
+line.addVertices(vecs);
+~~~~
+If you want to use 2d vectors, you have first have define it.
+~~~~{.cpp}
+ofPolyline<glm::vec2> polyline2(vecs);
+vector <glm::vec2> vecs;
+vec.push_back(glm::vec2(0, 0));
+vec.push_back(gml::vec2(100, 100));
+polyline2.addVertices(vecs);
+~~~~
+or
+~~~~{.cpp}
+ofPolyline<ofVec2f> polyline2(vecs);
+~~~~
+You can add points to an ofPolyline by adding vertices or points:
 ~~~~{.cpp}
 float i = 0;
+ofPolyline<ofVec2f> line(vecs);
 while (i < TWO_PI) { // make a heart
 	float r = (2-2*sin(i) + sin(i)*sqrt(abs(cos(i))) / (sin(i)+1.4)) * -80;
 	float x = ofGetWidth()/2 + cos(i) * r;
 	float y = ofGetHeight()/2 + sin(i) * r;
-	line.addVertex(ofVec2f(x,y));
+	line.addVertex(ofVec2(x,y));
 	i+=0.005*HALF_PI*0.5;
 }
 line.close(); // close the shape
