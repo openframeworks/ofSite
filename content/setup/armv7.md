@@ -38,6 +38,13 @@ The Raspberry PI 2 chip has armv7 architecture but the officially supported dist
 
 -------------------------------
 
+## C.H.I.P.
+
+The C.H.I.P. singleboard computer runs a version of Debian but as of OF0.9.8 graphics related conflicts occur when using the standard debian install_dependencies script.  Additionally, Poco needs to be manually rebuilt using the apothacery. An installation guide and modified dependency script is available [here.](https://github.com/zealtv/ofInstallChip)
+
+
+-------------------------------
+
 
 ## Headless applications
 
