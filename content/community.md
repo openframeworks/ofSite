@@ -11,10 +11,10 @@
 <p>The core of the openFrameworks community is centered around two areas:</p>
 
 <h3>Forums</h3>
-<p>The <strong><a href="">openFrameworks forums</a></strong> are the online home for the community. This should be the first place to visit if you have a question about openFrameworks, want to meet other users, or are looking to share your knowledge and help others learn about the framework.</p>
+<p>The <strong><a href="https://forum.openframeworks.cc/">openFrameworks forums</a></strong> are the online home for the community. This should be the first place to visit if you have a question about openFrameworks, want to meet other users, or are looking to share your knowledge and help others learn about the framework.</p>
  
 <h3>Github</h3>
-<p>The <strong><a href="">openFramework's Github repository</a></strong> is the primary place for discussing and coordinating development and contributions to the project's code, documentation and website. It is the place to visit if you think you have run into a bug, have some ideas / requests for features or want to contribute directly to the project.</p>
+<p>The <strong><a href="https://github.com/openframeworks/">openFramework's Github repository</a></strong> is the primary place for discussing and coordinating development and contributions to the project's code, documentation and website. It is the place to visit if you think you have run into a bug, have some ideas / requests for features or want to contribute directly to the project.</p>
 
 <h2>Contribute</h2>
 <p>The openFrameworks community is always welcoming new developers, designers, writers, event organizers, and general enthusiasts to help build a better experience. Check out the following resources on how to get involved.</p>
