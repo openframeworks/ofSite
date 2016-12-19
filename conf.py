@@ -193,7 +193,7 @@ EXTERNAL_LINKS = {
 
     "ja": (
         ("https://forum.openframeworks.cc", "forum"),
-        ("https://github.com/openframeworks", "github"),		
+        ("https://github.com/openframeworks", "github"),
         ("http://ofxaddons.com", "addons"),
         ("http://blog.openframeworks.cc/", "blog"),
     ),
@@ -1236,10 +1236,10 @@ DEMOTE_HEADERS = 0
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    "currentVersion": "0.9.7",
+    "currentVersion": "0.9.8",
     "breaking": False,
     "majorVersion": "0.9.0",
-    "olderVersion": "0.9.6",
+    "olderVersion": "0.9.7",
     "external_links": EXTERNAL_LINKS,
     "external_translations": {} if EXTERNAL_TRANSLATIONS==None else EXTERNAL_TRANSLATIONS,
 }
