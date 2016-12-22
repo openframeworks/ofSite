@@ -11,7 +11,7 @@ You can download recent versions of Qt Creator from: [http://www.qt.io/download-
 Older releases can be downloaded here:
 [http://download.qt.io/official_releases/qtcreator/](http://download.qt.io/official_releases/qtcreator/)
 
-The current openFrameworks release (0.9.7) requires qtcreator 4.1.0.
+The current openFrameworks release (0.9.8) requires qtcreator 4.1.0.
 
 Linux
 -----
@@ -20,7 +20,7 @@ Before using OF in linux you need to run some install scripts, follow the instru
 
 In linux even if Qt Creator is available in the official repositories for your distributions, it's recommended to install qtcreator from their webpage instead. The one that comes with the distribution (at least in ubuntu) might be outdated and installing the one from the webpage you'll get support for the clang plugin which analizes the code while you type marking any errors more accurately than the default qtcreator static analizer. 
 
-Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download, you can run the install_template.sh script in scripts/qtcreator and it'll install everything for you.
+Once installed you can install the Qt Creator plugin for openFrameworks that comes with the OF download, you can run the `install_template.sh` script in `scripts/qtcreator` and it'll install everything for you.
 
 Windows
 ----
