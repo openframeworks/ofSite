@@ -24,7 +24,7 @@ By default, the constructor of ofPolyline accepts a 3D vector of type `glm::vec3
 ofPolyline line;
 vector <glm::vec3> vecs;
 vec.push_back(glm::vec3(0, 0, 200));
-vec.push_back(gml::vec3(100, 100, 50));
+vec.push_back(glm::vec3(100, 100, 50));
 line.addVertices(vecs);
 ~~~~
 If you want to use 2d vectors, you have first have define it.
@@ -32,7 +32,7 @@ If you want to use 2d vectors, you have first have define it.
 ofPolyline<glm::vec2> polyline2(vecs);
 vector <glm::vec2> vecs;
 vec.push_back(glm::vec2(0, 0));
-vec.push_back(gml::vec2(100, 100));
+vec.push_back(glm::vec2(100, 100));
 polyline2.addVertices(vecs);
 ~~~~
 or
