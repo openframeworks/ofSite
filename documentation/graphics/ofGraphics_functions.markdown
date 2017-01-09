@@ -4075,7 +4075,7 @@ void ofApp::draw(){
     ofPushMatrix();             // push the current coordinate position
     ofRotateX(90);              // change the coordinate system
     ofDrawRea10,10,40,40);      // draw a rect
-    ofPopMatrix()               // recall the pushed coordinate position
+    ofPopMatrix();              // recall the pushed coordinate position
     ofDrawCircle(10, 10, 5);    // draw a circle
 }
 ~~~~
@@ -4094,7 +4094,7 @@ void ofApp::draw(){
     ofPushMatrix();        // push the current coordinate position
     ofRotateX(90);         // change the coordinate system
     ofDrawRectangle(10,10,40,40);    // draw a rect
-    ofPopMatrix()          // recall the pushed coordinate position
+    ofPopMatrix();         // recall the pushed coordinate position
 }
 ~~~~
 
