@@ -17,7 +17,7 @@ sudo ./install_dependencies.sh
 
 Next, if you want to use some formats like mp3, you'll need to run the install_codecs script: it's in the same folder and is run the same way as the install_dependencies one. We separate them because mp3 and some other formats installed by the script might be protected by patents in some countries and could be problematic to use in commercial work. Also, this might help those Linux users that don't want to use proprietary codecs.
 
-Lastly, you'll also need to download required libraries with the scriptal:
+Lastly, you'll also need to download required libraries with the script:
 ```sh
 cd OF/scripts/linux
 ./download_libs
