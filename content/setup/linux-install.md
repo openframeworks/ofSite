@@ -42,7 +42,7 @@ make Run
 
 Or use any of the officially supported IDEs: [qtcreator](../qtcreator/) or [eclipse](../eclipse/) both IDEs have plugins that allow to create new projects, import existing ones, add addons to them.
 
-If you want to install the project generator, a tool that allows to create and update an OF project, you'll need to run one last script:
+If you want to install the project generator, a tool that allows to create and update an OF project, you'll need to run one last script. Make sure to have cloned the repo recursively!
 
 ```sh
 cd OF/scripts/linux
