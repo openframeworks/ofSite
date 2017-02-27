@@ -22,21 +22,22 @@ Installation
 
 <h3>Install Android Studio and the SDK</h3>
 
-Download and install Android Studio from http://tools.android.com/download/studio/stable (you need Android Studio 1.0 or higher). It should come with (or automatically install) a recent SDK, though you can customize the SDK version later from within Android Studio using **Tools ➞ Android ➞ SDK Manager**.
+Download and install Android Studio from http://tools.android.com/download/studio/stable (you need Android Studio 2.2.3 or higher). It should come with (or automatically install) a recent SDK, though you can customize the SDK version later from within Android Studio using **Tools ➞ Android ➞ SDK Manager**.
 
 In the event that Android Studio does not come with an SDK, you can install it from http://developer.android.com/sdk/index.html (under "Get the SDK for an existing IDE").
 
+You will need to download and install Android-Platform-18 and android build tools version 25.0.2.  
+
 <h3>Install the Android NDK</h3>
 
-This is the C/C++ compiler, headers and libraries for Android. OF 0.9.0 has been tested with the NDK version r10e, newer versions might work but it's not guaranteed.
+This is the C/C++ compiler, headers and libraries for Android. OF 0.10.0 has been tested with the NDK version r12b.
 
 https://developer.android.com/ndk/downloads/index.html
 
-- OS X: http://dl.google.com/android/ndk/android-ndk-r12b-darwin-x86_64.bin
-- Linux 32: http://dl.google.com/android/ndk/android-ndk-r12b-linux-x86.bin
-- Linux 64: http://dl.google.com/android/ndk/android-ndk-r12b-linux-x86_64.bin
-- Windows 32: http://dl.google.com/android/ndk/android-ndk-r12b-windows-x86.exe
-- Windows 64: http://dl.google.com/android/ndk/android-ndk-r12b-windows-x86_64.exe
+- OS X: https://dl.google.com/android/repository/android-ndk-r12b-darwin-x86_64.zip
+- Linux 64: https://dl.google.com/android/repository/android-ndk-r12b-linux-x86_64.zip
+- Windows 32: https://dl.google.com/android/repository/android-ndk-r12b-windows-x86.zip
+- Windows 64: https://dl.google.com/android/repository/android-ndk-r12b-windows-x86_64.zip
 
 <h3>Download openFrameworks</h3>
 
