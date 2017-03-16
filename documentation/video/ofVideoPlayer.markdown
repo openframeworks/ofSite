@@ -1786,7 +1786,7 @@ _inlined_description: _
 
 
 _description: _
-Choose from OF_PIXELS_RGB or OF_PIXELS_RGBA
+OSX: Choose from OF_PIXELS_RGB or OF_PIXELS_RGBA
 
 
 
