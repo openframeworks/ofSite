@@ -38,7 +38,7 @@ Setup your panel named 'gui' and add the radius slider using ```gui.add()```. He
 For the sake of example, draw a circle in the  ```draw()``` function and pass the variable 'radius' as the third parameter. 
 
 
-	void ofApp:draw(){
+	void ofApp::draw(){
 		ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, radius);
 		gui.draw();
 	}
