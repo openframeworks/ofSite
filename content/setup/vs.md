@@ -33,5 +33,5 @@ There's more information in the [Visual Studio Gallery page](https://visualstudi
 
 <iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-[0]: https://www.visualstudio.com/
+[0]: https://www.microsoft.com/en-us/download/details.aspx?id=48146
 [1]: http://filehippo.com/download_klite_codec_pack/67445/
