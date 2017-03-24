@@ -12,7 +12,7 @@ Setting up openFrameworks with Android Studio is fairly straightforward. The bas
 
 - Install latest version of [Android Studio](https://developer.android.com/studio/index.html) (Tested on version 2.2)
 - Download latest openFrameworks from the download page or from git
-- Download the Android NDK version r12b: [Windows NDK](https://dl.google.com/android/repository/android-ndk-r12b-windows-x86_64.zip) [Linux NDK](https://dl.google.com/android/repository/android-ndk-r12b-linux-x86_64.zip) [OSX NDK](https://dl.google.com/android/repository/android-ndk-r12b-darwin-x86_64.zip)
+- Download the Android NDK version r12b: [Windows](https://dl.google.com/android/repository/android-ndk-r12b-windows-x86_64.zip) [Linux](https://dl.google.com/android/repository/android-ndk-r12b-linux-x86_64.zip) [OSX](https://dl.google.com/android/repository/android-ndk-r12b-darwin-x86_64.zip)
 - Use project generator if you got openFrameworks from git, or project files are missing to generate Android Studio project files
 - In Android Studio, use **Open an existing Android Studio project** and select an openFrameworks example from the examples/android folder
 - It will ask you for NDK location, input the location of NDK you downloaded.
