@@ -1,6 +1,7 @@
 ## -*- coding: utf-8 -*-
 .. title: android studio
-Android
+
+Android Studio
 =======
 
 The Android distribution of openFrameworks is setup to work with Android Studio IDE.
