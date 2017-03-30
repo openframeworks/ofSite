@@ -36,7 +36,7 @@ Press the Play button next to the `androidEmptyExample` shown in the toolbar. Wi
     - The `compileSdkVersion`, `buildToolsVersion`, `minSdkVersion`, `targetSdkVersion` values
         in `/addons/ofxAndroid/ofAndroidLib/build.gradle` and `/apps/myApps/androidEmptyExample/build.gradle`
 
-- If you get strange linker errors, check that you are using the 10e version of the NDK. Newer NDKs might work but usually there's some always some fixes that need to be done when moving to a new NDK version.
+- If you get strange linker errors, check that you are using the 12b version of the NDK. Newer NDKs might work but usually there's some always some fixes that need to be done when moving to a new NDK version.
 
 - If your connected device is not recognized by Android Studio, restart adb
   with `adb kill-server && adb start-server`
