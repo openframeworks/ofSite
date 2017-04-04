@@ -51,9 +51,9 @@ You now can download openFrameworks and uncompress it into a folder. Using a She
 
 ```sh
 cd
-wget http://openframeworks.cc/versions/v0.9.3/of_v0.9.3_linuxarmv6l_release.tar.gz
+wget http://openframeworks.cc/versions/v0.9.8/of_v0.9.8_linuxarmv6l_release.tar.gz
 mkdir openFrameworks
-tar vxfz of_v0.9.3_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
+tar vxfz of_v0.9.8_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
 ```
 
 
@@ -102,7 +102,7 @@ For example, here is how you build and run the polygonExample:
 ```sh
 cd /home/pi/openFrameworks/examples/graphics/polygonExample
 make
-make run
+make RunRelease
 ```
 
 Unlike other platforms, OF Raspberry Pi projects do not make use of the projectGenerator. To create your own project from scratch, copy `examples/empty/emptyExample` into `apps/myApps/yourProjectName` folder and start from there
@@ -113,7 +113,7 @@ For example:
 cp -R /home/pi/openFrameworks/examples/empty/emptyExample /home/pi/openFrameworks/apps/myApps/myRpiApp
 cd /home/pi/openFrameworks/apps/myApps/myRpiApp
 make
-make run
+make RunRelease
 ```
 
 It is critical to keep your application directory 3 levels below the openFrameworks directory.
