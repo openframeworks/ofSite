@@ -102,7 +102,7 @@ For example, here is how you build and run the polygonExample:
 ```sh
 cd /home/pi/openFrameworks/examples/graphics/polygonExample
 make
-make RunRelease
+make run
 ```
 
 Unlike other platforms, OF Raspberry Pi projects do not make use of the projectGenerator. To create your own project from scratch, copy `examples/empty/emptyExample` into `apps/myApps/yourProjectName` folder and start from there
@@ -113,7 +113,7 @@ For example:
 cp -R /home/pi/openFrameworks/examples/empty/emptyExample /home/pi/openFrameworks/apps/myApps/myRpiApp
 cd /home/pi/openFrameworks/apps/myApps/myRpiApp
 make
-make RunRelease
+make run
 ```
 
 It is critical to keep your application directory 3 levels below the openFrameworks directory.
