@@ -819,7 +819,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct a default camera.
+Construct a default camera positioned at (0, 0,0) with a 60 degree field of view.  Near and far planes are determined by the current viewport size.
 
 
 
