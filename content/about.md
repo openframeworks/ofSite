@@ -97,7 +97,7 @@ faq
 
 **Why create another library for C++, since many libraries exist?**
 
-There are plenty of libraries that exist make it easier to make software, especially with OpenGL. For example, ogre, irrlicht, JUCE, SDL, wxWindows, etc.
+There are plenty of libraries that exist make it easier to make software, especially with OpenGL. For example, ogre, irrlicht, JUCE, SDL, wxWidgets, etc.
 
 Originally, openFrameworks was meant to provide a "bare-bones" alternative. We wanted to write a library that would be the bare minimum necessary to get started doing audio-visual work with C++.
 
@@ -107,7 +107,7 @@ Over time, openFrameworks has evolved into a much more robust toolkit. Now, one 
 
 We chose to work with the libraries that in our experience provide the cleanest and simplest API, the most generous licenses, and the easiest integration. 
 
-For example, we chose GLUT as the windowing library. Primarily, because it's fairly universal, has a reasonably generous license, and it's rare to find a compiler or platform that is incompatible. We have used other windowing toolkits, such as glfw and wxWindows, and even hooked them up with openFrameworks, but in the end, we decided to go with the one of the easiest to get up and running.
+For example, we chose GLUT as the windowing library. Primarily, because it's fairly universal, has a reasonably generous license, and it's rare to find a compiler or platform that is incompatible. We have used other windowing toolkits, such as glfw and wxWidgets, and even hooked them up with openFrameworks, but in the end, we decided to go with the one of the easiest to get up and running.
 
 **Where can I see the latest version of openFrameworks?**
 
