@@ -3,11 +3,11 @@
 
 visual studio setup guide
 =========================
-Here are the setup instructions for those of you who wish to work with Visual Studio 2012, Express for Windows Desktop version included.
+Here are the setup instructions for those of you who wish to work with Visual Studio Community 2015 on Windows.
 
 Download
 --------
-> [Download the Visual Studio Community 2015][0]
+> [Download Visual Studio Community 2015][0]
 
 Install
 -------
