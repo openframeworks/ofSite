@@ -67,6 +67,17 @@ becomes
 ```c++
 glm::length2(v)
 ```
+And 
+
+```c++
+ a.getInterpolated(b, 0.5);
+``` 
+
+becomes 
+
+```c++
+glm::mix(a, b, 0.5);
+```
 
 ### Containers
 
