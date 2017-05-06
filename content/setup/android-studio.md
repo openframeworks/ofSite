@@ -106,6 +106,8 @@ Troubleshooting
 
 - If you get strange linker errors, check that you are using the 10e version of the NDK. Newer NDKs might work but usually there's some always some fixes that need to be done when moving to a new NDK version.
 
+- If you get make errors on gradle sync without any details, run `chmod +x gradlew; ./gradlew` from within the project folder to build the project from command line, and get more detailed error messages.
+
 - If your connected device is not recognized by Android Studio, restart adb
   with `adb kill-server && adb start-server`
 

@@ -55,7 +55,7 @@
 <p>Connect with other developers and contributors.</p>
 <ul>
     <li><a href="https://github.com/openframeworks">Github</a></li>
-	<li><a href="https://openframeworks.slack.com">Slack</a></li>
+	<li><a href="http://ofslack.herokuapp.com">Slack</a></li>
     <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">Developer Mailing List</a> <span style="font-size:75%">(Low Volume)</span></li>
 	<li><a href="http://webchat.freenode.net/?channels=openframeworks">IRC</a> <span style="font-size:75%">(Low Volume)</span></li>
 </ul>

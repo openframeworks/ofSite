@@ -1,5 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto");
 @import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700);
+@import url(https://fonts.googleapis.com/css?family=Fira+Code:400,700);
 html {
 	height: 100%;
 }
@@ -498,7 +499,7 @@ a.nohover {
 	padding: 8px 0 8px 0;
 	font-size: 1.2em;
 	font-weight: bold;
-		
+
 }
 
 .submenu{
@@ -813,7 +814,7 @@ a.docs_class{
 
 /* BEGIN unify formatting for markdown ``inline code blocks`` */
 pre {
-	font-family: "Fira Mono", Courier,  monospace; 
+	font-family: "Fira Code", "Consolas", Courier,  monospace;
 	line-height: 120%;
 	margin: 0px;
 	/*margin-left: 10px;*/
@@ -828,13 +829,15 @@ pre {
 
 pre code {
     border-left: 6px solid rgba(197, 213, 229, 0.65);
-    padding: 6px 20px !important;
+	line-height: 160%;
+    padding: 15px 20px !important;
+	display: block;
 }
 
 code {
 	background-color: #F8F8F8;
     font-size: 14px;
-    font-family: "Fira Mono", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;	
+    font-family: "Fira Code", "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 }
 /* END unify formatting for markdown ``inline code blocks`` */
 

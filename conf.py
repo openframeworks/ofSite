@@ -187,7 +187,7 @@ EXTERNAL_LINKS = {
         ("https://forum.openframeworks.cc", "forum"),
 	("https://github.com/openframeworks", "github"),
         ("http://ofxaddons.com", "addons"),
-	("http://openframeworks.slack.com", "slack"),
+	("http://ofslack.herokuapp.com/", "slack"),
         ("http://blog.openframeworks.cc/", "blog"),
     ),
 

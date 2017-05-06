@@ -43,7 +43,7 @@ example:
 Additionally, you can resize images by specifying the new *width* and *height* of the displayed image.
 
 
-	imageName.getColor(xPosition, yPosition, width, height)
+	imageName.draw(xPosition, yPosition, width, height)
 	
 example:
 	
