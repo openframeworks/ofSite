@@ -25,6 +25,7 @@ class Scheduler: public ofThread {
 public:
     Scheduler() {
         timer.setPeriodicEvent(1000000000); // this is 1 second in nanoseconds
+        startThread();
     }
 
 private:
