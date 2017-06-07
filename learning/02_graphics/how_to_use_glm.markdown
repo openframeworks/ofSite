@@ -68,6 +68,17 @@ becomes
 glm::length2(v)
 ```
 
+And 
+
+```c++
+v.getMiddle(v1)
+```
+becomes
+
+```c++
+glm::mix(v, v1, 0.5)
+```
+
 ### Containers
 
 When using the pure glm mode (enabled by default right now) you'll usually need to change any container of ofVec to a container of glm::vec. 
