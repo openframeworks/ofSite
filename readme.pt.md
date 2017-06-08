@@ -15,7 +15,7 @@ Para contribuir para a página de internet ou para a documentação, pode por ex
 
 A maior parte do conteúdo encontra-se na pasta `content` no directoria markdown.
 
-A pasta  `tutorials` é estruturada com um primeiro nível de pastas que respresentam a categoria e, por conseguinte os ficheiros armazenados em markdown com a extensão `.markdown` e uma pasta para cada um deles com o mesmo nome que o ficheiro de texto que contém as imagens ou qualquer outro recurso. O ficheiro final html para cada tutorial é gerado com o mesmo nível que os seus recursos portanto os links têm que ser relativos a qualquer outra pasta como:
+A pasta  `tutorials` é estruturada com um primeiro nível de pastas que representam a categoria e, por conseguinte os ficheiros armazenados em markdown com a extensão `.markdown` e uma pasta para cada um deles com o mesmo nome que o ficheiro de texto que contém as imagens ou qualquer outro recurso. O ficheiro final html para cada tutorial é gerado com o mesmo nível que os seus recursos portanto os links têm que ser relativos a qualquer outra pasta como:
 
 ```md
 ![img](image.png)
