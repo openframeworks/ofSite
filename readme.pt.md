@@ -21,7 +21,7 @@ A pasta  `tutorials` é estruturada com um primeiro nível de pastas que repres
 ![img](image.png)
 ```
 
-A pasta `documentation` contém a referência da API do OF e encontra-se também em formato markdown. Estes documentos são gerados a partir do código mas o campo de descrição em todas as classes, funções ou variáveis, é editad directamente nos ficheiros markdown.
+A pasta `documentation` contém a referência da API do OF e encontra-se também em formato markdown. Estes documentos são gerados a partir do código mas o campo de descrição em todas as classes, funções ou variáveis, é editado directamente nos ficheiros markdown.
 
 ## Configurar o site para compilar localmente
 
