@@ -21,7 +21,10 @@ Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickT
 
 openFrameworks plugin for Visual Studio
 ---------------------------------------------------
-From visual studio, go to Tools > Extensions and Updates. Select online and search for openFrameworks and install the plugin.
+
+Before you're able to use openFrameworks with Visual Studio, you have to have Common Tools for Visual C++ 2015 installed, otherwise you'll get an error message later on. To install, go to File > New > Project and choose Visual C++ in the installed templates section. There now should be an option to install the tools, if they aren't already. Select it, confirm with 'OK' and follow the instructions.
+
+From Visual Studio, go to Tools > Extensions and Updates. Select online and search for openFrameworks and install the plugin.
 
 That will allow you to use File > New > Project... to create new openFrameworks projects and the contextual menu on any project to later add and remove addons
 
