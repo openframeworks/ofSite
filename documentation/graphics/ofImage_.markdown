@@ -83,7 +83,7 @@ while ( i < img.getPixels().size() ) {
     img.getPixels()[i] = abs(sin( float(i) / 18.f)) * 255.f; // make some op-art
     i++;
 }
-img.reloadTexture();
+img.update();
 ~~~~
 
 It allocates an image of width (w) and height (h). The type can be of three types: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA. You don't need to call this before loading an image, but for when you want to allocate space ahead of when you are going to use the image.
@@ -132,7 +132,7 @@ void ofApp::setup() {
         img.getPixels()[i] = abs(sin( float(i) / 18.f )) * 255.f;
         i++;
     }
-    img.reloadTexture();
+    img.update();
 
     mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
 
