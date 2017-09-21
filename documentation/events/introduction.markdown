@@ -30,7 +30,7 @@ The first parameter to ofAddListener is the event to which we want to add a list
 The second parameter, `this`, indicates that the listening method or function exists in this object; the event can also be sent to another object, but using `this` is a common pattern.
 
 The third parameter, `&SomeClass::mouseMoved` is the method `mouseMoved` in the class `SomeClass`. The `&` operator is used to pass a pointer to that function.
-
+w
 Another important aspect of event handling is to remove the listener before the object is destroyed. In this example, we place a call to [ofRemoveListener](ofEventUtils.html#ofRemoveListener) in the destructor to ensure that happens. The syntax is identical to the [ofAddListener](ofEventUtils.html#ofAddListener) function.
 
 The last thing to notice is the signature (i.e., the syntax) of the event or function that will receive the event. In this case, the event expects to be passed to a method that recieves one parameter: a reference to the event type. The `&` operator is used to specify that the event type object is passed by reference.
