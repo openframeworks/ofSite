@@ -23,7 +23,7 @@ Example:
 
 ~~~~{.cpp}
 ofVideoPlayer myPlayer;
-myPlayer.loadMovie("movies/fingers.mov");
+myPlayer.load("movies/fingers.mov");
 ~~~~
 
 You need to call play() for your video to begin playing:
