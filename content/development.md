@@ -3,10 +3,9 @@
 
 ###openFrameworks development is collaborative. It thrives on the contributions of <a href="https://github.com/openframeworks/openFrameworks/contributors">many people</a>, who engage in frequent discussion on the <a href="http://forum.openframeworks.cc/">forums</a>, <a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a>, and the <a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev mailing list</a>.
 
-We use git, a distributed versioning system, which means also that people can branch, experiment, and make suggestions. If you look at the network diagram on <a href="http://github.com/openframeworks/openFrameworks">GitHub</a>, it's looks like some alien diagram, full of weaving branches, code pulling apart and coming together. There's a huge community, all over the world, working on the core code: fixing bugs, submitting pull requests, and shaping the tool the way they want to see it.
+We use git, a distributed versioning system, which means also that people can branch, experiment, and make suggestions. If you look at the network diagram on <a href="http://github.com/openframeworks/openFrameworks">GitHub</a>, it looks like some alien diagram, full of weaving branches, code pulling apart and coming together. There's a huge community, all over the world, working on the core code: fixing bugs, submitting pull requests, and shaping the tool the way they want to see it.
 
 Visit the <a href="../community">community page</a> for other ways to contribute.</p>
-
 
 <ul class="external_links" >
     <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev mailing list</a></li>
@@ -15,9 +14,7 @@ Visit the <a href="../community">community page</a> for other ways to contribute
     <li><a href="http://github.com/openframeworks/openFrameworks">github</a></li>
 </ul>
 
-
 <hr>
-
 
 <h2 id="documents">documents</h2>
 <p><a href="https://github.com/openframeworks/openFrameworks/wiki">developer wiki</a> - central location for links to relevant openFrameworks developer docs</p>
@@ -50,17 +47,17 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 
 <h3>openFrameworks codebase</h3>
 <ul>
-	<li><b>2D-3D</b>: <a href="https://github.com/elliotwoods">Elliot Woods</a> (elliotwoods), <a href="https://github.com/tgfrerer">Tim Gfrerer</a> (tgfrerer)</li>
-	<li><b>Android</b>: <a href="https://github.com/arturoc">arturo</a> (arturoc), <a href="https://github.com/danthemellowman">Dan Moore</a> (danthemellowman)</li>
-	<li><b>Hardware</b>: <a href="https://github.com/joshuajnoble">joshua noble</a> (joshuajnoble)</li>
-	<li><b>iOS</b>: <a href="https://github.com/admsyn">Adam Carlucci</a> (admsyn), <a href="https://github.com/danoli3">Daniel Rosser</a> (danoli3), <a href="https://github.com/julapy">lukasz karluk</a> (julapy), <a href="https://github.com/ofTheo">Theodore Watson</a> (ofTheo)</li>
-	<li><b>Linux</b>: <a href="https://github.com/arturoc">arturo</a> (arturoc), <a href="https://github.com/bakercp">Christopher Baker</a> (bakercp), <a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi), <a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave), <a href="https://github.com/underdoeg">Philip Whitfield</a> (underdoeg)</li>
-	<li><b>Linux ARM</b>: <a href="https://github.com/bakercp">Christopher Baker</a> (bakercp), <a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave)</li>
-	<li><b>OS X</b>: <a href="https://github.com/admsyn">Adam Carlucci</a> (admsyn), <a href="https://github.com/julapy">lukasz karluk</a> (julapy), <a href="https://github.com/ofTheo">Theodore Watson</a> (ofTheo), <a href="https://github.com/pizthewiz">pizthewiz</a></li>
-	<li><b>Sound</b>: <a href="https://github.com/admsyn">Adam Carlucci</a> (admsyn)</li>
-	<li><b>Typography</b>: <a href="https://github.com/bakercp">Christopher Baker</a> (bakercp)</li>
-	<li><b>Video</b>: <a href="https://github.com/obviousjim">James George</a> (obviousjim)</li>
-	<li><b>Windows</b>: <a href="https://github.com/elliotwoods">Elliot Woods</a> (elliotwoods), <a href="https://github.com/LeoColomb">Léo Colombaro</a> (LeoColomb), <a href="https://github.com/ofZach">ofZach</a></li>
+    <li><b>2D-3D</b>: <a href="https://github.com/elliotwoods">Elliot Woods</a> (elliotwoods), <a href="https://github.com/tgfrerer">Tim Gfrerer</a> (tgfrerer)</li>
+    <li><b>Android</b>: <a href="https://github.com/arturoc">arturo</a> (arturoc), <a href="https://github.com/danthemellowman">Dan Moore</a> (danthemellowman)</li>
+    <li><b>Hardware</b>: <a href="https://github.com/joshuajnoble">joshua noble</a> (joshuajnoble)</li>
+    <li><b>iOS</b>: <a href="https://github.com/admsyn">Adam Carlucci</a> (admsyn), <a href="https://github.com/danoli3">Daniel Rosser</a> (danoli3), <a href="https://github.com/julapy">lukasz karluk</a> (julapy), <a href="https://github.com/ofTheo">Theodore Watson</a> (ofTheo)</li>
+    <li><b>Linux</b>: <a href="https://github.com/arturoc">arturo</a> (arturoc), <a href="https://github.com/bakercp">Christopher Baker</a> (bakercp), <a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi), <a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave), <a href="https://github.com/underdoeg">Philip Whitfield</a> (underdoeg)</li>
+    <li><b>Linux ARM</b>: <a href="https://github.com/bakercp">Christopher Baker</a> (bakercp), <a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave)</li>
+    <li><b>OS X</b>: <a href="https://github.com/admsyn">Adam Carlucci</a> (admsyn), <a href="https://github.com/julapy">lukasz karluk</a> (julapy), <a href="https://github.com/ofTheo">Theodore Watson</a> (ofTheo), <a href="https://github.com/pizthewiz">pizthewiz</a></li>
+    <li><b>Sound</b>: <a href="https://github.com/admsyn">Adam Carlucci</a> (admsyn)</li>
+    <li><b>Typography</b>: <a href="https://github.com/bakercp">Christopher Baker</a> (bakercp)</li>
+    <li><b>Video</b>: <a href="https://github.com/obviousjim">James George</a> (obviousjim)</li>
+    <li><b>Windows</b>: <a href="https://github.com/elliotwoods">Elliot Woods</a> (elliotwoods), <a href="https://github.com/LeoColomb">Léo Colombaro</a> (LeoColomb), <a href="https://github.com/ofZach">ofZach</a></li>
 </ul>
 
 <p>And previously:</p>
@@ -74,5 +71,3 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 <li><a href="http://www.vargatron.com/">Steve Varga</a> (vargatron) as typography leader</li>
 <li><a href="http://justdayan.com/">Dayan Moisa</a> (justdayan) as documentation leader</li>
 </ul>
-
-
