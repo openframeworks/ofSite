@@ -8,7 +8,7 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
-**pre release v0.9.7**
+**pre-release v0.9.7**
 
 windows: [msys2/qtcreator][214] | [visual studio 2015][215]
 
@@ -24,7 +24,7 @@ linux arm: [armv6][221] | [armv7][222]
 
 --------------------------------
 
-**pre release v0.9.6**
+**pre-release v0.9.6**
 
 windows: [msys2/qtcreator][205] | [visual studio 2015][206]
 
@@ -40,7 +40,7 @@ linux arm: [armv6][212] | [armv7][213]
 
 --------------------------------
 
-**pre release v0.9.5**
+**pre-release v0.9.5**
 
 windows: [msys2/qtcreator][196] | [visual studio 2015][197]
 
@@ -56,7 +56,7 @@ linux arm: [armv6][203] | [armv7][204]
 
 --------------------------------
 
-**pre release v0.9.4**
+**pre-release v0.9.4**
 
 windows: [msys2/qtcreator][187] | [visual studio 2015][188]
 
@@ -72,7 +72,7 @@ linux arm: [armv6][194] | [armv7][195]
 
 --------------------------------
 
-**pre release v0.9.3**
+**pre-release v0.9.3**
 
 windows: [msys2/qtcreator][178] | [visual studio 2015][179]
 
@@ -88,7 +88,7 @@ linux arm: [armv6][185] | [armv7][186]
 
 --------------------------------
 
-**pre release v0.9.2**
+**pre-release v0.9.2**
 
 windows: [msys2/qtcreator][169] | [visual studio 2015][170]
 
@@ -104,7 +104,7 @@ linux arm: [armv6][176] | [armv7][177]
 
 --------------------------------
 
-**pre release v0.9.1**
+**pre-release v0.9.1**
 
 windows: [msys2/qtcreator][160] | [visual studio 2015][161]
 
@@ -120,7 +120,7 @@ linux arm: [armv6][167] | [armv7][168]
 
 --------------------------------
 
-**pre release v0.9.0**
+**pre-release v0.9.0**
 
 windows: [msys2/qtcreator][151] | [visual studio 2015][152]
 
@@ -136,7 +136,7 @@ linux arm: [armv6][158] | [armv7][159]
 
 --------------------------------
 
-**pre release v0.8.4**
+**pre-release v0.8.4**
 
 windows: [code blocks][142] | [visual studio 2012][143]
 
@@ -152,7 +152,7 @@ linux arm: [armv6][149] | [armv7][150]
 
 --------------------------------
 
-**pre release v0.8.3**
+**pre-release v0.8.3**
 
 windows: [code blocks][133] | [visual studio 2012][134]
 
@@ -168,7 +168,7 @@ linux arm: [armv6][140] | [armv7][141]
 
 --------------------------------
 
-**pre release v0.8.2**
+**pre-release v0.8.2**
 
 windows: [code blocks][124] | [visual studio 2012][125]
 
@@ -184,7 +184,7 @@ linux arm: [armv6][131] | [armv7][132]
 
 --------------------------------
 
-**pre release v0.8.1**
+**pre-release v0.8.1**
 
 windows: [code blocks][115] | [visual studio 2012][116]
 
@@ -200,7 +200,7 @@ linux arm: [armv6][122] | [armv7][123]
 
 --------------------------------
 
-**pre release v0.8.0**
+**pre-release v0.8.0**
 
 windows: [code blocks][106] | [visual studio 2012][107]
 
@@ -216,7 +216,7 @@ linux arm: [armv6][113] | [armv7][114]
 
 --------------------------------
 
-**pre release v0074**
+**pre-release v0074**
 
 windows: [code blocks][99] | [visual studio 2010][100]
 
@@ -230,7 +230,7 @@ android: [Android][105]
 
 --------------------------------
 
-**pre release v0073**
+**pre-release v0073**
 
 windows: [code blocks][92] | [visual studio 2010][93]
 
@@ -244,7 +244,7 @@ android: [Android][98]
 
 --------------------------------
 
-**pre release v0072**
+**pre-release v0072**
 
 windows: [code blocks][85] | [visual studio 2010][86]
 
@@ -258,7 +258,7 @@ android: [Android][91]
 
 --------------------------------
 
-**pre release v0071**
+**pre-release v0071**
 
 windows: [code blocks][78] | [visual studio 2010][79]
 
@@ -272,7 +272,7 @@ android: [Android][84]
 
 --------------------------------
 
-**pre release v0.07**
+**pre-release v0.07**
 
 windows: [code blocks][71] | [visual studio 2010][72]
 
@@ -287,7 +287,7 @@ android: [Android][77]
 
 --------------------------------
 
-**pre release v0.062**
+**pre-release v0.062**
 
 windows: [code blocks FAT][12] | [visual studio 2010 FAT][13] | [visual studio 2008 FAT][14]
 
@@ -301,11 +301,11 @@ iphone: [iPhone 0062 FAT][19]
 --------------------------------
 
 
-**pre release v0.061**
+**pre-release v0.061**
 
 **_note that 0.06 project files are not compatible with 0.061 -- a guide detailing the new project structure will be posted soon._**
 
-_**FAT Packages:** starting from 0.05, we are releasing normal and "FAT" versions, the fat versions contain several addons ready to go, plus addon examples. These addons aren't part of the core OF codebase, but contain advanced functionality like opencv, vector output, OSC, network communication, vector math and more._
+_**FAT Packages:** starting at 0.05, we are releasing normal and "FAT" versions, the fat versions contain several addons ready to go, plus addon examples. These add-ons aren't part of the core OF codebase, but contain advanced functionality like OpenCV, vector output, OSC, network communication, vector math and more._
 
 windows: [visual studio 2008][20] | [visual studio 2008 FAT][21][][22]
 
@@ -326,9 +326,9 @@ license (MIT): [license][37]
 --------------------------------
 
 
-**pre release v0.06**
+**pre-release v0.06**
 
-_starting for 0.05, we are releasing normal and "FAT" versions, the fat versions contain several addons ready to go, plus addon examples. These addons aren't part of the core OF codebase, but contain advanced functionality like opencv, vector output, OSC, network communication, vector math and more. Also, in this release we will also post binaries of the examples, so you can download and try without having to compile_
+_starting for 0.05, we are releasing normal and "FAT" versions, the fat versions contain several addons ready to go, plus addon examples. These add-ons aren't part of the core OF codebase but contain advanced functionality like OpenCV, vector output, OSC, network communication, vector math and more. Also, in this release we will also post binaries of the examples, so you can download and try without having to compile_
 
 windows: [visual studio 2008][38] | [visual studio 2008 FAT][39][][22]
 
@@ -344,7 +344,7 @@ changes:[changelog for 0.06][36]
 
 --------------------------------
 
-**pre release v0.05**
+**pre-release v0.05**
 
 **addon fixes:** Since the 005 release there have been several critical fixes for addons -- details of the fixes and how to apply them can be found here: [addon fixes][49].
 
@@ -361,7 +361,7 @@ apps][60]
 
 --------------------------------
 
-**pre release v0.04**
+**pre-release v0.04**
 
 windows: [visual studio ][61] | [dev c++][62] | [code warrior][63]
 
