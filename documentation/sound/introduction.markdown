@@ -1,6 +1,6 @@
-## Clases for playing sound files and sound input and output
+## Classes for playing sound files and sound input and output
 
-This module contains classes that do two main main functionalities:
+This module contains classes that do two main functionalities:
 
 Load and playback sound files through [ofSoundPlayer](ofSoundPlayer.html)
 
