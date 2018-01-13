@@ -16,7 +16,7 @@ void ofApp::keyPressed(int key){
 }
 ```
 
-Depending on your operating system there might be other things to consider.  For example, on posix systems, you might want to use the & at the end of your command so that it runs in the background. 
+Depending on your operating system there might be other things to consider.  For example, on POSIX systems, you might want to use the & at the end of your command so that it runs in the background. 
 
 The [systemSpeakExample](https://github.com/openframeworks/openFrameworks/tree/master/examples/input_output/systemSpeakExample) in examples/input_output has good information about this and more details per-platform. 
 
