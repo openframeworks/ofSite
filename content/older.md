@@ -305,7 +305,7 @@ iphone: [iPhone 0062 FAT][19]
 
 **_note that 0.06 project files are not compatible with 0.061 -- a guide detailing the new project structure will be posted soon._**
 
-_**FAT Packages:** starting at 0.05, we are releasing normal and "FAT" versions, the fat versions contain several addons ready to go, plus addon examples. These add-ons aren't part of the core OF codebase, but contain advanced functionality like OpenCV, vector output, OSC, network communication, vector math and more._
+_**FAT Packages:** starting at 0.05, we are releasing normal and "FAT" versions, the fat versions contain several addons ready to go, plus addon examples. These addons aren't part of the core OF codebase, but contain advanced functionality like OpenCV, vector output, OSC, network communication, vector math and more._
 
 windows: [visual studio 2008][20] | [visual studio 2008 FAT][21][][22]
 
@@ -328,7 +328,7 @@ license (MIT): [license][37]
 
 **pre-release v0.06**
 
-_starting for 0.05, we are releasing normal and "FAT" versions, the fat versions contain several addons ready to go, plus addon examples. These add-ons aren't part of the core OF codebase but contain advanced functionality like OpenCV, vector output, OSC, network communication, vector math and more. Also, in this release we will also post binaries of the examples, so you can download and try without having to compile_
+_starting for 0.05, we are releasing normal and "FAT" versions, the fat versions contain several addons ready to go, plus addon examples. These addons aren't part of the core OF codebase but contain advanced functionality like OpenCV, vector output, OSC, network communication, vector math and more. Also, in this release we will also post binaries of the examples, so you can download and try without having to compile_
 
 windows: [visual studio 2008][38] | [visual studio 2008 FAT][39][][22]
 
