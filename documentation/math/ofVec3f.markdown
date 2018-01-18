@@ -87,7 +87,7 @@ See also: ofVec4f for 4D vectors
 
 ##Description
 
-ofVec3f is a class for storing a three dimensional vector. 
+ofVec3f is a class for storing a three dimensional vector.
 
 Moving through space requires knowledge of where things are and where they are going. Vector Maths is the class of mathematics that gives us control over these things in space, allowing for elegant and intuitive descriptions of complex structures and movement. Vectors are at the heart of animations, particle systems, and 2D and 3D graphics.
 
@@ -95,7 +95,7 @@ Vectors in mathematics in general are entities with magnitude (also called lengt
 
 *You will also see the term 'vector' used to describe an array of objects in C++ (such as text strings). Don't let this confuse you, they are quite different: one of them is a mathematical term for a fixed-length list of numbers that you can do mathematical operations on, the other is a C++-specific term that means 'dynamically sizeable array'.*
 
-'ofVec3f' has three member variables, 'x', 'y', and 'z', which allow to conveniently store 3D properties of an object such as its position, velocity, or acceleration. 
+'ofVec3f' has three member variables, 'x', 'y', and 'z', which allow to conveniently store 3D properties of an object such as its position, velocity, or acceleration.
 
 ~~~~{.cpp}
 ofVec3f v1; // v1.x is 0, v1.y is 0, v1.z is 0
@@ -105,17 +105,17 @@ v1.set(10, 50, 80); // now v1.x is 10, v1.y is 50, v1.z is 80
 Using 'ofVec3f' greatly simplifies arithmetic operations in three dimensions. For example if you have two vectors 'v1' and 'v2', both of which represent a 3D change in position, you can find the total change of position of both of them just by doing an addition 'v1 + v2':
 
 ~~~~{.cpp}
-ofVec3f v1(5, 2, 1); 
-// so now v1 represents walking 5 steps forward then 2 steps 
+ofVec3f v1(5, 2, 1);
+// so now v1 represents walking 5 steps forward then 2 steps
 // sideways then 1 step upwards
 ofVec3f v2;
-v2.set(1, 1, 1); 
-// so now v2 represents walking 1 step forward then 1 step 
+v2.set(1, 1, 1);
+// so now v2 represents walking 1 step forward then 1 step
 // sideways then 1 step upwards
 
 // what happens if you do v1 followed by v2?
 // to find out just add v1 and v2 together:
-ofVec3f result = v1 + v2; 
+ofVec3f result = v1 + v2;
 // result is (6, 3, 1), or 6 steps forward then 3 steps sideways
 // then 2 steps upwards
 ~~~~
@@ -124,16 +124,16 @@ You can scale an 'ofVec3f' by multiplying it with a float:
 
 ~~~~{.cpp}
 // walk 5 steps forward then 2 steps sideways then 1 step upwards
-ofVec3f v1(5, 2, 1); 
+ofVec3f v1(5, 2, 1);
 // what happens if we do v1 three times?
-ofVec3f result = v1 * 3; // result is (15, 6, 3), or 
+ofVec3f result = v1 * 3; // result is (15, 6, 3), or
 // 15 steps forward, 6 steps sideways and 3 steps upwards
 
 ~~~~
 
 This also works for subtraction and division.
 
-As you can see this really makes dealing with vectors as easy as dealing with single 'float's or 'int's, and can reduce the number of lines of code you have to write by half, at the same time making your code much easier to read and understand! 
+As you can see this really makes dealing with vectors as easy as dealing with single 'float's or 'int's, and can reduce the number of lines of code you have to write by half, at the same time making your code much easier to read and understand!
 
 
 
@@ -391,7 +391,7 @@ for ( int i=0; i<numPoints; i++ ) {
 	points[i].set( ofRandom(0,100), ofRandom(0,100), ofRandom(0,100) );
 }
 ofVec3f centroid;
-centroid.average( points, numPoints ); 
+centroid.average( points, numPoints );
 // centroid now is the centre of gravity/average of all the random points
 ~~~~
 
@@ -567,7 +567,7 @@ ofVec3f a1(1, 0, 0);
 ofVec3f b1(0, 0, 1); // 90 degree angle to a1
 dot = a1.dot(b1); // dot is 0, ie cos(90)
 
-ofVec3f a2(1, 0, 0); 
+ofVec3f a2(1, 0, 0);
 ofVec3f b2(1, 1, 0); // 45 degree angle to a2
 b2.normalize(); // vectors should to be unit vectors (normalized)
 float dot = a2.dot(b2); // dot is 0.707, ie cos(45)
@@ -729,7 +729,7 @@ Return a copy of this vector with its length (magnitude) restricted to a maximum
 ~~~~{.cpp}
 ofVec3f v1(5, 0, 1); // length is about 5.1
 ofVec3f v2(2, 0, 1); // length is about 2.2
-ofVec3f v1Limited = v1.getLimited(3); 
+ofVec3f v1Limited = v1.getLimited(3);
 // v1Limited is (2.9417, 0, 0.58835) which has length of 3 in the same direction as v1
 ofVec3f v2Limited = v2.getLimited(3);
 // v2Limited is (2, 0, 1) (same as v2)
@@ -876,7 +876,7 @@ ofVec3f v2Normalized = v2.getNormalized(); // (√2, 0, √2)
 
 _description: _
 
-Return a normalized copy of this vector. 
+Return a normalized copy of this vector.
 
 *Normalization* means to scale the vector so that its length (magnitude) is exactly 1, at which stage all that is left is the direction. A normalized vector is usually called a *unit vector*, and can be used to represent a pure direction (heading).
 
@@ -1673,7 +1673,7 @@ Restrict the length (magnitude) of this vector to a maximum of 'max' units by sc
 ~~~~{.cpp}
 ofVec3f v1(5, 0, 1); // length is about 5.1
 ofVec3f v2(2, 0, 1); // length is about 2.2
-v1.limit(3); 
+v1.limit(3);
 // v1 is now (2.9417, 0, 0.58835) which has length of 3 in the same direction as at initialization
 v2.limit(3);
 // v2 is unchanged
@@ -1767,7 +1767,7 @@ ofVec3f v2 = ofVec3f(40.01, 19.999, 70.05);
 
 _description: _
 
-Let you check if two vectors are similar given a tolerance threshold 'tolerance' (default = 0.0001). 
+Let you check if two vectors are similar given a tolerance threshold 'tolerance' (default = 0.0001).
 
 ~~~~{.cpp}
 ofVec3f v1 = ofVec3f(40, 20, 70);
@@ -2090,7 +2090,7 @@ ofVec3f v(mom); // v is (40, 20, 10)
 
 _description: _
 
-Construct a new 3D vector ('ofxVec3f') from a 4D vector 'vec' by throwing away the 'z' component.
+Construct a new 3D vector ('ofxVec3f') from a 4D vector 'vec' by throwing away the 'w' component.
 
 ~~~~{.cpp}
 ofVec3f mom = ofVec4f(40, 20, 10, 100);
@@ -2180,9 +2180,9 @@ _description: _
 Returns 'true' if any component is different to its corresponding component in 'vec', ie if 'x != vec.x' or 'y != vec.y' or 'z != vec.z'; otherwise returns 'false'.
 
 ~~~~{.cpp}
-ofVec3f v1(40, 20, 10); 
-ofVec3f v2(50, 20, 40); 
-ofVec3f v3(40, 20, 10); 
+ofVec3f v1(40, 20, 10);
+ofVec3f v2(50, 20, 40);
+ofVec3f v3(40, 20, 10);
 // ( v1 != v2 ) is true
 // ( v1 != v3 ) is false
 ~~~~
@@ -2232,7 +2232,7 @@ _description: _
 Returns a new vector ('x'*'vec.x','y'*'vec.y','z'*'vec.z').
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 10); 
+ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(2, 4, 10);
 ofVec3f v3 = v1 * v2; // (80, 80, 100)
 ~~~~
@@ -2332,7 +2332,7 @@ _description: _
 Multiplies 'x' by 'vec.x', and multiplies 'y' by 'vec.y', and multiplies 'z' by 'vec.z'.
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 10); 
+ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(2, 4, 10);
 v1 *= v2; // v1 is now (80, 80, 100)
 ~~~~
@@ -2429,7 +2429,7 @@ _description: _
 Super easy vector addition. Returns a new vector ('x'+'vec.x','y'+'vec.y','z'+'vec.z').
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 10); 
+ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(25, 50, 10);
 ofVec3f v3 = v1 + v2; // v3 is (65, 70, 20)
 ~~~~
@@ -2525,7 +2525,7 @@ _description: _
 Super easy addition assignment. Adds 'vec.x' to 'x', adds 'vec.y' to 'y' and adds 'vec.z' to 'z'.
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 10); 
+ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 += v2; // v1 is (65, 70, 20)
 ~~~~
@@ -2620,7 +2620,7 @@ _description: _
 Super easy vector subtraction. Returns a new vector ('x'-'vec.x','y'-'vec.y','z'-'vec.z').
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 10); 
+ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(25, 50, 10);
 ofVec3f v3 = v1 - v2; // v3 is (15, -30, 0)
 ~~~~
@@ -2763,7 +2763,7 @@ _description: _
 Super easy subtraction assignment. Subtracts 'vec.x' from 'x', subtracts 'vec.y' from 'y' and subtracts 'vec.z' from 'z'.
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 10); 
+ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(25, 50, 10);
 v1 -= v2; // v1 is (15, -30, 0)
 ~~~~
@@ -2859,7 +2859,7 @@ _description: _
 Returns a new vector ('x'/'vec.x','y'/'vec.y','z'/'vec.z').
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 10); 
+ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(2, 4, 10);
 ofVec3f v3 = v1 / v2; // (20, 5, 1)
 ~~~~
@@ -2958,7 +2958,7 @@ _description: _
 Divides 'x' by 'vec.x', divides 'y' by 'vec.y', and divides 'z' by 'vec.z'.
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 10); 
+ofVec3f v1 = ofVec3f(40, 20, 10);
 ofVec3f v2 = ofVec3f(2, 4, 10);
 v1 *= v2; // v1 is now (20, 5, 1)
 ~~~~
@@ -3060,9 +3060,9 @@ _description: _
 Returns 'true' if each component is the same as the corresponding component in 'vec', ie if 'x == vec.x' and 'y == vec.y' and 'z == vec.z'; otherwise returns 'false'. But you should probably be using ['match'](#match) instead.
 
 ~~~~{.cpp}
-ofVec3f v1(40, 20, 10); 
-ofVec3f v2(50, 30, 10); 
-ofVec3f v3(40, 20, 10); 
+ofVec3f v1(40, 20, 10);
+ofVec3f v2(50, 30, 10);
+ofVec3f v3(40, 20, 10);
 // ( v1 == v2 ) is false
 // ( v1 == v3 ) is true
 ~~~~
@@ -3213,8 +3213,8 @@ Construct a plane using this vector and 'vec' (by finding the plane that both li
 ~~~~{.cpp}
 ofSetLogLevel(OF_LOG_NOTICE);
 ofVec3f v1(1,0,0);
-ofVec3f v2(0,1,0); 
-v1.perpendicular(v2); 
+ofVec3f v2(0,1,0);
+v1.perpendicular(v2);
 ofLog(OF_LOG_NOTICE, "%1.1f, %1.1f, %1.1f\n", v1.x, v1.y, v1.z);
 // prints "0.0, 0.0, 1.0'
 ~~~~
@@ -3321,7 +3321,7 @@ Watch out for gimbal lock when specifying multiple rotations in the same call.
 
 _description: _
 
-Perform an Euler rotation of this vector around three axes: 'ax' degrees about the x axis, 'ay' about the y axis and 'az' about the z axis. 
+Perform an Euler rotation of this vector around three axes: 'ax' degrees about the x axis, 'ay' about the y axis and 'az' about the z axis.
 
 ~~~~~{.cpp}
 ofVec3f v( 1, 0, 0 );
@@ -3468,7 +3468,7 @@ Watch out for gimbal lock when specifying multiple rotations in the same call.
 
 _description: _
 
-Perform an Euler rotation of this vector around three axes: 'ax' radians about the x axis, 'ay' about the y axis and 'az' about the z axis. 
+Perform an Euler rotation of this vector around three axes: 'ax' radians about the x axis, 'ay' about the y axis and 'az' about the z axis.
 
 ~~~~~{.cpp}
 ofVec3f v( 1, 0, 0 );
@@ -3925,4 +3925,3 @@ Stores the Z component of this vector.
 
 
 <!----------------------------------------------------------------------------->
-
