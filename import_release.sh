@@ -19,11 +19,8 @@ wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_vs2017_rele
 if [ -f of_v${version}_osx_release.zip ]; then rm of_v${version}_osx_release.zip; fi
 wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_osx_release.zip 2>> ~/logs/import_release.log
 
-if [ -f of_v${version}_linux_release.tar.gz ]; then rm of_v${version}_linux_release.tar.gz; fi
-wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_linux_release.tar.gz 2>> ~/logs/import_release.log
-
-if [ -f of_v${version}_linux64_release.tar.gz ]; then rm of_v${version}_linux64_release.tar.gz; fi
-wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_linux64_release.tar.gz 2>> ~/logs/import_release.log
+if [ -f of_v${version}_linux64_release.tar.gz ]; then rm of_v${version}_linux64gcc4_release.tar.gz; fi
+wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_linux64gcc4_release.tar.gz 2>> ~/logs/import_release.log
 
 if [ -f of_v${version}_linux64gcc5_release.tar.gz ]; then rm of_v${version}_linux64gcc5_release.tar.gz; fi
 wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_linux64gcc5_release.tar.gz 2>> ~/logs/import_release.log
