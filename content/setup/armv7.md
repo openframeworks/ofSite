@@ -3,7 +3,7 @@
 
 #Linux for ARMv7 generic install
 
-There's several boards that come with ARMv7 processors, like Pandaboard, BeagleBoard, BeagleBone (Black), Cubieboard and many others. All of them should be compatible with openFrameworks, the only things you need to check:
+There's several boards that come with ARMv7 processors, like Pandaboard, BeagleBoard, BeagleBone (Black), Cubieboard, Raspberry PI 2 and many others. All of them should be compatible with openFrameworks, the only things you need to check:
 
 - use an armhf (hard float) distribution, OF is compiled with hard float flags and it won't work on OS's compiled with soft float
 - you'll need to find and install drivers for your graphics card, this is usually hard since it's the only piece in these boards that it's usually not open sourced. If you can't find drivers you can always work with headless (no graphics output) applications. See below for an explanation on how to setup a headless app.
@@ -29,6 +29,15 @@ Now you can compile applications:
         make run
 
 -------------------------------
+
+## Raspberry PI 2
+
+The Raspberry PI 2 chip has armv7 architecture but the officially supported distribution, Raspbian, is compiled with armv6 settings so using it with armv7 is not recomended. Archlinux and others come compiled with armv7 flags and should work, but are not officially supported at the moment. Here's a [guide to install openFrameworks armv7 on Archlinux on the RPI2](../raspberrypi/raspberry-pi-getting-started-archlinux) but most people have reported problems with it. If you manage to make it work without problem please report it on a github issue or send a pull request with your fixes.
+
+
+
+-------------------------------
+
 
 ## Headless applications
 

@@ -50,5 +50,41 @@ MESSAGES = {
 
     'other_releases': '<h2>その他のリリース</h2>  さらに古いバージョンのopenFrameworksは、<a href="older/">ここ</a>にアーカイブしてあります。完璧に最新のバージョンは、<a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>です。ですので、もしopenFrameworksの開発に貢献したいと考えたとしたら、GitHugのリポジトリをフォークしてください。そして、<a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">openFrameworks GitHub workflow</a>にあるガイドラインに従うようにしてください。',
 
-    'translation': '翻訳'
+    'translation': '翻訳',
+
+    'how-tos': 'How to',
+
+    'a quick reference for common questions': 'よくある疑問へのクイックリファレンス',
+
+    'a collection of openFrameworks guides': 'openFrameworksのガイド集',
+
+    'Contribute' : '貢献',
+
+    'How to improve the documentation': 'ドキュメンテーションの改善方法',
+
+    'Getting Started!': 'はじめてみよう!',
+
+    'Download & set up openFrameworks': 'openFramewroksのダウンロードとセットアップ',
+
+    'Explore the examples': 'サンプルを調べる',
+
+    'Create a new project': '新規プロジェクトの作成',
+
+    'Check out the how-tos!': 'How toを確認してみる!',
+
+    'External Resources': '外部のリソース',
+
+    'Code Liberation OF workshops': 'Code Liberationによるワークショップ資料',
+
+    'OF video series': 'OFビデオチュートリアル',
+
+    'ofBook': 'ofBook',
+
+    '... and many more! (GitHub wiki)': '... もっと詳しく! (GitHub wiki)',
+
+    'back to all how-tos': 'How toの一覧に戻る',
+
+    'Links to newer original article': 'より新しいオリジナル(英語)へのリンク',
+
+    '(experimental)': '(experimental)',
 }

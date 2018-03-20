@@ -45,9 +45,9 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
  
 <h3> 라즈베리파이2/arm7/arm6</h3>
 0. `cd` 
-0. `curl -O http://openframeworks.cc/versions/v0.9.2/of_v0.9.2_linuxarmv6l_release.tar.gz` 
+0. `wget http://openframeworks.cc/versions/v0.9.3/of_v0.9.3_linuxarmv6l_release.tar.gz` 
 0.  `mkdir openFrameworks`
-0.  `tar vxfz of_v0.9.2_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
+0.  `tar vxfz of_v0.9.3_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 
 
 ## 패키지 인스톨 및 오픈프레임웍스 컴파일하기

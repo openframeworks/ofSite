@@ -12,11 +12,12 @@
 <%block name="content">
       <div id="body-wrap">	
 	    <div class="page-wide-tutorial">
-            <!--ul class="submenu">
-                <li><a href="/documentation">reference</a></li>
-                <li><a href="/tutorials">tutorials</a></li>
-            </ul-->
-    	    <h1>${module}</h1>
+            <div id="docstitle"><h1>${module}</h1></div>
+            <div id="editdocs">
+                <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/${module}/introduction.markdown" class="nohover"><img title="edit module intro on GitHub" src="/images/editmodule.png?a=5"/></a>
+    	    </div>
+    	</div>
+	    <div class="page-wide-tutorial">
     	    <div class="article">
                 ${intro_content}
     		</div>

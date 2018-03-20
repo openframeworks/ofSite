@@ -38,7 +38,7 @@ $(document).ready(function(){
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/xcode">xcode</a></p>
-	        <p><a href="../setup/qtcreator">qt creator</a></p>
+	        <p><a href="../setup/qtcreator">qt creator ${of.msg("(experimental)", locals())}</a></p>
 	        <p><a href="../setup/emscripten">emscripten</a></p>
         </div>
 
@@ -102,7 +102,7 @@ $(document).ready(function(){
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linuxarmv6l_release.tar.gz">linux armv6</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
-	        <p><a href="../setup/raspberrypi">raspberry pi(rpi1/rpi2/raspbian)</a></p>
+	        <p><a href="../setup/raspberrypi">raspberry pi 1 & 2</a></p>
         </div>
 
         <div id="download-latest-platform-last">
@@ -110,7 +110,6 @@ $(document).ready(function(){
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linuxarmv7l_release.tar.gz">linux armv7</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
-	        <p><a href="../setup/raspberrypi/raspberry-pi-getting-started-archlinux">raspberry pi(rpi2/archlinux)</a></p>
 	        <p><a href="../setup/pandaboard">pandaboard</a></p>
 	        <p><a href="../setup/armv7">generic armv7</a></p>
         </div>
@@ -130,7 +129,7 @@ $(document).ready(function(){
 
     <hr/>
 
-    <iframe src="http://ci.openframeworks.cc/nightlybuilds.html" style="width:100%; height:370px; border: none" scrolling="no" seamless="seamless"></iframe>
+    <iframe src="http://ci.openframeworks.cc/nightlybuilds.html" style="width:100%; height:430px; border: none" scrolling="no" seamless="seamless"></iframe>
 
     <hr/>
 

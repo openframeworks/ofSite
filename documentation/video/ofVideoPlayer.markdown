@@ -23,7 +23,7 @@ Example:
 
 ~~~~{.cpp}
 ofVideoPlayer myPlayer;
-myPlayer.loadMovie("movies/fingers.mov");
+myPlayer.load("movies/fingers.mov");
 ~~~~
 
 You need to call play() for your video to begin playing:
@@ -137,7 +137,7 @@ _inlined_description: _
 
 _description: _
 
-Calls the closeMovie() function, which closes the movie file and de-allocates resources.
+
 
 
 
@@ -173,7 +173,6 @@ _inlined_description: _
 
 _description: _
 
-Closes the movie file and de-allocates resources.
 
 Example:
 
@@ -289,7 +288,7 @@ _inlined_description: _
 
 _description: _
 
-Moves the playhead to the first frame of the movie. This can also be accomplished using setCurrentFrame(0).
+
 
 
 
@@ -325,7 +324,7 @@ _inlined_description: _
 
 _description: _
 
-Get the current frame number.
+
 
 
 
@@ -361,7 +360,7 @@ _inlined_description: _
 
 _description: _
 
-Returns the duration of the movie in seconds as a floating number.
+
 
 
 
@@ -397,7 +396,7 @@ _inlined_description: _
 
 _description: _
 
-Get the height of the movie file.
+
 
 
 
@@ -433,7 +432,7 @@ _inlined_description: _
 
 _description: _
 
-Returns whether the movie has played all the way until the end.
+
 
 
 
@@ -469,7 +468,7 @@ _inlined_description: _
 
 _description: _
 
-Returns whether the video is looping or not.
+
 
 
 
@@ -505,7 +504,7 @@ _inlined_description: _
 
 _description: _
 
-Returns the path to the file that the ofVideoPlayer is currently playing. If it's not playing any files, then this returns a blank string.
+
 
 
 
@@ -658,7 +657,7 @@ _inlined_description: _
 
 _description: _
 
-This returns a [shared pointer](http://thenewcpp.wordpress.com/2012/06/21/shared-pointers/) to the particular implementation of ofVideoPlayer that your system is using.
+
 
 
 
@@ -802,7 +801,7 @@ _inlined_description: _
 
 _description: _
 
-Returns the position of the playhead from 0-1, where 0 is the start and 1 is the end of the video.
+
 
 
 
@@ -838,7 +837,7 @@ _inlined_description: _
 
 _description: _
 
-Returns the speed that the movie is being played at as a floating point number. 1 = normal speed, 0 = paused, -1 = backwards. 
+
 
 
 
@@ -1018,7 +1017,7 @@ _inlined_description: _
 
 _description: _
 
-Get the number of frames that the movie file being played contains.
+
 
 
 
@@ -1054,7 +1053,7 @@ _inlined_description: _
 
 _description: _
 
-Get the width of the movie file.
+
 
 
 
@@ -1422,7 +1421,7 @@ _inlined_description: _
 
 _description: _
 
-Advances the playhead by one frame.
+
 
 
 
@@ -1494,7 +1493,7 @@ _inlined_description: _
 
 _description: _
 
-Plays the movie. If the movie has been stopped or paused it will the continue playback at the point it was stopped. You still need to call update() periodically to ensure that you're copying frames to an ofTexture so that they can be drawn.
+
 
 
 
@@ -1530,7 +1529,7 @@ _inlined_description: _
 
 _description: _
 
-Reverses the playhead by one frame.
+
 
 
 
@@ -1674,7 +1673,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the current frame of the video. Should be used only if you know the bounds of the movie ( using totalNumberFrames() ) or store a location using getCurrentFrame();
+
 
 
 
@@ -1710,7 +1709,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the looping state of the movie. Default behavior is OF_LOOP_NORMAL. There are three options:
+
 ~~~~{.cpp}
 
 OF_LOOP_NONE - don't loop, the movie will stop when it gets to the last frame (or first frame, if playing backwards)
@@ -1752,7 +1751,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the paused state of the movie. Use "true" to pause and false to unpause. 
+
 
 
 
@@ -1787,8 +1786,8 @@ _inlined_description: _
 
 
 _description: _
+OSX: Choose from OF_PIXELS_RGB or OF_PIXELS_RGBA
 
-Sets the pixel format for the 
 
 
 
@@ -1896,7 +1895,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the speed of the movie that is playing. 1 = normal, 2 = 2x as fast, 0 = stopped, -1 = backwards, etc; 
+
 
 
 
@@ -1973,7 +1972,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the volume of a movie as it plays. The maximum values is 1.0f, 0.0f is silent.
+
 
 
 
@@ -2009,7 +2008,7 @@ _inlined_description: _
 
 _description: _
 
-Stops the movie. 
+
 
 
 
@@ -2081,7 +2080,7 @@ _inlined_description: _
 
 _description: _
 
-Calls the idleMovie() function. This function idles the movie player, so that the movie can play. If you don't call it, when the movie is playing then you may encounter problems, especially on windows machines. 
+
 
 
 
@@ -2117,7 +2116,7 @@ _inlined_description: _
 
 _description: _
 
-bUseTexture enables and disables the use of ofTexture in our video player.
+
 
 
 
@@ -2277,7 +2276,7 @@ _inlined_description: _
 
 _description: _
 
-ofTexture used by the video player class. 
+
 
 
 

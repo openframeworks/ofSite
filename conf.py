@@ -146,7 +146,7 @@ NAVIGATION_LINKS = {
         ("/about/", "about"),
         ("/download/", "download"),
         ("/documentation/", "documentation"),
-        ("/tutorials/", "learning"),
+        ("/learning/", "learning"),
         ("/gallery/", "gallery"),
         ("/community/", "community"),
         ("/development/", "development"),
@@ -156,7 +156,7 @@ NAVIGATION_LINKS = {
         ("/ja/about/", "about"),
         ("/ja/download/", "download"),
         ("/ja/documentation/", "documentation"),
-        ("/ja/tutorials/", "tutorials"),
+        ("/ja/learning/", "learning"),
         ("/ja/gallery/", "gallery"),
         ("/ja/community/", "community"),
         ("/ja/development/", "development"),
@@ -166,7 +166,7 @@ NAVIGATION_LINKS = {
         ("/ko/about/", "소개"),
         ("/ko/download/", "다운로드"),
         ("/ko/documentation/", "도큐먼트"),
-        ("/ko/tutorials/", "튜토리얼"),
+        ("/ko/learning/", "배우기"),
         ("/ko/gallery/", "갤러리"),
         ("/ko/community/", "커뮤니티"),
         ("/ko/development/", "개발"),
@@ -185,37 +185,32 @@ NAVIGATION_LINKS = {
 EXTERNAL_LINKS = {
     DEFAULT_LANG: (
         ("https://forum.openframeworks.cc", "forum"),
+	("https://github.com/openframeworks", "github"),
         ("http://ofxaddons.com", "addons"),
-        ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "mailing list"),
-        ("http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39", "IRC"),
+	("http://ofslack.herokuapp.com/", "slack"),
         ("http://blog.openframeworks.cc/", "blog"),
     ),
 
     "ja": (
         ("https://forum.openframeworks.cc", "forum"),
-        ("http://ofxaddons.com", "addons"),
         ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "mailing list"),
-        ("http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39", "IRC"),
+        ("http://ofxaddons.com", "addons"),
         ("http://blog.openframeworks.cc/", "blog"),
     ),
 
     "ko": (
         ("https://forum.openframeworks.cc", "포럼(EN)"),
         ("http://forum.openframeworks.kr", "포럼(KR)"),
-        ("http://ofxaddons.com", "애드온"),
         ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "메일링 리스트"),
+        ("http://ofxaddons.com", "애드온"),
         ("http://forum.openframeworks.kr/t/slack/32", "slack"),
         ("http://blog.openframeworks.cc/", "블로그"),
     ),
     "zh_cn": (
         ("https://forum.openframeworks.cc", "论坛(EN)"),
         ("http://forum.openframeworks.cn", "论坛(CN)"),
-        ("http://ofxaddons.com", "插件"),
         ("https://github.com/openframeworks", "github"),
-        ("http://openframeworks.cc/list-info", "邮件列表"),
+        ("http://ofxaddons.com", "插件"),
         ("http://forum.openframeworks.kr/t/slack/32", "slack"),
         ("https://guest.jianliao.com/rooms/d9640eb07f", "翻译讨论群"),
         ("http://blog.openframeworks.cc/", "博客"),
@@ -266,10 +261,11 @@ PAGES = (
     ("content/gallery.md", "", "gallery.mako"),
     ("content/community.md", "", "mediumpage.mako"),
     ("content/development.md", "", "fullpage.mako"),
-    ("tutorials/*.markdown", "tutorials", "tutorial.mako"),
-    ("tutorials/*.asciidoc", "tutorials", "tutorial.mako"),
+    ("learning/*.markdown", "learning", "tutorial.mako"),
+    ("learning/*.asciidoc", "learning", "tutorial.mako"),
     ("content/setup/*.md", "setup", "setup_guide.mako"),
     ("documentation/search_results.md", "documentation", "search_results.mako"),
+    ("documentation/contributing.md", "documentation", "tutorial.mako"),
 )
 # Below this point, everything is optional
 
@@ -1240,10 +1236,10 @@ DEMOTE_HEADERS = 0
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    "currentVersion": "0.9.2",
+    "currentVersion": "0.9.8",
     "breaking": False,
     "majorVersion": "0.9.0",
-    "olderVersion": "0.9.1",
+    "olderVersion": "0.9.7",
     "external_links": EXTERNAL_LINKS,
     "external_translations": {} if EXTERNAL_TRANSLATIONS==None else EXTERNAL_TRANSLATIONS,
 }

@@ -295,12 +295,16 @@ ie:
 
 //ofApp.h
 class ofApp: public ofBaseApp{
-   // ...
-   int someVar;
+    // ...
+    int someVar;
 }
+
 //myClass.cpp
+#include myClass.h
+#include "ofApp.h" // don't forget to add this line!
+
 void myClass::method(){
-   doSomething( ((ofApp*)ofGetAppPtr())->someVar );
+    ofLog() << "Value from main app: " << ((ofApp*)ofGetAppPtr())->someVariable;
 }
 ~~~~
 
@@ -1657,8 +1661,9 @@ _inlined_description: _
 
 _description: _
 
+Synchronizes the redraw of the screen to the vertical refresh rate of the screen. The monitor or projector redraws the screen at usually 60 frames per second. If vertical sync is not enabled your application runs as fast as possible and the screen can be drawing half of one frame and half of the previous frame, creating an effect called [tearing](https://en.wikipedia.org/wiki/Screen_tearing).
 
-
+Vertical sync is enabled by default since 0.8.0. You can disable it calling ofSetVerticalSync(false).
 
 
 

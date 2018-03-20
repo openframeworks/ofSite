@@ -17,7 +17,30 @@ _extends: _
 
 ##Description
 
+ofTimer lets you run code periodically with the specified frequency. Use it on a class that extends ofThread.
 
+~~~~{.cpp}
+
+class Scheduler: public ofThread {
+public:
+    Scheduler() {
+        timer.setPeriodicEvent(1000000000); // this is 1 second in nanoseconds
+        startThread();
+    }
+
+private:
+    ofTimer timer;
+    void threadedFunction() {
+        while(isThreadRunning()) {
+             timer.waitNext();
+             // Do your thing here. It will run once per second.
+        }
+    }
+}
+
+~~~~
+
+The timer above will wake up at 1 second intervals no matter how long the rest of the task takes. If the last execution took more than 1 second, it'll wake up right away and execute the next. It uses the most accurate timing functions in every OS.
 
 
 

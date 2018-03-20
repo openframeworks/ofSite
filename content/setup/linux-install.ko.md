@@ -52,3 +52,66 @@ cd OF/scripts/linux
 ```sh
 projectGenerator
 ```
+---
+
+## 서드파티 리눅스 패포판에 설치하기
+
+만일 사용중인 리눅스 배포판이 서드파티 배포판일 경우 설치 스크립트 실행중에 오류가 발생할 수 있습니다. 이는 `lsb_release -a` 명령어에서 확인할 수 있는 커널 배포판 정보와 버전등을 확인하는 스크립트에 의한 것으로, 해당 정보를 임시로 변경함으로써 우회하여 설치할 수 있습니다.
+
+가령 *Elementary OS 0.3 freya*의 경우 *Ubuntu 14.04 LTS*를 기반으로 한 서드파티 배포판입니다. 자신의 배포판 정보는 각 배포판의 공식 홈페이지에서 확인해주시기 바랍니다.
+
+
+### 1. 자신의 배포판 확인
+
+오픈프레임웍스 설치 이후 복원을 위해 아래의 내용을 따로 복사해두거나 별도의 백업해두시기 바랍니다.
+
+```sh
+$ cat /etc/lsb-release 
+DISTRIB_ID="elementary OS"
+DISTRIB_RELEASE=0.3.2
+DISTRIB_CODENAME=freya
+DISTRIB_DESCRIPTION="elementary OS Freya"
+$ sudo cp /etc/lsb-release /etc/lsb-release.bak
+```
+
+### 2. 기반이 되는 배포판의 정보 확인 
+해당 배포판의 컴퓨터에서 정보를 확인합니다. 
+아래는 *Ubuntu 14.04 LTS*의 배포판 정보입니다.
+
+```sh
+$ cat /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
+```
+
+### 3. 오픈프레임웍스를 설치할 리눅스 시스템의 커널배포판 정보 변경
+배포판의 정보가 담겨있는 `/etc/lsb-release`를 *단계 2*에서 확인한 기반 배포판의 정보로 바꿔줍니다.
+
+```sh
+$ sudo vi /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
+```
+
+### 4. 오픈프레임웍스 설치 
+의존성 및 코덱 설치, 오픈프레임웍스와 프로젝트 생성기 컴파일
+
+```sh
+$ ls {OF_DIRECTORY}/scripts/linux/ubuntu
+$ sudo ./install_dependencies.sh
+$ sudo ./install_codecs.sh
+$ ls {OF_DIRECTORY}/scripts/linux
+$ sudo ./compileOF.sh 
+$ sudo ./compilePG.sh 
+```
+
+### 5. 커널 정보 복원 
+**잊지 말고 꼭 수행해주세요!**
+
+```sh
+$ sudo cp /etc/lsb-release.bak /etc/lsb-release
+```

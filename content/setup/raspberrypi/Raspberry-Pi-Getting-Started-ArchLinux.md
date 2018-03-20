@@ -128,49 +128,13 @@ The default root password is root.
 
 
 ---
-##Preliminary work
+##Install rtAudio
 
-
-1. Make a directory to not make a mess (you can delete it afterwards)
-
-	* mkdir builds
-	* cd builds
-
-+ Install devel something
-
-	* sudo pacman -S --needed base-devel
-	
-		
-+ **Install rtMIDI**
-
-	* curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/rtmidi.tar.gz
-	
-+ Edit PKGBUILD file
-	
-	* cd rtmidi
-	* nano PKGBUILD
-
-+ Edit line where it says [ **arch=('i686' 'x86_64')** ] into [ **arch=('armv7h')** ]
-
-+ Make
-
-	* makepkg -si
-
-+ **Install rtAudio**
-
-	* curl -L -O https://aur.archlinux.org/cgit/aur.git/snapshot/rtaudio.tar.gz
-	
-+ Edit PKGBUILD file 
-	* cd rtaudio
-	* nano PKGBUILD
-
-+ Edit line where it says [ arch=('i686' 'x86_64') ] into [ arch=('armv7h') ]
-
-+ Make
-
-	* makepkg -si
-	
-	[Accept all prompts (of course if you agree)]
+Archlinux doesn't have an rtaudio package in their armv7 repositories. You can download it from the openFrameworks CI servers:
+	* cd /
+	* sudo wget http://ci.openframeworks.cc/rtaudio-armv7hf.tar.bz2
+	* sudo tar xjf rtaudio-armv7hf.tar.bz2
+	* sudo rm rtaudio-armv7hf.tar.bz2
 
 + Reboot and then you can delete the builds folder (packages have been already installed)
 	

@@ -9,7 +9,6 @@
 <%block name="content">
       <div id="body-wrap">
           <div class="page-wide">
-          
               <div id="docstitle"><h1>${modulename}</h1></div>
               <div id="editdocs">
                 % if not clazz is None:
@@ -27,8 +26,7 @@
                    % endif
                 % endif
               </div>
-              
-          </div>
+        </div>
           
           
         <div class="page-wide">
@@ -104,22 +102,22 @@
                     % endfor
                     </ul>
                 % endif
-${clazz.reference}
+                ${clazz.reference}
               % endif
 
               % if not clazz is None and clazz.detailed_inline_description.strip("\n").strip(" ") != "" and clazz.get_inlined_docs_similarity()<0.8:
                   % if clazz.reference.strip("\n").strip(" ") != "":
                     <div class="inlined_docs">
                   % endif
-                        <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
-    ${clazz.detailed_inline_description}
+                    <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
+                    ${clazz.detailed_inline_description}
                   % if clazz.reference.strip("\n").strip(" ") != "":
                     </div>   
                   % endif                   
               % endif
               
               % if not functions is None:
-${functions.description}
+                    ${functions.description}
               % endif
            </div>
                   

@@ -6,6 +6,7 @@
 
 - 영어(English) : [readme.md](readme.md)
 - 일본어(日本語) : [readme.ja.md](readme.ja.md)
+- 중국어-번체(繁體中文) : [readme.zh_cn.md](readme.zh_cn.md)
 
 ## 참여하기
 
@@ -33,7 +34,7 @@
   brew linkapps python3
   ```
 
-  그리고 나서 .bashrc 또는 zhsrc 파일에 아래 코드를 추가해주시면 됩니다.
+  그리고 나서 .bashrc 또는 .zshrc 파일에 아래 코드를 추가해주시면 됩니다.
 
   `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
 
@@ -62,5 +63,5 @@
 
     ![Image Title](filename.png "alt text")
 
-도큐먼트 공헌에 관한 최종 설명은, [문서 공헌하기](http://openframeworks.cc/ko/tutorials/10_developers/003_contributing_to_the_documentation/) 튜토리얼을 참고해주시기 바랍니다.
+도큐먼트 공헌에 관한 최종 설명은, [문서 공헌하기](http://openframeworks.cc/ko/learning/08_other/contributing/) 튜토리얼을 참고해주시기 바랍니다.
 

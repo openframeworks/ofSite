@@ -110,7 +110,7 @@ Flash나 프로세싱과 같은 프로그램을 사용해보셨다면, 코드를
 
 NOTE: PHP나 Python과 같은 몇몇 언어들은, "스크립트 언어"라고 합니다. 이 언어들은 컴파일링이 필요하지만, 컴파일과정은 프로그램 실행 직전에 발생합니다.
 
-여러분의 코드를 가져다가 기계코드로 번역하는 작업을 하는 프로그램을 "컴파일러"라고 합니다. [GCC](http://gcc.gnu.org/)는 가장 유명한 컴파일러중 하나입니다. 이녀석은 다양한 언어들을 컴파일 할 수 있습니다. GCC는 컴파일링을 위해서는 훌륭하지만, 정확히 어떻게 프로그램에게 여러분이 원하는 것을 하라고 전달하는 방법을 이해하는 것은 혼란스럽고 머리가 아픈 주제입니다. 앞 섹션에서는, "g++ -o hello hello.cpp"라는 아주 간단한 명령을 통해 프로그램을 컴파일 했습니다. 하지만 라이브러리를 사용한다거나, 특정 프로세서를 위해 코드를 최적화한다거나, 이미지 등등의 리소스들로 어플리케이션을 번들링하기 등등의 경우, 적당히 복잡한 오픈프레임웍스 프로젝트를 컴파일할 떄에는 수백라인의 특정한 문법과 다수의 헬퍼 도구들 가져오도록 CGG에게 말해줘야합니다. 이건 엄청나게 복잡한 과정이지요.
+여러분의 코드를 가져다가 기계코드로 번역하는 작업을 하는 프로그램을 "컴파일러"라고 합니다. [GCC](http://gcc.gnu.org/)는 가장 유명한 컴파일러중 하나입니다. 이녀석은 다양한 언어들을 컴파일 할 수 있습니다. GCC는 컴파일링을 위해서는 훌륭하지만, 정확히 어떻게 프로그램에게 여러분이 원하는 것을 하라고 전달하는 방법을 이해하는 것은 혼란스럽고 머리가 아픈 주제입니다. 앞 섹션에서는, "g++ -o hello hello.cpp"라는 아주 간단한 명령을 통해 프로그램을 컴파일 했습니다. 하지만 라이브러리를 사용한다거나, 특정 프로세서를 위해 코드를 최적화한다거나, 이미지 등등의 리소스들로 어플리케이션을 번들링하기 등등의 경우, 적당히 복잡한 오픈프레임웍스 프로젝트를 컴파일할 떄에는 수백라인의 특정한 문법과 다수의 헬퍼 도구들 가져오도록 GCC에게 말해줘야합니다. 이건 엄청나게 복잡한 과정이지요.
 
 따라서 대신, 대부분의 개발자들은 코드 프로젝트를 관리하고 생성하는데 [IDEs (Integrated Development Environments)](http://en.wikipedia.org/wiki/Integrated_development_environment)를 사용합니다. 대부분의 IDE는 텍스트 데이터, 파일관리자, 컴파일러뿐만 아니라, 컴파일 프로세스의 세부사항 및 옵션의 모든것을 커스터마이징 할 수 있는 GUI인터페이스들을 포함하고 있습니다. [몇몇 유명한 IDE들](http://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments)로는: Xcode, 비주얼 스튜디오, CodeBlocks, Eclipse, Netbean이 있습니다. 운영체제와 언어들을 위한 IDE는 많이 있습니다. 몇몇 IDE들은 특정 언어를 위한것도 있고, 다양한 언어들을 지원하기도 합니다.
 
@@ -138,11 +138,11 @@ by Emily Gobeille and Theo Watson
 
 #### Interactive Wall at UD
 
-> The 36-foot wall at the University of Dayton’s admission center engages prospective students and reveals videos of student life at UD. The wall displays continuously changing patterns of generative graphics, which respond to the presence of people in front of the wall.
+> Dayton 대학의 입학센터 있는 36피트의 벽은 대학내의 유망한 학생들의 일상을 담은 비디오를 보여줍니다. 벽에 비친 화면에는 생성된 패턴 그래픽이 벽을 마주본 사람들에 반응하여 계속 변화합니다.
 
->The field of cubes is animated with waves of activity, and a viewer’s presence causes them to rotate and unveil POV videos of a student experience. The viewers can explore the videos moving around to reveal different video fragments. When viewers stand together, their silhouettes join to reveal more of the video. When no one is present in the interaction area the installation displays typographic animations overlaid on the dynamically animated graphic patterns.
+> 화면에 가득찬 정육면체는 파도 모양으로 애니메이션되고, 관객의 존재 유무에 따라 각각이 회전하며 학생들의 경험을 담은 영상이 드러납니다. 관객들은 벽 주변을 돌아다니며 각각의 다른 영상들의 내용을 찾아내고, 탐색할 수 있습니다. 관객들이 함께 서있는 경우 그들의 실루엣은 하나가 되서 더 많은 영상을 찾아낼 수 깄습니다.  만약 벽 앞에 아무도 없을경우, 작품은 타이포그래픽 애니메이션을 동적으로 애니메이션되는 그래픽 패턴이 덮혀 보여집니다.
 
-For more video documentation and details of design and development process see [Case Study](the http://www.flightphase.com/main_wp/case-studies/ud-interactive-wall).
+디자인과 개발에 대한 더 많은 영상과 자세한 내용들은 [사례연구](the http://www.flightphase.com/main_wp/case-studies/ud-interactive-wall)에서 보실 수 있습니다.
 
 <iframe src="http://player.vimeo.com/video/27500054?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
@@ -151,7 +151,7 @@ For more video documentation and details of design and development process see [
 #### Scramble Suit
 by Arturo Castro and Kyle McDonald
 
-One great thing about openFrameworks is that how easy to incorporate C++ code from pretty much any library. To that end, Arturo and Kyle used a [Face Tracker library by Jason Saragih](http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html) to create a face-replacement technique that Kyle named "Scramble Suit" inspired by fictional technology from Philip K. Dick’s 1977 novel, "A Scanner Darkly". It’s effectively a cloak that hides the identity of the wearer by making it impossible to describe or remember them.
+오픈프레임웍스의 장점중 하나는 C++로 작성된 대부분의 라이브러리와 쉽게 통합 할 수 있다는 점 입니다. 이러한 장점때문에 Arturo 와 Kyle은 Kyle이 "Scramble Suit" 라고 이름붙인 필립K 딕의 1977년작 소설 "A Scanner Darkly"에서 등장한 허구의 얼굴 교체 기술을 위해 [Face Tracker library by Jason Saragih](http://web.mac.com/jsaragih/FaceTracker/FaceTracker.html)을 사용할 수 있었습니다. "A Scanner Darkly"는 착용자를 기억하지 못하게 하고 설명을 불가능하게 하는 효과적인 망토 입니다.
 
 <iframe src="http://player.vimeo.com/video/29391633?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 

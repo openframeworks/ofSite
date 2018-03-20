@@ -11,10 +11,6 @@ visual studioセットアップガイド
 
 - [Visual Studio Community 2015をダウンロード][0]
 
-[Visual Studio][0]に移動して、Community editionのVisual Studio IDEをダウンロードします。
-
-![](/setup/vs/visual_studio_community.png)
-
 インストール
 -------
 インストーラーを起動して、設定はデフォルトのままでインストールします。
@@ -39,6 +35,6 @@ Visua Studioのメニューから、Tools > Extensions and Updates に行きま�
 
 <iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-[0]: https://www.visualstudio.com/
+[0]: https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409
 [1]: https://en.wikipedia.org/wiki/K-Lite_Codec_Pack
 [2]: https://ninite.com/klitecodecs/

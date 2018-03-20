@@ -1,6 +1,7 @@
 from nikola.plugin_categories import Task
 from nikola import utils
 import os
+import time
 import re
 import logging
 
@@ -13,6 +14,7 @@ import glob
 import logging
 import collections
 import pathlib
+import markdown
 
 """
 sys.path.append(os.path.join(os.path.dirname(__file__),"asciidoc_template"))
@@ -40,11 +42,15 @@ class MarkdownArticle:
         self.author_site = ''
         self.translator = ''
         self.translator_site = ''
+        self.translated_from = ''
         self.body = ''
         self.type = 'markdown'
         self.lang = lang
         self.type = 'tutorial'
+        self.modification_date = time.ctime(os.path.getmtime(markdown))
         self.translations = {}
+        self.original = None
+        self.original_newer = False
         for line in mdfile:
             #line = line.decode('utf-8','replace')
             if state=='begin' and stripFileLine(line).strip(' ') =='---':
@@ -70,6 +76,9 @@ class MarkdownArticle:
                 continue
             if state=='header' and line.find('translator_site:')!=-1:
                 self.translator_site = stripFileLine(line[line.find(':')+1:]).strip(' ')
+                continue
+            if state=='header' and line.find('translated_from:')!=-1:
+                self.translated_from = stripFileLine(line[line.find(':')+1:]).strip(' ')
                 continue
             if state=='header' and line.find('type:')!=-1:
                 self.type = stripFileLine(line[line.find(':')+1:]).strip(' ')
@@ -149,7 +158,8 @@ class TutorialsTask(Task):
         }
         tasks = {}
         classes = []
-        directory = os.path.join(self.site.original_cwd, "tutorials")
+        folder_name = "learning"
+        directory = os.path.join(self.site.original_cwd, folder_name)
         template_name = "tutorials.mako"
         categories = []
         
@@ -190,9 +200,9 @@ class TutorialsTask(Task):
                 elif os.path.isdir(folder):
                     for lang in self.kw['translations']:
                         if lang == self.site.config['DEFAULT_LANG']: 
-                            out_folder = os.path.join(self.site.original_cwd, 'output','tutorials',catfolder,article.lower())
+                            out_folder = os.path.join(self.site.original_cwd, 'output',folder_name,catfolder,article.lower())
                         else:
-                            out_folder = os.path.join(self.site.original_cwd, 'output',lang,'tutorials',catfolder,article.lower())
+                            out_folder = os.path.join(self.site.original_cwd, 'output',lang,folder_name,catfolder,article.lower())
                             
                         for root, dirs, file_ins in os.walk(folder):
                             for f in file_ins:
@@ -218,6 +228,7 @@ class TutorialsTask(Task):
                 it = filter((lambda possible_translation: os.path.splitext(os.path.splitext(possible_translation.file)[0])[0] == article_file_name), translations)
                 article_translations = {}
                 for translation in it:
+                    translation.original = article
                     article_translations[translation.lang] = translation
                 return article_translations
                 
@@ -227,35 +238,10 @@ class TutorialsTask(Task):
                 
             articles = list(map(collect_translations, articles))
 
-            howToIndexInFolderName = catfolder.find("howto_")
 
-            categories.append({'category': category, 'articles': articles, 'isHowTo': howToIndexInFolderName > -1});
+            categories.append({'category': category, 'articles': articles});
             
         for lang in self.kw['translations']:
-
-            ### -----------------------------------
-            ### 1) TOP SECTION: GETTING STARTED ###
-
-            getting_started_path = os.path.join(directory, "getting_started.md")
-            if lang != self.site.config['DEFAULT_LANG']:
-                getting_started_lang_path = utils.get_translation_candidate(self.site.config, getting_started_path, lang)
-                p = pathlib.Path(getting_started_lang_path)
-                if p.exists():
-                    getting_started_path = getting_started_lang_path
-            getting_started = open(getting_started_path).read()
-
-
-            ### -----------------------------------
-            ### 2) MIDDLE SECTION: HOW-TOs ###
-            ### are generated from the folders
-
-            tutorials_intro_path = os.path.join(directory, "index.md")
-            if lang != self.site.config['DEFAULT_LANG']:
-                tutorials_intro_lang_path = utils.get_translation_candidate(self.site.config, tutorials_intro_path, lang)
-                p = pathlib.Path(tutorials_intro_lang_path)
-                if p.exists():
-                    tutorials_intro_path = tutorials_intro_lang_path
-            tutorials_intro = open(tutorials_intro_path).read()
 
             ### -----------------------------------
             ### 3) BOTTOM SECTION: GUIDES FROM OF-BOOK ###
@@ -270,23 +256,34 @@ class TutorialsTask(Task):
             
 
             ### -----------------------------------
+            ### 4) BOTTOM SECTION: how to improve the doc ###
+
+            contributing_to_docs_path = os.path.join(directory, "contributing_to_docs.md")
+            if lang != self.site.config['DEFAULT_LANG']:
+                contributing_to_docs_lang_path = utils.get_translation_candidate(self.site.config, contributing_to_docs_path, lang)
+                p = pathlib.Path(contributing_to_docs_lang_path)
+                if p.exists():
+                    contributing_to_docs_path = contributing_to_docs_lang_path
+            contributing_to_docs = markdown.markdown(open(contributing_to_docs_path).read())
+
 
             context = {}
             context["lang"] = lang
             if lang == self.site.config['DEFAULT_LANG']: 
-                context["permalink"] = '/tutorials/'
+                context["permalink"] = '/' + folder_name + '/'
             else:
-                context["permalink"] = '/' + lang + '/tutorials/'
-            context["getting_started"] = getting_started
-            context["tutorials_intro"] = tutorials_intro
+                context["permalink"] = '/' + lang + '/' + folder_name + '/'
             context["of_book"] = of_book
+            context["contributing_to_docs"] = contributing_to_docs
             context["title"] = "learning"
             context['categories'] = categories
-            short_tdst = os.path.join(self.kw['translations'][lang], "tutorials", "index.html")
+            short_tdst = os.path.join(self.kw['translations'][lang], folder_name, "index.html")
             tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))
             template_dep = self.site.template_system.template_deps(template_name)
+            template_dep += [contributing_to_docs_path]
             template_dep += files
             template_dep += [__file__]
+            template_dep += [os.path.join(self.site.original_cwd, "messages", "of_messages_" + lang + ".py")]
             yield utils.apply_filters({
                 'basename': self.name,
                 'name': tdst,

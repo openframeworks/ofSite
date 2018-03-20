@@ -31,7 +31,7 @@ void draw()
     box.rotate(spinX, 1.0, 0.0, 0.0);
     box.rotate(spinY, 0, 1.0, 0.0);
 
-    // get all the faces from the icoSphere, handy when you want to copy
+    // get all the faces from the box, handy when you want to copy
     // individual vertices or tweak them a little ;)
     vector<ofMeshFace> triangles = box.getMesh().getUniqueFaces();
 

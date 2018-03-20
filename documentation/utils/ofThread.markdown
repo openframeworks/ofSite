@@ -127,7 +127,7 @@ then in the .cpp file:
 void ofApp::setup() {
 
 	// start the thread
-	thread.startThread(true, false);	// blocking, non verbose
+	thread.startThread(true);	// blocking
 }
 
 void ofApp::update() {

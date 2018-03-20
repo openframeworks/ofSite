@@ -3,51 +3,68 @@
 
 <div class="page-left-medium">
 
-<h3>openFrameworks is a diverse community of hackers, artists, designers, students, teachers from all over the world.</h3>
-<br/>
-To learn more about getting involved in OF, check out the <a href="/list-info/">community mailing list</a>.
-The community list is ideal for learning about ways to participate, hearing about upcoming events like workshops and conferences, and sharing projects.
+<h3>openFrameworks is a diverse community of hackers, artists, designers, students and teachers from all over the world.</h3>
 
-Want to get involved right away?  The OF community is always looking for developers, designers, writers, event organizers, and general enthusiasts to help build a better experience.  If you're wondering where to look, dive into the <a href="http://forum.openframeworks.cc/index.php?board=31.0">collaborations</a> section on the forum, or take a look at the existing <a href="/tutorials/">tutorials</a>.
+<p>Whether you are just starting out and want to learn from other users, or are looking to contribute to the project, there are tons of resources and opportunities for being part of the community.</p>
 
-<ul class="external_links" >
-    <li><a href="/list-info/"> mailing list</a></li>
-    <li><a href="http://twitter.com/openFrameworks"> twitter</a></li>
+<h2>Community</h2>
+<p>The core of the openFrameworks community is centered around two areas:</p>
+
+<h3>Forums</h3>
+<p>The <strong><a href="https://forum.openframeworks.cc/">openFrameworks forums</a></strong> are the online home for the community. This should be the first place to visit if you have a question about openFrameworks, want to meet other users, or are looking to share your knowledge and help others learn about the framework.</p>
+ 
+<h3>Github</h3>
+<p>The <strong><a href="https://github.com/openframeworks/">openFramework's Github repository</a></strong> is the primary place for discussing and coordinating development and contributions to the project's code, documentation and website. It is the place to visit if you think you have run into a bug, have some ideas / requests for features or want to contribute directly to the project.</p>
+
+<h2>Contribute</h2>
+<p>The openFrameworks community is always welcoming new developers, designers, writers, event organizers, and general enthusiasts to help build a better experience. Check out the following resources on how to get involved.</p>
+
+<ul>
+    <li><a href="https://github.com/openframeworks/openFrameworks">Contribute to Development</a></li>
+    <li><a href="https://github.com/openframeworks/ofSite">Contribute to Documentation</a></li>
+    <li><a href="https://forum.openframeworks.cc/guidelines">Participate on the forums</a></li>
 </ul>
 
-
-<hr>
-
-
-<h2 id="contribute">contribute</h2>
-
-<p><b><a href="/tutorials">Write tutorials</a></b> - Have experience with a particular topic? Help teach others by creating a tutorial. See the <a href="/tutorials#wishlist">tutorial wish list</a> for ideas.</p>
-
-<p><b><a href="http://ofxaddons.com">Create addons</a></b> - An addon is code that extends openFrameworks in some way, allowing more advanced functionality. Help teach others by creating a tutorial. Visit <a href="http://ofxaddons.com">ofxaddons.com</a> to view all addons and the <a href="http://ofxaddons.com/howto/">tutorial on making an addon</a> to get started.</p>
-
-<p><b>Teach OF</b> - Are you teaching an upcoming workshop, class, or event? Post it to the <a href="/list-info/">OF mailing list</a> and it will be added to this page. Share workshops and classes you have already taught on the <a href="http://wiki.openframeworks.cc/index.php?title=Education">education wiki</a> page. Check out the <a href="http://forum.openframeworks.cc/">forum</a> for other teaching opportunities.</p>
-
-<p><b><a href="/development">Develop OF</a></b> - To get more in-depth information about OF, join the <a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev list</a>! The dev list is a great place for discussion about the direction OF is heading. The list is open to everyone, and we like to foster a diverse crowd to help OF become as useful and interesting as possible!</p>
-
-<p><b>Other contributions</b> - The OF community is always looking for developers, designers, writers, event organizers, and general enthusiasts to help build a better experience. Stay tuned on the <a href="/list-info/">mailing list</a> and <a href="http://twitter.com/openFrameworks"> twitter</a> for opportunities.</p>
-</div>
-            
-<div class="page-right-narrow">
-    <div class="home-links">
+</div>   
     
-        <h3 style="padding-top:30px">recurring meetups</h3>
-        <p>Gatherings of people working with oF or curious about getting involved.  A great place to meet people and share your ideas and projects!</p>
-        <ul>
-        <li><a href="http://groups.google.com/group/freakdays/feed/">Amsterdam</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/boston-creative-coders">Boston</a></li>
-        <li><a href="https://www.facebook.com/GeneratorLeipzig">Leipzig</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/nyc-of">NYC</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/openframeworks-meetup-to">Toronto</a></li>
-        <li><a href="http://www.meetup.com/Creative-Code-SEA">Seattle</a></li>
-        </ul>
-                
-        <h3 style="padding-top:30px">questions?</h3>
-        <p>Join the <a href="http://webchat.freenode.net/?channels=openframeworks">IRC channel</a> and introduce yourself! We're all constantly learning and helping each other, and we'd love to help you too.</p>
-    </div>
+<div class="page-right-narrow">
+<div class="home-links">
+	
+<h3>Latest News</h3>
+<p>The latest news and information from the community.</p>
+<p>
+<ul>
+	<li><a href="http://blog.openframeworks.cc/">Blog</a></li>
+    <li><a href="https://twitter.com/openframeworks">Twitter</a></li>
+	<li><a href="https://forum.openframeworks.cc/c/announcements">Announcements Forum</a></li>
+</ul>
+</p>
+
+<h3>Discover</h3>
+<p>Discover work from the community.</p>
+<p><ul>
+    <li><a href="/gallery/">Gallery</a></li>
+	<li><a href="https://www.instagram.com/explore/tags/openframeworks/">Instagram</a></li>
+    <li><a href="https://twitter.com/search?f=tweets&vertical=default&q=%23openframeworks">Twitter</a></li>
+	<li><a href="https://www.behance.net/search?content=projects&sort=published_date&time=all&search=openframeworks">Behance</a></li>
+	<li><a href="https://www.flickr.com/groups/openframeworks/">Flickr</a></li>	
+	<li><a href="http://www.creativeapplications.net/category/openframeworks/">Creative Applications Network</a></li>
+</ul></p>	
+	
+<h3>Develop</h3>
+<p>Connect with other developers and contributors.</p>
+<ul>
+    <li><a href="https://github.com/openframeworks">Github</a></li>
+	<li><a href="http://ofslack.herokuapp.com">Slack</a></li>
+    <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">Developer Mailing List</a> <span style="font-size:75%">(Low Volume)</span></li>
+	<li><a href="http://webchat.freenode.net/?channels=openframeworks">IRC</a> <span style="font-size:75%">(Low Volume)</span></li>
+</ul>
+
+<h3>Meet</h3>
+	<p>Get together with other community members to learn, share and be inspired.</p>
+	<ul>
+	<li><a href="https://forum.openframeworks.cc/c/events">Events Forum</a></li>
+	</ul>
+</div>
 </div>
 

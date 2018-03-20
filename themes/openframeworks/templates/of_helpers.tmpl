@@ -5,6 +5,9 @@
     import pathlib
     import re
     sys.path.append( "messages" )
+    if not "exists" in locals["pageargs"]:
+        msg = ""
+        return
     has_translation = locals["pageargs"]["exists"]("messages/of_messages_"+locals["pageargs"]["lang"]+".py")
     messages = {}
     if has_translation:
@@ -29,5 +32,5 @@
     if dst_lang == default_lang:
         dst_link = "/" + no_lang
     else:
-        dst_link = "/" + dst_lang + no_lang
+        dst_link = "/" + dst_lang + "/" + no_lang
 %>${dst_link}</%def>

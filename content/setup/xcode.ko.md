@@ -84,8 +84,7 @@ xcode-select --install
 
 ![blank openframeworks project template](/setup/xcode/generate-blank.png)
 
-Let's make a simple app which draws some text in the top left corner of the window. In the `draw()` function, add the following code then hit cmd-r (or click the run button) to run your new app:
-창의 좌측 상단에 텍스트를 그리는 간단한 앱을 만들어봅시다. `draw()`함수 안에 아래와 같은 코드를 작성하고 cmd-r을 눌러(혹은 실행버튼을 클릭하여) 여러분의 새 앱을 실행해봅시다.
+창의 좌측 상단에 텍스트를 그리는 간단한 앱을 만들어봅시다. `draw()`함수 안에 아래와 같은 코드를 작성하고 cmd-r을 눌러(혹은 실행버튼을 클릭하여) 여러분의 새 앱을 실행해봅시다:
 
 ```
 ofDrawBitmapStringHighlight("Everything works!", 20, 20);
@@ -158,7 +157,7 @@ Xcode는 또한 런타임 에러가 발생한 곳을 추척하여 의심스러�
 
 ![finding the include folder in ofxjson](/setup/xcode/files-include-folder.png)
 
-path를 알고 있다면, Xcode의 좌측 사이드바의 프로젝트파일을 선택해 프로젝트의 build setting을 연 다음, 상탄의 "Build Settings"탭을 선택하고 "header search paths"를 찾습니다.
+path를 알고 있다면, Xcode의 좌측 사이드바의 프로젝트파일을 선택해 프로젝트의 build setting을 연 다음, 상단의 "Build Settings"탭을 선택하고 "header search paths"를 찾습니다.
 
 ![finding the build settings dialog](/setup/xcode/files-finding-build-settings.gif)
 

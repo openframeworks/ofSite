@@ -168,7 +168,7 @@ Accepted modes are:
 void ofApp::draw(){
 
     ofColor colorOne(255, 0, 0);
-    ofColor colorTwo(0, 0, 0);
+    ofColor colorTwo(0, 0, 255);
 
     ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);
     // Sets the background to a circular gradient
@@ -181,7 +181,7 @@ void ofApp::draw(){
 void ofApp::draw(){
 
     ofColor colorOne(255, 0, 0);
-    ofColor colorTwo(0, 0, 0);
+    ofColor colorTwo(0, 0, 255);
 
     ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_LINEAR);
       // Sets the background to a linear gradient
@@ -194,7 +194,7 @@ void ofApp::draw(){
 void ofApp::draw(){
 
     ofColor colorOne(255, 0, 0);
-    ofColor colorTwo(0, 0, 0);
+    ofColor colorTwo(0, 0, 255);
 
     ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_BAR);
       // Sets the background to a bar gradient
@@ -4075,7 +4075,7 @@ void ofApp::draw(){
     ofPushMatrix();             // push the current coordinate position
     ofRotateX(90);              // change the coordinate system
     ofDrawRea10,10,40,40);      // draw a rect
-    ofPopMatrix()               // recall the pushed coordinate position
+    ofPopMatrix();              // recall the pushed coordinate position
     ofDrawCircle(10, 10, 5);    // draw a circle
 }
 ~~~~
@@ -4094,7 +4094,7 @@ void ofApp::draw(){
     ofPushMatrix();        // push the current coordinate position
     ofRotateX(90);         // change the coordinate system
     ofDrawRectangle(10,10,40,40);    // draw a rect
-    ofPopMatrix()          // recall the pushed coordinate position
+    ofPopMatrix();         // recall the pushed coordinate position
 }
 ~~~~
 

@@ -1,8 +1,7 @@
-google.load("feeds", "1");
+//google.load("feeds", "1");
 
  // Our callback function, for when a feed is loaded.
-function feedGithubLoaded(result) {
-  if (!result.error) {
+function feedGithubLoaded(data) {
     // Grab the container we will put the results into
     var container = document.getElementById("github");
     container.innerHTML = '<h3>' + githubTitle + '</h3>';
@@ -12,20 +11,24 @@ function feedGithubLoaded(result) {
     // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
     var ul = document.createElement("ul");
     var totalElements = 0;
-    for (var i = 0; i < result.xmlDocument.getElementsByTagName('entry').length && totalElements<10; i++) {
-        var entry = result.xmlDocument.getElementsByTagName('entry')[i];
+    $.each(data, function( key, val ) {
+        if(val.commit.message.indexOf("Merge") == 0 || totalElements>20){
+            return
+        }
         var li = document.createElement("li");
         var a = document.createElement("a");
         var img = document.createElement("img");
         var div = document.createElement("div");
         div.className="github_avatar";
-        img.src = entry.getElementsByTagNameNS("*","thumbnail")[0].getAttribute("url");
-        a.href = entry.getElementsByTagName("link")[0].getAttribute("href");
-        var title = entry.getElementsByTagName("title")[0].textContent;
-        if(title.indexOf("Merge") == 0){
-            continue
+        img.src = val.author.avatar_url;
+        a.href = val.html_url;
+        var title;
+        if (val.commit.message.length > 80) {
+             title = val.commit.message.substr(0,80) + "...";
+        }else{
+             title = val.commit.message;
         }
-        var date = entry.getElementsByTagName("updated")[0].textContent;
+        var date = val.commit.author.date;
         var dateTag = document.createElement("span");
         dateTag.className = "github_time";
         dateTag.title = date;
@@ -38,9 +41,8 @@ function feedGithubLoaded(result) {
         li.appendChild(document.createElement("br"));
         ul.appendChild(li);
         totalElements++;
-    }
+    })
     container.appendChild(ul);
-  }
 }
 
     // Our callback function, for when a feed is loaded.
@@ -54,19 +56,24 @@ function feedForumLoaded(result) {
         // Check out the result object for a list of properties returned in each entry.
         // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
         var ul = document.createElement("ul");
-        for (var i = 0; i < result.feed.entries.length; i++) {
-            var entry = result.feed.entries[i];
+        var totalElements = 0;
+        $(result).find("item").each(function(key, entry){
+            if(totalElements>10){
+                return;
+            }
             var li = document.createElement("li");
             var a = document.createElement("a");
-            a.href = entry.link;
-            a.appendChild(document.createTextNode(Encoder.htmlDecode(entry.title)));
+            var title = entry.getElementsByTagName("title")[0].textContent;
+            a.href = entry.getElementsByTagName("link")[0].textContent;
+            a.appendChild(document.createTextNode(Encoder.htmlDecode(title)));
             li.appendChild(a);
             li.appendChild(document.createElement("br"));
             var span = document.createElement("span")
-            span.innerHTML = entry.content.substr(0,250) + "...</p>"
+            span.innerHTML = entry.getElementsByTagName("description")[0].textContent.substr(0,250) + "...</p>"
             li.appendChild(span);
             ul.appendChild(li);
-        }
+            totalElements += 1;
+        });
         container.appendChild(ul);
     }
 }
@@ -74,6 +81,7 @@ function feedForumLoaded(result) {
 // Our callback function, for when a feed is loaded.
 function feedFlickrLoaded(result) {
     if (!result.error) {
+        console.log(result)
         // Grab the container we will put the results into
         var container = document.getElementById("flickr");
         container.innerHTML = '';
@@ -81,32 +89,35 @@ function feedFlickrLoaded(result) {
         // Loop through the feeds, putting the titles onto the page.
         // Check out the result object for a list of properties returned in each entry.
         // http://code.google.com/apis/ajaxfeeds/documentation/reference.html#JSON
-        for (var i = 0; i < result.feed.entries.length; i++) {
-            var entry = result.feed.entries[i];
-            if(entry["mediaGroups"]==undefined || entry.mediaGroups.length<1 || entry.mediaGroups[0].length < 1 || ("" + entry.mediaGroups[0].contents[0].type).indexOf("image")!=0){
+        $(result).find("item").each(function(key, entry){
+            /*if(entry["mediaGroups"]==undefined || entry.mediaGroups.length<1 || entry.mediaGroups[0].length < 1 || ("" + entry.mediaGroups[0].contents[0].type).indexOf("image")!=0){
                 console.log("entry with no media " + entry.mediaGroups[0].contents[0].type);
-                continue;
-            }
+                return;
+            }*/
             var h3 = document.createElement("h3");
             var a = document.createElement("a");
             var aText = document.createElement("a");
             var div = document.createElement("div");
             var img = document.createElement("img");
-            a.href = entry.link;
-            aText.href = entry.link;
+            a.href = entry.getElementsByTagName("link")[0].textContent;
+            aText.href = entry.getElementsByTagName("link")[0].textContent;
             aText.className="flickrTitle";
-            //entry.title + 
-            h3.appendChild(document.createTextNode(Encoder.htmlDecode(" by " + entry.author.substr(entry.author.indexOf('(')+1, entry.author.indexOf(')')-entry.author.indexOf('(')-1))))
+            //entry.title +
+            //" by " + entry.author.substr(entry.author.indexOf('(')+1, entry.author.indexOf(')')-entry.author.indexOf('(')-1))
+            var title = entry.getElementsByTagName("title")[0].textContent;
+            var author = entry.getElementsByTagName("author")[0].textContent;
+            var label = " by " + author.substr(author.indexOf('(')+1, author.indexOf(')')-author.indexOf('(')-1);
+            h3.appendChild(document.createTextNode(Encoder.htmlDecode(label)));
             a.appendChild(img);
             a.className  = "img";
             aText.appendChild(h3)
             div.appendChild(a);
             div.appendChild(aText);
             div.className="imgContainer";
-            img.src = entry.mediaGroups[0].contents[0].url;
+            img.src = entry.getElementsByTagName("media:content")[0].attributes["url"].textContent;
 
             container.appendChild(div);
-        }
+        });
     }
     $('#flickr').cycle({
         fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...

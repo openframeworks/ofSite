@@ -10,10 +10,6 @@ Visual Studio 2012 또는 Visual Studio 2012 Express for Windows Desktop에서 �
 --------
 > [Visual Studio Community 2015 다운받기][0]
 
-[Visual Studio][0] 웹사이트로 이동하여 비주얼 스튜디오 IDE의 커뮤니티 에디션을 다운받습니다. 
-
-![](/setup/vs/visual_studio_community.png)
-
 인스톨
 -------
 인스톨러를 실행하고, 기본설정으로 설치합니다.
@@ -36,6 +32,6 @@ Visual Studio를 위한 오픈프레임웍스 플러그인
 
 <iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-[0]: https://www.visualstudio.com/
+[0]: https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409
 [1]: https://en.wikipedia.org/wiki/K-Lite_Codec_Pack
 [2]: https://ninite.com/klitecodecs/
