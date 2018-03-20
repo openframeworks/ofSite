@@ -36,7 +36,7 @@ MESSAGES = {
 
     'please_see': '查看 <a href="https://raw.github.com/openframeworks/openFrameworks/${currentVersion}/CHANGELOG.md">变化日志</a>，看看与之前版本的变化',
 
-    'intro': 'To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license/">MIT License</a>.',
+    'intro': 'openFrameworks需要选择一个IDE来运行openFrameworks，相关指南请在下载页面选择你的系统和你要使用的IDE配置指南。如果发现任何漏洞请在<a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> 页面提交。在使用openFrameworks中有任何问题请在<a href="http://forum.openframeworks.cc">forum</a>论坛提交。openFrameworks遵循 <a href="../about/license/">MIT License</a>协议。',
 
     'download_openframeworks': '下载 <br/> openFrameworks',
 
