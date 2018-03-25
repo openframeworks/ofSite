@@ -208,11 +208,9 @@ EXTERNAL_LINKS = {
     ),
     "zh_cn": (
         ("https://forum.openframeworks.cc", "论坛(EN)"),
-        ("http://forum.openframeworks.cn", "论坛(CN)"),
         ("https://github.com/openframeworks", "github"),
         ("http://ofxaddons.com", "插件"),
-        ("http://forum.openframeworks.kr/t/slack/32", "slack"),
-        ("https://guest.jianliao.com/rooms/d9640eb07f", "翻译讨论群"),
+        ("http://ofslack.herokuapp.com", "slack"),
         ("http://blog.openframeworks.cc/", "博客"),
     ),
 }
