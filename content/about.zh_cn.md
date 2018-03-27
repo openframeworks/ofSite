@@ -1,7 +1,7 @@
 ## -*- coding: utf-8 -*-
 .. title: about
 
-### openFrameworks is an [open source](license/) [C++](https://en.wikipedia.org/wiki/C%2B%2B) toolkit designed to assist the creative process by providing a simple and intuitive framework for experimentation.
+### openFrameworks 是一个 [开源](协议/) [C++](https://en.wikipedia.org/wiki/C%2B%2B) 框架，旨在通过为实验提供简单直观的框架来协助创作过程。
 </br>
 
 
@@ -18,22 +18,22 @@
 </div>
 <br/>
 
-openFrameworks is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
+openFrameworks 被设计为万能的瑞士军刀来解决各种问题，并将以下常用的第三方库整合在一起:
 
-* [OpenGL](http://www.opengl.org/), [GLEW](http://glew.sourceforge.net/), [GLUT](http://www.opengl.org/resources/libraries/glut/), [libtess2](https://code.google.com/p/libtess2/) and [cairo](http://cairographics.org/) for graphics
-* [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/), [OpenAL](http://http://connect.creativelabs.com/openal) and [Kiss FFT](http://kissfft.sourceforge.net/) or [FMOD](http://www.fmod.org/) for audio input, output and analysis
-* [FreeType](http://freetype.sourceforge.net/index2.html) for fonts
-* [FreeImage](http://freeimage.sourceforge.net/) for image saving and loading
-* [Quicktime](http://developer.apple.com/quicktime/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
-* [Poco](http://pocoproject.org/) for a variety of utilities
-* [OpenCV](http://opencv.org/) for computer vision
-* [Assimp](http://assimp.sourceforge.net/) for 3D model loading
+* 图形：[OpenGL](http://www.opengl.org/), [GLEW](http://glew.sourceforge.net/), [GLUT](http://www.opengl.org/resources/libraries/glut/), [libtess2](https://code.google.com/p/libtess2/) and [cairo](http://cairographics.org/)
+* 音频输入，输出与分析：[rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/), [OpenAL](http://http://connect.creativelabs.com/openal) and [Kiss FFT](http://kissfft.sourceforge.net/) or [FMOD](http://www.fmod.org/) 
+* 字体：[FreeType](http://freetype.sourceforge.net/index2.html)
+* 图片加载与导出：[FreeImage](http://freeimage.sourceforge.net/)
+* 视频播放与生成：[Quicktime](http://developer.apple.com/quicktime/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput)
+* 多功能工具库：[Poco](http://pocoproject.org/)
+* 计算机视觉：[OpenCV](http://opencv.org/)
+* 加载三维模型：[Assimp](http://assimp.sourceforge.net/)
 
-The code is written to be massively cross-compatible. Right now we support five operating systems (Windows, OSX, Linux, iOS, Android) and four IDEs (XCode, Code::Blocks, and Visual Studio and Eclipse). The API is designed to be minimal and easy to grasp.
+openFramewors的框架代码支持跨平台。目前在支持五种操作系统（Windows, OSX, Linux, iOS, Android）和四个IDE（XCode, Code::Blocks, and Visual Studio and Eclipse）。所有的接口都是简单易读的模式设计的。
 
-openFrameworks is distributed under the [MIT License](license/). This gives everyone the freedoms to use openFrameworks in any context: commercial or non-commercial, public or private, open or closed source. While many openFrameworks users give their work back to the community in a similarly free way, there is no obligation to contribute.
+openFrameworks是根据[MIT许可证]（license/）分发的。 这使得每个人都可以在任何情况下使用openFrameworks：商业或非商业的，公共或私人的，开源或不同开的。 虽然没有义务为oF做出贡献，但是还是有许多人为openFrameworks贡献他们的力量。
 
-Simply put, openFrameworks is a tool that makes it much easier to make things with code. We find it super useful, and we hope you do too.
+简而言之，openFrameworks是一个用代码以更加简单方法来做出某些东西的工具。我们发现oF非常实用，也希望你也能用得到。
 
 ----------------
 design philosophy
