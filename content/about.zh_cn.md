@@ -36,16 +36,18 @@ openFrameworks是根据[MIT许可证]（license/）分发的。 这使得每个�
 简而言之，openFrameworks是一个用代码以更加简单方法来做出某些东西的工具。我们发现oF非常实用，也希望你也能用得到。
 
 ----------------
-design philosophy
+设计理念
 ----------------
 
-openFrameworks is guided by a number of goals: it should be collaborative, usable and simple, consistent and intuitive, cross-platform, powerful, and extensible. openFrameworks is also driven by a "do it with others" (DIWO) philosophy.
+openFrameworks的设计理念包括：可协作性，可用性和简单性，一致性和直观性，跨平台性，强大性和可扩展性。 openFrameworks也是由“与他人合作”（DIWO）理念驱动的。
 
-**Collaborative**
+**可协作性**
 
-openFrameworks development is collaborative. It thrives on the contributions of [many people](https://github.com/openframeworks/openFrameworks/contributors), who engage in [frequent discussion](http://forum.openframeworks.cc/), and collaborate on [addons](http://ofxaddons.com/) and [projects](../gallery). We encourage people to make openFrameworks their own, and contribute to the ecosystem.
+openFrameworks是协作形式开发的。它的蓬勃发展离不开[这些人](https://github.com/openframeworks/openFrameworks/contributors)的贡献，他们经常在[这里](http://forum.openframeworks.cc/)进行频繁的讨论，而且一起合作开发了[插件](http://ofxaddons.com/)和[项目](../gallery)。 
+我们鼓励人们自己开发openFrameworks，并为生态系统做出贡献。
 
-openFrameworks is developed in a collaborative way. We use git, a distributed versioning system, which means also that people can branch, experiment, and make suggestions. If you look at the network diagram on GitHub, it's looks like some alien diagram, full of weaving branches, code pulling apart and coming together. There's a huge community, all over the world, working on the core code: fixing bugs, submitting pull requests, and shaping the tool the way they want to see it. It's a world wide project, and it's common to wake up in the USA to an inbox full of pull requests and issues emails from coders in Asia and Europe. Over 70 people have contributed to the openFrameworks core directly, and hundreds of people have forked the code or contributed in other ways.
+openFrameworks是以合作的方式在开发。我们使用Git来进行版本管理。意味着人们可以很方便的创建分支，进行实验，然后提出好的建议。如果你在Github看到网络图，它看起来像是外星人图，充满了分支，代码拆分，代码合并的曲线。
+世界各地都有庞大的社区为核心代码做贡献：修复问题，提交合并请求，然后按照他们希望的方式开发工具。这是一个全球性的项目，通常在美国醒来后会在邮箱里收到很多来自亚洲和欧洲的工程师发来的合并请求和问题的邮件。有超过70人直接为openFrameworks的核心代码做出了贡献，还有数百人克隆了代码或者以其他的方式在做出贡献。
 
 **Simplicity**
 
