@@ -94,7 +94,7 @@ _inlined_description: _
 
 _description: _
 
-
+`bindAttribute` is used for faster access to attributes. The idea is to set attributes by location (an integer) instead of querying attribute locations multiple times by name. This method is used internally by OF in `ofShader::bindDefaults()` to set the default locations of the `position`, `color`, `normal` and `texcoord` attributes.
 
 
 
