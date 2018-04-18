@@ -24,14 +24,14 @@ cd OF/scripts/linux
 ./compileOF.sh -j3
 ```
 
-`-j3` tells the script to use 3 CPUs to compile. You can specify as many as you want but it's recommended to use the number of cores in your computer or less.
+`-j3` tells the script to use 3 CPUs to compile. You can specify as many as you want but it's recommended to use the number of cores in your computer or less. On many systems the command `nproc --all` should return the amount of cores available.
 
 With this you can already go into any of the examples folders and compile the examples using make:
 
 ```
 cd OF/examples/graphics/polygonExample
 make
-make Run
+make RunRelease
 ```
 
 Or use any of the officially supported IDEs: [qtcreator](../qtcreator/) or [eclipse](../eclipse/) both IDEs have plugins that allow to create new projects, import existing ones, add addons to them.
@@ -40,7 +40,7 @@ If you want to install the project generator, a tool that allows to create and u
 
 ```
 cd OF/scripts/linux
-./compilePG.sh
+./compilePG.sh -j3
 ```
 
 This will compile the GUI version of the project generator which will be placed in the root of the OF folder. When it's done compiling it will ask you if you also want to install the optional command line version of the tool which allows you to create projects from anywhere on your system.

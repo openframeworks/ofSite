@@ -420,6 +420,7 @@ a:active {
 	text-decoration: none;
 }
 a.nohover:hover {
+	color: #EE3987;
 	background: none;
 	border: none;
 }

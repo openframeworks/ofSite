@@ -2,7 +2,7 @@
 <%page args="method"/>
 <div class="documentation_detail ${method.name}" data-lookup="${method.name}" data-item-type="method">
   	<% params = "()" if method.parameters=="" else "(...)" %> 
-	<h1><a name="show_${method.name}">${method.name}${params}</a></h1>
+	<h1><a name="show_${method.name}" class="nohover">${method.name}${params}</a></h1>
 	<h2>${method.returns} ${method.clazz}::${method.name}(${method.parameters})</h2>
 	<div class="documentation_detail_description">
 		${method.summary}
