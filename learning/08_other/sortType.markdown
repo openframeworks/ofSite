@@ -61,7 +61,7 @@ void ofApp::setup(){
     
     // Sort the vector
     
-    ofSort(objects, sortMe);
+    ofSort(objects, &sortMe);
 
     // Show the content of the vector after sorting
 
