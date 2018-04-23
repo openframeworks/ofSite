@@ -439,13 +439,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Create a cubic bezier line from the current drawing point with the 2
-control points indicated by ofPoint `cp1` and `cp2`, that ends at ofPoint
-to.
+Create a cubic bezier line from the current drawing point with the two
+control points indicated by ofPoint cp1 and ofPoint cp2, that ends at ofPoint p.
 
 ~~~~{.cpp}
-line.addVertex(ofPoint(200, 400));
-line.bezierTo(100, 100, 800, 100, 700, 400);
+path.moveTo(ofPoint(200, 400));
+path.bezierTo(100, 100, 800, 100, 700, 400);
 ~~~~
 ![polyline bezier](graphics/bezier.jpg)
 The control points are shown in red.
@@ -456,10 +455,11 @@ The control points are shown in red.
 
 _description: _
 
-Creates a cubic bezier line from the current drawing point with the 2 control points indicated by ofPoint cp1 and cp2, that ends at ofPoint to. For instance, the following:
+Create a cubic bezier line from the current drawing point with the two control points indicated by ofPoint cp1 and ofPoint cp2, that ends at ofPoint p.
+
 ~~~~{.cpp}
-line.addVertex(ofPoint(200, 400));
-line.bezierTo(100, 100, 800, 100, 700, 400);
+path.moveto(ofPoint(200, 400));
+path.bezierTo(100, 100, 800, 100, 700, 400);
 ~~~~
 Creates this:
 ![polyline bezier](bezier.png)
@@ -491,9 +491,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Create a cubic bezier line from the current drawing point with the 2
-control points indicated by the coordinates cx1, cy1 and cx2, cy2,
-that ends at the coordinates x, y.
+Create a cubic bezier line from the current drawing point with the two
+control points indicated by the coordinates (cx1, cy1) and (cx2, cy2),
+that ends at the coordinate (x, y).
 
 
 
@@ -501,7 +501,7 @@ that ends at the coordinates x, y.
 
 _description: _
 
-Creates a cubic bezier line from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1 and cx2, cy2, that ends at the coordinates x, y.
+Create a cubic bezier line from the current drawing point with the two control points indicated by the coordinates (cx1, cy1) and (cx2, cy2), that ends at the coordinate (x, y).
 
 
 
@@ -530,8 +530,8 @@ _advanced: False_
 _inlined_description: _
 
 Create a cubic bezier line in 3D space from the current drawing point
-with the 2 control points indicated by the coordinates cx1, cy1, cz1
-and cx2, cy2, cz2, that ends at the coordinates x, y, z.
+with the two control points indicated by the coordinates (cx1, cy1, cz1)
+and (cx2, cy2, cz2), that ends at the coordinate (x, y, z).
 
 
 
@@ -539,7 +539,8 @@ and cx2, cy2, cz2, that ends at the coordinates x, y, z.
 
 _description: _
 
-Creates a cubic bezier line in 3D space from the current drawing point with the 2 control points indicated by the coordinates cx1, cy1, cz1 and cx2, cy2, cz2, that ends at the coordinates x, y, z.
+Create a cubic bezier line in 3D space from the current drawing point with the two control points indicated by the coordinates (cx1, cy1, cz1) and (cx2, cy2, cz2), that ends at the coordinate (x, y, z).
+
 ~~~~{.cpp}
 float cx = ofGetWidth()/2;
 float cy = 200;
@@ -547,9 +548,9 @@ float step = TWO_PI / 60;
 for (float i = 0.0; i < TWO_PI; i+=step) {
 
     if(i == 0.0) {
-        line.addVertex(cx + (400*cos(i)), cy+400, 400 * sin(i));
+        path.moveTo(cx + (400*cos(i)), cy+400, 400 * sin(i));
     } else {
-        line.bezierTo( cx - (200*cos(i)), cy-100, 400 * sin(i),
+        path.bezierTo( cx - (200*cos(i)), cy-100, 400 * sin(i),
                        cx + (200*cos(i)), cy+600, 400 * sin(i),
                        cx + (400*cos(i)), cy+400, 400 * sin(i));
     }
@@ -1981,9 +1982,8 @@ _advanced: False_
 _inlined_description: _
 
 Create a quadratic bezier line in 3D space from the current drawing
-point with the beginning indicated by the coordinates cx1, cy1, cz1,
-the control point at cx2, cy2, cz2, and that ends at the coordinates
-x, y, z.
+point with the control points indicated by ofPoint cp1 and ofPoint cp2,
+and that ends at ofPoint p.
 ![Curves](graphics/curves.jpg)
 
 
@@ -1992,7 +1992,7 @@ x, y, z.
 
 _description: _
 
-Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
+Create a quadratic bezier line in 3D space from the current drawing point with the control points indicated by ofPoint cp1 and ofPoint cp2,  and that ends at ofPoint p.
 ![polyline curves](curves.png)
 
 
@@ -2022,8 +2022,8 @@ _advanced: False_
 _inlined_description: _
 
 Creates a quadratic bezier line in 2D space from the current drawing
-point with the beginning indicated by the point p1, the control point
-at p2, and that ends at the point p3.
+point with the control points indicated by the coordinates (cx1, cy1)
+and (cx2, cy2), and that ends at the coordinate (x, y)
 
 
 
@@ -2031,7 +2031,7 @@ at p2, and that ends at the point p3.
 
 _description: _
 
-Creates a quadratic bezier line in 2D space from the current drawing point with the beginning indicated by the point p1, the control point at p2, and that ends at the point p3.
+Creates a quadratic bezier line in 2D space from the current drawing point with the control points indicated by the coordinates (cx1, cy1) and (cx2, cy2), and that ends at the coordinate (x, y)
 
 
 
@@ -2060,8 +2060,8 @@ _advanced: False_
 _inlined_description: _
 
 Creates a quadratic bezier line in 3D space from the current drawing
-point with the beginning indicated by the coordinates cx1, cy1, the
-control point at cx2, cy2, and that ends at the coordinates x, y.
+point with the control points indicated by the coordinates (cx1, cy1, cz1) and
+(cx2, cy2, cz2), and that ends at the coordinate (x, y, z).
 
 
 
@@ -2069,7 +2069,7 @@ control point at cx2, cy2, and that ends at the coordinates x, y.
 
 _description: _
 
-Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y.
+Creates a quadratic bezier line in 3D space from the current drawing point with the control points indicated by the coordinates (cx1, cy1, cz1) and (cx2, cy2, cz2), and that ends at the coordinate (x, y, z).
 
 
 
