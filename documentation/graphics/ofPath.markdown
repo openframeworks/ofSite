@@ -491,7 +491,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Create a cubic bezier line from the current drawing point with the two
+Creates a cubic bezier line from the current drawing point with the two
 control points indicated by the coordinates (cx1, cy1) and (cx2, cy2),
 that ends at the coordinate (x, y).
 
@@ -501,7 +501,7 @@ that ends at the coordinate (x, y).
 
 _description: _
 
-Create a cubic bezier line from the current drawing point with the two control points indicated by the coordinates (cx1, cy1) and (cx2, cy2), that ends at the coordinate (x, y).
+Creates a cubic bezier line from the current drawing point with the two control points indicated by the coordinates (cx1, cy1) and (cx2, cy2), that ends at the coordinate (x, y).
 
 
 
@@ -529,7 +529,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Create a cubic bezier line in 3D space from the current drawing point
+Creates a cubic bezier line in 3D space from the current drawing point
 with the two control points indicated by the coordinates (cx1, cy1, cz1)
 and (cx2, cy2, cz2), that ends at the coordinate (x, y, z).
 
@@ -539,7 +539,7 @@ and (cx2, cy2, cz2), that ends at the coordinate (x, y, z).
 
 _description: _
 
-Create a cubic bezier line in 3D space from the current drawing point with the two control points indicated by the coordinates (cx1, cy1, cz1) and (cx2, cy2, cz2), that ends at the coordinate (x, y, z).
+Creates a cubic bezier line in 3D space from the current drawing point with the two control points indicated by the coordinates (cx1, cy1, cz1) and (cx2, cy2, cz2), that ends at the coordinate (x, y, z).
 
 ~~~~{.cpp}
 float cx = ofGetWidth()/2;
