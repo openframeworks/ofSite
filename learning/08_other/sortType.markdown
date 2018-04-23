@@ -31,13 +31,14 @@ bool sortMe(myObject & a, myObject & b){
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
     
-    // make three objects give them different data
+    // Make three objects
     
     myObject a;
     myObject b;
     myObject c;
+    
+    // Give the objects different data
     
     a.id = 0;
     b.id = 1;
@@ -47,26 +48,26 @@ void ofApp::setup(){
     b.age = 1000;
     c.age = 5;
     
-    // add them to a vector
+    // Place the objects in a vector
     
-    vector < myObject > objects =  {a,b,c};
+    std::vector<myObject> objects = {a,b,c};
     
-    // print out the data pre sorted 
+    // Show the content of the vector before sorting
     
-    cout << "pre sort" << endl;
-    
-    for (int i = 0; i < objects.size(); i++){
-        cout << objects[i].id << " " << objects[i].age << endl;
+    std::cout << "before ofSort()" << std::endl;    
+    for (auto & obj : objects) {
+        std::cout << obj.id << " " << obj.age << std::endl;
     }
     
+    // Sort the vector
+    
     ofSort(objects, sortMe);
-    
-    // print out the data post sorted
-    
-    cout << "post sort" << endl;
-    
-    for (int i = 0; i < objects.size(); i++){
-        cout << objects[i].id << " " << objects[i].age << endl;
+
+    // Show the content of the vector after sorting
+
+    std::cout << "after ofSort()" << std::endl;    
+    for (auto & obj : objects) {
+        std::cout << obj.id << " " << obj.age << std::endl;
     }
 }
  
@@ -75,11 +76,11 @@ void ofApp::setup(){
 when you run this code, you'll see the following: 
 
 ```
-pre sort
+before ofSort()
 0 100
 1 1000
 2 5
-post sort
+after ofSort()
 2 5
 0 100
 1 1000
