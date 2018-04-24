@@ -190,11 +190,11 @@ imageType ofImageType defining number of channels per pixel
 _description: _
 
 ofImageType:
-	
+
 	OF_IMAGE_GRAYSCALE
-	
+
 	OF_IMAGE_COLOR
-	
+
 	OF_IMAGE_COLOR_ALPHA
 
 
@@ -1470,7 +1470,7 @@ Get the pixel index at a x,y position
 ~~~~{.cpp}
 ofColor yellow = ofColor::yellow;
 int ind = pix.getPixelIndex(mouseX, mouseY);
-pix.setPixel(ind, yellow);
+pix.setColor(ind, yellow);
 ~~~~
 
 
@@ -1479,11 +1479,11 @@ pix.setPixel(ind, yellow);
 
 _description: _
 
-This method tells you want pixel index an x, y pair would be at in the index, for instance:
+This method gives you the index of the pixel at x,y. For instance:
 ~~~~{.cpp}
 ofColor yellow = ofColor::yellow;
 int ind = pix.getPixelIndex(mouseX, mouseY);
-pix.setPixel(ind, yellow);
+pix.setColor(ind, yellow);
 ~~~~
 
 
