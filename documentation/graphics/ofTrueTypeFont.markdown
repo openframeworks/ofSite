@@ -176,7 +176,7 @@ ofTrueTypeFont myfont;
 .....
 
 // in setup:
-myfont.loadFont("arial.ttf", 32);
+myfont.load("arial.ttf", 32);
 
 // in draw:
 myfont.drawString("hi!!", 100,100);
@@ -757,7 +757,7 @@ This returns a vector of ofTTFCharacters (which is actually an ofPath) for a giv
 void testApp::setup(){
 
     ofBackground(0);
-    font.loadFont("vag.ttf", 100, false, false, true);
+    font.load("vag.ttf", 100, false, false, true);
 
 }
 
@@ -842,7 +842,7 @@ e.g:
 
 //in setup()
 
-franklinBook.loadFont("frabk.ttf", 32);
+franklinBook.load("frabk.ttf", 32);
 
 //in update()
 
