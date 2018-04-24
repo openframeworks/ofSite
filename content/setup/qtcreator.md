@@ -13,6 +13,8 @@ Older releases can be downloaded here:
 
 The current openFrameworks release (0.9.8) requires qtcreator 4.1.0.
 
+The next openFrameworks release (0.10) works with qtcreator 4.5.2.
+
 Linux
 -----
 
