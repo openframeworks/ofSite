@@ -28,7 +28,7 @@ has different ways of connecting the vertices that you pass to it and none
 are as efficient as to only need eight vertices to create a cube.
 
 You've probably seen a version of the following image somewhere before.
-![PRIMATIVES](3d/primitives_new-640x269.gif)
+![PRIMATIVES](3d/gl_primitives_640x269.png)
 Generally you have to create your points to fit the drawing mode that
 you've selected because of whats called winding.
 A vertex gets connected to another vertex in the order that the mode does
@@ -95,7 +95,8 @@ Vertices are passed to your graphics card and your graphics card fill in the spa
 You may be thinking: I'll just make eight vertices and voila: a cube. Not so quick. There's a hitch and that hitch is that the OpenGL renderer has different ways of connecting the vertices that you pass to it and none are as efficient as to only need eight vertices to create a cube.
 
 You've probably seen a version of the following image somewhere before.
-![PRIMATIVES](primitives_new-640x269.gif)
+![PRIMATIVES](gl_primitives_640x269.png)
+
 Generally you have to create your points to fit the drawing mode that you've selected because of whats called winding. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you'll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in.
 
 If you're thinking: it would be nice if there were an abstraction layer for this you're thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.
