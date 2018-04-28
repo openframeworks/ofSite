@@ -23,7 +23,7 @@ Class for creating custom events. Also used inside oF for its own events (see of
 ie: To create a new event:
 
 ~~~~{.cpp}
-ofEvent<float> onVolumeChange;
+ofEvent<const float> onVolumeChange;
 ~~~~
 
 To notify an event of that type:
