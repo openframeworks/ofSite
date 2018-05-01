@@ -139,16 +139,33 @@ lang="${lang}">
 
                  </ul>
                  <ul class="menu-externals">
-                     %for url, text in external_links[lang]:
-                        % if isinstance(url, tuple):
-                        <li> ${text}
-                        <ul>
-                            %for suburl, text in url:
-                                <li><span class="external-dot"> ></span>&nbsp;<a href="${suburl}"  target="_blank">${text}</a></li>
-                            %endfor
-                        </ul>
+                     % for url, text, is_external in external_links[lang]:
+                        % if is_external:
+                            % if isinstance(url, tuple):
+                            <li> ${text} </li>
+                            <ul>
+                                %for suburl, text in url:
+                                    <li><span class="external-dot"> ></span>&nbsp;<a href="${suburl}"  target="_blank">${text}</a></li>
+                                %endfor
+                            </ul>
+                            % else:
+                                <li><span class="external-dot"> ></span>&nbsp;<a href="${url}"  target="_blank">${text}</a></li>
+                            % endif
                         % else:
-                            <li><span class="external-dot"> ></span>&nbsp;<a href="${url}"  target="_blank">${text}</a></li>
+                            % if isinstance(url, tuple):
+                            <li> ${text} </li>
+                            <ul>
+                                %for suburl, text in url:
+                                    <li><span class="internal-dot"> ></span>&nbsp;<a href="${suburl}">${text}</a></li>
+                                %endfor
+                            </ul>
+                            % else:
+                                % if url in permalink:
+                                    <li><span class="internal-dot"> ></span>&nbsp;<a href="${url}" class="active">${text}</a></li>
+                                % else:
+                                    <li><span class="internal-dot"> ></span>&nbsp;<a href="${url}">${text}</a></li>
+                                % endif
+                            % endif
                         % endif
                     %endfor
                  </ul>

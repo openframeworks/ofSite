@@ -26,7 +26,7 @@ BLOG_TITLE = "openFrameworks"  # (translatable)
 if socket.gethostbyname(socket.gethostname()) == socket.gethostbyname('openframeworks.cc'):
     SITE_URL = "http://openframeworks.cc/"
 else:
-    SITE_URL = "http://localhost/"
+    SITE_URL = "http://arturocastro.ddns.net"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://openframeworks.cc/"
@@ -184,36 +184,41 @@ NAVIGATION_LINKS = {
 
 EXTERNAL_LINKS = {
     DEFAULT_LANG: (
-        ("https://forum.openframeworks.cc", "forum"),
-	("https://github.com/openframeworks", "github"),
-        ("http://ofxaddons.com", "addons"),
-	("http://ofslack.herokuapp.com/", "slack"),
-        ("http://blog.openframeworks.cc/", "blog"),
+        ("https://forum.openframeworks.cc", "forum", True),
+        ("https://github.com/openframeworks", "github", True),
+        ("http://ofxaddons.com", "addons", True),
+        ("http://ofslack.herokuapp.com/", "slack", True),
+        ("http://blog.openframeworks.cc/", "blog", True),
+        ("/donations", "donations", False),
     ),
 
     "ja": (
-        ("https://forum.openframeworks.cc", "forum"),
-        ("https://github.com/openframeworks", "github"),
-        ("http://ofxaddons.com", "addons"),
-        ("http://blog.openframeworks.cc/", "blog"),
+        ("https://forum.openframeworks.cc", "forum", True),
+        ("https://github.com/openframeworks", "github", True),
+        ("http://ofxaddons.com", "addons", True),
+        ("http://ofslack.herokuapp.com/", "slack", True),
+        ("http://blog.openframeworks.cc/", "blog", True),
+        ("/donations", "donations", False),
     ),
 
     "ko": (
-        ("https://forum.openframeworks.cc", "포럼(EN)"),
-        ("http://forum.openframeworks.kr", "포럼(KR)"),
-        ("https://github.com/openframeworks", "github"),
-        ("http://ofxaddons.com", "애드온"),
-        ("http://forum.openframeworks.kr/t/slack/32", "slack"),
-        ("http://blog.openframeworks.cc/", "블로그"),
+        ("https://forum.openframeworks.cc", "포럼(EN)", True),
+        ("http://forum.openframeworks.kr", "포럼(KR)", True),
+        ("https://github.com/openframeworks", "github", True),
+        ("http://ofxaddons.com", "애드온", True),
+        ("http://forum.openframeworks.kr/t/slack/32", "slack", True),
+        ("http://blog.openframeworks.cc/", "블로그", True),
+        ("/donations", "donations", False),
     ),
     "zh_cn": (
-        ("https://forum.openframeworks.cc", "论坛(EN)"),
-        ("http://forum.openframeworks.cn", "论坛(CN)"),
-        ("https://github.com/openframeworks", "github"),
-        ("http://ofxaddons.com", "插件"),
-        ("http://forum.openframeworks.kr/t/slack/32", "slack"),
-        ("https://guest.jianliao.com/rooms/d9640eb07f", "翻译讨论群"),
-        ("http://blog.openframeworks.cc/", "博客"),
+        ("https://forum.openframeworks.cc", "论坛(EN)", True),
+        ("http://forum.openframeworks.cn", "论坛(CN)", True),
+        ("https://github.com/openframeworks", "github", True),
+        ("http://ofxaddons.com", "插件", True),
+        ("http://forum.openframeworks.kr/t/slack/32", "slack", True),
+        ("https://guest.jianliao.com/rooms/d9640eb07f", "翻译讨论群", True),
+        ("http://blog.openframeworks.cc/", "博客", True),
+        ("/donations", "donations", False),
     ),
 }
 
@@ -257,6 +262,8 @@ PAGES = (
     ("content/about.md", "", "slideshow.mako"),
     ("content/license.md", "about", "fullpage.mako"),
     ("content/download.md", "", "download.mako"),
+    ("content/donations.md", "", "mediumpage.mako"),
+    ("content/thankyou.md", "donations", "mediumpage.mako"),
     ("content/older.md", "download", "fullpage.mako"),
     ("content/gallery.md", "", "gallery.mako"),
     ("content/community.md", "", "mediumpage.mako"),

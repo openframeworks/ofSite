@@ -5,9 +5,6 @@
     import pathlib
     import re
     sys.path.append( "messages" )
-    if not "exists" in locals["pageargs"]:
-        msg = ""
-        return
     has_translation = locals["pageargs"]["exists"]("messages/of_messages_"+locals["pageargs"]["lang"]+".py")
     messages = {}
     if has_translation:

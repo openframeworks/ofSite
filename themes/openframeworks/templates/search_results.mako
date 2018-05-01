@@ -8,7 +8,7 @@
     <script src="/${lang}/tipuesearch_content.js"></script>
 % endif
 <script src="/assets/js/tipuesearch_set.js"></script>
-<script src="/assets/js/tipuesearch.min.js"></script>
+<script src="/assets/js/tipuesearch.js"></script>
 <link href="/assets/css/tipuesearch.css" rel="stylesheet">
 <script>
 $(document).ready(function() {

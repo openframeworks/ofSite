@@ -562,7 +562,7 @@ a.nohover {
 .functionslist a{
 	color: #444;
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-	cursor: pointer; 
+	cursor: pointer;
 	cursor: hand;
 	font-size: 0.9em;
 	line-height: 1.8em;
@@ -873,7 +873,7 @@ code {
 #editdocs img {
   border: 1px solid rgba(238, 57, 135, 0.3);
   border-radius: 11px;
-  box-shadow: 2px 2px 2px #eee; 
+  box-shadow: 2px 2px 2px #eee;
 }
 #edithowto{
     float:right;
@@ -881,7 +881,7 @@ code {
 #edithowto img {
   border: 1px solid rgba(238, 57, 135, 0.3);
   border-radius: 11px;
-  box-shadow: 2px 2px 2px #eee; 
+  box-shadow: 2px 2px 2px #eee;
 }
 
 #docstitle{
@@ -1067,7 +1067,7 @@ div.galleryItem {
 div.galleryItem:nth-child(2),div.galleryItem:nth-child(4),div.galleryItem:nth-child(6),div.galleryItem:nth-child(8),div.galleryItem:nth-child(10) {
 	margin-left: 3%;
 }
-div.galleryItem h2 .external-dot {
+div.galleryItem h2 .external-dot, div.galleryItem h2 .internal-dot {
 	color: #ee3987;
 }
 div.galleryItem h2 {
@@ -1098,6 +1098,10 @@ div.galleryItem p {
 	color: #009bca;
 	font-size: 0.9em;
 }
+ .internal-dot {
+ 	color: #ee3987;
+ 	font-size: 0.9em;
+ }
 #download-latest-header h2 {
 	float: left;
 	margin-right: 0.5em;
@@ -1123,7 +1127,7 @@ div.galleryItem p {
 	margin: 0;
 }
 #download-latest-platform-last{
-    margin-right:0; 
+    margin-right:0;
 	border-right: none;
 }
 #download-latest-platform-title{
@@ -1515,4 +1519,37 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 .tutorial h1 {
 	font-size: 3em;
 	margin-bottom: 0.1em;
+}
+
+.donations{
+	padding: 1.8em;
+	background-color: #dedede;
+	border-radius: 0.2em;
+}
+
+.donations input[type=submit]{
+	background-color:#EE3987;
+	color:#fff;
+	font-family: 'Questrial';
+	font-size: 1.4em;
+	width: 140px;
+	height: 40px;
+	border-radius: 0.2em;
+	border: 0;
+}
+
+.donations input[type=text]{
+	width: 200px;
+	padding: 0.5em;
+	border-style: groove;
+	border-color: #fff;
+	-moz-border-radius: 5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+    behavior:url("border-radius.htc");
+}
+
+.donations input[type=text]:focus{
+	border-color: #ee3987;
 }
