@@ -22,10 +22,10 @@ class DocsFunction:
         self.functionsfile = ""
         self.linenum = 0
         self.file = ""
-        
+
     def get_inlined_docs_similarity(self):
         return Levenshtein.ratio(self.inlined_description, self.description)
-        
+
 class DocsFunctionsFile:
     def __init__(self,fileid):
         self.id = fileid
@@ -37,7 +37,7 @@ class DocsFunctionsFile:
         self.description = ""
         self.addons = False
         self.function_list = []
-    
+
     def get_parameter_types(self, parameters_list):
         parameters_types = []
         if len(parameters_list.strip(' '))==0:
@@ -48,7 +48,7 @@ class DocsFunctionsFile:
                 parameter = parameter + " " + e
             parameters_types.append(parameter)
         return parameters_types
-    
+
     def get_parameter_names(self,parameters_list):
         parameters_names = []
         if len(parameters_list.strip(' '))==0:
@@ -61,7 +61,7 @@ class DocsFunctionsFile:
             else:
                 parameters_names.append(p.split(' ')[len(p.split(' '))-1])
         return parameters_names
-        
+
     def test_alternative_types(self, ty, other_ty, alternatives):
         """print "-----------------------"
         print ty.strip()
@@ -70,7 +70,7 @@ class DocsFunctionsFile:
         if ty in alternatives:
             print "alternatives[ty].count(other_ty) " + str(alternatives[ty].count(other_ty))"""
         return ty in alternatives and alternatives[ty].count(other_ty)>0
-        
+
     def fuzzy_function_search(self, name, returns, parameters, alternatives, already_found):
         most_similar_function = None
         max_similarity = 0
@@ -119,13 +119,13 @@ class DocsFunctionsFile:
                        non_const_return == non_const_other_return or \
                        self.test_alternative_types(non_const_return, non_const_other_return, alternatives) or \
                        non_const_return == other_fuzzy_return or \
-                       self.test_alternative_types(non_const_return, other_fuzzy_return, alternatives)):                        
+                       self.test_alternative_types(non_const_return, other_fuzzy_return, alternatives)):
                         function.new = False
                         return function
                 if most_similar_function == None or Levenshtein.ratio(parameters,str(function.parameters))>max_similarity:
                     most_similar_function = function
         return most_similar_function
-    
+
     def function_by_signature(self, name, returns, parameters, alternatives, already_found, fuzzy):
         passed_function = DocsFunction(0)
         passed_function.name = name
@@ -154,7 +154,7 @@ class DocsFunctionsFile:
                         return function
         if fuzzy and len(alternatives)>0:
             alternative_func = self.fuzzy_function_search(name, returns, parameters, alternatives, already_found)
-            if alternative_func != None:        
+            if alternative_func != None:
                 alternative_func.parameters = passed_function.parameters
                 alternative_func.syntax = passed_function.syntax
                 alternative_func.returns = passed_function.returns

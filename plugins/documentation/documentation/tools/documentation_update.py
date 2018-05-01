@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from lxml import etree
 from lxml import objectify
 import os
 import sys
 import re
-import HTMLParser
+from  html.parser import HTMLParser
 
 from documentation_class import DocsClass
 from markdown_file import getclass,setclass,getfunctionsfile,setfunctionsfile
@@ -28,10 +28,10 @@ official_addons = [
                     "ofxOsc",
                     "ofxSvg",
                     "ofxThreadedImageLoader",
-                    "ofxXmlSettings",                    
+                    "ofxXmlSettings",
                   ]
 currentversion = "0.9.0"
-alternatives = { 
+alternatives = {
                  'size_t': ['int', 'unsigned int', 'long', 'unsigned long'],
                  'filesystem::path': ['string'],
                  'ofIndexType': ['int', 'unsigned int', 'long'],
@@ -43,11 +43,11 @@ def substitutetype(ty):
     """ fix types to match the standard format in the final docs,
         removes std:: and adds a leading and trailing space between
         triangular brackets """
-        
+
     ty = ty.replace("std::", "")
     ty = re.sub(r"(.*)<(.*)>","\\1< \\2 >",ty)
     return ty
-    
+
 def parse_docs(element):
     """ parse an inlined documentation block """
     doc = str("" if element.raw_comment is None else element.raw_comment)
@@ -80,16 +80,16 @@ def parse_docs(element):
         pass
     docs += "\n"
     return docs
-    
+
 def is_class(member):
     return member.kind == CursorKind.CLASS_DECL or member.kind == CursorKind.CLASS_TEMPLATE or member.kind == CursorKind.STRUCT_DECL
-    
+
 def is_variable(member):
     return member.kind == CursorKind.VAR_DECL or member.kind == CursorKind.FIELD_DECL
-    
+
 def is_method(member):
     return member.kind == CursorKind.CXX_METHOD or member.kind == CursorKind.CONSTRUCTOR or member.kind == CursorKind.DESTRUCTOR or member.kind == CursorKind.FUNCTION_TEMPLATE
-    
+
 def is_function(member):
     return (member.kind == CursorKind.FUNCTION_DECL or member.kind == CursorKind.FUNCTION_TEMPLATE) and not is_class(member.semantic_parent)
 
@@ -112,13 +112,13 @@ def parse_variable(documentation_class, clazz, member):
     except:
         pass
     return var
-    
-    
+
+
 def parse_function(documentation_class, clazz, member, already_found, fuzzy=False):
     params = ""
     for arg in member.get_children():
         if arg.kind.is_attribute():
-            # TODO: we suppose only attributes are the deprecated ones 
+            # TODO: we suppose only attributes are the deprecated ones
             return None
         if arg.kind != CursorKind.PARM_DECL:
             continue
@@ -129,7 +129,7 @@ def parse_function(documentation_class, clazz, member, already_found, fuzzy=Fals
             params += argtype + arg.spelling
         else:
             params += argtype + " " + arg.spelling
-        
+
         for part in arg.get_children():
             if part.kind == CursorKind.INTEGER_LITERAL or \
                part.kind == CursorKind.CHARACTER_LITERAL or \
@@ -140,12 +140,9 @@ def parse_function(documentation_class, clazz, member, already_found, fuzzy=Fals
                part.kind == CursorKind.OBJC_STRING_LITERAL or \
                part.kind == CursorKind.OBJ_BOOL_LITERAL_EXPR or \
                part.kind == CursorKind.STRING_LITERAL:
-                try:
-                    params += "=" + part.get_tokens().next().spelling
-                except:
-                    print "error trying to print default value for " + documentation_class.name + "::" + member.spelling + " " + arg.spelling + " = " + str(part.kind)
-                    pass
-            elif part.kind == CursorKind.DECL_REF_EXPR:    
+                for p in part.get_tokens():
+                    params += "=" + p.spelling
+            elif part.kind == CursorKind.DECL_REF_EXPR:
                 params += "=" + part.spelling
 
     methodname = member.spelling
@@ -156,10 +153,10 @@ def parse_function(documentation_class, clazz, member, already_found, fuzzy=Fals
         returns = substitutetype(member.result_type.spelling)
         returns = ("" if returns is None else returns)
     method = documentation_class.function_by_signature(methodname, returns, params, alternatives, already_found, fuzzy)
-    
+
     if method is None:
         return None
-    
+
     if not clazz is None:
         method.static = member.is_static_method()
         method.clazz = documentation_class.name
@@ -169,27 +166,27 @@ def parse_function(documentation_class, clazz, member, already_found, fuzzy=Fals
     method.returns = returns
     #method.description = method.description.replace("~~~~{.brush: cpp}","~~~~{.cpp}").replace('</pre>',"~~~~")
     method.description = method.description.replace('<p>','').replace('</p>','').replace('<code>','').replace('</code>','').replace('<pre>','')
-    
+
     if method.new:
         method.version_started = currentversion
 
     method.inlined_description = parse_docs(member)
-    
+
     if method.new:
         if clazz is None:
             new_functions.append(method)
         else:
             new_methods.append(method)
-        
+
     return method
 
 """def update_moved_functions(filename,is_addon=False):
     xml = objectify.parse(filename)
     doxygen = xml.getroot()
-    
+
     xmlfunctionsfile = doxygen.compounddef
 
-    
+
     if xmlfunctionsfile.find('sectiondef')!=None:
         if len([ s for s in xmlfunctionsfile.sectiondef if s.get('kind')=='func'])>0:
             file_split = os.path.splitext(xmlfunctionsfile.compoundname.text)
@@ -206,52 +203,52 @@ def parse_function(documentation_class, clazz, member, already_found, fuzzy=Fals
                                 moved_function.returns = returns
                                 moved_function.description = moved_function.description + '\n\n' + function.description
                                 print "moved function: " + function.name
-                                
+
             setfunctionsfile(functionsfile,is_addon)"""
-    
-    
-            
+
+
+
 def serialize_functionsfile(cursor,filename,is_addon=False):
     functionsfile = getfunctionsfile(filename)
     functions_fromcode = []
     functions_for_fuzzy_search = []
     for member in cursor.get_children():
-        if is_function(member) and str(member.location.file) == cursor.spelling: 
+        if is_function(member) and str(member.location.file) == cursor.spelling:
             function = parse_function(functionsfile, None, member, functions_fromcode)
             if function is not None:
                 functions_fromcode.append(function)
             else:
                 functions_for_fuzzy_search.append(member)
-    
+
     for member in functions_for_fuzzy_search:
         function = parse_function(functionsfile, None, member, functions_fromcode, True)
         if function is not None:
             functions_fromcode.append(function)
-                
+
     thisfile_missing_functions = []
     for function in functionsfile.function_list:
         if not function in functions_fromcode:
             missing_functions.append(function)
             thisfile_missing_functions.append(function)
-    
+
     for function in thisfile_missing_functions:
         functionsfile.function_list.remove(function)
-                
+
     functionsfile.function_list.sort(key=lambda function: function.name)
     if len(functionsfile.function_list)>0:
         setfunctionsfile(functionsfile,is_addon)
-    
+
 def serialize_class(cursor,is_addon=False, parent=None):
     clazz = cursor
     classname = (parent + "::" if parent is not None else "") + clazz.spelling
     documentation_class = getclass(classname)
-        
+
     current_variables_list = []
     current_methods_list = []
     methods_for_fuzzy_search = []
-        
+
     documentation_class.extends = []
-    
+
     for child in clazz.get_children():
         if child.kind == CursorKind.CXX_BASE_SPECIFIER:
             if child.spelling.find("class") == 0:
@@ -261,7 +258,7 @@ def serialize_class(cursor,is_addon=False, parent=None):
                 documentation_class.extends.append(child.spelling)
 
     documentation_class.detailed_inline_description = parse_docs(clazz)
-    
+
     for member in clazz.get_children():
         if member.kind == CursorKind.CLASS_DECL or member.kind == CursorKind.CLASS_TEMPLATE or member.kind == CursorKind.STRUCT_DECL:
             if member.access_specifier.name.lower() == 'public' and clazz.spelling + "::" + member.spelling not in visited_classes:
@@ -294,33 +291,33 @@ def serialize_class(cursor,is_addon=False, parent=None):
                 current_methods_list.append(method)
             else:
                 methods_for_fuzzy_search.append(member)
-    
+
     for member in methods_for_fuzzy_search:
         method = parse_function(documentation_class, clazz, member, current_methods_list, True)
         if method is not None:
             current_methods_list.append(method)
-                
-    
+
+
     for method in documentation_class.function_list:
         if not method in current_methods_list:
             missing_methods.append(method)
     documentation_class.function_list = current_methods_list
-    
+
     for var in documentation_class.var_list:
         if not var in current_variables_list:
             missing_vars.append(var)
     documentation_class.var_list = current_variables_list
-        
+
     documentation_class.function_list.sort(key=lambda function: function.name)
     documentation_class.var_list.sort(key=lambda variable: variable.name)
-    
+
     if documentation_class.new:
         new_classes.append(documentation_class)
     setclass(documentation_class,is_addon)
 
 def parse_folder(root, files, is_addon=False):
     file_count=0
-    for name in files:       
+    for name in files:
         file_count+=1
         filename = os.path.join(root, name)
         if name.find('of')==0 and os.path.splitext(name)[1]=='.h':
@@ -342,7 +339,7 @@ def parse_folder(root, files, is_addon=False):
                 serialize_functionsfile(tu.cursor, functions_name, is_addon)
                 visited_function_files.append(functions_name)
     return file_count
-    
+
 """ main """
 dir_count=0
 file_count=0
@@ -359,10 +356,10 @@ new_methods = []
 for root, dirs, files in os.walk(of_source):
     dir_count+=1
     file_count += parse_folder(root, files, False)
-    
+
 """for root, dirs, files in os.walk(of_documentation):
     dir_count+=1
-    for name in files:       
+    for name in files:
         file_count+=1
         filename = os.path.join(root, name)
         if name.find('of')==0 and name.find('8h.xml')!=-1:
@@ -377,40 +374,40 @@ for addon in official_addons:
 
 """for root, dirs, files in os.walk(of_addons_documentation):
     dir_count+=1
-    for name in files:       
+    for name in files:
         file_count+=1
         filename = os.path.join(root, name)
         if name.find('ofx')==0 and name.find('8h.xml')!=-1:
             update_moved_functions(filename,True)"""
-            
+
 #print ""+str(dir_count)+" dirs/"+str(file_count)+" files"
 
 if len(new_functions)>0:
-    print "added " + str(len(new_functions)) + " new functions:"
+    print ("added " + str(len(new_functions)) + " new functions:")
     for f in new_functions:
-        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  to " + f.functionsfile
-        
+        print ("\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  to " + f.functionsfile)
+
 if len(missing_functions)>0:
-    print "removed " + str(len(missing_functions)) + " functions"
+    print ("removed " + str(len(missing_functions)) + " functions")
     for f in missing_functions:
-        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  from " + f.functionsfile
+        print ("\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  from " + f.functionsfile)
 
 if len(new_methods)>0:
-    print "added " + str(len(new_methods)) + " new methods:"
+    print ("added " + str(len(new_methods)) + " new methods:")
     for f in new_methods:
-        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  to " + f.clazz
-        
+        print ("\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  to " + f.clazz)
+
 if len(missing_methods)>0:
-    print "removed " + str(len(missing_methods)) + " methods"
+    print ("removed " + str(len(missing_methods)) + " methods")
     for f in missing_methods:
-        print "\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  from " + f.clazz
+        print ("\t- " + f.returns + " " + f.name + "(" + f.parameters + ")  from " + f.clazz)
 
 if len(new_vars)>0:
-    print "added " + str(len(new_vars)) + " new vars:"
+    print ("added " + str(len(new_vars)) + " new vars:")
     for v in new_vars:
-        print "\t- " + v.name + "  to " + v.clazz
-        
+        print ("\t- " + v.name + "  to " + v.clazz)
+
 if len(missing_vars)>0:
-    print "removed " + str(len(missing_vars))
+    print ("removed " + str(len(missing_vars)))
     for v in missing_vars:
-        print "\t- " + v.name + "  from " + v.clazz
+        print ("\t- " + v.name + "  from " + v.clazz)

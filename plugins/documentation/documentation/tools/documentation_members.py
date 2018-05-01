@@ -44,7 +44,7 @@ class DocsVar:
         self.clazz = ""
         self.linenum = 0
         self.file = ""
-        
+
     def get_inlined_docs_similarity(self):
         return Levenshtein.ratio(self.inlined_description, self.description)
 
