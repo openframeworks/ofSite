@@ -83,8 +83,8 @@ $(document).ready(
                 });
             }
         });
-        
-        
+
+
         // hide show functions
         $('a.hide_core_functions').click(function(){
             if(coreFunctionsHidden){
@@ -112,7 +112,7 @@ $(document).ready(
                 $('.addons .documentation_index_group').masonry( 'reload' );
             }
         });
-        
+
         // collapse all
         $('a.collapse_core').click(function(){
             collapse_core(!coreCollapsed);
@@ -120,8 +120,8 @@ $(document).ready(
         $('a.collapse_addons').click(function(){
             collapse_addons(!addonsCollapsed);
         });
-        
-        
+
+
         if(typeof(Storage) !== "undefined") {
             collapsed = localStorage.getItem("coreCollapsed");
             if(collapsed!==null){

@@ -4,6 +4,7 @@
 
 <%block name="extra_head">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="/assets/js/donations_popup.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -11,6 +12,8 @@ $(document).ready(function(){
 		speed: 1100,
 		timeout: 2000
 	});
+
+	setupDonationsPopup()
 });
 </script>
 </%block>

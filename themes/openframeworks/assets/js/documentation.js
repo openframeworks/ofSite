@@ -9,12 +9,12 @@ function resetDiscuss(section_name){
     console.log(window.location.protocol + "://" + window.location.host + window.location.pathname + "#!show_" + section_name);
     DISQUS.reset({
       reload: true,
-      config: function () {  
+      config: function () {
         if(section_name!=''){
-            this.page.identifier = window.location.pathname + "#!show_" + section_name;  
+            this.page.identifier = window.location.pathname + "#!show_" + section_name;
             this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname + "#!show_" + section_name;
         }else{
-            this.page.identifier = window.location.pathname;  
+            this.page.identifier = window.location.pathname;
             this.page.url = window.location.protocol + "//" + window.location.host + window.location.pathname;
         }
         this.page.title = document.title;
@@ -24,19 +24,19 @@ function resetDiscuss(section_name){
 
 $(document).ready(
 
-    function(){      
+    function(){
       // Handle loading a page with a named anchor in the hash.
       // Chrome and Safari don't need this, Firefox does.
       loadDocumentationFromLocation();
-      
-     
+
+
      // Handle browsers that don't implement the HTML5 history state API.
      if (typeof window.history.replaceState != 'function') {
         $(".functionslist a").click(function(e){
           showFunctionDocumentation($(this).data('lookup'));
         });
      }
-     
+
      // handle clicking the header containing the class name
      $("#docstitle h1").click(showClassDocumentation);
     });
@@ -45,7 +45,7 @@ $(document).ready(
 // Handle loading documentation from the location hash
 function loadDocumentationFromLocation() {
   var currentFunctionName = location.hash.split("_")[1];
-  if(currentFunctionName!=undefined && currentFunctionName.length){  
+  if(currentFunctionName!=undefined && currentFunctionName.length){
     showFunctionDocumentation(currentFunctionName);
   }else{
     showClassDocumentation();
@@ -86,7 +86,7 @@ function showClassDocumentation() {
   $(".class_documentation").show();
   $("#docstitle h1").addClass('selected');
   document.title = baseTitle
-  
+
   // Remove hash
   if (window.location.hash.length) {
     if (typeof window.history.replaceState == 'function') {
