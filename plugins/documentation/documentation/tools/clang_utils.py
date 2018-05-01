@@ -37,16 +37,16 @@ def builtin_flags_gcc():
     p = subprocess.Popen(["clang","-E","-P","-v","-dD","-std=c++1y","-xc++","main.cpp"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     state = "start"
     includes = ""
+    # print(p.stdout.read().splitlines())
     for line in iter(p.stdout.read().splitlines()):
-        if line=="#include <...> search starts here:":
+        if line==b"#include <...> search starts here:":
             state = "includes"
             continue
         if state == "includes":
-            if line == "End of search list.":
-                print includes
+            if line == b"End of search list.":
                 return includes
             else:
-                includes += " -I"+line.strip()
+                includes += " -I" + line.strip().decode("utf-8")
 
 gcc_includes = builtin_flags_gcc()
 
@@ -55,12 +55,14 @@ def get_tu_from_file(filepath, of_root):
     #content = f.read()
     #filename = os.path.basename(filepath)
     #files = [(filename,content)]
-    args = ("-Wall -std=c++14 -DGCC_HAS_REGEX -DOF_USING_GTK -DOF_USING_GTK -DOF_USING_MPG123 -D_REENTRANT -pthread -xc++ " + gcc_includes + " -I/usr/include/gstreamer-1.0 -I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include -I/usr/include/AL -I/usr/include/alsa -I/usr/include/GL -I/usr/include/libdrm -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/mirclient -I/usr/include/mircommon -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I{OF_ROOT}/libs/cpp-netlib/include -I{OF_ROOT}/libs/cpp-netlib/include/cpp-netlib -I{OF_ROOT}/libs/cpp-netlib/include/cpp-netlib/network -I{OF_ROOT}/libs/fmodex/include -I{OF_ROOT}/libs/glfw/include -I{OF_ROOT}/libs/glfw/include/GLFW -I{OF_ROOT}/libs/kiss/include -I{OF_ROOT}/libs/poco/include -I{OF_ROOT}/libs/sndfile/include -I{OF_ROOT}/libs/tess2/include -I{OF_ROOT}/libs/utf8cpp/include -I{OF_ROOT}/libs/utf8cpp/include/utf8 -I{OF_ROOT}/libs/openFrameworks -I{OF_ROOT}/libs/openFrameworks/build -I{OF_ROOT}/libs/openFrameworks/utils -I{OF_ROOT}/libs/openFrameworks/communication -I{OF_ROOT}/libs/openFrameworks/app -I{OF_ROOT}/libs/openFrameworks/events -I{OF_ROOT}/libs/openFrameworks/graphics -I{OF_ROOT}/libs/openFrameworks/math -I{OF_ROOT}/libs/openFrameworks/types -I{OF_ROOT}/libs/openFrameworks/sound -I{OF_ROOT}/libs/openFrameworks/gl -I{OF_ROOT}/libs/openFrameworks/3d -I{OF_ROOT}/libs/openFrameworks/video -DDEBUG").format({"OF_ROOT": of_root}).split(" ")
+    argsstr = "-Wall -std=c++14 -DGCC_HAS_REGEX -DOF_USING_GTK -DOF_USING_GTK -DOF_USING_MPG123 -D_REENTRANT -pthread -xc++ " + gcc_includes + " -I/usr/include/gstreamer-1.0 -I/usr/lib/x86_64-linux-gnu/gstreamer-1.0/include -I/usr/include/AL -I/usr/include/alsa -I/usr/include/GL -I/usr/include/libdrm -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/mirclient -I/usr/include/mircommon -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I{OF_ROOT}/libs/cpp-netlib/include -I{OF_ROOT}/libs/cpp-netlib/include/cpp-netlib -I{OF_ROOT}/libs/cpp-netlib/include/cpp-netlib/network -I{OF_ROOT}/libs/fmodex/include -I{OF_ROOT}/libs/glfw/include -I{OF_ROOT}/libs/glfw/include/GLFW -I{OF_ROOT}/libs/kiss/include -I{OF_ROOT}/libs/poco/include -I{OF_ROOT}/libs/sndfile/include -I{OF_ROOT}/libs/tess2/include -I{OF_ROOT}/libs/utf8cpp/include -I{OF_ROOT}/libs/utf8cpp/include/utf8 -I{OF_ROOT}/libs/openFrameworks -I{OF_ROOT}/libs/openFrameworks/build -I{OF_ROOT}/libs/openFrameworks/utils -I{OF_ROOT}/libs/openFrameworks/communication -I{OF_ROOT}/libs/openFrameworks/app -I{OF_ROOT}/libs/openFrameworks/events -I{OF_ROOT}/libs/openFrameworks/graphics -I{OF_ROOT}/libs/openFrameworks/math -I{OF_ROOT}/libs/openFrameworks/types -I{OF_ROOT}/libs/openFrameworks/sound -I{OF_ROOT}/libs/openFrameworks/gl -I{OF_ROOT}/libs/openFrameworks/3d -I{OF_ROOT}/libs/openFrameworks/video -DDEBUG"
+    argsstr = argsstr.format(OF_ROOT = of_root)
+    args = argsstr.split(" ")
     index = Index.create()
     tu = index.parse(filepath, args=args,
             options=TranslationUnit.PARSE_DETAILED_PROCESSING_RECORD)
     return tu
-    
+
 def get_cursor(source, spelling):
     """Obtain a cursor from a source object.
 
