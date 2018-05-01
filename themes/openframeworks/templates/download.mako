@@ -48,18 +48,17 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>linux</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linux_release.tar.gz">linux 32bit</a> / <a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64_release.tar.gz">linux 64bit</a></p><br/>
+	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64_release.tar.gz">linux</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/linux-install">linux install</a></p>
 	        <p><a href="../setup/qtcreator">qt creator</a></p>
-	        <p><a href="../setup/linux-eclipse">eclipse</a></p>
 	        <p><a href="../setup/emscripten">emscripten</a></p>
         </div>
 
         <div id="download-latest-platform-last">
 	        <h2>windows</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_vs_release.zip">visual studio (2015)</a></p>
+	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_vs_release.zip">visual studio (2017)</a></p>
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_msys2_release.zip">qt creator / msys2</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/vs">visual studio</a></p>
@@ -88,7 +87,6 @@ $(document).ready(function(){
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_android_release.tar.gz">android</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
-	        <p><a href="../setup/android-eclipse">eclipse + ADT</a></p>
 	        <p><a href="../setup/android-studio">android studio</a></p>
         </div>
     </div>
@@ -105,7 +103,7 @@ $(document).ready(function(){
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linuxarmv6l_release.tar.gz">linux armv6</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
-	        <p><a href="../setup/raspberrypi">raspberry pi 1 & 2</a></p>
+	        <p><a href="../setup/raspberrypi">raspberry pi</a></p>
         </div>
 
         <div id="download-latest-platform-last">
