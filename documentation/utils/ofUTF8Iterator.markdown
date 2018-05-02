@@ -35,12 +35,12 @@ string.
 
 
 
-###utf8::iterator< string::const_iterator > begin()
+###int begin()
 
 <!--
 _syntax: begin()_
 _name: begin_
-_returns: utf8::iterator< string::const_iterator >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -71,12 +71,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###utf8::iterator< string::const_iterator > end()
+###int end()
 
 <!--
 _syntax: end()_
 _name: end_
-_returns: utf8::iterator< string::const_iterator >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -143,12 +143,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###utf8::iterator< string::const_reverse_iterator > rbegin()
+###int rbegin()
 
 <!--
 _syntax: rbegin()_
 _name: rbegin_
-_returns: utf8::iterator< string::const_reverse_iterator >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -179,12 +179,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###utf8::iterator< string::const_reverse_iterator > rend()
+###int rend()
 
 <!--
 _syntax: rend()_
 _name: rend_
-_returns: utf8::iterator< string::const_reverse_iterator >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_

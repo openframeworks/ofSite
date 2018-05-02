@@ -86,14 +86,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSoundStreamSetup(nOutputChannels, nInputChannels, *appPtr = NULL)
+###void ofSoundStreamSetup(&settings)
 
 <!--
-_syntax: ofSoundStreamSetup(nOutputChannels, nInputChannels, *appPtr = NULL)_
+_syntax: ofSoundStreamSetup(&settings)_
 _name: ofSoundStreamSetup_
 _returns: void_
 _returns_description: _
-_parameters: int nOutputChannels, int nInputChannels, ofBaseApp *appPtr_
+_parameters: ofSoundStreamSettings &settings_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -105,104 +105,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets up and starts a global ofSoundStream.
 
-This will set up a sound stream with a default sample rate of 44100, a
-buffer size of 256 samples, and a queue of 4 buffers.
-
-
-Parameters:
-nOutputChannels number of requested output channels (i.e. 2 for stereo).
-nInputChannels number of requested input channels.
-appPtr pointer to the app which will own the sound stream (optional).
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSoundStreamSetup(nOutputChannels, nInputChannels, sampleRate, bufferSize, nBuffers)
-
-<!--
-_syntax: ofSoundStreamSetup(nOutputChannels, nInputChannels, sampleRate, bufferSize, nBuffers)_
-_name: ofSoundStreamSetup_
-_returns: void_
-_returns_description: _
-_parameters: int nOutputChannels, int nInputChannels, int sampleRate, int bufferSize, int nBuffers_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Sets up and starts a global ofSoundStream.
-
-Parameters:
-nOutputChannels number of requested output channels (i.e. 2 for stereo).
-nInputChannels number of requested input channels.
-sampleRate requested sample rate (44100 is typical).
-bufferSize requested buffer size (256 is typical). Smaller values
-       will be more responsive, but less stable.
-nBuffers number of buffers to queue. Less buffers will be more responsive, but less stable.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSoundStreamSetup(nOutputChannels, nInputChannels, *appPtr, sampleRate, bufferSize, nBuffers)
-
-<!--
-_syntax: ofSoundStreamSetup(nOutputChannels, nInputChannels, *appPtr, sampleRate, bufferSize, nBuffers)_
-_name: ofSoundStreamSetup_
-_returns: void_
-_returns_description: _
-_parameters: int nOutputChannels, int nInputChannels, ofBaseApp *appPtr, int sampleRate, int bufferSize, int nBuffers_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Sets up and starts a global ofSoundStream.
-
-Parameters:
-nOutputChannels number of requested output channels (i.e. 2 for stereo).
-nInputChannels number of requested input channels.
-appPtr pointer to the app which will own the sound stream (optional).
-sampleRate requested sample rate (44100 is typical).
-bufferSize requested buffer size (256 is typical). Smaller values
-       will be more responsive, but less stable.
-nBuffers number of buffers to queue. Less buffers will be more
-       responsive, but less stable.
 
 
 

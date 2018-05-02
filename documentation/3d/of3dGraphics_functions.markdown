@@ -152,14 +152,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawBox(&position, width, height, depth)
+###void ofDrawBox(&position, size)
 
 <!--
-_syntax: ofDrawBox(&position, width, height, depth)_
+_syntax: ofDrawBox(&position, size)_
 _name: ofDrawBox_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &position, float width, float height, float depth_
+_parameters: const int &position, float size_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -171,20 +171,16 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a rectangular box with the specified dimensions, starting from the specified position.
+Draws a cube with the specified size, starting from the specified position.
 
-A box is a rectangular solid: an extruded rectangle.
-It is drawn starting from a 3D reference coordinate.
-It has a width (in x), a height (in y), and a depth (in z).
-The box is drawn with the current color, e.g. set with ofSetColor().
-The box is drawn filled by default; change this with ofFill();
+A cube is drawn starting from a 3D reference position, with the specified size.
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();
 
 
 Parameters:
-position an ofPoint which contains the (x,y,z) coordinates for the box's reference corner.
-width The width of the box.
-height The height of the box.
-depth The depth of the box.
+position an glm::vec3 which contains the (x,y,z) coordinates for the cube's reference corner.
+size The size of the cube.
 
 
 
@@ -216,14 +212,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawBox(&position, size)
+###void ofDrawBox(&position, width, height, depth)
 
 <!--
-_syntax: ofDrawBox(&position, size)_
+_syntax: ofDrawBox(&position, width, height, depth)_
 _name: ofDrawBox_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &position, float size_
+_parameters: const int &position, float width, float height, float depth_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -235,16 +231,20 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a cube with the specified size, starting from the specified position.
+Draws a rectangular box with the specified dimensions, starting from the specified position.
 
-A cube is drawn starting from a 3D reference position, with the specified size.
-The cube is drawn with the current color, e.g. set with ofSetColor().
-The cube is drawn filled by default; change this with ofFill();
+A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from a 3D reference coordinate.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();
 
 
 Parameters:
-position an ofPoint which contains the (x,y,z) coordinates for the cube's reference corner.
-size The size of the cube.
+position an glm::vec3 which contains the (x,y,z) coordinates for the box's reference corner.
+width The width of the box.
+height The height of the box.
+depth The depth of the box.
 
 
 
@@ -507,7 +507,7 @@ _syntax: ofDrawCone(&position, radius, height)_
 _name: ofDrawCone_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &position, float radius, float height_
+_parameters: const int &position, float radius, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -707,7 +707,7 @@ _syntax: ofDrawCylinder(&position, radius, height)_
 _name: ofDrawCylinder_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &position, float radius, float height_
+_parameters: const int &position, float radius, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -907,7 +907,7 @@ _syntax: ofDrawIcoSphere(&position, radius)_
 _name: ofDrawIcoSphere_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &position, float radius_
+_parameters: const int &position, float radius_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1101,7 +1101,7 @@ _syntax: ofDrawPlane(&position, width, height)_
 _name: ofDrawPlane_
 _returns: void_
 _returns_description: _
-_parameters: ofPoint &position, float width, float height_
+_parameters: int &position, float width, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1295,7 +1295,7 @@ _syntax: ofDrawSphere(&position, radius)_
 _name: ofDrawSphere_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &position, float radius_
+_parameters: const int &position, float radius_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1388,12 +1388,12 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f ofGetBoxResolution()
+###int ofGetBoxResolution()
 
 <!--
 _syntax: ofGetBoxResolution()_
 _name: ofGetBoxResolution_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -1438,12 +1438,12 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f ofGetConeResolution()
+###int ofGetConeResolution()
 
 <!--
 _syntax: ofGetConeResolution()_
 _name: ofGetConeResolution_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -1505,12 +1505,12 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f ofGetCylinderResolution()
+###int ofGetCylinderResolution()
 
 <!--
 _syntax: ofGetCylinderResolution()_
 _name: ofGetCylinderResolution_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -1617,12 +1617,12 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f ofGetPlaneResolution()
+###int ofGetPlaneResolution()
 
 <!--
 _syntax: ofGetPlaneResolution()_
 _name: ofGetPlaneResolution_
-_returns: ofVec2f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: _

@@ -12,34 +12,6 @@ _extends: _
 
 A generic 3d object in space with transformation (position, rotation, scale).
 
-The ofNode is the base of all things 3d. It lets you represent a location
-and orientation in 3d space and also allows you to add children or parents
-so that sets of nodes can move together. This is handy for representing
-complex 3d models that are linked together, the same way that your hand is
-linked to your wrist (hopefully), which is linked to your elbow (hopefully),
-and so on. Nodes are the base of the ofPrimitives, ofCamera, and
-ofEasyCamera, among other things.
-
-with API to move around in global or local space
-and virtual draw method
-
-Info:
-uses right-handed coordinate system
-ofNodes 'look' along -ve z axis
-All set* methods work in local space unless stated otherwise
-
-To get the current position, check out: getX(), getY(), getZ().
-To get the axis of the node call getXAxis() (or the y and z variants for
-those other axes). Another really useful feature of the ofNode is that you
-can get the [Eulerian angles](http://en.wikipedia.org/wiki/Euler_angles)
-of each node: getPitch(), getHeading(), getRoll().
-The global transformation matrix of the ofNode is also available using the
-getGlobalTransformMatrix(), very handy for figuring out things in relation
-to the OpenGL representation of your OF world. getGlobalOrientation() also
-is handy, returning a ofQuaternion that you can use to find out whether
-your node is upside down in relation to the rest of your OF world (really
-an OpenGL context, but let's not get into that quite yet).
-
 
 
 
@@ -57,6 +29,42 @@ To get the current position, check out: getX(), getY(), getZ(). To get the axis 
 ##Methods
 
 
+
+###void addListener(&node)
+
+<!--
+_syntax: addListener(&node)_
+_name: addListener_
+_returns: void_
+_returns_description: _
+_parameters: ofNode &node_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###void boom(amount)
 
@@ -78,7 +86,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Move up+down (in local y axis)
+Move node up+down relative to current position (in local y axis).
+
+Parameters:
+param0 Desired relative position change along local y axis as float.
 
 
 
@@ -114,7 +125,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Remove parent node linking
+Remove parent node linking.
+
+Parameters:
+param0 Boolean if maintain child's global transformations (default = false).
 
 
 
@@ -150,7 +164,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\}
 
 
 
@@ -186,9 +200,12 @@ _advanced: False_
 
 _inlined_description: _
 
-If you extend ofNode and wish to change the way it draws, extend this
-try to not use global functions for rendering and instead use the passed
-renderer
+If you extend ofNode and wish to change the way it draws, extend this.
+
+Parameters:
+param0 A pointer to the renderer you want to draw to.
+\note Try to not use global functions for rendering and instead use the passed
+renderer.
 
 
 
@@ -224,7 +241,9 @@ _advanced: False_
 
 _inlined_description: _
 
-
+If you extend ofNode and wish to change the way it draws, extend this.
+\note Try to not use global functions for rendering and instead use the passed
+renderer.
 
 
 
@@ -260,7 +279,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Move forward+backward (in local z axis)
+Move node backward+forward relative to current position (in local z axis).
+
+Parameters:
+param0 Desired relative position change along local z axis as float.
 
 
 
@@ -296,10 +318,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Draw function.
-do NOT override this
-transforms the node to its position+orientation+scale
-and calls the virtual 'customDraw' method above which you CAN override
+Draw the node as a white cube with xyz axes.
+\note do NOT override this.
+It transforms the node to its position+orientation+scale
+and calls the virtual 'customDraw' method above which you CAN override.
 
 
 
@@ -315,12 +337,12 @@ Draw function. do NOT override this transforms the node to its position+orientat
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion getGlobalOrientation()
+###int getGlobalOrientation()
 
 <!--
 _syntax: getGlobalOrientation()_
 _name: getGlobalOrientation_
-_returns: ofQuaternion_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -335,7 +357,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the global orientation of the node as a quaternion.
 
+Returns: An quaternion of the global orientations(useful for complex rotations)
 
 
 
@@ -351,12 +375,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getGlobalPosition()
+###int getGlobalPosition()
 
 <!--
 _syntax: getGlobalPosition()_
 _name: getGlobalPosition_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -371,7 +395,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get node's global position as a 3D vector.
 
+Returns: A 3D vector with the global coordinates.
 
 
 
@@ -387,12 +413,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getGlobalScale()
+###int getGlobalScale()
 
 <!--
 _syntax: getGlobalScale()_
 _name: getGlobalScale_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -407,7 +433,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get global scale of node in xyz axes where 1 is default.
 
+Returns: The global scale in the xyz axes where 1 = 100% of size.
 
 
 
@@ -423,12 +451,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getGlobalTransformMatrix()
+###int getGlobalTransformMatrix()
 
 <!--
 _syntax: getGlobalTransformMatrix()_
 _name: getGlobalTransformMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -443,7 +471,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Get node's global transformations (position, orientation, scale).
 
+Returns: A refrence to mat4 containing node's global transformations.
+
+See also: https://open.gl/transformations
 
 
 
@@ -459,16 +491,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getHeading()
+###float getHeadingDeg()
 
 <!--
-_syntax: getHeading()_
-_name: getHeading_
+_syntax: getHeadingDeg()_
+_name: getHeadingDeg_
 _returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -479,7 +511,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get heading of node, aka the rotation along local y axis.
 
+Returns: The rotation around the local y axis in degrees, as a float.
 
 
 
@@ -495,12 +529,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getLocalTransformMatrix()
+###float getHeadingRad()
+
+<!--
+_syntax: getHeadingRad()_
+_name: getHeadingRad_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get heading of node, aka the rotation along local y axis.
+
+Returns: The rotation around the local y axis in degrees, as a float.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const int & getLocalTransformMatrix()
 
 <!--
 _syntax: getLocalTransformMatrix()_
 _name: getLocalTransformMatrix_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -515,7 +587,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Get node's local transformations (position, orientation, scale).
 
+Returns: A refrence to mat4 containing node's local transformations.
+
+See also: https://open.gl/transformations
 
 
 
@@ -531,12 +607,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getLookAtDir()
+###int getLookAtDir()
 
 <!--
 _syntax: getLookAtDir()_
 _name: getLookAtDir_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -551,9 +627,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get -z axis as 3d vector
+Get direction the node looks at aka local -z axis, as 3d vector.
 
-Returns: -z axis.
+Returns: A normalized 3D vector of the node's local -z axis direction.
 
 
 
@@ -569,16 +645,16 @@ Get -z axis.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getOrientationEuler()
+###int getOrientationEulerDeg()
 
 <!--
-_syntax: getOrientationEuler()_
-_name: getOrientationEuler_
-_returns: ofVec3f_
+_syntax: getOrientationEulerDeg()_
+_name: getOrientationEulerDeg_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -589,7 +665,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get local orientation of node in degrees around x, y, and z axes.
 
+Returns: The local x, y and z axes orientation in degrees, as a 3D vector.
 
 
 
@@ -605,12 +683,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofQuaternion getOrientationQuat()
+###int getOrientationEulerRad()
+
+<!--
+_syntax: getOrientationEulerRad()_
+_name: getOrientationEulerRad_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get local orientation of node in degrees around x, y, and z axes.
+
+Returns: The local x, y and z axes orientation in degrees, as a 3D vector.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getOrientationQuat()
 
 <!--
 _syntax: getOrientationQuat()_
 _name: getOrientationQuat_
-_returns: ofQuaternion_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -625,7 +741,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the local orientation of the node as a quaternion.
 
+Returns: A quaternion of local orientation (useful for complex rotations)
 
 
 
@@ -661,7 +779,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the parent node that this node is linked to
+Get the parent node of this node.
+
+Returns: Pointer to parent ofNode.
 
 
 
@@ -677,16 +797,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getPitch()
+###float getPitchDeg()
 
 <!--
-_syntax: getPitch()_
-_name: getPitch_
+_syntax: getPitchDeg()_
+_name: getPitchDeg_
 _returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -697,7 +817,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get pitch of node, aka the rotation along local x axis.
 
+Returns: The rotation around the local x axis in degrees, as a float.
 
 
 
@@ -713,12 +835,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getPosition()
+###float getPitchRad()
+
+<!--
+_syntax: getPitchRad()_
+_name: getPitchRad_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get pitch of node, aka the rotation along local x axis.
+
+Returns: The rotation around the local x axis in degrees, as a float.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getPosition()
 
 <!--
 _syntax: getPosition()_
 _name: getPosition_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -733,7 +893,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get position as a 3d vector
+Get node's local position as a 3D vector.
+
+Returns: A 3D vector with the local coordinates.
 
 
 
@@ -749,16 +911,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getRoll()
+###float getRollDeg()
 
 <!--
-_syntax: getRoll()_
-_name: getRoll_
+_syntax: getRollDeg()_
+_name: getRollDeg_
 _returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -769,7 +931,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get roll of node, aka the rotation along local z axis.
 
+Returns: The rotation around the local z axis in degrees, as a float.
 
 
 
@@ -785,12 +949,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getScale()
+###float getRollRad()
+
+<!--
+_syntax: getRollRad()_
+_name: getRollRad_
+_returns: float_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get roll of node, aka the rotation along local z axis.
+
+Returns: The rotation around the local z axis in degrees, as a float.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getScale()
 
 <!--
 _syntax: getScale()_
 _name: getScale_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -805,7 +1007,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get local scale of node in xyz axes where 1 is default.
 
+Returns: The local scale in the xyz axes where 1 = 100% of size.
 
 
 
@@ -821,12 +1025,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getSideDir()
+###int getSideDir()
 
 <!--
 _syntax: getSideDir()_
 _name: getSideDir_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -841,9 +1045,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get x axis as 3d vector
+Get direction of node's side aka local x axis, as 3d vector.
 
-Returns: x axis.
+Returns: A normalized 3D vector of the node's local x axis direction.
 
 
 
@@ -859,12 +1063,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getUpDir()
+###int getUpDir()
 
 <!--
 _syntax: getUpDir()_
 _name: getUpDir_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -879,9 +1083,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get y axis as 3d vector
+Get direction of node's top aka local y axis, as 3d vector.
 
-Returns: y axis.
+Returns: A normalized 3D vector of the node's local y axis direction.
 
 
 
@@ -917,7 +1121,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get x coordinate
+Get node's local x position.
+
+Returns: Local x coordinate as a float.
 
 
 
@@ -933,12 +1139,12 @@ Get x coodinate.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getXAxis()
+###int getXAxis()
 
 <!--
 _syntax: getXAxis()_
 _name: getXAxis_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -953,7 +1159,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get x axis as 3d vector
+Get the node's local x axis as 3d vector.
+
+Returns: A normalized 3D vector of the node's local x axis direction.
 
 
 
@@ -989,7 +1197,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get y coordinate
+Get node's local y position.
+
+Returns: Local y coordinate as a float.
 
 
 
@@ -1005,12 +1215,12 @@ Get y coordinate.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getYAxis()
+###int getYAxis()
 
 <!--
 _syntax: getYAxis()_
 _name: getYAxis_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1025,7 +1235,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get y axis as 3d vector
+Get the node's local y axis as 3d vector.
+
+Returns: A normalized 3D vector of the node's local y axis direction.
 
 
 
@@ -1061,7 +1273,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get z coordinate
+Get node's local z position.
+
+Returns: Local z coordinate as a float.
 
 
 
@@ -1077,12 +1291,12 @@ Get z coordinate.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getZAxis()
+###int getZAxis()
 
 <!--
 _syntax: getZAxis()_
 _name: getZAxis_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1097,7 +1311,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get z axis as 3d vector
+Get the node's local z axis as 3d vector.
+
+Returns: A normalized 3D vector of the node's local z axis direction.
 
 
 
@@ -1113,14 +1329,14 @@ Get z axis.
 
 <!----------------------------------------------------------------------------->
 
-###void lookAt(&lookAtPosition, upVector)
+###void lookAt(&lookAtPosition)
 
 <!--
-_syntax: lookAt(&lookAtPosition, upVector)_
+_syntax: lookAt(&lookAtPosition)_
 _name: lookAt_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec3f &lookAtPosition, ofVec3f upVector_
+_parameters: const int &lookAtPosition_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1133,7 +1349,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Orient node to look at position (-z axis pointing to position)
+Orient node to look at point (-z axis pointing to global position).
+
+Parameters:
+param0 XYZ coordinates of point to look at as ref to 3D vector.
+\note This version calculates the up vector automatically to try to keep
+	  it relatively consistant with the original angle.
 
 
 
@@ -1149,14 +1370,14 @@ Orient node to look at node (-z axis pointing to node).
 
 <!----------------------------------------------------------------------------->
 
-###void lookAt(&lookAtNode, &upVector)
+###void lookAt(&lookAtPosition, upVector)
 
 <!--
-_syntax: lookAt(&lookAtNode, &upVector)_
+_syntax: lookAt(&lookAtPosition, upVector)_
 _name: lookAt_
 _returns: void_
 _returns_description: _
-_parameters: const ofNode &lookAtNode, const ofVec3f &upVector_
+_parameters: const int &lookAtPosition, int upVector_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1169,7 +1390,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Orient node to look at node (-z axis pointing to node)
+Orient node to look at point (-z axis pointing to global position).
+
+Parameters:
+param0 XYZ coordinates of point to look at as ref to 3D vector.
+param1 The desired up axis as a cartesian 3D vector.
 
 
 
@@ -1178,6 +1403,87 @@ Orient node to look at node (-z axis pointing to node)
 _description: _
 
 Orient node to look at position (-z axis pointing to position).
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void lookAt(&lookAtNode)
+
+<!--
+_syntax: lookAt(&lookAtNode)_
+_name: lookAt_
+_returns: void_
+_returns_description: _
+_parameters: const ofNode &lookAtNode_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Orient node to look at another node (-z axis pointing at other node).
+
+Parameters:
+param0 A reference to the node to look at.
+\note This version calculates the up vector automatically to try to keep
+	  it relatively consistant with the original angle.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void lookAt(&lookAtNode, &upVector)
+
+<!--
+_syntax: lookAt(&lookAtNode, &upVector)_
+_name: lookAt_
+_returns: void_
+_returns_description: _
+_parameters: const ofNode &lookAtNode, const int &upVector_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Orient node to look at another node (-z axis pointing at other node).
+
+Parameters:
+param0 A reference to the node to look at.
+param1 The desired up axis as a ref to cartesian 3D vector.
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1205,7 +1511,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Move by arbitrary amount
+Move node by relative amount with xyz coordinates.
+
+Parameters:
+param0 Desired relative position change along x axis as a float.
+param1 Desired relative position change along y axis as a float.
+param2 Desired relative position change along z axis as a float.
 
 
 
@@ -1228,7 +1539,7 @@ _syntax: move(&offset)_
 _name: move_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec3f &offset_
+_parameters: const int &offset_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1241,7 +1552,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Move by arbitrary amount
+Move node by relative amount with xyz as ref to 3D vector.
+
+Parameters:
+param0 Desired relative position change along all axes as ref to 3D vector.
 
 
 
@@ -1293,6 +1607,78 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofNode(&node)
+
+<!--
+_syntax: ofNode(&node)_
+_name: ofNode_
+_returns: _
+_returns_description: _
+_parameters: const ofNode &node_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofNode(&&node)
+
+<!--
+_syntax: ofNode(&&node)_
+_name: ofNode_
+_returns: _
+_returns_description: _
+_parameters: ofNode &&node_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void onOrientationChanged()
 
 <!--
@@ -1322,6 +1708,114 @@ classes extending ofNode can override this methods to get notified when the orie
 _description: _
 
 Classes extending ofNode can override these methods to get notified when the orientation changed.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void onParentOrientationChanged(&orientation)
+
+<!--
+_syntax: onParentOrientationChanged(&orientation)_
+_name: onParentOrientationChanged_
+_returns: void_
+_returns_description: _
+_parameters: int &orientation_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void onParentPositionChanged(&position)
+
+<!--
+_syntax: onParentPositionChanged(&position)_
+_name: onParentPositionChanged_
+_returns: void_
+_returns_description: _
+_parameters: int &position_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void onParentScaleChanged(&scale)
+
+<!--
+_syntax: onParentScaleChanged(&scale)_
+_name: onParentScaleChanged_
+_returns: void_
+_returns_description: _
+_parameters: int &scale_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1402,16 +1896,16 @@ Classes extending ofNode can override these methods to get notified when the sca
 
 <!----------------------------------------------------------------------------->
 
-###void orbit(longitude, latitude, radius, &centerPoint)
+###ofNode & operator=(&node)
 
 <!--
-_syntax: orbit(longitude, latitude, radius, &centerPoint)_
-_name: orbit_
-_returns: void_
+_syntax: operator=(&node)_
+_name: operator=_
+_returns: ofNode &_
 _returns_description: _
-_parameters: float longitude, float latitude, float radius, const ofVec3f &centerPoint_
+_parameters: const ofNode &node_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1422,7 +1916,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Orbit object around target at radius
+
 
 
 
@@ -1430,7 +1924,7 @@ Orbit object around target at radius
 
 _description: _
 
-Orbit object around target at radius.
+
 
 
 
@@ -1438,16 +1932,94 @@ Orbit object around target at radius.
 
 <!----------------------------------------------------------------------------->
 
-###void orbit(longitude, latitude, radius, &centerNode)
+###ofNode & operator=(&&node)
 
 <!--
-_syntax: orbit(longitude, latitude, radius, &centerNode)_
-_name: orbit_
+_syntax: operator=(&&node)_
+_name: operator=_
+_returns: ofNode &_
+_returns_description: _
+_parameters: ofNode &&node_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void orbitDeg(longitude, latitude, radius, &centerPoint)
+
+<!--
+_syntax: orbitDeg(longitude, latitude, radius, &centerPoint)_
+_name: orbitDeg_
+_returns: void_
+_returns_description: _
+_parameters: float longitude, float latitude, float radius, const int &centerPoint_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Orbit node around a global position at a specific radius.
+
+Parameters:
+param0 The longitudinal position of the node in degrees as float.
+param1 The latitudinal position of the node in degrees as float.
+param2 The desired radius from the position in degrees as float.
+param3 The global position to orbit around as ref to 3D vector. Default = (0, 0, 0).
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void orbitDeg(longitude, latitude, radius, &centerNode)
+
+<!--
+_syntax: orbitDeg(longitude, latitude, radius, &centerNode)_
+_name: orbitDeg_
 _returns: void_
 _returns_description: _
 _parameters: float longitude, float latitude, float radius, ofNode &centerNode_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1458,7 +2030,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Orbit node around another node at a specific radius.
 
+Parameters:
+param0 The longitudinal position of the node in degrees as float.
+param1 The latitudinal position of the node in degrees as float.
+param2 The desired radius from the other node in degrees as float.
+param3 A reference to the node to rotate around.
 
 
 
@@ -1466,7 +2044,7 @@ _inlined_description: _
 
 _description: _
 
-Orbit object around target at radius.
+
 
 
 
@@ -1474,16 +2052,16 @@ Orbit object around target at radius.
 
 <!----------------------------------------------------------------------------->
 
-###void pan(degrees)
+###void orbitRad(longitude, latitude, radius, &centerPoint)
 
 <!--
-_syntax: pan(degrees)_
-_name: pan_
+_syntax: orbitRad(longitude, latitude, radius, &centerPoint)_
+_name: orbitRad_
 _returns: void_
 _returns_description: _
-_parameters: float degrees_
+_parameters: float longitude, float latitude, float radius, const int &centerPoint_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1494,7 +2072,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Rotate left+right (around local y axis)
+Orbit node around a global position at a specific radius.
+
+Parameters:
+param0 The longitudinal position of the node in radians as float.
+param1 The latitudinal position of the node in radians as float.
+param2 The desired radius from the position in radians as float.
+param3 The global position to orbit around as ref to 3D vector. Default = (0, 0, 0).
 
 
 
@@ -1502,7 +2086,163 @@ Rotate left+right (around local y axis)
 
 _description: _
 
-Rotate left+right (around local y axis).
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void orbitRad(longitude, latitude, radius, &centerNode)
+
+<!--
+_syntax: orbitRad(longitude, latitude, radius, &centerNode)_
+_name: orbitRad_
+_returns: void_
+_returns_description: _
+_parameters: float longitude, float latitude, float radius, ofNode &centerNode_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Orbit node around another node at a specific radius.
+
+Parameters:
+param0 The longitudinal position of the node in radians as float.
+param1 The latitudinal position of the node in radians as float.
+param2 The desired radius from the other node in radians as float.
+param3 A reference to the node to rotate around.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void panDeg(degrees)
+
+<!--
+_syntax: panDeg(degrees)_
+_name: panDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate left+right relative to current orientation (around local y axis).
+
+Parameters:
+param0 Desired relative rotation change along local y axis in degrees as float.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void panRad(radians)
+
+<!--
+_syntax: panRad(radians)_
+_name: panRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate left+right relative to current orientation (around local y axis).
+
+Parameters:
+param0 Desired relative rotation change along local y axis in radians as float.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void removeListener(&node)
+
+<!--
+_syntax: removeListener(&node)_
+_name: removeListener_
+_returns: void_
+_returns_description: _
+_parameters: ofNode &node_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1530,7 +2270,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Resets this node's transformation
+Reset this node's transformations, position, rotation and scale.
 
 
 
@@ -1566,7 +2306,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Restore opengl renderer's previous modelview transform matrix.
 
+Parameters:
+param0 A pointer to the renderer you want to restore transformation to;
 
 
 
@@ -1582,16 +2325,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void roll(degrees)
+###void rollDeg(degrees)
 
 <!--
-_syntax: roll(degrees)_
-_name: roll_
+_syntax: rollDeg(degrees)_
+_name: rollDeg_
 _returns: void_
 _returns_description: _
 _parameters: float degrees_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1602,7 +2345,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Roll left+right (around local z axis)
+Roll left+right relative to current orientation (around local z axis).
+
+Parameters:
+param0 Desired relative rotation change along local z axis in degrees as float.
 
 
 
@@ -1610,7 +2356,46 @@ Roll left+right (around local z axis)
 
 _description: _
 
-roll left+right (around local z axis)
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rollRad(radians)
+
+<!--
+_syntax: rollRad(radians)_
+_name: rollRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Roll left+right relative to current orientation (around local z axis).
+
+Parameters:
+param0 Desired relative rotation change along local z axis in radians as float.
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1625,7 +2410,7 @@ _syntax: rotate(&q)_
 _name: rotate_
 _returns: void_
 _returns_description: _
-_parameters: const ofQuaternion &q_
+_parameters: const int &q_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1638,79 +2423,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Rotate by quaternion
+Rotate relative to current orientation by quaternion.
 
-
-
-
-
-_description: _
-
-Rotate by quaternion.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rotate(degrees, &v)
-
-<!--
-_syntax: rotate(degrees, &v)_
-_name: rotate_
-_returns: void_
-_returns_description: _
-_parameters: float degrees, const ofVec3f &v_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotate around arbitrary axis by angle
-
-
-
-
-
-_description: _
-
-Rotate around arbitrary axis by angle.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rotate(degrees, vx, vy, vz)
-
-<!--
-_syntax: rotate(degrees, vx, vy, vz)_
-_name: rotate_
-_returns: void_
-_returns_description: _
-_parameters: float degrees, float vx, float vy, float vz_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotate around arbitrary axis by angle
+Parameters:
+param0 Desired relative rotation change as a ref to quaternion.
 
 
 
@@ -1733,7 +2449,7 @@ _syntax: rotateAround(&q, &point)_
 _name: rotateAround_
 _returns: void_
 _returns_description: _
-_parameters: const ofQuaternion &q, const ofVec3f &point_
+_parameters: const int &q, const int &point_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1746,43 +2462,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Rotate by quaternion around point
+Rotate relative to current orientation by quaternion around point.
 
-
-
-
-
-_description: _
-
-Rotate by quaternion around point.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rotateAround(degrees, &axis, &point)
-
-<!--
-_syntax: rotateAround(degrees, &axis, &point)_
-_name: rotateAround_
-_returns: void_
-_returns_description: _
-_parameters: float degrees, const ofVec3f &axis, const ofVec3f &point_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotate around arbitrary axis by angle around point
+Parameters:
+param0 Desired relative rotation change as a ref to quaternion.
+param1 Point to rotate around in local xyz coordinates as ref to 3D vector.
 
 
 
@@ -1798,6 +2482,252 @@ Rotate around arbitrary axis by angle around point.
 
 <!----------------------------------------------------------------------------->
 
+###void rotateAroundDeg(degrees, &axis, &point)
+
+<!--
+_syntax: rotateAroundDeg(degrees, &axis, &point)_
+_name: rotateAroundDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees, const int &axis, const int &point_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate relative to current orientation around arbitrary axis around point.
+
+Parameters:
+param0 Desired relative angle change in degrees as float.
+param1 The arbitrary axis to rotate around as ref to cartesian 3D vector.
+param2 Point to rotate around in local xyz coordinates as ref to 3D vector.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateAroundRad(radians, &axis, &point)
+
+<!--
+_syntax: rotateAroundRad(radians, &axis, &point)_
+_name: rotateAroundRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians, const int &axis, const int &point_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate relative to current orientation around arbitrary axis around point.
+
+Parameters:
+param0 Desired relative angle change in degrees as float.
+param1 The arbitrary axis to rotate around as ref to cartesian 3D vector.
+param2 Point to rotate around in local xyz coordinates as ref to 3D vector.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateDeg(degrees, &v)
+
+<!--
+_syntax: rotateDeg(degrees, &v)_
+_name: rotateDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees, const int &v_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate relative to current orientation around arbitrary axis.
+
+Parameters:
+param0 Desired relative angle change in degrees as float.
+param1 Desired axis to rotate around as a ref to cartesian 3D Vector.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateDeg(degrees, vx, vy, vz)
+
+<!--
+_syntax: rotateDeg(degrees, vx, vy, vz)_
+_name: rotateDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees, float vx, float vy, float vz_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate relative to current orientation around arbitrary axis.
+
+Parameters:
+param0 Desired relative angle change in degrees as float.
+param1 X angle of the axis to rotate around in degrees as float.
+param2 Y angle of the axis to rotate around in degrees as float.
+param3 Z angle of the axis to rotate around in degrees as float.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateRad(radians, &v)
+
+<!--
+_syntax: rotateRad(radians, &v)_
+_name: rotateRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians, const int &v_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate relative to current orientation around arbitrary axis.
+
+Parameters:
+param0 Desired relative angle change in radians as float.
+param1 Desired axis to rotate around as a ref to cartesian 3D Vector.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateRad(radians, vx, vy, vz)
+
+<!--
+_syntax: rotateRad(radians, vx, vy, vz)_
+_name: rotateRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians, float vx, float vy, float vz_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate relative to current orientation around arbitrary axis.
+
+Parameters:
+param0 Desired relative angle change in radians as float.
+param1 X angle of the axis to rotate around in degrees as float.
+param2 Y angle of the axis to rotate around in degrees as float.
+param3 Z angle of the axis to rotate around in degrees as float.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setGlobalOrientation(&q)
 
 <!--
@@ -1805,7 +2735,7 @@ _syntax: setGlobalOrientation(&q)_
 _name: setGlobalOrientation_
 _returns: void_
 _returns_description: _
-_parameters: const ofQuaternion &q_
+_parameters: const int &q_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1818,7 +2748,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Set global orientation with a quaternion.
 
+Parameters:
+param0 Desired global orientation as ref to an glm::quat.
 
 
 
@@ -1854,7 +2787,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the global position of the node using xyz coordinates.
 
+Parameters:
+param0 Desired global x coordinate as a float.
+param1 Desired global y coordinate as a float.
+param2 Desired global z coordinate as a float.
 
 
 
@@ -1877,7 +2815,7 @@ _syntax: setGlobalPosition(&p)_
 _name: setGlobalPosition_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec3f &p_
+_parameters: const int &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1890,43 +2828,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the global position of the node using a 3D vector of coordinates.
 
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setOrientation(&q)
-
-<!--
-_syntax: setOrientation(&q)_
-_name: setOrientation_
-_returns: void_
-_returns_description: _
-_parameters: const ofQuaternion &q_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set orientation with a quaternion
+Parameters:
+param0 Desired global xyz coordinates as ref to 3D vector.
 
 
 
@@ -1949,7 +2854,7 @@ _syntax: setOrientation(&eulerAngles)_
 _name: setOrientation_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec3f &eulerAngles_
+_parameters: const int &eulerAngles_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1962,8 +2867,55 @@ _advanced: False_
 
 _inlined_description: _
 
-Set orientation with a euler angles
-\note Prepare for gimbal lock
+Set local orientation with xyz euler angles.
+
+Parameters:
+param0 Desired local xyz angles in degrees, as ref to 3D vector.
+\note Using euler angles can cause gimbal lock.
+
+See also: https://en.wikipedia.org/wiki/Gimbal_lock
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setOrientation(&eulerAngles)
+
+<!--
+_syntax: setOrientation(&eulerAngles)_
+_name: setOrientation_
+_returns: void_
+_returns_description: _
+_parameters: const int &eulerAngles_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set local orientation with xyz euler angles.
+
+Parameters:
+param0 Desired local xyz angles in degrees, as ref to 3D vector.
+\note Using euler angles can cause gimbal lock.
+
+See also: https://en.wikipedia.org/wiki/Gimbal_lock
 
 
 
@@ -1999,8 +2951,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Set parent to link nodes transformations. This will inherit
-transformations from parent node.
+Set parent for the node. The node will inherit transformations from parent.
+
+Parameters:
+param0 Reference to the ofNode which becomes the parent node.
+param1 Boolean if maintain child's global transformations (default = false).
 
 
 
@@ -2036,7 +2991,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the position of the node
+Set the local position of the node using xyz coordinates.
+
+Parameters:
+param0 Desired local x coordinate as a float.
+param1 Desired local y coordinate as a float.
+param2 Desired local z coordinate as a float.
 
 
 
@@ -2059,7 +3019,7 @@ _syntax: setPosition(&p)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec3f &p_
+_parameters: const int &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2072,7 +3032,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the local position of the node using a 3D vector of coordinates.
 
+Parameters:
+param0 Desired local xyz coordinates as ref to 3D vector.
 
 
 
@@ -2108,7 +3071,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Set local uniform scale (x, y, and z are equally scaled).
 
+Parameters:
+param0 Desired scale for all axes as a float where 1 = 100%.
 
 
 
@@ -2144,7 +3110,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Set local scale for xyz axes individually.
 
+Parameters:
+param0 Desired local scale for x axis as a float where 1 = 100%.
+param1 Desired local scale for y axis as a float where 1 = 100%.
+param2 Desired local scale for z axis as a float where 1 = 100%.
 
 
 
@@ -2167,7 +3138,7 @@ _syntax: setScale(&s)_
 _name: setScale_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec3f &s_
+_parameters: const int &s_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2180,7 +3151,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Set local scale for xyz axes individually with a 3D vector.
 
+Parameters:
+param0 Desired local scale for all axes as ref to 3D vector where 1 = 100%.
 
 
 
@@ -2196,52 +3170,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setTransformMatrix(&m44)
+###void tiltDeg(degrees)
 
 <!--
-_syntax: setTransformMatrix(&m44)_
-_name: setTransformMatrix_
-_returns: void_
-_returns_description: _
-_parameters: const ofMatrix4x4 &m44_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Directly set the transformation matrix
-
-
-
-
-
-_description: _
-
-Directly set transformation matrix.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void tilt(degrees)
-
-<!--
-_syntax: tilt(degrees)_
-_name: tilt_
+_syntax: tiltDeg(degrees)_
+_name: tiltDeg_
 _returns: void_
 _returns_description: _
 _parameters: float degrees_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2252,7 +3190,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Tilt up+down (around local x axis)
+Tilt up+down relative to current orientation (around local x axis).
+
+Parameters:
+param0 Desired relative rotation change along local x axis in degrees as float.
 
 
 
@@ -2260,7 +3201,46 @@ Tilt up+down (around local x axis)
 
 _description: _
 
-Tilt up+down (around local x axis)
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void tiltRad(radians)
+
+<!--
+_syntax: tiltRad(radians)_
+_name: tiltRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Tilt up+down relative to current orientation (around local x axis).
+
+Parameters:
+param0 Desired relative rotation change along local x axis in radians as float.
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -2288,9 +3268,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Set opengl's modelview matrix to this nodes transform
-if you want to draw something at the position+orientation+scale of this node...
-...call ofNode::transform(); write your draw code, and ofNode::restoreTransform();
+Set opengl renderer's modelview matrix to this nodes transform.
+
+Parameters:
+param0 A pointer to the renderer you want to set to this node's transform;
+\note If you want to draw something at the position+orientation+scale of this node,
+call ofNode::transform(); write your draw code, and ofNode::restoreTransform();
 OR A simpler way is to extend ofNode and override ofNode::customDraw();
 
 
@@ -2330,7 +3313,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Move sideways (in local x axis)
+Move node left+right relative to current position (in local x axis).
+
+Parameters:
+param0 Desired relative position change along local x axis as float.
 
 
 
@@ -2433,6 +3419,38 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int children
+
+<!--
+_name: children_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -2566,7 +3584,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\}
+
 
 
 

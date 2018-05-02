@@ -32,7 +32,7 @@ _syntax: loadFromDisk(&image, file)_
 _name: loadFromDisk_
 _returns: void_
 _returns_description: _
-_parameters: ofImage &image, string file_
+_parameters: ofImage &image, __cxx11::string file_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -68,7 +68,7 @@ _syntax: loadFromURL(&image, url)_
 _name: loadFromURL_
 _returns: void_
 _returns_description: _
-_parameters: ofImage &image, string url_
+_parameters: ofImage &image, __cxx11::string url_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

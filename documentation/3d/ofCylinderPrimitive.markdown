@@ -102,12 +102,12 @@ cylinder.draw();
 
 
 
-###vector< ofIndexType > getBottomCapIndices()
+###int getBottomCapIndices()
 
 <!--
 _syntax: getBottomCapIndices()_
 _name: getBottomCapIndices_
-_returns: vector< ofIndexType >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -138,12 +138,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getBottomCapMesh()
+###int getBottomCapMesh()
 
 <!--
 _syntax: getBottomCapMesh()_
 _name: getBottomCapMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -210,12 +210,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofIndexType > getCylinderIndices()
+###int getCylinderIndices()
 
 <!--
 _syntax: getCylinderIndices()_
 _name: getCylinderIndices_
-_returns: vector< ofIndexType >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -246,12 +246,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getCylinderMesh()
+###int getCylinderMesh()
 
 <!--
 _syntax: getCylinderMesh()_
 _name: getCylinderMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -354,12 +354,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getResolution()
+###int getResolution()
 
 <!--
 _syntax: getResolution()_
 _name: getResolution_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -498,12 +498,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofIndexType > getTopCapIndices()
+###int getTopCapIndices()
 
 <!--
 _syntax: getTopCapIndices()_
 _name: getTopCapIndices_
-_returns: vector< ofIndexType >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -534,12 +534,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getTopCapMesh()
+###int getTopCapMesh()
 
 <!--
 _syntax: getTopCapMesh()_
 _name: getTopCapMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_

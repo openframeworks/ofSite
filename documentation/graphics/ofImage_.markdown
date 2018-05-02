@@ -244,7 +244,7 @@ _name: clone_
 _returns: void_
 _returns_description: _
 _parameters: const ofImage_< SrcType > &mom_
-_access: public_
+_access: protected_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -256,10 +256,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Create an ofImage from another ofImage instance.
 
-This allows you to create an ofImage from another ofImage instance,
-copying all the pixels and the texture data while creating a new textureID.
 
 
 
@@ -331,7 +328,7 @@ _syntax: cropFrom(&otherImage, x, y, w, h)_
 _name: cropFrom_
 _returns: void_
 _returns_description: _
-_parameters: ofImage_< PixelType > &otherImage, int x, int y, int w, int h_
+_parameters: const ofImage_< PixelType > &otherImage, int x, int y, int w, int h_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -539,6 +536,78 @@ h Draw height.
 _description: _
 
 Draws the ofImage into the x,y,z location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&pos)
+
+<!--
+_syntax: draw(&pos)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const int &pos_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&pos, w, h)
+
+<!--
+_syntax: draw(&pos, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const int &pos, float w, float h_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1060,7 +1129,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns a const reference to the texture that the ofImage contains.
 
+Returns: A const reference to the texture that the ofImage contains.
 
 
 
@@ -1242,14 +1313,14 @@ Returns whether the ofImage has a texture or not. If not, nothing will be drawn 
 
 <!----------------------------------------------------------------------------->
 
-###bool load(&fileName)
+###bool load(&fileName, &settings)
 
 <!--
-_syntax: load(&fileName)_
+_syntax: load(&fileName, &settings)_
 _name: load_
 _returns: bool_
 _returns_description: _
-_parameters: const string &fileName_
+_parameters: const filesystem::path &fileName, const ofImageLoadSettings &settings_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1267,6 +1338,7 @@ Loads an image given by fileName.
 Parameters:
 fileName Program looks for image given by fileName, relative to
 the data folder.
+settings Load options
 
 Returns: true if image loaded correctly.
 
@@ -1284,14 +1356,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool load(&buffer)
+###bool load(&buffer, &settings)
 
 <!--
-_syntax: load(&buffer)_
+_syntax: load(&buffer, &settings)_
 _name: load_
 _returns: bool_
 _returns_description: _
-_parameters: const ofBuffer &buffer_
+_parameters: const ofBuffer &buffer, const ofImageLoadSettings &settings_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1306,46 +1378,6 @@ _inlined_description: _
 
 Loads an image from an ofBuffer instance created by, for
 instance, ofFile::readToBuffer().
-
-This actually loads the image data into an ofPixels object and then
-into the texture.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool load(&file)
-
-<!--
-_syntax: load(&file)_
-_name: load_
-_returns: bool_
-_returns_description: _
-_parameters: const ofFile &file_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Loads an image from an ofFile instance created by, for
-instance, ofDirectory::getFiles().
 
 This actually loads the image data into an ofPixels object and then
 into the texture.
@@ -1477,85 +1509,6 @@ This creates an ofImage from an ofPixels object, allocating space for the pixels
 
 <!----------------------------------------------------------------------------->
 
-### ofImage_(&file)
-
-<!--
-_syntax: ofImage_(&file)_
-_name: ofImage__
-_returns: _
-_returns_description: _
-_parameters: const ofFile &file_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This creates an ofImage from an ofFile instance.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofImage_(&filename)
-
-<!--
-_syntax: ofImage_(&filename)_
-_name: ofImage__
-_returns: _
-_returns_description: _
-_parameters: const string &filename_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This creates an ofImage from a file which can be a local string or a URL, allocating space for the pixels, and copying the pixels into the texture that the ofImage instance contains.
-~~~~{.cpp}
-ofImage img("http://www.openframeworks.cc/wp-content/themes/ofw/images/ofw-logo.gif");
-~~~~
-or
-~~~~{.cpp}
-ofImage img("anImage.png"); // assumes this is in bin/data
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofImage_(&mom)
 
 <!--
@@ -1628,6 +1581,85 @@ _inlined_description: _
 _description: _
 
 This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&fileName, &settings)
+
+<!--
+_syntax: ofImage_(&fileName, &settings)_
+_name: ofImage__
+_returns: _
+_returns_description: _
+_parameters: const filesystem::path &fileName, const ofImageLoadSettings &settings_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+This creates an ofImage from a file which can be a local string or a URL, allocating space for the pixels, and copying the pixels into the texture that the ofImage instance contains.
+~~~~{.cpp}
+ofImage img("http://www.openframeworks.cc/wp-content/themes/ofw/images/ofw-logo.gif");
+~~~~
+or
+~~~~{.cpp}
+ofImage img("anImage.png"); // assumes this is in bin/data
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&&mom)
+
+<!--
+_syntax: ofImage_(&&mom)_
+_name: ofImage__
+_returns: _
+_returns_description: _
+_parameters: ofImage_< PixelType > &&mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+This creates an ofImage from an ofFile instance.
 
 
 
@@ -1748,6 +1780,42 @@ _inlined_description: _
 _description: _
 
 This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofImage_< PixelType > & operator=(&&mom)
+
+<!--
+_syntax: operator=(&&mom)_
+_name: operator=_
+_returns: ofImage_< PixelType > &_
+_returns_description: _
+_parameters: ofImage_< PixelType > &&mom_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1912,14 +1980,14 @@ Rotates the image by a multiple of 90 degrees, for instance, if you pass in 2, t
 
 <!----------------------------------------------------------------------------->
 
-###void save(fileName, compressionLevel = OF_IMAGE_QUALITY_BEST)
+###bool save(&fileName, compressionLevel = OF_IMAGE_QUALITY_BEST)
 
 <!--
-_syntax: save(fileName, compressionLevel = OF_IMAGE_QUALITY_BEST)_
+_syntax: save(&fileName, compressionLevel = OF_IMAGE_QUALITY_BEST)_
 _name: save_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: string fileName, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST_
+_parameters: const filesystem::path &fileName, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1954,14 +2022,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void save(&buffer, compressionLevel = OF_IMAGE_QUALITY_BEST)
+###bool save(&buffer, imageFormat = OF_IMAGE_FORMAT_PNG, compressionLevel = OF_IMAGE_QUALITY_BEST)
 
 <!--
-_syntax: save(&buffer, compressionLevel = OF_IMAGE_QUALITY_BEST)_
+_syntax: save(&buffer, imageFormat = OF_IMAGE_FORMAT_PNG, compressionLevel = OF_IMAGE_QUALITY_BEST)_
 _name: save_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: ofBuffer &buffer, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST_
+_parameters: ofBuffer &buffer, ofImageFormat imageFormat=OF_IMAGE_FORMAT_PNG, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1981,47 +2049,6 @@ quality specified by compressionLevel.
 Parameters:
 buffer ofBuffer to save image to.
 compressionLevel The ofImageQualityType.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void save(&file, compressionLevel = OF_IMAGE_QUALITY_BEST)
-
-<!--
-_syntax: save(&file, compressionLevel = OF_IMAGE_QUALITY_BEST)_
-_name: save_
-_returns: void_
-_returns_description: _
-_parameters: const ofFile &file, ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-This saves the image to the ofFile passed with the image quality specified by compressionLevel.
-
-Parameters:
-file ofFile to save image to.
-compressionLevel The different compression levels are: `OF_IMAGE_QUALITY_BEST`, `OF_IMAGE_QUALITY_HIGH`,
-`OF_IMAGE_QUALITY_MEDIUM`, `OF_IMAGE_QUALITY_LOW`, `OF_IMAGE_QUALITY_WORST`
 
 
 

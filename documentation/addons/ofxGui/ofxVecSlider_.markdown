@@ -97,6 +97,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###size_t dim()
+
+<!--
+_syntax: dim()_
+_name: dim_
+_returns: size_t_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofAbstractParameter & getParameter()
 
 <!--

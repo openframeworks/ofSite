@@ -5,7 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
-_extends: Poco::Runnable_
+_extends: _
 -->
 
 ##InlineDescription
@@ -236,61 +236,16 @@ Ok soldier, lock and load ... good luck!
 
 
 
-###Poco::Thread * getCurrentPocoThread()
+###thread & getNativeThread()
 
 <!--
-_syntax: getCurrentPocoThread()_
-_name: getCurrentPocoThread_
-_returns: Poco::Thread *_
+_syntax: getNativeThread()_
+_name: getNativeThread_
+_returns: thread &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the current Poco thread.
-
-In most cases, it is more appropriate to query the current
-thread by calling isCurrentThread() on an active thread or
-by calling ofThread::isMainThread().  See the method
-documentation for more information on those methods.
-
-
-Returns: A pointer to the current active thread OR 0 iff the main
-    application thread is active.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Poco::Thread & getPocoThread()
-
-<!--
-_syntax: getPocoThread()_
-_name: getPocoThread_
-_returns: Poco::Thread &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0072_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -324,16 +279,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const Poco::Thread & getPocoThread()
+###const thread & getNativeThread()
 
 <!--
-_syntax: getPocoThread()_
-_name: getPocoThread_
-_returns: const Poco::Thread &_
+_syntax: getNativeThread()_
+_name: getNativeThread_
+_returns: const thread &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -367,12 +322,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getThreadId()
+###thread::id getThreadId()
 
 <!--
 _syntax: getThreadId()_
 _name: getThreadId_
-_returns: int_
+_returns: thread::id_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -508,59 +463,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool isMainThread()
-
-<!--
-_syntax: isMainThread()_
-_name: isMainThread_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-A query to see if the current thread is the main thread.
-
-Some functions (e.g. OpenGL calls) can only be executed
-the main thread.  This static function will tell the user
-what thread is currently active at the moment the method
-is called.
-
-    if (ofThread::isMainThread())
-    {
-        ofLogNotice() << "This is the main thread!";
-    }
-    else
-    {
-        ofLogNotice() << "This is NOT the main thread.";
-    }
-
-
-Returns: true iff the current thread is the main thread.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool isThreadRunning()
 
 <!--
@@ -642,7 +544,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Try to lock the mutex.
+Lock the mutex.
 
 If the thread was started startThread(true), then this call will wait
 until the mutex is available and return true.  If the thread was started
@@ -650,7 +552,7 @@ startThread(false), this call will return true iff the mutex is
 was successfully acquired.
 
 
-Returns: true iff the lock was successfully acquired.
+Returns: true if the lock was successfully acquired.
 
 
 
@@ -716,6 +618,42 @@ _returns_description: _
 _parameters: _
 _access: private_
 _version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setThreadName(&name)
+
+<!--
+_syntax: setThreadName(&name)_
+_name: setThreadName_
+_returns: void_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -813,14 +751,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void startThread(mutexBlocks = true)
+###void startThread()
 
 <!--
-_syntax: startThread(mutexBlocks = true)_
+_syntax: startThread()_
 _name: startThread_
 _returns: void_
 _returns_description: _
-_parameters: bool mutexBlocks=true_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -833,11 +771,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Start the thread with options.
-
-Parameters:
-mutexBlocks Set blocking to true if you want the mutex to
-       block when lock() is called.
+Start the thread.
 \note Subclasses can directly access the mutex and employ thier
       own locking strategy.
 
@@ -1018,6 +952,50 @@ void ofApp::exit() {
 
 <!----------------------------------------------------------------------------->
 
+###bool tryLock()
+
+<!--
+_syntax: tryLock()_
+_name: tryLock_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Tries to lock the mutex.
+
+If the thread was started startThread(true), then this call will wait
+until the mutex is available and return true.  If the thread was started
+startThread(false), this call will return true iff the mutex is
+was successfully acquired.
+
+
+Returns: true if the lock was successfully acquired.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void unlock()
 
 <!--
@@ -1177,97 +1155,21 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ~ofThread()
-
-<!--
-_syntax: ~ofThread()_
-_name: ~ofThread_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Destroy the ofThread.
-
-Warning: The destructor WILL NOT stop the thread or wait for
-    the underlying Poco::Thread to finish.  For threads that
-    require the correct deallocation of resources, the user
-    MUST call waitForThread(...); to ensure that the thread
-    is stopped and the thread's resources are released.
-    Improper release of resources or memory can lead to
-    segementation faults and other errors.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ##Variables
 
 
 
-###Poco::AtomicCounter  _mutexBlocks
+###condition_variable condition
 
 <!--
-_name: _mutexBlocks_
-_type: Poco::AtomicCounter _
+_name: condition_
+_type: condition_variable_
 _access: private_
-_version_started: 0.8.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Poco::AtomicCounter  _threadRunning
-
-<!--
-_name: _threadRunning_
-_type: Poco::AtomicCounter _
-_access: private_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -1307,10 +1209,10 @@ _inlined_description: _
 
 The internal mutex called through lock() & unlock().
 
-This mutext can also be used with ofScopedLock within the threaded
-function by calling:
+This mutext can also be used with std::unique_lock or lock_guard
+within the threaded function by calling:
 
-    ofScopedLock lock(mutex);
+    std::unique_lock<std::mutex> lock(mutex);
 
 
 
@@ -1319,6 +1221,70 @@ function by calling:
 _description: _
 
 This is the internal [mutex](http://en.wikipedia.org/wiki/Mutex) called through lock() & unlock(). You can use it manually inside your derived class.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###atomic< bool > mutexBlocks
+
+<!--
+_name: mutexBlocks_
+_type: atomic< bool >_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string name
+
+<!--
+_name: name_
+_type: string_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1358,13 +1324,45 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool threadBeingWaitedFor
+###atomic< bool > threadDone
 
 <!--
-_name: threadBeingWaitedFor_
-_type: bool_
+_name: threadDone_
+_type: atomic< bool >_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###atomic< bool > threadRunning
+
+<!--
+_name: threadRunning_
+_type: atomic< bool >_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_

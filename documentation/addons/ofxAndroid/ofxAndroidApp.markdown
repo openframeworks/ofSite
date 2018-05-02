@@ -97,6 +97,78 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void deviceOrientationChanged(newOrientation)
+
+<!--
+_syntax: deviceOrientationChanged(newOrientation)_
+_name: deviceOrientationChanged_
+_returns: void_
+_returns_description: _
+_parameters: ofOrientation newOrientation_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void deviceOrientationChangedEvent(&newOrientation)
+
+<!--
+_syntax: deviceOrientationChangedEvent(&newOrientation)_
+_name: deviceOrientationChangedEvent_
+_returns: void_
+_returns_description: _
+_parameters: ofOrientation &newOrientation_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void networkConnected(connected)
 
 <!--

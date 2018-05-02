@@ -3,12 +3,14 @@
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
 _extends: _
 -->
 
 ##InlineDescription
+
+A series of text lines in the buffer.
 
 
 
@@ -25,14 +27,14 @@ _extends: _
 
 
 
-### Lines(&buffer)
+### Lines(begin, end)
 
 <!--
-_syntax: Lines(&buffer)_
+_syntax: Lines(begin, end)_
 _name: Lines_
 _returns: _
 _returns_description: _
-_parameters: vector< char > &buffer_
+_parameters: vector< char >::iterator begin, vector< char >::iterator end_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -81,7 +83,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Get the first line in the buffer.
 
 
 
@@ -107,6 +109,78 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the last line in the buffer.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBuffer::RLine rbegin()
+
+<!--
+_syntax: rbegin()_
+_name: rbegin_
+_returns: ofBuffer::RLine_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBuffer::RLine rend()
+
+<!--
+_syntax: rend()_
+_name: rend_
+_returns: ofBuffer::RLine_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

@@ -835,6 +835,42 @@ Returns a raw pointer to the OpenCV IplImage.
 
 <!----------------------------------------------------------------------------->
 
+###const int * getCvImage()
+
+<!--
+_syntax: getCvImage()_
+_name: getCvImage_
+_returns: const int *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float getHeight()
 
 <!--
@@ -1769,6 +1805,42 @@ Copy the image data of a ofxCvShortImage into the ofxCvImage instance.
 
 <!----------------------------------------------------------------------------->
 
+###void operator=(*mom)
+
+<!--
+_syntax: operator=(*mom)_
+_name: operator=_
+_returns: void_
+_returns_description: _
+_parameters: const int *mom_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void rangeMap(*img, min1, max1, min2, max2)
 
 <!--
@@ -1779,6 +1851,42 @@ _returns_description: _
 _parameters: int *img, float min1, float max1, float min2, float max2_
 _access: protected_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rangeMap(*mom, *kid, min1, max1, min2, max2)
+
+<!--
+_syntax: rangeMap(*mom, *kid, min1, max1, min2, max2)_
+_name: rangeMap_
+_returns: void_
+_returns_description: _
+_parameters: int *mom, int *kid, float min1, float max1, float min2, float max2_
+_access: protected_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

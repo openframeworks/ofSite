@@ -56,6 +56,46 @@ ofLog() << "The current log level is " << ofGetLogLevelName(currentLevel);
 
 <!----------------------------------------------------------------------------->
 
+###ofLogLevel ofGetLogLevel(module)
+
+<!--
+_syntax: ofGetLogLevel(module)_
+_name: ofGetLogLevel_
+_returns: ofLogLevel_
+_returns_description: _
+_parameters: string module_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the logging level for a specific module.
+
+Parameters:
+module specific module name.
+
+Returns: The currently set specific module logging level.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string ofGetLogLevelName(level, pad = false)
 
 <!--
@@ -82,6 +122,41 @@ level The ofLogLevel you want as a string.
 pad True if you want all log level names to be the same length.
 
 Returns: The log level name as a string.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofBaseLoggerChannel > ofGetLoggerChannel()
+
+<!--
+_syntax: ofGetLoggerChannel()_
+_name: ofGetLoggerChannel_
+_returns: shared_ptr< ofBaseLoggerChannel >_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the current logger channel.
 
 
 
@@ -142,7 +217,7 @@ _syntax: ofLogToFile(&path, append = false)_
 _name: ofLogToFile_
 _returns: void_
 _returns_description: _
-_parameters: const string &path, bool append=false_
+_parameters: const filesystem::path &path, bool append=false_
 _version_started: 007_
 _version_deprecated: _
 _summary: _

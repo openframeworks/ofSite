@@ -11,6 +11,8 @@ _extends: ofxOscArgBool_
 ##InlineDescription
 
 
+a trigger impulse (has no value), type name "I"
+
 
 
 
@@ -81,7 +83,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return argument type character as a string
 
 
 
@@ -102,42 +104,6 @@ _description: _
 <!--
 _syntax: ofxOscArgTrigger()_
 _name: ofxOscArgTrigger_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxOscArgTrigger()
-
-<!--
-_syntax: ~ofxOscArgTrigger()_
-_name: ~ofxOscArgTrigger_
 _returns: _
 _returns_description: _
 _parameters: _

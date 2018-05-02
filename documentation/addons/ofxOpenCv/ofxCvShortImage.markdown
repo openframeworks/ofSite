@@ -817,6 +817,42 @@ grayImage = shortColorImage; // make sure that the dimensions and ROI match
 
 <!----------------------------------------------------------------------------->
 
+###void operator=(*mom)
+
+<!--
+_syntax: operator=(*mom)_
+_name: operator=_
+_returns: void_
+_returns_description: _
+_parameters: const int *mom_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void resize(w, h)
 
 <!--

@@ -11,6 +11,10 @@ _extends: _
 ##InlineDescription
 
 
+material parameter properties that can be applied to vertices in the OpenGL lighting model
+used in determining both the intensity and color of reflected light based on the lighting model in use
+and if the vertices are on a front or back sided face
+
 
 
 
@@ -45,7 +49,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+begin using this material's properties
 
 
 
@@ -81,7 +85,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+end using this material's properties
 
 
 
@@ -117,7 +121,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the ambient reflectance
 
 
 
@@ -153,7 +157,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the diffuse reflectance
 
 
 
@@ -189,7 +193,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the emitted light intensity
 
 
 
@@ -205,14 +209,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofShader & getShader(textureTarget, &renderer)
+###const ofShader & getShader(textureTarget, geometryHasColor, &renderer)
 
 <!--
-_syntax: getShader(textureTarget, &renderer)_
+_syntax: getShader(textureTarget, geometryHasColor, &renderer)_
 _name: getShader_
 _returns: const ofShader &_
 _returns_description: _
-_parameters: int textureTarget, ofGLProgrammableRenderer &renderer_
+_parameters: int textureTarget, bool geometryHasColor, ofGLProgrammableRenderer &renderer_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -225,7 +229,11 @@ _advanced: False_
 
 _inlined_description: _
 
+create and return a shader used to implement the materials effect for a given renderer
 
+Parameters:
+textureTarget an implementation-specific value to specify the type of shader to use
+renderer programmable renderer instance to create the material shader for
 
 
 
@@ -261,7 +269,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the specular exponent
 
 
 
@@ -297,7 +305,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the specular reflectance
 
 
 
@@ -333,7 +341,11 @@ _advanced: False_
 
 _inlined_description: _
 
+update the given renderer's lights to the material shader
 
+Parameters:
+shader the material shader, created by getShader()
+renderer programmable renderer instance that uses the material shader
 
 
 
@@ -369,7 +381,11 @@ _advanced: False_
 
 _inlined_description: _
 
+update the material properties to the material shader
 
+Parameters:
+shader the material shader, created by getShader()
+renderer programmable renderer instance that uses the material shader
 
 
 
@@ -405,7 +421,11 @@ _advanced: False_
 
 _inlined_description: _
 
+upload the given renderer's normal matrix to the material shader
 
+Parameters:
+shader the material shader, created by getShader()
+renderer programmable renderer instance that uses the material shader
 
 
 

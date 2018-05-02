@@ -2352,7 +2352,43 @@ _syntax: setMesh(&mesh, usage)_
 _name: setMesh_
 _returns: void_
 _returns_description: _
-_parameters: const ofMesh &mesh, int usage_
+_parameters: const int &mesh, int usage_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setMesh(&mesh, usage, useColors, useTextures, useNormals)
+
+<!--
+_syntax: setMesh(&mesh, usage, useColors, useTextures, useNormals)_
+_name: setMesh_
+_returns: void_
+_returns_description: _
+_parameters: const int &mesh, int usage, bool useColors, bool useTextures, bool useNormals_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2384,42 +2420,6 @@ vbo.setMesh(mesh, GL_STATIC_DRAW);
 ~~~~
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setMesh(&mesh, usage, useColors, useTextures, useNormals)
-
-<!--
-_syntax: setMesh(&mesh, usage, useColors, useTextures, useNormals)_
-_name: setMesh_
-_returns: void_
-_returns_description: _
-_parameters: const ofMesh &mesh, int usage, bool useColors, bool useTextures, bool useNormals_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -2565,6 +2565,42 @@ The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_CO
 
 <!----------------------------------------------------------------------------->
 
+###void setNormalData(*normals, total, usage)
+
+<!--
+_syntax: setNormalData(*normals, total, usage)_
+_name: setNormalData_
+_returns: void_
+_returns_description: _
+_parameters: const int *normals, int total, int usage_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setTexCoordBuffer(&buffer, stride, offset = 0)
 
 <!--
@@ -2670,6 +2706,42 @@ _description: _
 This sets the texCoord data for the ofVbo from a pointer to an array of floats, ST, for each face, so a 3D cube would require an array of 16 floats, 2 for each vertex.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setTexCoordData(*texCoords, total, usage)
+
+<!--
+_syntax: setTexCoordData(*texCoords, total, usage)_
+_name: setTexCoordData_
+_returns: void_
+_returns_description: _
+_parameters: const int *texCoords, int total, int usage_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -2820,6 +2892,78 @@ _description: _
 This sets the vertex data for the ofVbo from a pointer to an array of floats. The numCoords determines whether you're creating a 3D or 2D vbo, i.e. a 3D cube would require an array of 24 floats, and numCoords to be 8.
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVertexData(*verts, total, usage)
+
+<!--
+_syntax: setVertexData(*verts, total, usage)_
+_name: setVertexData_
+_returns: void_
+_returns_description: _
+_parameters: const int *verts, int total, int usage_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVertexData(*verts, total, usage)
+
+<!--
+_syntax: setVertexData(*verts, total, usage)_
+_name: setVertexData_
+_returns: void_
+_returns_description: _
+_parameters: const int *verts, int total, int usage_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -3014,7 +3158,7 @@ _syntax: updateMesh(&mesh)_
 _name: updateMesh_
 _returns: void_
 _returns_description: _
-_parameters: const ofMesh &mesh_
+_parameters: const int &mesh_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3115,6 +3259,42 @@ If the normals of the VBO have been declared as GL_DYNAMIC_DRAW, then you can up
 
 <!----------------------------------------------------------------------------->
 
+###void updateNormalData(*normals, total)
+
+<!--
+_syntax: updateNormalData(*normals, total)_
+_name: updateNormalData_
+_returns: void_
+_returns_description: _
+_parameters: const int *normals, int total_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void updateTexCoordData(*texCoords, total)
 
 <!--
@@ -3180,6 +3360,42 @@ _inlined_description: _
 _description: _
 
 If the texture coords of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the tex coords at any time using an array of floats.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateTexCoordData(*texCoords, total)
+
+<!--
+_syntax: updateTexCoordData(*texCoords, total)_
+_name: updateTexCoordData_
+_returns: void_
+_returns_description: _
+_parameters: const int *texCoords, int total_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -3288,6 +3504,78 @@ _inlined_description: _
 _description: _
 
 If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the indices at any time using an array of floats.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateVertexData(*verts, total)
+
+<!--
+_syntax: updateVertexData(*verts, total)_
+_name: updateVertexData_
+_returns: void_
+_returns_description: _
+_parameters: const int *verts, int total_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateVertexData(*verts, total)
+
+<!--
+_syntax: updateVertexData(*verts, total)_
+_name: updateVertexData_
+_returns: void_
+_returns_description: _
+_parameters: const int *verts, int total_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 

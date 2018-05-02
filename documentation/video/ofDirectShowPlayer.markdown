@@ -3,7 +3,7 @@
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
 _extends: ofBaseVideoPlayer_
 -->
@@ -33,42 +33,6 @@ _name: close_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(x, y)
-
-<!--
-_syntax: draw(x, y)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -817,6 +781,150 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofDirectShowPlayer(&)
+
+<!--
+_syntax: ofDirectShowPlayer(&)_
+_name: ofDirectShowPlayer_
+_returns: _
+_returns_description: _
+_parameters: const ofDirectShowPlayer &_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofDirectShowPlayer(&&)
+
+<!--
+_syntax: ofDirectShowPlayer(&&)_
+_name: ofDirectShowPlayer_
+_returns: _
+_returns_description: _
+_parameters: ofDirectShowPlayer &&_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofDirectShowPlayer & operator=(&)
+
+<!--
+_syntax: operator=(&)_
+_name: operator=_
+_returns: ofDirectShowPlayer &_
+_returns_description: _
+_parameters: const ofDirectShowPlayer &_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofDirectShowPlayer & operator=(&&)
+
+<!--
+_syntax: operator=(&&)_
+_name: operator=_
+_returns: ofDirectShowPlayer &_
+_returns_description: _
+_parameters: ofDirectShowPlayer &&_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void play()
 
 <!--
@@ -1213,53 +1321,17 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ~ofDirectShowPlayer()
-
-<!--
-_syntax: ~ofDirectShowPlayer()_
-_name: ~ofDirectShowPlayer_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ##Variables
 
 
 
-###ofPixels pix
+###ofPixelFormat pixelFormat
 
 <!--
-_name: pix_
-_type: ofPixels_
+_name: pixelFormat_
+_type: ofPixelFormat_
 _access: protected_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_

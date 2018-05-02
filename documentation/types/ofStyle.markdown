@@ -85,7 +85,7 @@ _advanced: False_
 
 _inlined_description: _
 
- Destroy the ofStyle.
+Destroy the ofStyle.
 
 
 
@@ -188,7 +188,7 @@ _advanced: False_
 
 _inlined_description: _
 
- The blending mode.
+The blending mode.
 
 
 
@@ -519,3 +519,4 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
+

@@ -97,11 +97,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getDeviceID()
+###int getDeviceList()
 
 <!--
-_syntax: getDeviceID()_
-_name: getDeviceID_
+_syntax: getDeviceList()_
+_name: getDeviceList_
 _returns: int_
 _returns_description: _
 _parameters: _
@@ -133,16 +133,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofSoundDevice > getDeviceList()
+###ofSoundDevice getInDevice()
 
 <!--
-_syntax: getDeviceList()_
-_name: getDeviceList_
-_returns: vector< ofSoundDevice >_
+_syntax: getInDevice()_
+_name: getInDevice_
+_returns: ofSoundDevice_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -241,6 +241,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofSoundDevice getOutDevice()
+
+<!--
+_syntax: getOutDevice()_
+_name: getOutDevice_
+_returns: ofSoundDevice_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int getSampleRate()
 
 <!--
@@ -277,12 +313,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###unsigned long long getTickCount()
+###uint64_t getTickCount()
 
 <!--
 _syntax: getTickCount()_
 _name: getTickCount_
-_returns: unsigned long long_
+_returns: uint64_t_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -323,42 +359,6 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDeviceID(deviceID)
-
-<!--
-_syntax: setDeviceID(deviceID)_
-_name: setDeviceID_
-_returns: void_
-_returns_description: _
-_parameters: int deviceID_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -457,50 +457,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool setup(outChannels, inChannels, sampleRate, bufferSize, nBuffers)
+###bool setup(&settings)
 
 <!--
-_syntax: setup(outChannels, inChannels, sampleRate, bufferSize, nBuffers)_
+_syntax: setup(&settings)_
 _name: setup_
 _returns: bool_
 _returns_description: _
-_parameters: int outChannels, int inChannels, int sampleRate, int bufferSize, int nBuffers_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setup(*app, outChannels, inChannels, sampleRate, bufferSize, nBuffers)
-
-<!--
-_syntax: setup(*app, outChannels, inChannels, sampleRate, bufferSize, nBuffers)_
-_name: setup_
-_returns: bool_
-_returns_description: _
-_parameters: ofBaseApp *app, int outChannels, int inChannels, int sampleRate, int bufferSize, int nBuffers_
+_parameters: const ofSoundStreamSettings &settings_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

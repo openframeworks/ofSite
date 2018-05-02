@@ -11,6 +11,8 @@ _extends: _
 ##InlineDescription
 
 
+file dialog box selection or save result
+
 
 
 
@@ -45,7 +47,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the name of the selected file or directory, if set
+currently returns only 1 file, this may change in the future
 
 
 
@@ -81,7 +84,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the full path of the selected file or directory, if set
 
 
 

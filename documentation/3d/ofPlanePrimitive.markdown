@@ -210,12 +210,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f getResolution()
+###int getResolution()
 
 <!--
 _syntax: getResolution()_
 _name: getResolution_
-_returns: ofVec2f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_

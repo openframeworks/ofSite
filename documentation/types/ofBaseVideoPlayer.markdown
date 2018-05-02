@@ -46,7 +46,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the playhead position to the first frame.
 
+This is functionally equivalent to setFrame(0) or setPosition(0.0).
 
 
 
@@ -82,7 +84,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the current playhead position as a frame number.
 
+Returns: The current playhead position as a frame number.
 
 
 
@@ -118,7 +122,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the duration of the loaded video in seconds.
 
+Returns: The duration of the loaded video in seconds.
 
 
 
@@ -154,7 +160,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the height in pixels of the loaded video.
 
+Returns: The height in pixels of the loaded video or 0 if none is loaded.
 
 
 
@@ -190,7 +198,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns true if the loaded video has finished playing.
 
+Returns: True if the loaded video has finished playing.
 
 
 
@@ -226,7 +236,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the current loop state of the video.
 
+See also: ::ofLoopType
 
 
 
@@ -262,7 +274,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the current playhead position of the loaded video.
 
+This value is a normalized floating point value between 0.0 and 1.0 that
+represents the position of the playhead. 0.0 maps to the first frame of
+the loaded video and 1.0 maps to the last frame of the loaded video.
+
+
+Returns: A value between 0.0 and 1.0 representing playhead position.
 
 
 
@@ -298,7 +317,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the playback speed of the video player.
 
+When the loop state is OF_LOOP_NONE or OF_LOOP_NORMAL, positive speed
+will scale a forward playback rate while a negative speed will scale a
+a backward playback rate. When the loop state is OF_LOOP_PALINDROME,
+the direction of playback will change each loop, but the playback rate
+will still be scaled by the absolute value of the speed.
+
+
+Returns: The playback speed of the video player.
 
 
 
@@ -334,7 +362,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Get a pointer to the video texture used internally if it exists.
 
+If the video player implementation supports direct-to-texture rendering,
+this method will return a pointer to the internal texture. If
+direct-to-texture rendering is not supported, nullptr is returned.
+
+
+Returns: A valid pointer to the internal texture, otherwise a nullptr.
 
 
 
@@ -370,7 +405,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the total number of frames in the currently loaded video.
 
+Returns: The total number of frames in the currently loaded video.
 
 
 
@@ -406,7 +443,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the width in pixels of the loaded video.
 
+Returns: The width in pixels of the loaded video or 0 if none is loaded.
 
 
 
@@ -442,7 +481,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns true if a video is loaded.
 
+This is helpful when loading a video with loadAsync(). This is also
+an alias of isLoaded().
+
+
+See also: loadAsync()
+
+Returns: True if a video is loaded.
 
 
 
@@ -478,7 +525,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns true if a video is loaded.
 
+This is helpful when loading a video with loadAsync(). This is also an
+alias of isInitialized().
+
+
+See also: loadAsync()
+
+Returns: True if a video is loaded.
 
 
 
@@ -514,7 +569,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns true if the video is paused.
 
+Returns: True if the video is paused.
 
 
 
@@ -550,7 +607,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns true if the loaded video is playing.
 
+Returns: True if the loaded video is playing.
 
 
 
@@ -586,7 +645,18 @@ _advanced: False_
 
 _inlined_description: _
 
+Load a video resource by name.
 
+The list of supported video types and sources (e.g. rtsp:// sources) is
+implementation dependent.
+
+
+Parameters:
+name The name of the video resource to load.
+
+Returns: True if the video was loaded successfully.
+
+See also: loadAsync()
 
 
 
@@ -622,7 +692,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Asynchronously load a video resource by name.
 
+The list of supported video types and sources (e.g. rtsp:// sources) is
+implementation dependent.
+
+When this method is used to load a video resouce, users can determine
+when the video is loaded by calling isLoaded().
+
+
+Parameters:
+name The name of the video resource to load.
+
+See also: isLoaded()
 
 
 
@@ -658,7 +740,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Advance the playhead forward one frame.
 
+This allows the user to advance through the video manually one frame at
+a time without calling play().
 
 
 
@@ -694,7 +779,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Play the video from the current playhead position.
 
+See also: getPosition()
+
+See also: setPostion()
 
 
 
@@ -730,7 +819,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Advance the playhead backward one frame.
 
+This allows the user to advance backward through the video manually one
+frame at a time without calling play().
 
 
 
@@ -766,7 +858,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the current frame by frame number.
 
+Similar to setPosition(), but accepts a frame number instead of
+a normalized floating point value. Frame count begins with the first
+frame as 0 and the last frame as getTotalNumFrames() - 1.
+
+
+Parameters:
+frame The frame number to set the new playhead to.
 
 
 
@@ -802,7 +902,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the video loop state.
 
+Parameters:
+state The loop state of the video.
+
+See also: ::ofLoopType
 
 
 
@@ -838,7 +943,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the paused state of the video.
 
+Parameters:
+bPause True to pause the video, false to play.
 
 
 
@@ -874,7 +982,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the position of the playhead.
 
+This value is a normalized floating point value between 0.0 and 1.0 that
+represents the position of the playhead. 0.0 maps to the first frame of
+the loaded video and 1.0 maps to the last frame of the loaded video.
+
+
+Parameters:
+pct A value between 0.0 and 1.0 representing playhead position.
 
 
 
@@ -910,7 +1026,23 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the video playback speed.
 
+When the loop state is OF_LOOP_NONE or OF_LOOP_NORMAL, positive speed
+will scale a forward playback rate while a negative speed will scale a
+a backward playback rate. When the loop state is OF_LOOP_PALINDROME,
+the direction of playback will change each loop, but the playback rate
+will still be scaled by the absolute value of the speed.
+
+To play a video forward at normal speed, set the loop state to
+OF_LOOP_NONE or OF_LOOP_NORMAL and a speed of 1.0. To double the
+playback rate, set the speed to 2.0. To play a video backward, set the
+speed to a negative number. A speed 0.25 will play the video at 1/4 the
+the normal rate and a rate of 0.0 will effectively stop playback.
+
+
+Parameters:
+speed The desired playback speed of the video.
 
 
 
@@ -946,7 +1078,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the volume of the video player.
 
+This value is a normalized floating point value between 0.0 and 1.0 that
+represents the video player volume. 0.0 maps to silence and 1.0 maps to
+maximum volume.
+
+
+Parameters:
+volume A value between 0.0 and 1.0 representing volume.
 
 
 
@@ -982,7 +1122,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Pause and reset the playhead position to the first frame.
 
 
 
@@ -1018,7 +1158,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Destroys the ofBaseVideoPlayer.
 
 
 

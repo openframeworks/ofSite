@@ -11,6 +11,8 @@ _extends: _
 ##InlineDescription
 
 
+an HTTP GET or POST request
+
 
 
 
@@ -49,7 +51,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the unique id for this request
 
 
 
@@ -141,6 +143,102 @@ _description: _
 
 
 
+###string body
+
+<!--
+_name: body_
+_type: string_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string contentType
+
+<!--
+_name: contentType_
+_type: string_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###function< void (const ofHttpResponse &) > done
+
+<!--
+_name: done_
+_type: function< void (const ofHttpResponse &) >_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###map< string, string > headers
 
 <!--
@@ -184,6 +282,38 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###enum Method method
+
+<!--
+_name: method_
+_type: enum Method_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -280,6 +410,38 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###size_t timeoutSeconds
+
+<!--
+_name: timeoutSeconds_
+_type: size_t_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 

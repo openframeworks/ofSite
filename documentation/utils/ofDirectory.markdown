@@ -12,6 +12,11 @@ _extends: _
 
 
 
+Path to a directory. Can be used to query file and directory
+contents.
+
+
+
 
 
 
@@ -64,7 +69,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Allow a file extension when listing the contents the current
+directory path.
 
+Setting an allowed extension enables a whitelist mode which only lists
+extensions which have been explicitly allowed.
+
+
+Parameters:
+extension file type extension ie. "jpg", "png", "txt", etc
 
 
 
@@ -147,7 +160,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Check if the current path is executable.
 
+
+Returns: true if executable
 
 
 
@@ -183,7 +199,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Check if the current path is readable.
 
+
+Returns: true if readable
 
 
 
@@ -219,7 +238,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Check if the current path is writeable.
 
+
+Returns: true if writable
 
 
 
@@ -255,7 +277,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Close the currently open path.
 
 
 
@@ -278,7 +300,7 @@ _syntax: copyTo(&path, bRelativeToData = true, overwrite = false)_
 _name: copyTo_
 _returns: bool_
 _returns_description: _
-_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const filesystem::path &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -291,7 +313,21 @@ _advanced: False_
 
 _inlined_description: _
 
+Copy the current file or directory path to a new path.
 
+Copies relative to the data path & does *not* overwrite by default
+does not change the current path & assumes the new path is in the data
+directory.
+
+
+Parameters:
+path destination file or directory path
+bRelativeToData set to false if you are working with paths that
+are *not* in the data directory
+overwrite set to true if you want to overwrite the file or
+directory at the new path
+
+Returns: true if the copy was successful
 
 
 
@@ -327,7 +363,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a directory at the current path.
 
+
+Parameters:
+bRecursive set to true to automatically create nested directories
+as required
 
 
 
@@ -361,7 +402,7 @@ _syntax: createDirectory(&dirPath, bRelativeToData = true, recursive = false)_
 _name: createDirectory_
 _returns: bool_
 _returns_description: _
-_parameters: const string &dirPath, bool bRelativeToData=true, bool recursive=false_
+_parameters: const filesystem::path &dirPath, bool bRelativeToData=true, bool recursive=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -374,7 +415,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a directory at a given path.
 
+Creates relative to the data path by default.
+
+
+Parameters:
+dirPath directory path
+bRelativeToData set to false if you are working with paths that
+are *not* in the data directory
+bRecursive set to true to automatically create nested directories
+as required
+
+Returns: true if directory was created successfully
 
 
 
@@ -397,7 +450,7 @@ _syntax: doesDirectoryExist(&dirPath, bRelativeToData = true)_
 _name: doesDirectoryExist_
 _returns: bool_
 _returns_description: _
-_parameters: const string &dirPath, bool bRelativeToData=true_
+_parameters: const filesystem::path &dirPath, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -410,7 +463,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Check if a directory exists at a given path.
 
+Assumes directory path is relative to the data path by default.
+
+
+Parameters:
+dirPath directory path
+bRelativeToData set to false if you are working with paths that
+are *not* in the data directory
+
+Returns: true if the directory exists
 
 
 
@@ -482,7 +545,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Check if a directory exists at the current path.
 
+
+Returns: true if exists
 
 
 
@@ -518,7 +584,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the absolute, full path of the directory,
+ie. "images" -> "/Users/mickey/of/apps/myApps/Donald/bin/data/images".
 
+\return current path as an absolute path
 
 
 
@@ -534,14 +603,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofFile getFile(position, mode = Reference, binary = false)
+###ofFile getFile(position, mode = Reference, binary = true)
 
 <!--
-_syntax: getFile(position, mode = Reference, binary = false)_
+_syntax: getFile(position, mode = Reference, binary = true)_
 _name: getFile_
 _returns: ofFile_
 _returns_description: _
-_parameters: size_t position, ofFile::Mode mode=Reference, bool binary=false_
+_parameters: size_t position, ofFile::Mode mode=Reference, bool binary=true_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -554,7 +623,25 @@ _advanced: False_
 
 _inlined_description: _
 
+Open an ofFile instance using the path a given position in the
+directory contents list.
 
+Opens as a binary file with readonly access by default.
+
+
+Warning: Call listDir() before using this function or the directory
+contents list will be empty.
+\throw Throws an out of bounds exception if position >= the number of
+listed directory contents.
+
+Parameters:
+position array index in the directory contents list
+mode file access mode depending on how you plan to use the file
+(read only, read write, etc)
+binary set to false if you are working with a text file & want
+lines split at endline characters automatically
+
+Returns: ofFile instance
 
 
 
@@ -590,7 +677,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Get files and directories in the directory contents list.
 
+Directory contents are automatically listed.
+
+
+Returns: vector of files in the directory
 
 
 
@@ -626,7 +718,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the filename at a given position in the directory contents
+list, ie. "duck.jpg".
 
+
+Warning: Call listDir() before using this function or the directory
+contents list will be empty.
+\throws Throws an out of bounds exception if position >= the number of
+listed directory contents.
+
+Parameters:
+position array index in the directory contents list
+
+Returns: file or directory name
 
 
 
@@ -662,7 +766,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Returns: the current path
 
 
 
@@ -698,7 +802,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the full path of the file or directory at a given position in
+the directory contents list.
 
+
+Warning: Call listDir() before using this function or the directory
+contents list will be empty.
+\throws Throws an out of bounds exception if position >= the number of
+listed directory contents.
+
+Parameters:
+position array index in the directory contents list
+
+Returns: file or directory name including the current path
 
 
 
@@ -734,7 +850,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Check whether hidden files & directories are included when
+listing files.
 
+Mac & Linux denote hidden directories by prepending a period
+-> ".hello".
+
+
+Returns: true if hidden files are shown
 
 
 
@@ -770,7 +893,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Get a sorted ofDirectory instance using the current path.
 
+
+Returns: sorted ofDirectory instance
 
 
 
@@ -806,7 +932,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Check if the current path is indeed a directory and not a file.
 
+
+Returns: true if a directory
 
 
 
@@ -829,7 +958,7 @@ _syntax: isDirectoryEmpty(&dirPath, bRelativeToData = true)_
 _name: isDirectoryEmpty_
 _returns: bool_
 _returns_description: _
-_parameters: const string &dirPath, bool bRelativeToData=true_
+_parameters: const filesystem::path &dirPath, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -842,7 +971,18 @@ _advanced: False_
 
 _inlined_description: _
 
+Check if a directory at a given path is empty.
 
+Assumes directory path is relative to the data path by default.
+
+
+Parameters:
+dirPath directory path
+bRelativeToData set to false if you are working with paths that
+are *not* in the data directory
+
+Returns: true if the directory is empty aka contains no files or
+directories
 
 
 
@@ -878,7 +1018,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Check if the current path is hidden.
 
+Works on Mac & Linux which denote hidden directories by prepending
+a period -> ".hello", however always returns false on Windows.
+
+
+Returns: true if hidden
 
 
 
@@ -914,7 +1060,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Open and read the contents of a directory.
 
+Uses allowed extension whitelist to ignore unwanted file types if
+allowExt() has been called.
+
+
+Parameters:
+path directory path
+
+Returns: number of paths found
 
 
 
@@ -950,7 +1105,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Open and read the contents of the current directory.
 
+Uses allowed extension whitelist to ignore unwanted file types if
+allowExt() has been called.
+
+
+Returns: number of paths found
 
 
 
@@ -973,7 +1134,7 @@ _syntax: moveTo(&path, bRelativeToData = true, overwrite = false)_
 _name: moveTo_
 _returns: bool_
 _returns_description: _
-_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const filesystem::path &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -986,7 +1147,21 @@ _advanced: False_
 
 _inlined_description: _
 
+Move the current file or directory path to a new path.
 
+Moves relative to the data path & does *not* overwrite by default
+does not change the current path & assumes the new path is in the data
+directory.
+
+
+Parameters:
+path destination file or directory path
+bRelativeToData set to false if you are working with paths that
+are *not* in the data directory
+overwrite set to true if you want to overwrite the file or
+directory at the new path
+
+Returns: true if the copy was successful
 
 
 
@@ -1022,7 +1197,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Create an ofDirectory instance
 
+Does not refer to a specific directory until you either open or create
+a directory path.
 
 
 
@@ -1058,7 +1236,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Create an ofDirectory instance and attempt to open the path.
 
+
+Parameters:
+path directory path
 
 
 
@@ -1094,7 +1276,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Open a directory path, clears the current file list.
 
+
+Parameters:
+path directory path
 
 
 
@@ -1105,6 +1291,46 @@ _description: _
 Opens a path. At this point you can see if the directory exists by calling exists() but the contents of the path are not accessible until listDir() is called.
 
 	
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void openFromCWD(&path)
+
+<!--
+_syntax: openFromCWD(&path)_
+_name: openFromCWD_
+_returns: void_
+_returns_description: _
+_parameters: const filesystem::path &path_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Open a directory path relative to the current working directory without calling ofToDataPath internally, clears the current file list.
+
+
+Parameters:
+path directory path
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1348,7 +1574,18 @@ _advanced: False_
 
 _inlined_description: _
 
+Access directory contents via th array operator.
 
+
+Warning: Call listDir() before using this function or the directory
+contents list will be empty.
+\throw Throws an out of bounds exception if position >= the number of
+listed directory contents.
+
+Parameters:
+position array index in the directory contents list
+
+Returns: opened ofFile instance
 
 
 
@@ -1384,7 +1621,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the current path.
 
+
+Returns: current path
 
 
 
@@ -1456,7 +1696,18 @@ _advanced: False_
 
 _inlined_description: _
 
+Removes the file or directory at the current path.
 
+Does not remove non-empty directories by default.
+
+
+Warning: Be careful! This deletes a file or folder. :)
+
+Parameters:
+recursive set to true to remove a non-empty directory and its
+contents
+
+Returns: true if the path was removed successfully
 
 
 
@@ -1479,7 +1730,7 @@ _syntax: removeDirectory(&path, deleteIfNotEmpty, bRelativeToData = true)_
 _name: removeDirectory_
 _returns: bool_
 _returns_description: _
-_parameters: const string &path, bool deleteIfNotEmpty, bool bRelativeToData=true_
+_parameters: const filesystem::path &path, bool deleteIfNotEmpty, bool bRelativeToData=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1492,7 +1743,16 @@ _advanced: False_
 
 _inlined_description: _
 
+remove a directory at a given path
 
+
+Parameters:
+deleteIfNotEmpty set to true if you want to recursively delete
+the directory *and* its contents
+bRelativeToData set to false if you are working with paths that
+are *not* in the data directory
+
+Returns: true if the path was removed successfully
 
 
 
@@ -1515,7 +1775,7 @@ _syntax: renameTo(&path, bRelativeToData = true, overwrite = false)_
 _name: renameTo_
 _returns: bool_
 _returns_description: _
-_parameters: const string &path, bool bRelativeToData=true, bool overwrite=false_
+_parameters: const filesystem::path &path, bool bRelativeToData=true, bool overwrite=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1528,7 +1788,21 @@ _advanced: False_
 
 _inlined_description: _
 
+Rename the current file or directory path to a new path.
 
+Renames relative to the data path & does *not* overwrite by default
+does not change the current path & assumes the new path is in the data
+directory.
+
+
+Parameters:
+path destination file or directory path
+bRelativeToData set to false if you are working with paths that
+are *not* in the data folder
+overwrite set to true if you want to overwrite the file or
+directory at the new path
+
+Returns: true if the copy was successful
 
 
 
@@ -1600,7 +1874,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Closes the directory.
 
+This is for backwards compatibility with ofxDirList.
 
 
 
@@ -1636,7 +1912,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the executable flag of the current path.
 
+
+Parameters:
+executable set to true to make path executable
 
 
 
@@ -1652,16 +1932,16 @@ Enables or disables execution on the current open directory. If the directory is
 
 <!----------------------------------------------------------------------------->
 
-###void setReadOnly(readable = true)
+###void setReadable(readable = true)
 
 <!--
-_syntax: setReadOnly(readable = true)_
-_name: setReadOnly_
+_syntax: setReadable(readable = true)_
+_name: setReadable_
 _returns: void_
 _returns_description: _
 _parameters: bool readable=true_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1672,7 +1952,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the readable flag of the current path.
 
+
+Parameters:
+readable set to true to make path readable
 
 
 
@@ -1680,7 +1964,7 @@ _inlined_description: _
 
 _description: _
 
-Enables or disables readable on the current open directory.
+
 
 
 
@@ -1708,7 +1992,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Show hidden files & directories when listing files?
 
+Mac & Linux denote hidden directories by prepending a period
+-> ".hello".
+
+
+Parameters:
+showHidden set to true to show hidden files
 
 
 
@@ -1744,7 +2035,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the writable flag of the current path.
 
+
+Parameters:
+writable set to true to make path writable
 
 
 
@@ -1780,7 +2075,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the number of paths in the current directory list.
 
+
+Warning: Call listDir() before using this function or it will return 0
+since the directory list will be empty.
+
+Returns: number of paths
 
 
 
@@ -1816,7 +2117,11 @@ _advanced: False_
 
 _inlined_description: _
 
+Sort the directory contents list alphabetically.
 
+
+Warning: Call listDir() before using this function or there will be
+nothing to sort.
 
 
 
@@ -1825,6 +2130,46 @@ _inlined_description: _
 _description: _
 
 Sorts the contents of the directory by filename.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sortByDate()
+
+<!--
+_syntax: sortByDate()_
+_name: sortByDate_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Sort the directory contents list by date.
+
+
+Warning: Call listDir() before using this function or there will be
+nothing to sort.
+
+
+
+
+
+_description: _
+
+
 
 
 

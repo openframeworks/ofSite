@@ -421,6 +421,186 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void add(&parameter)
+
+<!--
+_syntax: add(&parameter)_
+_name: add_
+_returns: void_
+_returns_description: _
+_parameters: ofParameter< void > &parameter_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void add(string, &parameter)
+
+<!--
+_syntax: add(string, &parameter)_
+_name: add_
+_returns: void_
+_returns_description: _
+_parameters: ofReadOnlyParameter< string, F > &parameter_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void add(&parameter)
+
+<!--
+_syntax: add(&parameter)_
+_name: add_
+_returns: void_
+_returns_description: _
+_parameters: int &parameter_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void add(&parameter)
+
+<!--
+_syntax: add(&parameter)_
+_name: add_
+_returns: void_
+_returns_description: _
+_parameters: int &parameter_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void add(&parameter)
+
+<!--
+_syntax: add(&parameter)_
+_name: add_
+_returns: void_
+_returns_description: _
+_parameters: int &parameter_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void clear()
 
 <!--
@@ -601,12 +781,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< string > getControlNames()
+###int getControlNames()
 
 <!--
 _syntax: getControlNames()_
 _name: getControlNames_
-_returns: vector< string >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -863,6 +1043,42 @@ _returns_description: _
 _parameters: const string &name_
 _access: public_
 _version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isMinimized()
+
+<!--
+_syntax: isMinimized()_
+_name: isMinimized_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1259,6 +1475,78 @@ _returns_description: _
 _parameters: const ofParameterGroup &parameters, const string &_filename, float x, float y_
 _access: public_
 _version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void onMaximize()
+
+<!--
+_syntax: onMaximize()_
+_name: onMaximize_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void onMinimize()
+
+<!--
+_syntax: onMinimize()_
+_name: onMinimize_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

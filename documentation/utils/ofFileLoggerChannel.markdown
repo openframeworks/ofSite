@@ -177,7 +177,7 @@ _syntax: ofFileLoggerChannel(&path, append)_
 _name: ofFileLoggerChannel_
 _returns: _
 _returns_description: _
-_parameters: const string &path, bool append_
+_parameters: const filesystem::path &path, bool append_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -217,7 +217,7 @@ _syntax: setFile(&path, append = false)_
 _name: setFile_
 _returns: void_
 _returns_description: _
-_parameters: const string &path, bool append=false_
+_parameters: const filesystem::path &path, bool append=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

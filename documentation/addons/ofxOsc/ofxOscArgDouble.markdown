@@ -11,6 +11,8 @@ _extends: ofxOscArg_
 ##InlineDescription
 
 
+a 64-bit double argument, type name "d"
+
 
 
 
@@ -45,7 +47,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return value
+\return value
 
 
 
@@ -81,7 +83,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return the type of this argument
+\return argument type
 
 
 
@@ -117,7 +119,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return argument type character as a string
 
 
 
@@ -133,14 +135,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscArgDouble(_value)
+### ofxOscArgDouble(value)
 
 <!--
-_syntax: ofxOscArgDouble(_value)_
+_syntax: ofxOscArgDouble(value)_
 _name: ofxOscArgDouble_
 _returns: _
 _returns_description: _
-_parameters: double _value_
+_parameters: double value_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -169,14 +171,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(_value)
+###void set(value)
 
 <!--
-_syntax: set(_value)_
+_syntax: set(value)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: double _value_
+_parameters: double value_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -190,42 +192,6 @@ _advanced: False_
 _inlined_description: _
 
 set value
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxOscArgDouble()
-
-<!--
-_syntax: ~ofxOscArgDouble()_
-_name: ~ofxOscArgDouble_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 

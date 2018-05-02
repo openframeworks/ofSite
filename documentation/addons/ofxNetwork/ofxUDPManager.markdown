@@ -1121,6 +1121,114 @@ Set a timeout for any send operations in seconds.
 
 <!----------------------------------------------------------------------------->
 
+###bool Setup(&settings)
+
+<!--
+_syntax: Setup(&settings)_
+_name: Setup_
+_returns: bool_
+_returns_description: _
+_parameters: const ofxUDPSettings &settings_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int WaitReceive(timeoutSeconds, timeoutMillis)
+
+<!--
+_syntax: WaitReceive(timeoutSeconds, timeoutMillis)_
+_name: WaitReceive_
+_returns: int_
+_returns_description: _
+_parameters: time_t timeoutSeconds, time_t timeoutMillis_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int WaitSend(timeoutSeconds, timeoutMillis)
+
+<!--
+_syntax: WaitSend(timeoutSeconds, timeoutMillis)_
+_name: WaitSend_
+_returns: int_
+_returns_description: _
+_parameters: time_t timeoutSeconds, time_t timeoutMillis_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofxUDPManager()
 
 <!--

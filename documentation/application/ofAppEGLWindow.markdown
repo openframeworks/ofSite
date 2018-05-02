@@ -711,6 +711,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void finishRender()
+
+<!--
+_syntax: finishRender()_
+_name: finishRender_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###EGLConfig getEglConfig()
 
 <!--
@@ -963,12 +999,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###EGLNativeDisplayType getNativeDisplay()
+###int getNativeDisplay()
 
 <!--
 _syntax: getNativeDisplay()_
 _name: getNativeDisplay_
-_returns: EGLNativeDisplayType_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: protected_
@@ -999,12 +1035,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###EGLNativeWindowType getNativeWindow()
+###int getNativeWindow()
 
 <!--
 _syntax: getNativeWindow()_
 _name: getNativeWindow_
-_returns: EGLNativeWindowType_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: protected_
@@ -1107,12 +1143,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getScreenSize()
+###int getScreenSize()
 
 <!--
 _syntax: getScreenSize()_
 _name: getScreenSize_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1251,12 +1287,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getWindowPosition()
+###int getWindowPosition()
 
 <!--
 _syntax: getWindowPosition()_
 _name: getWindowPosition_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1287,12 +1323,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getWindowSize()
+###int getWindowSize()
 
 <!--
 _syntax: getWindowSize()_
 _name: getWindowSize_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2230,7 +2266,7 @@ _syntax: setup(&settings)_
 _name: setup_
 _returns: void_
 _returns_description: _
-_parameters: const ofAppEGLWindow::Settings &settings_
+_parameters: const ofGLESWindowSettings &settings_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2266,7 +2302,7 @@ _syntax: setup(&settings)_
 _name: setup_
 _returns: void_
 _returns_description: _
-_parameters: const ofGLESWindowSettings &settings_
+_parameters: const ofAppEGLWindowSettings &settings_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2485,6 +2521,78 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void startRender()
+
+<!--
+_syntax: startRender()_
+_name: startRender_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void swapBuffers()
+
+<!--
+_syntax: swapBuffers()_
+_name: swapBuffers_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3310,6 +3418,134 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int mouseAbsXMax
+
+<!--
+_name: mouseAbsXMax_
+_type: int_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int mouseAbsXMin
+
+<!--
+_name: mouseAbsXMin_
+_type: int_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int mouseAbsYMax
+
+<!--
+_name: mouseAbsYMax_
+_type: int_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int mouseAbsYMin
+
+<!--
+_name: mouseAbsYMin_
+_type: int_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 

@@ -1,0 +1,485 @@
+#class ofBuffer::RLine
+
+
+<!--
+_visible: True_
+_advanced: True_
+_istemplated: False_
+_extends: std::iterator<std::forward_iterator_tag, Line>_
+-->
+
+##InlineDescription
+
+A line of text in the buffer.
+
+
+
+
+
+
+##Description
+
+
+
+
+
+##Methods
+
+
+
+### RLine(_begin, _end)
+
+<!--
+_syntax: RLine(_begin, _end)_
+_name: RLine_
+_returns: _
+_returns_description: _
+_parameters: vector< char >::reverse_iterator _begin, vector< char >::reverse_iterator _end_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const string & asString()
+
+<!--
+_syntax: asString()_
+_name: asString_
+_returns: const string &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool empty()
+
+<!--
+_syntax: empty()_
+_name: empty_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Is this line empty? (aka an empty string "")
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool operator!=(&rhs)
+
+<!--
+_syntax: operator!=(&rhs)_
+_name: operator!=_
+_returns: bool_
+_returns_description: _
+_parameters: const ofBuffer::RLine &rhs_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const string & operator*()
+
+<!--
+_syntax: operator*()_
+_name: operator*_
+_returns: const string &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBuffer::RLine & operator++()
+
+<!--
+_syntax: operator++()_
+_name: operator++_
+_returns: ofBuffer::RLine &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Increment to the next line.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBuffer::RLine operator++(int)
+
+<!--
+_syntax: operator++(int)_
+_name: operator++_
+_returns: ofBuffer::RLine_
+_returns_description: _
+_parameters: int _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Increment to a number of lines.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const string * operator->()
+
+<!--
+_syntax: operator->()_
+_name: operator->_
+_returns: const string *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool operator==(&rhs)
+
+<!--
+_syntax: operator==(&rhs)_
+_name: operator==_
+_returns: bool_
+_returns_description: _
+_parameters: const ofBuffer::RLine &rhs_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+##Variables
+
+
+
+###vector< char >::reverse_iterator _current
+
+<!--
+_name: _current_
+_type: vector< char >::reverse_iterator_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< char >::reverse_iterator _rbegin
+
+<!--
+_name: _rbegin_
+_type: vector< char >::reverse_iterator_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###vector< char >::reverse_iterator _rend
+
+<!--
+_name: _rend_
+_type: vector< char >::reverse_iterator_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string line
+
+<!--
+_name: line_
+_type: string_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+

@@ -314,6 +314,41 @@ void myClass::method(){
 
 <!----------------------------------------------------------------------------->
 
+###string ofGetClipboardString()
+
+<!--
+_syntax: ofGetClipboardString()_
+_name: ofGetClipboardString_
+_returns: string_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###shared_ptr< ofBaseRenderer > & ofGetCurrentRenderer()
 
 <!--
@@ -323,6 +358,76 @@ _returns: shared_ptr< ofBaseRenderer > &_
 _returns_description: _
 _parameters: _
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofAppBaseWindow > ofGetCurrentWindow()
+
+<!--
+_syntax: ofGetCurrentWindow()_
+_name: ofGetCurrentWindow_
+_returns: shared_ptr< ofAppBaseWindow >_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###uint64_t ofGetFixedStepForFps(fps)
+
+<!--
+_syntax: ofGetFixedStepForFps(fps)_
+_name: ofGetFixedStepForFps_
+_returns: uint64_t_
+_returns_description: _
+_parameters: double fps_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -961,12 +1066,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint ofGetWindowSize()
+###int ofGetWindowSize()
 
 <!--
 _syntax: ofGetWindowSize()_
 _name: ofGetWindowSize_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -1249,7 +1354,7 @@ _syntax: ofRunApp(window, app)_
 _name: ofRunApp_
 _returns: void_
 _returns_description: _
-_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > app_
+_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > &&app_
 _version_started: 0.01_
 _version_deprecated: _
 _summary: _
@@ -1324,7 +1429,7 @@ _syntax: ofRunApp(OFSA)_
 _name: ofRunApp_
 _returns: int_
 _returns_description: _
-_parameters: shared_ptr< ofBaseApp > OFSA_
+_parameters: shared_ptr< ofBaseApp > &&OFSA_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1387,15 +1492,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetAppPtr(appPtr)
+###void ofSetClipboardString(&str)
 
 <!--
-_syntax: ofSetAppPtr(appPtr)_
-_name: ofSetAppPtr_
+_syntax: ofSetClipboardString(&str)_
+_name: ofSetClipboardString_
 _returns: void_
 _returns_description: _
-_parameters: shared_ptr< ofBaseApp > appPtr_
-_version_started: _
+_parameters: const string &str_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1634,6 +1739,111 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofSetTimeModeFiltered(alpha)
+
+<!--
+_syntax: ofSetTimeModeFiltered(alpha)_
+_name: ofSetTimeModeFiltered_
+_returns: void_
+_returns_description: _
+_parameters: float alpha_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetTimeModeFixedRate(stepNanos)
+
+<!--
+_syntax: ofSetTimeModeFixedRate(stepNanos)_
+_name: ofSetTimeModeFixedRate_
+_returns: void_
+_returns_description: _
+_parameters: uint64_t stepNanos_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetTimeModeSystem()
+
+<!--
+_syntax: ofSetTimeModeSystem()_
+_name: ofSetTimeModeSystem_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofSetVerticalSync(bSync)
 
 <!--
@@ -1664,6 +1874,7 @@ _description: _
 Synchronizes the redraw of the screen to the vertical refresh rate of the screen. The monitor or projector redraws the screen at usually 60 frames per second. If vertical sync is not enabled your application runs as fast as possible and the screen can be drawing half of one frame and half of the previous frame, creating an effect called [tearing](https://en.wikipedia.org/wiki/Screen_tearing).
 
 Vertical sync is enabled by default since 0.8.0. You can disable it calling ofSetVerticalSync(false).
+
 
 
 
@@ -1860,6 +2071,41 @@ _returns: void_
 _returns_description: _
 _parameters: int w, int h, ofWindowMode screenMode_
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetupOpenGL(windowPtr, w, h, screenMode)
+
+<!--
+_syntax: ofSetupOpenGL(windowPtr, w, h, screenMode)_
+_name: ofSetupOpenGL_
+_returns: void_
+_returns_description: _
+_parameters: shared_ptr< ofAppGLFWWindow > windowPtr, int w, int h, ofWindowMode screenMode_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

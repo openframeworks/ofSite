@@ -1,10 +1,10 @@
-#class ofPolyline
+#class ofPolyline_
 
 
 <!--
 _visible: True_
 _advanced: False_
-_istemplated: False_
+_istemplated: True_
 _extends: _
 -->
 
@@ -59,7 +59,7 @@ _syntax: addVertex(&p)_
 _name: addVertex_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p_
+_parameters: const T &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -72,7 +72,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Adds a point using an ofPoint at the end of the ofPolyline.
+Adds a point using an T at the end of the ofPolyline.
 
 
 
@@ -131,7 +131,7 @@ _syntax: addVertices(&verts)_
 _name: addVertices_
 _returns: void_
 _returns_description: _
-_parameters: const vector< ofPoint > &verts_
+_parameters: const int &verts_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -145,21 +145,22 @@ _advanced: False_
 _inlined_description: _
 
 Add multiple points at the end of the ofPolyline using a vector of
-ofPoint objects
+T objects
 
 ~~~~{.cpp}
-	vector<ofPoint> verts;
 	// make a pentagon
 	float size = 80.f;
 	float X1 = 0.125*sqrt(10 + 2*sqrt(5)) * size;
 	float X2 = 0.125*sqrt(10 - 2*sqrt(5)) * size;
 	float Y1 = 0.125*(sqrt(5) - 1) * size;
 	float Y2 = 0.125*(sqrt(5) + 1) * size;
-	verts.push_back(ofPoint(0, -0.5 * size));
-	verts.push_back(ofPoint(-X1, -Y1));
-	verts.push_back(ofPoint(-X2, Y2));
-	verts.push_back(ofPoint(X2, Y2));
-	verts.push_back(ofPoint(X1, -Y1));
+	vector<T> verts = {
+			{0, -0.5 * size, 0.f),
+			{-X1, -Y1, 0.f},
+			{-X2, Y2, 0.f},
+			{X2, Y2, 0.f},
+			{X1, -Y1, 0.f},
+		};
 	ofPolyline p;
 	p.addVertices(verts);
 ~~~~
@@ -170,23 +171,6 @@ ofPoint objects
 
 _description: _
 
-Adds multiple points at the end of the ofPolyline using a vector of ofPoint objects, which can be declared like so:
-~~~~{.cpp}
-vector<ofPoint> verts;
-// make a pentagon
-float size = 80.f;
-float X1 = 0.125*sqrt(10 + 2*sqrt(5)) * size;
-float X2 = 0.125*sqrt(10 - 2*sqrt(5)) * size;
-float Y1 = 0.125*(sqrt(5) - 1) * size;
-float Y2 = 0.125*(sqrt(5) + 1) * size;
-verts.push_back(ofPoint(0, -0.5 * size));
-verts.push_back(ofPoint(-X1, -Y1));
-verts.push_back(ofPoint(-X2, Y2));
-verts.push_back(ofPoint(X2, Y2));
-verts.push_back(ofPoint(X1, -Y1));
-ofPolyline p;
-p.addVertices(verts);
-~~~~
 
 
 
@@ -201,7 +185,7 @@ _syntax: addVertices(*verts, numverts)_
 _name: addVertices_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint *verts, int numverts_
+_parameters: const T *verts, int numverts_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -215,7 +199,7 @@ _advanced: False_
 _inlined_description: _
 
 Adds multiple points at the end of the ofPolyline using a pointer to
-an array of ofPoint objects.
+an array of T objects.
 
 
 
@@ -254,7 +238,7 @@ _syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, circleR
 _name: arc_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &center, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int circleResolution=20_
+_parameters: const T &center, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int circleResolution=20_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -267,7 +251,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Adds an arc around the ofPoint `center` with the width of `radiusX`
+Adds an arc around the T `center` with the width of `radiusX`
 and the height of `radiusY` to the polyline.
 
 The `angleBegin` and `angleEnd` indicate the start and end angles of
@@ -307,7 +291,7 @@ _syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, circleResolution =
 _name: arc_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &center, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20_
+_parameters: const T &center, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -320,7 +304,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Adds an arc around the ofPoint `center` with the width of
+Adds an arc around the T `center` with the width of
 `radiusX` and the height of `radiusY`.
 
 The `angleBegin` and `angleEnd` indicate the start and end angles
@@ -340,7 +324,7 @@ ofPolyline polyline1, polyline2;
 
 // draw an line, then an semi-circle in red
 polyline2.lineTo(300, 50);
-ofPoint point2(450,120);
+T point2(450,120);
 polyline2.arc(point2,100,100,0,180);
 ofSetColor(ofColor::red);
 polyline2.draw();
@@ -488,7 +472,7 @@ _syntax: arcNegative(&center, radiusX, radiusY, angleBegin, angleEnd, circleReso
 _name: arcNegative_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &center, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20_
+_parameters: const T &center, float radiusX, float radiusY, float angleBegin, float angleEnd, int circleResolution=20_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -589,78 +573,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofPoint >::iterator begin()
-
-<!--
-_syntax: begin()_
-_name: begin_
-_returns: vector< ofPoint >::iterator_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector< ofPoint >::const_iterator begin()
-
-<!--
-_syntax: begin()_
-_name: begin_
-_returns: vector< ofPoint >::const_iterator_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void bezierTo(&cp1, &cp2, &to, curveResolution = 20)
 
 <!--
@@ -668,7 +580,7 @@ _syntax: bezierTo(&cp1, &cp2, &to, curveResolution = 20)_
 _name: bezierTo_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &cp1, const ofPoint &cp2, const ofPoint &to, int curveResolution=20_
+_parameters: const T &cp1, const T &cp2, const T &to, int curveResolution=20_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -682,11 +594,11 @@ _advanced: False_
 _inlined_description: _
 
 Adds a cubic bezier line from the current drawing point with the 2
-control points indicated by ofPoint cp1 and cp2, that ends at ofPoint
+control points indicated by T cp1 and cp2, that ends at T
 to.
 
 ~~~~{.cpp}
-line.addVertex(ofPoint(200, 400));
+line.addVertex(T(200, 400));
 line.bezierTo(100, 100, 800, 100, 700, 400);
 ~~~~
 ![polyline bezier](bezier.jpg)
@@ -812,7 +724,7 @@ _syntax: calcData(index, &tangent, &angle, &rotation, &normal)_
 _name: calcData_
 _returns: void_
 _returns_description: _
-_parameters: int index, ofVec3f &tangent, float &angle, ofVec3f &rotation, ofVec3f &normal_
+_parameters: int index, T &tangent, float &angle, T &rotation, T &normal_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -921,7 +833,7 @@ _syntax: curveTo(&to, curveResolution = 20)_
 _name: curveTo_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &to, int curveResolution=20_
+_parameters: const T &to, int curveResolution=20_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -934,13 +846,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Adds a curve to an ofPoint object passed in
+Adds a curve to an T object passed in
 
 ~~~~{.cpp}
 float angle = 0;
 while (angle < TWO_PI ) {
-	b.curveTo( ofPoint(100*cos(angle), 100*sin(angle)));
-	b.curveTo( ofPoint(300*cos(angle), 300*sin(angle)));
+	b.curveTo( T(100*cos(angle), 100*sin(angle)));
+	b.curveTo( T(300*cos(angle), 300*sin(angle)));
 	angle += TWO_PI / 30;
 }
 ~~~~
@@ -1091,76 +1003,6 @@ Draw the line using the current renderer.
 
 
 
-<!----------------------------------------------------------------------------->
-
-###vector< ofPoint >::iterator end()
-
-<!--
-_syntax: end()_
-_name: end_
-_returns: vector< ofPoint >::iterator_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector< ofPoint >::const_iterator end()
-
-<!--
-_syntax: end()_
-_name: end_
-_returns: vector< ofPoint >::const_iterator_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
 
 
 <!----------------------------------------------------------------------------->
@@ -1201,12 +1043,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPolyline fromRectangle(&rect)
+###ofPolyline_< T > fromRectangle(&rect)
 
 <!--
 _syntax: fromRectangle(&rect)_
 _name: fromRectangle_
-_returns: ofPolyline_
+_returns: ofPolyline_< T >_
 _returns_description: _
 _parameters: const ofRectangle &rect_
 _access: public_
@@ -1237,79 +1079,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getAngleAtIndex(index)
-
-<!--
-_syntax: getAngleAtIndex(index)_
-_name: getAngleAtIndex_
-_returns: float_
-_returns_description: _
-_parameters: int index_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get angle (degrees) of the path at index
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getAngleAtIndexInterpolated(findex)
-
-<!--
-_syntax: getAngleAtIndexInterpolated(findex)_
-_name: getAngleAtIndexInterpolated_
-_returns: float_
-_returns_description: _
-_parameters: float findex_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get angle (degrees) at interpolated index (interpolated between
-neighboring indices)
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###float getArea()
 
 <!--
@@ -1319,7 +1088,7 @@ _returns: float_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1338,7 +1107,7 @@ Gets the precise area bounded by the line
 
 _description: _
 
-Gets the precise area bounded by the line.
+
 
 
 
@@ -1355,7 +1124,7 @@ _returns: ofRectangle_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1375,7 +1144,7 @@ all the points to determine the extents of the polyline.
 
 _description: _
 
-Returns the bounding box of the shape, taking into account all the points to determine the extents of the polyline.
+
 
 
 
@@ -1383,12 +1152,12 @@ Returns the bounding box of the shape, taking into account all the points to det
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getCentroid2D()
+###T getCentroid2D()
 
 <!--
 _syntax: getCentroid2D()_
 _name: getCentroid2D_
-_returns: ofPoint_
+_returns: T_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1411,7 +1180,7 @@ Get the center of the area bounded by the line
 
 _description: _
 
-Get the center of the area bounded by the line.
+
 
 
 
@@ -1419,14 +1188,14 @@ Get the center of the area bounded by the line.
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getClosestPoint(&target, *nearestIndex)
+###T getClosestPoint(&target, *nearestIndex)
 
 <!--
 _syntax: getClosestPoint(&target, *nearestIndex)_
 _name: getClosestPoint_
-_returns: ofPoint_
+_returns: T_
 _returns_description: _
-_parameters: const ofPoint &target, unsigned int *nearestIndex_
+_parameters: const T &target, unsigned int *nearestIndex_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1442,6 +1211,79 @@ _inlined_description: _
 Gets the point on the line closest to the target. You can also
 optionally pass a pointer to/address of an unsigned int to get the
 index of the closest vertex
+
+
+
+
+
+_description: _
+
+Returns the bounding box of the shape, taking into account all the points to determine the extents of the polyline.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getDegreesAtIndex(index)
+
+<!--
+_syntax: getDegreesAtIndex(index)_
+_name: getDegreesAtIndex_
+_returns: float_
+_returns_description: _
+_parameters: int index_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get angle (degrees) of the path at index
+
+
+
+
+
+_description: _
+
+Get the center of the area bounded by the line.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getDegreesAtIndexInterpolated(findex)
+
+<!--
+_syntax: getDegreesAtIndexInterpolated(findex)_
+_name: getDegreesAtIndexInterpolated_
+_returns: float_
+_returns_description: _
+_parameters: float findex_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get angle (degrees) at interpolated index (interpolated between
+neighboring indices)
 
 
 
@@ -1644,12 +1486,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getNormalAtIndex(index)
+###T getNormalAtIndex(index)
 
 <!--
 _syntax: getNormalAtIndex(index)_
 _name: getNormalAtIndex_
-_returns: ofVec3f_
+_returns: T_
 _returns_description: _
 _parameters: int index_
 _access: public_
@@ -1680,12 +1522,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getNormalAtIndexInterpolated(findex)
+###T getNormalAtIndexInterpolated(findex)
 
 <!--
 _syntax: getNormalAtIndexInterpolated(findex)_
 _name: getNormalAtIndexInterpolated_
-_returns: ofVec3f_
+_returns: T_
 _returns_description: _
 _parameters: float findex_
 _access: public_
@@ -1747,7 +1589,7 @@ shape.
 
 _description: _
 
-Returns the size of the perimeter of the polyline, good for determining length of the line, rather than just the bounding box shape.
+
 
 
 
@@ -1755,12 +1597,12 @@ Returns the size of the perimeter of the polyline, good for determining length o
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getPointAtIndexInterpolated(findex)
+###T getPointAtIndexInterpolated(findex)
 
 <!--
 _syntax: getPointAtIndexInterpolated(findex)_
 _name: getPointAtIndexInterpolated_
-_returns: ofPoint_
+_returns: T_
 _returns_description: _
 _parameters: float findex_
 _access: public_
@@ -1792,12 +1634,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getPointAtLength(f)
+###T getPointAtLength(f)
 
 <!--
 _syntax: getPointAtLength(f)_
 _name: getPointAtLength_
-_returns: ofPoint_
+_returns: T_
 _returns_description: _
 _parameters: float f_
 _access: public_
@@ -1829,12 +1671,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getPointAtPercent(f)
+###T getPointAtPercent(f)
 
 <!--
 _syntax: getPointAtPercent(f)_
 _name: getPointAtPercent_
-_returns: ofPoint_
+_returns: T_
 _returns_description: _
 _parameters: float f_
 _access: public_
@@ -1866,12 +1708,85 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPolyline getResampledByCount(count)
+###float getRadiansAtIndex(index)
+
+<!--
+_syntax: getRadiansAtIndex(index)_
+_name: getRadiansAtIndex_
+_returns: float_
+_returns_description: _
+_parameters: int index_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get angle (degrees) of the path at index
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float getRadiansAtIndexInterpolated(findex)
+
+<!--
+_syntax: getRadiansAtIndexInterpolated(findex)_
+_name: getRadiansAtIndexInterpolated_
+_returns: float_
+_returns_description: _
+_parameters: float findex_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get angle (degrees) at interpolated index (interpolated between
+neighboring indices)
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPolyline_< T > getResampledByCount(count)
 
 <!--
 _syntax: getResampledByCount(count)_
 _name: getResampledByCount_
-_returns: ofPolyline_
+_returns: ofPolyline_< T >_
 _returns_description: _
 _parameters: int count_
 _access: public_
@@ -1889,7 +1804,7 @@ _inlined_description: _
 Resamples the line based on the count passed in. The lower the
 count passed in, the more points will be eliminated.
 
-New points are added if necessary to match count.
+This doesn't add new points to the line.
 
 
 
@@ -1905,12 +1820,12 @@ This resamples the line based on the spacing passed in. The lower the count pass
 
 <!----------------------------------------------------------------------------->
 
-###ofPolyline getResampledBySpacing(spacing)
+###ofPolyline_< T > getResampledBySpacing(spacing)
 
 <!--
 _syntax: getResampledBySpacing(spacing)_
 _name: getResampledBySpacing_
-_returns: ofPolyline_
+_returns: ofPolyline_< T >_
 _returns_description: _
 _parameters: float spacing_
 _access: public_
@@ -1955,12 +1870,12 @@ line.getResampledBySpacing(100).draw();
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getRightVector()
+###T getRightVector()
 
 <!--
 _syntax: getRightVector()_
 _name: getRightVector_
-_returns: ofVec3f_
+_returns: T_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1991,12 +1906,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getRotationAtIndex(index)
+###T getRotationAtIndex(index)
 
 <!--
 _syntax: getRotationAtIndex(index)_
 _name: getRotationAtIndex_
-_returns: ofVec3f_
+_returns: T_
 _returns_description: _
 _parameters: int index_
 _access: public_
@@ -2011,7 +1926,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Get rotation vector at index (magnitude is sin of angle)
+Get rotation vector at index (magnitude is sine of angle)
 
 
 
@@ -2027,12 +1942,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getRotationAtIndexInterpolated(findex)
+###T getRotationAtIndexInterpolated(findex)
 
 <!--
 _syntax: getRotationAtIndexInterpolated(findex)_
 _name: getRotationAtIndexInterpolated_
-_returns: ofVec3f_
+_returns: T_
 _returns_description: _
 _parameters: float findex_
 _access: public_
@@ -2048,7 +1963,7 @@ _advanced: False_
 _inlined_description: _
 
 Get rotation vector at interpolated index
-(interpolated between neighboring indices) (magnitude is sin of angle)
+(interpolated between neighboring indices) (magnitude is sine of angle)
 
 
 
@@ -2064,12 +1979,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPolyline getSmoothed(smoothingSize, smoothingShape)
+###ofPolyline_< T > getSmoothed(smoothingSize, smoothingShape)
 
 <!--
 _syntax: getSmoothed(smoothingSize, smoothingShape)_
 _name: getSmoothed_
-_returns: ofPolyline_
+_returns: ofPolyline_< T >_
 _returns_description: _
 _parameters: int smoothingSize, float smoothingShape_
 _access: public_
@@ -2098,7 +2013,7 @@ box window (1) or something in between (for example, .5).
 
 _description: _
 
-This returns a smoothed version of the ofPolyline. `smoothingSize` is the size of the smoothing window. So if `smoothingSize` is 2, then 2 points from the left, 1 in the center, and 2 on the right (5 total) will be used for smoothing each point. `smoothingShape` describes whether to use a triangular window (0) or box window (1) or something in between (for example, .5).
+
 
 
 
@@ -2106,12 +2021,12 @@ This returns a smoothed version of the ofPolyline. `smoothingSize` is the size o
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getTangentAtIndex(index)
+###T getTangentAtIndex(index)
 
 <!--
 _syntax: getTangentAtIndex(index)_
 _name: getTangentAtIndex_
-_returns: ofVec3f_
+_returns: T_
 _returns_description: _
 _parameters: int index_
 _access: public_
@@ -2142,12 +2057,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getTangentAtIndexInterpolated(findex)
+###T getTangentAtIndexInterpolated(findex)
 
 <!--
 _syntax: getTangentAtIndexInterpolated(findex)_
 _name: getTangentAtIndexInterpolated_
-_returns: ofVec3f_
+_returns: T_
 _returns_description: _
 _parameters: float findex_
 _access: public_
@@ -2179,12 +2094,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofPoint > & getVertices()
+###int & getVertices()
 
 <!--
 _syntax: getVertices()_
 _name: getVertices_
-_returns: vector< ofPoint > &_
+_returns: int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2215,12 +2130,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const vector< ofPoint > & getVertices()
+###const int & getVertices()
 
 <!--
 _syntax: getVertices()_
 _name: getVertices_
-_returns: const vector< ofPoint > &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2243,7 +2158,7 @@ _inlined_description: _
 
 _description: _
 
-Returns the vector of vertices that the line contains, vector<ofPoint> &.
+
 
 
 
@@ -2315,7 +2230,7 @@ Returns whether the vertices within the line have changed.
 
 _description: _
 
-Returns whether the vertices within the line have changed.
+
 
 
 
@@ -2330,7 +2245,7 @@ _syntax: insertVertex(&p, index)_
 _name: insertVertex_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p, int index_
+_parameters: const T &p, int index_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2402,7 +2317,7 @@ _syntax: inside(x, y, &polyline)_
 _name: inside_
 _returns: bool_
 _returns_description: _
-_parameters: float x, float y, const ofPolyline &polyline_
+_parameters: float x, float y, const ofPolyline_< T > &polyline_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2474,7 +2389,7 @@ _syntax: inside(&p, &polyline)_
 _name: inside_
 _returns: bool_
 _returns_description: _
-_parameters: const ofPoint &p, const ofPolyline &polyline_
+_parameters: const T &p, const ofPolyline_< T > &polyline_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2487,7 +2402,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Tests whether the ofPoint is within a closed ofPolyline.
+Tests whether the T is within a closed ofPolyline.
 
 
 
@@ -2510,7 +2425,7 @@ _syntax: inside(&p)_
 _name: inside_
 _returns: bool_
 _returns_description: _
-_parameters: const ofPoint &p_
+_parameters: const T &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2523,7 +2438,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Tests whether the ofPoint is within a closed ofPolyline.
+Tests whether the T is within a closed ofPolyline.
 
 
 
@@ -2567,7 +2482,7 @@ _inlined_description: _
 
 _description: _
 
-Whether the shape is closed or not. Certain operations, like getSmoothed() can only be performed on closed shapes.
+
 
 
 
@@ -2582,7 +2497,7 @@ _syntax: lineTo(&to)_
 _name: lineTo_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &to_
+_parameters: const T &to_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2596,7 +2511,7 @@ _advanced: False_
 _inlined_description: _
 
 Add a straight line from the last point added, or from 0,0 if no point
-is set, to the point indicated by the ofPoint passesd in.
+is set, to the point indicated by the T passesd in.
 
 
 
@@ -2649,11 +2564,11 @@ Add a line from the last point added, or from 0,0 if no point is set, to the poi
 
 <!----------------------------------------------------------------------------->
 
-### ofPolyline()
+### ofPolyline_()
 
 <!--
-_syntax: ofPolyline()_
-_name: ofPolyline_
+_syntax: ofPolyline_()_
+_name: ofPolyline__
 _returns: _
 _returns_description: _
 _parameters: _
@@ -2685,14 +2600,14 @@ Creates an ofPolyline.
 
 <!----------------------------------------------------------------------------->
 
-### ofPolyline(&verts)
+### ofPolyline_(&verts)
 
 <!--
-_syntax: ofPolyline(&verts)_
-_name: ofPolyline_
+_syntax: ofPolyline_(&verts)_
+_name: ofPolyline__
 _returns: _
 _returns_description: _
-_parameters: const vector< ofPoint > &verts_
+_parameters: const int &verts_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2705,7 +2620,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Creates an ofPolyline from a vector of ofVec2f or ofPoint objects.
+Creates an ofPolyline from a vector of ofVec2f or T objects.
 
 
 
@@ -2731,12 +2646,12 @@ There is an easier way to draw circles though, using the arc() method.
 
 <!----------------------------------------------------------------------------->
 
-###const ofPoint & operator[](index)
+###const T & operator[](index)
 
 <!--
 _syntax: operator[](index)_
 _name: operator[]_
-_returns: const ofPoint &_
+_returns: const T &_
 _returns_description: _
 _parameters: int index_
 _access: public_
@@ -2779,12 +2694,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint & operator[](index)
+###T & operator[](index)
 
 <!--
 _syntax: operator[](index)_
 _name: operator[]_
-_returns: ofPoint &_
+_returns: T &_
 _returns_description: _
 _parameters: int index_
 _access: public_
@@ -2875,7 +2790,7 @@ _syntax: quadBezierTo(&p1, &p2, &p3, curveResolution = 20)_
 _name: quadBezierTo_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p1, const ofPoint &p2, const ofPoint &p3, int curveResolution=20_
+_parameters: const T &p1, const T &p2, const T &p3, int curveResolution=20_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2944,150 +2859,6 @@ Creates a quadratic bezier line in 3D space from the current drawing point with 
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofPoint >::reverse_iterator rbegin()
-
-<!--
-_syntax: rbegin()_
-_name: rbegin_
-_returns: vector< ofPoint >::reverse_iterator_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector< ofPoint >::const_reverse_iterator rbegin()
-
-<!--
-_syntax: rbegin()_
-_name: rbegin_
-_returns: vector< ofPoint >::const_reverse_iterator_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector< ofPoint >::reverse_iterator rend()
-
-<!--
-_syntax: rend()_
-_name: rend_
-_returns: vector< ofPoint >::reverse_iterator_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###vector< ofPoint >::const_reverse_iterator rend()
-
-<!--
-_syntax: rend()_
-_name: rend_
-_returns: vector< ofPoint >::const_reverse_iterator_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void resize(size)
 
 <!--
@@ -3117,7 +2888,189 @@ passed in.
 
 _description: _
 
-Resize the number of points in the ofPolyline to the value passed in.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateDeg(degrees, &axis)
+
+<!--
+_syntax: rotateDeg(degrees, &axis)_
+_name: rotateDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees, const int &axis_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateDeg(degrees, &axis)
+
+<!--
+_syntax: rotateDeg(degrees, &axis)_
+_name: rotateDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees, const int &axis_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateRad(radians, &axis)
+
+<!--
+_syntax: rotateRad(radians, &axis)_
+_name: rotateRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians, const int &axis_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateRad(radians, &axis)
+
+<!--
+_syntax: rotateRad(radians, &axis)_
+_name: rotateRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians, const int &axis_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void scale(x, y)
+
+<!--
+_syntax: scale(x, y)_
+_name: scale_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Change the size of the ofPolyline
+These changes are non-reversible, so for instance
+scaling by 0,0 zeros out all data.
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -3190,7 +3143,7 @@ and can be "walked".
 
 _description: _
 
-Closes the ofPolyline, meaning that all the vertices will be linked and can be "walked".
+
 
 
 
@@ -3205,7 +3158,7 @@ _syntax: setRightVector(v)_
 _name: setRightVector_
 _returns: void_
 _returns_description: _
-_parameters: ofVec3f v_
+_parameters: T v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -3304,7 +3257,79 @@ The number of points in the ofPolyline.
 
 _description: _
 
-The number of points in the ofPolyline.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void translate(&p)
+
+<!--
+_syntax: translate(&p)_
+_name: translate_
+_returns: void_
+_returns_description: _
+_parameters: const int &p_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void translate(&p)
+
+<!--
+_syntax: translate(&p)_
+_name: translate_
+_returns: void_
+_returns_description: _
+_parameters: const int &p_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -3388,11 +3413,11 @@ _description: _
 
 
 
-###vector< float > angles
+###int angles
 
 <!--
 _name: angles_
-_type: vector< float >_
+_type: int_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -3494,7 +3519,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -3526,7 +3551,7 @@ _version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -3548,11 +3573,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint centroid2D
+###T centroid2D
 
 <!--
 _name: centroid2D_
-_type: ofPoint_
+_type: T_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -3580,17 +3605,17 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint circlePoints
+###int circlePoints
 
 <!--
 _name: circlePoints_
-_type: ofPoint_
+_type: int_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -3612,17 +3637,81 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint curveVertices
+###int const_iterator
+
+<!--
+_name: const_iterator_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int const_reverse_iterator
+
+<!--
+_name: const_reverse_iterator_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int curveVertices
 
 <!--
 _name: curveVertices_
-_type: ofPoint_
+_type: int_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -3644,11 +3733,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< float > lengths
+###int iterator
+
+<!--
+_name: iterator_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int lengths
 
 <!--
 _name: lengths_
-_type: vector< float >_
+_type: int_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -3676,11 +3797,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f normals
+###int normals
 
 <!--
 _name: normals_
-_type: ofVec3f_
+_type: int_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -3708,17 +3829,17 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint points
+###int points
 
 <!--
 _name: points_
-_type: ofPoint_
+_type: int_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -3740,17 +3861,17 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f rightVector
+###int reverse_iterator
 
 <!--
-_name: rightVector_
-_type: ofVec3f_
-_access: private_
-_version_started: 0073_
+_name: reverse_iterator_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -3772,11 +3893,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f rotations
+###T rightVector
 
 <!--
-_name: rotations_
-_type: ofVec3f_
+_name: rightVector_
+_type: T_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -3804,11 +3925,43 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f tangents
+###int rotations
+
+<!--
+_name: rotations_
+_type: int_
+_access: private_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int tangents
 
 <!--
 _name: tangents_
-_type: ofVec3f_
+_type: int_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _

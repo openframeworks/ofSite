@@ -435,14 +435,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSendMessage(msg)
+###bool ofSendMessage(messageString)
 
 <!--
-_syntax: ofSendMessage(msg)_
+_syntax: ofSendMessage(messageString)_
 _name: ofSendMessage_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: ofMessage msg_
+_parameters: string messageString_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -470,14 +470,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSendMessage(messageString)
+###bool ofSendMessage(msg)
 
 <!--
-_syntax: ofSendMessage(messageString)_
+_syntax: ofSendMessage(msg)_
 _name: ofSendMessage_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: string messageString_
+_parameters: ofMessage msg_
 _version_started: _
 _version_deprecated: _
 _summary: _

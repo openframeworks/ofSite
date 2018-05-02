@@ -97,42 +97,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofCoreEvents & events()
-
-<!--
-_syntax: events()_
-_name: events_
-_returns: ofCoreEvents &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void exit()
 
 <!--
@@ -385,14 +349,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void run(window, app)
+###void pollEvents()
 
 <!--
-_syntax: run(window, app)_
+_syntax: pollEvents()_
+_name: pollEvents_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void run(window, &&app)
+
+<!--
+_syntax: run(window, &&app)_
 _name: run_
 _returns: void_
 _returns_description: _
-_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > app_
+_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > &&app_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -421,14 +421,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void run(app)
+###void run(&&app)
 
 <!--
-_syntax: run(app)_
+_syntax: run(&&app)_
 _name: run_
 _returns: void_
 _returns_description: _
-_parameters: shared_ptr< ofBaseApp > app_
+_parameters: shared_ptr< ofBaseApp > &&app_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -801,13 +801,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void (*)() pollEvents
+###int loopEvent
 
 <!--
-_name: pollEvents_
-_type: void (*)()_
-_access: private_
-_version_started: 0.9.0_
+_name: loopEvent_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -872,6 +872,38 @@ _name: windowLoop_
 _type: void (*)()_
 _access: private_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###function< void () > windowPollEvents
+
+<!--
+_name: windowPollEvents_
+_type: function< void () >_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_

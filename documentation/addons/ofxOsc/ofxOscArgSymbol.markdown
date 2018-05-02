@@ -11,6 +11,8 @@ _extends: ofxOscArgString_
 ##InlineDescription
 
 
+a null-terminated symbol (string) argument, type name "S"
+
 
 
 
@@ -45,7 +47,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return the type of this argument
+\return argument type
 
 
 
@@ -81,7 +83,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return argument type character as a string
 
 
 
@@ -97,50 +99,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscArgSymbol(_value)
+### ofxOscArgSymbol(&value)
 
 <!--
-_syntax: ofxOscArgSymbol(_value)_
+_syntax: ofxOscArgSymbol(&value)_
 _name: ofxOscArgSymbol_
 _returns: _
 _returns_description: _
-_parameters: string _value_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxOscArgSymbol()
-
-<!--
-_syntax: ~ofxOscArgSymbol()_
-_name: ~ofxOscArgSymbol_
-_returns: _
-_returns_description: _
-_parameters: _
+_parameters: const string &value_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

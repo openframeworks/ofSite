@@ -44,6 +44,8 @@ The timer above will wake up at 1 second intervals no matter how long the rest o
 
 
 
+
+
 ##Methods
 
 
@@ -104,7 +106,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Constructs the default ofTimer().
 
 
 
@@ -140,7 +142,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+ Reset the starting instant of the periodic event to now.
 
 
 
@@ -176,7 +178,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets the frequency in \p nanoseconds that events happen.
 
+The timer will begin calculating the events beginning the moment
+the function is called.
+
+Parameters:
+nanoseconds The number of nanoseconds between events.
 
 
 
@@ -212,7 +220,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Sleep this thread until the next periodic event.
 
 
 

@@ -25,14 +25,14 @@ _extends: ofBaseRenderer_
 
 
 
-###void begin(&fbo, setupPerspective)
+###void begin(&fbo, mode)
 
 <!--
-_syntax: begin(&fbo, setupPerspective)_
+_syntax: begin(&fbo, mode)_
 _name: begin_
 _returns: void_
 _returns_description: _
-_parameters: const ofFbo &fbo, bool setupPerspective_
+_parameters: const ofFbo &fbo, ofFboMode mode_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1328,7 +1328,7 @@ _syntax: setLightPosition(lightIndex, &position)_
 _name: setLightPosition_
 _returns: void_
 _returns_description: _
-_parameters: int lightIndex, const ofVec4f &position_
+_parameters: int lightIndex, const int &position_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1436,7 +1436,7 @@ _syntax: setLightSpotDirection(lightIndex, &direction)_
 _name: setLightSpotDirection_
 _returns: void_
 _returns_description: _
-_parameters: int lightIndex, const ofVec4f &direction_
+_parameters: int lightIndex, const int &direction_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

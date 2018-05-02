@@ -673,6 +673,186 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setPosition(&p)
+
+<!--
+_syntax: setPosition(&p)_
+_name: setPosition_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &p_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setPosition(x, y)
+
+<!--
+_syntax: setPosition(x, y)_
+_name: setPosition_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setShape(r)
+
+<!--
+_syntax: setShape(r)_
+_name: setShape_
+_returns: void_
+_returns_description: _
+_parameters: ofRectangle r_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setShape(x, y, w, h)
+
+<!--
+_syntax: setShape(x, y, w, h)_
+_name: setShape_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float w, float h_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setSize(w, h)
+
+<!--
+_syntax: setSize(w, h)_
+_name: setSize_
+_returns: void_
+_returns_description: _
+_parameters: float w, float h_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setUpdateOnReleaseOnly(bUpdateOnReleaseOnly)
 
 <!--
@@ -1021,6 +1201,102 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float errorTime
+
+<!--
+_name: errorTime_
+_type: float_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxInputField< Type > input
+
+<!--
+_name: input_
+_type: ofxInputField< Type >_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofEventListener listener
+
+<!--
+_name: listener_
+_type: ofEventListener_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool mouseInside
 
 <!--
@@ -1028,6 +1304,70 @@ _name: mouseInside_
 _type: bool_
 _access: protected_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool overlappingLabel
+
+<!--
+_name: overlappingLabel_
+_type: bool_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###enum State state
+
+<!--
+_name: state_
+_type: enum State_
+_access: protected_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_

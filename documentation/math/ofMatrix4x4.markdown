@@ -2372,7 +2372,7 @@ _syntax: ofMatrix4x4(&mat)_
 _name: ofMatrix4x4_
 _returns: _
 _returns_description: _
-_parameters: const ofMatrix4x4 &mat_
+_parameters: const int &mat_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2385,123 +2385,7 @@ _advanced: False_
 
 _inlined_description: _
 
-You can pass another ofMatrix4x4 to create a copy.
 
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofMatrix4x4(ptr)
-
-<!--
-_syntax: ofMatrix4x4(ptr)_
-_name: ofMatrix4x4_
-_returns: _
-_returns_description: _
-_parameters: const float *const ptr_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct with a pointer.
-
-You can pass a pointer to floats, and the first 16 contents will be
-extracted into this matrix.
-
-
-Warning: the validity of these values is not checked!
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofMatrix4x4(&quat)
-
-<!--
-_syntax: ofMatrix4x4(&quat)_
-_name: ofMatrix4x4_
-_returns: _
-_returns_description: _
-_parameters: const ofQuaternion &quat_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotation matrices can be constructed from a quaternion.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofMatrix4x4(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)
-
-<!--
-_syntax: ofMatrix4x4(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)_
-_name: ofMatrix4x4_
-_returns: _
-_returns_description: _
-_parameters: float a00, float a01, float a02, float a03, float a10, float a11, float a12, float a13, float a20, float a21, float a22, float a23, float a30, float a31, float a32, float a33_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Positional style.
-
-All 16 values of the matrix as positional arguments in row-major order.
 
 
 

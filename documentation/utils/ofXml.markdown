@@ -5,7 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
-_extends: ofBaseFileSerializer_
+_extends: _
 -->
 
 ##InlineDescription
@@ -91,16 +91,16 @@ pictures.setValue("pictures/picture[0]/url", "http://superpicks.jp/pic1.png"); /
 
 
 
-###string DOMErrorMessage(msg)
+###ofXml::Attribute appendAttribute(&name)
 
 <!--
-_syntax: DOMErrorMessage(msg)_
-_name: DOMErrorMessage_
-_returns: string_
+_syntax: appendAttribute(&name)_
+_name: appendAttribute_
+_returns: ofXml::Attribute_
 _returns_description: _
-_parameters: short msg_
-_access: protected_
-_version_started: 0073_
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -127,188 +127,124 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool addChild(&path)
+###ofXml appendChild(&xml)
 
 <!--
-_syntax: addChild(&path)_
-_name: addChild_
-_returns: bool_
+_syntax: appendChild(&xml)_
+_name: appendChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: const ofXml &xml_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml appendChild(&&xml)
+
+<!--
+_syntax: appendChild(&&xml)_
+_name: appendChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: ofXml &&xml_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml appendChild(&name)
+
+<!--
+_syntax: appendChild(&name)_
+_name: appendChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml::Search find(&path)
+
+<!--
+_syntax: find(&path)_
+_name: find_
+_returns: ofXml::Search_
 _returns_description: _
 _parameters: const string &path_
 _access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Adds a child to the ofXml object. So if you have:
-
-~~~~{.cpp}
-<pictures>
-	<picture id="0">
-		<url>http://apicture.co.uk/pic.png</url>
-		<width>100</width>
-		<height>100</height>
-	</picture>
-</pictures>
-~~~~
-
-you can add a path like so:
-
-~~~~{.cpp}
-xml.addChild("pictures/picture/views");
-~~~~
-
-and that would create:
-
-~~~~{.cpp}
-<pictures>
-	<picture id="0">
-		<url>http://apicture.co.uk/pic.png</url>
-		<width>100</width>
-		<height>100</height>
-		<views/>
-	</picture>
-</pictures>
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool addValue(&path, data, createEntirePath = false)
-
-<!--
-_syntax: addValue(&path, data, createEntirePath = false)_
-_name: addValue_
-_returns: bool_
-_returns_description: _
-_parameters: const string &path, T data, bool createEntirePath=false_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Adds a child to the ofXml object. So if you have:
-
-~~~~{.cpp}
-<pictures>
-	<picture id="0">
-		<url>http://apicture.co.uk/pic.png</url>
-		<width>100</width>
-		<height>100</height>
-	</picture>
-</pictures>
-~~~~
-
-you can add a path like so:
-
-~~~~{.cpp}
-xml.addValue("pictures/picture/views", "100");
-~~~~
-
-and that would create:
-
-~~~~{.cpp}
-<pictures>
-	<picture id="0">
-		<url>http://apicture.co.uk/pic.png</url>
-		<width>100</width>
-		<height>100</height>
-		<views>100</views>
-	</picture>
-</pictures>
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void addXml(&xml, copyAll = false)
-
-<!--
-_syntax: addXml(&xml, copyAll = false)_
-_name: addXml_
-_returns: void_
-_returns_description: _
-_parameters: ofXml &xml, bool copyAll=false_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Adds one ofXml object to another.
-
-~~~~{.cpp}
-firstXml.addXml(secondXml, true);
-~~~~
-
-The second parameter tells the ofXml whether to add the entire XML document or whether to only add the current element of the XML being added.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void clear()
-
-<!--
-_syntax: clear()_
-_name: clear_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -335,52 +271,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void deserialize(&parameter)
+###ofXml findFirst(&path)
 
 <!--
-_syntax: deserialize(&parameter)_
-_name: deserialize_
-_returns: void_
-_returns_description: _
-_parameters: ofAbstractParameter &parameter_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool exists(&path)
-
-<!--
-_syntax: exists(&path)_
-_name: exists_
-_returns: bool_
+_syntax: findFirst(&path)_
+_name: findFirst_
+_returns: ofXml_
 _returns_description: _
 _parameters: const string &path_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -399,18 +299,7 @@ _inlined_description: _
 
 _description: _
 
-Returns whether a path exists. This can be a path to a node, like:
-~~~~{.cpp}
-xml.exists("picture/pictures[2]/url");
-~~~~
-or to an attribute:
-~~~~{.cpp}
-xml.exists("picture/pictures[2][@id]");
-~~~~
-or even a particular attribute anywhere in the DOM
-~~~~{.cpp}
-xml.exists("//[@id='9']");
-~~~~
+
 
 
 
@@ -418,14 +307,14 @@ xml.exists("//[@id='9']");
 
 <!----------------------------------------------------------------------------->
 
-###string getAttribute(&path)
+###ofXml::Attribute getAttribute(&name)
 
 <!--
-_syntax: getAttribute(&path)_
+_syntax: getAttribute(&name)_
 _name: getAttribute_
-_returns: string_
+_returns: ofXml::Attribute_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const string &name_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -454,12 +343,12 @@ Returns the value of an attribute or an empty string if it doesn't exist.
 
 <!----------------------------------------------------------------------------->
 
-###map< string, string > getAttributes()
+###Range<ofXmlIterator< pugi::xml_attribute_iterator>  > getAttributes()
 
 <!--
 _syntax: getAttributes()_
 _name: getAttributes_
-_returns: map< string, string >_
+_returns: Range<ofXmlIterator< pugi::xml_attribute_iterator>  >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -526,16 +415,196 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool getBoolValue(&path)
+###ofXml getChild(&name)
 
 <!--
-_syntax: getBoolValue(&path)_
-_name: getBoolValue_
-_returns: bool_
+_syntax: getChild(&name)_
+_name: getChild_
+_returns: ofXml_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Range<ofXmlIterator< pugi::xml_node_iterator>  > getChildren()
+
+<!--
+_syntax: getChildren()_
+_name: getChildren_
+_returns: Range<ofXmlIterator< pugi::xml_node_iterator>  >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###Range<ofXmlIterator< pugi::xml_named_node_iterator>  > getChildren(&name)
+
+<!--
+_syntax: getChildren(&name)_
+_name: getChildren_
+_returns: Range<ofXmlIterator< pugi::xml_named_node_iterator>  >_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###double getDoubleValue()
+
+<!--
+_syntax: getDoubleValue()_
+_name: getDoubleValue_
+_returns: double_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml::Attribute getFirstAttribute()
+
+<!--
+_syntax: getFirstAttribute()_
+_name: getFirstAttribute_
+_returns: ofXml::Attribute_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml getFirstChild()
+
+<!--
+_syntax: getFirstChild()_
+_name: getFirstChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -598,114 +667,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getFloatValue(&path)
-
-<!--
-_syntax: getFloatValue(&path)_
-_name: getFloatValue_
-_returns: float_
-_returns_description: _
-_parameters: const string &path_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int64_t getInt64Value()
-
-<!--
-_syntax: getInt64Value()_
-_name: getInt64Value_
-_returns: int64_t_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int64_t getInt64Value(&path)
-
-<!--
-_syntax: getInt64Value(&path)_
-_name: getInt64Value_
-_returns: int64_t_
-_returns_description: _
-_parameters: const string &path_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###int getIntValue()
 
 <!--
@@ -742,16 +703,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getIntValue(&path)
+###ofXml::Attribute getLastAttribute()
 
 <!--
-_syntax: getIntValue(&path)_
-_name: getIntValue_
-_returns: int_
+_syntax: getLastAttribute()_
+_name: getLastAttribute_
+_returns: ofXml::Attribute_
 _returns_description: _
-_parameters: const string &path_
+_parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml getLastChild()
+
+<!--
+_syntax: getLastChild()_
+_name: getLastChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -814,16 +811,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getNumChildren()
+###ofXml getNextSibling()
 
 <!--
-_syntax: getNumChildren()_
-_name: getNumChildren_
-_returns: int_
+_syntax: getNextSibling()_
+_name: getNextSibling_
+_returns: ofXml_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -850,16 +847,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getNumChildren(&path)
+###ofXml getNextSibling(&name)
 
 <!--
-_syntax: getNumChildren(&path)_
-_name: getNumChildren_
-_returns: int_
+_syntax: getNextSibling(&name)_
+_name: getNextSibling_
+_returns: ofXml_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -886,52 +883,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###Poco::XML::Document * getPocoDocument()
+###ofXml getPreviousSibling()
 
 <!--
-_syntax: getPocoDocument()_
-_name: getPocoDocument_
-_returns: Poco::XML::Document *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const Poco::XML::Document * getPocoDocument()
-
-<!--
-_syntax: getPocoDocument()_
-_name: getPocoDocument_
-_returns: const Poco::XML::Document *_
+_syntax: getPreviousSibling()_
+_name: getPreviousSibling_
+_returns: ofXml_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -958,124 +919,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###Poco::XML::Element * getPocoElement()
+###ofXml getPreviousSibling(&name)
 
 <!--
-_syntax: getPocoElement()_
-_name: getPocoElement_
-_returns: Poco::XML::Element *_
+_syntax: getPreviousSibling(&name)_
+_name: getPreviousSibling_
+_returns: ofXml_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unsigned int getUintValue()
+
+<!--
+_syntax: getUintValue()_
+_name: getUintValue_
+_returns: unsigned int_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###Poco::XML::Element * getPocoElement(&path)
-
-<!--
-_syntax: getPocoElement(&path)_
-_name: getPocoElement_
-_returns: Poco::XML::Element *_
-_returns_description: _
-_parameters: const string &path_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const Poco::XML::Element * getPocoElement()
-
-<!--
-_syntax: getPocoElement()_
-_name: getPocoElement_
-_returns: const Poco::XML::Element *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const Poco::XML::Element * getPocoElement(&path)
-
-<!--
-_syntax: getPocoElement(&path)_
-_name: getPocoElement_
-_returns: const Poco::XML::Element *_
-_returns_description: _
-_parameters: const string &path_
-_access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1138,14 +1027,14 @@ Returns the value of the current element in the ofXml.
 
 <!----------------------------------------------------------------------------->
 
-###string getValue(&path)
+###T getValue()
 
 <!--
-_syntax: getValue(&path)_
+_syntax: getValue()_
 _name: getValue_
-_returns: string_
+_returns: T_
 _returns_description: _
-_parameters: const string &path_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1184,16 +1073,16 @@ xml.exists("picture/pictures[2][@id]");
 
 <!----------------------------------------------------------------------------->
 
-###T getValue(&path, returnVal)
+###ofXml insertChildAfter(&name, &after)
 
 <!--
-_syntax: getValue(&path, returnVal)_
-_name: getValue_
-_returns: T_
+_syntax: insertChildAfter(&name, &after)_
+_name: insertChildAfter_
+_returns: ofXml_
 _returns_description: _
-_parameters: const string &path, T returnVal_
+_parameters: const string &name, const ofXml &after_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1220,14 +1109,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool load(&path)
+###ofXml insertChildBefore(&name, &after)
 
 <!--
-_syntax: load(&path)_
+_syntax: insertChildBefore(&name, &after)_
+_name: insertChildBefore_
+_returns: ofXml_
+_returns_description: _
+_parameters: const string &name, const ofXml &after_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool load(&file)
+
+<!--
+_syntax: load(&file)_
 _name: load_
 _returns: bool_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const filesystem::path &file_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1256,16 +1181,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadFromBuffer(&buffer)
+###bool load(&buffer)
 
 <!--
-_syntax: loadFromBuffer(&buffer)_
-_name: loadFromBuffer_
+_syntax: load(&buffer)_
+_name: load_
 _returns: bool_
 _returns_description: _
-_parameters: const string &buffer_
+_parameters: const ofBuffer &buffer_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1284,7 +1209,7 @@ _inlined_description: _
 
 _description: _
 
-Loads the XML file from a string. This string needs to be a properly formatted XML document. The method returns false if the document is not correctly created and true if it does.
+
 
 
 
@@ -1328,15 +1253,15 @@ Constructor. On construction a Poco::XML::Document is created, but not an elemen
 
 <!----------------------------------------------------------------------------->
 
-### ofXml(&path)
+### ofXml(doc, &xml)
 
 <!--
-_syntax: ofXml(&path)_
+_syntax: ofXml(doc, &xml)_
 _name: ofXml_
 _returns: _
 _returns_description: _
-_parameters: const string &path_
-_access: public_
+_parameters: shared_ptr< pugi::xml_document > doc, const pugi::xml_node &xml_
+_access: private_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -1364,124 +1289,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofXml(&rhs)
+###bool parse(&xmlStr)
 
 <!--
-_syntax: ofXml(&rhs)_
-_name: ofXml_
-_returns: _
-_returns_description: _
-_parameters: const ofXml &rhs_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Copy constructor. This clones the Poco::XML::Document so can be a little bit slow but is very safe.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofXml & operator=(&rhs)
-
-<!--
-_syntax: operator=(&rhs)_
-_name: operator=_
-_returns: const ofXml &_
-_returns_description: _
-_parameters: const ofXml &rhs_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Copy constructor. This clones the Poco::XML::Document so can be a little bit slow but is very safe.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void releaseAll()
-
-<!--
-_syntax: releaseAll()_
-_name: releaseAll_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool remove(&path)
-
-<!--
-_syntax: remove(&path)_
-_name: remove_
+_syntax: parse(&xmlStr)_
+_name: parse_
 _returns: bool_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const string &xmlStr_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1500,7 +1317,7 @@ _inlined_description: _
 
 _description: _
 
-Removes an element or attribute using the path. Returns false if the path is not valid. All children of the element are also removed.
+
 
 
 
@@ -1508,16 +1325,16 @@ Removes an element or attribute using the path. Returns false if the path is not
 
 <!----------------------------------------------------------------------------->
 
-###void remove()
+###ofXml::Attribute prependAttribute(&name)
 
 <!--
-_syntax: remove()_
-_name: remove_
-_returns: void_
+_syntax: prependAttribute(&name)_
+_name: prependAttribute_
+_returns: ofXml::Attribute_
 _returns_description: _
-_parameters: _
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1544,16 +1361,124 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool removeAttribute(&path)
+###ofXml prependChild(&xml)
 
 <!--
-_syntax: removeAttribute(&path)_
-_name: removeAttribute_
+_syntax: prependChild(&xml)_
+_name: prependChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: const ofXml &xml_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml prependChild(&&xml)
+
+<!--
+_syntax: prependChild(&&xml)_
+_name: prependChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: ofXml &&xml_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml prependChild(&name)
+
+<!--
+_syntax: prependChild(&name)_
+_name: prependChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool removeChild(&name)
+
+<!--
+_syntax: removeChild(&name)_
+_name: removeChild_
 _returns: bool_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const string &name_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1580,230 +1505,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool removeAttributes(&path)
+###bool save(&file)
 
 <!--
-_syntax: removeAttributes(&path)_
-_name: removeAttributes_
-_returns: bool_
-_returns_description: _
-_parameters: const string &path_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Removes all the attributes from a node.
-
-~~~~{.cpp}
-<picture id="0" x="100" y="200">
-~~~~
-
-would become
-
-~~~~{.cpp}
-<picture>
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool removeAttributes()
-
-<!--
-_syntax: removeAttributes()_
-_name: removeAttributes_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Removes all the attributes from a node.
-
-~~~~{.cpp}
-<picture id="0" x="100" y="200">
-~~~~
-
-would become
-
-~~~~{.cpp}
-<picture>
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool removeContents(&path)
-
-<!--
-_syntax: removeContents(&path)_
-_name: removeContents_
-_returns: bool_
-_returns_description: _
-_parameters: const string &path_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Removes all the contents from a node.
-
-~~~~{.cpp}
-<picture id="0">
-	<url>http://apicture.co.uk/pic.png</url>
-	<width>100</width>
-	<height>100</height>
-	<views>100</views>
-</picture>
-~~~~
-
-would become
-
-~~~~{.cpp}
-<picture>
-</picture>
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool removeContents()
-
-<!--
-_syntax: removeContents()_
-_name: removeContents_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool reset()
-
-<!--
-_syntax: reset()_
-_name: reset_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Sets the current element back to the root node of the document, i.e. the first child after the <xml> declaration.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool save(&path)
-
-<!--
-_syntax: save(&path)_
+_syntax: save(&file)_
 _name: save_
 _returns: bool_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const filesystem::path &file_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1832,16 +1541,16 @@ Save the XML object to a file.
 
 <!----------------------------------------------------------------------------->
 
-###void serialize(&parameter)
+###void set(&value)
 
 <!--
-_syntax: serialize(&parameter)_
-_name: serialize_
+_syntax: set(&value)_
+_name: set_
 _returns: void_
 _returns_description: _
-_parameters: const ofAbstractParameter &parameter_
+_parameters: const T &value_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1868,14 +1577,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool setAttribute(&path, &value)
+###void set(&value)
 
 <!--
-_syntax: setAttribute(&path, &value)_
-_name: setAttribute_
-_returns: bool_
+_syntax: set(&value)_
+_name: set_
+_returns: void_
 _returns_description: _
-_parameters: const string &path, const string &value_
+_parameters: const unsigned char &value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml::Attribute setAttribute(&name, &value)
+
+<!--
+_syntax: setAttribute(&name, &value)_
+_name: setAttribute_
+_returns: ofXml::Attribute_
+_returns_description: _
+_parameters: const string &name, const T &value_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1904,16 +1649,16 @@ Sets attribute at the path indicated. If the attribute doesn't already exist, it
 
 <!----------------------------------------------------------------------------->
 
-###bool setTo(&path)
+###void setName(&name)
 
 <!--
-_syntax: setTo(&path)_
-_name: setTo_
-_returns: bool_
+_syntax: setName(&name)_
+_name: setName_
+_returns: void_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1932,13 +1677,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the current element to the path indicated. This can be up or down the DOM:
 
-~~~~{.cpp}
-xml.setTo("pictures[1]/url"); // go down
-xml.setTo("../"); // go up
-xml.setTo("../pictures[0]/url"); // go up and then down
-~~~~
 
 
 
@@ -1946,291 +1685,14 @@ xml.setTo("../pictures[0]/url"); // go up and then down
 
 <!----------------------------------------------------------------------------->
 
-###bool setToChild(index)
+###string toString(&indent)
 
 <!--
-_syntax: setToChild(index)_
-_name: setToChild_
-_returns: bool_
-_returns_description: _
-_parameters: unsigned long index_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Sets the current element to the index-th child.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setToParent()
-
-<!--
-_syntax: setToParent()_
-_name: setToParent_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Sets the current element to the parent of the current element. This returns false if the parent does not exist.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setToParent(numLevelsUp)
-
-<!--
-_syntax: setToParent(numLevelsUp)_
-_name: setToParent_
-_returns: bool_
-_returns_description: _
-_parameters: int numLevelsUp_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Sets the current element to the numLevelsUp-th parent of the current element.
-~~~~{.cpp}
-xml.setCurrentElementToParent(3); // this is the same as xml.setCurrentElementToParent("../../../");
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setToPrevSibling()
-
-<!--
-_syntax: setToPrevSibling()_
-_name: setToPrevSibling_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This sets the current element to the previous sibling element. If your document looks like this:
-
-~~~~{.cpp}
-<pictures>
-	<picture id="0">
-		<url>http://apicture.co.uk/pic.png</url>
-		<width>100</width>
-		<height>100</height>
-	</picture>
-	<picture id="1">
-		<url>http://apicture.co.uk/pic2.png</url>
-		<width>100</width>
-		<height>100</height>
-	</picture>
-</pictures>
-~~~~
-
-Then you could do the following:
-
-~~~~{.cpp}
-xml.setCurrentElement("pictures/picture[1]"); // now current element is picture with id=1
-xml.setCurrentElementToPrevSibling(); // now current element is picture with id=0
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setToSibling()
-
-<!--
-_syntax: setToSibling()_
-_name: setToSibling_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This sets the current element to the previous sibling element. If your document looks like this:
-
-~~~~{.cpp}
-<pictures>
-	<picture id="0">
-		<url>http://apicture.co.uk/pic.png</url>
-		<width>100</width>
-		<height>100</height>
-	</picture>
-	<picture id="1">
-		<url>http://apicture.co.uk/pic2.png</url>
-		<width>100</width>
-		<height>100</height>
-	</picture>
-</pictures>
-~~~~
-
-Then you could do the following:
-
-~~~~{.cpp}
-xml.setCurrentElement("pictures/picture[0]"); // now current element is picture with id=0
-xml.setCurrentElementToSibling(); // now current element is picture with id=1
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setValue(&path, &value)
-
-<!--
-_syntax: setValue(&path, &value)_
-_name: setValue_
-_returns: bool_
-_returns_description: _
-_parameters: const string &path, const string &value_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Sets the value of the element pointed at by the path. If the value, or any other element along the path, does not exist then it is created. This means that:
-
-xml.setPath("/foo/bar/baz/quux", "qiix");
-
-will create:
-
-~~~~{.cpp}
-<foo>
-	<bar>
-		<baz>
-			<quux>qiix</quux>
-		</baz>
-	</bar>
-</foo>
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string toString()
-
-<!--
-_syntax: toString()_
+_syntax: toString(&indent)_
 _name: toString_
 _returns: string_
 _returns_description: _
-_parameters: _
+_parameters: const string &indent_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2259,93 +1721,21 @@ Creates a string from the XML document. Useful for when you want to send or save
 
 <!----------------------------------------------------------------------------->
 
-###vector< string > tokenize(&str, &delim)
-
-<!--
-_syntax: tokenize(&str, &delim)_
-_name: tokenize_
-_returns: vector< string >_
-_returns_description: _
-_parameters: const string &str, const string &delim_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofXml()
-
-<!--
-_syntax: ~ofXml()_
-_name: ~ofXml_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Destructor. Deletes both the current element and the current document.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ##Variables
 
 
 
-###Poco::XML::Document * document
+###shared_ptr< pugi::xml_document > doc
 
 <!--
-_name: document_
-_type: Poco::XML::Document *_
-_access: protected_
-_version_started: 0073_
+_name: doc_
+_type: shared_ptr< pugi::xml_document >_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -2359,7 +1749,7 @@ _inlined_description: _
 
 _description: _
 
-This is the XML document that the ofXml object wraps.
+
 
 
 
@@ -2367,17 +1757,17 @@ This is the XML document that the ofXml object wraps.
 
 <!----------------------------------------------------------------------------->
 
-###Poco::XML::Element * element
+###pugi::xml_node xml
 
 <!--
-_name: element_
-_type: Poco::XML::Element *_
-_access: protected_
-_version_started: 0073_
+_name: xml_
+_type: pugi::xml_node_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -2391,7 +1781,7 @@ _inlined_description: _
 
 _description: _
 
-This is the current element that the ofXml object points at.
+
 
 
 

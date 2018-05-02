@@ -15,41 +15,6 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###void ofAppendUTF8(&str, utf8)
-
-<!--
-_syntax: ofAppendUTF8(&str, utf8)_
-_name: ofAppendUTF8_
-_returns: void_
-_returns_description: _
-_parameters: string &str, int utf8_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###char ofBinaryToChar(&value)
 
 <!--
@@ -225,7 +190,7 @@ _syntax: ofContains(&values, &target)_
 _name: ofContains_
 _returns: bool_
 _returns_description: _
-_parameters: const vector< T > &values, const T &target_
+_parameters: const int &values, const T &target_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -317,6 +282,7 @@ _advanced: True_
 
 _inlined_description: _
 
+\section Data Path
 Enable the use of the data path.
 
 This function causes ofToDataPath() to respect the relative path set
@@ -343,7 +309,7 @@ _syntax: ofFind(&values, &target)_
 _name: ofFind_
 _returns: size_t_
 _returns_description: _
-_parameters: const vector< T > &values, const T &target_
+_parameters: const int &values, const T &target_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -492,6 +458,43 @@ Parameters:
 value The string value to convert to another string.
 
 Returns: the string converted to another string.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTime ofGetCurrentTime()
+
+<!--
+_syntax: ofGetCurrentTime()_
+_name: ofGetCurrentTime_
+_returns: ofTime_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the system time.
+
+Returns: the system time.
 
 
 
@@ -670,6 +673,44 @@ returns the elapsed time since the application started in seconds as a float
 
 <!----------------------------------------------------------------------------->
 
+###string ofGetEnv(&var)
+
+<!--
+_syntax: ofGetEnv(&var)_
+_name: ofGetEnv_
+_returns: string_
+_returns_description: _
+_parameters: const string &var_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the value of a given environment variable.
+\note The available environment variables differ between operating systems.
+
+Returns: the environmnt variable's value or an empty string if not found.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###uint64_t ofGetFrameNum()
 
 <!--
@@ -837,46 +878,10 @@ _advanced: False_
 
 _inlined_description: _
 
+\section System Time
 Get the seconds after the minute.
 
 Returns: the seconds after the minute [0-59].
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###uint64_t ofGetSystemTime()
-
-<!--
-_syntax: ofGetSystemTime()_
-_name: ofGetSystemTime_
-_returns: uint64_t_
-_returns_description: _
-_parameters: _
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: True_
--->
-
-_inlined_description: _
-
-Get the system time in milliseconds.
-
-Returns: the system time in milliseconds.
 
 
 
@@ -914,6 +919,43 @@ _inlined_description: _
 Get the system time in microseconds.
 
 Returns: the system time in microseconds.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###uint64_t ofGetSystemTimeMillis()
+
+<!--
+_syntax: ofGetSystemTimeMillis()_
+_name: ofGetSystemTimeMillis_
+_returns: uint64_t_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the system time in milliseconds.
+
+Returns: the system time in milliseconds.
 
 
 
@@ -1168,6 +1210,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\section openFrameworks Version
 Get the current version of openFrameworks as a string.
 
 openFrameworks uses the semantic versioning system.
@@ -1507,7 +1550,7 @@ _inlined_description: _
 Convert a string representing an float in hexadecimal to a float.
 
 Converts a hexadecimal representation of an float (little-endian, 32-bit
-IEEE 754, e.g., `"4060000000000000"`) to an actual float (e.g., `128.f`).
+IEEE 754, e.g., `"43000000"`) to an actual float (e.g., `128.f`).
 
 
 Parameters:
@@ -1678,7 +1721,7 @@ _syntax: ofJoinString(&stringElements, &delimiter)_
 _name: ofJoinString_
 _returns: string_
 _returns_description: _
-_parameters: const vector< string > &stringElements, const string &delimiter_
+_parameters: const int &stringElements, const string &delimiter_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1752,7 +1795,7 @@ _syntax: ofRandomize(&values)_
 _name: ofRandomize_
 _returns: void_
 _returns_description: _
-_parameters: vector< T > &values_
+_parameters: int &values_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1764,6 +1807,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\section Vectors
 Randomly reorder the values in a vector.
 \tparam T the type contained by the vector.
 
@@ -1793,7 +1837,7 @@ _syntax: ofRemove(&values, shouldErase)_
 _name: ofRemove_
 _returns: void_
 _returns_description: _
-_parameters: vector< T > &values, BoolFunction shouldErase_
+_parameters: int &values, BoolFunction shouldErase_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1880,6 +1924,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\section Elapsed Time
 Reset the elapsed time counter.
 
 This method resets the times returned by ofGetElapsedTimef(),
@@ -2003,6 +2048,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\section Frame Saving
 Saves the current screen image to a file on disk.
 
 Example:
@@ -2085,7 +2131,7 @@ _syntax: ofSetDataPathRoot(&root)_
 _name: ofSetDataPathRoot_
 _returns: void_
 _returns_description: _
-_parameters: const string &root_
+_parameters: const filesystem::path &root_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -2161,52 +2207,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSort(&values)
-
-<!--
-_syntax: ofSort(&values)_
-_name: ofSort_
-_returns: void_
-_returns_description: _
-_parameters: vector< T > &values_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Sort a vector of values into ascending order.
-
-The elements are compared using operator< for the first version.
-Equivalent elements are not guaranteed to keep their original relative
-order.
-
-\tparam T the type contained by the vector.
-
-Parameters:
-values The vector of values to be sorted.
-
-See also: http://www.cplusplus.com/reference/algorithm/sort/
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofSort(&values, compare)
 
 <!--
@@ -2214,7 +2214,7 @@ _syntax: ofSort(&values, compare)_
 _name: ofSort_
 _returns: void_
 _returns_description: _
-_parameters: vector< T > &values, BoolFunction compare_
+_parameters: int &values, BoolFunction compare_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -2284,14 +2284,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< string > ofSplitString(&source, &delimiter, ignoreEmpty = false, trim = false)
+###void ofSort(&values)
 
 <!--
-_syntax: ofSplitString(&source, &delimiter, ignoreEmpty = false, trim = false)_
-_name: ofSplitString_
-_returns: vector< string >_
+_syntax: ofSort(&values)_
+_name: ofSort_
+_returns: void_
 _returns_description: _
-_parameters: const string &source, const string &delimiter, bool ignoreEmpty=false, bool trim=false_
+_parameters: int &values_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -2303,7 +2303,54 @@ _advanced: False_
 
 _inlined_description: _
 
- Splits a string using a delimiter.
+Sort a vector of values into ascending order.
+
+The elements are compared using operator< for the first version.
+Equivalent elements are not guaranteed to keep their original relative
+order.
+
+\tparam T the type contained by the vector.
+
+Parameters:
+values The vector of values to be sorted.
+
+See also: http://www.cplusplus.com/reference/algorithm/sort/
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofSplitString()
+
+<!--
+_syntax: ofSplitString()_
+_name: ofSplitString_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\section String Manipulation
+Splits a string using a delimiter.
 
 ofSplitString splits a string and returns the collection of string
 tokens inside of a std::vector<std::string>.
@@ -2463,6 +2510,41 @@ Returns: the system command output as string.
 _description: _
 
 Executes an application or a system command and returns its output as string. Will block until the executed program/command has finished.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###T ofTo(&str)
+
+<!--
+_syntax: ofTo(&str)_
+_name: ofTo_
+_returns: T_
+_returns_description: _
+_parameters: const string &str_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -2701,7 +2783,7 @@ _syntax: ofToDataPath(&path, absolute = false)_
 _name: ofToDataPath_
 _returns: string_
 _returns_description: _
-_parameters: const string &path, bool absolute=false_
+_parameters: const filesystem::path &path, bool absolute=false_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -2984,6 +3066,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\section Number Conversion
 Convert a string to an integer.
 
 Converts a `std::string` representation of an int (e.g., `"3"`) to an actual
@@ -3122,6 +3205,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\section String Conversion
 Convert a value to a string.
 
 ofToString does its best to convert any value to a string. If the data type
@@ -3207,7 +3291,7 @@ _syntax: ofToString(&values)_
 _name: ofToString_
 _returns: string_
 _returns_description: _
-_parameters: const vector< T > &values_
+_parameters: const int &values_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -3480,6 +3564,216 @@ _returns: string_
 _returns_description: _
 _parameters: const string &src, const string &locale_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofUTF8Append(&str, utf8)
+
+<!--
+_syntax: ofUTF8Append(&str, utf8)_
+_name: ofUTF8Append_
+_returns: void_
+_returns_description: _
+_parameters: string &str, uint32_t utf8_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofUTF8Erase(&str, start, len)
+
+<!--
+_syntax: ofUTF8Erase(&str, start, len)_
+_name: ofUTF8Erase_
+_returns: void_
+_returns_description: _
+_parameters: string &str, size_t start, size_t len_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofUTF8Insert(&str, pos, utf8)
+
+<!--
+_syntax: ofUTF8Insert(&str, pos, utf8)_
+_name: ofUTF8Insert_
+_returns: void_
+_returns_description: _
+_parameters: string &str, size_t pos, uint32_t utf8_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###size_t ofUTF8Length(&str)
+
+<!--
+_syntax: ofUTF8Length(&str)_
+_name: ofUTF8Length_
+_returns: size_t_
+_returns_description: _
+_parameters: const string &str_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofUTF8Substring(&str, start, len)
+
+<!--
+_syntax: ofUTF8Substring(&str, start, len)_
+_name: ofUTF8Substring_
+_returns: string_
+_returns_description: _
+_parameters: const string &str, size_t start, size_t len_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofUTF8ToString(utf8)
+
+<!--
+_syntax: ofUTF8ToString(utf8)_
+_name: ofUTF8ToString_
+_returns: string_
+_returns_description: _
+_parameters: uint32_t utf8_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

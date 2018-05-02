@@ -27,16 +27,16 @@ This class is integrated into the openframeworks events system. When a key event
 
 
 
-### ofKeyEventArgs()
+###bool hasModifier(modifier)
 
 <!--
-_syntax: ofKeyEventArgs()_
-_name: ofKeyEventArgs_
-_returns: _
+_syntax: hasModifier(modifier)_
+_name: hasModifier_
+_returns: bool_
 _returns_description: _
-_parameters: _
+_parameters: int modifier_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -63,14 +63,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofKeyEventArgs(type, key, keycode, scancode, codepoint)
+### ofKeyEventArgs()
 
 <!--
-_syntax: ofKeyEventArgs(type, key, keycode, scancode, codepoint)_
+_syntax: ofKeyEventArgs()_
 _name: ofKeyEventArgs_
 _returns: _
 _returns_description: _
-_parameters: ofKeyEventArgs::Type type, int key, int keycode, int scancode, unsigned int codepoint_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -135,6 +135,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)
+
+<!--
+_syntax: ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)_
+_name: ofKeyEventArgs_
+_returns: _
+_returns_description: _
+_parameters: ofKeyEventArgs::Type type, int key, int keycode, int scancode, unsigned int codepoint, int modifiers_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ##Variables
 
 
@@ -155,7 +191,39 @@ _advanced: False_
 
 _inlined_description: _
 
-The Unicode code point you'd expect if this key combo (including modifier keys) was pressed in a text editor, or -1 for non-printable characters.
+The Unicode code point you'd expect if this key combo (including modifier keys) was pressed in a text editor, or 0 for non-printable characters.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isRepeat
+
+<!--
+_name: isRepeat_
+_type: bool_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+If this is a repeat event
 
 
 
@@ -220,6 +288,38 @@ _advanced: False_
 _inlined_description: _
 
 The keycode returned by the windowing system, independent of any modifier keys or keyboard layout settings. For ofAppGLFWWindow this value is one of GLFW_KEY_* (@see glfw3.h) - typically, ASCII representation of the symbol on the physical key, so A key always returns 0x41 even if shift, alt, ctrl are down.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int modifiers
+
+<!--
+_name: modifiers_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Key modifiers
 
 
 

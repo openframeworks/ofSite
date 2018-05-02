@@ -349,12 +349,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofVideoDevice > listDevices()
+###int listDevices()
 
 <!--
 _syntax: listDevices()_
 _name: listDevices_
-_returns: vector< ofVideoDevice >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_

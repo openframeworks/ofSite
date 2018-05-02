@@ -385,14 +385,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool load(fileName, stream = false)
+###bool load(&fileName, stream = false)
 
 <!--
-_syntax: load(fileName, stream = false)_
+_syntax: load(&fileName, stream = false)_
 _name: load_
 _returns: bool_
 _returns_description: _
-_parameters: string fileName, bool stream=false_
+_parameters: const filesystem::path &fileName, bool stream=false_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

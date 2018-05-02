@@ -25,14 +25,14 @@ _extends: _
 
 
 
-###ofRectangle getBoundingBox(&text, x, y)
+###ofRectangle getBoundingBox(&text, x, y, mode, vFlipped)
 
 <!--
-_syntax: getBoundingBox(&text, x, y)_
+_syntax: getBoundingBox(&text, x, y, mode, vFlipped)_
 _name: getBoundingBox_
 _returns: ofRectangle_
 _returns_description: _
-_parameters: const string &text, int x, int y_
+_parameters: const string &text, int x, int y, ofDrawBitmapMode mode, bool vFlipped_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -61,14 +61,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getMesh(&text, x, y, mode = OF_BITMAPMODE_MODEL_BILLBOARD, vFlipped = true)
+###int getMesh()
 
 <!--
-_syntax: getMesh(&text, x, y, mode = OF_BITMAPMODE_MODEL_BILLBOARD, vFlipped = true)_
+_syntax: getMesh()_
 _name: getMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
-_parameters: const string &text, int x, int y, ofDrawBitmapMode mode=OF_BITMAPMODE_MODEL_BILLBOARD, bool vFlipped=true_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

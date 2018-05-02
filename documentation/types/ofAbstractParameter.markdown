@@ -170,6 +170,78 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofReadOnlyParameter< ParameterType, Friend > & castReadOnly()
+
+<!--
+_syntax: castReadOnly()_
+_name: castReadOnly_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofReadOnlyParameter< ParameterType, Friend > & castReadOnly()
+
+<!--
+_syntax: castReadOnly()_
+_name: castReadOnly_
+_returns: const ofReadOnlyParameter< ParameterType, Friend > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string escape(&str)
 
 <!--
@@ -314,16 +386,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< string > getGroupHierarchyNames()
+###int getGroupHierarchyNames()
 
 <!--
 _syntax: getGroupHierarchyNames()_
 _name: getGroupHierarchyNames_
-_returns: vector< string >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const void * getInternalObject()
+
+<!--
+_syntax: getInternalObject()_
+_name: getInternalObject_
+_returns: const void *_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -396,6 +504,42 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isReferenceTo(&other)
+
+<!--
+_syntax: isReferenceTo(&other)_
+_name: isReferenceTo_
+_returns: bool_
+_returns_description: _
+_parameters: const ofAbstractParameter &other_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -648,6 +792,42 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string valueType()
+
+<!--
+_syntax: valueType()_
+_name: valueType_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

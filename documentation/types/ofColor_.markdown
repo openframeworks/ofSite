@@ -11,6 +11,20 @@ _extends: _
 ##InlineDescription
 
 
+
+ofColor represents a color in openFrameworks.
+
+The default ofColor uses unsigned char values [0,255], but use
+ofFloatColor for floating point values [0.0,1.0], or ofShortColor for
+unsigned short ints [0,[65,535]]. ofColor can be represented by an RGB
+value, an HSB value or a hex value.
+
+\tparam PixelType The data type used to represent a single pixel value.
+
+
+
+
+
 ##Description
 
 ofColor represents a color in openFrameworks.
@@ -18,7 +32,6 @@ Colors are usually defined by specifying a red, green, blue and optionally
 an alpha value (r,g,b,[a]), or a hue, saturation, brightness and optionally 
 an alpha value (h,s,b,[a]) or hexadecimal value with an optional alpha 
 value (0x________, a).
-
 
 For example:
 
@@ -127,6 +140,10 @@ Clamps the value of each component, R, G, B and A to a maximum of
 limit() and a minimum of zero.
 
 
+Returns: A reference to itself.
+
+
+
 
 
 _description: _
@@ -149,6 +166,7 @@ Also for ofColor anything <0 or >255.
 ~~~~
 
 Returns: A reference to itself.
+
 
 
 
@@ -213,9 +231,11 @@ _inlined_description: _
 
 Create an ofColor_ from a hexadecimal value.
 
+
 Parameters:
 hexColor A color in hexadecimal form.
 alpha The alpha value of the color.
+
 
 
 
@@ -233,6 +253,7 @@ PixelType's maximum, resulting in an opaque color.
 ~~~~{.cpp}
     ofColor c = ofColor::fromHex(0xFFFF00); // c is yellow.
 ~~~~
+
 
 
 
@@ -261,11 +282,16 @@ _inlined_description: _
 
 Create an ofColor_ from an HSB representation.
 
+
 Parameters:
 hue The hue of the color.
 saturation The saturation of the color.
 brightness The brightness of the color.
 alpha The alpha value of the color.
+
+
+
+
 
 _description: _
 
@@ -286,6 +312,7 @@ For more information about HSB, see:
     ofColor c = ofColor::fromHsb(128, 255, 255);
     // c is bright saturated cyan.
 ~~~~
+
 
 
 
@@ -314,12 +341,18 @@ _inlined_description: _
 
 Calculate the brightness of of the R, G and B components.
 
+Brightness is simply the maximum of the three color components. This
+method of calculating brightness is used by Photoshop (HSB) and
+Processing (HSB).  Note that brightness is also called "Value".
+
 
 Returns: the brightness in the range 0 - limit().
 
 
-_description: _
 
+
+
+_description: _
 
 Return the brightness component of the HSB representation of this color. 
 Refer the [discussion of HSB](#HSB) above.
@@ -327,6 +360,7 @@ Refer the [discussion of HSB](#HSB) above.
 Brightness is simply the maximum of the three color components. This
 method of calculating brightness is used by Photoshop (HSB) and
 Processing (HSB).  Note that brightness is also called "Value".
+
 
 
 
@@ -355,9 +389,11 @@ _inlined_description: _
 
 A non-destructive version of clamp().
 
+
 See also: clamp()
 
 Returns: A copy of this color, clamped.
+
 
 
 
@@ -373,6 +409,7 @@ See [clamp](#clamp) for more info.
     ofColor g = c.getClamped(); // c.r is still 300.
     //g has the RGB value (255, 200, 0) 
 ~~~~
+
 
 
 
@@ -401,9 +438,12 @@ _inlined_description: _
 
 Get a 24-bit hexadecimal representation of the RGB color.
 
+
 Warning: This method does _not_ encode the alpha component.
 
+
 Returns: An integer representing an RGB color.
+
 
 
 
@@ -449,7 +489,6 @@ _inlined_description: _
 Extract the hue, saturation and brightness (HSB) from this color.
 
 
-
 Parameters:
 hue A reference to the hue to fill. Will be in the range of
     0 - limit().
@@ -457,6 +496,7 @@ saturation A reference to the saturation to fill. Will be in the
 		range of 0 - limit().
 brightness A reference to the brightness to fill. Will be in the
     range of 0 - limit().
+
 
 
 
@@ -505,6 +545,10 @@ _inlined_description: _
 
 Get the Hue of this color.
 
+The color is converted from the default RGB to an HSB color space and
+the resulting Hue value is returned.  The resulting hue value will
+always be returned in the range 0 - limit().
+
 
 Returns: The Hue value in the range 0 - limit().
 
@@ -549,6 +593,9 @@ _inlined_description: _
 
 Get the Hue angle of this color.
 
+The color is converted from the default RGB to an HSB color space and
+the resulting Hue angle is returned.  The resulting hue value will
+always be returned in degrees in the range 0 - 360.
 
 
 Returns: The Hue angle in the range 0 - 360.
@@ -593,6 +640,7 @@ _inlined_description: _
 
 A non-destructive version of invert().
 
+
 See also: invert()
 
 Returns: A copy of this color, inverted.
@@ -612,6 +660,9 @@ without modifying the original. See [invert](#invert) for more info.
     // c still has RGB value of (255,200,0)
     // i has the RGB value (0, 55, 255)
 ~~~~
+
+
+
 
 
 <!----------------------------------------------------------------------------->
@@ -638,9 +689,16 @@ _inlined_description: _
 
 A non-destructive version of lerp().
 
-See also: lerp()
+
+Parameters:
+target The target color corresponding to an amount of 1.0.
+amount The amount (between 0.0 and 1.0) to interpolate.
+    A value of 0.0 will yield an unchanged color.  A value of 1.0
+    will yield the target color.
 
 Returns: A copy of this color, lerped.
+
+See also: lerp()
 
 
 
@@ -657,6 +715,9 @@ See [lerp](#lerp) for more info.
     ofColor p = b.getLerped(r, 0.5); 
     // p is purple, r is still red and b is still blue
 ~~~~
+
+
+
 
 
 <!----------------------------------------------------------------------------->
@@ -687,7 +748,7 @@ Lightness is simply the average of the three color components. This
 method of calculating lightness is used by the Lab and HSL color spaces.
 
 
-Returns: the lightness as a float in the range 0 - limit().
+Returns: the lightness in the range 0 - limit().
 
 
 
@@ -703,6 +764,8 @@ the Lab and HSL color spaces.
     float l = c.getLightness();
     // l is 100.f
 ~~~~
+
+
 
 
 
@@ -730,6 +793,7 @@ _inlined_description: _
 
 A non-destructive version of normalize().
 
+
 See also: normalize()
 
 Returns: A copy of this color, normalized.
@@ -749,6 +813,7 @@ See [normalize](#normalize) for more info.
     // n now has RGB value of (153,255,0)
     // c still has the RGB value of (120, 200, 0)
 ~~~~
+
 
 
 
@@ -775,10 +840,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the saturation of this color.
+Get the Saturation of this color.
 
 The color is converted from the default RGB to an HSB color space and
-the resulting saturation is returned.  
+the resulting saturation is returned.  The resulting saturation value
+will always be returned in the range 0 - limit().
 
 
 Returns: The saturation in the range 0 - limit().
@@ -820,6 +886,11 @@ _advanced: False_
 _inlined_description: _
 
 Invert the R, G and B components.
+
+Performs an inversion operation on the color by replacing the red, green
+and blue components with their original value subtracted from the
+limit().
+
 
 Returns: A reference to itself.
 
@@ -880,6 +951,10 @@ _inlined_description: _
 
 A linear interpolation between all components of two colors.
 
+The linear interpolation is carried out
+on _all_ components, R, G, B _and_ A.
+
+
 Parameters:
 target The target color corresponding to an amount of 1.0.
 amount The amount (between 0.0 and 1.0) to interpolate.
@@ -914,6 +989,8 @@ b.lerp(r, 0.5); // now purple!
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###float limit()
@@ -937,6 +1014,7 @@ _advanced: False_
 _inlined_description: _
 
 Get the maximum value of a color component.
+
 
 Returns: The value associated with a fully saturated color component.
 
@@ -981,10 +1059,11 @@ _inlined_description: _
 
 Normalize the R, G and B components.
 
-Performs a normalization operation on the red, green and blue components 
-by scaling them by brightness of the original color divided by the 
-limit().  The brightness is calculated by finding the maximum of original 
-red, green and blue components.
+Performs a normalization operation on the red, green and blue components
+by scaling them by brightness of the original color divided by the
+limit().  The brightness is calculated by finding the maximum of
+original red, green and blue components.
+In short: ofColor / (brightness / limit())
 
 
 Returns: A reference to itself.
@@ -1058,8 +1137,6 @@ Construct a default white color.
 
 
 
-
-
 _description: _
 
 Creates a color and sets it to white.
@@ -1096,7 +1173,6 @@ _advanced: False_
 _inlined_description: _
 
 Construct an ofColor_ by using channel values.
-
 
 
 Parameters:
@@ -1146,6 +1222,7 @@ _advanced: False_
 _inlined_description: _
 
 Construct a grayscale ofColor_ by specifying a single number.
+
 
 Parameters:
 gray A grayscale value.
@@ -1197,8 +1274,6 @@ _inlined_description: _
 
 Construct an ofColor_ from an existing ofColor_.
 
-This constructor will attempt to convert between color instances of
-differing precision.
 
 Warning: Depending on the PixelType and SrcType used, color precision
          may be lost when converting a higher precision to a lower
@@ -1229,6 +1304,8 @@ Creates a color by copying another color with a different type (for example when
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ### ofColor_(&color, alpha)
@@ -1252,10 +1329,6 @@ _advanced: False_
 _inlined_description: _
 
 Construct an ofColor_ from an existing ofColor_.
-
-This constructor will use the R, G, and B components from the passed
-color ignoring its alpha channel.  The provided alpha channel will be
-used instead.
 
 
 Parameters:
@@ -1379,16 +1452,17 @@ G and B components. The alpha component is ignored.
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > operator*(&value)
+###ofColor_< PixelType > operator*(value)
 
 <!--
-_syntax: operator*(&value)_
+_syntax: operator*(value)_
 _name: operator*_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: const float &value_
+_parameters: float value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1427,6 +1501,7 @@ Multiplys R, G and B components by a scaler and clamps each to be > 0 and < limi
     ofColor c2 = c1 * 2.f;
     // c2 has the RGB value of (255,60,40)
 ~~~~
+
 
 
 
@@ -1489,14 +1564,14 @@ and B components, then clamps each to be > 0 and < limit().
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator*=(&value)
+###ofColor_< PixelType > & operator*=(value)
 
 <!--
-_syntax: operator*=(&value)_
+_syntax: operator*=(value)_
 _name: operator*=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &value_
+_parameters: float value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1596,18 +1671,16 @@ then clamps each to be > 0 and < limit().
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > operator+(&value)
+###ofColor_< PixelType > operator+(color)
 
 <!--
-_syntax: operator+(&color)_
+_syntax: operator+(color)_
 _name: operator+_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: const float &color_
+_parameters: float color_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1707,17 +1780,16 @@ and B components, then clamps each to be > 0 and < limit().
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator+=(&value)
+###ofColor_< PixelType > & operator+=(color)
 
 <!--
-_syntax: operator+=(&color)_
+_syntax: operator+=(color)_
 _name: operator+=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &color_
+_parameters: float color_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1818,17 +1890,16 @@ then clamps each to be > 0 and < limit().
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > operator-(&value)
+###ofColor_< PixelType > operator-(value)
 
 <!--
-_syntax: operator-(&value)_
+_syntax: operator-(value)_
 _name: operator-_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: const float &value_
+_parameters: float value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1928,14 +1999,14 @@ clamps each to be > 0 and < limit().
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator-=(&color)
+###ofColor_< PixelType > & operator-=(color)
 
 <!--
-_syntax: operator-=(&color)_
+_syntax: operator-=(color)_
 _name: operator-=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &color_
+_parameters: float color_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1975,7 +2046,6 @@ and a value, then clamps each to be > 0 and < limit().
     ofColor c1 -= 25.f;
     // c1 has the RGB value of (230, 5, 0)
 ~~~~
-
 
 
 
@@ -2038,14 +2108,14 @@ G and B components. The alpha component is ignored.
 
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > operator/(&value)
+###ofColor_< PixelType > operator/(value)
 
 <!--
-_syntax: operator/(&value)_
+_syntax: operator/(value)_
 _name: operator/_
 _returns: ofColor_< PixelType >_
 _returns_description: _
-_parameters: const float &value_
+_parameters: float value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -2142,18 +2212,16 @@ and B components, then clamps each to be > 0 and < limit().
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator/=(&value)
+###ofColor_< PixelType > & operator/=(value)
 
 <!--
-_syntax: operator/=(&value)_
+_syntax: operator/=(value)_
 _name: operator/=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &value_
+_parameters: float value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -2198,8 +2266,6 @@ then clamps each to be > 0 and < limit().
 
 
 
-
-
 <!----------------------------------------------------------------------------->
 
 ###ofColor_< PixelType > & operator=(&color)
@@ -2224,6 +2290,8 @@ _inlined_description: _
 
 Assign a color using an existing color.
 
+R, G, B and A components are set to the the values of the assigned
+color.
 
 
 Warning: Depending on the PixelType and SrcType used, color precision
@@ -2256,17 +2324,16 @@ color.
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofColor_< PixelType > & operator=(&value)
+###ofColor_< PixelType > & operator=(value)
 
 <!--
-_syntax: operator=(&value)_
+_syntax: operator=(value)_
 _name: operator=_
 _returns: ofColor_< PixelType > &_
 _returns_description: _
-_parameters: const float &value_
+_parameters: float value_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -2334,6 +2401,7 @@ _inlined_description: _
 
 Test two colors for equality.
 
+
 Returns: true iff the R, G, B and A components are all equal.
 
 
@@ -2379,6 +2447,9 @@ _advanced: False_
 _inlined_description: _
 
 Array subscript operator.
+
+If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
+alpha.
 
 
 Parameters:
@@ -2428,6 +2499,9 @@ _inlined_description: _
 
 Array subscript operator.
 
+If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
+alpha.
+
 
 Parameters:
 n An index 0-3 of the component to get.
@@ -2441,117 +2515,6 @@ Returns: The value of the requested component.
 _description: _
 
 Array subscript operator. If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns alpha.
-
-~~~~{.cpp}
-	ofColor c(128, 64, 255);
-	float red = c[0]; // red is 128
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###PixelType & operator<<(n)
-
-<!--
-_syntax: operator<<(n)_
-_name: operator<<_
-_returns: ostream &_
-_returns_description: _
-_parameters: size_t n_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-An output stream operator.
-
-Parameters:
-os An output stream reference.
-color The color to write to the output stream.
-
-Returns:
-The passed output stream reference, useful for method chaining.
-
-_description: _
-
-Colors can be serialized into comma separated values (CSV) using the
-output stream operator.  Input stream values are written in the
-following form
-    RED_VALUE, GREEN_VALUE, BLUE_VALUE, ALPHA_VALUE
-For example, to write output into a std::stringstream for later
-retrieval using the ofColor_ input stream operator one might use the
-following:
-~~~~{.cpp}
-    std::stringstream ss;     // Create an empty std::string stream.
-                              // Note: std::stringstream is just one
-                              // option for an output stream.  Another
-                              // popular output stream std::cout.
-    ofColor myColor(255, 255, 0, 255);
-                              // Create an ofColor to output.
-    ss << myColor;            // Write the color to the output stream.
-~~~~
-
-
-
-<!----------------------------------------------------------------------------->
-
-###PixelType & operator>>(n)
-
-<!--
-_syntax: operator>>(n)_
-_name: operator>>_
-_returns: istream &_
-_returns_description: _
-_parameters: size_t n_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-An input stream operator.
-
-Parameters:
-An input stream reference.
-color The color to fill with the input stream.
-
-Returns:
-The passed input stream reference, useful for method chaining.
-
-
-
-_description: _
-
-Colors can be deserialized from comma separated values (CSV) input
-stream using the input stream operator.  Input stream values are read
-in the following form:
-    RED_VALUE, GREEN_VALUE, BLUE_VALUE, ALPHA_VALUE
-For example, to read input from a std::stringstream into an ofColor
-one might use the following:
-~~~~{.cpp}
-    std::stringstream ss;     // Create an empty std::string stream.
-                              // Note: std::stringstream is just one
-                              // option for an input stream.
-    ss << "255, 255, 0, 255"; // Write the color to the stringstream.
-    ofColor myColor;          // Create an ofColor instance to fill.
-    ss >> myColor;            // myColor is now filled with a yellow.
-~~~~
 
 ~~~~{.cpp}
 	ofColor c(128, 64, 255);
@@ -2584,12 +2547,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set an ofColor_ by using channel values.
-
-When modifying an instance of ofColor_ the channel values must fall
-within the range represented by the PixelType.  By default, the alpha
-component will take the PixelType's maximum, producing an opaque color.
-
+Set an ofColor_ by using RGB values.
 
 
 Parameters:
@@ -2613,7 +2571,6 @@ The channel values must fall within the range represented by the PixelType
     ofColor c(255, 0, 0); // Red ...
     c.set(0, 255, 0); // ... and now green.
 ~~~~
-
 
 
 
@@ -2644,12 +2601,6 @@ _inlined_description: _
 Set a grayscale ofColor_ by specifying a single number.
 
 
-~~~~{.cpp}
-    ofColor c(255, 0, 0); // Red ...
-    c.set(128, 128); // ... and now 50% gray with 50% alpha.
-~~~~
-
-
 Parameters:
 gray A grayscale value.
 alpha The opacity of the color.
@@ -2666,6 +2617,8 @@ Creates a gray color from the value of gray. This single value will be taken by 
     ofColor c(255, 0, 0); // Red ...
     c.set(128, 128); // ... and now 50% gray with 50% alpha.
 ~~~~
+
+
 
 
 
@@ -2715,6 +2668,8 @@ This will use the R, G, B and A components from the passed color.
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###void setBrightness(brightness)
@@ -2738,11 +2693,6 @@ _advanced: False_
 _inlined_description: _
 
 Set the brightness of this color.
-
-~~~~{.cpp}
-    ofColor c(0, 0, 255); // Bright blue ...
-    c.setBrightness(128); // ... dark blue.
-~~~~
 
 
 Parameters:
@@ -2791,8 +2741,10 @@ _inlined_description: _
 
 Set an ofColor_ from a hexadecimal representation.
 
+
 Warning: The alpha value _should not_ be packed in the hexColor and
     must be specified separately.
+
 
 Parameters:
 hexColor An RGB color in hexadecimal form.
@@ -2822,6 +2774,7 @@ and will default to the PixelType's maximum, resulting in an opaque color.
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void setHsb(hue, saturation, brightness, alpha)
@@ -2846,6 +2799,7 @@ _inlined_description: _
 
 Set the color using HSB components.
 
+
 Parameters:
 hue A hue value to set in the range of 0 - limit().
 saturation A saturation value to set in the range of 0 - limit().
@@ -2868,7 +2822,6 @@ above. **Note** that the hue value has a range that matches the base data type
 float 0 to 1, as may be expected. The alpha channel is specified separately  
 and will default to the PixelType's maximum, resulting in an opaque color.
 
-
 ~~~~{.cpp}
     ofColor c = ofColor(0); // c is black
     c.setHsb(0, 255, 255); // c is now bright red
@@ -2876,6 +2829,9 @@ and will default to the PixelType's maximum, resulting in an opaque color.
     c.setHsb(255, 255, 100); // c is dark red
     c.setHsb(255, 100, 255); // c is dull light red
 ~~~~
+
+
+
 
 
 <!----------------------------------------------------------------------------->
@@ -2949,6 +2905,7 @@ _inlined_description: _
 
 Set the hue angle of this color.
 
+
 Parameters:
 angle A hue angle value to set in the range of 0 - 360 degrees.
 
@@ -2958,13 +2915,13 @@ angle A hue angle value to set in the range of 0 - 360 degrees.
 
 _description: _
 
-
 The hue field in setHsb() and in setHue() represents hue as a range between 0 and 
 255 because the hue value has a range that matches the base data type, 
 setHueAngle() sets hue using the conventional way to represent hue: with the 
 range between 0 and 360.
 
 ![hc](hue_circle.jpg)
+
 
 
 
@@ -2995,9 +2952,11 @@ Set the saturation of this color.
 
 This method uses HSB not HSL. So red desaturated is white, not gray
 
+
 Parameters:
 saturation A saturation value value in the range of 0 - limit().
 
+See also: http://en.wikipedia.org/wiki/HSL_and_HSV
 
 
 
@@ -3015,6 +2974,7 @@ Change the current saturation, leaving hue and brightness intact.
 Refer the [discussion of HSB](#HSB) above.
 
 See also: http://en.wikipedia.org/wiki/HSL_and_HSV
+
 
 
 
@@ -3051,11 +3011,13 @@ _description: _
 
 The alpha value (transparency) of a color. 0 is completely transparent, 255 is completely opaque.
 
-
 ~~~~{cpp.}
     ofColor c = ofColor(255,0,0); // Bright red with default limit() value (this case its 255)
     c.a = 50; // now the color is bright red with the opacity set to 50 (mostly see through)
 ~~~~
+
+
+
 
 
 <!----------------------------------------------------------------------------->
@@ -3076,7 +3038,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3122,7 +3085,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3168,7 +3132,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3214,7 +3179,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3260,7 +3226,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3343,7 +3310,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3389,7 +3357,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3435,7 +3404,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3485,7 +3455,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3531,7 +3502,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3581,7 +3553,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3627,7 +3600,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3673,7 +3647,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3719,7 +3694,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3765,7 +3741,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3811,7 +3788,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3857,7 +3835,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3903,7 +3882,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3949,7 +3929,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -3995,7 +3976,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4041,7 +4023,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4087,7 +4070,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4137,7 +4121,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4183,7 +4168,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4229,7 +4215,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4275,7 +4262,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4321,7 +4309,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4367,7 +4356,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4413,7 +4403,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4459,7 +4450,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4505,7 +4497,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4551,7 +4544,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4597,7 +4591,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4643,7 +4638,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4689,7 +4685,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4735,7 +4732,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4781,7 +4779,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4827,7 +4826,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4873,7 +4873,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4919,7 +4920,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -4965,7 +4967,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5011,7 +5014,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5057,7 +5061,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5103,7 +5108,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5149,7 +5155,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5195,7 +5202,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5241,7 +5249,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5287,7 +5296,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5333,7 +5343,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5379,7 +5390,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5462,7 +5474,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5508,7 +5521,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5554,7 +5568,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5600,7 +5615,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5646,7 +5662,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5696,7 +5713,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5746,7 +5764,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5792,7 +5811,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5838,7 +5858,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5884,7 +5905,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5930,7 +5952,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -5976,7 +5999,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6022,7 +6046,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6068,7 +6093,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6114,7 +6140,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6160,7 +6187,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6206,7 +6234,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6252,7 +6281,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6298,7 +6328,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6344,7 +6375,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6390,7 +6422,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6436,7 +6469,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6482,7 +6516,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6528,7 +6563,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6574,7 +6610,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6620,7 +6657,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6666,7 +6704,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6712,7 +6751,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6758,7 +6798,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6804,7 +6845,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6850,7 +6892,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6896,7 +6939,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6942,7 +6986,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -6988,7 +7033,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7034,7 +7080,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7080,7 +7127,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7126,7 +7174,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7176,7 +7225,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7222,7 +7272,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7268,7 +7319,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7314,7 +7366,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7360,7 +7413,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7406,7 +7460,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7452,7 +7507,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7498,7 +7554,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7544,7 +7601,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7590,7 +7648,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7636,7 +7695,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7682,7 +7742,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7728,7 +7789,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7774,7 +7836,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7820,7 +7883,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7866,7 +7930,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7912,7 +7977,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -7958,7 +8024,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8004,7 +8071,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8050,7 +8118,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8096,7 +8165,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8142,7 +8212,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8188,7 +8259,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8234,7 +8306,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8280,7 +8353,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8326,7 +8400,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8372,7 +8447,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8418,7 +8494,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8464,7 +8541,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8510,7 +8588,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8556,7 +8635,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8602,7 +8682,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8648,7 +8729,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8731,7 +8813,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8781,7 +8864,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8827,7 +8911,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8873,7 +8958,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8919,7 +9005,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -8965,7 +9052,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9011,7 +9099,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9057,7 +9146,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9103,7 +9193,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9149,7 +9240,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9195,7 +9287,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9241,7 +9334,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9287,7 +9381,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9333,7 +9428,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9379,7 +9475,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9425,7 +9522,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9471,7 +9569,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9517,7 +9616,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9563,7 +9663,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9609,7 +9710,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9655,7 +9757,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9701,7 +9804,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9779,7 +9883,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9825,7 +9930,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9871,7 +9977,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9921,7 +10028,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -9967,7 +10075,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -10017,7 +10126,8 @@ _advanced: False_
 
 _inlined_description: _
 
- \name Predefined Colors
+\name Predefined Colors
+
 A collection of static colors defined by name.
 
 These constants allow the user to access colors by name.  For example,
@@ -10046,3 +10156,4 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
+

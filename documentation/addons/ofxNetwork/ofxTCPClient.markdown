@@ -206,6 +206,42 @@ Returns the port number set in the setup() method of the client.
 
 <!----------------------------------------------------------------------------->
 
+###bool isClosingCondition(messageSize, errorCode)
+
+<!--
+_syntax: isClosingCondition(messageSize, errorCode)_
+_name: isClosingCondition_
+_returns: bool_
+_returns_description: _
+_parameters: int messageSize, int errorCode_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool isConnected()
 
 <!--
@@ -854,16 +890,52 @@ It returns whether the connection has successfully been made. Don't mistake this
 
 <!----------------------------------------------------------------------------->
 
-###bool setup(_index, blocking)
+###bool setup(&settings)
 
 <!--
-_syntax: setup(_index, blocking)_
+_syntax: setup(&settings)_
 _name: setup_
 _returns: bool_
 _returns_description: _
-_parameters: int _index, bool blocking_
+_parameters: const ofxTCPSettings &settings_
 _access: public_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setupConnectionIdx(_index, blocking)
+
+<!--
+_syntax: setupConnectionIdx(_index, blocking)_
+_name: setupConnectionIdx_
+_returns: bool_
+_returns_description: _
+_parameters: int _index, bool blocking_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

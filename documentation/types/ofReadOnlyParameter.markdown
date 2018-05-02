@@ -252,6 +252,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###const void * getInternalObject()
+
+<!--
+_syntax: getInternalObject()_
+_name: getInternalObject_
+_returns: const void *_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ParameterType getMax()
 
 <!--
@@ -432,14 +468,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void makeReferenceTo(ParameterType, mom)
+###void makeReferenceTo(mom)
 
 <!--
-_syntax: makeReferenceTo(ParameterType, mom)_
+_syntax: makeReferenceTo(mom)_
 _name: makeReferenceTo_
 _returns: void_
 _returns_description: _
-_parameters: ofReadOnlyParameter< ParameterType, Friend > mom_
+_parameters: ofParameter< ParameterType > mom_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -468,16 +504,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void makeReferenceTo(mom)
+###void makeReferenceTo(ParameterType, mom)
 
 <!--
-_syntax: makeReferenceTo(mom)_
+_syntax: makeReferenceTo(ParameterType, mom)_
 _name: makeReferenceTo_
 _returns: void_
 _returns_description: _
-_parameters: ofParameter< ParameterType > mom_
+_parameters: ofReadOnlyParameter< ParameterType, OtherFriend > mom_
 _access: protected_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int newListener()
+
+<!--
+_syntax: newListener()_
+_name: newListener_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -548,78 +620,6 @@ _name: ofReadOnlyParameter_
 _returns: _
 _returns_description: _
 _parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofReadOnlyParameter(&p)
-
-<!--
-_syntax: ofReadOnlyParameter(&p)_
-_name: ofReadOnlyParameter_
-_returns: _
-_returns_description: _
-_parameters: ofParameter< ParameterType > &p_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofReadOnlyParameter(ParameterType, &p)
-
-<!--
-_syntax: ofReadOnlyParameter(ParameterType, &p)_
-_name: ofReadOnlyParameter_
-_returns: _
-_returns_description: _
-_parameters: ofReadOnlyParameter< ParameterType, Friend > &p_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1738,6 +1738,42 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string valueType()
+
+<!--
+_syntax: valueType()_
+_name: valueType_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

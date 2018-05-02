@@ -896,6 +896,114 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofVec4f(&vec)
+
+<!--
+_syntax: ofVec4f(&vec)_
+_name: ofVec4f_
+_returns: _
+_returns_description: _
+_parameters: const int &vec_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec4f(&vec)
+
+<!--
+_syntax: ofVec4f(&vec)_
+_name: ofVec4f_
+_returns: _
+_returns_description: _
+_parameters: const int &vec_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec4f(&vec)
+
+<!--
+_syntax: ofVec4f(&vec)_
+_name: ofVec4f_
+_returns: _
+_returns_description: _
+_parameters: const int &vec_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofVec4f one()
 
 <!--

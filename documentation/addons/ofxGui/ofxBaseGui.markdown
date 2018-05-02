@@ -565,14 +565,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getTextMesh(&text, x, y)
+###int getTextMesh()
 
 <!--
-_syntax: getTextMesh(&text, x, y)_
+_syntax: getTextMesh()_
 _name: getTextMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
-_parameters: const string &text, float x, float y_
+_parameters: _
 _access: protected_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -709,6 +709,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void loadFont(&fontSettings)
+
+<!--
+_syntax: loadFont(&fontSettings)_
+_name: loadFont_
+_returns: void_
+_returns_description: _
+_parameters: const ofTrueTypeFontSettings &fontSettings_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadFrom(&serializer)
 
 <!--
@@ -716,7 +752,7 @@ _syntax: loadFrom(&serializer)_
 _name: loadFrom_
 _returns: void_
 _returns_description: _
-_parameters: ofBaseSerializer &serializer_
+_parameters: T &serializer_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -853,14 +889,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void mouseEntered(&args)
+###void mouseEntered(&)
 
 <!--
-_syntax: mouseEntered(&args)_
+_syntax: mouseEntered(&)_
 _name: mouseEntered_
 _returns: void_
 _returns_description: _
-_parameters: ofMouseEventArgs &args_
+_parameters: ofMouseEventArgs &_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -889,14 +925,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void mouseExited(&args)
+###void mouseExited(&)
 
 <!--
-_syntax: mouseExited(&args)_
+_syntax: mouseExited(&)_
 _name: mouseExited_
 _returns: void_
 _returns_description: _
-_parameters: ofMouseEventArgs &args_
+_parameters: ofMouseEventArgs &_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1220,7 +1256,7 @@ _syntax: saveTo(&serializer)_
 _name: saveTo_
 _returns: void_
 _returns_description: _
-_parameters: ofBaseSerializer &serializer_
+_parameters: T &serializer_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1429,6 +1465,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setDefaultEventsPriority(eventsPriority)
+
+<!--
+_syntax: setDefaultEventsPriority(eventsPriority)_
+_name: setDefaultEventsPriority_
+_returns: void_
+_returns_description: _
+_parameters: ofEventOrder eventsPriority_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setDefaultFillColor(&color)
 
 <!--
@@ -1515,42 +1587,6 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setDefaultSerializer(serializer)
-
-<!--
-_syntax: setDefaultSerializer(serializer)_
-_name: setDefaultSerializer_
-_returns: void_
-_returns_description: _
-_parameters: shared_ptr< ofBaseFileSerializer > serializer_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
 _visible: True_
 _advanced: False_
 -->
@@ -2489,6 +2525,38 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofEventOrder defaultEventsPriority
+
+<!--
+_name: defaultEventsPriority_
+_type: ofEventOrder_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int  defaultHeight
 
 <!--
@@ -2724,38 +2792,6 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPtr< ofBaseFileSerializer >  serializer
-
-<!--
-_name: serializer_
-_type: ofPtr< ofBaseFileSerializer > _
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
 _advanced: False_
 -->
 

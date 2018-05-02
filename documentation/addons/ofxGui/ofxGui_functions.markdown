@@ -120,6 +120,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofxGuiSetDefaultEventsPriority(eventsPriority)
+
+<!--
+_syntax: ofxGuiSetDefaultEventsPriority(eventsPriority)_
+_name: ofxGuiSetDefaultEventsPriority_
+_returns: void_
+_returns_description: _
+_parameters: ofEventOrder eventsPriority_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofxGuiSetDefaultHeight(height)
 
 <!--
@@ -232,8 +267,43 @@ _syntax: ofxGuiSetFont(&fontPath, fontsize, _bAntiAliased = true, _bFullCharacte
 _name: ofxGuiSetFont_
 _returns: void_
 _returns_description: _
-_parameters: const string &fontPath, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=false, int dpi=0_
+_parameters: const string &fontPath, int fontsize, bool _bAntiAliased=true, bool _bFullCharacterSet=true, int dpi=0_
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxGuiSetFont(&fontSettings)
+
+<!--
+_syntax: ofxGuiSetFont(&fontSettings)_
+_name: ofxGuiSetFont_
+_returns: void_
+_returns_description: _
+_parameters: const ofTrueTypeFontSettings &fontSettings_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

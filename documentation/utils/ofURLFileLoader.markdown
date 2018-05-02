@@ -11,6 +11,8 @@ _extends: _
 ##InlineDescription
 
 
+loads a file from a URL using an HTTP request
+
 
 
 
@@ -52,7 +54,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+clear all active HTTP requests from the queue
 
 
 
@@ -88,7 +90,12 @@ _advanced: False_
 
 _inlined_description: _
 
+make an HTTP request
+blocks until a response is returned or the request times out
 
+Parameters:
+url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+\return HTTP response on success or failure
 
 
 
@@ -124,7 +131,13 @@ _advanced: False_
 
 _inlined_description: _
 
+make an asynchronous HTTP request
+will not block, placed in a queue and run using a background thread
 
+Parameters:
+url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+name optional key to use when sorting requests
+\return unique id for the active HTTP request
 
 
 
@@ -147,7 +160,7 @@ _syntax: handleRequest(&request)_
 _name: handleRequest_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: ofHttpRequest &request_
+_parameters: const ofHttpRequest &request_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -160,7 +173,45 @@ _advanced: False_
 
 _inlined_description: _
 
+blocks until a response is returned or the request times out
+\return HTTP response on success or failure
 
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int handleRequestAsync(&request)
+
+<!--
+_syntax: handleRequestAsync(&request)_
+_name: handleRequestAsync_
+_returns: int_
+_returns_description: _
+_parameters: const ofHttpRequest &request_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+this is a non-blocking version of handleRequest that will return a response in the urlResponse callback
+\return unique id of the active HTTP request
 
 
 
@@ -232,7 +283,10 @@ _advanced: False_
 
 _inlined_description: _
 
+remove an active HTTP request from the queue
 
+Parameters:
+unique HTTP request id
 
 
 
@@ -255,7 +309,7 @@ _syntax: saveAsync(&url, &path)_
 _name: saveAsync_
 _returns: int_
 _returns_description: _
-_parameters: const string &url, const string &path_
+_parameters: const string &url, const filesystem::path &path_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -268,7 +322,14 @@ _advanced: False_
 
 _inlined_description: _
 
+make an asynchronous HTTP request and save the response data to a file
+will not block, placed in a queue and run using a background thread
 
+Parameters:
+url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+path file path to save to
+
+Returns: unique id for the active HTTP request
 
 
 
@@ -291,7 +352,7 @@ _syntax: saveTo(&url, &path)_
 _name: saveTo_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: const string &url, const string &path_
+_parameters: const string &url, const filesystem::path &path_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -304,7 +365,13 @@ _advanced: False_
 
 _inlined_description: _
 
+make an HTTP request and save the response data to a file
+blocks until a response is returned or the request times out
 
+Parameters:
+url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+path file path to save to
+\return HTTP response on success or failure
 
 
 
@@ -340,7 +407,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+stop & remove all active and waiting HTTP requests
 
 
 

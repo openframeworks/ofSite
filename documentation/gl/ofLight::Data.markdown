@@ -3,7 +3,7 @@
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
 _extends: _
 -->
@@ -470,6 +470,38 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###weak_ptr< ofBaseGLRenderer > rendererP
+
+<!--
+_name: rendererP_
+_type: weak_ptr< ofBaseGLRenderer >_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+weak link back to renderer for which this light was created/setup
 
 
 

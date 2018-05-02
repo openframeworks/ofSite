@@ -3,7 +3,7 @@
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
 _extends: ofBaseVideoPlayer_
 -->
@@ -961,6 +961,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool isReady()
+
+<!--
+_syntax: isReady()_
+_name: isReady_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void killTexture()
 
 <!--
@@ -1187,6 +1223,42 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofAVFoundationPlayer & operator=(other)
+
+<!--
+_syntax: operator=(other)_
+_name: operator=_
+_returns: ofAVFoundationPlayer &_
+_returns_description: _
+_parameters: ofAVFoundationPlayer other_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1713,38 +1785,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool bTextureCacheSupported
-
-<!--
-_name: bTextureCacheSupported_
-_type: bool_
-_access: protected_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool bUpdatePixels
 
 <!--
@@ -1784,6 +1824,38 @@ _name: bUpdateTexture_
 _type: bool_
 _access: protected_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool bUseTextureCache
+
+<!--
+_name: bUseTextureCache_
+_type: bool_
+_access: protected_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_

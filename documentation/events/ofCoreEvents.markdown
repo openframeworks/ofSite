@@ -247,6 +247,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int getModifiers()
+
+<!--
+_syntax: getModifiers()_
+_name: getModifiers_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool getMousePressed(button)
 
 <!--
@@ -463,12 +499,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyDragEvent(info)
+###bool notifyDragEvent(info)
 
 <!--
 _syntax: notifyDragEvent(info)_
 _name: notifyDragEvent_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: ofDragInfo info_
 _access: public_
@@ -499,12 +535,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyDraw()
+###bool notifyDraw()
 
 <!--
 _syntax: notifyDraw()_
 _name: notifyDraw_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -535,12 +571,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyExit()
+###bool notifyExit()
 
 <!--
 _syntax: notifyExit()_
 _name: notifyExit_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -571,14 +607,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyKeyEvent(&keyEvent)
+###bool notifyKeyEvent(&keyEvent)
 
 <!--
 _syntax: notifyKeyEvent(&keyEvent)_
 _name: notifyKeyEvent_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: const ofKeyEventArgs &keyEvent_
+_parameters: ofKeyEventArgs &keyEvent_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -607,14 +643,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyKeyPressed(key, keycode, scancode, codepoint)
+###bool notifyKeyPressed(key, keycode, scancode, codepoint)
 
 <!--
 _syntax: notifyKeyPressed(key, keycode, scancode, codepoint)_
 _name: notifyKeyPressed_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: int key, int keycode, int scancode, int codepoint_
+_parameters: int key, int keycode, int scancode, uint32_t codepoint_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -643,14 +679,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyKeyReleased(key, keycode, scancode, codepoint)
+###bool notifyKeyReleased(key, keycode, scancode, codepoint)
 
 <!--
 _syntax: notifyKeyReleased(key, keycode, scancode, codepoint)_
 _name: notifyKeyReleased_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: int key, int keycode, int scancode, int codepoint_
+_parameters: int key, int keycode, int scancode, uint32_t codepoint_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -679,12 +715,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyMouseDragged(x, y, button)
+###bool notifyMouseDragged(x, y, button)
 
 <!--
 _syntax: notifyMouseDragged(x, y, button)_
 _name: notifyMouseDragged_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: int x, int y, int button_
 _access: public_
@@ -715,12 +751,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyMouseEntered(x, y)
+###bool notifyMouseEntered(x, y)
 
 <!--
 _syntax: notifyMouseEntered(x, y)_
 _name: notifyMouseEntered_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: int x, int y_
 _access: public_
@@ -751,14 +787,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyMouseEvent(&mouseEvent)
+###bool notifyMouseEvent(&mouseEvent)
 
 <!--
 _syntax: notifyMouseEvent(&mouseEvent)_
 _name: notifyMouseEvent_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: const ofMouseEventArgs &mouseEvent_
+_parameters: ofMouseEventArgs &mouseEvent_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -787,12 +823,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyMouseExited(x, y)
+###bool notifyMouseExited(x, y)
 
 <!--
 _syntax: notifyMouseExited(x, y)_
 _name: notifyMouseExited_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: int x, int y_
 _access: public_
@@ -823,12 +859,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyMouseMoved(x, y)
+###bool notifyMouseMoved(x, y)
 
 <!--
 _syntax: notifyMouseMoved(x, y)_
 _name: notifyMouseMoved_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: int x, int y_
 _access: public_
@@ -859,12 +895,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyMousePressed(x, y, button)
+###bool notifyMousePressed(x, y, button)
 
 <!--
 _syntax: notifyMousePressed(x, y, button)_
 _name: notifyMousePressed_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: int x, int y, int button_
 _access: public_
@@ -895,12 +931,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyMouseReleased(x, y, button)
+###bool notifyMouseReleased(x, y, button)
 
 <!--
 _syntax: notifyMouseReleased(x, y, button)_
 _name: notifyMouseReleased_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: int x, int y, int button_
 _access: public_
@@ -931,12 +967,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyMouseScrolled(x, y, scrollX, scrollY)
+###bool notifyMouseScrolled(x, y, scrollX, scrollY)
 
 <!--
 _syntax: notifyMouseScrolled(x, y, scrollX, scrollY)_
 _name: notifyMouseScrolled_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: int x, int y, float scrollX, float scrollY_
 _access: public_
@@ -967,12 +1003,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifySetup()
+###bool notifySetup()
 
 <!--
 _syntax: notifySetup()_
 _name: notifySetup_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1003,12 +1039,228 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyUpdate()
+###void notifyTouchCancelled(x, y, touchID)
+
+<!--
+_syntax: notifyTouchCancelled(x, y, touchID)_
+_name: notifyTouchCancelled_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int touchID_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void notifyTouchDoubleTap(x, y, touchID)
+
+<!--
+_syntax: notifyTouchDoubleTap(x, y, touchID)_
+_name: notifyTouchDoubleTap_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int touchID_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void notifyTouchDown(x, y, touchID)
+
+<!--
+_syntax: notifyTouchDown(x, y, touchID)_
+_name: notifyTouchDown_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int touchID_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void notifyTouchEvent(&touchEvent)
+
+<!--
+_syntax: notifyTouchEvent(&touchEvent)_
+_name: notifyTouchEvent_
+_returns: void_
+_returns_description: _
+_parameters: ofTouchEventArgs &touchEvent_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void notifyTouchMoved(x, y, touchID)
+
+<!--
+_syntax: notifyTouchMoved(x, y, touchID)_
+_name: notifyTouchMoved_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int touchID_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void notifyTouchUp(x, y, touchID)
+
+<!--
+_syntax: notifyTouchUp(x, y, touchID)_
+_name: notifyTouchUp_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int touchID_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool notifyUpdate()
 
 <!--
 _syntax: notifyUpdate()_
 _name: notifyUpdate_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1039,12 +1291,48 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notifyWindowResized(width, height)
+###bool notifyWindowMoved(x, y)
+
+<!--
+_syntax: notifyWindowMoved(x, y)_
+_name: notifyWindowMoved_
+_returns: bool_
+_returns_description: _
+_parameters: int x, int y_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool notifyWindowResized(width, height)
 
 <!--
 _syntax: notifyWindowResized(width, height)_
 _name: notifyWindowResized_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: int width, int height_
 _access: public_
@@ -1147,6 +1435,114 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setTimeModeFiltered(alpha)
+
+<!--
+_syntax: setTimeModeFiltered(alpha)_
+_name: setTimeModeFiltered_
+_returns: void_
+_returns_description: _
+_parameters: float alpha_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setTimeModeFixedRate(nanosecsPerFrame)
+
+<!--
+_syntax: setTimeModeFixedRate(nanosecsPerFrame)_
+_name: setTimeModeFixedRate_
+_returns: void_
+_returns_description: _
+_parameters: uint64_t nanosecsPerFrame_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setTimeModeSystem()
+
+<!--
+_syntax: setTimeModeSystem()_
+_name: setTimeModeSystem_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ##Variables
 
 
@@ -1190,6 +1586,38 @@ _name: bPreMouseNotSet_
 _type: bool_
 _access: private_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int charEvent
+
+<!--
+_name: charEvent_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -1375,6 +1803,38 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###chrono::nanoseconds fixedRateTimeNanos
+
+<!--
+_name: fixedRateTimeNanos_
+_type: chrono::nanoseconds_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofFpsCounter fps
 
 <!--
@@ -1482,6 +1942,38 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int modifiers
+
+<!--
+_name: modifiers_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -1919,6 +2411,38 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###enum TimeMode timeMode
+
+<!--
+_name: timeMode_
+_type: enum TimeMode_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofTimer timer
 
 <!--
@@ -2118,6 +2642,38 @@ _name: update_
 _type: ofEvent< ofEventArgs >_
 _access: public_
 _version_started: 006_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int windowMoved
+
+<!--
+_name: windowMoved_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_

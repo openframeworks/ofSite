@@ -115,14 +115,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint ofBezierPoint(&a, &b, &c, &d, t)
+###vectype ofBezierPoint(&a, &b, &c, &d, t)
 
 <!--
 _syntax: ofBezierPoint(&a, &b, &c, &d, t)_
 _name: ofBezierPoint_
-_returns: ofPoint_
+_returns: vectype_
 _returns_description: _
-_parameters: const ofPoint &a, const ofPoint &b, const ofPoint &c, const ofPoint &d, float t_
+_parameters: const vectype &a, const vectype &b, const vectype &c, const vectype &d, float t_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -143,7 +143,7 @@ c The second control point.
 d The end point of the curve.
 t an offset along the curve, normalized between 0 and 1.
 
-Returns: A ofPoint on the curve.
+Returns: A glm::vec3 on the curve.
 
 
 
@@ -159,14 +159,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint ofBezierTangent(&a, &b, &c, &d, t)
+###vectype ofBezierTangent(&a, &b, &c, &d, t)
 
 <!--
 _syntax: ofBezierTangent(&a, &b, &c, &d, t)_
 _name: ofBezierTangent_
-_returns: ofPoint_
+_returns: vectype_
 _returns_description: _
-_parameters: const ofPoint &a, const ofPoint &b, const ofPoint &c, const ofPoint &d, float t_
+_parameters: const vectype &a, const vectype &b, const vectype &c, const vectype &d, float t_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -188,7 +188,7 @@ c The second control point.
 d The end point of the curve.
 t an offset along the curve, normalized between 0 and 1.
 
-Returns: A ofPoint on the curve.
+Returns: A glm::vec3 on the curve.
 
 
 
@@ -260,14 +260,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint ofCurvePoint(&a, &b, &c, &d, t)
+###vectype ofCurvePoint(&a, &b, &c, &d, t)
 
 <!--
 _syntax: ofCurvePoint(&a, &b, &c, &d, t)_
 _name: ofCurvePoint_
-_returns: ofPoint_
+_returns: vectype_
 _returns_description: _
-_parameters: const ofPoint &a, const ofPoint &b, const ofPoint &c, const ofPoint &d, float t_
+_parameters: const vectype &a, const vectype &b, const vectype &c, const vectype &d, float t_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -288,7 +288,7 @@ c The end point of the curve.
 d The second control point.
 t an offset along the curve, normalized between 0 and 1.
 
-Returns: A ofPoint on the curve.
+Returns: A glm::vec3 on the curve.
 
 
 
@@ -304,14 +304,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint ofCurveTangent(&a, &b, &c, &d, t)
+###vectype ofCurveTangent(&a, &b, &c, &d, t)
 
 <!--
 _syntax: ofCurveTangent(&a, &b, &c, &d, t)_
 _name: ofCurveTangent_
-_returns: ofPoint_
+_returns: vectype_
 _returns_description: _
-_parameters: const ofPoint &a, const ofPoint &b, const ofPoint &c, const ofPoint &d, float t_
+_parameters: const vectype &a, const vectype &b, const vectype &c, const vectype &d, float t_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -332,7 +332,7 @@ c The end point of the curve.
 d The second control point.
 t an offset along the curve, normalized between 0 and 1.
 
-Returns: A ofPoint on the curve.
+Returns: A glm::vec3 on the curve.
 
 
 
@@ -605,7 +605,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Determine if a number is inside of a given range.
+Determine if a number is inside of a giv(float)(en range.
 
 Parameters:
 t The value to test.
@@ -613,89 +613,6 @@ min The lower bound of the range.
 max The upper bound of the range.
 
 Returns: true if the number t is the range of [min, max].
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofInsidePoly(x, y, &poly)
-
-<!--
-_syntax: ofInsidePoly(x, y, &poly)_
-_name: ofInsidePoly_
-_returns: bool_
-_returns_description: _
-_parameters: float x, float y, const vector< ofPoint > &poly_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Determine if an (x,y) coordinate is within the polygon defined by a vector of ofPoints.
-
-Parameters:
-x The x dimension of the coordinate.
-y The y dimension of the coordinate.
-poly a vector of ofPoints defining a polygon.
-
-Returns: True if the point defined by the coordinates is enclosed, false otherwise.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofInsidePoly(&p, &poly)
-
-<!--
-_syntax: ofInsidePoly(&p, &poly)_
-_name: ofInsidePoly_
-_returns: bool_
-_returns_description: _
-_parameters: const ofPoint &p, const vector< ofPoint > &poly_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Determine if an ofPoint is within the polygon defined by a vector of ofPoints.
-
-Parameters:
-p A point to check.
-poly A vector of ofPoints defining a polygon.
-
-Returns: True if the ofPoint is enclosed, false otherwise.
 
 
 
@@ -886,6 +803,63 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###typename enable_if<is_floating_point< Type>::value, bool >::type ofIsFloatEqual(&a, &b)
+
+<!--
+_syntax: ofIsFloatEqual(&a, &b)_
+_name: ofIsFloatEqual_
+_returns: typename enable_if<is_floating_point< Type>::value, bool >::type_
+_returns_description: _
+_parameters: const Type &a, const Type &b_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Compare two floating point types for equality.
+
+From C++ FAQ:
+
+Floating point arithmetic is different from real number arithmetic.
+Never use `==` to compare two floating point numbers.
+
+This solution is not completely symmetric, meaning it is possible for
+`ofIsFloatEqual(x, y) != ofIsFloatEqual(y, x)`. From a practical
+standpoint, this does not usually occur when the magnitudes of x and y are
+significantly larger than epsilon, but your mileage may vary.
+
+
+See also: https://isocpp.org/wiki/faq/newbie#floating-point-arith
+
+See also: https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+\tparam The floating point data type.
+
+Parameters:
+a The first floating point type variable to compare.
+b The second floating point type variable to compare.
+
+Returns: True if `std::abs(x - y) <= std::numeric_limits<Type>::epsilon() * std::abs(x)`.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float ofLerp(start,stop,amt)
 
 <!--
@@ -1047,7 +1021,7 @@ _syntax: ofLineSegmentIntersection(&line1Start, &line1End, &line2Start, &line2En
 _name: ofLineSegmentIntersection_
 _returns: bool_
 _returns_description: _
-_parameters: const ofPoint &line1Start, const ofPoint &line1End, const ofPoint &line2Start, const ofPoint &line2End, ofPoint &intersection_
+_parameters: const vectype &line1Start, const vectype &line1End, const vectype &line2Start, const vectype &line2End, vectype &intersection_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1066,7 +1040,7 @@ line1Start Starting point for first line.
 line1End End point for first line.
 line2Start Starting point for second line.
 line2End End point for second line.
-intersection ofPoint reference in which to store the computed intersection point.
+intersection glm::vec3 reference in which to store the computed intersection point.
 
 Returns: True if the lines intersect.
 
@@ -1349,77 +1323,7 @@ _syntax: ofNoise(&p)_
 _name: ofNoise_
 _returns: float_
 _returns_description: _
-_parameters: const ofVec2f &p_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a two dimensional Perlin noise value between 0.0...1.0.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofNoise(&p)
-
-<!--
-_syntax: ofNoise(&p)_
-_name: ofNoise_
-_returns: float_
-_returns_description: _
-_parameters: const ofVec3f &p_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a three dimensional Perlin noise value between 0.0...1.0.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofNoise(&p)
-
-<!--
-_syntax: ofNoise(&p)_
-_name: ofNoise_
-_returns: float_
-_returns_description: _
-_parameters: const ofVec4f &p_
+_parameters: const int &p_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -2077,77 +1981,7 @@ _syntax: ofSignedNoise(&p)_
 _name: ofSignedNoise_
 _returns: float_
 _returns_description: _
-_parameters: const ofVec2f &p_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a two dimensional Perlin noise value between -1.0...1.0.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofSignedNoise(&p)
-
-<!--
-_syntax: ofSignedNoise(&p)_
-_name: ofSignedNoise_
-_returns: float_
-_returns_description: _
-_parameters: const ofVec3f &p_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a three dimensional Perlin noise value between -1.0...1.0.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofSignedNoise(&p)
-
-<!--
-_syntax: ofSignedNoise(&p)_
-_name: ofSignedNoise_
-_returns: float_
-_returns_description: _
-_parameters: const ofVec4f &p_
+_parameters: const int &p_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _

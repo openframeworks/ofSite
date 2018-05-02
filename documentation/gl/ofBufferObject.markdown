@@ -144,7 +144,7 @@ _syntax: allocate(&data, usage)_
 _name: allocate_
 _returns: void_
 _returns_description: _
-_parameters: const vector< T > &data, GLenum usage_
+_parameters: const ofPixels_< T > &data, GLenum usage_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -180,7 +180,7 @@ _syntax: allocate(&data, usage)_
 _name: allocate_
 _returns: void_
 _returns_description: _
-_parameters: const ofPixels_< T > &data, GLenum usage_
+_parameters: const int &data, GLenum usage_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -353,6 +353,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void copyTo(&dstBuffer, readOffset, writeOffset, size)
+
+<!--
+_syntax: copyTo(&dstBuffer, readOffset, writeOffset, size)_
+_name: copyTo_
+_returns: void_
+_returns_description: _
+_parameters: ofBufferObject &dstBuffer, int readOffset, int writeOffset, size_t size_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###GLuint getId()
 
 <!--
@@ -374,6 +410,42 @@ _advanced: False_
 _inlined_description: _
 
 returns the id of the buffer if it's allocated or 0 otherwise
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void invalidate()
+
+<!--
+_syntax: invalidate()_
+_name: invalidate_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -656,7 +728,7 @@ _syntax: setData(&data, usage)_
 _name: setData_
 _returns: void_
 _returns_description: _
-_parameters: const vector< T > &data, GLenum usage_
+_parameters: const ofPixels_< T > &data, GLenum usage_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -669,8 +741,7 @@ _advanced: False_
 
 _inlined_description: _
 
-typed version of setData, same functionality but guesses the size from the size
-of the passed vector and size of the type
+
 
 
 
@@ -693,7 +764,7 @@ _syntax: setData(&data, usage)_
 _name: setData_
 _returns: void_
 _returns_description: _
-_parameters: const ofPixels_< T > &data, GLenum usage_
+_parameters: const int &data, GLenum usage_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -706,7 +777,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
+typed version of setData, same functionality but guesses the size from the size
+of the passed vector and size of the type
 
 
 
@@ -1021,7 +1093,7 @@ _syntax: updateData(offset, &data)_
 _name: updateData_
 _returns: void_
 _returns_description: _
-_parameters: GLintptr offset, const vector< T > &data_
+_parameters: GLintptr offset, const int &data_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1058,7 +1130,7 @@ _syntax: updateData(&data)_
 _name: updateData_
 _returns: void_
 _returns_description: _
-_parameters: const vector< T > &data_
+_parameters: const int &data_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

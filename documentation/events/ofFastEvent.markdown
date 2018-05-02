@@ -27,12 +27,12 @@ making it faster than a plain ofEvent
 
 
 
-###void notify(*sender, &param)
+###bool notify(*sender, &param)
 
 <!--
 _syntax: notify(*sender, &param)_
 _name: notify_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: const void *sender, T &param_
 _access: public_

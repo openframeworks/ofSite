@@ -168,7 +168,7 @@ Accepted modes are:
 void ofApp::draw(){
 
     ofColor colorOne(255, 0, 0);
-    ofColor colorTwo(0, 0, 255);
+    ofColor colorTwo(0, 0, 0);
 
     ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);
     // Sets the background to a circular gradient
@@ -181,7 +181,7 @@ void ofApp::draw(){
 void ofApp::draw(){
 
     ofColor colorOne(255, 0, 0);
-    ofColor colorTwo(0, 0, 255);
+    ofColor colorTwo(0, 0, 0);
 
     ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_LINEAR);
       // Sets the background to a linear gradient
@@ -194,7 +194,7 @@ void ofApp::draw(){
 void ofApp::draw(){
 
     ofColor colorOne(255, 0, 0);
-    ofColor colorTwo(0, 0, 255);
+    ofColor colorTwo(0, 0, 0);
 
     ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_BAR);
       // Sets the background to a bar gradient
@@ -466,7 +466,7 @@ _syntax: ofBezierVertex(&p1, &p2, &p3)_
 _name: ofBezierVertex_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p1, const ofPoint &p2, const ofPoint &p3_
+_parameters: const int &p1, const int &p2, const int &p3_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -580,7 +580,7 @@ void ofApp::draw() {
 
 ofClear() is based on [glClear][2].
 
-[1]: /documentation/gl/ofFbo.html
+[1]: http://www.openframeworks.cc/documentation/gl/ofFbo.html
 [2]: http://www.opengl.org/sdk/docs/man/xhtml/glClear.xml
 
 
@@ -811,7 +811,7 @@ _syntax: ofCurveVertex(&p)_
 _name: ofCurveVertex_
 _returns: void_
 _returns_description: _
-_parameters: ofPoint &p_
+_parameters: const int &p_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -881,7 +881,7 @@ _syntax: ofCurveVertices(&curvePoints)_
 _name: ofCurveVertices_
 _returns: void_
 _returns_description: _
-_parameters: const vector< ofPoint > &curvePoints_
+_parameters: const int &curvePoints_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -893,8 +893,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a curve through a series of vertices stored as a vector of
-ofPoints. Should be called between ofBeginShape() and ofEndShape().
+
 
 
 
@@ -1324,7 +1323,7 @@ _syntax: ofDrawBitmapString(&textString, &p)_
 _name: ofDrawBitmapString_
 _returns: void_
 _returns_description: _
-_parameters: const T &textString, const ofPoint &p_
+_parameters: const T &textString, const int &p_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1336,7 +1335,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\}
+
 
 
 
@@ -1451,14 +1450,49 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawBitmapStringHighlight(text, &position, &background = ofColor::black, &foreground = ofColor::white)
+###void ofDrawBitmapString(&textString, &p)
 
 <!--
-_syntax: ofDrawBitmapStringHighlight(text, &position, &background = ofColor::black, &foreground = ofColor::white)_
+_syntax: ofDrawBitmapString(&textString, &p)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const string &textString, const int &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapStringHighlight(text, &position, &background, &foreground)
+
+<!--
+_syntax: ofDrawBitmapStringHighlight(text, &position, &background, &foreground)_
 _name: ofDrawBitmapStringHighlight_
 _returns: void_
 _returns_description: _
-_parameters: string text, const ofPoint &position, const ofColor &background=black, const ofColor &foreground=white_
+_parameters: string text, const int &position, const ofColor &background, const ofColor &foreground_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1493,7 +1527,7 @@ _syntax: ofDrawBitmapStringHighlight(text, x, y, &background = ofColor::black, &
 _name: ofDrawBitmapStringHighlight_
 _returns: void_
 _returns_description: _
-_parameters: string text, int x, int y, const ofColor &background=black, const ofColor &foreground=white_
+_parameters: string text, int x, int y, const ofColor &background, const ofColor &foreground_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1607,7 +1641,7 @@ _syntax: ofDrawCircle(&p, radius)_
 _name: ofDrawCircle_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p, float radius_
+_parameters: const int &p, float radius_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -1789,7 +1823,7 @@ _syntax: ofDrawEllipse(&p, width, height)_
 _name: ofDrawEllipse_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p, float width, float height_
+_parameters: const int &p, float width, float height_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -1899,7 +1933,7 @@ _syntax: ofDrawLine(&p1, &p2)_
 _name: ofDrawLine_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p1, const ofPoint &p2_
+_parameters: const int &p1, const int &p2_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -1975,14 +2009,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawRectRounded(&p, w, h, r)
+###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
 
 <!--
-_syntax: ofDrawRectRounded(&p, w, h, r)_
+_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
 _name: ofDrawRectRounded_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p, float w, float h, float r_
+_parameters: const int &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -1994,16 +2028,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a rectangle from point p with a given width, height and radius of
-rounded corners.
 
-~~~~{.cpp}
-void ofApp::draw(){
-    ofPoint p;
-    p.set ( 10, 10 );
-    ofDrawRectRounded( p, 100, 100, 10 );
-}
-~~~~
 
 
 
@@ -2103,14 +2128,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+###void ofDrawRectRounded(&p, w, h, r)
 
 <!--
-_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_syntax: ofDrawRectRounded(&p, w, h, r)_
 _name: ofDrawRectRounded_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_parameters: const int &p, float w, float h, float r_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -2122,14 +2147,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a rounded rectangle from point X, Y, at depth Z with a given width,
-height and radius of rounded corners.
 
-~~~~{.cpp}
-void ofApp::draw(){
-    ofDrawRectRounded(10, 10, 10, 100, 100, 10);
-}
-~~~~
 
 
 
@@ -2257,7 +2275,7 @@ _inlined_description: _
 Draws a rectangle from point x,y with a given width and height.
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofDrawRectangle(10,10,100,100);
+    ofDrawRect(10,10,100,100);
 }
 ~~~~
 
@@ -2328,7 +2346,7 @@ _syntax: ofDrawRectangle(&p, w, h)_
 _name: ofDrawRectangle_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p, float w, float h_
+_parameters: const int &p, float w, float h_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -2340,16 +2358,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws an rectangle from point p, with a given width and height.
-~~~~{.cpp}
-void ofApp::draw(){
-    ofPoint p;      // create a point P
-    p.x = 10;       // set the x of the point
-    p.y = 10;       // set the y of the point
 
-    ofDrawRectangle(p, 80, 80); // Draw the rectangle
-}
-~~~~
 
 
 
@@ -2487,7 +2496,7 @@ _syntax: ofDrawTriangle(&p1, &p2, &p3)_
 _name: ofDrawTriangle_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p1, const ofPoint &p2, const ofPoint &p3_
+_parameters: const int &p1, const int &p2, const int &p3_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -2949,7 +2958,7 @@ Draw shapes filled with the current draw color.
 void ofApp::draw(){
     ofSetColor(0,0,255);
     ofFill();
-    ofDrawRectangle(10,10,100,100);  //draws the rectangle filled in blue
+    ofDrawRect(10,10,100,100);  //draws the rectangle filled in blue
 }
 ~~~~
 
@@ -3079,14 +3088,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 ofGetCurrentMatrix(matrixMode_)
+###int ofGetCurrentMatrix()
 
 <!--
-_syntax: ofGetCurrentMatrix(matrixMode_)_
+_syntax: ofGetCurrentMatrix()_
 _name: ofGetCurrentMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
-_parameters: ofMatrixMode matrixMode_
+_parameters: _
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -3114,12 +3123,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 ofGetCurrentNormalMatrix()
+###int ofGetCurrentNormalMatrix()
 
 <!--
 _syntax: ofGetCurrentNormalMatrix()_
 _name: ofGetCurrentNormalMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: 0.9.0_
@@ -3154,12 +3163,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 ofGetCurrentOrientationMatrix()
+###int ofGetCurrentOrientationMatrix()
 
 <!--
 _syntax: ofGetCurrentOrientationMatrix()_
 _name: ofGetCurrentOrientationMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: 0.9.0_
@@ -3195,12 +3204,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 ofGetCurrentViewMatrix()
+###int ofGetCurrentViewMatrix()
 
 <!--
 _syntax: ofGetCurrentViewMatrix()_
 _name: ofGetCurrentViewMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
 _parameters: _
 _version_started: 0.9.0_
@@ -3588,7 +3597,7 @@ _syntax: ofLoadMatrix(&m)_
 _name: ofLoadMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const ofMatrix4x4 &m_
+_parameters: const int &m_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -3658,7 +3667,7 @@ _syntax: ofLoadViewMatrix(&m)_
 _name: ofLoadViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const ofMatrix4x4 &m_
+_parameters: const int &m_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -3693,7 +3702,7 @@ _syntax: ofMultMatrix(&m)_
 _name: ofMultMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const ofMatrix4x4 &m_
+_parameters: const int &m_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -3763,7 +3772,7 @@ _syntax: ofMultViewMatrix(&m)_
 _name: ofMultViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const ofMatrix4x4 &m_
+_parameters: const int &m_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -4031,7 +4040,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Restores the viewport and matrix settings set by ofPushView()
 
 
 
@@ -4072,10 +4081,10 @@ movements in some graphic objects. ofPopMatrix needs to be called after.
 In the following example we only rotate the square.
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofPushMatrix();             // push the current coordinate position
-    ofRotateX(90);              // change the coordinate system
-    ofDrawRea10,10,40,40);      // draw a rect
-    ofPopMatrix();              // recall the pushed coordinate position
+    ofPushMatrix();         // push the current coordinate position
+    ofRotateX(90);          // change the coordinate system
+    ofDrawRea10,10,40,40);  // draw a rect
+    ofPopMatrix()           // recall the pushed coordinate position
     ofDrawCircle(10, 10, 5);    // draw a circle
 }
 ~~~~
@@ -4186,9 +4195,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\}
-\name View Setup
-\{
+Stores the current viewport and matrix settings
 
 
 
@@ -4204,15 +4211,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRotate(degrees,vecX,vecY,vecZ)
+###void ofRotateDeg(degrees, vecX, vecY, vecZ)
 
 <!--
-_syntax: ofRotate(degrees,vecX,vecY,vecZ)_
-_name: ofRotate_
+_syntax: ofRotateDeg(degrees, vecX, vecY, vecZ)_
+_name: ofRotateDeg_
 _returns: void_
 _returns_description: _
 _parameters: float degrees, float vecX, float vecY, float vecZ_
-_version_started: 006_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4247,15 +4254,7 @@ vecZ specifies the z coordinates of a vector
 
 _description: _
 
-ofRotate produces a rotation of angle "degrees" around the vector (vecX,vecY,vecZ).
-"degrees"specifies the angle of rotation, in degrees. vecX, vecY, vecZ specify the x, y, and z coordinates of a vector, respectively.
-All graphics drawn after ofRotate is called are rotated. Use ofPushMatrix and ofPopMatrix to save and restore the unrotated coordinate system.
-~~~~{.cpp}
-void ofApp::draw(){
-    ofRotate(50, 1, 0.5, 0); //rotates the coordinate system 50 degrees along the x-axis and 25 degrees on the y-axis
-    ofDrawRectangle(20,20,100,100);
-}
-~~~~
+
 
 
 
@@ -4263,15 +4262,15 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofRotate(degrees)
+###void ofRotateDeg(degrees)
 
 <!--
-_syntax: ofRotate(degrees)_
-_name: ofRotate_
+_syntax: ofRotateDeg(degrees)_
+_name: ofRotateDeg_
 _returns: void_
 _returns_description: _
 _parameters: float degrees_
-_version_started: _
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4298,15 +4297,101 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRotateX(degrees)
+###void ofRotateRad(degrees, vecX, vecY, vecZ)
 
 <!--
-_syntax: ofRotateX(degrees)_
-_name: ofRotateX_
+_syntax: ofRotateRad(degrees, vecX, vecY, vecZ)_
+_name: ofRotateRad_
+_returns: void_
+_returns_description: _
+_parameters: float degrees, float vecX, float vecY, float vecZ_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Produces a rotation around the vector (vecX,vecY,vecZ).
+
+All graphics drawn after ofRotate is called are rotated. Use ofPushMatrix()
+and ofPopMatrix() to save and restore the unrotated coordinate system.
+~~~~{.cpp}
+void ofApp::draw(){
+    ofRotate(50, 1, 0.5, 0); //rotates the coordinate system 50 degrees along the x-axis and 25 degrees on the y-axis
+    ofDrawRectangle(20,20,100,100);
+}
+~~~~
+
+
+Parameters:
+degrees Specifies the angle of rotation, in degrees.
+vecX specifies the x coordinates of a vector
+vecY specifies the y coordinates of a vector
+vecZ specifies the z coordinates of a vector
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRotateRad(degrees)
+
+<!--
+_syntax: ofRotateRad(degrees)_
+_name: ofRotateRad_
 _returns: void_
 _returns_description: _
 _parameters: float degrees_
-_version_started: 006_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate around the z-axis
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRotateXDeg(degrees)
+
+<!--
+_syntax: ofRotateXDeg(degrees)_
+_name: ofRotateXDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4322,7 +4407,7 @@ system represented by the vector (1,0,0).
 ~~~~{.cpp}
 void ofApp::draw(){
     ofRotateX(45); //rotates the coordinate system 45 degrees around the x-axis
-    ofDrawRea20,20,100,100);
+    ofDrawRectangle(20,20,100,100);
 }
 ~~~~
 
@@ -4335,13 +4420,7 @@ degrees Specifies the angle of rotation, in degrees.
 
 _description: _
 
-ofRotateX produces a rotation of angle "degrees" around the X-axis of our coordinate system represented by the vector (1,0,0)."degrees"specifies the angle of rotation, in degrees.
-~~~~{.cpp}
-void ofApp::draw(){
-    ofRotateX(45); //rotates the coordinate system 45 degrees around the x-axis
-    ofDrawRectangle(20,20,100,100);
-}
-~~~~
+
 
 
 
@@ -4349,15 +4428,60 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofRotateY(degrees)
+###void ofRotateXRad(degrees)
 
 <!--
-_syntax: ofRotateY(degrees)_
-_name: ofRotateY_
+_syntax: ofRotateXRad(degrees)_
+_name: ofRotateXRad_
 _returns: void_
 _returns_description: _
 _parameters: float degrees_
-_version_started: 006_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Produces a rotation around the X-axis of our coordinate
+system represented by the vector (1,0,0).
+~~~~{.cpp}
+void ofApp::draw(){
+    ofRotateX(45); //rotates the coordinate system 45 degrees around the x-axis
+    ofDrawRectangle(20,20,100,100);
+}
+~~~~
+
+Parameters:
+degrees Specifies the angle of rotation, in degrees.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRotateYDeg(degrees)
+
+<!--
+_syntax: ofRotateYDeg(degrees)_
+_name: ofRotateYDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4369,10 +4493,10 @@ _advanced: False_
 _inlined_description: _
 
 Produces a rotation around the Y-axis of our coordinate
-system represented by the vector (1,0,0).
+system represented by the vector (0,1,0).
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofRotateY(45); //rotates the coordinate system 45 degrees around the x-axis
+    ofRotateY(45); //rotates the coordinate system 45 degrees around the y-axis
     ofDrawRectangle(20,20,100,100);
 }
 ~~~~
@@ -4386,14 +4510,7 @@ degrees Specifies the angle of rotation, in degrees.
 
 _description: _
 
-ofRotateY produces a rotation of angle "degrees" around the Y-axis of our coordinate system represented by the vector (0,1,0).
-"degrees"specifies the angle of rotation, in degrees.
-~~~~{.cpp}
-void ofApp::draw(){
-    ofRotateY(45); //rotates the coordinate system 45 degrees around the x-axis
-    ofDrawRectangle(20,20,100,100);
-}
-~~~~
+
 
 
 
@@ -4401,15 +4518,60 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofRotateZ(degrees)
+###void ofRotateYRad(degrees)
 
 <!--
-_syntax: ofRotateZ(degrees)_
-_name: ofRotateZ_
+_syntax: ofRotateYRad(degrees)_
+_name: ofRotateYRad_
 _returns: void_
 _returns_description: _
 _parameters: float degrees_
-_version_started: 006_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Produces a rotation around the Y-axis of our coordinate
+system represented by the vector (0,1,0).
+~~~~{.cpp}
+void ofApp::draw(){
+    ofRotateY(45); //rotates the coordinate system 45 degrees around the y-axis
+    ofDrawRectangle(20,20,100,100);
+}
+~~~~
+
+Parameters:
+degrees Specifies the angle of rotation, in degrees.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRotateZDeg(degrees)
+
+<!--
+_syntax: ofRotateZDeg(degrees)_
+_name: ofRotateZDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4421,11 +4583,11 @@ _advanced: False_
 _inlined_description: _
 
 Produces a rotation around the Z-axis of our coordinate
-system represented by the vector (1,0,0).
+system represented by the vector (0,0,1).
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofRotateZ(45); //rotates the coordinate system 45 degrees around the x-axis
-    ofDrawRea20,20,100,100);
+    ofRotateZ(45); //rotates the coordinate system 45 degrees around the z-axis
+    ofDrawRectangle(20,20,100,100);
 }
 ~~~~
 
@@ -4438,14 +4600,52 @@ degrees Specifies the angle of rotation, in degrees.
 
 _description: _
 
-ofRotateZ produces a rotation of angle "degrees" around the Z-axis of our coordinate system represented by the vector (0,0,1).
-"degrees"specifies the angle of rotation, in degrees.
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRotateZRad(degrees)
+
+<!--
+_syntax: ofRotateZRad(degrees)_
+_name: ofRotateZRad_
+_returns: void_
+_returns_description: _
+_parameters: float degrees_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Produces a rotation around the Z-axis of our coordinate
+system represented by the vector (0,0,1).
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofRotateZ(45); //rotates the coordinate system 45 degrees around the x-axis
+    ofRotateZ(45); //rotates the coordinate system 45 degrees around the z-axis
     ofDrawRectangle(20,20,100,100);
 }
 ~~~~
+
+Parameters:
+degrees Specifies the angle of rotation, in degrees.
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -4496,6 +4696,76 @@ Rectangle width will be now 20px heigh!
 
 <!----------------------------------------------------------------------------->
 
+###void ofScale(amount)
+
+<!--
+_syntax: ofScale(amount)_
+_name: ofScale_
+_returns: void_
+_returns_description: _
+_parameters: float amount_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Scale along the X, Y and Z axis with the same amount.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofScale(&p)
+
+<!--
+_syntax: ofScale(&p)_
+_name: ofScale_
+_returns: void_
+_returns_description: _
+_parameters: const int &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofSetBackgroundAuto(bAuto)
 
 <!--
@@ -4526,7 +4796,7 @@ void ofApp::setup(){
 void ofApp::draw(){
     if(ofGetFrameNum() % 10 == 0){
         // draws a black background every 10 frames
-        ofSetBackground(0,0,0);
+        ofSetBackgroundColor(0,0,0);
     }
 }
 ~~~~
@@ -5124,11 +5394,18 @@ Set the bitmap drawing mode
 
 Valid modes:
 
-    OF_BITMAPMODE_SIMPLE
-    OF_BITMAPMODE_SCREEN
-    OF_BITMAPMODE_VIEWPORT
-    OF_BITMAPMODE_MODEL
-    OF_BITMAPMODE_MODEL_BILLBOARD
+OF_BITMAPMODE_SCREEN: this is the default mode. It projects the 3d prosition onto
+the screen so the letters always look the same size but can be positioned in any 3d coordinate.
+
+OF_BITMAPMODE_VIEWPORT: does the same as screen but uses the current viewport instead
+of the full window if it's different.
+
+OF_BITMAPMODE_MODEL: uses real 3d coordinates so the text will look scaled if it's not in z=0
+
+OF_BITMAPMODE_MODEL_BILLBOARD: uses real 3d coordinates but the text always faces the camera.
+
+OF_BITMAPMODE_SIMPLE: only does 2d and the z coordinate is just disacarded, so if z is not 0
+the position in which it'll be drawn will be wrong.
 
 
 
@@ -5554,6 +5831,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###string ofToString(&)
+
+<!--
+_syntax: ofToString(&)_
+_name: ofToString_
+_returns: string_
+_returns_description: _
+_parameters: const T &_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofTranslate(x,y,z)
 
 <!--
@@ -5613,7 +5925,7 @@ _syntax: ofTranslate(&p)_
 _name: ofTranslate_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p_
+_parameters: const int &p_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -5730,7 +6042,7 @@ _syntax: ofVertex(&p)_
 _name: ofVertex_
 _returns: void_
 _returns_description: _
-_parameters: ofPoint &p_
+_parameters: const int &p_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -5765,7 +6077,7 @@ _syntax: ofVertices(&polyPoints)_
 _name: ofVertices_
 _returns: void_
 _returns_description: _
-_parameters: const vector< ofPoint > &polyPoints_
+_parameters: const int &polyPoints_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -5873,3 +6185,4 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
+

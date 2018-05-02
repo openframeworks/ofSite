@@ -243,12 +243,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getScreenSize()
+###int getScreenSize()
 
 <!--
 _syntax: getScreenSize()_
 _name: getScreenSize_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -315,12 +315,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getWindowPosition()
+###int getWindowPosition()
 
 <!--
 _syntax: getWindowPosition()_
 _name: getWindowPosition_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -351,12 +351,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getWindowSize()
+###int getWindowSize()
 
 <!--
 _syntax: getWindowSize()_
 _name: getWindowSize_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_

@@ -5,7 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
-_extends: ofBaseHasPixels, ofBaseUpdates_
+_extends: ofBaseUpdates_
 -->
 
 ##InlineDescription

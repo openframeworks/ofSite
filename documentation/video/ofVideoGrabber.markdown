@@ -532,12 +532,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofTexture > & getTexturePlanes()
+###int & getTexturePlanes()
 
 <!--
 _syntax: getTexturePlanes()_
 _name: getTexturePlanes_
-_returns: vector< ofTexture > &_
+_returns: int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -568,12 +568,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const vector< ofTexture > & getTexturePlanes()
+###const int & getTexturePlanes()
 
 <!--
 _syntax: getTexturePlanes()_
 _name: getTexturePlanes_
-_returns: const vector< ofTexture > &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -807,12 +807,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofVideoDevice > listDevices()
+###int listDevices()
 
 <!--
 _syntax: listDevices()_
 _name: listDevices_
-_returns: vector< ofVideoDevice >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_

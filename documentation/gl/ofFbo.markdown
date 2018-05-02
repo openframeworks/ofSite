@@ -151,7 +151,7 @@ _syntax: allocate(settings)_
 _name: allocate_
 _returns: void_
 _returns_description: _
-_parameters: ofFbo::Settings settings_
+_parameters: ofFboSettings settings_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -216,14 +216,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void begin(setupScreen = true)
+###void begin(mode)
 
 <!--
-_syntax: begin(setupScreen = true)_
+_syntax: begin(mode)_
 _name: begin_
 _returns: void_
 _returns_description: _
-_parameters: bool setupScreen=true_
+_parameters: ofFboMode mode_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -236,15 +236,33 @@ _advanced: False_
 
 _inlined_description: _
 
-   Sets up the framebuffer and binds it for rendering.
+Sets up the framebuffer and binds it for rendering.
+
+The mode parameter indicates which defaults are set when binding
+the fbo.
+
+The default OF_FBOMODE_PERSPECTIVE | OF_FBOMODE_MATRIXFLIP
+will set the screen perspective to the OF default for the fbo size, the
+correct viewport to cover the full fbo and will flip the orientation
+matrix in y so when drawing the fbo later or accesing it from a shader
+it's correctly oriented
+
+Passing OF_FBOMODE_PERSPECTIVE will only set perspective and viewport
+
+Passing OF_FBOMODE_MATRIXFLIP won't set the perspective but will flip
+the matrix.
+
+Passing OF_FBOMODE_NODEFAULTS won't change anything and just bind the fbo
+and set it as current rendering surface in OF
+
 
 Warning:  This is a convenience method, and is considered unsafe
           in multi-window and/or multi-renderer scenarios.
           If you use more than one renderer, use each renderer's
-          explicit void ofBaseGLRenderer::begin(const ofFbo & fbo, bool setupPerspective)
+          explicit void ofBaseGLRenderer::begin(const ofFbo & fbo, ofFboMode mode)
           method instead.
 
-See also:       void ofBaseGLRenderer::begin(const ofFbo & fbo, bool setupPerspective)
+See also:       void ofBaseGLRenderer::begin(const ofFbo & fbo, ofFboMode mode)
 
 
 
@@ -310,6 +328,7 @@ fbo.getTextureReference().bind();
 mesh.draw();
 fbo.getTextureReference().unbind();
 ```
+
 
 
 
@@ -409,6 +428,235 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearColorBuffer(&color)
+
+<!--
+_syntax: clearColorBuffer(&color)_
+_name: clearColorBuffer_
+_returns: void_
+_returns_description: _
+_parameters: const ofFloatColor &color_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+glClearBufferfv(GL_COLOR, 0...)
+
+@see: https://www.opengl.org/wiki/GLAPI/glClearBuffer
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearColorBuffer(buffer_idx, &color)
+
+<!--
+_syntax: clearColorBuffer(buffer_idx, &color)_
+_name: clearColorBuffer_
+_returns: void_
+_returns_description: _
+_parameters: size_t buffer_idx, const ofFloatColor &color_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+glClearBufferfv(GL_COLOR, buffer_idx...)
+
+@see: https://www.opengl.org/wiki/GLAPI/glClearBuffer
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearDepthBuffer(value)
+
+<!--
+_syntax: clearDepthBuffer(value)_
+_name: clearDepthBuffer_
+_returns: void_
+_returns_description: _
+_parameters: float value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+glClearBufferfv(GL_DEPTH...)
+
+@see: https://www.opengl.org/wiki/GLAPI/glClearBuffer
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearDepthStencilBuffer(depth, stencil)
+
+<!--
+_syntax: clearDepthStencilBuffer(depth, stencil)_
+_name: clearDepthStencilBuffer_
+_returns: void_
+_returns_description: _
+_parameters: float depth, int stencil_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+glClearBufferfi(GL_DEPTH_STENCIL...)
+
+@see: https://www.opengl.org/wiki/GLAPI/glClearBuffer
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clearStencilBuffer(value)
+
+<!--
+_syntax: clearStencilBuffer(value)_
+_name: clearStencilBuffer_
+_returns: void_
+_returns_description: _
+_parameters: int value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+glClearBufferiv(GL_STENCIL...)
+
+@see: https://www.opengl.org/wiki/GLAPI/glClearBuffer
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void copyTo(&buffer)
+
+<!--
+_syntax: copyTo(&buffer)_
+_name: copyTo_
+_returns: void_
+_returns_description: _
+_parameters: ofBufferObject &buffer_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Copy the fbo to an ofBufferObject.
+
+Parameters:
+buffer the target buffer to copy to.
 
 
 
@@ -1489,6 +1737,42 @@ Copies all data from the mom fbo
 
 <!----------------------------------------------------------------------------->
 
+### ofFbo(&&mom)
+
+<!--
+_syntax: ofFbo(&&mom)_
+_name: ofFbo_
+_returns: _
+_returns_description: _
+_parameters: ofFbo &&mom_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofFbo & operator=(&fbo)
 
 <!--
@@ -1518,6 +1802,42 @@ _inlined_description: _
 _description: _
 
 This overloaded operator allows you to set one fbo from another using the = operator. Very convenient.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofFbo & operator=(&&fbo)
+
+<!--
+_syntax: operator=(&&fbo)_
+_name: operator=_
+_returns: ofFbo &_
+_returns_description: _
+_parameters: ofFbo &&fbo_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1748,7 +2068,7 @@ _syntax: setActiveDrawBuffers(&i)_
 _name: setActiveDrawBuffers_
 _returns: void_
 _returns_description: _
-_parameters: const vector< int > &i_
+_parameters: const int &i_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _

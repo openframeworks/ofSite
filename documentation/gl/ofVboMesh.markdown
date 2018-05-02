@@ -5,7 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
-_extends: ofMesh_
+_extends: _
 -->
 
 ##InlineDescription
@@ -506,7 +506,7 @@ _syntax: ofVboMesh(&mom)_
 _name: ofVboMesh_
 _returns: _
 _returns_description: _
-_parameters: const ofMesh &mom_
+_parameters: const int &mom_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -542,7 +542,7 @@ _syntax: operator=(&mom)_
 _name: operator=_
 _returns: void_
 _returns_description: _
-_parameters: const ofMesh &mom_
+_parameters: const int &mom_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

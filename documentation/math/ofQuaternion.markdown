@@ -791,6 +791,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofQuaternion(&q)
+
+<!--
+_syntax: ofQuaternion(&q)_
+_name: ofQuaternion_
+_returns: _
+_returns_description: _
+_parameters: const int &q_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool operator!=(&q)
 
 <!--
@@ -1331,42 +1367,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ostream & operator<<(&os)
-
-<!--
-_syntax: operator<<(&os)_
-_name: operator<<_
-_returns: ostream &_
-_returns_description: _
-_parameters: ostream &os_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofQuaternion & operator=(&q)
 
 <!--
@@ -1412,42 +1412,6 @@ _name: operator==_
 _returns: bool_
 _returns_description: _
 _parameters: const ofQuaternion &q_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###istream & operator>>(&is)
-
-<!--
-_syntax: operator>>(&is)_
-_name: operator>>_
-_returns: istream &_
-_returns_description: _
-_parameters: istream &is_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

@@ -5,7 +5,7 @@
 _visible: True_
 _advanced: True_
 _istemplated: False_
-_extends: ofBaseVideo, ofBaseDraws, ofBaseHasTexturePlanes, ofBaseHasPixels_
+_extends: ofBaseVideo, ofBaseDraws, ofBaseHasTexturePlanes_
 -->
 
 ##InlineDescription

@@ -15,6 +15,76 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
+###void ofDisableGLDebugLog()
+
+<!--
+_syntax: ofDisableGLDebugLog()_
+_name: ofDisableGLDebugLog_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofEnableGLDebugLog()
+
+<!--
+_syntax: ofEnableGLDebugLog()_
+_name: ofEnableGLDebugLog_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool ofGLCheckExtension(searchName)
 
 <!--
@@ -59,6 +129,41 @@ _returns: string_
 _returns_description: _
 _parameters: int major, int minor_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofGLSupportedExtensions()
+
+<!--
+_syntax: ofGLSupportedExtensions()_
+_name: ofGLSupportedExtensions_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -155,6 +260,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int ofGetGLFormat(&pixels)
+
+<!--
+_syntax: ofGetGLFormat(&pixels)_
+_name: ofGetGLFormat_
+_returns: int_
+_returns_description: _
+_parameters: const ofPixels_< T > &pixels_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int ofGetGLFormatFromInternal(glInternalFormat)
 
 <!--
@@ -162,7 +302,7 @@ _syntax: ofGetGLFormatFromInternal(glInternalFormat)_
 _name: ofGetGLFormatFromInternal_
 _returns: int_
 _returns_description: _
-_parameters: int glInternalFormat_
+_parameters: int gInternalFormat_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -225,6 +365,111 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int ofGetGLInternalFormat(&pixels)
+
+<!--
+_syntax: ofGetGLInternalFormat(&pixels)_
+_name: ofGetGLInternalFormat_
+_returns: int_
+_returns_description: _
+_parameters: const ofPixels &pixels_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofGetGLInternalFormat(&pixels)
+
+<!--
+_syntax: ofGetGLInternalFormat(&pixels)_
+_name: ofGetGLInternalFormat_
+_returns: int_
+_returns_description: _
+_parameters: const ofShortPixels &pixels_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofGetGLInternalFormat(&pixels)
+
+<!--
+_syntax: ofGetGLInternalFormat(&pixels)_
+_name: ofGetGLInternalFormat_
+_returns: int_
+_returns_description: _
+_parameters: const ofFloatPixels &pixels_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int ofGetGLInternalFormatFromPixelFormat(pixelFormat)
 
 <!--
@@ -234,6 +479,41 @@ _returns: int_
 _returns_description: _
 _parameters: ofPixelFormat pixelFormat_
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofGetGLInternalFormatName(glInternalFormat)
+
+<!--
+_syntax: ofGetGLInternalFormatName(glInternalFormat)_
+_name: ofGetGLInternalFormatName_
+_returns: string_
+_returns_description: _
+_parameters: int glInternalFormat_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -365,190 +645,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetGlFormat(&pixels)
+###int ofGetGLType(&pixels)
 
 <!--
-_syntax: ofGetGlFormat(&pixels)_
-_name: ofGetGlFormat_
-_returns: int_
-_returns_description: _
-_parameters: const ofPixels_< T > &pixels_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofGetGlInternalFormat(&pix)
-
-<!--
-_syntax: ofGetGlInternalFormat(&pix)_
-_name: ofGetGlInternalFormat_
-_returns: int_
-_returns_description: _
-_parameters: const ofPixels &pix_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofGetGlInternalFormat(&pix)
-
-<!--
-_syntax: ofGetGlInternalFormat(&pix)_
-_name: ofGetGlInternalFormat_
-_returns: int_
-_returns_description: _
-_parameters: const ofShortPixels &pix_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofGetGlInternalFormat(&pix)
-
-<!--
-_syntax: ofGetGlInternalFormat(&pix)_
-_name: ofGetGlInternalFormat_
-_returns: int_
-_returns_description: _
-_parameters: const ofFloatPixels &pix_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofGetGlInternalFormatName(glInternalFormat)
-
-<!--
-_syntax: ofGetGlInternalFormatName(glInternalFormat)_
-_name: ofGetGlInternalFormatName_
-_returns: string_
-_returns_description: _
-_parameters: int glInternalFormat_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int ofGetGlType(&pixels)
-
-<!--
-_syntax: ofGetGlType(&pixels)_
-_name: ofGetGlType_
+_syntax: ofGetGLType(&pixels)_
+_name: ofGetGLType_
 _returns: int_
 _returns_description: _
 _parameters: const ofPixels &pixels_
-_version_started: _
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -575,15 +680,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetGlType(&pixels)
+###int ofGetGLType(&pixels)
 
 <!--
-_syntax: ofGetGlType(&pixels)_
-_name: ofGetGlType_
+_syntax: ofGetGLType(&pixels)_
+_name: ofGetGLType_
 _returns: int_
 _returns_description: _
 _parameters: const ofShortPixels &pixels_
-_version_started: _
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -610,15 +715,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetGlType(&pixels)
+###int ofGetGLType(&pixels)
 
 <!--
-_syntax: ofGetGlType(&pixels)_
-_name: ofGetGlType_
+_syntax: ofGetGLType(&pixels)_
+_name: ofGetGLType_
 _returns: int_
 _returns_description: _
 _parameters: const ofFloatPixels &pixels_
-_version_started: _
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -645,15 +750,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetGlTypeFromInternal(glInternalFormat)
+###int ofGetGLTypeFromInternal(glInternalFormat)
 
 <!--
-_syntax: ofGetGlTypeFromInternal(glInternalFormat)_
-_name: ofGetGlTypeFromInternal_
+_syntax: ofGetGLTypeFromInternal(glInternalFormat)_
+_name: ofGetGLTypeFromInternal_
 _returns: int_
 _returns_description: _
 _parameters: int glInternalFormat_
-_version_started: _
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

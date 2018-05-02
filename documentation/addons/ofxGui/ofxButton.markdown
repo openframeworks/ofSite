@@ -61,6 +61,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofAbstractParameter & getParameter()
+
+<!--
+_syntax: getParameter()_
+_name: getParameter_
+_returns: ofAbstractParameter &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool mouseDragged(&args)
 
 <!--
@@ -241,6 +277,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofxButton(_bVal, width, height)
+
+<!--
+_syntax: ofxButton(_bVal, width, height)_
+_name: ofxButton_
+_returns: _
+_returns_description: _
+_parameters: ofParameter< void > _bVal, float width, float height_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void removeListener(*listener, method)
 
 <!--
@@ -287,6 +359,42 @@ _returns_description: _
 _parameters: const string &toggleName, float width, float height_
 _access: public_
 _version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxButton * setup(_bVal, width, height)
+
+<!--
+_syntax: setup(_bVal, width, height)_
+_name: setup_
+_returns: ofxButton *_
+_returns_description: _
+_parameters: ofParameter< void > _bVal, float width, float height_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -389,17 +497,17 @@ _description: _
 
 
 
-###ofEvent< void >  triggerEvent
+###ofParameter< void > parameter
 
 <!--
-_name: triggerEvent_
-_type: ofEvent< void > _
+_name: parameter_
+_type: ofParameter< void >_
 _access: private_
-_version_started: 0.8.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 

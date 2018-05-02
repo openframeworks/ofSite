@@ -133,42 +133,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadFrom(&serializer)
-
-<!--
-_syntax: loadFrom(&serializer)_
-_name: loadFrom_
-_returns: void_
-_returns_description: _
-_parameters: ofBaseSerializer &serializer_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool mouseDragged(&args)
 
 <!--
@@ -421,6 +385,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofxLabel(string, _label, width, height)
+
+<!--
+_syntax: ofxLabel(string, _label, width, height)_
+_name: ofxLabel_
+_returns: _
+_returns_description: _
+_parameters: ofReadOnlyParameter< string, F > _label, float width, float height_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string operator=(v)
 
 <!--
@@ -502,42 +502,6 @@ _returns: void_
 _returns_description: _
 _parameters: _
 _access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void saveTo(&serializer)
-
-<!--
-_syntax: saveTo(&serializer)_
-_name: saveTo_
-_returns: void_
-_returns_description: _
-_parameters: ofBaseSerializer &serializer_
-_access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
@@ -647,6 +611,42 @@ _returns_description: _
 _parameters: const string &labelName, string label, float width, float height_
 _access: public_
 _version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxLabel * setup(string, _label, width, height)
+
+<!--
+_syntax: setup(string, _label, width, height)_
+_name: setup_
+_returns: ofxLabel *_
+_returns_description: _
+_parameters: ofReadOnlyParameter< string, F > _label, float width, float height_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

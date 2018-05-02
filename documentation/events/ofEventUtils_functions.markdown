@@ -685,7 +685,14 @@ _advanced: False_
 
 _inlined_description: _
 
+register any method of any class to an event.
 
+the method must provide one of the following
+signatures:
+    void method(ArgumentsType & args)
+    void method(const void * sender, ArgumentsType &args)
+ie:
+    ofAddListener(addon.newIntEvent, this, &Class::method)
 
 
 
@@ -1039,14 +1046,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofNotifyEvent(&event, &args)
+###bool ofNotifyEvent(&event)
 
 <!--
-_syntax: ofNotifyEvent(&event, &args)_
+_syntax: ofNotifyEvent(&event)_
 _name: ofNotifyEvent_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: EventType &event, ArgumentsType &args_
+_parameters: ofEvent< void > &event_
 _version_started: 0.06_
 _version_deprecated: _
 _summary: _
@@ -1109,14 +1116,14 @@ void ofApp::haveBeenNotified(float &f){
 
 <!----------------------------------------------------------------------------->
 
-###void ofNotifyEvent(&event, &args, *sender)
+###bool ofNotifyEvent(&event, *sender)
 
 <!--
-_syntax: ofNotifyEvent(&event, &args, *sender)_
+_syntax: ofNotifyEvent(&event, *sender)_
 _name: ofNotifyEvent_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: EventType &event, ArgumentsType &args, SenderType *sender_
+_parameters: ofEvent< void > &event, SenderType *sender_
 _version_started: 0.06_
 _version_deprecated: _
 _summary: _
@@ -1181,14 +1188,14 @@ void ofApp::haveBeenNotified(float &f){
 
 <!----------------------------------------------------------------------------->
 
-###void ofNotifyEvent(&event, &args, *sender)
+###bool ofNotifyEvent(&event, &args)
 
 <!--
-_syntax: ofNotifyEvent(&event, &args, *sender)_
+_syntax: ofNotifyEvent(&event, &args)_
 _name: ofNotifyEvent_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: EventType &event, const ArgumentsType &args, SenderType *sender_
+_parameters: EventType &event, const ArgumentsType &args_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1253,14 +1260,14 @@ void ofApp::haveBeenNotified(float &f){
 
 <!----------------------------------------------------------------------------->
 
-###void ofNotifyEvent(&event, &args)
+###bool ofNotifyEvent(&event, &args, *sender)
 
 <!--
-_syntax: ofNotifyEvent(&event, &args)_
+_syntax: ofNotifyEvent(&event, &args, *sender)_
 _name: ofNotifyEvent_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: EventType &event, const ArgumentsType &args_
+_parameters: EventType &event, const ArgumentsType &args, SenderType *sender_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1325,14 +1332,14 @@ void ofApp::haveBeenNotified(float &f){
 
 <!----------------------------------------------------------------------------->
 
-###void ofNotifyEvent(&event, *sender)
+###bool ofNotifyEvent(&event, &args)
 
 <!--
-_syntax: ofNotifyEvent(&event, *sender)_
+_syntax: ofNotifyEvent(&event, &args)_
 _name: ofNotifyEvent_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: ofEvent< void > &event, SenderType *sender_
+_parameters: EventType &event, ArgumentsType &args_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1397,14 +1404,14 @@ void ofApp::haveBeenNotified(float &f){
 
 <!----------------------------------------------------------------------------->
 
-###void ofNotifyEvent(&event)
+###bool ofNotifyEvent(&event, &args, *sender)
 
 <!--
-_syntax: ofNotifyEvent(&event)_
+_syntax: ofNotifyEvent(&event, &args, *sender)_
 _name: ofNotifyEvent_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: ofEvent< void > &event_
+_parameters: EventType &event, ArgumentsType &args, SenderType *sender_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1416,7 +1423,16 @@ _advanced: False_
 
 _inlined_description: _
 
+notifies an event so all the registered listeners
+get called
 
+ie:
+	ofNotifyEvent(addon.newIntEvent, intArgument, this)
+
+or in case there's no sender:
+	ofNotifyEvent(addon.newIntEvent, intArgument)
+
+@returns: true in case any listener attended the event
 
 
 
@@ -1759,7 +1775,14 @@ _advanced: False_
 
 _inlined_description: _
 
+unregister any method of any class to an event.
 
+the method must provide one the following
+signatures:
+    void method(ArgumentsType & args)
+    void method(const void * sender, ArgumentsType &args)
+ie:
+    ofAddListener(addon.newIntEvent, this, &Class::method)
 
 
 

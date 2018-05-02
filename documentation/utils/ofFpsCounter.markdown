@@ -61,6 +61,78 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###uint64_t getLastFrameFilteredNanos()
+
+<!--
+_syntax: getLastFrameFilteredNanos()_
+_name: getLastFrameFilteredNanos_
+_returns: uint64_t_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###double getLastFrameFilteredSecs()
+
+<!--
+_syntax: getLastFrameFilteredSecs()_
+_name: getLastFrameFilteredSecs_
+_returns: double_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###uint64_t getLastFrameNanos()
 
 <!--
@@ -277,6 +349,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setFilterAlpha(alpha)
+
+<!--
+_syntax: setFilterAlpha(alpha)_
+_name: setFilterAlpha_
+_returns: void_
+_returns_description: _
+_parameters: float alpha_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void update()
 
 <!--
@@ -352,6 +460,70 @@ _description: _
 ##Variables
 
 
+
+###double filterAlpha
+
+<!--
+_name: filterAlpha_
+_type: double_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###chrono::nanoseconds filteredTime
+
+<!--
+_name: filteredTime_
+_type: chrono::nanoseconds_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###double fps
 
@@ -449,45 +621,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###uint64_t nanosThen
+###ofTime then
 
 <!--
-_name: nanosThen_
-_type: uint64_t_
+_name: then_
+_type: ofTime_
 _access: private_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###uint64_t secsThen
-
-<!--
-_name: secsThen_
-_type: uint64_t_
-_access: private_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_

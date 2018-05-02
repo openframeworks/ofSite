@@ -3,7 +3,7 @@
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
 _extends: _
 -->
@@ -25,14 +25,14 @@ _extends: _
 
 
 
-### Pixels(*begin, *end, componentsPerPixel, pixelFormat)
+### Pixels(begin, end)
 
 <!--
-_syntax: Pixels(*begin, *end, componentsPerPixel, pixelFormat)_
+_syntax: Pixels(begin, end)_
 _name: Pixels_
 _returns: _
 _returns_description: _
-_parameters: PixelType *begin, PixelType *end, int componentsPerPixel, ofPixelFormat pixelFormat_
+_parameters: ofPixels_::Pixel begin, ofPixels_::Pixel end_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -61,14 +61,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### Pixels(begin, end)
+### Pixels(*begin, *end, componentsPerPixel, pixelFormat)
 
 <!--
-_syntax: Pixels(begin, end)_
+_syntax: Pixels(*begin, *end, componentsPerPixel, pixelFormat)_
 _name: Pixels_
 _returns: _
 _returns_description: _
-_parameters: ofPixels_::Pixel begin, ofPixels_::Pixel end_
+_parameters: PixelType *begin, PixelType *end, size_t componentsPerPixel, ofPixelFormat pixelFormat_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

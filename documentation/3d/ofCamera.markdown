@@ -32,14 +32,14 @@ The far and near clip planes are the boundaries of what's visible in the camera.
 
 
 
-###void begin(viewport)
+###void begin()
 
 <!--
-_syntax: begin(viewport)_
+_syntax: begin()_
 _name: begin_
 _returns: void_
 _returns_description: _
-_parameters: ofRectangle viewport_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -59,7 +59,7 @@ void draw() {
     // Begin rendering from the camera's perspective.
     camera.begin();
 
-    ofDrawLine(0, 0, ofGetWidth(), ofGetHeight());
+    ofLine(0, 0, ofGetWidth(), ofGetHeight());
     // Additional rendering ...
 
     // End rendering form the camera's perspective.
@@ -77,6 +77,42 @@ viewport The camera's rendering viewport.
 _description: _
 
 This function pushes the cameras view and projection matrix to a stack of transformations so that draw calls done within begin() and end() will appear to be viewed from the cameras perspective.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void begin(&viewport)
+
+<!--
+_syntax: begin(&viewport)_
+_name: begin_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &viewport_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -120,14 +156,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f cameraToWorld(CameraXYZ, viewport)
+###int cameraToWorld()
 
 <!--
-_syntax: cameraToWorld(CameraXYZ, viewport)_
+_syntax: cameraToWorld()_
 _name: cameraToWorld_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
-_parameters: ofVec3f CameraXYZ, ofRectangle viewport_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -140,7 +176,43 @@ _advanced: False_
 
 _inlined_description: _
 
-\todo cameraToWorld()
+
+
+
+
+
+
+_description: _
+
+When you have a position in camera coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int cameraToWorld()
+
+<!--
+_syntax: cameraToWorld()_
+_name: cameraToWorld_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -185,6 +257,80 @@ _inlined_description: _
 _description: _
 
 Calling disableOrtho() turns off the orthographic mode.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawFrustum(&viewport)
+
+<!--
+_syntax: drawFrustum(&viewport)_
+_name: drawFrustum_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &viewport_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a visual representation of the camera's frustum
+\note  This will only be visible when the camera drawing its
+       frustum is viewed through another camera.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawFrustum()
+
+<!--
+_syntax: drawFrustum()_
+_name: drawFrustum_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -424,14 +570,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getImagePlaneDistance(viewport)
+###float getImagePlaneDistance(&viewport)
 
 <!--
-_syntax: getImagePlaneDistance(viewport)_
+_syntax: getImagePlaneDistance(&viewport)_
 _name: getImagePlaneDistance_
 _returns: float_
 _returns_description: _
-_parameters: ofRectangle viewport_
+_parameters: const ofRectangle &viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -460,12 +606,12 @@ This allows you to get the image plane distance from any viewport passed in. By 
 
 <!----------------------------------------------------------------------------->
 
-###ofVec2f getLensOffset()
+###int getLensOffset()
 
 <!--
 _syntax: getLensOffset()_
 _name: getLensOffset_
-_returns: ofVec2f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -507,12 +653,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getModelViewMatrix()
+###int getModelViewMatrix()
 
 <!--
 _syntax: getModelViewMatrix()_
 _name: getModelViewMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -545,14 +691,14 @@ Access to the projection matrix.
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getModelViewProjectionMatrix(viewport)
+###int getModelViewProjectionMatrix()
 
 <!--
-_syntax: getModelViewProjectionMatrix(viewport)_
+_syntax: getModelViewProjectionMatrix()_
 _name: getModelViewProjectionMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
-_parameters: ofRectangle viewport_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -565,7 +711,43 @@ _advanced: False_
 
 _inlined_description: _
 
-\todo getModelViewProjectionMatrix()
+
+
+
+
+
+
+_description: _
+
+Access to the projection ModelViewProjectionMatrix.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getModelViewProjectionMatrix()
+
+<!--
+_syntax: getModelViewProjectionMatrix()_
+_name: getModelViewProjectionMatrix_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -653,14 +835,14 @@ Get whether the camera is in orthographic mode.
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getProjectionMatrix(viewport)
+###int getProjectionMatrix()
 
 <!--
-_syntax: getProjectionMatrix(viewport)_
+_syntax: getProjectionMatrix()_
 _name: getProjectionMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
-_parameters: ofRectangle viewport_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -673,9 +855,43 @@ _advanced: False_
 
 _inlined_description: _
 
-Access the projection matrix.
 
-Returns: the current 4x4 projection matrix.
+
+
+
+
+
+_description: _
+
+Access to the projection matrix.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getProjectionMatrix()
+
+<!--
+_syntax: getProjectionMatrix()_
+_name: getProjectionMatrix_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -727,14 +943,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofRectangle getViewport(&_viewport)
+###ofRectangle getViewport()
 
 <!--
-_syntax: getViewport(&_viewport)_
+_syntax: getViewport()_
 _name: getViewport_
 _returns: ofRectangle_
 _returns_description: _
-_parameters: const ofRectangle &_viewport_
+_parameters: _
 _access: protected_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -747,7 +963,7 @@ _advanced: False_
 
 _inlined_description: _
 
- \}
+
 
 
 
@@ -833,17 +1049,16 @@ The default camera is positioned at (0, 0, 0) with a 60 degree field of view.  I
 
 
 
-
 <!----------------------------------------------------------------------------->
 
-###ofVec3f screenToWorld(ScreenXYZ, viewport)
+###int screenToWorld()
 
 <!--
-_syntax: screenToWorld(ScreenXYZ, viewport)_
+_syntax: screenToWorld()_
 _name: screenToWorld_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
-_parameters: ofVec3f ScreenXYZ, ofRectangle viewport_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -856,18 +1071,43 @@ _advanced: False_
 
 _inlined_description: _
 
-Obtain the coordinates, in the 3D world, of a 2D point presumed to be on your screen.
 
-Takes a pixel location on your screen, encoded in an ofVec3f,
-and returns (also as an ofVec3f) the 3D world coordinates of that point.
-You'll also need to specify a Z value when providing your screen point.
-This Z value is interpreted as a distance into or away from the screen.
 
-It's important note that if you use the values from this function in a draw call within a cam.begin()...cam.end() section you are transforming the point twice, once from screenToWorld and the second by cam so you may
-not get the results you expect. 
 
-Parameters:
-ScreenXYZ A point on your screen, whose 3D world coordinates you wish to know.
+
+
+
+_description: _
+
+When you have a position in screen coordinates you can get what it would be in world coordinates, transforming it using the ofCamera.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int screenToWorld()
+
+<!--
+_syntax: screenToWorld()_
+_name: screenToWorld_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -1060,7 +1300,7 @@ _syntax: setLensOffset(&lensOffset)_
 _name: setLensOffset_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec2f &lensOffset_
+_parameters: const int &lensOffset_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1160,7 +1400,7 @@ _inlined_description: _
 
 \}
 \name Renderer
- \{
+\{
 
 
 
@@ -1219,7 +1459,7 @@ _syntax: setupOffAxisViewPortal(&topLeft, &bottomLeft, &bottomRight)_
 _name: setupOffAxisViewPortal_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec3f &topLeft, const ofVec3f &bottomLeft, const ofVec3f &bottomRight_
+_parameters: const int &topLeft, const int &bottomLeft, const int &bottomRight_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1255,7 +1495,7 @@ _syntax: setupPerspective(vFlip = true, fov, nearDist, farDist, &lensOffset)_
 _name: setupPerspective_
 _returns: void_
 _returns_description: _
-_parameters: bool vFlip=true, float fov, float nearDist, float farDist, const ofVec2f &lensOffset_
+_parameters: bool vFlip=true, float fov, float nearDist, float farDist, const int &lensOffset_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1286,14 +1526,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f worldToCamera(WorldXYZ, viewport)
+###int worldToCamera()
 
 <!--
-_syntax: worldToCamera(WorldXYZ, viewport)_
+_syntax: worldToCamera()_
 _name: worldToCamera_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
-_parameters: ofVec3f WorldXYZ, ofRectangle viewport_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1306,7 +1546,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\todo worldToCamera()
+
 
 
 
@@ -1322,14 +1562,14 @@ When you have a position in world coordinates you can get what it would be in ca
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f worldToScreen(WorldXYZ, viewport)
+###int worldToCamera()
 
 <!--
-_syntax: worldToScreen(WorldXYZ, viewport)_
-_name: worldToScreen_
-_returns: ofVec3f_
+_syntax: worldToCamera()_
+_name: worldToCamera_
+_returns: int_
 _returns_description: _
-_parameters: ofVec3f WorldXYZ, ofRectangle viewport_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1342,21 +1582,79 @@ _advanced: False_
 
 _inlined_description: _
 
-Obtain the screen coordinates of a point in the 3D world.
-
-Takes an (X,Y,Z) point in your 3D world, encoded as an ofVec3f,
-and returns the location (also as an ofVec3f) where this point would
-appear on your (two-dimensional) display. The screen position's "Z
-coordinate" is set to be the same as your camera's.
-
-It's important note that if you use the values returned by this function to draw content to the screen within a cam.begin()...cam.end() section then you are transforming the point twice, once from worldToScreen and the second by cam so you may not get the results you expect. It is recommended to use the values from this function outside of cam.begin()...cam.end().
 
 
-Parameters:
-WorldXYZ A 3D point in the world, whose screen coordinates you wish to know.
-viewport (Optional) A viewport. The default is ofGetCurrentViewport().
 
-Returns: An ofVec3f containing the screen coordinates of your 3D point of interest.
+
+
+
+_description: _
+
+When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int worldToScreen()
+
+<!--
+_syntax: worldToScreen()_
+_name: worldToScreen_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+When you have a position in world coordinates you can get what it would be in screen coordinates, transforming it using the ofCamera.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int worldToScreen()
+
+<!--
+_syntax: worldToScreen()_
+_name: worldToScreen_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 

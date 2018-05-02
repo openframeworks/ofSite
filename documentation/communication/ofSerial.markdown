@@ -268,12 +268,12 @@ Clears data from one or both of the serial buffers. Any data in the cleared buff
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofSerialDeviceInfo > getDeviceList()
+###int getDeviceList()
 
 <!--
 _syntax: getDeviceList()_
 _name: getDeviceList_
-_returns: vector< ofSerialDeviceInfo >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -490,14 +490,14 @@ else
 
 <!----------------------------------------------------------------------------->
 
-###int readBytes(*buffer, length)
+###long readBytes(*buffer, length)
 
 <!--
 _syntax: readBytes(*buffer, length)_
 _name: readBytes_
-_returns: int_
+_returns: long_
 _returns_description: _
-_parameters: unsigned char *buffer, int length_
+_parameters: unsigned char *buffer, size_t length_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -605,6 +605,78 @@ while ( bytesRemaining > 0 )
 ~~~~
 
 Be aware that the type of your buffer can only be unsigned char. If you're trying to receieve ints or signed chars over a serial connection you'll need to do some bit manipulation to correctly interpret that values.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###long readBytes(*buffer, length)
+
+<!--
+_syntax: readBytes(*buffer, length)_
+_name: readBytes_
+_returns: long_
+_returns_description: _
+_parameters: char *buffer, size_t length_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###long readBytes(&buffer, length)
+
+<!--
+_syntax: readBytes(&buffer, length)_
+_name: readBytes_
+_returns: long_
+_returns_description: _
+_parameters: ofBuffer &buffer, size_t length_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -825,14 +897,50 @@ if ( !byteWasWritten )
 
 <!----------------------------------------------------------------------------->
 
-###int writeBytes(*buffer, length)
+###bool writeByte(singleByte)
+
+<!--
+_syntax: writeByte(singleByte)_
+_name: writeByte_
+_returns: bool_
+_returns_description: _
+_parameters: char singleByte_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###long writeBytes(*buffer, length)
 
 <!--
 _syntax: writeBytes(*buffer, length)_
 _name: writeBytes_
-_returns: int_
+_returns: long_
 _returns_description: _
-_parameters: unsigned char *buffer, int length_
+_parameters: const unsigned char *buffer, size_t length_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -864,6 +972,78 @@ This writes bytes into the serial buffer from the buffer pointer passed in:
 unsigned char buf[3] = {'o', 'f', '!'};
 device.writeBytes(&buf[0], 3);
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###long writeBytes(*buffer, length)
+
+<!--
+_syntax: writeBytes(*buffer, length)_
+_name: writeBytes_
+_returns: long_
+_returns_description: _
+_parameters: const char *buffer, size_t length_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###long writeBytes(&buffer)
+
+<!--
+_syntax: writeBytes(&buffer)_
+_name: writeBytes_
+_returns: long_
+_returns_description: _
+_parameters: const ofBuffer &buffer_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 

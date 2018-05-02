@@ -66,6 +66,186 @@ After you call begin() everything that you draw, vertexes and textures, in your 
 
 <!----------------------------------------------------------------------------->
 
+###void beginTransformFeedback(mode)
+
+<!--
+_syntax: beginTransformFeedback(mode)_
+_name: beginTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: GLenum mode_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void beginTransformFeedback(mode, &binding)
+
+<!--
+_syntax: beginTransformFeedback(mode, &binding)_
+_name: beginTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: GLenum mode, const ofShader::TransformFeedbackRangeBinding &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void beginTransformFeedback(mode, &binding)
+
+<!--
+_syntax: beginTransformFeedback(mode, &binding)_
+_name: beginTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: GLenum mode, const int &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void beginTransformFeedback(mode, &binding)
+
+<!--
+_syntax: beginTransformFeedback(mode, &binding)_
+_name: beginTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: GLenum mode, const ofShader::TransformFeedbackBaseBinding &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void beginTransformFeedback(mode, &binding)
+
+<!--
+_syntax: beginTransformFeedback(mode, &binding)_
+_name: beginTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: GLenum mode, const int &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void bindAttribute(location, &name)
 
 <!--
@@ -141,6 +321,42 @@ See setupShaderFromSource() example.
 
 <!----------------------------------------------------------------------------->
 
+###void bindUniformBlock(bindind, &name)
+
+<!--
+_syntax: bindUniformBlock(bindind, &name)_
+_name: bindUniformBlock_
+_returns: void_
+_returns_description: _
+_parameters: GLuint bindind, const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void checkAndCreateProgram()
 
 <!--
@@ -177,14 +393,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void checkProgramInfoLog(program)
+###void checkProgramInfoLog()
 
 <!--
-_syntax: checkProgramInfoLog(program)_
+_syntax: checkProgramInfoLog()_
 _name: checkProgramInfoLog_
 _returns: void_
 _returns_description: _
-_parameters: GLuint program_
+_parameters: _
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -213,14 +429,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool checkProgramLinkStatus(program)
+###bool checkProgramLinkStatus()
 
 <!--
-_syntax: checkProgramLinkStatus(program)_
+_syntax: checkProgramLinkStatus()_
 _name: checkProgramLinkStatus_
 _returns: bool_
 _returns_description: _
-_parameters: GLuint program_
+_parameters: _
 _access: private_
 _version_started: 0071_
 _version_deprecated: _
@@ -350,6 +566,186 @@ _inlined_description: _
 _description: _
 
 After you call end() any drawing, vertexes and textures, do not have the effect of the shader applied to them.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void endTransformFeedback()
+
+<!--
+_syntax: endTransformFeedback()_
+_name: endTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void endTransformFeedback(&binding)
+
+<!--
+_syntax: endTransformFeedback(&binding)_
+_name: endTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: const ofShader::TransformFeedbackRangeBinding &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void endTransformFeedback(&binding)
+
+<!--
+_syntax: endTransformFeedback(&binding)_
+_name: endTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: const int &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void endTransformFeedback(&binding)
+
+<!--
+_syntax: endTransformFeedback(&binding)_
+_name: endTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: const ofShader::TransformFeedbackBaseBinding &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void endTransformFeedback(&binding)
+
+<!--
+_syntax: endTransformFeedback(&binding)_
+_name: endTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: const int &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -538,6 +934,78 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###GLint getUniformBlockBinding(&name)
+
+<!--
+_syntax: getUniformBlockBinding(&name)_
+_name: getUniformBlockBinding_
+_returns: GLint_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###GLint getUniformBlockIndex(&name)
+
+<!--
+_syntax: getUniformBlockIndex(&name)_
+_name: getUniformBlockIndex_
+_returns: GLint_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###GLint getUniformLocation(&name)
 
 <!--
@@ -646,14 +1114,14 @@ Links program with all compiled shaders. This is more of an advanced use method,
 
 <!----------------------------------------------------------------------------->
 
-###bool load(shaderName)
+###bool load(&shaderName)
 
 <!--
-_syntax: load(shaderName)_
+_syntax: load(&shaderName)_
 _name: load_
 _returns: bool_
 _returns_description: _
-_parameters: string shaderName_
+_parameters: const filesystem::path &shaderName_
 _access: public_
 _version_started: _
 _version_deprecated: _
@@ -686,14 +1154,14 @@ shader.load("dof"); // assumes the shaders are in /data
 
 <!----------------------------------------------------------------------------->
 
-###bool load(vertName, fragName, geomName)
+###bool load(&vertName, &fragName, &geomName)
 
 <!--
-_syntax: load(vertName, fragName, geomName)_
+_syntax: load(&vertName, &fragName, &geomName)_
 _name: load_
 _returns: bool_
 _returns_description: _
-_parameters: string vertName, string fragName, string geomName_
+_parameters: const filesystem::path &vertName, const filesystem::path &fragName, const filesystem::path &geomName_
 _access: public_
 _version_started: _
 _version_deprecated: _
@@ -719,6 +1187,42 @@ Here you can load shaders with whatever names you choose. The geometry shader is
 ~~~~{.cpp}
 shader.load("dof.vert", "dof.frag"); // assumes the shaders are in /data
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool loadCompute(&shaderName)
+
+<!--
+_syntax: loadCompute(&shaderName)_
+_name: loadCompute_
+_returns: bool_
+_returns_description: _
+_parameters: const filesystem::path &shaderName_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -834,6 +1338,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofShader(&&shader)
+
+<!--
+_syntax: ofShader(&&shader)_
+_name: ofShader_
+_returns: _
+_returns_description: _
+_parameters: ofShader &&shader_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool operator!=(&other)
 
 <!--
@@ -906,6 +1446,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofShader & operator=(&&shader)
+
+<!--
+_syntax: operator=(&&shader)_
+_name: operator=_
+_returns: ofShader &_
+_returns_description: _
+_parameters: ofShader &&shader_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool operator==(&other)
 
 <!--
@@ -949,7 +1525,7 @@ _syntax: parseForIncludes(&source, &sourceDirectoryPath)_
 _name: parseForIncludes_
 _returns: string_
 _returns_description: _
-_parameters: const string &source, const string &sourceDirectoryPath_
+_parameters: const string &source, const filesystem::path &sourceDirectoryPath_
 _access: private_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -990,7 +1566,7 @@ _syntax: parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath)_
 _name: parseForIncludes_
 _returns: string_
 _returns_description: _
-_parameters: const string &source, vector< string > &included, int level=0, const string &sourceDirectoryPath_
+_parameters: const string &source, int &included, int level=0, const filesystem::path &sourceDirectoryPath_
 _access: private_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1048,6 +1624,42 @@ _inlined_description: _
 _description: _
 
 This prints out all the active attributes to the console.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void printActiveUniformBlocks()
+
+<!--
+_syntax: printActiveUniformBlocks()_
+_name: printActiveUniformBlocks_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1679,6 +2291,78 @@ Attributes are different than uniforms in that you can pass an attribute to each
 
 <!----------------------------------------------------------------------------->
 
+###void setConstantTemp(&name, &type, value)
+
+<!--
+_syntax: setConstantTemp(&name, &type, value)_
+_name: setConstantTemp_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, const string &type, T value_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setDefineConstantTemp(&name, value)
+
+<!--
+_syntax: setDefineConstantTemp(&name, value)_
+_name: setDefineConstantTemp_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, T value_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setGeometryInputType(type)
 
 <!--
@@ -1976,7 +2660,7 @@ _syntax: setUniform2f(&name, &v)_
 _name: setUniform2f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const ofVec2f &v_
+_parameters: const string &name, const int &v_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2162,7 +2846,7 @@ _syntax: setUniform3f(&name, &v)_
 _name: setUniform3f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const ofVec3f &v_
+_parameters: const string &name, const int &v_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2353,7 +3037,7 @@ _syntax: setUniform4f(&name, &v)_
 _name: setUniform4f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const ofVec4f &v_
+_parameters: const string &name, const ofFloatColor &v_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2389,7 +3073,7 @@ _syntax: setUniform4f(&name, &v)_
 _name: setUniform4f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const ofFloatColor &v_
+_parameters: const string &name, const int &v_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2539,7 +3223,7 @@ _syntax: setUniformMatrix3f(&name, &m, count = 1)_
 _name: setUniformMatrix3f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const ofMatrix3x3 &m, int count=1_
+_parameters: const string &name, const int &m, int count=1_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2575,7 +3259,7 @@ _syntax: setUniformMatrix4f(&name, &m, count = 1)_
 _name: setUniformMatrix4f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const ofMatrix4x4 &m, int count=1_
+_parameters: const string &name, const int &m, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2752,14 +3436,86 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool setupShaderFromFile(type, filename)
+###bool setup(&settings)
 
 <!--
-_syntax: setupShaderFromFile(type, filename)_
+_syntax: setup(&settings)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: const ofShaderSettings &settings_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setup(&settings)
+
+<!--
+_syntax: setup(&settings)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: const ofShader::TransformFeedbackSettings &settings_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setupShaderFromFile(type, &filename)
+
+<!--
+_syntax: setupShaderFromFile(type, &filename)_
 _name: setupShaderFromFile_
 _returns: bool_
 _returns_description: _
-_parameters: GLenum type, string filename_
+_parameters: GLenum type, const filesystem::path &filename_
 _access: public_
 _version_started: _
 _version_deprecated: _
@@ -2847,6 +3603,78 @@ shader.setupShaderFromSource( GL_FRAGMENT_SHADER, fragmentSrc.str() );
 shader.bindDefaults();
 shader.linkProgram();
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setupShaderFromSource(&&source)
+
+<!--
+_syntax: setupShaderFromSource(&&source)_
+_name: setupShaderFromSource_
+_returns: bool_
+_returns_description: _
+_parameters: ofShader::Source &&source_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofShader::Source sourceFromFile(type, &filename)
+
+<!--
+_syntax: sourceFromFile(type, &filename)_
+_name: sourceFromFile_
+_returns: ofShader::Source_
+_returns_description: _
+_parameters: GLenum type, const filesystem::path &filename_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -3037,6 +3865,38 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int uniformBlocksCache
+
+<!--
+_name: uniformBlocksCache_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 

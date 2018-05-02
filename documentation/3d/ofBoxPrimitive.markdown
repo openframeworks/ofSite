@@ -31,7 +31,7 @@ void draw()
     box.rotate(spinX, 1.0, 0.0, 0.0);
     box.rotate(spinY, 0, 1.0, 0.0);
 
-    // get all the faces from the box, handy when you want to copy
+    // get all the faces from the icoSphere, handy when you want to copy
     // individual vertices or tweak them a little ;)
     vector<ofMeshFace> triangles = box.getMesh().getUniqueFaces();
 
@@ -177,12 +177,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getResolution()
+###int getResolution()
 
 <!--
 _syntax: getResolution()_
 _name: getResolution_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -321,14 +321,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofIndexType > getSideIndices(sideIndex)
+###int getSideIndices()
 
 <!--
-_syntax: getSideIndices(sideIndex)_
+_syntax: getSideIndices()_
 _name: getSideIndices_
-_returns: vector< ofIndexType >_
+_returns: int_
 _returns_description: _
-_parameters: int sideIndex_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -357,14 +357,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getSideMesh(sideIndex)
+###int getSideMesh()
 
 <!--
-_syntax: getSideMesh(sideIndex)_
+_syntax: getSideMesh()_
 _name: getSideMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
-_parameters: int sideIndex_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -393,12 +393,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getSize()
+###int getSize()
 
 <!--
 _syntax: getSize()_
 _name: getSize_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_

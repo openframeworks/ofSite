@@ -225,12 +225,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<weak_ptr< ofLight::Data>  > & ofLightsData()
+###int & ofLightsData()
 
 <!--
 _syntax: ofLightsData()_
 _name: ofLightsData_
-_returns: vector<weak_ptr< ofLight::Data>  > &_
+_returns: int &_
 _returns_description: _
 _parameters: _
 _version_started: 0.9.0_

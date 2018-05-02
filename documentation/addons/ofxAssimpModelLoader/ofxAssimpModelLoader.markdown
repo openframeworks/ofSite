@@ -871,14 +871,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getCurrentAnimatedMesh(name)
+###int getCurrentAnimatedMesh()
 
 <!--
-_syntax: getCurrentAnimatedMesh(name)_
+_syntax: getCurrentAnimatedMesh()_
 _name: getCurrentAnimatedMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
-_parameters: string name_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -907,14 +907,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getCurrentAnimatedMesh(num)
+###int getCurrentAnimatedMesh()
 
 <!--
-_syntax: getCurrentAnimatedMesh(num)_
+_syntax: getCurrentAnimatedMesh()_
 _name: getCurrentAnimatedMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
-_parameters: int num_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -986,7 +986,7 @@ _syntax: getMaterialForMesh(num)_
 _name: getMaterialForMesh_
 _returns: ofMaterial_
 _returns_description: _
-_parameters: int num_
+_parameters: unsigned int num_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1015,14 +1015,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getMesh(name)
+###int getMesh()
 
 <!--
-_syntax: getMesh(name)_
+_syntax: getMesh()_
 _name: getMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
-_parameters: string name_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1051,14 +1051,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getMesh(num)
+###int getMesh()
 
 <!--
-_syntax: getMesh(num)_
+_syntax: getMesh()_
 _name: getMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
-_parameters: int num_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1159,12 +1159,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< string > getMeshNames()
+###int getMeshNames()
 
 <!--
 _syntax: getMeshNames()_
 _name: getMeshNames_
-_returns: vector< string >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1267,12 +1267,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getNumMeshes()
+###unsigned int getNumMeshes()
 
 <!--
 _syntax: getNumMeshes()_
 _name: getNumMeshes_
-_returns: int_
+_returns: unsigned int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1634,7 +1634,7 @@ _syntax: getTextureForMesh(num)_
 _name: getTextureForMesh_
 _returns: ofTexture_
 _returns_description: _
-_parameters: int num_
+_parameters: unsigned int num_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

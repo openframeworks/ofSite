@@ -5,7 +5,7 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
-_extends: ofEventArgs, ofVec2f_
+_extends: ofEventArgs_
 -->
 
 ##InlineDescription
@@ -26,6 +26,42 @@ This class is integrated into the openframeworks events system. When a mouse eve
 ##Methods
 
 
+
+###bool hasModifier(modifier)
+
+<!--
+_syntax: hasModifier(modifier)_
+_name: hasModifier_
+_returns: bool_
+_returns_description: _
+_parameters: int modifier_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ### ofMouseEventArgs()
 
@@ -135,6 +171,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofMouseEventArgs(type, x, y, button, modifiers)
+
+<!--
+_syntax: ofMouseEventArgs(type, x, y, button, modifiers)_
+_name: ofMouseEventArgs_
+_returns: _
+_returns_description: _
+_parameters: ofMouseEventArgs::Type type, float x, float y, int button, int modifiers_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ##Variables
 
 
@@ -156,6 +228,38 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int modifiers
+
+<!--
+_name: modifiers_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Key modifiers
 
 
 

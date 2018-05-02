@@ -85,49 +85,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void aiMatrix4x4ToOfMatrix4x4(&aim, &ofm)
+###void aiMeshToOfMesh(*aim, &ofm, *helper)
 
 <!--
-_syntax: aiMatrix4x4ToOfMatrix4x4(&aim, &ofm)_
-_name: aiMatrix4x4ToOfMatrix4x4_
-_returns: void_
-_returns_description: _
-_parameters: const aiMatrix4x4 &aim, ofNode &ofm_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void aiMeshToOfMesh(*aim, &ofm, *helper = NULL)
-
-<!--
-_syntax: aiMeshToOfMesh(*aim, &ofm, *helper = NULL)_
+_syntax: aiMeshToOfMesh(*aim, &ofm, *helper)_
 _name: aiMeshToOfMesh_
 _returns: void_
 _returns_description: _
-_parameters: const aiMesh *aim, ofMesh &ofm, ofxAssimpMeshHelper *helper_
+_parameters: const aiMesh *aim, int &ofm, ofxAssimpMeshHelper *helper_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -155,14 +120,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f aiVecToOfVec(&v)
+###int aiVecToOfVec()
 
 <!--
-_syntax: aiVecToOfVec(&v)_
+_syntax: aiVecToOfVec()_
 _name: aiVecToOfVec_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
-_parameters: const aiVector3D &v_
+_parameters: _
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -190,14 +155,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofVec3f > aiVecVecToOfVecVec(&v)
+###int aiVecVecToOfVecVec()
 
 <!--
-_syntax: aiVecVecToOfVecVec(&v)_
+_syntax: aiVecVecToOfVecVec()_
 _name: aiVecVecToOfVecVec_
-_returns: vector< ofVec3f >_
+_returns: int_
 _returns_description: _
-_parameters: const vector< aiVector3D > &v_
+_parameters: _
 _version_started: _
 _version_deprecated: _
 _summary: _

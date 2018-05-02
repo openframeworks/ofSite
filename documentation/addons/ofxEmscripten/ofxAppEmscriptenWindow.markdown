@@ -493,12 +493,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getScreenSize()
+###int getScreenSize()
 
 <!--
 _syntax: getScreenSize()_
 _name: getScreenSize_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -601,12 +601,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getWindowPosition()
+###int getWindowPosition()
 
 <!--
 _syntax: getWindowPosition()_
 _name: getWindowPosition_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -637,12 +637,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getWindowSize()
+###int getWindowSize()
 
 <!--
 _syntax: getWindowSize()_
 _name: getWindowSize_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1371,6 +1371,42 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int touch_cb(eventType, *touchEvent, *userData)
+
+<!--
+_syntax: touch_cb(eventType, *touchEvent, *userData)_
+_name: touch_cb_
+_returns: int_
+_returns_description: _
+_parameters: int eventType, const int *touchEvent, void *userData_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->

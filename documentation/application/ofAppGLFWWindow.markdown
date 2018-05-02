@@ -63,6 +63,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void char_cb(*windowP_, key)
+
+<!--
+_syntax: char_cb(*windowP_, key)_
+_name: char_cb_
+_returns: void_
+_returns_description: _
+_parameters: GLFWwindow *windowP_, uint32_t key_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void close()
 
 <!--
@@ -423,6 +459,78 @@ This is the exit callback that is called by your the ofAppRunner [exit()](../ofA
 
 <!----------------------------------------------------------------------------->
 
+###void finishRender()
+
+<!--
+_syntax: finishRender()_
+_name: finishRender_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void framebuffer_size_cb(*windowP_, w, h)
+
+<!--
+_syntax: framebuffer_size_cb(*windowP_, w, h)_
+_name: framebuffer_size_cb_
+_returns: void_
+_returns_description: _
+_parameters: GLFWwindow *windowP_, int w, int h_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string getClipboardString()
 
 <!--
@@ -675,12 +783,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getScreenSize()
+###int getScreenSize()
 
 <!--
 _syntax: getScreenSize()_
 _name: getScreenSize_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -704,6 +812,42 @@ _inlined_description: _
 _description: _
 
 Gets the height of the current window and is mirrored in the ofGetWindowSize() method.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofGLFWWindowSettings getSettings()
+
+<!--
+_syntax: getSettings()_
+_name: getSettings_
+_returns: ofGLFWWindowSettings_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -819,12 +963,12 @@ Returns one of the following: OF_FULLSCREEN or OF_WINDOW.
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getWindowPosition()
+###int getWindowPosition()
 
 <!--
 _syntax: getWindowPosition()_
 _name: getWindowPosition_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -891,12 +1035,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getWindowSize()
+###int getWindowSize()
 
 <!--
 _syntax: getWindowSize()_
 _name: getWindowSize_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -973,6 +1117,42 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###XIC getX11XIC()
+
+<!--
+_syntax: getX11XIC()_
+_name: getX11XIC_
+_returns: XIC_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1179,14 +1359,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void keyboard_cb(*windowP_, key, scancode, codepoint, action, mods)
+###void keyboard_cb(*windowP_, key, scancode, action, mods)
 
 <!--
-_syntax: keyboard_cb(*windowP_, key, scancode, codepoint, action, mods)_
+_syntax: keyboard_cb(*windowP_, key, scancode, action, mods)_
 _name: keyboard_cb_
 _returns: void_
 _returns_description: _
-_parameters: GLFWwindow *windowP_, int key, int scancode, unsigned int codepoint, int action, int mods_
+_parameters: GLFWwindow *windowP_, int key, int scancode, int action, int mods_
 _access: private_
 _version_started: 0073_
 _version_deprecated: _
@@ -1510,7 +1690,7 @@ _syntax: ofAppGLFWWindow(&w)_
 _name: ofAppGLFWWindow_
 _returns: _
 _returns_description: _
-_parameters: const ofAppGLFWWindow &w_
+_parameters: ofAppGLFWWindow &w_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1546,7 +1726,7 @@ _syntax: operator=(&w)_
 _name: operator=_
 _returns: ofAppGLFWWindow &_
 _returns_description: _
-_parameters: const ofAppGLFWWindow &w_
+_parameters: ofAppGLFWWindow &w_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2223,6 +2403,78 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void startRender()
+
+<!--
+_syntax: startRender()_
+_name: startRender_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void swapBuffers()
+
+<!--
+_syntax: swapBuffers()_
+_name: swapBuffers_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void toggleFullscreen()
 
 <!--
@@ -2495,6 +2747,38 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int currentH
+
+<!--
+_name: currentH_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Physical framebuffer pixels extents
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###shared_ptr< ofBaseRenderer > currentRenderer
 
 <!--
@@ -2512,6 +2796,38 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int currentW
+
+<!--
+_name: currentW_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Physical framebuffer pixels extents
 
 
 
@@ -2671,7 +2987,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Extents of the window client area, which may be scaled by pixelsScreenCoordScale to map to physical framebuffer pixels.
 
 
 
@@ -2719,17 +3035,17 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int windowH
+###ofWindowMode targetWindowMode
 
 <!--
-_name: windowH_
-_type: int_
+_name: targetWindowMode_
+_type: ofWindowMode_
 _access: private_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -2751,10 +3067,10 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int windowMode
+###int windowH
 
 <!--
-_name: windowMode_
+_name: windowH_
 _type: int_
 _access: private_
 _version_started: 0073_
@@ -2815,6 +3131,38 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofRectangle windowRect
+
+<!--
+_name: windowRect_
+_type: ofRectangle_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Scale factor from virtual operating-system defined client area extents (as seen in currentW, currentH) to physical framebuffer pixel coordinates (as seen in windowW, windowH).
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int windowW
 
 <!--
@@ -2826,6 +3174,70 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###XIC xic
+
+<!--
+_name: xic_
+_type: XIC_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###XIM xim
+
+<!--
+_name: xim_
+_type: XIM_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 

@@ -11,6 +11,8 @@ _extends: ofxOscArg_
 ##InlineDescription
 
 
+a binary blob argument, type name "b"
+
 
 
 
@@ -25,12 +27,12 @@ _extends: ofxOscArg_
 
 
 
-###ofBuffer get()
+###const ofBuffer & get()
 
 <!--
 _syntax: get()_
 _name: get_
-_returns: ofBuffer_
+_returns: const ofBuffer &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -81,7 +83,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return the type of this argument
+\return argument type
 
 
 
@@ -117,7 +119,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return argument type character as a string
 
 
 
@@ -133,14 +135,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscArgBlob(_value)
+### ofxOscArgBlob(&value)
 
 <!--
-_syntax: ofxOscArgBlob(_value)_
+_syntax: ofxOscArgBlob(&value)_
 _name: ofxOscArgBlob_
 _returns: _
 _returns_description: _
-_parameters: ofBuffer _value_
+_parameters: const ofBuffer &value_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -169,14 +171,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(*_value, length)
+###void set(*value, length)
 
 <!--
-_syntax: set(*_value, length)_
+_syntax: set(*value, length)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: const char *_value, unsigned int length_
+_parameters: const char *value, unsigned int length_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -190,42 +192,6 @@ _advanced: False_
 _inlined_description: _
 
 set value
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxOscArgBlob()
-
-<!--
-_syntax: ~ofxOscArgBlob()_
-_name: ~ofxOscArgBlob_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 

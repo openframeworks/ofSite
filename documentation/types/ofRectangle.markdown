@@ -13,34 +13,12 @@ _extends: _
 A class representing a 2D rectangle.
 
 ofRectangle is a simple container for describing the position and size of a
-2D rectangle. Since the `width` and `height` variables can be negative, the
-x/y-position is not guaranteed to represent the upper right hand corner. For
-example, two visually identical rectangles can be represented in the
-following ways:
-
-~~~~{.cpp}
-    ofRectangle myRect(0, 0, 100, 100);
-~~~~
-
-or
-
-~~~~{.cpp}
-    ofRectangle myRect(100, 100, -100, -100);
-~~~~
-
-While both representations will yield the same visual results in all
-openFrameworks renderers, the results of some method operations that modify
-x, y, width and height (such as scaling) produce mathematically correct, but
-visually different results for each of the above representations.
-
-To avoid this ambiguity, users should should prefer "standardized"
-rectangles. "Standardized" rectangles are rectangles whose width >= 0 and
-height >= 0. The ofRectangle::standardize() method can be used to ensure
-that the is in it the "standard" form.
+2D rectangle. The ofRectangle::standardize() method can be used to ensure
+that the origin is in the "standard" form.
 
 
-Warning: While ofRectangle takes ofPoint (a typedef for ofVec3f, a 3D
-vector), all ofRectangle operations are 2D only, ignoring the z-component.
+Warning: While ofRectangle takes glm::vec3
+all ofRectangle operations are 2D only, ignoring the z-component.
 
 
 
@@ -70,92 +48,11 @@ To avoid this ambiguity, users should prefer "standardized" rectangles. "Standar
 
 
 
+
+
 ##Methods
 
 
-
-###void alignTo(&targetPoint, thisHorzAnchor = OF_ALIGN_HORZ_CENTER, thisVertAnchor = OF_ALIGN_VERT_CENTER)
-
-<!--
-_syntax: alignTo(&targetPoint, thisHorzAnchor = OF_ALIGN_HORZ_CENTER, thisVertAnchor = OF_ALIGN_VERT_CENTER)_
-_name: alignTo_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &targetPoint, ofAlignHorz thisHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert thisVertAnchor=OF_ALIGN_VERT_CENTER_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Align this ofRectangle to an ofPoint in both x- and y dimentions.
-
-Aligns the position of the ofRectangle to the given point using an
-ofAlignHorz constant and an ofAlignVert constant. If neither constant is
-passed in, this will align the center of the rectangle.
-
-__ofAlignHorz Constants:__
-
-- `OF_ALIGN_HORZ_IGNORE` : Does not perform any horizontal alignment.
-- `OF_ALIGN_HORZ_LEFT`   : Uses the left edge of the rectangle to horizontally anchor the alignment.
-- `OF_ALIGN_HORZ_RIGHT`  : Uses the right edge of the rectangle to horizontally anchor the alignment.
-- `OF_ALIGN_HORZ_CENTER` : Uses the center of the rectangle to horizontally anchor the alignment.
-
-__ofAlignVert Constants:__
-
-- `OF_ALIGN_VERT_IGNORE` : Does not perform any vertical alignment.
-- `OF_ALIGN_VERT_TOP`    : Uses the upper edge of the rectangle to vertically anchor the alignment.
-- `OF_ALIGN_VERT_BOTTOM` : Uses the bottom edge of the rectangle to vertically anchor the alignment.
-- `OF_ALIGN_VERT_CENTER` : Uses the center of the rectangle to vertically anchor the alignment.
-
-For a working example of how to use ofAlignVert and ofAlignHorz, see the
-*graphics/rectangleAlignmentAndScaling/* example within the examples
-directory.
-
-
-Warning: The z-component of the passed ofPoint is ignored.
-
-
-Parameters:
-targetPoint The target ofPoint to align to.
-thisHorzAnchor The horizontal alignment anchor.
-thisVertAnchor The vertical alignment anchor.
-
-
-
-
-
-_description: _
-
-
-__ofAlignHorz Constants:__
-
-- `OF_ALIGN_HORZ_IGNORE` : Does not perform any horizontal alignment.
-- `OF_ALIGN_HORZ_LEFT`   : Uses the left edge of the rectangle to horizontally anchor the alignment.
-- `OF_ALIGN_HORZ_RIGHT`  : Uses the right edge of the rectangle to horizontally anchor the alignment.
-- `OF_ALIGN_HORZ_CENTER` : Uses the center of the rectangle to horizontally anchor the alignment.
-
-__ofAlignVert Constants:__
-
-- `OF_ALIGN_VERT_IGNORE` : Does not perform any vertical alignment.
-- `OF_ALIGN_VERT_TOP`    : Uses the upper edge of the rectangle to vertically anchor the alignment.
-- `OF_ALIGN_VERT_BOTTOM` : Uses the bottom edge of the rectangle to vertically anchor the alignment.
-- `OF_ALIGN_VERT_CENTER` : Uses the center of the rectangle to vertically anchor the alignment.
-
-
-For a working example of how to use ofAlignVert and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
 
 ###void alignTo(&targetRect, sharedHorzAnchor = OF_ALIGN_HORZ_CENTER, sharedVertAnchor = OF_ALIGN_VERT_CENTER)
 
@@ -177,7 +74,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Vertically align this ofRectangle to another target ofRectangle.
+Align this ofRectangle to an glm::vec3 in both x- and y dimentions using a shared anchor.
 
 Aligns the position of the ofRectangle to that of the passed-in
 ofRectangle. Can take an ofAlignHorz constant and an ofAlignVert
@@ -284,6 +181,106 @@ __ofAlignVert Constants:__
 
 <!----------------------------------------------------------------------------->
 
+###void alignTo(&targetPoint, thisHorzAnchor = OF_ALIGN_HORZ_CENTER, thisVertAnchor = OF_ALIGN_VERT_CENTER)
+
+<!--
+_syntax: alignTo(&targetPoint, thisHorzAnchor = OF_ALIGN_HORZ_CENTER, thisVertAnchor = OF_ALIGN_VERT_CENTER)_
+_name: alignTo_
+_returns: void_
+_returns_description: _
+_parameters: const int &targetPoint, ofAlignHorz thisHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert thisVertAnchor=OF_ALIGN_VERT_CENTER_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+__ofAlignHorz Constants:__
+
+- `OF_ALIGN_HORZ_IGNORE` : Does not perform any horizontal alignment.
+- `OF_ALIGN_HORZ_LEFT`   : Uses the left edge of the rectangle to horizontally anchor the alignment.
+- `OF_ALIGN_HORZ_RIGHT`  : Uses the right edge of the rectangle to horizontally anchor the alignment.
+- `OF_ALIGN_HORZ_CENTER` : Uses the center of the rectangle to horizontally anchor the alignment.
+
+__ofAlignVert Constants:__
+
+- `OF_ALIGN_VERT_IGNORE` : Does not perform any vertical alignment.
+- `OF_ALIGN_VERT_TOP`    : Uses the upper edge of the rectangle to vertically anchor the alignment.
+- `OF_ALIGN_VERT_BOTTOM` : Uses the bottom edge of the rectangle to vertically anchor the alignment.
+- `OF_ALIGN_VERT_CENTER` : Uses the center of the rectangle to vertically anchor the alignment.
+
+For a working example of how to use ofAlignVert and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void alignTo(&targetPoint, thisHorzAnchor = OF_ALIGN_HORZ_CENTER, thisVertAnchor = OF_ALIGN_VERT_CENTER)
+
+<!--
+_syntax: alignTo(&targetPoint, thisHorzAnchor = OF_ALIGN_HORZ_CENTER, thisVertAnchor = OF_ALIGN_VERT_CENTER)_
+_name: alignTo_
+_returns: void_
+_returns_description: _
+_parameters: const int &targetPoint, ofAlignHorz thisHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert thisVertAnchor=OF_ALIGN_VERT_CENTER_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+__ofAlignHorz Constants:__
+
+- `OF_ALIGN_HORZ_IGNORE` : Does not perform any horizontal alignment.
+- `OF_ALIGN_HORZ_LEFT`   : Uses the left edge of the rectangle to horizontally anchor the alignment.
+- `OF_ALIGN_HORZ_RIGHT`  : Uses the right edge of the rectangle to horizontally anchor the alignment.
+- `OF_ALIGN_HORZ_CENTER` : Uses the center of the rectangle to horizontally anchor the alignment.
+
+__ofAlignVert Constants:__
+
+- `OF_ALIGN_VERT_IGNORE` : Does not perform any vertical alignment.
+- `OF_ALIGN_VERT_TOP`    : Uses the upper edge of the rectangle to vertically anchor the alignment.
+- `OF_ALIGN_VERT_BOTTOM` : Uses the bottom edge of the rectangle to vertically anchor the alignment.
+- `OF_ALIGN_VERT_CENTER` : Uses the center of the rectangle to vertically anchor the alignment.
+
+For a working example of how to use ofAlignVert and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void alignToHorz(&targetX, thisHorzAnchor = OF_ALIGN_HORZ_CENTER)
 
 <!--
@@ -307,19 +304,8 @@ _inlined_description: _
 Horizontally align a rectangle using a position and anchor edge.
 
 Aligns the horizontal position of the ofRectangle to the given x-
-position using an ofAlignHorz constant. If a constant is not passed in
+position using an ofAlignHorz constant as anchor. If a constant is not passed in
 this will align the center of the rectangle.
-
-__ofAlignHorz Constants:__
-
-- `OF_ALIGN_HORZ_IGNORE` : Does not perform any horizontal alignment.
-- `OF_ALIGN_HORZ_LEFT`   : Uses the left edge of the rectangle to horizontally anchor the alignment.
-- `OF_ALIGN_HORZ_RIGHT`  : Uses the right edge of the rectangle to horizontally anchor the alignment.
-- `OF_ALIGN_HORZ_CENTER` : Uses the center of the rectangle to horizontally anchor the alignment.
-
-For an example of how to use ofAlignHorz, see the
-*graphics/rectangleAlignmentAndScaling/* example within the examples
-directory.
 
 
 Parameters:
@@ -331,7 +317,6 @@ thisHorzAnchor The edge of this rectangle to align.
 
 
 _description: _
-
 
 __ofAlignHorz Constants:__
 
@@ -368,10 +353,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Horizontally align two rectangles.
+Horizontally align two rectangles to another using one anchor for both.
 
 Aligns the horizontal position of the ofRectangle to that of the
-passed-in ofRectangle. Can take an ofAlignHorz constant.
+passed-in ofRectangle using an ofAlignHorz constant as anchor.
 
 If a constant is not passed in, this will align the horizontal centers
 of the rectangles.
@@ -390,7 +375,6 @@ sharedAnchor The common edge of the rectangles to align.
 
 _description: _
 
-
 __ofAlignHorz Constants:__
 
 - `OF_ALIGN_HORZ_IGNORE` : Does not perform any horizontal alignment.
@@ -399,6 +383,7 @@ __ofAlignHorz Constants:__
 - `OF_ALIGN_HORZ_CENTER` : Uses the center of the rectangle to horizontally anchor the alignment.
 
 For a working example of how to use ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
+
 
 
 
@@ -425,10 +410,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Horizontally align two rectangles.
+Horizontally align two rectangles to another using two anchors.
 
 Aligns the horizontal position of the ofRectangle to that of the
-passed-in ofRectangle. Takes two ofAlignHorz constants.
+passed-in ofRectangle. Takes two ofAlignHorz constants as anchors.
 
 Will align the chosen anchor in the ofRectangle with the chosen anchor
 in the passed-in ofRectangle.
@@ -445,7 +430,6 @@ thisHorzAnchor The edge of this rectangle to align.
 
 _description: _
 
-
 __ofAlignHorz Constants:__
 
 - `OF_ALIGN_HORZ_IGNORE` : Does not perform any horizontal alignment.
@@ -454,6 +438,7 @@ __ofAlignHorz Constants:__
 - `OF_ALIGN_HORZ_CENTER` : Uses the center of the rectangle to horizontally anchor the alignment.
 
 For a working example of how to use ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example within the examples directory.
+
 
 
 
@@ -480,24 +465,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Vertically align this ofRectangle to a target y-position.
+Vertically align a rectangle using a position and anchor edge.
 
-Aligns the vertical position of the ofRectangle to the given x-position
-using an ofAlignVert constant.
-
-If a constant is not passed in, this will align the center of the
-rectangle.
-
-__ofAlignVert Constants:__
-
-- `OF_ALIGN_VERT_IGNORE` : Does not perform any vertical alignment.
-- `OF_ALIGN_VERT_TOP`    : Uses the upper edge of the rectangle to vertically anchor the alignment.
-- `OF_ALIGN_VERT_BOTTOM` : Uses the bottom edge of the rectangle to vertically anchor the alignment.
-- `OF_ALIGN_VERT_CENTER` : Uses the center of the rectangle to vertically anchor the alignment.
-
-For a working example of how to use ofAlignVert, see the
-*graphics/rectangleAlignmentAndScaling/* example within the examples
-directory
+Aligns the vertical position of the ofRectangle to the given y-
+position using an ofAlignVert constant as anchor. If a constant is not passed in
+this will align the center of the rectangle.
 
 
 Parameters:
@@ -509,7 +481,6 @@ sharedAnchor The alignment position of this ofRectangle to use.
 
 
 _description: _
-
 
 __ofAlignVert Constants:__
 
@@ -548,7 +519,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Vertically align this ofRectangle to another target ofRectangle.
+Vertically align two rectangles to another using one anchor for both.
+
+Aligns the vertical position of the ofRectangle to that of the
+passed-in ofRectangle using an ofAlignVert constant as anchor.
 
 If a constant is not passed in, this will align the vertical centers
 of the rectangles.
@@ -566,7 +540,6 @@ sharedAnchor The alignment position for both rectangles to use.
 
 _description: _
 
-
 __ofAlignVert Constants:__
 
 - `OF_ALIGN_VERT_IGNORE` : Does not perform any vertical alignment.
@@ -577,6 +550,7 @@ __ofAlignVert Constants:__
 For a working example of how to use ofAlignVert, see the
 *graphics/rectangleAlignmentAndScaling/* example within the examples
 directory
+
 
 
 
@@ -603,7 +577,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Vertically align this ofRectangle to another target ofRectangle.
+Vertically align two rectangles to another using two anchors.
 
 Will align the chosen anchor in the ofRectangle with the chosen anchor
 in the passed-in ofRectangle.
@@ -620,7 +594,6 @@ thisVertAnchor The alignment anchor for the other rectangle.
 
 _description: _
 
-
 __ofAlignVert Constants:__
 
 - `OF_ALIGN_VERT_IGNORE` : Does not perform any vertical alignment.
@@ -631,6 +604,7 @@ __ofAlignVert Constants:__
 For a working example of how to use ofAlignVert, see the
 *graphics/rectangleAlignmentAndScaling/* example within the examples
 directory
+
 
 
 
@@ -659,27 +633,16 @@ _inlined_description: _
 
 Get the area of the ofRectangle.
 
-This is the product of the width and height.
-
-~~~~{.cpp}
-    // Create a rectangle that is 100 units wide and 200 units tall
-    ofRectangle myRect(0,0,100,200);
-
-    // Get the area of that rectangle
-    float areaValue = myRect.getArea();
-
-    // areaValue will be 20000.0.
-~~~~
+This is the product of the width and height of the recatngle.
 
 
-Returns: The area of the rectangle.
+Returns: The area of the rectangle as float.
 
 
 
 
 
 _description: _
-
 
 Example:
 ~~~~{.cpp}
@@ -720,16 +683,6 @@ _advanced: False_
 _inlined_description: _
 
 Gets the ratio of width to height of the ofRectangle.
-
-~~~~{.cpp}
-    // Create a rectangle that is 100 units wide and 200 units tall
-    ofRectangle myRect(0,0,100,200);
-
-    // Get the aspect ratio of that rectangle
-    float aspectRatioValue = myRect.getAspectRatio();
-
-    // aspectRatioValue will be 0.5.
-~~~~
 
 
 Returns: The aspect ratio of the rectangle.
@@ -779,18 +732,17 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets the y-position of the bottom edge of the ofRectangle.
+Gets the y position of the bottom edge of the ofRectangle as float.
 
 See also: getMaxY()
 
-Returns: The y-position of the bottom edge of the rectangle.
+Returns: The y position of the bottom edge of the rectangle.
 
 
 
 
 
 _description: _
-
 
 Equivalent to ofRectangle::getMaxY().
 
@@ -800,12 +752,12 @@ Equivalent to ofRectangle::getMaxY().
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getBottomLeft()
+###int getBottomLeft()
 
 <!--
 _syntax: getBottomLeft()_
 _name: getBottomLeft_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -820,7 +772,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the bottom-left coordinates of the ofRectangle.
+Get the bottom-left coordinates of the ofRectangle as glm::vec3.
 
 Returns: The bottom-left coordinates of the rectangle.
 
@@ -835,14 +787,15 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###ofPoint getBottomRight()
+###int getBottomRight()
 
 <!--
 _syntax: getBottomRight()_
 _name: getBottomRight_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -857,7 +810,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the bottom-right coordinates of the ofRectangle.
+Get the bottom-right coordinates of the ofRectangle as glm::vec3.
 
 See also: getMax()
 
@@ -869,7 +822,6 @@ Returns: The bottom-right coordinates of the rectangle.
 
 _description: _
 
-
 Equivalent to ofRectangle::getMax().
 
 
@@ -878,12 +830,12 @@ Equivalent to ofRectangle::getMax().
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getCenter()
+###int getCenter()
 
 <!--
 _syntax: getCenter()_
 _name: getCenter_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -898,19 +850,20 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the coordiantes of the ofRectangle's center.
+Get the coordiantes of the ofRectangle's center as glm::vec3.
 
 
-Warning: The z-component of the returned ofPoint will always be 0.
+Warning: The z component of the returned glm::vec3 will always be 0.
 
 
-Returns: The coordinates of the center of the rectangle (z = 0).
+Returns: The x and y coordinates of the center of the rectangle (z = 0).
 
 
 
 
 
 _description: _
+
 
 
 
@@ -939,7 +892,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets the height of the ofRectangle.
+Gets the height of the ofRectangle as float.
 
 Returns: The height of the rectangle.
 
@@ -948,6 +901,7 @@ Returns: The height of the rectangle.
 
 
 _description: _
+
 
 
 
@@ -979,15 +933,6 @@ _inlined_description: _
 A convenience method that returns the value of one of
 the horizontal edges of the ofRectangle using the `ofAlignHorz` enum.
 
-Possible anchor values are:
-
-- `OF_ALIGN_HORZ_IGNORE`  : returns 0.0
-- `OF_ALIGN_HORZ_LEFT`    : returns the position of the left edge, equivalent to ofRectangle::geLeft().
-- `OF_ALIGN_HORZ_RIGHT`   : returns the position of the right edge, equivalent to ofRectangle::getRight().
-- `OF_ALIGN_HORZ_CENTER`  : returns the x-position of the center of the ofRectangle.
-
-Any other anchor value will return `0.0`.
-
 
 Parameters:
 anchor The anchor position to query.
@@ -1008,6 +953,7 @@ Possible anchor values are:
 - `OF_ALIGN_HORZ_CENTER`  : returns the x-position of the center of the ofRectangle.
 
 Any other anchor value will return `0.0`.
+
 
 
 
@@ -1089,18 +1035,17 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets the x-position of the left edge of the ofRectangle.
+Gets the x position of the left edge of the ofRectangle as float.
 
 See also: getMinX()
 
-Returns: The x-position of the left edge of the rectangle.
+Returns: The x position of the left edge of the rectangle.
 
 
 
 
 
 _description: _
-
 
 Equivalent to ofRectangle::getMinX().
 
@@ -1110,12 +1055,12 @@ Equivalent to ofRectangle::getMinX().
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getMax()
+###int getMax()
 
 <!--
 _syntax: getMax()_
 _name: getMax_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1130,9 +1075,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the maximum x- and y- coordinates of the ofRectangle.
+Get the maximum x and y coordinates of the ofRectangle as glm::vec3.
 
-Returns: The maximum x- and y- coordinates of the rectangle.
+Returns: The maximum x and y coordinates of the rectangle.
 
 
 
@@ -1170,9 +1115,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the largest x-position of the ofRectangle.
+Get the largest x position of the ofRectangle as float.
 
-Returns: The largest x-position of the rectangle.
+Returns: The largest x position of the rectangle.
 
 
 
@@ -1210,16 +1155,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the largest y-position of the ofRectangle.
+Get the largest y position of the ofRectangle as float.
 
-Returns: The largest y-position of the rectangle.
+Returns: The largest y position of the rectangle.
 
 
 
 
 
 _description: _
-
 
 Equivalent to ofRectangle::getBottom().
 
@@ -1229,12 +1173,12 @@ Equivalent to ofRectangle::getBottom().
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getMin()
+###int getMin()
 
 <!--
 _syntax: getMin()_
 _name: getMin_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1249,16 +1193,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the minimum x- and y- coordinates of the ofRectangle.
+Get the minimum x and y coordinates of the ofRectangle as glm::vec3.
 
-Returns: The minimum x- and y- coordinates of the rectangle.
+Returns: The minimum x and y coordinates of the rectangle.
 
 
 
 
 
 _description: _
-
 
 Equivalent to ofRectangle::getTopLeft().
 
@@ -1288,9 +1231,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the smallest x-position of the ofRectangle.
+Get the smallest x position of the ofRectangle as float.
 
-Returns: The smallest x-position of the rectangle.
+Returns: The smallest xposition of the rectangle.
 
 
 
@@ -1326,16 +1269,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the smallest y-position of the ofRectangle.
+Get the smallest y position of the ofRectangle as float.
 
-Returns: The smallest y-position of the rectangle.
+Returns: The smallest y position of the rectangle.
 
 
 
 
 
 _description: _
-
 
 Equivalent to ofRectangle::getTop().
 
@@ -1369,25 +1311,14 @@ Gets the perimeter of the ofRectangle.
 
 This is the sum of the lengths of the sides.
 
-~~~~{.cpp}
-    // Create a rectangle that is 100 units wide and 200 units tall
-    ofRectangle myRect(0,0,100,200);
 
-    // Get the perimeter of that rectangle
-    float perimeterValue = myRect.getPerimeter();
-
-    // perimeterValue will be 600.0.
-~~~~
-
-
-Returns: The perimeter of the rectangle.
+Returns: The perimeter of the rectangle as float.
 
 
 
 
 
 _description: _
-
 
 Example:
 ~~~~{.cpp}
@@ -1407,12 +1338,12 @@ float perimeterValue = myRect.getPerimeter();
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getPosition()
+###const int & getPosition()
 
 <!--
 _syntax: getPosition()_
 _name: getPosition_
-_returns: ofPoint_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1430,7 +1361,7 @@ _inlined_description: _
 Get the ofRectangle's position.
 
 
-Warning: The z-component of the returned ofPoint is undefined.
+Warning: The z component of the returned glm::vec3 is undefined.
 
 
 Returns: The rectangle's position.
@@ -1444,52 +1375,6 @@ _description: _
 Returns the (x,y) position of the ofRectangle as an ofPoint.
 
 Equivalent to ofRectangle::getPositionRef().
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPoint & getPositionRef()
-
-<!--
-_syntax: getPositionRef()_
-_name: getPositionRef_
-_returns: ofPoint &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get a reference to the ofRectangle's position.
-
-
-Warning: Changes to the z-component of the referenced ofPoint are not
-guaranteed to be preserved and will be ignored during further
-ofRectangle operations.
-
-
-Returns: A reference to the position of the rectangle.
-
-
-
-
-
-_description: _
-
-Returns the current (x,y) position of the ofRectangle as an ofPoint.
-
-Equivalent to ofRectangle::getPosition().
 
 
 
@@ -1517,18 +1402,17 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets the x-position of the right edge of the ofRectangle.
+Gets the x position of the right edge of the ofRectangle as float.
 
 See also: getMaxX()
 
-Returns: The y-position of the right edge of the rectangle.
+Returns: The y position of the right edge of the rectangle.
 
 
 
 
 
 _description: _
-
 
 Equivalent to ofRectangle::getMaxX().
 
@@ -1558,10 +1442,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the standardized representation of this rectangle..
+Get the standardized representation of this rectangle.
 
-For more information about standardized rectangles, see the discussion
-of the standardize() method.
+"Standardized" rectangles are rectangles whose width and height are positive.
+For more information about standardized rectangles, see the discussion of the standardize() method.
 
 
 Returns: the Standardized version of this ofRectangle.
@@ -1600,18 +1484,17 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets the y-position of the top edge of the ofRectangle.
+Gets the y position of the top edge of the ofRectangle as float.
 
 See also: getMinY()
 
-Returns: The y-position of the top edge of the rectangle.
+Returns: The y position of the top edge of the rectangle.
 
 
 
 
 
 _description: _
-
 
 Equivalent to ofRectangle::getMinY().
 
@@ -1621,12 +1504,12 @@ Equivalent to ofRectangle::getMinY().
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getTopLeft()
+###int getTopLeft()
 
 <!--
 _syntax: getTopLeft()_
 _name: getTopLeft_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1641,7 +1524,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the top-left coordinates of the ofRectangle.
+Get the top-left coordinates of the ofRectangle as glm::vec3.
 
 See also: getMin()
 
@@ -1653,7 +1536,6 @@ Returns: The top-left coordinates of the rectangle.
 
 _description: _
 
-
 Equivalent to ofRectangle::getMin().
 
 
@@ -1662,12 +1544,12 @@ Equivalent to ofRectangle::getMin().
 
 <!----------------------------------------------------------------------------->
 
-###ofPoint getTopRight()
+###int getTopRight()
 
 <!--
 _syntax: getTopRight()_
 _name: getTopRight_
-_returns: ofPoint_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1682,7 +1564,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Get the top-right coordinates of the ofRectangle.
+Get the top-right coordinates of the ofRectangle as glm::vec3.
 
 Returns: The top-right coordinates of the rectangle.
 
@@ -1723,7 +1605,7 @@ _inlined_description: _
 Get the union area between this rectangle and anohter.
 
 
-See also: growToInclude(const ofRectangle& rect)
+See also: getIntersection(const ofRectangle& rect) const
 
 Parameters:
 rect The rectangle to unite with.
@@ -1767,15 +1649,6 @@ _inlined_description: _
 
 A convenience method that returns the value of one of the
 vertical edges of the ofRectangle using the ofAlignVert enum.
-
-Possible anchor values are:
-
-- `OF_ALIGN_VERT_IGNORE`  : returns 0.0
-- `OF_ALIGN_VERT_TOP`     : returns the position of the upper edge, equivalent to ofRectangle::getTop().
-- `OF_ALIGN_VERT_BOTTOM`  : returns the position of the bottom edge, equivalent to ofRectangle::getBottom().
-- `OF_ALIGN_VERT_CENTER`  : returns the y-position of the center of the ofRectangle.
-
-Any other anchor value will return `0.0`.
 
 
 Parameters:
@@ -1824,7 +1697,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets the width of the ofRectangle.
+Gets the width of the ofRectangle as float.
 
 Returns: The width of the rectangle.
 
@@ -1833,6 +1706,7 @@ Returns: The width of the rectangle.
 
 
 _description: _
+
 
 
 
@@ -1861,15 +1735,16 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets the x-position of the ofRectangle.
+Gets the x position of the ofRectangle as float.
 
-Returns: The x-position of the rectangle.
+Returns: The x position of the rectangle.
 
 
 
 
 
 _description: _
+
 
 
 
@@ -1898,15 +1773,16 @@ _advanced: False_
 
 _inlined_description: _
 
-Gets the y-position of the ofRectangle.
+Gets the y position of the ofRectangle as float.
 
-Returns: the y-position of the rectangle.
+Returns: the y position of the rectangle.
 
 
 
 
 
 _description: _
+
 
 
 
@@ -1957,51 +1833,6 @@ _description: _
 
 
 
-<!----------------------------------------------------------------------------->
-
-###void growToInclude(&p)
-
-<!--
-_syntax: growToInclude(&p)_
-_name: growToInclude_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &p_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Grow the ofRectangle to include the given point.
-
-
-Warning: The z-component of the passed ofPoint is ignored.
-
-This will potentially change the width, height, x-position, and y-
-position of the ofRectangle.  If the point is already within the
-rectangle, this rectangle will remain unchanged.
-
-
-Parameters:
-p The position to include.
-
-
-
-
-
-_description: _
-
-
-
-
-
 
 <!----------------------------------------------------------------------------->
 
@@ -2046,16 +1877,17 @@ Expands the ofRectangle so that the ofRectangle passed into the method is entire
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###void growToInclude(&p0, &p1)
+###void growToInclude(&p)
 
 <!--
-_syntax: growToInclude(&p0, &p1)_
+_syntax: growToInclude(&p)_
 _name: growToInclude_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p0, const ofPoint &p1_
+_parameters: const int &p_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2068,19 +1900,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Grow the ofRectangle to include the given line segment.
 
-
-Warning: The z-components of the passed ofPoints are ignored.
-
-This will potentially change the width, height, x-position, and
-y-position of the ofRectangle.  If the points are already within the
-rectangle, this rectangle will remain unchanged.
-
-
-Parameters:
-p0 The first point to include.
-p1 The second point to include.
 
 
 
@@ -2089,6 +1909,114 @@ p1 The second point to include.
 _description: _
 
 Modify the ofRectangle so that both the ofPoints given are enclosed within the rectangle.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void growToInclude(&p)
+
+<!--
+_syntax: growToInclude(&p)_
+_name: growToInclude_
+_returns: void_
+_returns_description: _
+_parameters: const int &p_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Modify the ofRectangle so that both the ofPoints given are enclosed within the rectangle.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void growToInclude(&p0, &p1)
+
+<!--
+_syntax: growToInclude(&p0, &p1)_
+_name: growToInclude_
+_returns: void_
+_returns_description: _
+_parameters: const int &p0, const int &p1_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void growToInclude(&p0, &p1)
+
+<!--
+_syntax: growToInclude(&p0, &p1)_
+_name: growToInclude_
+_returns: void_
+_returns_description: _
+_parameters: const int &p0, const int &p1_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -2121,69 +2049,12 @@ Determines if the coordinates (x, y) are within the ofRectangle.
 Note that coordinates on the edge of the ofRectangle are not
 considered within the rectangle and will return false.
 
-Coordinates (x, y) are considered inside the rectangle if:
-
-`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
-
 
 Parameters:
 px The x-coordinate to test.
 py The y-coordinate to test.
 
 Returns: true if px and py are inside this ofRectangle.
-
-
-
-
-
-_description: _
-
-Coordinates (x, y) are considered inside the rectangle if:
-
-`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool inside(&p)
-
-<!--
-_syntax: inside(&p)_
-_name: inside_
-_returns: bool_
-_returns_description: _
-_parameters: const ofPoint &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Determines if the ofPoint is within the ofRectangle.
-
-Note that points on the edge of the ofRectangle are not
-considered within the rectangle and will return false.
-
-Coordinates (x, y) are considered inside the rectangle if:
-
-`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
-
-
-Warning: The z-component of the passed ofPoint is ignored.
-
-
-Parameters:
-p The point to test.
-
-Returns: true if the point p is inside this ofRectangle.
 
 
 
@@ -2221,7 +2092,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Determines if another ofRectangle is within the ofRectangle.
+Determines if another ofRectangle is completely within the ofRectangle.
 
 Note that rectangles that share an edge with the ofRectangle are not
 considered within the rectangle and will return false.
@@ -2243,16 +2114,17 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
-###bool inside(&p0, &p1)
+###bool inside(&p)
 
 <!--
-_syntax: inside(&p0, &p1)_
+_syntax: inside(&p)_
 _name: inside_
 _returns: bool_
 _returns_description: _
-_parameters: const ofPoint &p0, const ofPoint &p1_
+_parameters: const int &p_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2265,22 +2137,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Determines if a line segment is within the ofRectangle.
 
-This can be used to test if a line segment is inside the rectangle.
-
-Note that points on the edge of the ofRectangle are not considered
-within the rectangle and will return false.
-
-
-Warning: The z-components of the passed ofPoints are ignored.
-
-
-Parameters:
-p0 The first point to test.
-p1 The second point to test.
-
-Returns: true if both points are inside the rectangle.
 
 
 
@@ -2288,10 +2145,119 @@ Returns: true if both points are inside the rectangle.
 
 _description: _
 
+This can be used to test if a line segment is inside the rectangle.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool inside(&p)
+
+<!--
+_syntax: inside(&p)_
+_name: inside_
+_returns: bool_
+_returns_description: _
+_parameters: const int &p_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
 
 This can be used to test if a line segment is inside the rectangle.
 
 
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool inside(&p0, &p1)
+
+<!--
+_syntax: inside(&p0, &p1)_
+_name: inside_
+_returns: bool_
+_returns_description: _
+_parameters: const int &p0, const int &p1_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Coordinates (x, y) are considered inside the rectangle if:
+
+`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool inside(&p0, &p1)
+
+<!--
+_syntax: inside(&p0, &p1)_
+_name: inside_
+_returns: bool_
+_returns_description: _
+_parameters: const int &p0, const int &p1_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Coordinates (x, y) are considered inside the rectangle if:
+
+`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
 
 
 
@@ -2319,7 +2285,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Determines if another rectangle intersects with the ofRectangle.
+Determines if another rectangle intersects with this rectangle.
 
 Rectangles that only share an edge and do not intersect otherwise are
 not considered to intersect and will return false.
@@ -2355,7 +2321,7 @@ _syntax: intersects(&p0, &p1)_
 _name: intersects_
 _returns: bool_
 _returns_description: _
-_parameters: const ofPoint &p0, const ofPoint &p1_
+_parameters: const int &p0, const int &p1_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2368,19 +2334,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Determines if a line segment intersects with the ofRectangle.
 
-
-Warning: The z-components of the passed ofPoints are ignored.
-
-
-Parameters:
-p0 The first point to test.
-p1 The second point to test.
-
-Returns: `true` if the line segment defined by the two passed ofPoints
-    either crosses the perimeter of the ofRectangle or is completely
-    contained within.
 
 
 
@@ -2389,6 +2343,44 @@ Returns: `true` if the line segment defined by the two passed ofPoints
 _description: _
 
 This method can be used to check if any part of the line segment intersects with the rectangle.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool intersects(&p0, &p1)
+
+<!--
+_syntax: intersects(&p0, &p1)_
+_name: intersects_
+_returns: bool_
+_returns_description: _
+_parameters: const int &p0, const int &p1_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+This method can be used to check if any part of the line segment intersects with the rectangle.
+
+
 
 
 
@@ -2418,13 +2410,14 @@ Determines if the ofRectangle's area is zero.
 
 See also: getArea().
 
-Returns: true if both the width == 0 and height == 0.
+Returns: true if both the width == 0 and height == 0, false if either is non-zero.
 
 
 
 
 
 _description: _
+
 
 
 
@@ -2455,8 +2448,8 @@ _inlined_description: _
 
 Returns true if this ofRectangle is standardized.
 
-For more information about standardized rectangles, see the discussion
-of the standardize() method.
+"Standardized" rectangles are rectangles whose width and height are positive.
+For more information about standardized rectangles, see the discussion of the standardize() method.
 
 
 Returns: true if both width >= 0 and height >= 0.
@@ -2466,6 +2459,7 @@ Returns: true if both width >= 0 and height >= 0.
 
 
 _description: _
+
 
 
 
@@ -2495,6 +2489,195 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int map()
+
+<!--
+_syntax: map()_
+_name: map_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Maps a normalized coordinate into this rectangle
+
+Normalized coordinates range from [0,1] inclusive. It is used to define a ratio
+between the coordinates and a unitary rectangle. This ratio is mapped into
+this rectangle to scale to real values. If normalized coordinates are out of bounds,
+output will be scaled accordingly.
+
+
+Parameters:
+coeff Normalized coordinate to map to this rectangle
+
+Returns: The mapped coordinate
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofRectangle map(&coeff)
+
+<!--
+_syntax: map(&coeff)_
+_name: map_
+_returns: ofRectangle_
+_returns_description: _
+_parameters: const ofRectangle &coeff_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Maps a normalized coordinate into this rectangle
+
+Normalized rectangles' position, width and height range from [0,1] inclusive.
+It is used to define a ratio between the rectangle and a unitary rectangle.
+This ratio is mapped into this rectangle to scale to real values.
+If normalized rectangle is out of bounds, output will be scaled accordingly.
+
+
+Parameters:
+coeff Normalized rectangle to map to this rectangle
+
+Returns: The mapped coordinate
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int mapClamp()
+
+<!--
+_syntax: mapClamp()_
+_name: mapClamp_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Maps a normalized coordinate into this rectangle, clamping if out of bounds
+
+Normalized coordinates range from [0,1] inclusive. It is used to define a ratio
+between the coordinates and a unitary rectangle. This ratio is mapped into
+this rectangle to scale to real values. If normalized coordinates are out of bounds,
+output will be clamped to this rectangle's position, width and height.
+
+
+Parameters:
+coeff Normalized coordinate to map to this rectangle
+
+Returns: The mapped coordinate, clamped
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofRectangle mapClamp(&coeff)
+
+<!--
+_syntax: mapClamp(&coeff)_
+_name: mapClamp_
+_returns: ofRectangle_
+_returns_description: _
+_parameters: const ofRectangle &coeff_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Maps a normalized rectangle to this rectangle, clamping if out of bounds
+
+Normalized rectangles' position, width and height range from [0,1] inclusive.
+It is used to define a ratio between the rectangle and a unitary rectangle.
+This ratio is mapped into this rectangle to scale to real values.
+If normalized rectangle is out of bounds, output will be clamped to this
+rectangle's position, width and height.
+
+
+Parameters:
+coeff Normalized rectangle to map to this rectangle
+
+Returns: The mapped rectangle
 
 
 
@@ -2592,54 +2775,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofRectangle(&p, w, h)
-
-<!--
-_syntax: ofRectangle(&p, w, h)_
-_name: ofRectangle_
-_returns: _
-_returns_description: _
-_parameters: const ofPoint &p, float w, float h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct a rectangle from a point and dimensions.
-
-To produce consistent results, users are encouraged to initialize
-rectangles in the standardized form with width >=0 and height >= 0.
-
-
-Warning: The z-component of the passed ofPoint is ignored.
-
-
-Parameters:
-p The ofPoint representing the position of the rectangle.
-w The width of the rectangle.
-h The height of the rectangle.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofRectangle(&rect)
 
 <!--
@@ -2679,14 +2814,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofRectangle(&p0, &p1)
+### ofRectangle(&p, w, h)
 
 <!--
-_syntax: ofRectangle(&p0, &p1)_
+_syntax: ofRectangle(&p, w, h)_
 _name: ofRectangle_
 _returns: _
 _returns_description: _
-_parameters: const ofPoint &p0, const ofPoint &p1_
+_parameters: const int &p, float w, float h_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2699,15 +2834,115 @@ _advanced: False_
 
 _inlined_description: _
 
-Construct a rectangle by defining two corners.
 
 
-Warning: The z-components of the passed ofPoints are ignored.
 
 
-Parameters:
-p0 An ofPoint representing the upper left hand corner.
-p1 An ofPoint representing the lower right hand corner.
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofRectangle(&p, w, h)
+
+<!--
+_syntax: ofRectangle(&p, w, h)_
+_name: ofRectangle_
+_returns: _
+_returns_description: _
+_parameters: const int &p, float w, float h_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofRectangle(&p0, &p1)
+
+<!--
+_syntax: ofRectangle(&p0, &p1)_
+_name: ofRectangle_
+_returns: _
+_returns_description: _
+_parameters: const int &p0, const int &p1_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofRectangle(&p0, &p1)
+
+<!--
+_syntax: ofRectangle(&p0, &p1)_
+_name: ofRectangle_
+_returns: _
+_returns_description: _
+_parameters: const int &p0, const int &p1_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -2762,6 +2997,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###ofRectangle operator+(&p)
@@ -2771,7 +3007,7 @@ _syntax: operator+(&p)_
 _name: operator+_
 _returns: ofRectangle_
 _returns_description: _
-_parameters: const ofPoint &p_
+_parameters: const int &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2784,13 +3020,43 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns a new ofRectangle where the x and y-positions of the
-rectangle are offset by the (x, y) coordinates of the ofPoint.
 
-Parameters:
-p The point to translate.
 
-Returns: The translated ofRectangle.
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofRectangle operator+(&p)
+
+<!--
+_syntax: operator+(&p)_
+_name: operator+_
+_returns: ofRectangle_
+_returns_description: _
+_parameters: const int &p_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -2813,7 +3079,7 @@ _syntax: operator-(&p)_
 _name: operator-_
 _returns: ofRectangle_
 _returns_description: _
-_parameters: const ofPoint &p_
+_parameters: const int &p_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2826,13 +3092,43 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns a new ofRectangle where the x and y-positions of the
-rectangle are offset by the (x, y) coordinates of the ofPoint.
 
-Parameters:
-p The point to translate.
 
-Returns: The translated ofRectangle.
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofRectangle operator-(&p)
+
+<!--
+_syntax: operator-(&p)_
+_name: operator-_
+_returns: ofRectangle_
+_returns_description: _
+_parameters: const int &p_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -2984,6 +3280,7 @@ myRect.scaleHeight(s);
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void scale(sX, sY)
@@ -3011,19 +3308,6 @@ Scale the rectangle.
 Scaling will scale the width and the height, but will not change the
 position.
 
-This is equivalent to calling:
-
-~~~~{.cpp}
-
-ofRectangle myRect(0, 0, 100, 100);
-
-float sX = 2;
-float sY = 2;
-
-myRect.scaleWidth(sX);
-myRect.scaleHeight(sY);
-
-~~~~
 
 Parameters:
 sX The width-scaling factor.
@@ -3053,6 +3337,8 @@ myRect.scaleHeight(sY);
 
 
 
+
+
 <!----------------------------------------------------------------------------->
 
 ###void scale(&s)
@@ -3062,7 +3348,7 @@ _syntax: scale(&s)_
 _name: scale_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &s_
+_parameters: const int &s_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -3075,32 +3361,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Scale the rectangle.
 
-Scaling will scale the width and the height, but will not change the
-position.
-
-Passing an ofPoint as a scaling factor `s` scales both width and height.
-
-This is equivalent to calling:
-
-~~~~{.cpp}
-
-ofRectangle myRect(0, 0, 100, 100);
-
-ofPoint myScaler(2, 2);
-
-myRect.scaleWidth(myScaler.x);
-myRect.scaleHeight(myScaler.y);
-
-~~~~
-
-
-Warning: The z-component of the passed ofPoint is ignored.
-
-
-Parameters:
-s The scaling factor.
 
 
 
@@ -3123,6 +3384,58 @@ myRect.scaleWidth(myScaler.x);
 myRect.scaleHeight(myScaler.y);
 
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void scale(&s)
+
+<!--
+_syntax: scale(&s)_
+_name: scale_
+_returns: void_
+_returns_description: _
+_parameters: const int &s_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Scales the width and height of the ofRectangle by multiplying the current width and
+height with the (x,y) coordinates of the passed-in ofPoint.
+
+This is equivalent to calling:
+
+~~~~{.cpp}
+
+ofRectangle myRect(0, 0, 100, 100);
+
+ofPoint myScaler(2, 2);
+
+myRect.scaleWidth(myScaler.x);
+myRect.scaleHeight(myScaler.y);
+
+~~~~
+
+
 
 
 
@@ -3224,7 +3537,7 @@ _syntax: scaleFromCenter(&s)_
 _name: scaleFromCenter_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &s_
+_parameters: const int &s_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -3237,30 +3550,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Scales both the width and height the ofRectangle from its center.
 
-The center point of the rectangle will remain fixed and the width,
-height, x, and y will be adjusted.
-
-
-This is equivalent to calling:
-
-~~~~{.cpp}
-
-ofRectangle myRect(0, 0, 100, 100);
-
-ofPoint myScaler(2, 2);
-
-myRect.scaleFromCenter(myScaler.x, myScaler.y);
-
-~~~~
-
-
-Warning: The z-component of the passed ofPoint is ignored.
-
-
-Parameters:
-s The scaling factor.
 
 
 
@@ -3271,6 +3561,54 @@ _description: _
 Scales both the width and height the ofRectangle from its center point.
 The center point of the rectangle will remain fixed and the width, height, x, and y will be adjusted.
 
+This is equivalent to calling:
+
+~~~~{.cpp}
+
+ofRectangle myRect(0, 0, 100, 100);
+
+ofPoint myScaler(2, 2);
+
+myRect.scaleFromCenter(myScaler.x, myScaler.y);
+
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void scaleFromCenter(&s)
+
+<!--
+_syntax: scaleFromCenter(&s)_
+_name: scaleFromCenter_
+_returns: void_
+_returns_description: _
+_parameters: const int &s_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Scales both the width and height the ofRectangle from its center point.
+The center point of the rectangle will remain fixed and the width, height, x, and y will be adjusted.
 
 This is equivalent to calling:
 
@@ -3283,6 +3621,9 @@ ofPoint myScaler(2, 2);
 myRect.scaleFromCenter(myScaler.x, myScaler.y);
 
 ~~~~
+
+
+
 
 
 <!----------------------------------------------------------------------------->
@@ -3353,53 +3694,6 @@ Scale the rectanle using a target ofRectangle and ofScaleMode.
 
 Adjusts the ofRectangle to match the provided ofRectangle using the
 provided ofScaleMode.
-
-Assuming the ofRectangle as the Subject and the passed-in ofRectangle as
-the Target:
-
-__OF_SCALEMODE_FIT__:
-
-This centers the Subject rectangle within the Target rectangle and
-resizes the Subject rectangle to completely fit within the Target
-Rectangle.
-
-- It fits the Subject rectangle inside the target rectangle.
-- It preserves Subject's aspect ratio.
-- The Subject's final area <= the Target's area.
-- The Subject's center == the Target's center.
-
-__OF_SCALEMODE_FILL__:
-
-This centers the Subject rectangle within the Target rectangle and
-resizes the Subject rectangle to completely encompass the Target
-Rectangle.
-
-- It fills the Target rectangle with the Subject rectangle.
-- It preserves the Subject's aspect ratio.
-- The Subject's Area >= the Target's area.
-- The Subject's center == the Target's center.
-
-__OF_SCALEMODE_CENTER__:
-
-This centers the Subject rectangle within the Target rectangle and does
-not modify the Subject's scale.
-
-- It preserves the Subject's aspect ratio.
-- The Subject's area is unchanged.
-- The Subject's center == Target's center.
-
-__OF_SCALEMODE_STRETCH_TO_FILL__:
-
-This simply modifies the Subject rectangle to match the Target
-Rectangle's dimensions.
-
-- It can change the Subject's aspect ratio.
-- The Subject's area == the Target's area.
-- The Subject's center == the Target's center.
-
-For an example of the various ofScaleModes, see the
-*graphics/rectangleAlignmentAndScaling/* example within the examples
-directory.
 
 
 Parameters:
@@ -3477,19 +3771,8 @@ _inlined_description: _
 Scale the rectangle using a target ofRectangle and parameters.
 
 Scales the ofRectangle to match the target ofRectangle. It will use the
-ofAspectRatioMode to scale the ofRectangle and will use the use the
+ofAspectRatioMode to scale the ofRectangle and will use the
 alignment anchor parameters to position the rectangle.
-
-This is a convenience method when both the target and subject rectangles
-are using the same alignment anchors. For a more complete explanation,
-see void scaleTo(const ofRectangle& targetRect, ofAspectRatioMode
-subjectAspectRatioMode, ofAlignHorz modelHorzAnchor, ofAlignVert
-modelVertAnchor, ofAlignHorz subjectHorzAnchor, ofAlignVert
-subjectVertAnchor);
-
-For a working example of how to use ofAspectRatioMode, ofAlignVert, and
-ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/* example
-within the examples directory.
 
 
 Parameters:
@@ -3552,33 +3835,6 @@ Scale the rectangle using a target ofRectangle and parameters.
 Adjusts the ofRectangle to match the passed-in ofRectangle. It will
 use the ofAspectRatioMode to scale the ofRectangle, and will use the
 use the alignment anchor parameters to position the rectangle.
-
-Assuming the ofRectangle as the Subject and the passed-in ofRectangle
-as the Target:
-
-__ofAspectRatioMode Options:__
-
-- `OF_ASPECT_RATIO_IGNORE`  : Sets the Subject rectangle's width and height to match those of the Target.
-- `OF_ASPECT_RATIO_KEEP`    : Resizes the Subject rectangle to completely fit within the Target rectangle.
-- `OF_ASPECT_RATIO_KEEP_BY_EXPANDING` : Resizes the Subject rectangle to completely enclose the Target rectangle.
-
-__ofAlignHorz Options:__
-
-- `OF_ALIGN_HORZ_IGNORE` : Does not perform any horizontal alignment.
-- `OF_ALIGN_HORZ_LEFT`   : Uses the left edge of the rectangle to horizontally anchor the alignment.
-- `OF_ALIGN_HORZ_RIGHT`  : Uses the right edge of the rectangle to horizontally anchor the alignment.
-- `OF_ALIGN_HORZ_CENTER` : Uses the center of the rectangle to horizontally anchor the alignment.
-
-__ofAlignVert Options:__
-
-- `OF_ALIGN_VERT_IGNORE` : Does not perform any vertical alignment.
-- `OF_ALIGN_VERT_TOP`    : Uses the upper edge of the rectangle to vertically anchor the alignment.
-- `OF_ALIGN_VERT_BOTTOM` : Uses the bottom edge of the rectangle to vertically anchor the alignment.
-- `OF_ALIGN_VERT_CENTER` : Uses the center of the rectangle to vertically anchor the alignment.
-
-For an example of how to use ofAspectRatioMode, ofAlignVert,
-and ofAlignHorz, see the *graphics/rectangleAlignmentAndScaling/*
-example within the examples directory.
 
 
 Parameters:
@@ -3715,54 +3971,6 @@ Sets the x position, y position, width, and height of the ofRectangle.
 
 <!----------------------------------------------------------------------------->
 
-###void set(&p, w, h)
-
-<!--
-_syntax: set(&p, w, h)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &p, float w, float h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the position and size of the rectangle.
-
-To produce consistent results, users are encouraged to initialize
-rectangles in the standardized form with width >=0 and height >= 0.
-
-
-Warning: The z-component of the passed ofPoint is ignored.
-
-
-Parameters:
-p The new position.
-w The new width.
-h The new height.
-
-
-
-
-
-_description: _
-
-Sets the (x,y) coordinates, width, and height of the ofRectangle.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void set(&rect)
 
 <!--
@@ -3802,14 +4010,14 @@ Sets the x position, y position, width, and height of the ofRectangle to match t
 
 <!----------------------------------------------------------------------------->
 
-###void set(&p0, &p1)
+###void set(&p, w, h)
 
 <!--
-_syntax: set(&p0, &p1)_
+_syntax: set(&p, w, h)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p0, const ofPoint &p1_
+_parameters: const int &p, float w, float h_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -3822,15 +4030,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the position and size of the rectangle using corners.
 
-
-Warning: The z-components of the passed ofPoints are ignored.
-
-
-Parameters:
-p0 The ofPoint representing the upper left hand corner.
-p1 The ofPoint representing the lower right hand corner.
 
 
 
@@ -3841,6 +4041,116 @@ _description: _
 Sets the x position, y position, width, and height of the ofRectangle to enclose the line segment defined by the passed ofPoints.
 
 The rectangle will always be in standardized form, regardless of the order of the ofPoints passed in.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(&p, w, h)
+
+<!--
+_syntax: set(&p, w, h)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const int &p, float w, float h_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Sets the x position, y position, width, and height of the ofRectangle to enclose the line segment defined by the passed ofPoints.
+
+The rectangle will always be in standardized form, regardless of the order of the ofPoints passed in.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(&p0, &p1)
+
+<!--
+_syntax: set(&p0, &p1)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const int &p0, const int &p1_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Sets the (x,y) coordinates, width, and height of the ofRectangle.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(&p0, &p1)
+
+<!--
+_syntax: set(&p0, &p1)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const int &p0, const int &p1_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Sets the (x,y) coordinates, width, and height of the ofRectangle.
 
 
 
@@ -3902,7 +4212,7 @@ _syntax: setFromCenter(&p, w, h)_
 _name: setFromCenter_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p, float w, float h_
+_parameters: const int &p, float w, float h_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3915,16 +4225,44 @@ _advanced: False_
 
 _inlined_description: _
 
-Set position and size of the rectangle from the center.
-
-The center of the rectangle is defined and the width and height grow
-out around the center.
 
 
-Parameters:
-p The position of the rectangle's center as an ofPoint.
-w The width of the rectangle.
-h The height of the rectangle.
+
+
+
+
+_description: _
+
+Sets the position, width, and height of the ofRectangle.
+The (x,y) coordinates passed into the function determine the center point of the ofRectangle.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setFromCenter(&p, w, h)
+
+<!--
+_syntax: setFromCenter(&p, w, h)_
+_name: setFromCenter_
+_returns: void_
+_returns_description: _
+_parameters: const int &p, float w, float h_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -4027,7 +4365,7 @@ _syntax: setPosition(&p)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p_
+_parameters: const int &p_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -4043,11 +4381,11 @@ _inlined_description: _
 Set the position of the rectangle.
 
 
-Warning: The z-component of the passed ofPoint is ignored.
+Warning: The z-component of the passed glm::vec3 is ignored.
 
 
 Parameters:
-p The position as an ofPoint.
+p The position as an glm::vec3.
 
 
 
@@ -4242,29 +4580,7 @@ _inlined_description: _
 
 Standardize the rectangle
 
-ofRectangle is a simple container for describing the position and size
-of 2D rectangles. Like many rectangle data structures found in other
-frameworks and graphics libraries, member width and height variables can
-take negative values. Additionally, x / y-position and width / height
-are publicly accessible, resulting in great programming freedom.
-Consequently, two visually identical rectangles can be represented in
-the following ways:
-
-~~~~{.cpp}
-    ofRectangle myRect(0,0,100,100);
-
-    // OR
-
-    ofRectangle myRect(100,100,-100,-100);
-~~~~
-
-While both representations will yield the same visual results in all
-openFrameworks renderers, the results of some method operations that
-modify x / y / width / height (such as scaling) produce mathematically
-correct, but visually different results for each of the above
-representations.
-
-"Standardized" rectangles are rectangles whose width >= 0 and height
+"Standardized" rectangles are rectangles whose width and height are positive: width >= 0 and height
 >= 0. This method can be used to ensure that the rectangle is
 "standardized". If the rectangle is non-standard, it will modify the x /
 width and y / height values into their respective standardized versions.
@@ -4298,6 +4614,7 @@ some method operations that modify x / y / width / height
 (such as scaling) produce mathematically correct, but
 visually different results for each of the above
 representations.
+
 
 
 
@@ -4351,7 +4668,7 @@ _syntax: translate(&dp)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &dp_
+_parameters: const int &dp_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -4364,14 +4681,43 @@ _advanced: False_
 
 _inlined_description: _
 
-Translate the rectangle's position by an x and y amount.
 
 
-Warning: The z-component of the passed ofPoint is ignored.
 
 
-Parameters:
-dp The amount to translate as an ofPoint.
+
+
+_description: _
+
+Offsets the position of the ofRectangle in the both the x and y dimensions by passing in an ofPoint.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void translate(&dp)
+
+<!--
+_syntax: translate(&dp)_
+_name: translate_
+_returns: void_
+_returns_description: _
+_parameters: const int &dp_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -4553,7 +4899,7 @@ _advanced: False_
 
 _inlined_description: _
 
-The (x,y) position of the ofRectangle as an ofPoint.
+The (x,y) position of the ofRectangle as an glm::vec3.
 
 
 Warning: The z-component of this position is preserved and can be used
@@ -4602,6 +4948,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###float x
@@ -4620,13 +4967,14 @@ _advanced: False_
 
 _inlined_description: _
 
-The x-position of the ofRectangle.
+The x position of the ofRectangle.
 
 
 
 
 
 _description: _
+
 
 
 
@@ -4651,7 +4999,7 @@ _advanced: False_
 
 _inlined_description: _
 
-The y-position of the ofRectangle.
+The y position of the ofRectangle.
 
 
 

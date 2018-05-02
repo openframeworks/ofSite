@@ -494,14 +494,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofIndexType > getIndices(startIndex, endIndex)
+###int getIndices()
 
 <!--
-_syntax: getIndices(startIndex, endIndex)_
+_syntax: getIndices()_
 _name: getIndices_
-_returns: vector< ofIndexType >_
+_returns: int_
 _returns_description: _
-_parameters: int startIndex, int endIndex_
+_parameters: _
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -530,16 +530,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh & getMesh()
+###int & getMesh()
 
 <!--
 _syntax: getMesh()_
 _name: getMesh_
-_returns: ofMesh &_
+_returns: int &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -566,16 +566,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMesh & getMesh()
+###const int & getMesh()
 
 <!--
 _syntax: getMesh()_
 _name: getMesh_
-_returns: const ofMesh &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -602,16 +602,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh * getMeshPtr()
+###int * getMeshPtr()
 
 <!--
 _syntax: getMeshPtr()_
 _name: getMeshPtr_
-_returns: ofMesh *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -638,48 +638,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMesh * getMeshPtr()
+###const int * getMeshPtr()
 
 <!--
 _syntax: getMeshPtr()_
 _name: getMeshPtr_
-_returns: const ofMesh *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec4f & getTexCoords()
-
-<!--
-_syntax: getTexCoords()_
-_name: getTexCoords_
-_returns: ofVec4f &_
+_returns: const int *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -710,12 +674,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofVec4f & getTexCoords()
+###int & getTexCoords()
 
 <!--
 _syntax: getTexCoords()_
 _name: getTexCoords_
-_returns: const ofVec4f &_
+_returns: int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -746,12 +710,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec4f * getTexCoordsPtr()
+###const int & getTexCoords()
 
 <!--
-_syntax: getTexCoordsPtr()_
-_name: getTexCoordsPtr_
-_returns: ofVec4f *_
+_syntax: getTexCoords()_
+_name: getTexCoords_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -782,16 +746,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofVec4f * getTexCoordsPtr()
+###int * getTexCoordsPtr()
 
 <!--
 _syntax: getTexCoordsPtr()_
 _name: getTexCoordsPtr_
-_returns: const ofVec4f *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const int * getTexCoordsPtr()
+
+<!--
+_syntax: getTexCoordsPtr()_
+_name: getTexCoordsPtr_
+_returns: const int *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -969,7 +969,7 @@ _syntax: mapTexCoordsFromTexture(&inTexture)_
 _name: mapTexCoordsFromTexture_
 _returns: void_
 _returns_description: _
-_parameters: ofTexture &inTexture_
+_parameters: const ofTexture &inTexture_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1070,16 +1070,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### of3dPrimitive(&mesh)
+### of3dPrimitive(&mom)
 
 <!--
-_syntax: of3dPrimitive(&mesh)_
+_syntax: of3dPrimitive(&mom)_
 _name: of3dPrimitive_
 _returns: _
 _returns_description: _
-_parameters: const ofMesh &mesh_
+_parameters: const of3dPrimitive &mom_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1106,16 +1106,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### of3dPrimitive(&mom)
+### of3dPrimitive(&mesh)
 
 <!--
-_syntax: of3dPrimitive(&mom)_
+_syntax: of3dPrimitive(&mesh)_
 _name: of3dPrimitive_
 _returns: _
 _returns_description: _
-_parameters: const of3dPrimitive &mom_
+_parameters: const int &mesh_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

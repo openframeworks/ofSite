@@ -3,9 +3,9 @@
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
-_extends: std::iterator<std::forward_iterator_tag, Pixel>_
+_extends: _
 -->
 
 ##InlineDescription
@@ -32,7 +32,7 @@ _syntax: Pixel(*pixel, bytesPerPixel, pixelFormat)_
 _name: Pixel_
 _returns: _
 _returns_description: _
-_parameters: PixelType *pixel, int bytesPerPixel, ofPixelFormat pixelFormat_
+_parameters: PixelType *pixel, size_t bytesPerPixel, ofPixelFormat pixelFormat_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -97,12 +97,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getComponentsPerPixel()
+###size_t getComponentsPerPixel()
 
 <!--
 _syntax: getComponentsPerPixel()_
 _name: getComponentsPerPixel_
-_returns: int_
+_returns: size_t_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -241,14 +241,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixels_::Pixel operator+(int)
+###ofPixels_::Pixel operator+(size_t)
 
 <!--
-_syntax: operator+(int)_
+_syntax: operator+(size_t)_
 _name: operator+_
 _returns: ofPixels_::Pixel_
 _returns_description: _
-_parameters: int _
+_parameters: size_t _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -349,14 +349,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixels_::Pixel operator+=(int)
+###ofPixels_::Pixel operator+=(size_t)
 
 <!--
-_syntax: operator+=(int)_
+_syntax: operator+=(size_t)_
 _name: operator+=_
 _returns: ofPixels_::Pixel_
 _returns_description: _
-_parameters: int _
+_parameters: size_t _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -385,14 +385,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixels_::Pixel operator-(int)
+###ofPixels_::Pixel operator-(size_t)
 
 <!--
-_syntax: operator-(int)_
+_syntax: operator-(size_t)_
 _name: operator-_
 _returns: ofPixels_::Pixel_
 _returns_description: _
-_parameters: int _
+_parameters: size_t _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -644,7 +644,7 @@ _syntax: operator[](idx)_
 _name: operator[]_
 _returns: PixelType &_
 _returns_description: _
-_parameters: int idx_
+_parameters: size_t idx_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -680,7 +680,7 @@ _syntax: operator[](idx)_
 _name: operator[]_
 _returns: const PixelType &_
 _returns_description: _
-_parameters: int idx_
+_parameters: size_t idx_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

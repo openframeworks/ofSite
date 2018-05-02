@@ -417,14 +417,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void copyFrom(&shortBuffer, numChannels, sampleRate)
+###void copyFrom(&floatBuffer, numChannels, sampleRate)
 
 <!--
-_syntax: copyFrom(&shortBuffer, numChannels, sampleRate)_
+_syntax: copyFrom(&floatBuffer, numChannels, sampleRate)_
 _name: copyFrom_
 _returns: void_
 _returns_description: _
-_parameters: const vector< short > &shortBuffer, size_t numChannels, unsigned int sampleRate_
+_parameters: const int &floatBuffer, size_t numChannels, unsigned int sampleRate_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -460,7 +460,7 @@ _syntax: copyFrom(&floatBuffer, numChannels, sampleRate)_
 _name: copyFrom_
 _returns: void_
 _returns_description: _
-_parameters: const vector< float > &floatBuffer, size_t numChannels, unsigned int sampleRate_
+_parameters: const int &floatBuffer, size_t numChannels, unsigned int sampleRate_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -675,12 +675,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< float > & getBuffer()
+###int & getBuffer()
 
 <!--
 _syntax: getBuffer()_
 _name: getBuffer_
-_returns: vector< float > &_
+_returns: int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -711,12 +711,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const vector< float > & getBuffer()
+###const int & getBuffer()
 
 <!--
 _syntax: getBuffer()_
 _name: getBuffer_
-_returns: const vector< float > &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1976,14 +1976,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void toShortPCM(&dst)
+###void toShortPCM(*dst)
 
 <!--
-_syntax: toShortPCM(&dst)_
+_syntax: toShortPCM(*dst)_
 _name: toShortPCM_
 _returns: void_
 _returns_description: _
-_parameters: vector< short > &dst_
+_parameters: short *dst_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2012,14 +2012,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void toShortPCM(*dst)
+###void toShortPCM(&dst)
 
 <!--
-_syntax: toShortPCM(*dst)_
+_syntax: toShortPCM(&dst)_
 _name: toShortPCM_
 _returns: void_
 _returns_description: _
-_parameters: short *dst_
+_parameters: int &dst_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

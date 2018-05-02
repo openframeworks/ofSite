@@ -286,6 +286,7 @@ _advanced: False_
 
 _inlined_description: _
 
+\section Global Texture Settings
 Check whether OF is using GL_TEXTURE_RECTANGLE rectangular or GL_TEXTURE_2D textures.
 
 See also: ofEnableArbTex()

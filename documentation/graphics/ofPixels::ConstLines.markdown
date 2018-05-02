@@ -3,7 +3,7 @@
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
 _extends: _
 -->
@@ -32,7 +32,7 @@ _syntax: ConstLines(*_begin, *_end, stride, componentsPerPixel, lines, pixelForm
 _name: ConstLines_
 _returns: _
 _returns_description: _
-_parameters: const PixelType *_begin, const PixelType *_end, int stride, int componentsPerPixel, int lines, ofPixelFormat pixelFormat_
+_parameters: const PixelType *_begin, const PixelType *_end, size_t stride, size_t componentsPerPixel, size_t lines, ofPixelFormat pixelFormat_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

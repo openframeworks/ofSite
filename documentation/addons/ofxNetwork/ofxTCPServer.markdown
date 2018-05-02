@@ -108,6 +108,42 @@ Close the server down and disconnect all clients.
 
 <!----------------------------------------------------------------------------->
 
+###bool disconnectAllClients()
+
+<!--
+_syntax: disconnectAllClients()_
+_name: disconnectAllClients_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool disconnectClient(clientID)
 
 <!--
@@ -1177,6 +1213,42 @@ The blocking parameter signals whether the client connections will be allowed to
 
 <!----------------------------------------------------------------------------->
 
+###bool setup(&settings)
+
+<!--
+_syntax: setup(&settings)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: const ofxTCPSettings &settings_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void threadedFunction()
 
 <!--
@@ -1187,6 +1259,78 @@ _returns_description: _
 _parameters: _
 _access: private_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void waitConnectedClient()
+
+<!--
+_syntax: waitConnectedClient()_
+_name: waitConnectedClient_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void waitConnectedClient(ms)
+
+<!--
+_syntax: waitConnectedClient(ms)_
+_name: waitConnectedClient_
+_returns: void_
+_returns_description: _
+_parameters: int ms_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1488,6 +1632,38 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###condition_variable serverReady
+
+<!--
+_name: serverReady_
+_type: condition_variable_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 

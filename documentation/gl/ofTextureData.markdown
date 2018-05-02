@@ -11,6 +11,7 @@ _extends: _
 ##InlineDescription
 
 
+\advanced
 Internal texture data structure.
 
 Used by ofTexture internally. You won't need to work with this in most cases.

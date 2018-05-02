@@ -93,7 +93,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Binds the video texture to the current rendering context.
 
+For advanced users who need to manually manage texture drawing
+without calling draw(). Only binds the texture if one exists.
+
+
+See also: ofTexture::bind()
+
+See also: http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml
 
 
 
@@ -129,7 +137,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Closes the movie file releases its resources.
 
+This is an alias for closeMovie().
+
+
+See also: closeMovie()
 
 
 
@@ -165,14 +178,18 @@ _advanced: False_
 
 _inlined_description: _
 
+Closes the movie file and releases its resources.
 
+This is an alias for close().
+
+
+See also: close()
 
 
 
 
 
 _description: _
-
 
 Example:
 
@@ -496,7 +513,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Get the path to the loaded video file.
 
+If no video file is loaded this returns an empty string.
+
+
+Returns: A path to the loaded video or an empty string if not loaded.
 
 
 
@@ -649,7 +671,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Get a pointer to the internal video player implementation.
 
+This returns a pointer to the ofBaseVideoPlayer interface. For
+implementation-specfic features, this can be cast to the subtype
+using dynamic_cast<MyVideoPlayerImplementation>(getPlayer()) or the
+templated getPlayer<MyVideoPlayerImplementation>() method.
+
+
+Returns: A pointer to the internal video player implementation.
 
 
 
@@ -685,7 +715,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Get a const pointer to the internal video player implementation.
 
+This returns a pointer to the ofBaseVideoPlayer interface. For
+implementation-specfic features, this can be cast to the subtype
+using dynamic_pointer_cast<MyVideoPlayerImplementation>(getPlayer())
+or the templated getPlayer<MyVideoPlayerImplementation>() method.
+
+
+Returns: A const pointer to the internal video player implementation.
 
 
 
@@ -721,7 +759,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Get a pointer to the internal video player implementation.
 
+Calling getPlayer<MyVideoPlayerImplementation>() is equivalent to
+dynamic_pointer_cast<MyVideoPlayerImplementation>(getPlayer()).
+
+
+Returns: A pointer to the internal video player implementation or
+			 nullptr if the cast fails.
 
 
 
@@ -757,7 +802,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Get a const pointer to the internal video player implementation.
 
+Calling getPlayer<MyVideoPlayerImplementation>() is equivalent to
+dynamic_pointer_cast<MyVideoPlayerImplementation>(getPlayer()).
+
+
+Returns: A const pointer to the internal video player implementation
+			 or nullptr if the cast fails.
 
 
 
@@ -917,12 +969,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofTexture > & getTexturePlanes()
+###int & getTexturePlanes()
 
 <!--
 _syntax: getTexturePlanes()_
 _name: getTexturePlanes_
-_returns: vector< ofTexture > &_
+_returns: int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -953,12 +1005,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const vector< ofTexture > & getTexturePlanes()
+###const int & getTexturePlanes()
 
 <!--
 _syntax: getTexturePlanes()_
 _name: getTexturePlanes_
-_returns: const vector< ofTexture > &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1081,7 +1133,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Initialize the default player implementations.
 
 
 
@@ -1709,7 +1761,6 @@ _inlined_description: _
 
 _description: _
 
-
 ~~~~{.cpp}
 
 OF_LOOP_NONE - don't loop, the movie will stop when it gets to the last frame (or first frame, if playing backwards)
@@ -1786,8 +1837,8 @@ _inlined_description: _
 
 
 _description: _
-OSX: Choose from OF_PIXELS_RGB or OF_PIXELS_RGBA
 
+OSX: Choose from OF_PIXELS_RGB or OF_PIXELS_RGBA
 
 
 
@@ -1815,7 +1866,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the internal video player implementation.
 
+Advanced users may find it useful to set a custom internal video
+player implementation. The custom video player must implment the
+ofBaseVideoPlayer interface.
+
+
+Parameters:
+newPlayer Shared pointer to the new video player that extends
+from ofBaseVideoPlayer.
 
 
 
@@ -2036,7 +2096,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Unbinds the video texture from the current rendering context.
 
+For advanced users who need to manually manage texture drawing
+without calling draw(). Only binds the texture if one exists.
+
+
+See also: ofTexture::unbind()
 
 
 
@@ -2072,7 +2138,10 @@ _advanced: False_
 
 _inlined_description: _
 
+Update the video player's internal state to continue playback.
 
+If normal video playback is desired, this method is usually called
+once per animation frame inside of ofApp::update().
 
 
 
@@ -2108,7 +2177,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+True if the video player is using a texture.
 
 
 
@@ -2140,7 +2209,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+The internal pixel format.
 
 
 
@@ -2172,7 +2241,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+The stored path to the video's path.
 
 
 
@@ -2204,7 +2273,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+A pointer to the internal video player implementation.
 
 
 
@@ -2236,7 +2305,12 @@ _advanced: False_
 
 _inlined_description: _
 
+A pointer to the internal player's texture if available.
 
+Video players that implement ofBaseVideoPlayer::getTexturePtr()
+can provide a pointer to an internal texture. When possible,
+ofVideoPlayer will use the internal texture to avoid extra pixel
+copies.
 
 
 
@@ -2268,7 +2342,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+A collection of texture planes used by the video player.
 
 
 

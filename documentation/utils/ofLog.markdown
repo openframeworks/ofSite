@@ -11,33 +11,6 @@ _extends: _
 ##InlineDescription
 
 
-A C++ stream-style logging interface.
-
-ofLog accepts variables via the std::ostream operator << and builds a string
-and logs it when the stream is finished (via the destructor). A newline is
-printed automatically and all the stream controls (std::endl, std::flush,
-std::hex, etc) work normally. The default log level is `OF_LOG_NOTICE`.
-
-Basic usage:
-
-~~~~{.cpp}
-
-ofLog() << "My integer is " << 100 << " and my float is " << 20.234f;
-
-~~~~
-
-It also accepts the legacy ofLog interface:
-ofLog(ofLogLevel level, string message):
-
-~~~~{.cpp}
-
-ofLog(OF_LOG_ERROR, "Another string.");
-
-~~~~
-
-
-By: Dan Wilcox <danomatika@gmail.com> danomatika.com
-
 
 
 
@@ -178,6 +151,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###shared_ptr< ofBaseLoggerChannel > & channel()
+
+<!--
+_syntax: channel()_
+_name: channel_
+_returns: shared_ptr< ofBaseLoggerChannel > &_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool checkLog(level, &module)
 
 <!--
@@ -205,6 +214,78 @@ level The log level.
 module The target module.
 
 Returns: true if the given module is active at the given log level.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###shared_ptr< ofBaseLoggerChannel > getChannel()
+
+<!--
+_syntax: getChannel()_
+_name: getChannel_
+_returns: shared_ptr< ofBaseLoggerChannel >_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the current logging channel.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string & getPadding()
+
+<!--
+_syntax: getPadding()_
+_name: getPadding_
+_returns: string &_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -804,38 +885,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPtr channel
-
-<!--
-_name: channel_
-_type: ofPtr_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: False_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-< The target channel.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofLogLevel level
 
 <!--
@@ -917,38 +966,6 @@ _advanced: False_
 _inlined_description: _
 
 < The destination module for this message.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string padding
-
-<!--
-_name: padding_
-_type: string_
-_access: private_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-< The padding between std::ostream calls.
 
 
 

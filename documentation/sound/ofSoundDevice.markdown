@@ -27,21 +27,21 @@ Represents information about a sound device on the system.
 
 
 
-### ofSoundDevice()
+##Variables
+
+
+
+###enum Api api
 
 <!--
-_syntax: ofSoundDevice()_
-_name: ofSoundDevice_
-_returns: _
-_returns_description: _
-_parameters: _
+_name: api_
+_type: enum Api_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
-_constant: False_
-_static: False_
 _visible: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -62,10 +62,6 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
-
-##Variables
-
-
 
 ###unsigned int deviceID
 

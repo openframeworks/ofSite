@@ -3,9 +3,9 @@
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
-_extends: std::iterator<std::forward_iterator_tag, Line>_
+_extends: _
 -->
 
 ##InlineDescription
@@ -32,7 +32,7 @@ _syntax: Line(*_begin, stride, componentsPerPixel, lineNum, pixelFormat)_
 _name: Line_
 _returns: _
 _returns_description: _
-_parameters: PixelType *_begin, int stride, int componentsPerPixel, int lineNum, ofPixelFormat pixelFormat_
+_parameters: PixelType *_begin, size_t stride, size_t componentsPerPixel, size_t lineNum, ofPixelFormat pixelFormat_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -277,12 +277,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getLineNum()
+###size_t getLineNum()
 
 <!--
 _syntax: getLineNum()_
 _name: getLineNum_
-_returns: int_
+_returns: size_t_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -320,7 +320,7 @@ _syntax: getPixel(pixel)_
 _name: getPixel_
 _returns: ofPixels_::Pixel_
 _returns_description: _
-_parameters: int pixel_
+_parameters: size_t pixel_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -392,7 +392,7 @@ _syntax: getPixels(first, numPixels)_
 _name: getPixels_
 _returns: ofPixels_::Pixels_
 _returns_description: _
-_parameters: int first, int numPixels_
+_parameters: size_t first, size_t numPixels_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -421,12 +421,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getStride()
+###size_t getStride()
 
 <!--
 _syntax: getStride()_
 _name: getStride_
-_returns: int_
+_returns: size_t_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -529,14 +529,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixels_::Line operator+(int)
+###ofPixels_::Line operator+(size_t)
 
 <!--
-_syntax: operator+(int)_
+_syntax: operator+(size_t)_
 _name: operator+_
 _returns: ofPixels_::Line_
 _returns_description: _
-_parameters: int _
+_parameters: size_t _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -637,14 +637,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixels_::Line operator+=(int)
+###ofPixels_::Line operator+=(size_t)
 
 <!--
-_syntax: operator+=(int)_
+_syntax: operator+=(size_t)_
 _name: operator+=_
 _returns: ofPixels_::Line_
 _returns_description: _
-_parameters: int _
+_parameters: size_t _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

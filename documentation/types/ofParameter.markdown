@@ -287,6 +287,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###const void * getInternalObject()
+
+<!--
+_syntax: getInternalObject()_
+_name: getInternalObject_
+_returns: const void *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ParameterType getMax()
 
 <!--
@@ -395,6 +431,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###size_t getNumListeners()
+
+<!--
+_syntax: getNumListeners()_
+_name: getNumListeners_
+_returns: size_t_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool isReadOnly()
 
 <!--
@@ -477,6 +549,42 @@ _returns_description: _
 _parameters: ofParameter< ParameterType > &mom_
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int newListener()
+
+<!--
+_syntax: newListener()_
+_name: newListener_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1737,6 +1845,42 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string valueType()
+
+<!--
+_syntax: valueType()_
+_name: valueType_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

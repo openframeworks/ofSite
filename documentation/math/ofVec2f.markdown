@@ -332,7 +332,7 @@ _syntax: average(*points, num)_
 _name: average_
 _returns: ofVec2f &_
 _returns_description: _
-_parameters: const ofVec2f *points, int num_
+_parameters: const ofVec2f *points, size_t num_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -434,7 +434,7 @@ squareDistance() instead.
 
 Parameters:
 pnt The point to calculate the distance to
- 
+
 Returns: The distance as float
 
 See also: squareDistance()
@@ -481,36 +481,35 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculate and return the dot product of this vector with vec.
+Returns the dot product of this vector with 'vec'.
 
-*Dot product* (less commonly known as *Euclidean inner product*) expresses
-the angular relationship between two vectors. In other words it is a measure
-of how *parallel* two vectors are. If they are completely perpendicular the dot
-product is 0; if they are completely parallel their dot product is either 1 if
-they are pointing in the same direction, or -1 if they are pointing in
-opposite directions.
+The *dot product* of two vectors, also known as the *scalar product*, is
+the product of the magnitude of the two vectors and the cosine of the
+angle between them.
 
-![DOT](math/dotproduct.png)
-Image courtesy of Wikipedia
+One interpretation of the dot product is as a measure of how closely two
+vectors align with each other. If they point in exactly the same
+direction, their dot product will simply be the product of their
+magnitudes, if they are perpendicular, their dot product will be 0, and
+if they point in opposite directions, their dot product will be
+negative.
+
+The dot product is in contrast to the *cross product*, which returns a
+vector rather than a scalar.
 
 ~~~~{.cpp}
-ofvec2f a1(1, 0);
-ofVec2f b1(0, 1); // 90 degree angle to a1
-dot = a1.dot(b1); // dot is 0, ie cos(90)
+ofVec2f a1(2, 0); // magnitude 2, parallel to x-axis
+ofVec2f b1(3, 4); // magnitude 5, 53.13 degree angle to a1
+float dot = a1.dot(b1); // dot is 2 * 5 * cos(53.13) = 6.0
 
-ofVec2f a2(1, 0);
-ofVec2f b2(1, 1); // 45 degree angle to a2
-b2.normalize(); // vectors should to be unit vectors (normalized)
-float dot = a2.dot(b2); // dot is 0.707, ie cos(45)
+ofVec2f a2(1, 0); // magnitude 1, parallel to x-axis
+ofVec2f b2(0, 1); // magnitude 1, 90 degree angle to a2
+dot = a2.dot(b2); // dot is 1 * 1 * cos(90) = 0.0
 
-ofVec2f a3(1, 0);
-ofVec2f b3(-1, 0); // 180 degree angle to a3
-dot = a3.dot(b3); // dot is -1, ie cos(180)
+ofVec2f a3(0, 1); // magnitude 1, parallel to y-axis
+ofVec2f b3(0, -1); // magnitude 1, 180 degree angle to a3
+dot = a3.dot(b3); // dot is 1 * 1 * cos(180) = -1.0
 ~~~~
-
-
-Parameters:
-vec The vector to dotproduct
 
 
 
@@ -642,7 +641,7 @@ ofVec2f v2Limited = v2.getLimited(3);
 // v2Limited is (2, 1) (same as v2)
 ~~~~
 
- 
+
 See also: limit()
 
 Parameters:
@@ -1004,13 +1003,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Return a new ofVec2f that is the result of rotating this vector by angle
-degrees around the origin.
+Returns a new vector that is the result of rotating this vector
+by 'angle' degrees about the origin.
 
 ~~~~{.cpp}
 ofVec2f v1(1, 0);
-ofVec2f v2 = v1.getRotated( 45 ); // v2 is (√2, √2)
-ofVec3f v3 = v2.getRotated( 45 ); // v3 is (0, 1)
+ofVec2f v2 = v1.getRotated(45); // v2 is (0.707, 0.707)
 ~~~~
 
 
@@ -1058,7 +1056,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Like getRotated() but rotates around `pivot` rather than around the origin
+Returns a new vector that is the result of rotating this vector
+by 'angle' degrees about the point 'pivot'.
 
 
 
@@ -1094,13 +1093,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Return a new ofVec2f that is the result of rotating this vector by angle
-radians around the origin.
+Returns a new vector that is the result of rotating this vector
+by 'angle' radians about the origin.
 
 ~~~~{.cpp}
 ofVec2f v1(1, 0);
-ofVec2f v2 = v1.getRotatedRad( PI/4 ); // v2 is (√2, √2)
-ofVec3f v3 = v2.getRotatedRad( PI/4 ); // v3 is (0, 1)
+ofVec2f v2 = v1.getRotatedRad(PI / 4); // v2 is (0.707, 0.707)
 ~~~~
 
 
@@ -1143,7 +1141,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Like getRotatedRad() but rotates around `pivot` rather than around the origin
+Returns a new vector that is the result of rotating this vector
+by 'angle' radians about the origin.
 
 
 
@@ -1511,7 +1510,7 @@ v2.limit(3);
 // v2 is unchanged
 ~~~~
 
- 
+
 See also: limit()
 
 
@@ -1976,6 +1975,114 @@ Create a 2D vector (ofVec2f) from a 4D vector (ofVec4f) by throwing away the z a
 ofVec3f mom4d(40, 20, 50, 80); // 4d vector 
 ofVec2f v(mom4d); // v.x is 40, v.y is 20
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec2f(&v)
+
+<!--
+_syntax: ofVec2f(&v)_
+_name: ofVec2f_
+_returns: _
+_returns_description: _
+_parameters: const int &v_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec2f(&v)
+
+<!--
+_syntax: ofVec2f(&v)_
+_name: ofVec2f_
+_returns: _
+_returns_description: _
+_parameters: const int &v_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec2f(&v)
+
+<!--
+_syntax: ofVec2f(&v)_
+_name: ofVec2f_
+_returns: _
+_returns_description: _
+_parameters: const int &v_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -3113,12 +3220,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Rotate this vector by angle degrees around the origin.
+Rotates this vector by 'angle' degrees about the origin.
 
 ~~~~{.cpp}
 ofVec2f v1(1, 0);
-v1.rotate( 45 ); // (√2, √2)
-v1.rotate( 45 ); // (0, 1)
+v1.rotate(45); // v1 is now (0.707, 0.707)
 ~~~~
 
 
@@ -3164,7 +3270,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Like rotate() but rotates around `pivot` rather than around the origin
+Rotates this vector by 'angle' degrees about the point 'pivot'.
 
 
 
@@ -3200,12 +3306,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Rotate this vector by angle radians around the origin.
+Rotates this vector by 'angle' radians about the origin.
 
 ~~~~{.cpp}
 ofVec2f v1(1, 0);
-v1.rotate( PI/4 ); // (√2, √2)
-v1.rotate( PI/4 ); // (0, 1)
+v1.rotateRad(PI / 4); // v1 is now (0.707, 0.707)
 ~~~~
 
 
@@ -3251,7 +3356,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Like rotateRad() but rotates around `pivot` rather than around the origin
+Rotates this vector by 'angle' radians about the point 'pivot'.
 
 
 
@@ -3336,10 +3441,6 @@ _advanced: False_
 
 _inlined_description: _
 
-Set x and y components of this vector with just one function call.
-
-~~~~{.cpp}
-ofVec2f v1;
 v1.set(40, 20);
 ~~~~
 

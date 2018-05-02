@@ -1,22 +1,23 @@
-#class ofAudioEventArgs
+#class ofxOscReceiverSettings
 
 
 <!--
 _visible: True_
 _advanced: False_
 _istemplated: False_
+_extends: _
 -->
 
 ##InlineDescription
 
+\struct ofxOscSenderSettings
+OSC message sender settings
 
 
 
 
 
 ##Description
-
-This class is integrated into the openframeworks events system. When an audio event (audio received, audio requested) happens we record audio  information inside an object of the class. Used to send event messages. In the new openFrameworks release we can find a very illustrative example about how to use events in openFrameworks.
 
 
 
@@ -30,22 +31,29 @@ This class is integrated into the openframeworks events system. When an audio ev
 
 
 
-###float * buffer
+###int port
 
 <!--
-_name: buffer_
-_type: float *_
+_name: port_
+_type: int_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+< port to listen on
+
+
+
+
+
+_description: _
 
 
 
@@ -55,22 +63,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int bufferSize
+###bool reuse
 
 <!--
-_name: bufferSize_
-_type: int_
+_name: reuse_
+_type: bool_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+< should the port be reused by other receivers?
+
+
+
+
+
+_description: _
 
 
 
@@ -80,22 +95,29 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int nChannels
+###bool start
 
 <!--
-_name: nChannels_
-_type: int_
+_name: start_
+_type: bool_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
-_description: _
+_inlined_description: _
 
+< start listening after setup?
+
+
+
+
+
+_description: _
 
 
 

@@ -111,48 +111,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&point)
-
-<!--
-_syntax: draw(&point)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &point_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw at a position at the native size.
-
-Native size is determined by getWidth() and getHeight().
-
-
-Parameters:
-point Draw position.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(&rect)
 
 <!--
@@ -193,6 +151,48 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&point)
+
+<!--
+_syntax: draw(&point)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const int &point_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw at a position at the native size.
+
+Native size is determined by getWidth() and getHeight().
+
+
+Parameters:
+point Draw position.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(&point, w, h)
 
 <!--
@@ -200,9 +200,9 @@ _syntax: draw(&point, w, h)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &point, float w, float h_
+_parameters: const int &point, float w, float h_
 _access: public_
-_version_started: 0071_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

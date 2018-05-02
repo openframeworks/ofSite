@@ -169,12 +169,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getCurrentMatrix()
+###const int & getCurrentMatrix()
 
 <!--
 _syntax: getCurrentMatrix()_
 _name: getCurrentMatrix_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -349,12 +349,48 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getModelViewMatrix()
+###const int & getModelMatrix()
+
+<!--
+_syntax: getModelMatrix()_
+_name: getModelMatrix_
+_returns: const int &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const int & getModelViewMatrix()
 
 <!--
 _syntax: getModelViewMatrix()_
 _name: getModelViewMatrix_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -385,12 +421,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getModelViewProjectionMatrix()
+###const int & getModelViewProjectionMatrix()
 
 <!--
 _syntax: getModelViewProjectionMatrix()_
 _name: getModelViewProjectionMatrix_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -493,12 +529,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getOrientationMatrix()
+###const int & getOrientationMatrix()
 
 <!--
 _syntax: getOrientationMatrix()_
 _name: getOrientationMatrix_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -529,12 +565,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getOrientationMatrixInverse()
+###const int & getOrientationMatrixInverse()
 
 <!--
 _syntax: getOrientationMatrixInverse()_
 _name: getOrientationMatrixInverse_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -565,12 +601,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getProjectionMatrix()
+###const int & getProjectionMatrix()
 
 <!--
 _syntax: getProjectionMatrix()_
 _name: getProjectionMatrix_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -601,12 +637,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getProjectionMatrixNoOrientation()
+###const int & getProjectionMatrixNoOrientation()
 
 <!--
 _syntax: getProjectionMatrixNoOrientation()_
 _name: getProjectionMatrixNoOrientation_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -709,12 +745,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getTextureMatrix()
+###const int & getTextureMatrix()
 
 <!--
 _syntax: getTextureMatrix()_
 _name: getTextureMatrix_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -745,12 +781,48 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofMatrix4x4 & getViewMatrix()
+###const int & getViewInverse()
+
+<!--
+_syntax: getViewInverse()_
+_name: getViewInverse_
+_returns: const int &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const int & getViewMatrix()
 
 <!--
 _syntax: getViewMatrix()_
 _name: getViewMatrix_
-_returns: const ofMatrix4x4 &_
+_returns: const int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -853,14 +925,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadMatrix(*m)
+###void loadMatrix(&m)
 
 <!--
-_syntax: loadMatrix(*m)_
+_syntax: loadMatrix(&m)_
 _name: loadMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const float *m_
+_parameters: const int &m_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -896,7 +968,7 @@ _syntax: loadViewMatrix(&matrix)_
 _name: loadViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const ofMatrix4x4 &matrix_
+_parameters: const int &matrix_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -961,14 +1033,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void multMatrix(*m)
+###void multMatrix(&m)
 
 <!--
-_syntax: multMatrix(*m)_
+_syntax: multMatrix(&m)_
 _name: multMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const float *m_
+_parameters: const int &m_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1004,7 +1076,7 @@ _syntax: multViewMatrix(&matrix)_
 _name: multViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const ofMatrix4x4 &matrix_
+_parameters: const int &matrix_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1249,16 +1321,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotate(degrees, vecX, vecY, vecZ)
+###void rotateRad(radians, vecX, vecY, vecZ)
 
 <!--
-_syntax: rotate(degrees, vecX, vecY, vecZ)_
-_name: rotate_
+_syntax: rotateRad(radians, vecX, vecY, vecZ)_
+_name: rotateRad_
 _returns: void_
 _returns_description: _
-_parameters: float degrees, float vecX, float vecY, float vecZ_
+_parameters: float radians, float vecX, float vecY, float vecZ_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1357,14 +1429,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setRenderSurface(&fbo)
+###void setRenderSurface(&window)
 
 <!--
-_syntax: setRenderSurface(&fbo)_
+_syntax: setRenderSurface(&window)_
 _name: setRenderSurface_
 _returns: void_
 _returns_description: _
-_parameters: const ofFbo &fbo_
+_parameters: const ofAppBaseWindow &window_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1393,16 +1465,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setRenderSurface(&window)
+###void setRenderSurface(&fbo)
 
 <!--
-_syntax: setRenderSurface(&window)_
+_syntax: setRenderSurface(&fbo)_
 _name: setRenderSurface_
 _returns: void_
 _returns_description: _
-_parameters: const ofAppBaseWindow &window_
+_parameters: const ofBaseDraws &fbo_
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setRenderSurfaceNoMatrixFlip(&fbo)
+
+<!--
+_syntax: setRenderSurfaceNoMatrixFlip(&fbo)_
+_name: setRenderSurfaceNoMatrixFlip_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseDraws &fbo_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1541,38 +1649,6 @@ _description: _
 
 
 
-###ofFbo currentFbo
-
-<!--
-_name: currentFbo_
-_type: ofFbo_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofMatrix4x4 currentMatrix
 
 <!--
@@ -1616,6 +1692,38 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofBaseDraws * currentRenderSurface
+
+<!--
+_name: currentRenderSurface_
+_type: ofBaseDraws *_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -1701,6 +1809,38 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool flipRenderSurfaceMatrix
+
+<!--
+_name: flipRenderSurfaceMatrix_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofHandednessType handedness
 
 <!--
@@ -1712,6 +1852,38 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int modelMatrix
+
+<!--
+_name: modelMatrix_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -2128,6 +2300,38 @@ _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int viewInverse
+
+<!--
+_name: viewInverse_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 

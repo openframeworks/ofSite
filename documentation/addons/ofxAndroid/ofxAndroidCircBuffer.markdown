@@ -389,6 +389,38 @@ _description: _
 
 
 
+###vector< Content > buffer
+
+<!--
+_name: buffer_
+_type: vector< Content >_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int buffer_size
 
 <!--

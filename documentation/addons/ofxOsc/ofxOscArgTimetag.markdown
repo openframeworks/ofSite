@@ -5,11 +5,13 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
-_extends: ofxOscArgInt64_
+_extends: ofxOscArg_
 -->
 
 ##InlineDescription
 
+
+a 64-bit NTP time tag argument, type name "t"
 
 
 
@@ -24,6 +26,42 @@ _extends: ofxOscArgInt64_
 ##Methods
 
 
+
+###uint64_t get()
+
+<!--
+_syntax: get()_
+_name: get_
+_returns: uint64_t_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+return value
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 
 ###ofxOscArgType getType()
 
@@ -45,7 +83,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return the type of this argument
+\return argument type
 
 
 
@@ -81,7 +119,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return argument type character as a string
 
 
 
@@ -97,14 +135,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscArgTimetag(_value)
+### ofxOscArgTimetag(value)
 
 <!--
-_syntax: ofxOscArgTimetag(_value)_
+_syntax: ofxOscArgTimetag(value)_
 _name: ofxOscArgTimetag_
 _returns: _
 _returns_description: _
-_parameters: int64_t _value_
+_parameters: uint64_t value_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -133,16 +171,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ~ofxOscArgTimetag()
+###void set(value)
 
 <!--
-_syntax: ~ofxOscArgTimetag()_
-_name: ~ofxOscArgTimetag_
-_returns: _
+_syntax: set(value)_
+_name: set_
+_returns: void_
 _returns_description: _
-_parameters: _
+_parameters: uint64_t value_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -153,7 +191,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+set value
 
 
 
@@ -172,4 +210,36 @@ _description: _
 ##Variables
 
 
+
+###uint64_t value
+
+<!--
+_name: value_
+_type: uint64_t_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
 

@@ -34,7 +34,13 @@ _advanced: False_
 
 _inlined_description: _
 
+make an HTTP GET request
+blocks until a response is returned or the request times out
 
+Parameters:
+url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+
+Returns: HTTP response
 
 
 
@@ -76,7 +82,13 @@ _advanced: False_
 
 _inlined_description: _
 
+make an asynchronous HTTP GET request
+will not block, placed in a queue and run using a background thread
 
+Parameters:
+url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+name optional key to use when sorting requests
+\return unique id for the active HTTP request
 
 
 
@@ -194,7 +206,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+remove all active HTTP requests from the queue
 
 
 
@@ -230,7 +242,10 @@ _advanced: False_
 
 _inlined_description: _
 
+remove an active HTTP request from the queue
 
+Parameters:
+unique HTTP request id
 
 
 
@@ -254,7 +269,7 @@ _syntax: ofSaveURLAsync(&url, &path)_
 _name: ofSaveURLAsync_
 _returns: int_
 _returns_description: _
-_parameters: const string &url, const string &path_
+_parameters: const string &url, const filesystem::path &path_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -266,7 +281,14 @@ _advanced: False_
 
 _inlined_description: _
 
+make an asynchronous HTTP request and save the response data to a file
+will not block, placed in a queue and run using a background thread
 
+Parameters:
+url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+path file path to save to
+
+Returns: unique id for the active HTTP request
 
 
 
@@ -291,7 +313,7 @@ _syntax: ofSaveURLTo(&url, &path)_
 _name: ofSaveURLTo_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: const string &url, const string &path_
+_parameters: const string &url, const filesystem::path &path_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -303,7 +325,13 @@ _advanced: False_
 
 _inlined_description: _
 
+make an HTTP GET request and save the response data to a file
+blocks until a response is returned or the request times out
 
+Parameters:
+url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+path file path to save to
+\return HTTP response on success or failure
 
 
 
@@ -340,7 +368,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+stop & remove all active and waiting HTTP requests
 
 
 
@@ -356,12 +384,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofEvent< ofHttpResponse > & ofURLResponseEvent()
+###int & ofURLResponseEvent()
 
 <!--
 _syntax: ofURLResponseEvent()_
 _name: ofURLResponseEvent_
-_returns: ofEvent< ofHttpResponse > &_
+_returns: int &_
 _returns_description: _
 _parameters: _
 _version_started: _

@@ -11,6 +11,8 @@ _extends: _
 ##InlineDescription
 
 
+an OSC message with address and arguments
+
 
 
 
@@ -25,14 +27,14 @@ _extends: _
 
 
 
-###void addBlobArg(argument)
+###void addBlobArg(&argument)
 
 <!--
-_syntax: addBlobArg(argument)_
+_syntax: addBlobArg(&argument)_
 _name: addBlobArg_
 _returns: void_
 _returns_description: _
-_parameters: ofBuffer argument_
+_parameters: const ofBuffer &argument_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -45,7 +47,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a binary blog
 
 
 
@@ -81,7 +83,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a bool
+true sends a OFXOSC_TYPE_TRUE & false sends a OFXOSC_TYPE_FALSE
 
 
 
@@ -117,7 +120,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a char
 
 
 
@@ -153,7 +156,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a 64-bit double
 
 
 
@@ -189,7 +192,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a 32-bit float
 
 
 
@@ -225,7 +228,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a trigger impulse (has no value)
+alias for addTriggerArg()
 
 
 
@@ -261,7 +265,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a trigger impulse (has no value)
+alias for addTriggerArg()
 
 
 
@@ -297,7 +302,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a 32-bit integer
 
 
 
@@ -333,7 +338,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a 64-bit integer
 
 
 
@@ -369,7 +374,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a 32-bit integer
 
 
 
@@ -392,7 +397,7 @@ _syntax: addMidiMessageArg(argument)_
 _name: addMidiMessageArg_
 _returns: void_
 _returns_description: _
-_parameters: int32_t argument_
+_parameters: uint32_t argument_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -405,7 +410,43 @@ _advanced: False_
 
 _inlined_description: _
 
+add a 4-byte MIDI message
 
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void addNoneArg()
+
+<!--
+_syntax: addNoneArg()_
+_name: addNoneArg_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+add a none/nil (has no value)
 
 
 
@@ -428,7 +469,7 @@ _syntax: addRgbaColorArg(argument)_
 _name: addRgbaColorArg_
 _returns: void_
 _returns_description: _
-_parameters: int32_t argument_
+_parameters: uint32_t argument_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -441,7 +482,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a 32-bit color
 
 
 
@@ -457,14 +498,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void addStringArg(argument)
+###void addStringArg(&argument)
 
 <!--
-_syntax: addStringArg(argument)_
+_syntax: addStringArg(&argument)_
 _name: addStringArg_
 _returns: void_
 _returns_description: _
-_parameters: string argument_
+_parameters: const string &argument_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -477,7 +518,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a string
 
 
 
@@ -493,14 +534,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void addSymbolArg(argument)
+###void addSymbolArg(&argument)
 
 <!--
-_syntax: addSymbolArg(argument)_
+_syntax: addSymbolArg(&argument)_
 _name: addSymbolArg_
 _returns: void_
 _returns_description: _
-_parameters: string argument_
+_parameters: const string &argument_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -513,7 +554,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a symbol (string)
 
 
 
@@ -536,7 +577,7 @@ _syntax: addTimetagArg(argument)_
 _name: addTimetagArg_
 _returns: void_
 _returns_description: _
-_parameters: int64_t argument_
+_parameters: uint64_t argument_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -549,7 +590,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a 64-bit NTP time tag
 
 
 
@@ -585,7 +626,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a trigger impulse (has no value)
 
 
 
@@ -621,7 +662,7 @@ _advanced: False_
 
 _inlined_description: _
 
-clear this message, erase all contents
+clear this message
 
 
 
@@ -693,7 +734,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return the address
+\return the OSC address
 
 
 
@@ -716,7 +757,7 @@ _syntax: getArgAsBlob(index)_
 _name: getArgAsBlob_
 _returns: ofBuffer_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -729,7 +770,9 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Parameters:
+index The index of the queried item.
+\return given argument as a binary blob
 
 
 
@@ -752,7 +795,7 @@ _syntax: getArgAsBool(index)_
 _name: getArgAsBool_
 _returns: bool_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -765,7 +808,12 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a bool, converts numeric types automatically
+this argument type matches both OFXOSC_TYPE_TRUE & OFXOSC_TYPE_FALSE
 
+Parameters:
+index The index of the queried item.
+\return given argument value as a bool
 
 
 
@@ -788,7 +836,7 @@ _syntax: getArgAsChar(index)_
 _name: getArgAsChar_
 _returns: char_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -801,7 +849,11 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a string, converts numeric types with a warning
 
+Parameters:
+index The index of the queried item.
+\return given argument value as a string
 
 
 
@@ -824,7 +876,7 @@ _syntax: getArgAsDouble(index)_
 _name: getArgAsDouble_
 _returns: double_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -837,7 +889,11 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a double, converts numeric types automatically
 
+Parameters:
+index The index of the queried item.
+\return given argument value as a double
 
 
 
@@ -860,7 +916,7 @@ _syntax: getArgAsFloat(index)_
 _name: getArgAsFloat_
 _returns: float_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -873,7 +929,12 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a float, converts numeric types automatically
+prints a warning when converting higher precision types
 
+Parameters:
+index The index of the queried item.
+\return given argument value as a float
 
 
 
@@ -896,7 +957,7 @@ _syntax: getArgAsImpulse(index)_
 _name: getArgAsImpulse_
 _returns: bool_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -909,7 +970,12 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a trigger impulse
+this is an alias for getArgAsTrigger()
 
+Parameters:
+index The index of the queried item.
+\return true if argument was a trigger
 
 
 
@@ -932,7 +998,7 @@ _syntax: getArgAsInfinitum(index)_
 _name: getArgAsInfinitum_
 _returns: bool_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -945,7 +1011,12 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a trigger impulse
+this is an alias for getArgAsTrigger()
 
+Parameters:
+index The index of the queried item.
+\return true if argument was a trigger
 
 
 
@@ -968,7 +1039,7 @@ _syntax: getArgAsInt(index)_
 _name: getArgAsInt_
 _returns: int32_t_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -981,10 +1052,12 @@ _advanced: False_
 
 _inlined_description: _
 
-get the argument with the given index as an int, float, or string
-ensure that the type matches what you're requesting
-(eg for an int argument, getArgType(index)==OF_TYPE_INT32
-or getArgTypeName(index)=="int32")
+get argument as an integer, converts numeric types automatically
+prints a warning when converting higher precision types
+
+Parameters:
+index The index of the queried item.
+\return given argument value as a 32-bit int
 
 
 
@@ -1007,7 +1080,7 @@ _syntax: getArgAsInt32(index)_
 _name: getArgAsInt32_
 _returns: int32_t_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1020,7 +1093,12 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as an integer, converts numeric types automatically
+prints a warning when converting higher precision types
 
+Parameters:
+index The index of the queried item.
+\return given argument value as a 32-bit int
 
 
 
@@ -1043,7 +1121,7 @@ _syntax: getArgAsInt64(index)_
 _name: getArgAsInt64_
 _returns: int64_t_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1056,7 +1134,11 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a 64-bit integer, converts numeric types automatically
+\return given argument value as a 64-bit int
 
+Parameters:
+index The index of the queried item.
 
 
 
@@ -1072,14 +1154,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int32_t getArgAsMidiMessage(index)
+###uint32_t getArgAsMidiMessage(index)
 
 <!--
 _syntax: getArgAsMidiMessage(index)_
 _name: getArgAsMidiMessage_
-_returns: int32_t_
+_returns: uint32_t_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1092,7 +1174,9 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Parameters:
+index The index of the queried item.
+\return given argument value as a 4-byte midi message
 
 
 
@@ -1108,14 +1192,54 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int32_t getArgAsRgbaColor(index)
+###bool getArgAsNone(index)
+
+<!--
+_syntax: getArgAsNone(index)_
+_name: getArgAsNone_
+_returns: bool_
+_returns_description: _
+_parameters: size_t index_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+get argument as a none/nil
+
+Parameters:
+index The index of the queried item.
+\return true if argument was a none/nil
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###uint32_t getArgAsRgbaColor(index)
 
 <!--
 _syntax: getArgAsRgbaColor(index)_
 _name: getArgAsRgbaColor_
-_returns: int32_t_
+_returns: uint32_t_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1128,7 +1252,11 @@ _advanced: False_
 
 _inlined_description: _
 
+get an argument as an RGBA color, converts int32 automatically
 
+Parameters:
+index The index of the queried item.
+\return given argument as a 32-bit color value
 
 
 
@@ -1151,7 +1279,7 @@ _syntax: getArgAsString(index)_
 _name: getArgAsString_
 _returns: string_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1164,7 +1292,11 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a string, converts numeric types with a warning
 
+Parameters:
+index The index of the queried item.
+\return given argument value as a string
 
 
 
@@ -1187,7 +1319,7 @@ _syntax: getArgAsSymbol(index)_
 _name: getArgAsSymbol_
 _returns: string_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1200,7 +1332,11 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a symbol (string), converts numeric types with a warning
 
+Parameters:
+index The index of the queried item.
+\return given argument value as a symbol (string)
 
 
 
@@ -1216,14 +1352,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int64_t getArgAsTimetag(index)
+###uint64_t getArgAsTimetag(index)
 
 <!--
 _syntax: getArgAsTimetag(index)_
 _name: getArgAsTimetag_
-_returns: int64_t_
+_returns: uint64_t_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1236,7 +1372,9 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Parameters:
+index The index of the queried item.
+\return given argument as a 64-bit NTP time tag
 
 
 
@@ -1259,7 +1397,7 @@ _syntax: getArgAsTrigger(index)_
 _name: getArgAsTrigger_
 _returns: bool_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1272,7 +1410,11 @@ _advanced: False_
 
 _inlined_description: _
 
+get argument as a trigger impulse
 
+Parameters:
+index The index of the queried item.
+\return true if argument was a trigger
 
 
 
@@ -1295,7 +1437,7 @@ _syntax: getArgType(index)_
 _name: getArgType_
 _returns: ofxOscArgType_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1308,7 +1450,9 @@ _advanced: False_
 
 _inlined_description: _
 
-return argument type code for argument # index
+Parameters:
+index The index of the queried item.
+\return argument type code for a given index
 
 
 
@@ -1331,7 +1475,7 @@ _syntax: getArgTypeName(index)_
 _name: getArgTypeName_
 _returns: string_
 _returns_description: _
-_parameters: int index_
+_parameters: size_t index_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1344,8 +1488,9 @@ _advanced: False_
 
 _inlined_description: _
 
-return argument type name as string
-- either "int", "float", or "string"
+Parameters:
+index The index of the queried item.
+\return argument type tag char as a string
 
 
 
@@ -1361,12 +1506,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getNumArgs()
+###size_t getNumArgs()
 
 <!--
 _syntax: getNumArgs()_
 _name: getNumArgs_
-_returns: int_
+_returns: size_t_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1381,7 +1526,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return number of argumentsļ
+\return number of arguments
 
 
 
@@ -1397,16 +1542,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getRemoteIp()
+###string getRemoteHost()
 
 <!--
-_syntax: getRemoteIp()_
-_name: getRemoteIp_
+_syntax: getRemoteHost()_
+_name: getRemoteHost_
 _returns: string_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1417,7 +1562,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return the remote ip
+\return the remote host name/ip or "" if not set
 
 
 
@@ -1453,7 +1598,45 @@ _advanced: False_
 
 _inlined_description: _
 
-return the remote port
+\return the remote port or 0 if not set
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getTypeString()
+
+<!--
+_syntax: getTypeString()_
+_name: getTypeString_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Parameters:
+index The index of the queried item.
+\return type tags for all arguments as a string, 1 char for each argument
 
 
 
@@ -1577,14 +1760,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setAddress(_address)
+###void setAddress(&address)
 
 <!--
-_syntax: setAddress(_address)_
+_syntax: setAddress(&address)_
 _name: setAddress_
 _returns: void_
 _returns_description: _
-_parameters: string _address_
+_parameters: const string &address_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1597,7 +1780,7 @@ _advanced: False_
 
 _inlined_description: _
 
-message construction
+set the message address, must start with a /
 
 
 
@@ -1613,14 +1796,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setRemoteEndpoint(host, port)
+###void setRemoteEndpoint(&host, port)
 
 <!--
-_syntax: setRemoteEndpoint(host, port)_
+_syntax: setRemoteEndpoint(&host, port)_
 _name: setRemoteEndpoint_
 _returns: void_
 _returns_description: _
-_parameters: string host, int port_
+_parameters: const string &host, int port_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1633,7 +1816,8 @@ _advanced: False_
 
 _inlined_description: _
 
-host and port of the remote endpoint
+set host and port of the remote endpoint,
+this is mainly used by ofxOscReceiver
 
 
 
@@ -1705,7 +1889,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+< OSC address, must start with a /
 
 
 
@@ -1737,7 +1921,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+< current arguments
 
 
 
@@ -1753,23 +1937,23 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string remote_host
+###string remoteHost
 
 <!--
-_name: remote_host_
+_name: remoteHost_
 _type: string_
 _access: private_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
 _inlined_description: _
 
-
+< host name/ip the message was sent from
 
 
 
@@ -1785,23 +1969,23 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int remote_port
+###int remotePort
 
 <!--
-_name: remote_port_
+_name: remotePort_
 _type: int_
 _access: private_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
 _inlined_description: _
 
-
+< port the message was sent from
 
 
 

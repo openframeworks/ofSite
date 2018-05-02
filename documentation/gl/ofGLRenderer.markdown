@@ -183,14 +183,14 @@ See [ofBackground](ofGraphics.html#show_ofBackground)
 
 <!----------------------------------------------------------------------------->
 
-###void begin(&fbo, setupPerspective)
+###void begin(&fbo, mode)
 
 <!--
-_syntax: begin(&fbo, setupPerspective)_
+_syntax: begin(&fbo, mode)_
 _name: begin_
 _returns: void_
 _returns_description: _
-_parameters: const ofFbo &fbo, bool setupPerspective_
+_parameters: const ofFbo &fbo, ofFboMode mode_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -867,42 +867,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&vertexData, renderType, useColors, useTextures, useNormals)
-
-<!--
-_syntax: draw(&vertexData, renderType, useColors, useTextures, useNormals)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofMesh &vertexData, ofPolyRenderMode renderType, bool useColors, bool useTextures, bool useNormals_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws an ofMesh.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(&model, renderType)
 
 <!--
@@ -968,42 +932,6 @@ _inlined_description: _
 _description: _
 
 Draws an texture.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&poly)
-
-<!--
-_syntax: draw(&poly)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPolyline &poly_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Handles drawing ofPolylines. This is called when you call line.draw().
 
 
 
@@ -1292,6 +1220,78 @@ _inlined_description: _
 _description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&vertexData, renderType, useColors, useTextures, useNormals)
+
+<!--
+_syntax: draw(&vertexData, renderType, useColors, useTextures, useNormals)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const int &vertexData, ofPolyRenderMode renderType, bool useColors, bool useTextures, bool useNormals_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Handles drawing ofPolylines. This is called when you call line.draw().
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&poly)
+
+<!--
+_syntax: draw(&poly)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const int &poly_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws an ofMesh.
 
 
 
@@ -2199,14 +2199,14 @@ See [ofGetCoordHandedness](ofGraphics.html#show_ofGetCoordHandedness)
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getCurrentMatrix(matrixMode_)
+###int getCurrentMatrix()
 
 <!--
-_syntax: getCurrentMatrix(matrixMode_)_
+_syntax: getCurrentMatrix()_
 _name: getCurrentMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
-_parameters: ofMatrixMode matrixMode__
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -2235,12 +2235,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getCurrentNormalMatrix()
+###int getCurrentNormalMatrix()
 
 <!--
 _syntax: getCurrentNormalMatrix()_
 _name: getCurrentNormalMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2271,12 +2271,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getCurrentOrientationMatrix()
+###int getCurrentOrientationMatrix()
 
 <!--
 _syntax: getCurrentOrientationMatrix()_
 _name: getCurrentOrientationMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2307,12 +2307,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 getCurrentViewMatrix()
+###int getCurrentViewMatrix()
 
 <!--
 _syntax: getCurrentViewMatrix()_
 _name: getCurrentViewMatrix_
-_returns: ofMatrix4x4_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2847,42 +2847,6 @@ See [ofLoadIdentityMatrix](ofGraphics.html#show_ofLoadIdentityMatrix)
 
 <!----------------------------------------------------------------------------->
 
-###void loadMatrix(&m)
-
-<!--
-_syntax: loadMatrix(&m)_
-_name: loadMatrix_
-_returns: void_
-_returns_description: _
-_parameters: const ofMatrix4x4 &m_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void loadMatrix(*m)
 
 <!--
@@ -2919,6 +2883,42 @@ See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
 
 <!----------------------------------------------------------------------------->
 
+###void loadMatrix(&m)
+
+<!--
+_syntax: loadMatrix(&m)_
+_name: loadMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const int &m_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void loadViewMatrix(&m)
 
 <!--
@@ -2926,7 +2926,7 @@ _syntax: loadViewMatrix(&m)_
 _name: loadViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const ofMatrix4x4 &m_
+_parameters: const int &m_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2991,42 +2991,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void multMatrix(&m)
-
-<!--
-_syntax: multMatrix(&m)_
-_name: multMatrix_
-_returns: void_
-_returns_description: _
-_parameters: const ofMatrix4x4 &m_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void multMatrix(*m)
 
 <!--
@@ -3063,6 +3027,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void multMatrix(&m)
+
+<!--
+_syntax: multMatrix(&m)_
+_name: multMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const int &m_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void multViewMatrix(&m)
 
 <!--
@@ -3070,7 +3070,7 @@ _syntax: multViewMatrix(&m)_
 _name: multViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const ofMatrix4x4 &m_
+_parameters: const int &m_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3351,16 +3351,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotate(degrees, vecX, vecY, vecZ)
+###void rotateDeg(radians, vecX, vecY, vecZ)
 
 <!--
-_syntax: rotate(degrees, vecX, vecY, vecZ)_
-_name: rotate_
+_syntax: rotateDeg(radians, vecX, vecY, vecZ)_
+_name: rotateDeg_
 _returns: void_
 _returns_description: _
-_parameters: float degrees, float vecX, float vecY, float vecZ_
+_parameters: float radians, float vecX, float vecY, float vecZ_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3379,7 +3379,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofRotate](ofGraphics.html#show_ofRotate)
+
 
 
 
@@ -3387,16 +3387,16 @@ See [ofRotate](ofGraphics.html#show_ofRotate)
 
 <!----------------------------------------------------------------------------->
 
-###void rotate(degrees)
+###void rotateDeg(radians)
 
 <!--
-_syntax: rotate(degrees)_
-_name: rotate_
+_syntax: rotateDeg(radians)_
+_name: rotateDeg_
 _returns: void_
 _returns_description: _
-_parameters: float degrees_
+_parameters: float radians_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3415,7 +3415,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofRotate](ofGraphics.html#show_ofRotate)
+
 
 
 
@@ -3423,16 +3423,16 @@ See [ofRotate](ofGraphics.html#show_ofRotate)
 
 <!----------------------------------------------------------------------------->
 
-###void rotateX(degrees)
+###void rotateRad(radians, vecX, vecY, vecZ)
 
 <!--
-_syntax: rotateX(degrees)_
-_name: rotateX_
+_syntax: rotateRad(radians, vecX, vecY, vecZ)_
+_name: rotateRad_
 _returns: void_
 _returns_description: _
-_parameters: float degrees_
+_parameters: float radians, float vecX, float vecY, float vecZ_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3451,7 +3451,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofRotate](ofGraphics.html#show_ofRotate)
+
 
 
 
@@ -3459,16 +3459,16 @@ See [ofRotate](ofGraphics.html#show_ofRotate)
 
 <!----------------------------------------------------------------------------->
 
-###void rotateY(degrees)
+###void rotateRad(radians)
 
 <!--
-_syntax: rotateY(degrees)_
-_name: rotateY_
+_syntax: rotateRad(radians)_
+_name: rotateRad_
 _returns: void_
 _returns_description: _
-_parameters: float degrees_
+_parameters: float radians_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3487,7 +3487,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofRotate](ofGraphics.html#show_ofRotate)
+
 
 
 
@@ -3495,16 +3495,16 @@ See [ofRotate](ofGraphics.html#show_ofRotate)
 
 <!----------------------------------------------------------------------------->
 
-###void rotateZ(degrees)
+###void rotateXDeg(radians)
 
 <!--
-_syntax: rotateZ(degrees)_
-_name: rotateZ_
+_syntax: rotateXDeg(radians)_
+_name: rotateXDeg_
 _returns: void_
 _returns_description: _
-_parameters: float degrees_
+_parameters: float radians_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3523,7 +3523,187 @@ _inlined_description: _
 
 _description: _
 
-See [ofRotate](ofGraphics.html#show_ofRotate)
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateXRad(radians)
+
+<!--
+_syntax: rotateXRad(radians)_
+_name: rotateXRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateYDeg(radians)
+
+<!--
+_syntax: rotateYDeg(radians)_
+_name: rotateYDeg_
+_returns: void_
+_returns_description: _
+_parameters: float radians_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateYRad(radians)
+
+<!--
+_syntax: rotateYRad(radians)_
+_name: rotateYRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateZDeg(radians)
+
+<!--
+_syntax: rotateZDeg(radians)_
+_name: rotateZDeg_
+_returns: void_
+_returns_description: _
+_parameters: float radians_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateZRad(radians)
+
+<!--
+_syntax: rotateZRad(radians)_
+_name: rotateZRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -4366,7 +4546,7 @@ _syntax: setLightPosition(lightIndex, &position)_
 _name: setLightPosition_
 _returns: void_
 _returns_description: _
-_parameters: int lightIndex, const ofVec4f &position_
+_parameters: int lightIndex, const int &position_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -4474,7 +4654,7 @@ _syntax: setLightSpotDirection(lightIndex, &direction)_
 _name: setLightSpotDirection_
 _returns: void_
 _returns_description: _
-_parameters: int lightIndex, const ofVec4f &direction_
+_parameters: int lightIndex, const int &direction_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -5122,7 +5302,7 @@ _syntax: translate(&p)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const ofPoint &p_
+_parameters: const int &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -6182,3 +6362,4 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
+

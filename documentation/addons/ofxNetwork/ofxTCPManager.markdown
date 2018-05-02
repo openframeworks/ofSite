@@ -134,6 +134,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool CheckIsConnected()
+
+<!--
+_syntax: CheckIsConnected()_
+_name: CheckIsConnected_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void CleanUp()
 
 <!--
@@ -213,7 +249,7 @@ _syntax: Connect(*pAddrStr, usPort)_
 _name: Connect_
 _returns: bool_
 _returns_description: _
-_parameters: char *pAddrStr, unsigned short usPort_
+_parameters: const char *pAddrStr, unsigned short usPort_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -576,6 +612,42 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool IsNonBlocking()
+
+<!--
+_syntax: IsNonBlocking()_
+_name: IsNonBlocking_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1044,6 +1116,78 @@ _returns_description: _
 _parameters: int timeoutInSeconds_
 _access: public_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int WaitReceive(timeoutSeconds, timeoutMillis)
+
+<!--
+_syntax: WaitReceive(timeoutSeconds, timeoutMillis)_
+_name: WaitReceive_
+_returns: int_
+_returns_description: _
+_parameters: time_t timeoutSeconds, time_t timeoutMillis_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int WaitSend(timeoutSeconds, timeoutMillis)
+
+<!--
+_syntax: WaitSend(timeoutSeconds, timeoutMillis)_
+_name: WaitSend_
+_returns: int_
+_returns_description: _
+_parameters: time_t timeoutSeconds, time_t timeoutMillis_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

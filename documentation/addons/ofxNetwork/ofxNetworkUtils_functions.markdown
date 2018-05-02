@@ -15,14 +15,14 @@ _advanced: True_
 
 <!----------------------------------------------------------------------------->
 
-###int ofxNetworkCheckErrno(&file, &line)
+###int ofxNetworkCheckErrno(*file, line)
 
 <!--
-_syntax: ofxNetworkCheckErrno(&file, &line)_
+_syntax: ofxNetworkCheckErrno(*file, line)_
 _name: ofxNetworkCheckErrno_
 _returns: int_
 _returns_description: _
-_parameters: const string &file, const string &line_
+_parameters: const char *file, int line_
 _version_started: _
 _version_deprecated: _
 _summary: _

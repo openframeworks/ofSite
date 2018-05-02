@@ -93,6 +93,38 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int deviceOrientationChanged
+
+<!--
+_name: deviceOrientationChanged_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int menuItemChecked
 
 <!--

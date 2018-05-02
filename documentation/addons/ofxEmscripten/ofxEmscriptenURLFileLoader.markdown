@@ -133,16 +133,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofHttpResponse handleRequest(request)
+###ofHttpResponse handleRequest(&request)
 
 <!--
-_syntax: handleRequest(request)_
+_syntax: handleRequest(&request)_
 _name: handleRequest_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: ofHttpRequest request_
+_parameters: const ofHttpRequest &request_
 _access: public_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int handleRequestAsync(&request)
+
+<!--
+_syntax: handleRequestAsync(&request)_
+_name: handleRequestAsync_
+_returns: int_
+_returns_description: _
+_parameters: const ofHttpRequest &request_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -392,7 +428,7 @@ _syntax: saveAsync(&url, &path)_
 _name: saveAsync_
 _returns: int_
 _returns_description: _
-_parameters: const string &url, const string &path_
+_parameters: const string &url, const filesystem::path &path_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -428,7 +464,7 @@ _syntax: saveTo(&url, &path)_
 _name: saveTo_
 _returns: ofHttpResponse_
 _returns_description: _
-_parameters: const string &url, const string &path_
+_parameters: const string &url, const filesystem::path &path_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

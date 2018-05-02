@@ -171,12 +171,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<shared_ptr< ofAbstractParameter>  >::iterator begin()
+###int begin()
 
 <!--
 _syntax: begin()_
 _name: begin_
-_returns: vector<shared_ptr< ofAbstractParameter>  >::iterator_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -207,12 +207,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<shared_ptr< ofAbstractParameter>  >::const_iterator begin()
+###int begin()
 
 <!--
 _syntax: begin()_
 _name: begin_
-_returns: vector<shared_ptr< ofAbstractParameter>  >::const_iterator_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -315,12 +315,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<shared_ptr< ofAbstractParameter>  >::iterator end()
+###int end()
 
 <!--
 _syntax: end()_
 _name: end_
-_returns: vector<shared_ptr< ofAbstractParameter>  >::iterator_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -351,12 +351,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<shared_ptr< ofAbstractParameter>  >::const_iterator end()
+###int end()
 
 <!--
 _syntax: end()_
 _name: end_
-_returns: vector<shared_ptr< ofAbstractParameter>  >::const_iterator_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1863,6 +1863,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###const void * getInternalObject()
+
+<!--
+_syntax: getInternalObject()_
+_name: getInternalObject_
+_returns: const void *_
+_returns_description: _
+_parameters: _
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool getIsReadOnly(position)
 
 <!--
@@ -2125,6 +2161,150 @@ _returns_description: _
 _parameters: const string &name_
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofReadOnlyParameter< ParameterType, Friend > & getReadOnly(&name)
+
+<!--
+_syntax: getReadOnly(&name)_
+_name: getReadOnly_
+_returns: const ofReadOnlyParameter< ParameterType, Friend > &_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofReadOnlyParameter< ParameterType, Friend > & getReadOnly(pos)
+
+<!--
+_syntax: getReadOnly(pos)_
+_name: getReadOnly_
+_returns: const ofReadOnlyParameter< ParameterType, Friend > &_
+_returns_description: _
+_parameters: size_t pos_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofReadOnlyParameter< ParameterType, Friend > & getReadOnly(&name)
+
+<!--
+_syntax: getReadOnly(&name)_
+_name: getReadOnly_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofReadOnlyParameter< ParameterType, Friend > & getReadOnly(pos)
+
+<!--
+_syntax: getReadOnly(pos)_
+_name: getReadOnly_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
+_returns_description: _
+_parameters: size_t pos_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2475,14 +2655,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofVec2f > & getVec2f(&name)
+###const int & getVec2f()
 
 <!--
-_syntax: getVec2f(&name)_
+_syntax: getVec2f()_
 _name: getVec2f_
-_returns: const ofParameter< ofVec2f > &_
+_returns: const int &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2511,14 +2691,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofVec2f > & getVec2f(pos)
+###const int & getVec2f()
 
 <!--
-_syntax: getVec2f(pos)_
+_syntax: getVec2f()_
 _name: getVec2f_
-_returns: const ofParameter< ofVec2f > &_
+_returns: const int &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2547,14 +2727,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofVec2f > & getVec2f(&name)
+###int & getVec2f()
 
 <!--
-_syntax: getVec2f(&name)_
+_syntax: getVec2f()_
 _name: getVec2f_
-_returns: ofParameter< ofVec2f > &_
+_returns: int &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2583,14 +2763,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofVec2f > & getVec2f(pos)
+###int & getVec2f()
 
 <!--
-_syntax: getVec2f(pos)_
+_syntax: getVec2f()_
 _name: getVec2f_
-_returns: ofParameter< ofVec2f > &_
+_returns: int &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2619,14 +2799,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofVec3f > & getVec3f(&name)
+###const int & getVec3f()
 
 <!--
-_syntax: getVec3f(&name)_
+_syntax: getVec3f()_
 _name: getVec3f_
-_returns: const ofParameter< ofVec3f > &_
+_returns: const int &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2655,14 +2835,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofVec3f > & getVec3f(pos)
+###const int & getVec3f()
 
 <!--
-_syntax: getVec3f(pos)_
+_syntax: getVec3f()_
 _name: getVec3f_
-_returns: const ofParameter< ofVec3f > &_
+_returns: const int &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2691,14 +2871,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofVec3f > & getVec3f(&name)
+###int & getVec3f()
 
 <!--
-_syntax: getVec3f(&name)_
+_syntax: getVec3f()_
 _name: getVec3f_
-_returns: ofParameter< ofVec3f > &_
+_returns: int &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2727,14 +2907,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofVec3f > & getVec3f(pos)
+###int & getVec3f()
 
 <!--
-_syntax: getVec3f(pos)_
+_syntax: getVec3f()_
 _name: getVec3f_
-_returns: ofParameter< ofVec3f > &_
+_returns: int &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2763,14 +2943,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofVec4f > & getVec4f(&name)
+###const int & getVec4f()
 
 <!--
-_syntax: getVec4f(&name)_
+_syntax: getVec4f()_
 _name: getVec4f_
-_returns: const ofParameter< ofVec4f > &_
+_returns: const int &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2799,14 +2979,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofVec4f > & getVec4f(pos)
+###const int & getVec4f()
 
 <!--
-_syntax: getVec4f(pos)_
+_syntax: getVec4f()_
 _name: getVec4f_
-_returns: const ofParameter< ofVec4f > &_
+_returns: const int &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2835,14 +3015,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofVec4f > & getVec4f(&name)
+###int & getVec4f()
 
 <!--
-_syntax: getVec4f(&name)_
+_syntax: getVec4f()_
 _name: getVec4f_
-_returns: ofParameter< ofVec4f > &_
+_returns: int &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2871,16 +3051,160 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofVec4f > & getVec4f(pos)
+###int & getVec4f()
 
 <!--
-_syntax: getVec4f(pos)_
+_syntax: getVec4f()_
 _name: getVec4f_
-_returns: ofParameter< ofVec4f > &_
+_returns: int &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofParameter< void > & getVoid(&name)
+
+<!--
+_syntax: getVoid(&name)_
+_name: getVoid_
+_returns: const ofParameter< void > &_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofParameter< void > & getVoid(pos)
+
+<!--
+_syntax: getVoid(pos)_
+_name: getVoid_
+_returns: const ofParameter< void > &_
 _returns_description: _
 _parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofParameter< void > & getVoid(&name)
+
+<!--
+_syntax: getVoid(&name)_
+_name: getVoid_
+_returns: ofParameter< void > &_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofParameter< void > & getVoid(pos)
+
+<!--
+_syntax: getVoid(pos)_
+_name: getVoid_
+_returns: ofParameter< void > &_
+_returns_description: _
+_parameters: size_t pos_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3087,6 +3411,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofParameterGroup(&name)
+
+<!--
+_syntax: ofParameterGroup(&name)_
+_name: ofParameterGroup_
+_returns: _
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofParameterGroup(obj)
 
 <!--
@@ -3094,9 +3454,9 @@ _syntax: ofParameterGroup(obj)_
 _name: ofParameterGroup_
 _returns: _
 _returns_description: _
-_parameters: shared_ptr< ofParameterGroup::Value > obj_
+_parameters: shared_ptr< Value > obj_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3267,12 +3627,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofEvent< ofAbstractParameter > & parameterChangedE()
+###int & parameterChangedE()
 
 <!--
 _syntax: parameterChangedE()_
 _name: parameterChangedE_
-_returns: ofEvent< ofAbstractParameter > &_
+_returns: int &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -3303,12 +3663,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<shared_ptr< ofAbstractParameter>  >::reverse_iterator rbegin()
+###int rbegin()
 
 <!--
 _syntax: rbegin()_
 _name: rbegin_
-_returns: vector<shared_ptr< ofAbstractParameter>  >::reverse_iterator_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -3339,12 +3699,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<shared_ptr< ofAbstractParameter>  >::const_reverse_iterator rbegin()
+###int rbegin()
 
 <!--
 _syntax: rbegin()_
 _name: rbegin_
-_returns: vector<shared_ptr< ofAbstractParameter>  >::const_reverse_iterator_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -3375,12 +3735,120 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<shared_ptr< ofAbstractParameter>  >::reverse_iterator rend()
+###void remove(&param)
+
+<!--
+_syntax: remove(&param)_
+_name: remove_
+_returns: void_
+_returns_description: _
+_parameters: ofAbstractParameter &param_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void remove(index)
+
+<!--
+_syntax: remove(index)_
+_name: remove_
+_returns: void_
+_returns_description: _
+_parameters: size_t index_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void remove(&name)
+
+<!--
+_syntax: remove(&name)_
+_name: remove_
+_returns: void_
+_returns_description: _
+_parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int rend()
 
 <!--
 _syntax: rend()_
 _name: rend_
-_returns: vector<shared_ptr< ofAbstractParameter>  >::reverse_iterator_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -3411,12 +3879,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###vector<shared_ptr< ofAbstractParameter>  >::const_reverse_iterator rend()
+###int rend()
 
 <!--
 _syntax: rend()_
 _name: rend_
-_returns: vector<shared_ptr< ofAbstractParameter>  >::const_reverse_iterator_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -3601,6 +4069,42 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string valueType()
+
+<!--
+_syntax: valueType()_
+_name: valueType_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

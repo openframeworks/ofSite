@@ -10,7 +10,7 @@ _extends: _
 
 ##InlineDescription
 
-  ofVec3f is a class for storing a three dimensional vector.
+ ofVec3f is a class for storing a three dimensional vector.
 
 Moving through space requires knowledge of where things are and where they are
 going. Vector Maths is the class of mathematics that gives us control over
@@ -522,31 +522,34 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculate and return the dot product of this vector with 'vec'.
+Returns the dot product of this vector with 'vec'.
 
-*Dot product* (less commonly known as *Euclidean inner product*)
-expresses the angular relationship between two vectors. In other
-words it is a measure of how *parallel* two vectors are. If they are
-completely perpendicular the dot product is 0; if they are completely
-parallel their dot product is either 1 if they are pointing in the
-same direction, or -1 if they are pointing in opposite directions.
+The *dot product* of two vectors, also known as the *scalar product*, is
+the product of the magnitude of the two vectors and the cosine of the
+angle between them.
 
-![DOT](math/dotproduct.png)
-Image courtesy of Wikipedia
+One interpretation of the dot product is as a measure of how closely two
+vectors align with each other. If they point in exactly the same
+direction, their dot product will simply be the product of their
+magnitudes, if they are perpendicular, their dot product will be 0, and
+if they point in opposite directions, their dot product will be
+negative.
+
+The dot product is in contrast to the *cross product*, which returns a
+vector rather than a scalar.
 
 ~~~~{.cpp}
-ofVec3f a1(1, 0, 0);
-ofVec3f b1(0, 0, 1); // 90 degree angle to a1
-dot = a1.dot(b1); // dot is 0, ie cos(90)
+ofVec3f a1(2, 0, 0); // magnitude 2, parallel to x-axis
+ofVec3f b1(3, 4, 0); // magnitude 5, 53.13 degree angle to a1
+float dot = a1.dot(b1); // dot is 2 * 5 * cos(53.13) = 6.0
 
-ofVec3f a2(1, 0, 0);
-ofVec3f b2(1, 1, 0); // 45 degree angle to a2
-b2.normalize(); // vectors should to be unit vectors (normalized)
-float dot = a2.dot(b2); // dot is 0.707, ie cos(45)
+ofVec3f a2(1, 0, 0); // magnitude 1, parallel to x-axis
+ofVec3f b2(0, 0, 1); // magnitude 1, 90 degree angle to a2
+dot = a2.dot(b2); // dot is 1 * 1 * cos(90) = 0.0
 
-ofVec3f a3(0, 1, 0);
-ofVec3f b3(0, -1, 0); // 180 degree angle to a3
-dot = a3.dot(b3); // dot is -1, ie cos(180)
+ofVec3f a3(0, 1, 0); // magnitude 1, parallel to y-axis
+ofVec3f b3(0, -1, 0); // magnitude 1, 180 degree angle to a3
+dot = a3.dot(b3); // dot is 1 * 1 * cos(180) = -1.0
 ~~~~
 
 
@@ -1069,15 +1072,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Return a new 'ofVec3f' that is the result of rotating this vector by 'angle'
-degrees around the given axis.
+Returns a new vector that is the result of rotating this vector
+by 'angle' degrees about the given axis.
 
 ~~~~{.cpp}
 ofVec3f v1(1, 0, 0);
-// rotate v1 around the z axis
-ofVec3f v2 = v1.getRotated(45, ofVec3f(0, 0, 1)); // v2 is (√2, √2, 0)
-// rotate v1 around the y axis
-ofVec3f v3 = v1.getRotated(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
+ofVec3f v2 = v1.getRotated(45, ofVec3f(0, 0, 1)); // v2 is (0.707, 0.707, 0)
+ofVec3f v3 = v1.getRotated(45, ofVec3f(0, 1, 0)); // v3 is (0.707, 0, -0.707)
 ~~~~
 
 
@@ -1122,14 +1123,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Make a copy of this vector and perform an Euler rotation of the copy around
-three axes: 'ax' degrees about the x axis, 'ay' about the y axis and 'az'
-about the z axis. Return the copy.
+Returns a new vector that is the result of performing an Euler
+rotation of this vector by 'ax' degrees about the x axis, 'ay' degrees
+about the y axis, and 'az' degrees about the z axis.
 
 ~~~~~{.cpp}
-ofVec3f v1( 1, 0, 0 );
-ofVec3f v2 = v1.getRotated( 0, 0, 90 ); // v is now (0, 1, 0)
-ofVec3f v3 = v1.getRotated( 45, 0, 0 ); // v is now (0, √2, √2)
+ofVec3f v1(1, 0, 0);
+ofVec3f v2 = v1.getRotated(0, 0, 45); // v2 is (0.707, 0.707, 0)
+ofVec3f v3 = v1.getRotated(0, 45, 0); // v3 is (0.707, 0, -0.707)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
@@ -1176,9 +1177,9 @@ _advanced: True_
 
 _inlined_description: _
 
-Return a new 'ofVec3f' that is the result of rotating this vector by
-'angle' degrees around the axis specified by 'axis', using 'pivot' as
-the origin of rotation.
+Returns a new vector that is the result of rotating this vector by
+'angle' degrees about the axis specified by 'axis', using 'pivot' as the
+origin of rotation.
 
 
 
@@ -1214,15 +1215,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Return a new 'ofVec3f' that is the result of rotating this
-vector by 'angle' radians around the given axis.
+Returns a new vector that is the result of rotating this vector by
+'angle' radians about the given axis.
 
 ~~~~{.cpp}
 ofVec3f v1(1, 0, 0);
-// rotate v1 around the z axis
-ofVec3f v2 = v1.getRotated(PI/4, ofVec3f(0, 0, 1)); // v2 is (√2, √2, 0)
-// rotate v1 around the y axis
-ofVec3f v3 = v1.getRotated(PI/4, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
+ofVec3f v2 = v1.getRotated(PI / 4, ofVec3f(0, 0, 1)); // v2 is (0.707, 0.707, 0)
+ofVec3f v3 = v1.getRotated(PI / 4, ofVec3f(0, 1, 0)); // v3 is (0.707, 0, -0.707)
 ~~~~
 
 
@@ -1267,14 +1266,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Make a copy of this vector and perform an Euler rotation of the copy around
-three axes: 'ax' radians about the x axis, 'ay' about the y axis and 'az'
-about the z axis. Return the copy.
+Returns a new vector that is the result of performing an Euler
+rotation of this vector by 'ax' radians about the x axis, 'ay' radians
+about the y axis, and 'az' radians about the z axis.
 
 ~~~~~{.cpp}
-ofVec3f v1( 1, 0, 0 );
-ofVec3f v2 = v1.getRotatedRad( 0, 0, HALF_PI ); // v is now (0, 1, 0)
-ofVec3f v3 = v1.getRotatedRad( PI/4, 0, 0 ); // v is now (0, √2, √2)
+ofVec3f v1(1, 0, 0);
+ofVec3f v2 = v1.getRotatedRad(0, 0, PI / 4); // v2 is (0.707, 0.707, 0)
+ofVec3f v3 = v1.getRotatedRad(0, PI / 4, 0); // v3 is (0.707, 0, -0.707)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
@@ -1321,8 +1320,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' radians
-around the axis specified by 'axis', using 'pivot' as the origin of rotation.
+Returns a new vector that is the result of rotating this vector by
+'angle' radians about the axis specified by 'axis', using 'pivot' as the
+origin of rotation.
 
 
 
@@ -1867,7 +1867,7 @@ to represent a pure direction (heading).
 
 ~~~~{.cpp}
 ofVec3f v1(5, 0, 0);
-v1.normalize(); // v1 is now (1, 0, 0)
+v1.normalize(); // v2 is now (1, 0, 0)
 ofVec3f v2(5, 0, 5);
 v2.normalize(); // v2 is now (√2, 0, √2)
 ~~~~
@@ -2103,6 +2103,114 @@ ofVec3f v(mom); // v is (40, 20, 10)
 
 <!----------------------------------------------------------------------------->
 
+### ofVec3f(&vec)
+
+<!--
+_syntax: ofVec3f(&vec)_
+_name: ofVec3f_
+_returns: _
+_returns_description: _
+_parameters: const int &vec_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec3f(&vec)
+
+<!--
+_syntax: ofVec3f(&vec)_
+_name: ofVec3f_
+_returns: _
+_returns_description: _
+_parameters: const int &vec_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec3f(&vec)
+
+<!--
+_syntax: ofVec3f(&vec)_
+_name: ofVec3f_
+_returns: _
+_returns_description: _
+_parameters: const int &vec_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofVec3f one()
 
 <!--
@@ -2216,7 +2324,7 @@ _inlined_description: _
 Returns a new vector ('x'*'vec.x','y'*'vec.y','z'*'vec.z').
 
 ~~~~{.cpp}
-ofVec3f v1 = ofVec3f(40, 20, 10);
+ofVec3f v1 = ofVec3f(40, 20, 10); inline
 ofVec3f v2 = ofVec3f(2, 4, 10);
 ofVec3f v3 = v1 * v2; // (80, 80, 100)
 ~~~~
@@ -3247,17 +3355,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Return a new 'ofVec3f' that is the result of rotating this vector by
-'angle' degrees around the given axis.
+Rotates this vector by 'angle' degrees around the given axis.
 
 ~~~~{.cpp}
 ofVec3f v1(1, 0, 0);
-// rotate v1 around the z axis
-v1.rotate(45, ofVec3f(0, 0, 1)); // v2 is (√2, √2, 0)
-
-v1.set(1, 0, 0);
-// then rotate around the y axis
-v1.rotate(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
+ofVec3f v2(1, 0, 0);
+v1.rotate(45, ofVec3f(0, 0, 1)); // v1 is now (0.707, 0.707, 0)
+v2.rotate(45, ofVec3f(0, 1, 0)); // v2 is now (0.707, 0, -0.707)
 ~~~~
 
 
@@ -3304,13 +3408,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Perform an Euler rotation of this vector around three axes: 'ax' degrees about
-the x axis, 'ay' about the y axis and 'az' about the z axis.
+Performs an Euler rotation of this vector by 'ax' degrees about the
+x axis, 'ay' degrees about the y axis, and 'az' degrees about the z axis.
 
 ~~~~~{.cpp}
-ofVec3f v( 1, 0, 0 );
-v.rotate( 0, 0, 90 ); // v is now (0, 1, 0)
-v.rotate( 45, 0, 0 ); // v is now (0, √2, √2)
+ofVec3f v1(1, 0, 0);
+ofVec3f v2(1, 0, 0);
+v1.rotate(0, 0, 45); // v1 is now (0.707, 0.707, 0)
+v2.rotate(0, 45, 0); // v2 is now (0.707, 0, -0.707)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
@@ -3357,7 +3462,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Rotate this vector by 'angle' degrees around the axis specified by 'axis',
+Rotates this vector by 'angle' degrees about the axis specified by 'axis',
 using 'pivot' as the origin of rotation.
 
 
@@ -3394,17 +3499,13 @@ _advanced: False_
 
 _inlined_description: _
 
-Return a new 'ofVec3f' that is the result of rotating this vector by 'angle'
-degrees around the given axis.
+Rotates this vector by 'angle' radians about the given axis.
 
 ~~~~{.cpp}
 ofVec3f v1(1, 0, 0);
-// rotate v1 around the z axis
-v1.rotate(45, ofVec3f(0, 0, 1)); // v2 is (√2, √2, 0)
-
-v1.set(1, 0, 0);
-// then rotate around the y axis
-v1.rotate(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
+ofVec3f v2(1, 0, 0)
+v1.rotateRad(PI / 4, ofVec3f(0, 0, 1)); // v1 is now (0.707, 0.707, 0)
+v2.rotateRad(PI / 4, ofVec3f(0, 1, 0)); // v2 is now (0.707, 0, -0.707)
 ~~~~
 
 
@@ -3451,13 +3552,14 @@ _advanced: False_
 
 _inlined_description: _
 
-Perform an Euler rotation of this vector around three axes: 'ax' radians about
-the x axis, 'ay' about the y axis and 'az' about the z axis.
+Performs an Euler rotation of this vector by 'ax' radians about
+the x axis, 'ay' radians about the y axis, and 'az' radians about the z axis.
 
 ~~~~~{.cpp}
-ofVec3f v( 1, 0, 0 );
-v.rotateRad( 0, 0, HALF_PI ); // v is now (0, 1, 0)
-v.rotateRad( PI/4, 0, 0 ); // v is now (0, √2, √2)
+ofVec3f v1(1, 0, 0);
+ofVec3f v2(1, 0, 0);
+v1.rotateRad(0, 0, PI / 4); // v1 is now (0.707, 0.707, 0)
+v2.rotateRad(0, PI / 4, 0); // v2 is now (0.707, 0, -0.707)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
@@ -3504,7 +3606,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Rotate this vector by 'angle' radians around the axis specified by 'axis',
+Rotates this vector by 'angle' radians around the axis specified by 'axis',
 using 'pivot' as the origin of rotation.
 
 
@@ -3925,3 +4027,4 @@ Stores the Z component of this vector.
 
 
 <!----------------------------------------------------------------------------->
+

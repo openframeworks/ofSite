@@ -11,6 +11,8 @@ _extends: _
 ##InlineDescription
 
 
+OSC message sender which sends to a specific host & port
+
 
 
 
@@ -32,7 +34,7 @@ _syntax: appendBundle(&bundle, &p)_
 _name: appendBundle_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscBundle &bundle, int &p_
+_parameters: const ofxOscBundle &bundle, int &p_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -68,7 +70,7 @@ _syntax: appendMessage(&message, &p)_
 _name: appendMessage_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscMessage &message, int &p_
+_parameters: const ofxOscMessage &message, int &p_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -97,14 +99,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void appendParameter(&bundle, &parameter, address)
+###void appendParameter(&bundle, &parameter, &address)
 
 <!--
-_syntax: appendParameter(&bundle, &parameter, address)_
+_syntax: appendParameter(&bundle, &parameter, &address)_
 _name: appendParameter_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscBundle &bundle, const ofAbstractParameter &parameter, string address_
+_parameters: ofxOscBundle &bundle, const ofAbstractParameter &parameter, const string &address_
 _access: private_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -133,14 +135,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void appendParameter(&msg, &parameter, address)
+###void appendParameter(&msg, &parameter, &address)
 
 <!--
-_syntax: appendParameter(&msg, &parameter, address)_
+_syntax: appendParameter(&msg, &parameter, &address)_
 _name: appendParameter_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscMessage &msg, const ofAbstractParameter &parameter, string address_
+_parameters: ofxOscMessage &msg, const ofAbstractParameter &parameter, const string &address_
 _access: private_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -169,16 +171,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void disableBroadcast()
+###void clear()
 
 <!--
-_syntax: disableBroadcast()_
-_name: disableBroadcast_
+_syntax: clear()_
+_name: clear_
 _returns: void_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -189,7 +191,7 @@ _advanced: False_
 
 _inlined_description: _
 
-disables broadcast capabilities, usually call this before setup
+clear the sender, does not clear host or port values
 
 
 
@@ -205,16 +207,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void enableBroadcast()
+###ofxOscSender & copy(&other)
 
 <!--
-_syntax: enableBroadcast()_
-_name: enableBroadcast_
-_returns: void_
+_syntax: copy(&other)_
+_name: copy_
+_returns: ofxOscSender &_
 _returns_description: _
-_parameters: _
+_parameters: const ofxOscSender &other_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -225,7 +227,115 @@ _advanced: False_
 
 _inlined_description: _
 
-enabled broadcast capabilities (usually no need to call this, enabled by default)
+for operator= and copy constructor
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getHost()
+
+<!--
+_syntax: getHost()_
+_name: getHost_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\return current host name/ip
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getPort()
+
+<!--
+_syntax: getPort()_
+_name: getPort_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\return current port
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofxOscSenderSettings & getSettings()
+
+<!--
+_syntax: getSettings()_
+_name: getSettings_
+_returns: const ofxOscSenderSettings &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\return the current sender settings
 
 
 
@@ -356,7 +466,7 @@ _syntax: sendBundle(&bundle)_
 _name: sendBundle_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscBundle &bundle_
+_parameters: const ofxOscBundle &bundle_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -392,7 +502,7 @@ _syntax: sendMessage(&message, wrapInBundle = true)_
 _name: sendMessage_
 _returns: void_
 _returns_description: _
-_parameters: ofxOscMessage &message, bool wrapInBundle=true_
+_parameters: const ofxOscMessage &message, bool wrapInBundle=true_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -406,6 +516,7 @@ _advanced: False_
 _inlined_description: _
 
 send the given message
+if wrapInBundle is true (default), message sent in a timetagged bundle
 
 
 
@@ -441,7 +552,7 @@ _advanced: False_
 
 _inlined_description: _
 
-creates a message using an ofParameter
+create & send a message with data from an ofParameter
 
 
 
@@ -457,14 +568,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setup(hostname, port)
+###bool setup(&host, port)
 
 <!--
-_syntax: setup(hostname, port)_
+_syntax: setup(&host, port)_
 _name: setup_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: string hostname, int port_
+_parameters: const string &host, int port_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -477,7 +588,8 @@ _advanced: False_
 
 _inlined_description: _
 
-send messages to hostname and port
+set up the sender with the destination host name/ip and port
+\return true on success
 
 
 
@@ -493,15 +605,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setup(*socket)
+###bool setup(&settings)
 
 <!--
-_syntax: setup(*socket)_
+_syntax: setup(&settings)_
 _name: setup_
-_returns: void_
+_returns: bool_
 _returns_description: _
-_parameters: osc::UdpTransmitSocket *socket_
-_access: private_
+_parameters: const ofxOscSenderSettings &settings_
+_access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -513,7 +625,9 @@ _advanced: False_
 
 _inlined_description: _
 
+set up the sender with the given settings
 
+Returns: true on success
 
 
 
@@ -529,16 +643,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void shutdown()
+### ~ofxOscSender()
 
 <!--
-_syntax: shutdown()_
-_name: shutdown_
-_returns: void_
+_syntax: ~ofxOscSender()_
+_name: ~ofxOscSender_
+_returns: _
 _returns_description: _
 _parameters: _
-_access: private_
-_version_started: 007_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -569,77 +683,13 @@ _description: _
 
 
 
-###bool broadcast
+###int sendSocket
 
 <!--
-_name: broadcast_
-_type: bool_
-_access: private_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string hostname
-
-<!--
-_name: hostname_
-_type: string_
-_access: private_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int port
-
-<!--
-_name: port_
+_name: sendSocket_
 _type: int_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -649,7 +699,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+< sender socket
 
 
 
@@ -665,23 +715,23 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###UdpTransmitSocket * socket
+###ofxOscSenderSettings settings
 
 <!--
-_name: socket_
-_type: UdpTransmitSocket *_
+_name: settings_
+_type: ofxOscSenderSettings_
 _access: private_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
 _advanced: False_
 -->
 
 _inlined_description: _
 
-
+< current settings
 
 
 

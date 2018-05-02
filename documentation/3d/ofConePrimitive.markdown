@@ -104,12 +104,12 @@ Beware of the cone texture coordinates, they're a little strange.
 
 
 
-###vector< ofIndexType > getCapIndices()
+###int getCapIndices()
 
 <!--
 _syntax: getCapIndices()_
 _name: getCapIndices_
-_returns: vector< ofIndexType >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -140,12 +140,12 @@ This returns a vector of the indices of vertices that make up the cap (as oppose
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getCapMesh()
+###int getCapMesh()
 
 <!--
 _syntax: getCapMesh()_
 _name: getCapMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -176,12 +176,12 @@ This returns an ofMesh made up of the cap (as opposed to the cone)
 
 <!----------------------------------------------------------------------------->
 
-###vector< ofIndexType > getConeIndices()
+###int getConeIndices()
 
 <!--
 _syntax: getConeIndices()_
 _name: getConeIndices_
-_returns: vector< ofIndexType >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -212,12 +212,12 @@ This returns a vector of the indices of vertices that make up the cone (as oppos
 
 <!----------------------------------------------------------------------------->
 
-###ofMesh getConeMesh()
+###int getConeMesh()
 
 <!--
 _syntax: getConeMesh()_
 _name: getConeMesh_
-_returns: ofMesh_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -320,12 +320,12 @@ This returns the radius of the cap
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getResolution()
+###int getResolution()
 
 <!--
 _syntax: getResolution()_
 _name: getResolution_
-_returns: ofVec3f_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_

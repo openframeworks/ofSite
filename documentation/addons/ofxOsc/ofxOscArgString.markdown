@@ -11,6 +11,8 @@ _extends: ofxOscArg_
 ##InlineDescription
 
 
+a null-terminated string argument, type name "s"
+
 
 
 
@@ -25,12 +27,12 @@ _extends: ofxOscArg_
 
 
 
-###string get()
+###const string & get()
 
 <!--
 _syntax: get()_
 _name: get_
-_returns: string_
+_returns: const string &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -45,7 +47,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return value
+\return value
 
 
 
@@ -81,7 +83,7 @@ _advanced: False_
 
 _inlined_description: _
 
-return the type of this argument
+\return argument type
 
 
 
@@ -117,7 +119,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return argument type character as a string
 
 
 
@@ -133,14 +135,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscArgString(_value)
+### ofxOscArgString(&value)
 
 <!--
-_syntax: ofxOscArgString(_value)_
+_syntax: ofxOscArgString(&value)_
 _name: ofxOscArgString_
 _returns: _
 _returns_description: _
-_parameters: string _value_
+_parameters: const string &value_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -169,14 +171,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(*_value)
+###void set(*value)
 
 <!--
-_syntax: set(*_value)_
+_syntax: set(*value)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: const char *_value_
+_parameters: const char *value_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -189,7 +191,7 @@ _advanced: False_
 
 _inlined_description: _
 
-set value
+set value using C string
 
 
 
@@ -205,14 +207,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(_value)
+###void set(&value)
 
 <!--
-_syntax: set(_value)_
+_syntax: set(&value)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: string _value_
+_parameters: const string &value_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -225,43 +227,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofxOscArgString()
-
-<!--
-_syntax: ~ofxOscArgString()_
-_name: ~ofxOscArgString_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
+set value using string
 
 
 

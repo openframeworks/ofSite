@@ -59,6 +59,44 @@ sets pin 9 to be a PWM out pin. Note that this only works on pins that are PWM e
 
 
 
+###void attachEncoder(pinA, pinB)
+
+<!--
+_syntax: attachEncoder(pinA, pinB)_
+_name: attachEncoder_
+_returns: void_
+_returns_description: _
+_parameters: int pinA, int pinB_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\}
+\name Encoder
+\{
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool connect(&device, baud = 57600)
 
 <!--
@@ -100,6 +138,150 @@ opens a serial port connection to the arduino
 
 <!----------------------------------------------------------------------------->
 
+###int convertAnalogPinToDigital(pin)
+
+<!--
+_syntax: convertAnalogPinToDigital(pin)_
+_name: convertAnalogPinToDigital_
+_returns: int_
+_returns_description: _
+_parameters: size_t pin_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int convertDigitalPinToAnalog(pin)
+
+<!--
+_syntax: convertDigitalPinToAnalog(pin)_
+_name: convertDigitalPinToAnalog_
+_returns: int_
+_returns_description: _
+_parameters: size_t pin_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void detachEncoder(encoderNum)
+
+<!--
+_syntax: detachEncoder(encoderNum)_
+_name: detachEncoder_
+_returns: void_
+_returns_description: _
+_parameters: int encoderNum_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void disableEncoderReporting()
+
+<!--
+_syntax: disableEncoderReporting()_
+_name: disableEncoderReporting_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void disconnect()
 
 <!--
@@ -130,6 +312,78 @@ Does not turn the Arduino off.
 _description: _
 
 closes the serial port connection. Does not turn the Arduino off.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void enableEncoderReporting()
+
+<!--
+_syntax: enableEncoderReporting()_
+_name: enableEncoderReporting_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void getAllEncoderPositions()
+
+<!--
+_syntax: getAllEncoderPositions()_
+_name: getAllEncoderPositions_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -179,14 +433,14 @@ Returns the analog in value that the pin is currently reading. because the Ardui
 
 <!----------------------------------------------------------------------------->
 
-###list< int > * getAnalogHistory(pin)
+###int * getAnalogHistory()
 
 <!--
-_syntax: getAnalogHistory(pin)_
+_syntax: getAnalogHistory()_
 _name: getAnalogHistory_
-_returns: list< int > *_
+_returns: int *_
 _returns_description: _
-_parameters: int pin_
+_parameters: _
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -314,14 +568,14 @@ if(arduino.getDigital(pin)){
 
 <!----------------------------------------------------------------------------->
 
-###list< int > * getDigitalHistory(pin)
+###int * getDigitalHistory()
 
 <!--
-_syntax: getDigitalHistory(pin)_
+_syntax: getDigitalHistory()_
 _name: getDigitalHistory_
-_returns: list< int > *_
+_returns: int *_
 _returns_description: _
-_parameters: int pin_
+_parameters: _
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -397,6 +651,42 @@ returns ARD_INPUT, ARD_OUTPUT, ARD_PWM, ARD_SERVO, ARD_ANALOG
 
 <!----------------------------------------------------------------------------->
 
+###void getEncoderPosition(encoderNum)
+
+<!--
+_syntax: getEncoderPosition(encoderNum)_
+_name: getEncoderPosition_
+_returns: void_
+_returns_description: _
+_parameters: int encoderNum_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string getFirmwareName()
 
 <!--
@@ -433,6 +723,42 @@ returns the name of the firmware
 
 <!----------------------------------------------------------------------------->
 
+###int getInvertedValueFromTwo7bitBytes(lsb, msb)
+
+<!--
+_syntax: getInvertedValueFromTwo7bitBytes(lsb, msb)_
+_name: getInvertedValueFromTwo7bitBytes_
+_returns: int_
+_returns_description: _
+_parameters: unsigned char lsb, unsigned char msb_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int getMajorFirmwareVersion()
 
 <!--
@@ -454,42 +780,6 @@ _advanced: True_
 _inlined_description: _
 
 Returns: the major firmware version.
-
-
-
-
-
-_description: _
-
-returns the major firmware version
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int getMajorProtocolVersion()
-
-<!--
-_syntax: getMajorProtocolVersion()_
-_name: getMajorProtocolVersion_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: True_
--->
-
-_inlined_description: _
-
-Returns the major firmware version
 
 
 
@@ -541,27 +831,27 @@ returns the minor firmware version
 
 <!----------------------------------------------------------------------------->
 
-###int getMinorProtocolVersion()
+###int getNumAnalogPins()
 
 <!--
-_syntax: getMinorProtocolVersion()_
-_name: getMinorProtocolVersion_
+_syntax: getNumAnalogPins()_
+_name: getNumAnalogPins_
 _returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 006_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _inlined_description: _
 
-Returns: the minor firmware version.
+
 
 
 
@@ -569,7 +859,43 @@ Returns: the minor firmware version.
 
 _description: _
 
-returns the minor firmware version
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getPinCapabilities()
+
+<!--
+_syntax: getPinCapabilities()_
+_name: getPinCapabilities_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -693,12 +1019,12 @@ returns the last received string
 
 <!----------------------------------------------------------------------------->
 
-###list< string > * getStringHistory()
+###int * getStringHistory()
 
 <!--
 _syntax: getStringHistory()_
 _name: getStringHistory_
-_returns: list< string > *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -729,12 +1055,12 @@ returns a pointer to the string history
 
 <!----------------------------------------------------------------------------->
 
-###vector< unsigned char > getSysEx()
+###int getSysEx()
 
 <!--
 _syntax: getSysEx()_
 _name: getSysEx_
-_returns: vector< unsigned char >_
+_returns: int_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -765,12 +1091,12 @@ returns the last received SysEx message
 
 <!----------------------------------------------------------------------------->
 
-###list<vector< unsigned char>  > * getSysExHistory()
+###int * getSysExHistory()
 
 <!--
 _syntax: getSysExHistory()_
 _name: getSysExHistory_
-_returns: list<vector< unsigned char>  > *_
+_returns: int *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -794,6 +1120,42 @@ Returns: a pointer to the SysEx history.
 _description: _
 
 returns a pointer to the SysEx history
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int getTotalPins()
+
+<!--
+_syntax: getTotalPins()_
+_name: getTotalPins_
+_returns: int_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -845,7 +1207,7 @@ _name: initPins_
 _returns: void_
 _returns_description: _
 _parameters: _
-_access: protected_
+_access: private_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
@@ -873,6 +1235,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool isAnalogPin(pin)
+
+<!--
+_syntax: isAnalogPin(pin)_
+_name: isAnalogPin_
+_returns: bool_
+_returns_description: _
+_parameters: int pin_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool isArduinoReady()
 
 <!--
@@ -883,6 +1281,78 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isAttached()
+
+<!--
+_syntax: isAttached()_
+_name: isAttached_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool isI2CConfigured()
+
+<!--
+_syntax: isI2CConfigured()_
+_name: isI2CConfigured_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -946,6 +1416,42 @@ returns true if a succesfull connection has been established and the Arduino has
 
 <!----------------------------------------------------------------------------->
 
+###bool isPin(pin)
+
+<!--
+_syntax: isPin(pin)_
+_name: isPin_
+_returns: bool_
+_returns_description: _
+_parameters: int pin_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofArduino()
 
 <!--
@@ -991,7 +1497,7 @@ _name: processData_
 _returns: void_
 _returns_description: _
 _parameters: unsigned char inputData_
-_access: protected_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -1027,7 +1533,7 @@ _name: processDigitalPort_
 _returns: void_
 _returns_description: _
 _parameters: int port, unsigned char value_
-_access: protected_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -1062,9 +1568,117 @@ _syntax: processSysExData(data)_
 _name: processSysExData_
 _returns: void_
 _returns_description: _
-_parameters: vector< unsigned char > data_
-_access: protected_
+_parameters: int data_
+_access: private_
 _version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void purge()
+
+<!--
+_syntax: purge()_
+_name: purge_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void resetEncoderPosition(encoderNum)
+
+<!--
+_syntax: resetEncoderPosition(encoderNum)_
+_name: resetEncoderPosition_
+_returns: void_
+_returns_description: _
+_parameters: int encoderNum_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendAnalogMappingRequest()
+
+<!--
+_syntax: sendAnalogMappingRequest()_
+_name: sendAnalogMappingRequest_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1256,7 +1870,7 @@ _name: sendDigitalPinReporting_
 _returns: void_
 _returns_description: _
 _parameters: int pin, int mode_
-_access: protected_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -1268,7 +1882,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\< Indicate the total number of digital pins of the board in use.
+
 
 
 
@@ -1292,7 +1906,7 @@ _name: sendDigitalPortReporting_
 _returns: void_
 _returns_description: _
 _parameters: int port, int mode_
-_access: protected_
+_access: private_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -1336,6 +1950,794 @@ _constant: False_
 _static: False_
 _visible: True_
 _advanced: True_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendI2CConfig(delay)
+
+<!--
+_syntax: sendI2CConfig(delay)_
+_name: sendI2CConfig_
+_returns: void_
+_returns_description: _
+_parameters: int delay_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Sends a I2C config request
+
+ Must be called before an I2C Read or Write
+
+Parameters:
+{number} delay in microseconds to set for I2C Read
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendI2CReadRequest(address, numBytes, reg)
+
+<!--
+_syntax: sendI2CReadRequest(address, numBytes, reg)_
+_name: sendI2CReadRequest_
+_returns: void_
+_returns_description: _
+_parameters: char address, int numBytes, int reg_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Asks the arduino to request bytes from an I2C device
+
+
+Parameters:
+{number} slaveAddress The address of the I2C device
+{number} numBytes The number of bytes to receive.
+{function} callback A function to call when we have received the bytes.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendI2CWriteRequest(slaveAddress, *bytes, numOfBytes, reg)
+
+<!--
+_syntax: sendI2CWriteRequest(slaveAddress, *bytes, numOfBytes, reg)_
+_name: sendI2CWriteRequest_
+_returns: void_
+_returns_description: _
+_parameters: char slaveAddress, unsigned char *bytes, int numOfBytes, int reg_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Asks the arduino to send an I2C request to a device
+
+
+Parameters:
+{number} slaveAddress The address of the I2C device
+{Array} bytes The bytes to send to the device
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendI2CWriteRequest(slaveAddress, *bytes, numOfBytes, reg)
+
+<!--
+_syntax: sendI2CWriteRequest(slaveAddress, *bytes, numOfBytes, reg)_
+_name: sendI2CWriteRequest_
+_returns: void_
+_returns_description: _
+_parameters: char slaveAddress, const char *bytes, int numOfBytes, int reg_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendI2CWriteRequest(slaveAddress, *bytes, numOfBytes, reg)
+
+<!--
+_syntax: sendI2CWriteRequest(slaveAddress, *bytes, numOfBytes, reg)_
+_name: sendI2CWriteRequest_
+_returns: void_
+_returns_description: _
+_parameters: char slaveAddress, char *bytes, int numOfBytes, int reg_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendI2CWriteRequest(slaveAddress, bytes, reg)
+
+<!--
+_syntax: sendI2CWriteRequest(slaveAddress, bytes, reg)_
+_name: sendI2CWriteRequest_
+_returns: void_
+_returns_description: _
+_parameters: char slaveAddress, int bytes, int reg_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendI2ContinuousReadRequest(address, numBytes, reg)
+
+<!--
+_syntax: sendI2ContinuousReadRequest(address, numBytes, reg)_
+_name: sendI2ContinuousReadRequest_
+_returns: void_
+_returns_description: _
+_parameters: char address, int numBytes, int reg_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Initialize a continuous I2C read.
+
+
+Parameters:
+{number} address    The address of the I2C device
+{number} register   Optionally set the register to read from.
+{number} numBytes   The number of bytes to receive.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireAlarmsSearch(pin)
+
+<!--
+_syntax: sendOneWireAlarmsSearch(pin)_
+_name: sendOneWireAlarmsSearch_
+_returns: void_
+_returns_description: _
+_parameters: int pin_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Searches for 1-wire devices on the bus in an alarmed state.
+
+
+Parameters:
+pin
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireConfig(pin, enableParasiticPower)
+
+<!--
+_syntax: sendOneWireConfig(pin, enableParasiticPower)_
+_name: sendOneWireConfig_
+_returns: void_
+_returns_description: _
+_parameters: int pin, bool enableParasiticPower_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Configure the passed pin as the controller in a 1-wire bus.
+
+Pass as enableParasiticPower true if you want the data pin to power the bus.
+
+Parameters:
+pin
+enableParasiticPower
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireDelay(pin, delay)
+
+<!--
+_syntax: sendOneWireDelay(pin, delay)_
+_name: sendOneWireDelay_
+_returns: void_
+_returns_description: _
+_parameters: int pin, unsigned int delay_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Tells firmata to not do anything for the passed amount of ms.
+
+For when you need to give a device attached to the bus time to do a calculation.
+
+Parameters:
+pin
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireRead(pin, devices, numBytesToRead)
+
+<!--
+_syntax: sendOneWireRead(pin, devices, numBytesToRead)_
+_name: sendOneWireRead_
+_returns: void_
+_returns_description: _
+_parameters: int pin, int devices, int numBytesToRead_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Reads data from a device on the bus.
+
+N.b. ConfigurableFirmata will issue the 1-wire select command internally.
+
+Parameters:
+pin
+device
+numBytesToRead
+callback
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireRequest(pin, subcommand, devices, numBytesToRead, correlationId, delay, dataToWrite)
+
+<!--
+_syntax: sendOneWireRequest(pin, subcommand, devices, numBytesToRead, correlationId, delay, dataToWrite)_
+_name: sendOneWireRequest_
+_returns: void_
+_returns_description: _
+_parameters: int pin, unsigned char subcommand, int devices, int numBytesToRead, unsigned char correlationId, unsigned int delay, int dataToWrite_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireReset(pin)
+
+<!--
+_syntax: sendOneWireReset(pin)_
+_name: sendOneWireReset_
+_returns: void_
+_returns_description: _
+_parameters: int pin_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Resets all devices on the bus.
+
+Parameters:
+pin
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireSearch(pin)
+
+<!--
+_syntax: sendOneWireSearch(pin)_
+_name: sendOneWireSearch_
+_returns: void_
+_returns_description: _
+_parameters: int pin_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Searches for 1-wire devices on the bus.
+
+
+Parameters:
+pin
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireSearch(type, pin)
+
+<!--
+_syntax: sendOneWireSearch(type, pin)_
+_name: sendOneWireSearch_
+_returns: void_
+_returns_description: _
+_parameters: char type, int pin_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireWrite(pin, devices, data)
+
+<!--
+_syntax: sendOneWireWrite(pin, devices, data)_
+_name: sendOneWireWrite_
+_returns: void_
+_returns_description: _
+_parameters: int pin, int devices, int data_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Writes data to the bus to be received by the passed device.
+
+The device should be obtained from a previous call to sendOneWireSearch. ConfigurableFirmata will issue the 1-wire select command internally.
+
+Parameters:
+pin
+device
+data
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendOneWireWriteAndRead(pin, devices, data, numBytesToRead)
+
+<!--
+_syntax: sendOneWireWriteAndRead(pin, devices, data, numBytesToRead)_
+_name: sendOneWireWriteAndRead_
+_returns: void_
+_returns_description: _
+_parameters: int pin, int devices, int data, int numBytesToRead_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Sends the passed data to the passed device on the bus, reads the specified number of bytes.
+
+ConfigurableFirmata will issue the 1-wire select command internally.
+
+Parameters:
+pin
+device
+data
+numBytesToRead
+callback
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendPinCapabilityRequest()
+
+<!--
+_syntax: sendPinCapabilityRequest()_
+_name: sendPinCapabilityRequest_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendPinCofigurationRequest()
+
+<!--
+_syntax: sendPinCofigurationRequest()_
+_name: sendPinCofigurationRequest_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendPinStateQuery(pin)
+
+<!--
+_syntax: sendPinStateQuery(pin)_
+_name: sendPinStateQuery_
+_returns: void_
+_returns_description: _
+_parameters: int pin_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
 -->
 
 _inlined_description: _
@@ -1465,6 +2867,49 @@ This will cause your Arduino to reset and boot into the program again.
 
 <!----------------------------------------------------------------------------->
 
+###void sendSerialConfig(portID, baud, rxPin, txPin)
+
+<!--
+_syntax: sendSerialConfig(portID, baud, rxPin, txPin)_
+_name: sendSerialConfig_
+_returns: void_
+_returns_description: _
+_parameters: Firmata_Serial_Ports portID, int baud, int rxPin, int txPin_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Asks the Arduino to configure a hardware or serial port.
+
+
+Parameters:
+portID The serial port to use (HW_SERIAL1, HW_SERIAL2, HW_SERIAL3, SW_SERIAL0, SW_SERIAL1, SW_SERIAL2, SW_SERIAL3)
+baud  The baud rate of the serial port
+rxPin [SW Serial only] The RX pin of the SoftwareSerial instance
+txPin [SW Serial only] The TX pin of the SoftwareSerial instance
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void sendServo(pin, value, force = false)
 
 <!--
@@ -1508,14 +2953,14 @@ the pin has to have a servo attached for this to work.
 
 <!----------------------------------------------------------------------------->
 
-###void sendServoAttach(pin, minPulse = 544, maxPulse = 2400, angle = 180)
+###void sendServoAttach(pin, minPulse = 544, maxPulse = 2400)
 
 <!--
-_syntax: sendServoAttach(pin, minPulse = 544, maxPulse = 2400, angle = 180)_
+_syntax: sendServoAttach(pin, minPulse = 544, maxPulse = 2400)_
 _name: sendServoAttach_
 _returns: void_
 _returns_description: _
-_parameters: int pin, int minPulse=544, int maxPulse=2400, int angle=180_
+_parameters: int pin, int minPulse=544, int maxPulse=2400_
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -1546,28 +2991,27 @@ angle parameter DEPRECATED as of Firmata 2.2
 
 <!----------------------------------------------------------------------------->
 
-###void sendServoDetach(pin)
+###void sendStepper2Wire(dirPin, stepPin, stepsPerRev = 200)
 
 <!--
-_syntax: sendServoDetach(pin)_
-_name: sendServoDetach_
+_syntax: sendStepper2Wire(dirPin, stepPin, stepsPerRev = 200)_
+_name: sendStepper2Wire_
 _returns: void_
 _returns_description: _
-_parameters: int pin_
+_parameters: int dirPin, int stepPin, int stepsPerRev=200_
 _access: public_
-_version_started: 006_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
 _visible: True_
-_advanced: True_
+_advanced: False_
 -->
 
 _inlined_description: _
 
-Detaches a servo on a pin
-\note sendServoDetach DEPRECATED as of Firmata 2.2
+-- stepper
 
 
 
@@ -1575,8 +3019,79 @@ Detaches a servo on a pin
 
 _description: _
 
-On the Arduino Uno pin: 9, 10 detaches a servo from a pin, the pin mode remains as OUTPUT
-sendServoDetach DEPRECATED as of Firmata 2.2
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendStepper4Wire(pin1, pin2, pin3, pin4, stepsPerRev = 200)
+
+<!--
+_syntax: sendStepper4Wire(pin1, pin2, pin3, pin4, stepsPerRev = 200)_
+_name: sendStepper4Wire_
+_returns: void_
+_returns_description: _
+_parameters: int pin1, int pin2, int pin3, int pin4, int stepsPerRev=200_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+the pins has to have a stepper attached
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void sendStepperMove(stepperID, direction, steps, speed = 0, acceleration, deceleration)
+
+<!--
+_syntax: sendStepperMove(stepperID, direction, steps, speed = 0, acceleration, deceleration)_
+_name: sendStepperMove_
+_returns: void_
+_returns_description: _
+_parameters: int stepperID, int direction, int steps, int speed=0, float acceleration, float deceleration_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+the pins has to have a stepper attached
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1628,7 +3143,7 @@ _syntax: sendSysEx(command, data)_
 _name: sendSysEx_
 _returns: void_
 _returns_description: _
-_parameters: int command, vector< unsigned char > data_
+_parameters: int command, int data_
 _access: public_
 _version_started: 006_
 _version_deprecated: _
@@ -1758,6 +3273,254 @@ within the 0-127 data range.
 
 Parameters:
 value The value to send.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void serialClose(portID)
+
+<!--
+_syntax: serialClose(portID)_
+_name: serialClose_
+_returns: void_
+_returns_description: _
+_parameters: Firmata_Serial_Ports portID_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+ Close the specified serial port.
+
+
+Parameters:
+portId The serial port to close.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void serialFlush(portID)
+
+<!--
+_syntax: serialFlush(portID)_
+_name: serialFlush_
+_returns: void_
+_returns_description: _
+_parameters: Firmata_Serial_Ports portID_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Flush the specified serial port.
+
+For hardware serial, this waits for the transmission of outgoing serial data to complete.For software serial, this removed any buffered incoming serial data.
+
+Parameters:
+portId The serial port to listen on.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void serialListen(portID)
+
+<!--
+_syntax: serialListen(portID)_
+_name: serialListen_
+_returns: void_
+_returns_description: _
+_parameters: Firmata_Serial_Ports portID_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+For SoftwareSerial only. Only a single SoftwareSerial instance can read data at a time.
+
+Call this method to set this port to be the reading port in the case there are multiple SoftwareSerial instances.
+
+Parameters:
+portId The serial port to flush.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void serialRead(port, maxBytesToRead)
+
+<!--
+_syntax: serialRead(port, maxBytesToRead)_
+_name: serialRead_
+_returns: void_
+_returns_description: _
+_parameters: Firmata_Serial_Ports port, int maxBytesToRead_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+ Start continuous reading of the specified serial port.
+
+The port is checked for data each iteration of the main Arduino loop.
+
+Parameters:
+portId The serial port to start reading continuously.
+ maxBytesToRead [Optional] The maximum number of bytes to read per iteration.
+\note If there are less bytes in the buffer, the lesser number of bytes will be returned. A value of 0 indicates that all available bytes in the buffer should be read.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void serialStop(portID)
+
+<!--
+_syntax: serialStop(portID)_
+_name: serialStop_
+_returns: void_
+_returns_description: _
+_parameters: Firmata_Serial_Ports portID_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Stop continuous reading of the specified serial port.
+
+This does not close the port, it stops reading it but keeps the port open.
+
+Parameters:
+portId The serial port to stop reading.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void serialWrite(port, *bytes, numOfBytes)
+
+<!--
+_syntax: serialWrite(port, *bytes, numOfBytes)_
+_name: serialWrite_
+_returns: void_
+_returns_description: _
+_parameters: Firmata_Serial_Ports port, unsigned char *bytes, int numOfBytes_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Write an array of bytes to the specified serial port.
+
+
+Parameters:
+portId The serial port to write to.
+bytes An array of bytes to write to the serial port.
+numOfBytes length of the array of bytes.
 
 
 
@@ -2095,6 +3858,38 @@ triggered when a digital pin changes value, the pin that changed is passed as an
 
 <!----------------------------------------------------------------------------->
 
+###int EEncoderDataReceived
+
+<!--
+_name: EEncoderDataReceived_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+triggered when the encoder returns data after a read request
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofEvent< const int > EFirmwareVersionReceived
 
 <!--
@@ -2121,6 +3916,38 @@ is passed as an argument.
 _description: _
 
 triggered when a firmware version is received, the major version is passed as an argument
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int EI2CDataRecieved
+
+<!--
+_name: EI2CDataRecieved_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+triggered when the I2C bus returns data after a read request
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -2163,24 +3990,23 @@ from this point it's safe to send to the Arduino.
 
 <!----------------------------------------------------------------------------->
 
-###ofEvent< const int > EProtocolVersionReceived
+###int EPinStateResponseReceived
 
 <!--
-_name: EProtocolVersionReceived_
-_type: ofEvent< const int >_
+_name: EPinStateResponseReceived_
+_type: int_
 _access: public_
-_version_started: 006_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
 _constant: False_
-_advanced: True_
+_advanced: False_
 -->
 
 _inlined_description: _
 
-Triggered when a protocol version is received, the major version
-is passed as an argument.
+
 
 
 
@@ -2188,7 +4014,73 @@ is passed as an argument.
 
 _description: _
 
-triggered when a protocol version is received, the major version is passed as an argument
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ESerialDataReceived
+
+<!--
+_name: ESerialDataReceived_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+triggered when a Serial message is received. Returns which
+port and its data
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int EStepperDataReceived
+
+<!--
+_name: EStepperDataReceived_
+_type: int_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+triggered when a stepper has finished rotating. Returns which
+stepper has complted its rotation
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -2582,6 +4474,38 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int _encoderID
+
+<!--
+_name: _encoderID_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int _executeMultiByteCommand
 
 <!--
@@ -2646,17 +4570,49 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int _firmwareVersionSum
+###int _firstAnalogPin
 
 <!--
-_name: _firmwareVersionSum_
+_name: _firstAnalogPin_
 _type: int_
-_access: protected_
-_version_started: 007_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
-_constant: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool _i2cConfigured
+
+<!--
+_name: _i2cConfigured_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
 _advanced: False_
 -->
 
@@ -2694,7 +4650,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\}
+
 
 
 
@@ -2714,38 +4670,6 @@ _description: _
 
 <!--
 _name: _majorFirmwareVersion_
-_type: int_
-_access: protected_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int _majorProtocolVersion
-
-<!--
-_name: _majorProtocolVersion_
 _type: int_
 _access: protected_
 _version_started: 006_
@@ -2806,13 +4730,45 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int _minorProtocolVersion
+###int _multiByteChannel
 
 <!--
-_name: _minorProtocolVersion_
+_name: _multiByteChannel_
 _type: int_
 _access: protected_
 _version_started: 006_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+< Indicates which pin the data came from.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int _numEncoders
+
+<!--
+_name: _numEncoders_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -2838,13 +4794,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int _multiByteChannel
+###int _numSteppers
 
 <!--
-_name: _multiByteChannel_
+_name: _numSteppers_
 _type: int_
-_access: protected_
-_version_started: 006_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -2854,7 +4810,7 @@ _advanced: False_
 
 _inlined_description: _
 
-< Indicates which pin the data came from.
+
 
 
 
@@ -3158,6 +5114,38 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int _totalAnalogPins
+
+<!--
+_name: _totalAnalogPins_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\< Indicate the total number of digital pins of the board in use.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int _totalDigitalPins
 
 <!--
@@ -3197,6 +5185,38 @@ _name: _waitForData_
 _type: int_
 _access: protected_
 _version_started: 006_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int analogPinMap
+
+<!--
+_name: analogPinMap_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -3303,6 +5323,358 @@ _advanced: False_
 _inlined_description: _
 
 < This yields true if a serial connection to Arduino exists.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataAnalogSupported
+
+<!--
+_name: firmataAnalogSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataEncoderSupported
+
+<!--
+_name: firmataEncoderSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataI2cSupported
+
+<!--
+_name: firmataI2cSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataInputSupported
+
+<!--
+_name: firmataInputSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataOnewireSupported
+
+<!--
+_name: firmataOnewireSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataOutputSupported
+
+<!--
+_name: firmataOutputSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataPwmSupported
+
+<!--
+_name: firmataPwmSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataSerialSupported
+
+<!--
+_name: firmataSerialSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataServoSupported
+
+<!--
+_name: firmataServoSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool firmataStepperSupported
+
+<!--
+_name: firmataStepperSupported_
+_type: bool_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int pinCapabilities
+
+<!--
+_name: pinCapabilities_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 

@@ -10,18 +10,10 @@ _extends: ofBaseMaterial_
 
 ##InlineDescription
 
-/**
-* Material concept: "Anything graphical applied to the polygons"
-*
-* @author	Diederick Huijbers <diederick[at]apollomedia[dot]nl>
-*
-* @link	Wavefront material file spec:
-*			http://people.sc.fsu.edu/~jburkardt/data/mtl/mtl.html
-* @link	Ogre3D
-*			http://www.ogre3d.org/docs/manual/manual_11.html#SEC14
-* @link	assim material
-*			http://assimp.sourceforge.net/lib_html/ai_material_8h.html#7dd415ff703a2cc53d1c22ddbbd7dde0
-*/
+
+material parameter properties that can be applied to vertices in the OpenGL lighting model
+used in determining both the intensity and color of reflected light based on the lighting model in use
+and if the vertices are on a front or back sided face
 
 
 
@@ -145,42 +137,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMaterial::Data getData()
-
-<!--
-_syntax: getData()_
-_name: getData_
-_returns: ofMaterial::Data_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofFloatColor getDiffuseColor()
 
 <!--
@@ -253,14 +209,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofShader & getShader(textureTarget, &renderer)
+###ofMaterialSettings getSettings()
 
 <!--
-_syntax: getShader(textureTarget, &renderer)_
+_syntax: getSettings()_
+_name: getSettings_
+_returns: ofMaterialSettings_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofShader & getShader(textureTarget, geometryHasColor, &renderer)
+
+<!--
+_syntax: getShader(textureTarget, geometryHasColor, &renderer)_
 _name: getShader_
 _returns: const ofShader &_
 _returns_description: _
-_parameters: int textureTarget, ofGLProgrammableRenderer &renderer_
+_parameters: int textureTarget, bool geometryHasColor, ofGLProgrammableRenderer &renderer_
 _access: private_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -453,7 +445,10 @@ _advanced: False_
 
 _inlined_description: _
 
+set the ambient reflectance
 
+Parameters:
+oAmbient the ambient reflectance
 
 
 
@@ -489,6 +484,48 @@ _advanced: False_
 
 _inlined_description: _
 
+set all material colors: reflectance type & light intensity
+
+Parameters:
+oDiffuse the diffuse reflectance
+oAmbient the ambient reflectance
+oSpecular the specular reflectance
+oEmmissive the emitted light intensity
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniform1f(&name, value)
+
+<!--
+_syntax: setCustomUniform1f(&name, value)_
+_name: setCustomUniform1f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, float value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
 
 
 
@@ -505,16 +542,376 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setData(&data)
+###void setCustomUniform1i(&name, value)
 
 <!--
-_syntax: setData(&data)_
-_name: setData_
+_syntax: setCustomUniform1i(&name, value)_
+_name: setCustomUniform1i_
 _returns: void_
 _returns_description: _
-_parameters: const ofMaterial::Data &data_
+_parameters: const string &name, int value_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniform2f(&name, value)
+
+<!--
+_syntax: setCustomUniform2f(&name, value)_
+_name: setCustomUniform2f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniform2i(&name, value)
+
+<!--
+_syntax: setCustomUniform2i(&name, value)_
+_name: setCustomUniform2i_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniform3f(&name, value)
+
+<!--
+_syntax: setCustomUniform3f(&name, value)_
+_name: setCustomUniform3f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniform3i(&name, value)
+
+<!--
+_syntax: setCustomUniform3i(&name, value)_
+_name: setCustomUniform3i_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniform4f(&name, value)
+
+<!--
+_syntax: setCustomUniform4f(&name, value)_
+_name: setCustomUniform4f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniform4i(&name, value)
+
+<!--
+_syntax: setCustomUniform4i(&name, value)_
+_name: setCustomUniform4i_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniformMatrix3f(&name, value)
+
+<!--
+_syntax: setCustomUniformMatrix3f(&name, value)_
+_name: setCustomUniformMatrix3f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniformMatrix4f(&name, value)
+
+<!--
+_syntax: setCustomUniformMatrix4f(&name, value)_
+_name: setCustomUniformMatrix4f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int value_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniformTexture(&name, &value, textureLocation)
+
+<!--
+_syntax: setCustomUniformTexture(&name, &value, textureLocation)_
+_name: setCustomUniformTexture_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, const ofTexture &value, int textureLocation_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCustomUniformTexture(&name, textureTarget, textureID, textureLocation)
+
+<!--
+_syntax: setCustomUniformTexture(&name, textureTarget, textureID, textureLocation)_
+_name: setCustomUniformTexture_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, int textureTarget, GLint textureID, int textureLocation_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -561,7 +958,10 @@ _advanced: False_
 
 _inlined_description: _
 
+set the diffuse reflectance
 
+Parameters:
+oDiffuse the diffuse reflectance
 
 
 
@@ -597,7 +997,10 @@ _advanced: False_
 
 _inlined_description: _
 
+set the emitted light intensity
 
+Parameters:
+oEmmissive the emitted light intensity
 
 
 
@@ -633,7 +1036,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+set the specular exponent
 
 
 
@@ -669,7 +1072,49 @@ _advanced: False_
 
 _inlined_description: _
 
+set the specular reflectance
 
+Parameters:
+oSpecular the specular reflectance
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setup(&settings)
+
+<!--
+_syntax: setup(&settings)_
+_name: setup_
+_returns: void_
+_returns_description: _
+_parameters: const ofMaterialSettings &settings_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+setup using settings struct
+
+Parameters:
+settings color & other properties struct
 
 
 
@@ -861,13 +1306,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###size_t shaderLights
+###int shaders
 
 <!--
-_name: shaderLights_
-_type: size_t_
+_name: shaders_
+_type: int_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -893,13 +1338,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader shaderNoTexture
+###int shadersMap
 
 <!--
-_name: shaderNoTexture_
-_type: ofShader_
+_name: shadersMap_
+_type: int_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -925,13 +1370,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader shaderTexture2D
+###int uniforms1f
 
 <!--
-_name: shaderTexture2D_
-_type: ofShader_
+_name: uniforms1f_
+_type: int_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -957,13 +1402,13 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofShader shaderTextureRect
+###int uniforms1i
 
 <!--
-_name: shaderTextureRect_
-_type: ofShader_
+_name: uniforms1i_
+_type: int_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_
@@ -989,13 +1434,173 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool shadersInitialized
+###int uniforms2f
 
 <!--
-_name: shadersInitialized_
-_type: bool_
+_name: uniforms2f_
+_type: int_
 _access: private_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int uniforms3f
+
+<!--
+_name: uniforms3f_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int uniforms3m
+
+<!--
+_name: uniforms3m_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int uniforms4f
+
+<!--
+_name: uniforms4f_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int uniforms4m
+
+<!--
+_name: uniforms4m_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int uniformstex
+
+<!--
+_name: uniformstex_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _visible: True_

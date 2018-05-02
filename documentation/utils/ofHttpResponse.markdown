@@ -11,6 +11,8 @@ _extends: _
 ##InlineDescription
 
 
+an HTTP response to a GET or POST request
+
 
 
 

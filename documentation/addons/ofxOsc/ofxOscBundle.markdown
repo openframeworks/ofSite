@@ -11,6 +11,8 @@ _extends: _
 ##InlineDescription
 
 
+an OSC bundle of ofxOscMessages and/or other ofxOscBundles
+
 
 
 
@@ -45,7 +47,7 @@ _advanced: False_
 
 _inlined_description: _
 
-add bundle elements
+add another bundle to the bundle
 
 
 
@@ -81,7 +83,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+add a message to the bundle
 
 
 
@@ -117,7 +119,7 @@ _advanced: False_
 
 _inlined_description: _
 
-erase contents
+clear bundle & message contents
 
 
 
@@ -169,14 +171,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxOscBundle & getBundleAt(i)
+###const ofxOscBundle & getBundleAt(i)
 
 <!--
 _syntax: getBundleAt(i)_
 _name: getBundleAt_
-_returns: ofxOscBundle &_
+_returns: const ofxOscBundle &_
 _returns_description: _
-_parameters: int i_
+_parameters: size_t i_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -189,7 +191,43 @@ _advanced: False_
 
 _inlined_description: _
 
-return the bundle or message at the given index
+\return the bundle at the given index
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxOscBundle & getBundleAt(i)
+
+<!--
+_syntax: getBundleAt(i)_
+_name: getBundleAt_
+_returns: ofxOscBundle &_
+_returns_description: _
+_parameters: size_t i_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\return the bundle at the given index
 
 
 
@@ -225,7 +263,43 @@ _advanced: False_
 
 _inlined_description: _
 
-get bundle elements
+\return the current bundle count
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const ofxOscMessage & getMessageAt(i)
+
+<!--
+_syntax: getMessageAt(i)_
+_name: getMessageAt_
+_returns: const ofxOscMessage &_
+_returns_description: _
+_parameters: size_t i_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\return the message at the given index
 
 
 
@@ -248,9 +322,9 @@ _syntax: getMessageAt(i)_
 _name: getMessageAt_
 _returns: ofxOscMessage &_
 _returns_description: _
-_parameters: int i_
+_parameters: size_t i_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -261,7 +335,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the message at the given index
 
 
 
@@ -297,7 +371,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\return the current message count
 
 
 
@@ -421,42 +495,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ~ofxOscBundle()
-
-<!--
-_syntax: ~ofxOscBundle()_
-_name: ~ofxOscBundle_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ##Variables
 
 
@@ -477,7 +515,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+< bundled bundles
 
 
 
@@ -509,7 +547,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+< bundled messages
 
 
 

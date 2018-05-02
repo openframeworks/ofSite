@@ -5,12 +5,11 @@
 _visible: True_
 _advanced: False_
 _istemplated: False_
-_extends: ofBaseEvent<of::priv::Function<T, Mutex>, Mutex>_
+_extends: of::priv::BaseEvent<of::priv::Function<T, Mutex>, Mutex>_
 -->
 
 ##InlineDescription
 
-/*! \endcond */
 
 
 
@@ -148,12 +147,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###FunctionPtr make_function(*listener, method, priority)
+###ofEvent::FunctionPtr make_function(*listener, method, priority)
 
 <!--
 _syntax: make_function(*listener, method, priority)_
 _name: make_function_
-_returns: FunctionPtr_
+_returns: ofEvent::FunctionPtr_
 _returns_description: _
 _parameters: TObj *listener, bool (TObj::*)(T &) method, int priority_
 _access: protected_
@@ -184,12 +183,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###FunctionPtr make_function(*listener, method, priority)
+###ofEvent::FunctionPtr make_function(*listener, method, priority)
 
 <!--
 _syntax: make_function(*listener, method, priority)_
 _name: make_function_
-_returns: FunctionPtr_
+_returns: ofEvent::FunctionPtr_
 _returns_description: _
 _parameters: TObj *listener, void (TObj::*)(T &) method, int priority_
 _access: protected_
@@ -220,12 +219,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###FunctionPtr make_function(*listener, *, method, priority)
+###ofEvent::FunctionPtr make_function(*listener, *, method, priority)
 
 <!--
 _syntax: make_function(*listener, *, method, priority)_
 _name: make_function_
-_returns: FunctionPtr_
+_returns: ofEvent::FunctionPtr_
 _returns_description: _
 _parameters: TObj *listener, bool (TObj::*)(const void *, T &) method, int priority_
 _access: protected_
@@ -256,12 +255,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###FunctionPtr make_function(*listener, *, method, priority)
+###ofEvent::FunctionPtr make_function(*listener, *, method, priority)
 
 <!--
 _syntax: make_function(*listener, *, method, priority)_
 _name: make_function_
-_returns: FunctionPtr_
+_returns: ofEvent::FunctionPtr_
 _returns_description: _
 _parameters: TObj *listener, void (TObj::*)(const void *, T &) method, int priority_
 _access: protected_
@@ -292,14 +291,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###FunctionPtr make_function(function, priority)
+###ofEvent::FunctionPtr make_function(f, priority)
 
 <!--
-_syntax: make_function(function, priority)_
+_syntax: make_function(f, priority)_
 _name: make_function_
-_returns: FunctionPtr_
+_returns: ofEvent::FunctionPtr_
 _returns_description: _
-_parameters: bool (*)(T &) function, int priority_
+_parameters: function< bool (T &) > f, int priority_
 _access: protected_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -328,14 +327,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###FunctionPtr make_function(function, priority)
+###ofEvent::FunctionPtr make_function(*, f, priority)
 
 <!--
-_syntax: make_function(function, priority)_
+_syntax: make_function(*, f, priority)_
 _name: make_function_
-_returns: FunctionPtr_
+_returns: ofEvent::FunctionPtr_
 _returns_description: _
-_parameters: void (*)(T &) function, int priority_
+_parameters: function< bool (const void *, T &) > f, int priority_
 _access: protected_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -364,14 +363,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###FunctionPtr make_function(*, function, priority)
+###ofEvent::FunctionPtr make_function(f, priority)
 
 <!--
-_syntax: make_function(*, function, priority)_
+_syntax: make_function(f, priority)_
 _name: make_function_
-_returns: FunctionPtr_
+_returns: ofEvent::FunctionPtr_
 _returns_description: _
-_parameters: bool (*)(const void *, T &) function, int priority_
+_parameters: function< void (T &) > f, int priority_
 _access: protected_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -400,14 +399,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###FunctionPtr make_function(*, function, priority)
+###ofEvent::FunctionPtr make_function(*, f, priority)
 
 <!--
-_syntax: make_function(*, function, priority)_
+_syntax: make_function(*, f, priority)_
 _name: make_function_
-_returns: FunctionPtr_
+_returns: ofEvent::FunctionPtr_
 _returns_description: _
-_parameters: void (*)(const void *, T &) function, int priority_
+_parameters: function< void (const void *, T &) > f, int priority_
 _access: protected_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -472,16 +471,160 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void notify(*sender, &param)
+###unique_ptr< of::priv::BaseFunctionId > make_std_function_id(&f)
+
+<!--
+_syntax: make_std_function_id(&f)_
+_name: make_std_function_id_
+_returns: unique_ptr< of::priv::BaseFunctionId >_
+_returns_description: _
+_parameters: const F &f_
+_access: protected_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unique_ptr< of::priv::AbstractEventToken > newListener(*listener, method, priority)
+
+<!--
+_syntax: newListener(*listener, method, priority)_
+_name: newListener_
+_returns: unique_ptr< of::priv::AbstractEventToken >_
+_returns_description: _
+_parameters: TObj *listener, TMethod method, int priority_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###unique_ptr< of::priv::AbstractEventToken > newListener(function, priority)
+
+<!--
+_syntax: newListener(function, priority)_
+_name: newListener_
+_returns: unique_ptr< of::priv::AbstractEventToken >_
+_returns_description: _
+_parameters: TFunction function, int priority_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool notify(*sender, &param)
 
 <!--
 _syntax: notify(*sender, &param)_
 _name: notify_
-_returns: void_
+_returns: bool_
 _returns_description: _
 _parameters: const void *sender, T &param_
 _access: public_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool notify(&param)
+
+<!--
+_syntax: notify(&param)_
+_name: notify_
+_returns: bool_
+_returns_description: _
+_parameters: T &param_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

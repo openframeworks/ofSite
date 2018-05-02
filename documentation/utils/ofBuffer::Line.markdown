@@ -3,12 +3,14 @@
 
 <!--
 _visible: True_
-_advanced: False_
+_advanced: True_
 _istemplated: False_
 _extends: std::iterator<std::forward_iterator_tag, Line>_
 -->
 
 ##InlineDescription
+
+A line of text in the buffer.
 
 
 
@@ -117,7 +119,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Is this line empty? (aka an empty string "")
 
 
 
@@ -225,7 +227,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Increment to the next line.
 
 
 
@@ -261,7 +263,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Increment to a number of lines.
 
 
 
