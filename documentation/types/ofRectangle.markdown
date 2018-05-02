@@ -188,7 +188,7 @@ _syntax: alignTo(&targetPoint, thisHorzAnchor = OF_ALIGN_HORZ_CENTER, thisVertAn
 _name: alignTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &targetPoint, ofAlignHorz thisHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert thisVertAnchor=OF_ALIGN_VERT_CENTER_
+_parameters: const glm::vec3 &targetPoint, ofAlignHorz thisHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert thisVertAnchor=OF_ALIGN_VERT_CENTER_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -201,7 +201,20 @@ _advanced: False_
 
 _inlined_description: _
 
+Align this ofRectangle to an glm::vec3 in both x- and y dimentions.
 
+Aligns the position of the ofRectangle to the given point using an
+ofAlignHorz constant and an ofAlignVert constant. If neither constant is
+passed in, this will align the center of the rectangle.
+
+
+Warning: The z-component of the passed glm::vec3 is ignored.
+
+
+Parameters:
+targetPoint The target glm::vec3 to align to.
+thisHorzAnchor The horizontal alignment anchor.
+thisVertAnchor The vertical alignment anchor.
 
 
 
@@ -238,7 +251,7 @@ _syntax: alignTo(&targetPoint, thisHorzAnchor = OF_ALIGN_HORZ_CENTER, thisVertAn
 _name: alignTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &targetPoint, ofAlignHorz thisHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert thisVertAnchor=OF_ALIGN_VERT_CENTER_
+_parameters: const glm::vec2 &targetPoint, ofAlignHorz thisHorzAnchor=OF_ALIGN_HORZ_CENTER, ofAlignVert thisVertAnchor=OF_ALIGN_VERT_CENTER_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -752,12 +765,12 @@ Equivalent to ofRectangle::getMaxY().
 
 <!----------------------------------------------------------------------------->
 
-###int getBottomLeft()
+###glm::vec3 getBottomLeft()
 
 <!--
 _syntax: getBottomLeft()_
 _name: getBottomLeft_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -790,12 +803,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getBottomRight()
+###glm::vec3 getBottomRight()
 
 <!--
 _syntax: getBottomRight()_
 _name: getBottomRight_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -830,12 +843,12 @@ Equivalent to ofRectangle::getMax().
 
 <!----------------------------------------------------------------------------->
 
-###int getCenter()
+###glm::vec3 getCenter()
 
 <!--
 _syntax: getCenter()_
 _name: getCenter_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1055,12 +1068,12 @@ Equivalent to ofRectangle::getMinX().
 
 <!----------------------------------------------------------------------------->
 
-###int getMax()
+###glm::vec3 getMax()
 
 <!--
 _syntax: getMax()_
 _name: getMax_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1173,12 +1186,12 @@ Equivalent to ofRectangle::getBottom().
 
 <!----------------------------------------------------------------------------->
 
-###int getMin()
+###glm::vec3 getMin()
 
 <!--
 _syntax: getMin()_
 _name: getMin_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1338,12 +1351,12 @@ float perimeterValue = myRect.getPerimeter();
 
 <!----------------------------------------------------------------------------->
 
-###const int & getPosition()
+###const glm::vec3 & getPosition()
 
 <!--
 _syntax: getPosition()_
 _name: getPosition_
-_returns: const int &_
+_returns: const glm::vec3 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1504,12 +1517,12 @@ Equivalent to ofRectangle::getMinY().
 
 <!----------------------------------------------------------------------------->
 
-###int getTopLeft()
+###glm::vec3 getTopLeft()
 
 <!--
 _syntax: getTopLeft()_
 _name: getTopLeft_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1544,12 +1557,12 @@ Equivalent to ofRectangle::getMin().
 
 <!----------------------------------------------------------------------------->
 
-###int getTopRight()
+###glm::vec3 getTopRight()
 
 <!--
 _syntax: getTopRight()_
 _name: getTopRight_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1887,7 +1900,7 @@ _syntax: growToInclude(&p)_
 _name: growToInclude_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -1900,7 +1913,18 @@ _advanced: False_
 
 _inlined_description: _
 
+Grow the ofRectangle to include the given point.
 
+This will potentially change the width, height, x-position, and y-
+position of the ofRectangle.  If the point is already within the
+rectangle, this rectangle will remain unchanged.
+
+
+Warning: The z-component of the passed glm::vec3 is ignored.
+
+
+Parameters:
+p The position to include.
 
 
 
@@ -1908,7 +1932,7 @@ _inlined_description: _
 
 _description: _
 
-Modify the ofRectangle so that both the ofPoints given are enclosed within the rectangle.
+
 
 
 
@@ -1923,7 +1947,7 @@ _syntax: growToInclude(&p)_
 _name: growToInclude_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -1937,6 +1961,54 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void growToInclude(&p0, &p1)
+
+<!--
+_syntax: growToInclude(&p0, &p1)_
+_name: growToInclude_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p0, const glm::vec3 &p1_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Grow the ofRectangle to include the given line segment.
+
+This will potentially change the width, height, x-position, and
+y-position of the ofRectangle.  If the points are already within the
+rectangle, this rectangle will remain unchanged.
+
+
+Warning: The z-components of the passed glm::vec3s are ignored.
+
+
+Parameters:
+p0 The first point to include.
+p1 The second point to include.
 
 
 
@@ -1959,7 +2031,7 @@ _syntax: growToInclude(&p0, &p1)_
 _name: growToInclude_
 _returns: void_
 _returns_description: _
-_parameters: const int &p0, const int &p1_
+_parameters: const glm::vec2 &p0, const glm::vec2 &p1_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -1980,43 +2052,7 @@ _inlined_description: _
 
 _description: _
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void growToInclude(&p0, &p1)
-
-<!--
-_syntax: growToInclude(&p0, &p1)_
-_name: growToInclude_
-_returns: void_
-_returns_description: _
-_parameters: const int &p0, const int &p1_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
+Modify the ofRectangle so that both the ofPoints given are enclosed within the rectangle.
 
 
 
@@ -2124,9 +2160,9 @@ _syntax: inside(&p)_
 _name: inside_
 _returns: bool_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
-_version_started: 0072_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2137,7 +2173,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Determines if the glm::vec3 is within the ofRectangle.
 
+Note that points on the edge of the ofRectangle are not
+considered within the rectangle and will return false.
+
+
+Warning: The z-component of the passed glm::vec3 is ignored.
+
+
+Parameters:
+p The point to test.
+
+Returns: true if the point p is inside this ofRectangle.
 
 
 
@@ -2145,7 +2193,9 @@ _inlined_description: _
 
 _description: _
 
-This can be used to test if a line segment is inside the rectangle.
+Coordinates (x, y) are considered inside the rectangle if:
+
+`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
 
 
 
@@ -2160,7 +2210,45 @@ _syntax: inside(&p)_
 _name: inside_
 _returns: bool_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Coordinates (x, y) are considered inside the rectangle if:
+
+`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool inside(&p0, &p1)
+
+<!--
+_syntax: inside(&p0, &p1)_
+_name: inside_
+_returns: bool_
+_returns_description: _
+_parameters: const glm::vec3 &p0, const glm::vec3 &p1_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2173,7 +2261,20 @@ _advanced: False_
 
 _inlined_description: _
 
+Determines if both of the passed glm::vec3s are within the ofRectangle or not.
 
+Note that points on the edge of the ofRectangle are not considered
+within the rectangle and will return false.
+
+
+Warning: The z-components of the passed glm::vec3s are ignored.
+
+
+Parameters:
+p0 The first point to test.
+p1 The second point to test.
+
+Returns: true if both points are inside the rectangle.
 
 
 
@@ -2196,9 +2297,9 @@ _syntax: inside(&p0, &p1)_
 _name: inside_
 _returns: bool_
 _returns_description: _
-_parameters: const int &p0, const int &p1_
+_parameters: const glm::vec2 &p0, const glm::vec2 &p1_
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2217,47 +2318,7 @@ _inlined_description: _
 
 _description: _
 
-Coordinates (x, y) are considered inside the rectangle if:
-
-`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool inside(&p0, &p1)
-
-<!--
-_syntax: inside(&p0, &p1)_
-_name: inside_
-_returns: bool_
-_returns_description: _
-_parameters: const int &p0, const int &p1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Coordinates (x, y) are considered inside the rectangle if:
-
-`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
+This can be used to test if a line segment is inside the rectangle.
 
 
 
@@ -2321,7 +2382,7 @@ _syntax: intersects(&p0, &p1)_
 _name: intersects_
 _returns: bool_
 _returns_description: _
-_parameters: const int &p0, const int &p1_
+_parameters: const glm::vec3 &p0, const glm::vec3 &p1_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2334,7 +2395,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Determines if a line segment intersects with the ofRectangle.
 
+
+Warning: The z-components of the passed glm::vec3s are ignored.
+
+
+Parameters:
+p0 The first point to test.
+p1 The second point to test.
+
+Returns: `true` if the line segment defined by the two passed glm::vec3s
+    either crosses the perimeter of the ofRectangle or is completely
+    contained within.
 
 
 
@@ -2357,7 +2430,7 @@ _syntax: intersects(&p0, &p1)_
 _name: intersects_
 _returns: bool_
 _returns_description: _
-_parameters: const int &p0, const int &p1_
+_parameters: const glm::vec2 &p0, const glm::vec2 &p1_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2504,53 +2577,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int map()
-
-<!--
-_syntax: map()_
-_name: map_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Maps a normalized coordinate into this rectangle
-
-Normalized coordinates range from [0,1] inclusive. It is used to define a ratio
-between the coordinates and a unitary rectangle. This ratio is mapped into
-this rectangle to scale to real values. If normalized coordinates are out of bounds,
-output will be scaled accordingly.
-
-
-Parameters:
-coeff Normalized coordinate to map to this rectangle
-
-Returns: The mapped coordinate
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofRectangle map(&coeff)
 
 <!--
@@ -2598,14 +2624,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int mapClamp()
+###glm::vec2 map(&coeff)
 
 <!--
-_syntax: mapClamp()_
-_name: mapClamp_
-_returns: int_
+_syntax: map(&coeff)_
+_name: map_
+_returns: glm::vec2_
 _returns_description: _
-_parameters: _
+_parameters: const glm::vec2 &coeff_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2618,18 +2644,18 @@ _advanced: False_
 
 _inlined_description: _
 
-Maps a normalized coordinate into this rectangle, clamping if out of bounds
+Maps a normalized coordinate into this rectangle
 
 Normalized coordinates range from [0,1] inclusive. It is used to define a ratio
 between the coordinates and a unitary rectangle. This ratio is mapped into
 this rectangle to scale to real values. If normalized coordinates are out of bounds,
-output will be clamped to this rectangle's position, width and height.
+output will be scaled accordingly.
 
 
 Parameters:
 coeff Normalized coordinate to map to this rectangle
 
-Returns: The mapped coordinate, clamped
+Returns: The mapped coordinate
 
 
 
@@ -2678,6 +2704,53 @@ Parameters:
 coeff Normalized rectangle to map to this rectangle
 
 Returns: The mapped rectangle
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###glm::vec2 mapClamp(&coeff)
+
+<!--
+_syntax: mapClamp(&coeff)_
+_name: mapClamp_
+_returns: glm::vec2_
+_returns_description: _
+_parameters: const glm::vec2 &coeff_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Maps a normalized coordinate into this rectangle, clamping if out of bounds
+
+Normalized coordinates range from [0,1] inclusive. It is used to define a ratio
+between the coordinates and a unitary rectangle. This ratio is mapped into
+this rectangle to scale to real values. If normalized coordinates are out of bounds,
+output will be clamped to this rectangle's position, width and height.
+
+
+Parameters:
+coeff Normalized coordinate to map to this rectangle
+
+Returns: The mapped coordinate, clamped
 
 
 
@@ -2821,9 +2894,9 @@ _syntax: ofRectangle(&p, w, h)_
 _name: ofRectangle_
 _returns: _
 _returns_description: _
-_parameters: const int &p, float w, float h_
+_parameters: const glm::vec3 &p, float w, float h_
 _access: public_
-_version_started: 0072_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2834,7 +2907,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct a rectangle from a point and dimensions.
 
+To produce consistent results, users are encouraged to initialize
+rectangles in the standardized form with width >=0 and height >= 0.
+
+
+Warning: The z-component of the passed glm::vec3 is ignored.
+
+
+Parameters:
+p The glm::vec3 representing the position of the rectangle.
+w The width of the rectangle.
+h The height of the rectangle.
 
 
 
@@ -2857,7 +2942,43 @@ _syntax: ofRectangle(&p, w, h)_
 _name: ofRectangle_
 _returns: _
 _returns_description: _
-_parameters: const int &p, float w, float h_
+_parameters: const glm::vec2 &p, float w, float h_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofRectangle(&p0, &p1)
+
+<!--
+_syntax: ofRectangle(&p0, &p1)_
+_name: ofRectangle_
+_returns: _
+_returns_description: _
+_parameters: const glm::vec3 &p0, const glm::vec3 &p1_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2870,43 +2991,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Construct a rectangle by defining two corners.
 
 
+Warning: The z-components of the passed glm::vec3s are ignored.
 
 
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofRectangle(&p0, &p1)
-
-<!--
-_syntax: ofRectangle(&p0, &p1)_
-_name: ofRectangle_
-_returns: _
-_returns_description: _
-_parameters: const int &p0, const int &p1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
+Parameters:
+p0 An glm::vec3 representing the upper left hand corner.
+p1 An glm::vec3 representing the lower right hand corner.
 
 
 
@@ -2929,9 +3022,9 @@ _syntax: ofRectangle(&p0, &p1)_
 _name: ofRectangle_
 _returns: _
 _returns_description: _
-_parameters: const int &p0, const int &p1_
+_parameters: const glm::vec2 &p0, const glm::vec2 &p1_
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3007,7 +3100,7 @@ _syntax: operator+(&p)_
 _name: operator+_
 _returns: ofRectangle_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3020,7 +3113,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns a new ofRectangle where the x and y positions of the
+rectangle are offset by the (x, y) coordinates of the glm::vec3.
 
+Parameters:
+p The point to translate.
+
+Returns: The translated ofRectangle.
 
 
 
@@ -3043,7 +3142,7 @@ _syntax: operator+(&p)_
 _name: operator+_
 _returns: ofRectangle_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3079,7 +3178,7 @@ _syntax: operator-(&p)_
 _name: operator-_
 _returns: ofRectangle_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3092,7 +3191,13 @@ _advanced: False_
 
 _inlined_description: _
 
+Returns a new ofRectangle where the x and y-positions of the
+rectangle are offset by the (x, y) coordinates of the glm::vec3.
 
+Parameters:
+p The point to translate.
+
+Returns: The translated ofRectangle.
 
 
 
@@ -3115,7 +3220,7 @@ _syntax: operator-(&p)_
 _name: operator-_
 _returns: ofRectangle_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3348,7 +3453,7 @@ _syntax: scale(&s)_
 _name: scale_
 _returns: void_
 _returns_description: _
-_parameters: const int &s_
+_parameters: const glm::vec3 &s_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -3361,7 +3466,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Scale the rectangle.
 
+Scaling will scale the width and the height, but will not change the
+position.
+
+
+Warning: The z-component of the passed glm::vec3 is ignored.
+
+
+Parameters:
+s The scaling factor.
 
 
 
@@ -3398,7 +3513,7 @@ _syntax: scale(&s)_
 _name: scale_
 _returns: void_
 _returns_description: _
-_parameters: const int &s_
+_parameters: const glm::vec2 &s_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -3537,7 +3652,7 @@ _syntax: scaleFromCenter(&s)_
 _name: scaleFromCenter_
 _returns: void_
 _returns_description: _
-_parameters: const int &s_
+_parameters: const glm::vec3 &s_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -3550,7 +3665,17 @@ _advanced: False_
 
 _inlined_description: _
 
+Scales both the width and height the ofRectangle from its center.
 
+The center point of the rectangle will remain fixed and the width,
+height, x, and y will be adjusted.
+
+
+Warning: The z-component of the passed glm::vec3 is ignored.
+
+
+Parameters:
+s The scaling factor.
 
 
 
@@ -3586,7 +3711,7 @@ _syntax: scaleFromCenter(&s)_
 _name: scaleFromCenter_
 _returns: void_
 _returns_description: _
-_parameters: const int &s_
+_parameters: const glm::vec2 &s_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -4017,9 +4142,9 @@ _syntax: set(&p, w, h)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h_
+_parameters: const glm::vec3 &p, float w, float h_
 _access: public_
-_version_started: 0072_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4030,7 +4155,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the position and size of the rectangle.
 
+To produce consistent results, users are encouraged to initialize
+rectangles in the standardized form with width >=0 and height >= 0.
+
+
+Warning: The z-component of the passed glm::vec3 is ignored.
+
+
+Parameters:
+p The new position.
+w The new width.
+h The new height.
 
 
 
@@ -4038,9 +4175,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the x position, y position, width, and height of the ofRectangle to enclose the line segment defined by the passed ofPoints.
-
-The rectangle will always be in standardized form, regardless of the order of the ofPoints passed in.
+Sets the (x,y) coordinates, width, and height of the ofRectangle.
 
 
 
@@ -4055,7 +4190,43 @@ _syntax: set(&p, w, h)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h_
+_parameters: const glm::vec2 &p, float w, float h_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Sets the (x,y) coordinates, width, and height of the ofRectangle.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(&p0, &p1)
+
+<!--
+_syntax: set(&p0, &p1)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p0, const glm::vec3 &p1_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -4068,7 +4239,15 @@ _advanced: False_
 
 _inlined_description: _
 
+Set the position and size of the rectangle using corners.
 
+
+Warning: The z-components of the passed glm::vec3s are ignored.
+
+
+Parameters:
+p0 The glm::vec3 representing the upper left hand corner.
+p1 The glm::vec3 representing the lower right hand corner.
 
 
 
@@ -4093,9 +4272,9 @@ _syntax: set(&p0, &p1)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: const int &p0, const int &p1_
+_parameters: const glm::vec2 &p0, const glm::vec2 &p1_
 _access: public_
-_version_started: 007_
+_version_started: 0072_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -4114,43 +4293,9 @@ _inlined_description: _
 
 _description: _
 
-Sets the (x,y) coordinates, width, and height of the ofRectangle.
+Sets the x position, y position, width, and height of the ofRectangle to enclose the line segment defined by the passed ofPoints.
 
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(&p0, &p1)
-
-<!--
-_syntax: set(&p0, &p1)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const int &p0, const int &p1_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Sets the (x,y) coordinates, width, and height of the ofRectangle.
+The rectangle will always be in standardized form, regardless of the order of the ofPoints passed in.
 
 
 
@@ -4212,7 +4357,7 @@ _syntax: setFromCenter(&p, w, h)_
 _name: setFromCenter_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h_
+_parameters: const glm::vec3 &p, float w, float h_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -4225,7 +4370,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Set position and size of the rectangle from the center.
 
+The center of the rectangle is defined and the width and height grow
+out around the center.
+
+
+Parameters:
+p The position of the rectangle's center as an glm::vec3.
+w The width of the rectangle.
+h The height of the rectangle.
 
 
 
@@ -4249,7 +4403,7 @@ _syntax: setFromCenter(&p, w, h)_
 _name: setFromCenter_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h_
+_parameters: const glm::vec2 &p, float w, float h_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -4365,7 +4519,7 @@ _syntax: setPosition(&p)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -4668,7 +4822,7 @@ _syntax: translate(&dp)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const int &dp_
+_parameters: const glm::vec3 &dp_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -4681,7 +4835,14 @@ _advanced: False_
 
 _inlined_description: _
 
+Translate the rectangle's position by an x and y amount.
 
+
+Warning: The z-component of the passed glm::vec3 is ignored.
+
+
+Parameters:
+dp The amount to translate as an glm::vec3.
 
 
 
@@ -4704,7 +4865,7 @@ _syntax: translate(&dp)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const int &dp_
+_parameters: const glm::vec2 &dp_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _

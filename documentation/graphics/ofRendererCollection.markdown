@@ -680,9 +680,9 @@ _syntax: draw(&poly)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const int &poly_
+_parameters: const ofPolyline &poly_
 _access: public_
-_version_started: 007_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -716,9 +716,9 @@ _syntax: draw(&vertexData, mode, useColors, useTextures, useNormals)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const int &vertexData, ofPolyRenderMode mode, bool useColors, bool useTextures, bool useNormals_
+_parameters: const ofMesh &vertexData, ofPolyRenderMode mode, bool useColors, bool useTextures, bool useNormals_
 _access: public_
-_version_started: 0071_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1285,14 +1285,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCurrentMatrix()
+###glm::mat4 getCurrentMatrix(matrixMode_)
 
 <!--
-_syntax: getCurrentMatrix()_
+_syntax: getCurrentMatrix(matrixMode_)_
 _name: getCurrentMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
-_parameters: _
+_parameters: ofMatrixMode matrixMode__
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1321,12 +1321,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCurrentNormalMatrix()
+###glm::mat4 getCurrentNormalMatrix()
 
 <!--
 _syntax: getCurrentNormalMatrix()_
 _name: getCurrentNormalMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1357,12 +1357,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCurrentOrientationMatrix()
+###glm::mat4 getCurrentOrientationMatrix()
 
 <!--
 _syntax: getCurrentOrientationMatrix()_
 _name: getCurrentOrientationMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1393,12 +1393,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCurrentViewMatrix()
+###glm::mat4 getCurrentViewMatrix()
 
 <!--
 _syntax: getCurrentViewMatrix()_
 _name: getCurrentViewMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1904,7 +1904,7 @@ _syntax: loadMatrix(&m)_
 _name: loadMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -1940,7 +1940,7 @@ _syntax: loadViewMatrix(&m)_
 _name: loadViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2048,7 +2048,7 @@ _syntax: multMatrix(&m)_
 _name: multMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2084,7 +2084,7 @@ _syntax: multViewMatrix(&m)_
 _name: multViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3776,7 +3776,7 @@ _syntax: translate(&p)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

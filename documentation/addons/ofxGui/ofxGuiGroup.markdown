@@ -140,6 +140,42 @@ _syntax: add(&parameter)_
 _name: add_
 _returns: void_
 _returns_description: _
+_parameters: ofParameter< void > &parameter_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void add(&parameter)
+
+<!--
+_syntax: add(&parameter)_
+_name: add_
+_returns: void_
+_returns_description: _
 _parameters: ofParameter< bool > &parameter_
 _access: public_
 _version_started: 0.8.0_
@@ -179,6 +215,42 @@ _returns_description: _
 _parameters: ofParameter< string > &parameter_
 _access: public_
 _version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void add(string, &parameter)
+
+<!--
+_syntax: add(string, &parameter)_
+_name: add_
+_returns: void_
+_returns_description: _
+_parameters: ofReadOnlyParameter< string, F > &parameter_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -428,43 +500,7 @@ _syntax: add(&parameter)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: ofParameter< void > &parameter_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(string, &parameter)
-
-<!--
-_syntax: add(string, &parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofReadOnlyParameter< string, F > &parameter_
+_parameters: ofParameter< glm::vec2 > &parameter_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -500,7 +536,7 @@ _syntax: add(&parameter)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: int &parameter_
+_parameters: ofParameter< glm::vec3 > &parameter_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -536,43 +572,7 @@ _syntax: add(&parameter)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: int &parameter_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: int &parameter_
+_parameters: ofParameter< glm::vec4 > &parameter_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

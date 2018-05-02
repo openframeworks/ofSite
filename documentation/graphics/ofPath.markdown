@@ -235,9 +235,9 @@ _syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd)_
 _name: arc_
 _returns: void_
 _returns_description: _
-_parameters: const int &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
+_parameters: const glm::vec3 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
 _access: public_
-_version_started: 0071_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -248,7 +248,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Create an arc at centre, which has the radiusX, radiusY, and begins at
+angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels
+at 100, 100:
 
+\note angleBegin needs to be larger than angleEnd, i.e. 0,180 is ok,
+while 180,0 is not.
 
 
 
@@ -256,7 +261,13 @@ _inlined_description: _
 
 _description: _
 
+Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
 
+~~~~{.cpp}
+path.arc( 100, 100, 50, 50, 0, 360);
+~~~~
+
+Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
 
 
 
@@ -271,7 +282,7 @@ _syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)_
 _name: arc_
 _returns: void_
 _returns_description: _
-_parameters: const int &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
+_parameters: const glm::vec3 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -313,7 +324,7 @@ _syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd)_
 _name: arc_
 _returns: void_
 _returns_description: _
-_parameters: const int &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
+_parameters: const glm::vec2 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -349,9 +360,9 @@ _syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)_
 _name: arc_
 _returns: void_
 _returns_description: _
-_parameters: const int &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
+_parameters: const glm::vec2 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
 _access: public_
-_version_started: 007_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -370,13 +381,7 @@ _inlined_description: _
 
 _description: _
 
-Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
 
-~~~~{.cpp}
-path.arc( 100, 100, 50, 50, 0, 360);
-~~~~
-
-Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
 
 
 
@@ -463,7 +468,7 @@ _syntax: arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)_
 _name: arcNegative_
 _returns: void_
 _returns_description: _
-_parameters: const int &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
+_parameters: const glm::vec3 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -499,7 +504,7 @@ _syntax: arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)_
 _name: arcNegative_
 _returns: void_
 _returns_description: _
-_parameters: const int &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
+_parameters: const glm::vec2 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -627,7 +632,7 @@ _syntax: bezierTo(&cp1, &cp2, &p)_
 _name: bezierTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &cp1, const int &cp2, const int &p_
+_parameters: const glm::vec3 &cp1, const glm::vec3 &cp2, const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -640,7 +645,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Create a cubic bezier line from the current drawing point with the 2
+control points indicated by glm::vec3 `cp1` and `cp2`, that ends at glm::vec3
+to.
 
+~~~~{.cpp}
+line.addVertex(glm::vec3(200, 400));
+line.bezierTo(100, 100, 800, 100, 700, 400);
+~~~~
+![polyline bezier](graphics/bezier.jpg)
+The control points are shown in red.
 
 
 
@@ -671,7 +685,7 @@ _syntax: bezierTo(&cp1, &cp2, &p)_
 _name: bezierTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &cp1, const int &cp2, const int &p_
+_parameters: const glm::vec2 &cp1, const glm::vec2 &cp2, const glm::vec2 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -787,7 +801,7 @@ _syntax: circle(&p, radius)_
 _name: circle_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float radius_
+_parameters: const glm::vec3 &p, float radius_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -823,7 +837,7 @@ _syntax: circle(&p, radius)_
 _name: circle_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float radius_
+_parameters: const glm::vec2 &p, float radius_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1018,7 +1032,7 @@ _syntax: curveTo(&p)_
 _name: curveTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1031,7 +1045,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Draws a curve to p from the current drawing position
 
 
 
@@ -1054,7 +1068,7 @@ _syntax: curveTo(&p)_
 _name: curveTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1234,7 +1248,7 @@ _syntax: ellipse(&p, width, height)_
 _name: ellipse_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float width, float height_
+_parameters: const glm::vec3 &p, float width, float height_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1270,7 +1284,7 @@ _syntax: ellipse(&p, width, height)_
 _name: ellipse_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float width, float height_
+_parameters: const glm::vec2 &p, float width, float height_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1697,12 +1711,12 @@ Returns the stroke width.
 
 <!----------------------------------------------------------------------------->
 
-###const int & getTessellation()
+###const ofMesh & getTessellation()
 
 <!--
 _syntax: getTessellation()_
 _name: getTessellation_
-_returns: const int &_
+_returns: const ofMesh &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1915,12 +1929,12 @@ Whether the path is using a fill or not.
 
 <!----------------------------------------------------------------------------->
 
-###int & lastPolyline()
+###ofPolyline & lastPolyline()
 
 <!--
 _syntax: lastPolyline()_
 _name: lastPolyline_
-_returns: int &_
+_returns: ofPolyline &_
 _returns_description: _
 _parameters: _
 _access: private_
@@ -2032,7 +2046,7 @@ _syntax: lineTo(&p)_
 _name: lineTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2045,7 +2059,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Draw a straight line from the current drawing position to the
+location indicated by p.
 
 
 
@@ -2068,7 +2083,7 @@ _syntax: lineTo(&p)_
 _name: lineTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2142,7 +2157,7 @@ _syntax: moveTo(&p)_
 _name: moveTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2155,7 +2170,9 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Move the drawing position to p. This means that a subsequent calls to,
+for instance, lineTo() or curveTo() will connect the location p to the new
+location.
 
 
 
@@ -2178,7 +2195,7 @@ _syntax: moveTo(&p)_
 _name: moveTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2366,7 +2383,7 @@ _syntax: quadBezierTo(&cp1, &cp2, &p)_
 _name: quadBezierTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &cp1, const int &cp2, const int &p_
+_parameters: const glm::vec3 &cp1, const glm::vec3 &cp2, const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2379,7 +2396,11 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Create a quadratic bezier line in 3D space from the current drawing
+point with the beginning indicated by the coordinates cx1, cy1, cz1,
+the control point at cx2, cy2, cz2, and that ends at the coordinates
+x, y, z.
+![Curves](graphics/curves.jpg)
 
 
 
@@ -2403,7 +2424,7 @@ _syntax: quadBezierTo(&cp1, &cp2, &p)_
 _name: quadBezierTo_
 _returns: void_
 _returns_description: _
-_parameters: const int &cp1, const int &cp2, const int &p_
+_parameters: const glm::vec2 &cp1, const glm::vec2 &cp2, const glm::vec2 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2584,7 +2605,7 @@ _syntax: rectRounded(&p, w, h, r)_
 _name: rectRounded_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h, float r_
+_parameters: const glm::vec3 &p, float w, float h, float r_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2620,7 +2641,7 @@ _syntax: rectRounded(&p, w, h, r)_
 _name: rectRounded_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h, float r_
+_parameters: const glm::vec2 &p, float w, float h, float r_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2656,7 +2677,7 @@ _syntax: rectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius,
 _name: rectRounded_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_parameters: const glm::vec3 &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2692,7 +2713,7 @@ _syntax: rectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius,
 _name: rectRounded_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_parameters: const glm::vec2 &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2836,7 +2857,7 @@ _syntax: rectangle(&p, w, h)_
 _name: rectangle_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h_
+_parameters: const glm::vec3 &p, float w, float h_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2872,7 +2893,7 @@ _syntax: rectangle(&p, w, h)_
 _name: rectangle_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h_
+_parameters: const glm::vec2 &p, float w, float h_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2908,7 +2929,7 @@ _syntax: rotateDeg(degrees, &axis)_
 _name: rotateDeg_
 _returns: void_
 _returns_description: _
-_parameters: float degrees, const int &axis_
+_parameters: float degrees, const glm::vec3 &axis_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2944,7 +2965,7 @@ _syntax: rotateDeg(degrees, &axis)_
 _name: rotateDeg_
 _returns: void_
 _returns_description: _
-_parameters: float degrees, const int &axis_
+_parameters: float degrees, const glm::vec2 &axis_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2980,7 +3001,7 @@ _syntax: rotateRad(radians, &axis)_
 _name: rotateRad_
 _returns: void_
 _returns_description: _
-_parameters: float radians, const int &axis_
+_parameters: float radians, const glm::vec3 &axis_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3016,7 +3037,7 @@ _syntax: rotateRad(radians, &axis)_
 _name: rotateRad_
 _returns: void_
 _returns_description: _
-_parameters: float radians, const int &axis_
+_parameters: float radians, const glm::vec2 &axis_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3726,7 +3747,7 @@ _syntax: translate(&p)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3762,7 +3783,7 @@ _syntax: translate(&p)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3870,7 +3891,7 @@ _syntax: triangle(&p1, &p2, &p3)_
 _name: triangle_
 _returns: void_
 _returns_description: _
-_parameters: const int &p1, const int &p2, const int &p3_
+_parameters: const glm::vec3 &p1, const glm::vec3 &p2, const glm::vec3 &p3_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -3906,7 +3927,7 @@ _syntax: triangle(&p1, &p2, &p3)_
 _name: triangle_
 _returns: void_
 _returns_description: _
-_parameters: const int &p1, const int &p2, const int &p3_
+_parameters: const glm::vec2 &p1, const glm::vec2 &p2, const glm::vec2 &p3_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

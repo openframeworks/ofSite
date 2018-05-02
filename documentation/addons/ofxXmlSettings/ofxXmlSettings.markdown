@@ -1597,42 +1597,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool saveFile()
-
-<!--
-_syntax: saveFile()_
-_name: saveFile_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Saves the current state of the xml file to its current path. The current path is defined by whatever path was specified when loadFile(xmlFile) or saveFile(xmlFile) was last called.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool saveFile(&xmlFile)
 
 <!--
@@ -1662,6 +1626,42 @@ _inlined_description: _
 _description: _
 
 Saves the current state of the xml settings object to file at xmlFile path.  
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool saveFile()
+
+<!--
+_syntax: saveFile()_
+_name: saveFile_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Saves the current state of the xml file to its current path. The current path is defined by whatever path was specified when loadFile(xmlFile) or saveFile(xmlFile) was last called.
 
 
 

@@ -550,7 +550,7 @@ _syntax: draw(&pos)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const int &pos_
+_parameters: const glm::vec3 &pos_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -586,7 +586,7 @@ _syntax: draw(&pos, w, h)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const int &pos, float w, float h_
+_parameters: const glm::vec3 &pos, float w, float h_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1509,85 +1509,6 @@ This creates an ofImage from an ofPixels object, allocating space for the pixels
 
 <!----------------------------------------------------------------------------->
 
-### ofImage_(&mom)
-
-<!--
-_syntax: ofImage_(&mom)_
-_name: ofImage__
-_returns: _
-_returns_description: _
-_parameters: const ofImage_< PixelType > &mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-The copy constructor. Pass in another image and it copies it. This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
-
-~~~~{.cpp}
-image1.loadImage("face.jpg");
-ofImage image2(image1);
-~~~~
-
-image1 and image2 are now identical.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofImage_(&mom)
-
-<!--
-_syntax: ofImage_(&mom)_
-_name: ofImage__
-_returns: _
-_returns_description: _
-_parameters: const ofImage_< SrcType > &mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofImage_(&fileName, &settings)
 
 <!--
@@ -1631,6 +1552,49 @@ ofImage img("anImage.png"); // assumes this is in bin/data
 
 <!----------------------------------------------------------------------------->
 
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage__
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+The copy constructor. Pass in another image and it copies it. This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
+
+~~~~{.cpp}
+image1.loadImage("face.jpg");
+ofImage image2(image1);
+~~~~
+
+image1 and image2 are now identical.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofImage_(&&mom)
 
 <!--
@@ -1660,6 +1624,42 @@ _inlined_description: _
 _description: _
 
 This creates an ofImage from an ofFile instance.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofImage_(&mom)
+
+<!--
+_syntax: ofImage_(&mom)_
+_name: ofImage__
+_returns: _
+_returns_description: _
+_parameters: const ofImage_< SrcType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+This allows you to create an ofImage from another ofImage instance, copying all the pixels and the texture data while creating a new textureID.
 
 
 

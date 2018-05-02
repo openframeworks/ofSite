@@ -798,7 +798,7 @@ _syntax: ofQuaternion(&q)_
 _name: ofQuaternion_
 _returns: _
 _returns_description: _
-_parameters: const int &q_
+_parameters: const glm::quat &q_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

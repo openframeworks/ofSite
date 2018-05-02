@@ -99,14 +99,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofKeyEventArgs(type, key)
+### ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)
 
 <!--
-_syntax: ofKeyEventArgs(type, key)_
+_syntax: ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)_
 _name: ofKeyEventArgs_
 _returns: _
 _returns_description: _
-_parameters: ofKeyEventArgs::Type type, int key_
+_parameters: ofKeyEventArgs::Type type, int key, int keycode, int scancode, unsigned int codepoint, int modifiers_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -135,14 +135,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)
+### ofKeyEventArgs(type, key)
 
 <!--
-_syntax: ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)_
+_syntax: ofKeyEventArgs(type, key)_
 _name: ofKeyEventArgs_
 _returns: _
 _returns_description: _
-_parameters: ofKeyEventArgs::Type type, int key, int keycode, int scancode, unsigned int codepoint, int modifiers_
+_parameters: ofKeyEventArgs::Type type, int key_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

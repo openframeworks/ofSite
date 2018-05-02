@@ -404,14 +404,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getFirstGlyphPosForTexture()
+###glm::vec2 getFirstGlyphPosForTexture(&str, vflip)
 
 <!--
-_syntax: getFirstGlyphPosForTexture()_
+_syntax: getFirstGlyphPosForTexture(&str, vflip)_
 _name: getFirstGlyphPosForTexture_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
-_parameters: _
+_parameters: const string &str, bool vflip_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -933,14 +933,14 @@ ofDrawRectangle(rect.x, rect.y, rect.width, rect.height);
 
 <!----------------------------------------------------------------------------->
 
-###const int & getStringMesh()
+###const ofMesh & getStringMesh(&s, x, y, vflip = true)
 
 <!--
-_syntax: getStringMesh()_
+_syntax: getStringMesh(&s, x, y, vflip = true)_
 _name: getStringMesh_
-_returns: const int &_
+_returns: const ofMesh &_
 _returns_description: _
-_parameters: _
+_parameters: const string &s, float x, float y, bool vflip=true_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1234,7 +1234,7 @@ _syntax: iterateString(&str, x, y, vFlipped, (uint32_t, f)_
 _name: iterateString_
 _returns: void_
 _returns_description: _
-_parameters: const string &str, float x, float y, bool vFlipped, function< void (uint32_t, int) > f_
+_parameters: const string &str, float x, float y, bool vFlipped, function< void (uint32_t, glm::vec2) > f_
 _access: protected_
 _version_started: 0.10.0_
 _version_deprecated: _

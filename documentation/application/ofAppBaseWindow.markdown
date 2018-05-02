@@ -423,12 +423,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getScreenSize()
+###glm::vec2 getScreenSize()
 
 <!--
 _syntax: getScreenSize()_
 _name: getScreenSize_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -567,12 +567,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getWindowPosition()
+###glm::vec2 getWindowPosition()
 
 <!--
 _syntax: getWindowPosition()_
 _name: getWindowPosition_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -639,12 +639,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getWindowSize()
+###glm::vec2 getWindowSize()
 
 <!--
 _syntax: getWindowSize()_
 _name: getWindowSize_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _access: public_

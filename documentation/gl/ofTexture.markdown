@@ -1129,43 +1129,7 @@ _syntax: draw(&pos)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const int &pos_
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws the texture at 4 points passed in as if you created 4 glVertices.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&pos, w, h)
-
-<!--
-_syntax: draw(&pos, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const int &pos, float w, float h_
+_parameters: const glm::vec3 &pos_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1194,6 +1158,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&pos, w, h)
+
+<!--
+_syntax: draw(&pos, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &pos, float w, float h_
+_access: public_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws the texture at 4 points passed in as if you created 4 glVertices.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(&p1, &p2, &p3, &p4)
 
 <!--
@@ -1201,7 +1201,7 @@ _syntax: draw(&p1, &p2, &p3, &p4)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const int &p1, const int &p2, const int &p3, const int &p4_
+_parameters: const glm::vec3 &p1, const glm::vec3 &p2, const glm::vec3 &p3, const glm::vec3 &p4_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1387,6 +1387,49 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void drawSubsection(&drawBounds, &subsectionBounds)
+
+<!--
+_syntax: drawSubsection(&drawBounds, &subsectionBounds)_
+_name: drawSubsection_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &drawBounds, const ofRectangle &subsectionBounds_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a subsection of the texture with an offset.
+
+
+See also: drawSubsection(ofRectangle& drawBounds, ofRectangle& subsectionBounds)
+
+Parameters:
+drawBounds Draw position and dimensions.
+subsectionBounds Subsection position and dimensions within the texture.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void drawSubsection(x, y, z, w, h, sx, sy, sw, sh)
 
 <!--
@@ -1422,49 +1465,6 @@ sx Subsection x axis offset within the texture.
 sy Subsection y axis offset within the texture.
 sw Subsection width within the texture.
 sh Subsection height within the texture.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawSubsection(&drawBounds, &subsectionBounds)
-
-<!--
-_syntax: drawSubsection(&drawBounds, &subsectionBounds)_
-_name: drawSubsection_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &drawBounds, const ofRectangle &subsectionBounds_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a subsection of the texture with an offset.
-
-
-See also: drawSubsection(ofRectangle& drawBounds, ofRectangle& subsectionBounds)
-
-Parameters:
-drawBounds Draw position and dimensions.
-subsectionBounds Subsection position and dimensions within the texture.
 
 
 
@@ -1652,14 +1652,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCoordFromPercent()
+###glm::vec2 getCoordFromPercent(xPts, yPts)
 
 <!--
-_syntax: getCoordFromPercent()_
+_syntax: getCoordFromPercent(xPts, yPts)_
 _name: getCoordFromPercent_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
-_parameters: _
+_parameters: float xPts, float yPts_
 _access: public_
 _version_started: _
 _version_deprecated: _
@@ -1694,14 +1694,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCoordFromPoint()
+###glm::vec2 getCoordFromPoint(xPos, yPos)
 
 <!--
-_syntax: getCoordFromPoint()_
+_syntax: getCoordFromPoint(xPos, yPos)_
 _name: getCoordFromPoint_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
-_parameters: _
+_parameters: float xPos, float yPos_
 _access: public_
 _version_started: _
 _version_deprecated: _
@@ -1781,14 +1781,14 @@ Returns the height of the texture. This will be in pixels unless you've set your
 
 <!----------------------------------------------------------------------------->
 
-###int getMeshForSubsection()
+###ofMesh getMeshForSubsection(x, y, z, w, h, sx, sy, sw, sh, vflipped, rectMode)
 
 <!--
-_syntax: getMeshForSubsection()_
+_syntax: getMeshForSubsection(x, y, z, w, h, sx, sy, sw, sh, vflipped, rectMode)_
 _name: getMeshForSubsection_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
-_parameters: _
+_parameters: float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh, bool vflipped, ofRectMode rectMode_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1833,14 +1833,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getQuad()
+###ofMesh getQuad(&p1, &p2, &p3, &p4)
 
 <!--
-_syntax: getQuad()_
+_syntax: getQuad(&p1, &p2, &p3, &p4)_
 _name: getQuad_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
-_parameters: _
+_parameters: const glm::vec3 &p1, const glm::vec3 &p2, const glm::vec3 &p3, const glm::vec3 &p4_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1951,12 +1951,12 @@ This returns the internal texture data for this texture, for instance, its textu
 
 <!----------------------------------------------------------------------------->
 
-###const int & getTextureMatrix()
+###const glm::mat4 & getTextureMatrix()
 
 <!--
 _syntax: getTextureMatrix()_
 _name: getTextureMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2130,6 +2130,241 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(data, w, h, glFormat)
+
+<!--
+_syntax: loadData(data, w, h, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const uint8_t *const data, int w, int h, int glFormat_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Load byte pixel data.
+
+glFormat can be different to the internal format of the texture on each
+load, i.e. we can upload GL_BGRA pixels into a GL_RGBA texture but the
+number of channels need to match according to the OpenGL standard.
+
+
+Parameters:
+data Pointer to byte pixel data. Must not be nullptr.
+w Pixel data width.
+h Pixel data height.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(*data, w, h, glFormat)
+
+<!--
+_syntax: loadData(*data, w, h, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const uint16_t *data, int w, int h, int glFormat_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Load short (2 byte) pixel data.
+
+See also: loadData(const unsigned char* const data, int w, int h, int glFormat)
+
+Parameters:
+data Pointer to byte pixel data. Must not be nullptr.
+w Pixel data width.
+h Pixel data height.
+glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(*data, w, h, glFormat)
+
+<!--
+_syntax: loadData(*data, w, h, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const uint32_t *data, int w, int h, int glFormat_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(*data, w, h, glFormat)
+
+<!--
+_syntax: loadData(*data, w, h, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const int8_t *data, int w, int h, int glFormat_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(*data, w, h, glFormat)
+
+<!--
+_syntax: loadData(*data, w, h, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const int16_t *data, int w, int h, int glFormat_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadData(*data, w, h, glFormat)
+
+<!--
+_syntax: loadData(*data, w, h, glFormat)_
+_name: loadData_
+_returns: void_
+_returns_description: _
+_parameters: const int32_t *data, int w, int h, int glFormat_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2540,241 +2775,6 @@ Parameters:
 buffer The buffer to load.
 glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
 glType the GL type to load.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadData(data, w, h, glFormat)
-
-<!--
-_syntax: loadData(data, w, h, glFormat)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: const uint8_t *const data, int w, int h, int glFormat_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Load byte pixel data.
-
-glFormat can be different to the internal format of the texture on each
-load, i.e. we can upload GL_BGRA pixels into a GL_RGBA texture but the
-number of channels need to match according to the OpenGL standard.
-
-
-Parameters:
-data Pointer to byte pixel data. Must not be nullptr.
-w Pixel data width.
-h Pixel data height.
-glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadData(*data, w, h, glFormat)
-
-<!--
-_syntax: loadData(*data, w, h, glFormat)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: const uint16_t *data, int w, int h, int glFormat_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Load short (2 byte) pixel data.
-
-See also: loadData(const unsigned char* const data, int w, int h, int glFormat)
-
-Parameters:
-data Pointer to byte pixel data. Must not be nullptr.
-w Pixel data width.
-h Pixel data height.
-glFormat GL pixel type: GL_RGBA, GL_LUMINANCE, etc.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadData(*data, w, h, glFormat)
-
-<!--
-_syntax: loadData(*data, w, h, glFormat)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: const uint32_t *data, int w, int h, int glFormat_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadData(*data, w, h, glFormat)
-
-<!--
-_syntax: loadData(*data, w, h, glFormat)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: const int8_t *data, int w, int h, int glFormat_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadData(*data, w, h, glFormat)
-
-<!--
-_syntax: loadData(*data, w, h, glFormat)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: const int16_t *data, int w, int h, int glFormat_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void loadData(*data, w, h, glFormat)
-
-<!--
-_syntax: loadData(*data, w, h, glFormat)_
-_name: loadData_
-_returns: void_
-_returns_description: _
-_parameters: const int32_t *data, int w, int h, int glFormat_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 
@@ -3466,7 +3466,7 @@ _syntax: setTextureMatrix(&m)_
 _name: setTextureMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

@@ -169,12 +169,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getCurrentMatrix()
+###const glm::mat4 & getCurrentMatrix()
 
 <!--
 _syntax: getCurrentMatrix()_
 _name: getCurrentMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -349,12 +349,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getModelMatrix()
+###const glm::mat4 & getModelMatrix()
 
 <!--
 _syntax: getModelMatrix()_
 _name: getModelMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -385,12 +385,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getModelViewMatrix()
+###const glm::mat4 & getModelViewMatrix()
 
 <!--
 _syntax: getModelViewMatrix()_
 _name: getModelViewMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -421,12 +421,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getModelViewProjectionMatrix()
+###const glm::mat4 & getModelViewProjectionMatrix()
 
 <!--
 _syntax: getModelViewProjectionMatrix()_
 _name: getModelViewProjectionMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -529,12 +529,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getOrientationMatrix()
+###const glm::mat4 & getOrientationMatrix()
 
 <!--
 _syntax: getOrientationMatrix()_
 _name: getOrientationMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -565,12 +565,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getOrientationMatrixInverse()
+###const glm::mat4 & getOrientationMatrixInverse()
 
 <!--
 _syntax: getOrientationMatrixInverse()_
 _name: getOrientationMatrixInverse_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -601,12 +601,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getProjectionMatrix()
+###const glm::mat4 & getProjectionMatrix()
 
 <!--
 _syntax: getProjectionMatrix()_
 _name: getProjectionMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -637,12 +637,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getProjectionMatrixNoOrientation()
+###const glm::mat4 & getProjectionMatrixNoOrientation()
 
 <!--
 _syntax: getProjectionMatrixNoOrientation()_
 _name: getProjectionMatrixNoOrientation_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -745,12 +745,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getTextureMatrix()
+###const glm::mat4 & getTextureMatrix()
 
 <!--
 _syntax: getTextureMatrix()_
 _name: getTextureMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -781,12 +781,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getViewInverse()
+###const glm::mat4 & getViewInverse()
 
 <!--
 _syntax: getViewInverse()_
 _name: getViewInverse_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -817,12 +817,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getViewMatrix()
+###const glm::mat4 & getViewMatrix()
 
 <!--
 _syntax: getViewMatrix()_
 _name: getViewMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -932,7 +932,7 @@ _syntax: loadMatrix(&m)_
 _name: loadMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -968,7 +968,7 @@ _syntax: loadViewMatrix(&matrix)_
 _name: loadViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &matrix_
+_parameters: const glm::mat4 &matrix_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1040,7 +1040,7 @@ _syntax: multMatrix(&m)_
 _name: multMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1076,7 +1076,7 @@ _syntax: multViewMatrix(&matrix)_
 _name: multViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &matrix_
+_parameters: const glm::mat4 &matrix_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1429,14 +1429,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setRenderSurface(&window)
+###void setRenderSurface(&fbo)
 
 <!--
-_syntax: setRenderSurface(&window)_
+_syntax: setRenderSurface(&fbo)_
 _name: setRenderSurface_
 _returns: void_
 _returns_description: _
-_parameters: const ofAppBaseWindow &window_
+_parameters: const ofBaseDraws &fbo_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1465,14 +1465,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setRenderSurface(&fbo)
+###void setRenderSurface(&window)
 
 <!--
-_syntax: setRenderSurface(&fbo)_
+_syntax: setRenderSurface(&window)_
 _name: setRenderSurface_
 _returns: void_
 _returns_description: _
-_parameters: const ofBaseDraws &fbo_
+_parameters: const ofAppBaseWindow &window_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

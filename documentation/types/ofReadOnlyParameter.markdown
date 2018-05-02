@@ -468,14 +468,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void makeReferenceTo(mom)
+###void makeReferenceTo(ParameterType, mom)
 
 <!--
-_syntax: makeReferenceTo(mom)_
+_syntax: makeReferenceTo(ParameterType, mom)_
 _name: makeReferenceTo_
 _returns: void_
 _returns_description: _
-_parameters: ofParameter< ParameterType > mom_
+_parameters: ofReadOnlyParameter< ParameterType, OtherFriend > mom_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -504,14 +504,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void makeReferenceTo(ParameterType, mom)
+###void makeReferenceTo(mom)
 
 <!--
-_syntax: makeReferenceTo(ParameterType, mom)_
+_syntax: makeReferenceTo(mom)_
 _name: makeReferenceTo_
 _returns: void_
 _returns_description: _
-_parameters: ofReadOnlyParameter< ParameterType, OtherFriend > mom_
+_parameters: ofParameter< ParameterType > mom_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _

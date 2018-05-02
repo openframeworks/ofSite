@@ -1976,14 +1976,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void toShortPCM(*dst)
+###void toShortPCM(&dst)
 
 <!--
-_syntax: toShortPCM(*dst)_
+_syntax: toShortPCM(&dst)_
 _name: toShortPCM_
 _returns: void_
 _returns_description: _
-_parameters: short *dst_
+_parameters: int &dst_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2012,14 +2012,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void toShortPCM(&dst)
+###void toShortPCM(*dst)
 
 <!--
-_syntax: toShortPCM(&dst)_
+_syntax: toShortPCM(*dst)_
 _name: toShortPCM_
 _returns: void_
 _returns_description: _
-_parameters: int &dst_
+_parameters: short *dst_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

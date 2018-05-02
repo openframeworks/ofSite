@@ -226,14 +226,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void performTessellation(polyWindingMode, &dstpoly, bIs2D)
+###void performTessellation(polyWindingMode, &dstmesh, bIs2D)
 
 <!--
-_syntax: performTessellation(polyWindingMode, &dstpoly, bIs2D)_
+_syntax: performTessellation(polyWindingMode, &dstmesh, bIs2D)_
 _name: performTessellation_
 _returns: void_
 _returns_description: _
-_parameters: ofPolyWindingMode polyWindingMode, int &dstpoly, bool bIs2D_
+_parameters: ofPolyWindingMode polyWindingMode, ofMesh &dstmesh, bool bIs2D_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -269,7 +269,7 @@ _syntax: tessellateToMesh(&src, polyWindingMode, &dstmesh, bIs2D = false)_
 _name: tessellateToMesh_
 _returns: void_
 _returns_description: _
-_parameters: const int &src, ofPolyWindingMode polyWindingMode, int &dstmesh, bool bIs2D=false_
+_parameters: const int &src, ofPolyWindingMode polyWindingMode, ofMesh &dstmesh, bool bIs2D=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -282,8 +282,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Tessellates a ofPolyline instance into a single ofMesh instance
-using the winding mode set in ofPolyWindingMode.
+Tessellates a vector of ofPolyline instances into a single
+ofMesh instance using the winding mode set in ofPolyWindingMode.
 
 
 
@@ -306,7 +306,7 @@ _syntax: tessellateToMesh(&src, polyWindingMode, &dstmesh, bIs2D = false)_
 _name: tessellateToMesh_
 _returns: void_
 _returns_description: _
-_parameters: const int &src, ofPolyWindingMode polyWindingMode, int &dstmesh, bool bIs2D=false_
+_parameters: const ofPolyline &src, ofPolyWindingMode polyWindingMode, ofMesh &dstmesh, bool bIs2D=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -356,7 +356,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Tessellate multiple polylines into a single polyline.
+Tessellates a vector of ofPolyline instances into vector of
+ofPolyline instances using the winding mode set in ofPolyWindingMode.
 
 
 
@@ -379,7 +380,7 @@ _syntax: tessellateToPolylines(&src, polyWindingMode, &dstpoly, bIs2D = false)_
 _name: tessellateToPolylines_
 _returns: void_
 _returns_description: _
-_parameters: const int &src, ofPolyWindingMode polyWindingMode, int &dstpoly, bool bIs2D=false_
+_parameters: const ofPolyline &src, ofPolyWindingMode polyWindingMode, int &dstpoly, bool bIs2D=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

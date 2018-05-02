@@ -158,9 +158,9 @@ _syntax: draw(&point)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const int &point_
+_parameters: const glm::vec2 &point_
 _access: public_
-_version_started: 0071_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -200,9 +200,9 @@ _syntax: draw(&point, w, h)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const int &point, float w, float h_
+_parameters: const glm::vec2 &point, float w, float h_
 _access: public_
-_version_started: 007_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_

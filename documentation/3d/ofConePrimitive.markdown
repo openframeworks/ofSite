@@ -140,12 +140,12 @@ This returns a vector of the indices of vertices that make up the cap (as oppose
 
 <!----------------------------------------------------------------------------->
 
-###int getCapMesh()
+###ofMesh getCapMesh()
 
 <!--
 _syntax: getCapMesh()_
 _name: getCapMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -212,12 +212,12 @@ This returns a vector of the indices of vertices that make up the cone (as oppos
 
 <!----------------------------------------------------------------------------->
 
-###int getConeMesh()
+###ofMesh getConeMesh()
 
 <!--
 _syntax: getConeMesh()_
 _name: getConeMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -320,12 +320,12 @@ This returns the radius of the cap
 
 <!----------------------------------------------------------------------------->
 
-###int getResolution()
+###glm::vec3 getResolution()
 
 <!--
 _syntax: getResolution()_
 _name: getResolution_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_

@@ -2660,7 +2660,7 @@ _syntax: setUniform2f(&name, &v)_
 _name: setUniform2f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const int &v_
+_parameters: const string &name, const glm::vec2 &v_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2846,7 +2846,7 @@ _syntax: setUniform3f(&name, &v)_
 _name: setUniform3f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const int &v_
+_parameters: const string &name, const glm::vec3 &v_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3073,7 +3073,7 @@ _syntax: setUniform4f(&name, &v)_
 _name: setUniform4f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const int &v_
+_parameters: const string &name, const glm::vec4 &v_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3223,7 +3223,7 @@ _syntax: setUniformMatrix3f(&name, &m, count = 1)_
 _name: setUniformMatrix3f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const int &m, int count=1_
+_parameters: const string &name, const glm::mat3 &m, int count=1_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3259,7 +3259,7 @@ _syntax: setUniformMatrix4f(&name, &m, count = 1)_
 _name: setUniformMatrix4f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const int &m, int count=1_
+_parameters: const string &name, const glm::mat4 &m, int count=1_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

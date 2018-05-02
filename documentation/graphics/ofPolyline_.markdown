@@ -176,6 +176,7 @@ _description: _
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###void addVertices(*verts, numverts)
@@ -998,8 +999,6 @@ Draw the line using the current renderer
 _description: _
 
 Draw the line using the current renderer.
-
-
 
 
 
@@ -2903,7 +2902,7 @@ _syntax: rotateDeg(degrees, &axis)_
 _name: rotateDeg_
 _returns: void_
 _returns_description: _
-_parameters: float degrees, const int &axis_
+_parameters: float degrees, const glm::vec3 &axis_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2916,7 +2915,9 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\}
+\name Transform polyline
+\{
 
 
 
@@ -2939,7 +2940,7 @@ _syntax: rotateDeg(degrees, &axis)_
 _name: rotateDeg_
 _returns: void_
 _returns_description: _
-_parameters: float degrees, const int &axis_
+_parameters: float degrees, const glm::vec2 &axis_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2975,7 +2976,7 @@ _syntax: rotateRad(radians, &axis)_
 _name: rotateRad_
 _returns: void_
 _returns_description: _
-_parameters: float radians, const int &axis_
+_parameters: float radians, const glm::vec3 &axis_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3011,7 +3012,7 @@ _syntax: rotateRad(radians, &axis)_
 _name: rotateRad_
 _returns: void_
 _returns_description: _
-_parameters: float radians, const int &axis_
+_parameters: float radians, const glm::vec2 &axis_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3272,7 +3273,7 @@ _syntax: translate(&p)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3308,7 +3309,7 @@ _syntax: translate(&p)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

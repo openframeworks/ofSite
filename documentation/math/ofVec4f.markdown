@@ -903,7 +903,7 @@ _syntax: ofVec4f(&vec)_
 _name: ofVec4f_
 _returns: _
 _returns_description: _
-_parameters: const int &vec_
+_parameters: const glm::vec2 &vec_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -939,7 +939,7 @@ _syntax: ofVec4f(&vec)_
 _name: ofVec4f_
 _returns: _
 _returns_description: _
-_parameters: const int &vec_
+_parameters: const glm::vec3 &vec_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -975,7 +975,7 @@ _syntax: ofVec4f(&vec)_
 _name: ofVec4f_
 _returns: _
 _returns_description: _
-_parameters: const int &vec_
+_parameters: const glm::vec4 &vec_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

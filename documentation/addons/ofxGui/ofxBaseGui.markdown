@@ -565,14 +565,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getTextMesh()
+###ofMesh getTextMesh(&text, x, y)
 
 <!--
-_syntax: getTextMesh()_
+_syntax: getTextMesh(&text, x, y)_
 _name: getTextMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
-_parameters: _
+_parameters: const string &text, float x, float y_
 _access: protected_
 _version_started: 0.8.0_
 _version_deprecated: _

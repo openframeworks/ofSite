@@ -138,12 +138,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getBottomCapMesh()
+###ofMesh getBottomCapMesh()
 
 <!--
 _syntax: getBottomCapMesh()_
 _name: getBottomCapMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -246,12 +246,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCylinderMesh()
+###ofMesh getCylinderMesh()
 
 <!--
 _syntax: getCylinderMesh()_
 _name: getCylinderMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -354,12 +354,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getResolution()
+###glm::vec3 getResolution()
 
 <!--
 _syntax: getResolution()_
 _name: getResolution_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -534,12 +534,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getTopCapMesh()
+###ofMesh getTopCapMesh()
 
 <!--
 _syntax: getTopCapMesh()_
 _name: getTopCapMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
 _parameters: _
 _access: public_

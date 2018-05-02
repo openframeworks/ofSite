@@ -1860,16 +1860,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofPixels_(&mom)
+### ofPixels_(&&mom)
 
 <!--
-_syntax: ofPixels_(&mom)_
+_syntax: ofPixels_(&&mom)_
 _name: ofPixels__
 _returns: _
 _returns_description: _
-_parameters: const ofPixels_< SrcType > &mom_
+_parameters: ofPixels_< PixelType > &&mom_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1896,16 +1896,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofPixels_(&&mom)
+### ofPixels_(&mom)
 
 <!--
-_syntax: ofPixels_(&&mom)_
+_syntax: ofPixels_(&mom)_
 _name: ofPixels__
 _returns: _
 _returns_description: _
-_parameters: ofPixels_< PixelType > &&mom_
+_parameters: const ofPixels_< SrcType > &mom_
 _access: public_
-_version_started: 0.10.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1968,16 +1968,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixels_< PixelType > & operator=(&mom)
+###ofPixels_< PixelType > & operator=(&&mom)
 
 <!--
-_syntax: operator=(&mom)_
+_syntax: operator=(&&mom)_
 _name: operator=_
 _returns: ofPixels_< PixelType > &_
 _returns_description: _
-_parameters: const ofPixels_< SrcType > &mom_
+_parameters: ofPixels_< PixelType > &&mom_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2004,16 +2004,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofPixels_< PixelType > & operator=(&&mom)
+###ofPixels_< PixelType > & operator=(&mom)
 
 <!--
-_syntax: operator=(&&mom)_
+_syntax: operator=(&mom)_
 _name: operator=_
 _returns: ofPixels_< PixelType > &_
 _returns_description: _
-_parameters: ofPixels_< PixelType > &&mom_
+_parameters: const ofPixels_< SrcType > &mom_
 _access: public_
-_version_started: 0.10.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2617,42 +2617,6 @@ This sets all the pixel data for a single channel, for instance, the Red pixel v
 
 <!----------------------------------------------------------------------------->
 
-###void setColor(&color)
-
-<!--
-_syntax: setColor(&color)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: const ofColor_< PixelType > &color_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the color of all pixels
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setColor(x, y, &color)
 
 <!--
@@ -2710,6 +2674,42 @@ _advanced: False_
 _inlined_description: _
 
 Set the color of the pixel at a specific index
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(&color)
+
+<!--
+_syntax: setColor(&color)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor_< PixelType > &color_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set the color of all pixels
 
 
 

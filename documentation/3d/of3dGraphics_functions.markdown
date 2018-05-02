@@ -159,7 +159,7 @@ _syntax: ofDrawBox(&position, size)_
 _name: ofDrawBox_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float size_
+_parameters: const glm::vec3 &position, float size_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -219,7 +219,7 @@ _syntax: ofDrawBox(&position, width, height, depth)_
 _name: ofDrawBox_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float width, float height, float depth_
+_parameters: const glm::vec3 &position, float width, float height, float depth_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -507,7 +507,7 @@ _syntax: ofDrawCone(&position, radius, height)_
 _name: ofDrawCone_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float radius, float height_
+_parameters: const glm::vec3 &position, float radius, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -707,7 +707,7 @@ _syntax: ofDrawCylinder(&position, radius, height)_
 _name: ofDrawCylinder_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float radius, float height_
+_parameters: const glm::vec3 &position, float radius, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -907,7 +907,7 @@ _syntax: ofDrawIcoSphere(&position, radius)_
 _name: ofDrawIcoSphere_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float radius_
+_parameters: const glm::vec3 &position, float radius_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1101,7 +1101,7 @@ _syntax: ofDrawPlane(&position, width, height)_
 _name: ofDrawPlane_
 _returns: void_
 _returns_description: _
-_parameters: int &position, float width, float height_
+_parameters: glm::vec3 &position, float width, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1295,7 +1295,7 @@ _syntax: ofDrawSphere(&position, radius)_
 _name: ofDrawSphere_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float radius_
+_parameters: const glm::vec3 &position, float radius_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1388,12 +1388,12 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetBoxResolution()
+###glm::vec3 ofGetBoxResolution()
 
 <!--
 _syntax: ofGetBoxResolution()_
 _name: ofGetBoxResolution_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -1438,12 +1438,12 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetConeResolution()
+###glm::vec3 ofGetConeResolution()
 
 <!--
 _syntax: ofGetConeResolution()_
 _name: ofGetConeResolution_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -1505,12 +1505,12 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetCylinderResolution()
+###glm::vec3 ofGetCylinderResolution()
 
 <!--
 _syntax: ofGetCylinderResolution()_
 _name: ofGetCylinderResolution_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _version_started: _
@@ -1617,12 +1617,12 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetPlaneResolution()
+###glm::vec2 ofGetPlaneResolution()
 
 <!--
 _syntax: ofGetPlaneResolution()_
 _name: ofGetPlaneResolution_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _version_started: _

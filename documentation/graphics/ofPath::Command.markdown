@@ -71,7 +71,7 @@ _syntax: Command(type, &p)_
 _name: Command_
 _returns: _
 _returns_description: _
-_parameters: ofPath::Command::Type type, const int &p_
+_parameters: ofPath::Command::Type type, const glm::vec3 &p_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -107,7 +107,7 @@ _syntax: Command(type, &p, &cp1, &cp2)_
 _name: Command_
 _returns: _
 _returns_description: _
-_parameters: ofPath::Command::Type type, const int &p, const int &cp1, const int &cp2_
+_parameters: ofPath::Command::Type type, const glm::vec3 &p, const glm::vec3 &cp1, const glm::vec3 &cp2_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -143,7 +143,7 @@ _syntax: Command(type, &centre, radiusX, radiusY, angleBegin, angleEnd)_
 _name: Command_
 _returns: _
 _returns_description: _
-_parameters: ofPath::Command::Type type, const int &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
+_parameters: ofPath::Command::Type type, const glm::vec3 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

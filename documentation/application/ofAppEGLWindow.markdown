@@ -1143,12 +1143,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getScreenSize()
+###glm::vec2 getScreenSize()
 
 <!--
 _syntax: getScreenSize()_
 _name: getScreenSize_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1287,12 +1287,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getWindowPosition()
+###glm::vec2 getWindowPosition()
 
 <!--
 _syntax: getWindowPosition()_
 _name: getWindowPosition_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1323,12 +1323,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getWindowSize()
+###glm::vec2 getWindowSize()
 
 <!--
 _syntax: getWindowSize()_
 _name: getWindowSize_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2266,7 +2266,7 @@ _syntax: setup(&settings)_
 _name: setup_
 _returns: void_
 _returns_description: _
-_parameters: const ofGLESWindowSettings &settings_
+_parameters: const ofAppEGLWindowSettings &settings_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2302,7 +2302,7 @@ _syntax: setup(&settings)_
 _name: setup_
 _returns: void_
 _returns_description: _
-_parameters: const ofAppEGLWindowSettings &settings_
+_parameters: const ofGLESWindowSettings &settings_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

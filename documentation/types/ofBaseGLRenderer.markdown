@@ -1328,7 +1328,7 @@ _syntax: setLightPosition(lightIndex, &position)_
 _name: setLightPosition_
 _returns: void_
 _returns_description: _
-_parameters: int lightIndex, const int &position_
+_parameters: int lightIndex, const glm::vec4 &position_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1436,7 +1436,7 @@ _syntax: setLightSpotDirection(lightIndex, &direction)_
 _name: setLightSpotDirection_
 _returns: void_
 _returns_description: _
-_parameters: int lightIndex, const int &direction_
+_parameters: int lightIndex, const glm::vec4 &direction_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

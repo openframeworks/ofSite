@@ -1323,8 +1323,78 @@ _syntax: ofNoise(&p)_
 _name: ofNoise_
 _returns: float_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a two dimensional Perlin noise value between 0.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofNoise(&p)
+
+<!--
+_syntax: ofNoise(&p)_
+_name: ofNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec3 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a three dimensional Perlin noise value between 0.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofNoise(&p)
+
+<!--
+_syntax: ofNoise(&p)_
+_name: ofNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec4 &p_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1981,8 +2051,78 @@ _syntax: ofSignedNoise(&p)_
 _name: ofSignedNoise_
 _returns: float_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec2 &p_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a two dimensional Perlin noise value between -1.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofSignedNoise(&p)
+
+<!--
+_syntax: ofSignedNoise(&p)_
+_name: ofSignedNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec3 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a three dimensional Perlin noise value between -1.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofSignedNoise(&p)
+
+<!--
+_syntax: ofSignedNoise(&p)_
+_name: ofSignedNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec4 &p_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

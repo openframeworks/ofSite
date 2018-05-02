@@ -337,12 +337,12 @@ Draw function. do NOT override this transforms the node to its position+orientat
 
 <!----------------------------------------------------------------------------->
 
-###int getGlobalOrientation()
+###glm::quat getGlobalOrientation()
 
 <!--
 _syntax: getGlobalOrientation()_
 _name: getGlobalOrientation_
-_returns: int_
+_returns: glm::quat_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -375,12 +375,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getGlobalPosition()
+###glm::vec3 getGlobalPosition()
 
 <!--
 _syntax: getGlobalPosition()_
 _name: getGlobalPosition_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -413,12 +413,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getGlobalScale()
+###glm::vec3 getGlobalScale()
 
 <!--
 _syntax: getGlobalScale()_
 _name: getGlobalScale_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -451,12 +451,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getGlobalTransformMatrix()
+###glm::mat4 getGlobalTransformMatrix()
 
 <!--
 _syntax: getGlobalTransformMatrix()_
 _name: getGlobalTransformMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -567,12 +567,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getLocalTransformMatrix()
+###const glm::mat4 & getLocalTransformMatrix()
 
 <!--
 _syntax: getLocalTransformMatrix()_
 _name: getLocalTransformMatrix_
-_returns: const int &_
+_returns: const glm::mat4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -607,12 +607,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getLookAtDir()
+###glm::vec3 getLookAtDir()
 
 <!--
 _syntax: getLookAtDir()_
 _name: getLookAtDir_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -645,12 +645,12 @@ Get -z axis.
 
 <!----------------------------------------------------------------------------->
 
-###int getOrientationEulerDeg()
+###glm::vec3 getOrientationEulerDeg()
 
 <!--
 _syntax: getOrientationEulerDeg()_
 _name: getOrientationEulerDeg_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -683,12 +683,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getOrientationEulerRad()
+###glm::vec3 getOrientationEulerRad()
 
 <!--
 _syntax: getOrientationEulerRad()_
 _name: getOrientationEulerRad_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -721,12 +721,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getOrientationQuat()
+###glm::quat getOrientationQuat()
 
 <!--
 _syntax: getOrientationQuat()_
 _name: getOrientationQuat_
-_returns: int_
+_returns: glm::quat_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -873,12 +873,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getPosition()
+###glm::vec3 getPosition()
 
 <!--
 _syntax: getPosition()_
 _name: getPosition_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -987,12 +987,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getScale()
+###glm::vec3 getScale()
 
 <!--
 _syntax: getScale()_
 _name: getScale_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1025,12 +1025,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getSideDir()
+###glm::vec3 getSideDir()
 
 <!--
 _syntax: getSideDir()_
 _name: getSideDir_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1063,12 +1063,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getUpDir()
+###glm::vec3 getUpDir()
 
 <!--
 _syntax: getUpDir()_
 _name: getUpDir_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1139,12 +1139,12 @@ Get x coodinate.
 
 <!----------------------------------------------------------------------------->
 
-###int getXAxis()
+###glm::vec3 getXAxis()
 
 <!--
 _syntax: getXAxis()_
 _name: getXAxis_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1215,12 +1215,12 @@ Get y coordinate.
 
 <!----------------------------------------------------------------------------->
 
-###int getYAxis()
+###glm::vec3 getYAxis()
 
 <!--
 _syntax: getYAxis()_
 _name: getYAxis_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1291,12 +1291,12 @@ Get z coordinate.
 
 <!----------------------------------------------------------------------------->
 
-###int getZAxis()
+###glm::vec3 getZAxis()
 
 <!--
 _syntax: getZAxis()_
 _name: getZAxis_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1322,87 +1322,6 @@ Returns: A normalized 3D vector of the node's local z axis direction.
 _description: _
 
 Get z axis.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void lookAt(&lookAtPosition)
-
-<!--
-_syntax: lookAt(&lookAtPosition)_
-_name: lookAt_
-_returns: void_
-_returns_description: _
-_parameters: const int &lookAtPosition_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Orient node to look at point (-z axis pointing to global position).
-
-Parameters:
-param0 XYZ coordinates of point to look at as ref to 3D vector.
-\note This version calculates the up vector automatically to try to keep
-	  it relatively consistant with the original angle.
-
-
-
-
-
-_description: _
-
-Orient node to look at node (-z axis pointing to node).
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void lookAt(&lookAtPosition, upVector)
-
-<!--
-_syntax: lookAt(&lookAtPosition, upVector)_
-_name: lookAt_
-_returns: void_
-_returns_description: _
-_parameters: const int &lookAtPosition, int upVector_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Orient node to look at point (-z axis pointing to global position).
-
-Parameters:
-param0 XYZ coordinates of point to look at as ref to 3D vector.
-param1 The desired up axis as a cartesian 3D vector.
-
-
-
-
-
-_description: _
-
-Orient node to look at position (-z axis pointing to position).
 
 
 
@@ -1451,6 +1370,87 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void lookAt(&lookAtPosition)
+
+<!--
+_syntax: lookAt(&lookAtPosition)_
+_name: lookAt_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &lookAtPosition_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Orient node to look at point (-z axis pointing to global position).
+
+Parameters:
+param0 XYZ coordinates of point to look at as ref to 3D vector.
+\note This version calculates the up vector automatically to try to keep
+	  it relatively consistant with the original angle.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void lookAt(&lookAtPosition, upVector)
+
+<!--
+_syntax: lookAt(&lookAtPosition, upVector)_
+_name: lookAt_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &lookAtPosition, glm::vec3 upVector_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Orient node to look at point (-z axis pointing to global position).
+
+Parameters:
+param0 XYZ coordinates of point to look at as ref to 3D vector.
+param1 The desired up axis as a cartesian 3D vector.
+
+
+
+
+
+_description: _
+
+Orient node to look at position (-z axis pointing to position).
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void lookAt(&lookAtNode, &upVector)
 
 <!--
@@ -1458,9 +1458,9 @@ _syntax: lookAt(&lookAtNode, &upVector)_
 _name: lookAt_
 _returns: void_
 _returns_description: _
-_parameters: const ofNode &lookAtNode, const int &upVector_
+_parameters: const ofNode &lookAtNode, const glm::vec3 &upVector_
 _access: public_
-_version_started: 0.10.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1483,7 +1483,7 @@ param1 The desired up axis as a ref to cartesian 3D vector.
 
 _description: _
 
-
+Orient node to look at node (-z axis pointing to node).
 
 
 
@@ -1539,7 +1539,7 @@ _syntax: move(&offset)_
 _name: move_
 _returns: void_
 _returns_description: _
-_parameters: const int &offset_
+_parameters: const glm::vec3 &offset_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1722,7 +1722,7 @@ _syntax: onParentOrientationChanged(&orientation)_
 _name: onParentOrientationChanged_
 _returns: void_
 _returns_description: _
-_parameters: int &orientation_
+_parameters: glm::quat &orientation_
 _access: private_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1758,7 +1758,7 @@ _syntax: onParentPositionChanged(&position)_
 _name: onParentPositionChanged_
 _returns: void_
 _returns_description: _
-_parameters: int &position_
+_parameters: glm::vec3 &position_
 _access: private_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1794,7 +1794,7 @@ _syntax: onParentScaleChanged(&scale)_
 _name: onParentScaleChanged_
 _returns: void_
 _returns_description: _
-_parameters: int &scale_
+_parameters: glm::vec3 &scale_
 _access: private_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1968,48 +1968,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void orbitDeg(longitude, latitude, radius, &centerPoint)
-
-<!--
-_syntax: orbitDeg(longitude, latitude, radius, &centerPoint)_
-_name: orbitDeg_
-_returns: void_
-_returns_description: _
-_parameters: float longitude, float latitude, float radius, const int &centerPoint_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Orbit node around a global position at a specific radius.
-
-Parameters:
-param0 The longitudinal position of the node in degrees as float.
-param1 The latitudinal position of the node in degrees as float.
-param2 The desired radius from the position in degrees as float.
-param3 The global position to orbit around as ref to 3D vector. Default = (0, 0, 0).
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void orbitDeg(longitude, latitude, radius, &centerNode)
 
 <!--
@@ -2052,14 +2010,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void orbitRad(longitude, latitude, radius, &centerPoint)
+###void orbitDeg(longitude, latitude, radius, &centerPoint)
 
 <!--
-_syntax: orbitRad(longitude, latitude, radius, &centerPoint)_
-_name: orbitRad_
+_syntax: orbitDeg(longitude, latitude, radius, &centerPoint)_
+_name: orbitDeg_
 _returns: void_
 _returns_description: _
-_parameters: float longitude, float latitude, float radius, const int &centerPoint_
+_parameters: float longitude, float latitude, float radius, const glm::vec3 &centerPoint_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2075,9 +2033,9 @@ _inlined_description: _
 Orbit node around a global position at a specific radius.
 
 Parameters:
-param0 The longitudinal position of the node in radians as float.
-param1 The latitudinal position of the node in radians as float.
-param2 The desired radius from the position in radians as float.
+param0 The longitudinal position of the node in degrees as float.
+param1 The latitudinal position of the node in degrees as float.
+param2 The desired radius from the position in degrees as float.
 param3 The global position to orbit around as ref to 3D vector. Default = (0, 0, 0).
 
 
@@ -2121,6 +2079,48 @@ param0 The longitudinal position of the node in radians as float.
 param1 The latitudinal position of the node in radians as float.
 param2 The desired radius from the other node in radians as float.
 param3 A reference to the node to rotate around.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void orbitRad(longitude, latitude, radius, &centerPoint)
+
+<!--
+_syntax: orbitRad(longitude, latitude, radius, &centerPoint)_
+_name: orbitRad_
+_returns: void_
+_returns_description: _
+_parameters: float longitude, float latitude, float radius, const glm::vec3 &centerPoint_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Orbit node around a global position at a specific radius.
+
+Parameters:
+param0 The longitudinal position of the node in radians as float.
+param1 The latitudinal position of the node in radians as float.
+param2 The desired radius from the position in radians as float.
+param3 The global position to orbit around as ref to 3D vector. Default = (0, 0, 0).
 
 
 
@@ -2410,7 +2410,7 @@ _syntax: rotate(&q)_
 _name: rotate_
 _returns: void_
 _returns_description: _
-_parameters: const int &q_
+_parameters: const glm::quat &q_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2449,7 +2449,7 @@ _syntax: rotateAround(&q, &point)_
 _name: rotateAround_
 _returns: void_
 _returns_description: _
-_parameters: const int &q, const int &point_
+_parameters: const glm::quat &q, const glm::vec3 &point_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2489,7 +2489,7 @@ _syntax: rotateAroundDeg(degrees, &axis, &point)_
 _name: rotateAroundDeg_
 _returns: void_
 _returns_description: _
-_parameters: float degrees, const int &axis, const int &point_
+_parameters: float degrees, const glm::vec3 &axis, const glm::vec3 &point_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2530,7 +2530,7 @@ _syntax: rotateAroundRad(radians, &axis, &point)_
 _name: rotateAroundRad_
 _returns: void_
 _returns_description: _
-_parameters: float radians, const int &axis, const int &point_
+_parameters: float radians, const glm::vec3 &axis, const glm::vec3 &point_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2549,46 +2549,6 @@ Parameters:
 param0 Desired relative angle change in degrees as float.
 param1 The arbitrary axis to rotate around as ref to cartesian 3D vector.
 param2 Point to rotate around in local xyz coordinates as ref to 3D vector.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rotateDeg(degrees, &v)
-
-<!--
-_syntax: rotateDeg(degrees, &v)_
-_name: rotateDeg_
-_returns: void_
-_returns_description: _
-_parameters: float degrees, const int &v_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotate relative to current orientation around arbitrary axis.
-
-Parameters:
-param0 Desired relative angle change in degrees as float.
-param1 Desired axis to rotate around as a ref to cartesian 3D Vector.
 
 
 
@@ -2646,14 +2606,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotateRad(radians, &v)
+###void rotateDeg(degrees, &v)
 
 <!--
-_syntax: rotateRad(radians, &v)_
-_name: rotateRad_
+_syntax: rotateDeg(degrees, &v)_
+_name: rotateDeg_
 _returns: void_
 _returns_description: _
-_parameters: float radians, const int &v_
+_parameters: float degrees, const glm::vec3 &v_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2669,7 +2629,7 @@ _inlined_description: _
 Rotate relative to current orientation around arbitrary axis.
 
 Parameters:
-param0 Desired relative angle change in radians as float.
+param0 Desired relative angle change in degrees as float.
 param1 Desired axis to rotate around as a ref to cartesian 3D Vector.
 
 
@@ -2728,6 +2688,46 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void rotateRad(radians, &v)
+
+<!--
+_syntax: rotateRad(radians, &v)_
+_name: rotateRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians, const glm::vec3 &v_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate relative to current orientation around arbitrary axis.
+
+Parameters:
+param0 Desired relative angle change in radians as float.
+param1 Desired axis to rotate around as a ref to cartesian 3D Vector.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setGlobalOrientation(&q)
 
 <!--
@@ -2735,7 +2735,7 @@ _syntax: setGlobalOrientation(&q)_
 _name: setGlobalOrientation_
 _returns: void_
 _returns_description: _
-_parameters: const int &q_
+_parameters: const glm::quat &q_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2815,7 +2815,7 @@ _syntax: setGlobalPosition(&p)_
 _name: setGlobalPosition_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2847,14 +2847,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setOrientation(&eulerAngles)
+###void setOrientation(&q)
 
 <!--
-_syntax: setOrientation(&eulerAngles)_
+_syntax: setOrientation(&q)_
 _name: setOrientation_
 _returns: void_
 _returns_description: _
-_parameters: const int &eulerAngles_
+_parameters: const glm::quat &q_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2867,13 +2867,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Set local orientation with xyz euler angles.
+Set local orientation with a quaternion.
 
 Parameters:
-param0 Desired local xyz angles in degrees, as ref to 3D vector.
-\note Using euler angles can cause gimbal lock.
-
-See also: https://en.wikipedia.org/wiki/Gimbal_lock
+param0 Desired local orientation as ref to an glm::quat.
 
 
 
@@ -2896,7 +2893,7 @@ _syntax: setOrientation(&eulerAngles)_
 _name: setOrientation_
 _returns: void_
 _returns_description: _
-_parameters: const int &eulerAngles_
+_parameters: const glm::vec3 &eulerAngles_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3019,7 +3016,7 @@ _syntax: setPosition(&p)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3138,7 +3135,7 @@ _syntax: setScale(&s)_
 _name: setScale_
 _returns: void_
 _returns_description: _
-_parameters: const int &s_
+_parameters: const glm::vec3 &s_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

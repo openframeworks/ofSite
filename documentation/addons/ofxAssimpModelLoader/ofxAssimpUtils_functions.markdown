@@ -92,7 +92,7 @@ _syntax: aiMeshToOfMesh(*aim, &ofm, *helper)_
 _name: aiMeshToOfMesh_
 _returns: void_
 _returns_description: _
-_parameters: const aiMesh *aim, int &ofm, ofxAssimpMeshHelper *helper_
+_parameters: const aiMesh *aim, ofMesh &ofm, ofxAssimpMeshHelper *helper_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -120,14 +120,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int aiVecToOfVec()
+###ofDefaultVec3 aiVecToOfVec(&v)
 
 <!--
-_syntax: aiVecToOfVec()_
+_syntax: aiVecToOfVec(&v)_
 _name: aiVecToOfVec_
-_returns: int_
+_returns: ofDefaultVec3_
 _returns_description: _
-_parameters: _
+_parameters: const aiVector3D &v_
 _version_started: _
 _version_deprecated: _
 _summary: _

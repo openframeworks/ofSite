@@ -61,12 +61,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getPosition()
+###const glm::vec2 & getPosition()
 
 <!--
 _syntax: getPosition()_
 _name: getPosition_
-_returns: const int &_
+_returns: const glm::vec2 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -248,7 +248,7 @@ _syntax: setPosition(&position)_
 _name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: const int &position_
+_parameters: const glm::vec2 &position_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

@@ -871,14 +871,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCurrentAnimatedMesh()
+###ofMesh getCurrentAnimatedMesh(name)
 
 <!--
-_syntax: getCurrentAnimatedMesh()_
+_syntax: getCurrentAnimatedMesh(name)_
 _name: getCurrentAnimatedMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
-_parameters: _
+_parameters: string name_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -907,14 +907,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCurrentAnimatedMesh()
+###ofMesh getCurrentAnimatedMesh(num)
 
 <!--
-_syntax: getCurrentAnimatedMesh()_
+_syntax: getCurrentAnimatedMesh(num)_
 _name: getCurrentAnimatedMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
-_parameters: _
+_parameters: unsigned int num_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1015,14 +1015,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getMesh()
+###ofMesh getMesh(name)
 
 <!--
-_syntax: getMesh()_
+_syntax: getMesh(name)_
 _name: getMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
-_parameters: _
+_parameters: string name_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1051,14 +1051,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getMesh()
+###ofMesh getMesh(num)
 
 <!--
-_syntax: getMesh()_
+_syntax: getMesh(num)_
 _name: getMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
-_parameters: _
+_parameters: unsigned int num_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

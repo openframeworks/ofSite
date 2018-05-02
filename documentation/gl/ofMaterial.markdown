@@ -585,7 +585,7 @@ _syntax: setCustomUniform2f(&name, value)_
 _name: setCustomUniform2f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int value_
+_parameters: const string &name, glm::vec2 value_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -614,14 +614,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setCustomUniform2i(&name, value)
+###void setCustomUniform2i(&name, int, value = defaultp)
 
 <!--
-_syntax: setCustomUniform2i(&name, value)_
+_syntax: setCustomUniform2i(&name, int, value = defaultp)_
 _name: setCustomUniform2i_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int value_
+_parameters: const string &name, glm::tvec2< int, glm::precision::defaultp > value=defaultp_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -657,7 +657,7 @@ _syntax: setCustomUniform3f(&name, value)_
 _name: setCustomUniform3f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int value_
+_parameters: const string &name, glm::vec3 value_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -686,14 +686,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setCustomUniform3i(&name, value)
+###void setCustomUniform3i(&name, int, value = defaultp)
 
 <!--
-_syntax: setCustomUniform3i(&name, value)_
+_syntax: setCustomUniform3i(&name, int, value = defaultp)_
 _name: setCustomUniform3i_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int value_
+_parameters: const string &name, glm::tvec3< int, glm::precision::defaultp > value=defaultp_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -729,7 +729,7 @@ _syntax: setCustomUniform4f(&name, value)_
 _name: setCustomUniform4f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int value_
+_parameters: const string &name, glm::vec4 value_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -758,14 +758,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setCustomUniform4i(&name, value)
+###void setCustomUniform4i(&name, int, value = defaultp)
 
 <!--
-_syntax: setCustomUniform4i(&name, value)_
+_syntax: setCustomUniform4i(&name, int, value = defaultp)_
 _name: setCustomUniform4i_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int value_
+_parameters: const string &name, glm::tvec4< int, glm::precision::defaultp > value=defaultp_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -801,7 +801,7 @@ _syntax: setCustomUniformMatrix3f(&name, value)_
 _name: setCustomUniformMatrix3f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int value_
+_parameters: const string &name, glm::mat3 value_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -837,7 +837,7 @@ _syntax: setCustomUniformMatrix4f(&name, value)_
 _name: setCustomUniformMatrix4f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, int value_
+_parameters: const string &name, glm::mat4 value_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1466,10 +1466,74 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int uniforms2i
+
+<!--
+_name: uniforms2i_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int uniforms3f
 
 <!--
 _name: uniforms3f_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int uniforms3i
+
+<!--
+_name: uniforms3i_
 _type: int_
 _access: private_
 _version_started: 0.10.0_
@@ -1534,6 +1598,38 @@ _description: _
 
 <!--
 _name: uniforms4f_
+_type: int_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_visible: True_
+_constant: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int uniforms4i
+
+<!--
+_name: uniforms4i_
 _type: int_
 _access: private_
 _version_started: 0.10.0_

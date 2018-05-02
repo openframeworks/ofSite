@@ -155,12 +155,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGLSupportedExtensions()
+###vector< string > ofGLSupportedExtensions()
 
 <!--
 _syntax: ofGLSupportedExtensions()_
 _name: ofGLSupportedExtensions_
-_returns: int_
+_returns: vector< string >_
 _returns_description: _
 _parameters: _
 _version_started: 0.10.0_

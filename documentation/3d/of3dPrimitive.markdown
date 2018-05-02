@@ -530,16 +530,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int & getMesh()
+###ofMesh & getMesh()
 
 <!--
 _syntax: getMesh()_
 _name: getMesh_
-_returns: int &_
+_returns: ofMesh &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -566,16 +566,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getMesh()
+###const ofMesh & getMesh()
 
 <!--
 _syntax: getMesh()_
 _name: getMesh_
-_returns: const int &_
+_returns: const ofMesh &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -602,16 +602,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int * getMeshPtr()
+###ofMesh * getMeshPtr()
 
 <!--
 _syntax: getMeshPtr()_
 _name: getMeshPtr_
-_returns: int *_
+_returns: ofMesh *_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -638,48 +638,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int * getMeshPtr()
+###const ofMesh * getMeshPtr()
 
 <!--
 _syntax: getMeshPtr()_
 _name: getMeshPtr_
-_returns: const int *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int & getTexCoords()
-
-<!--
-_syntax: getTexCoords()_
-_name: getTexCoords_
-_returns: int &_
+_returns: const ofMesh *_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -710,12 +674,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getTexCoords()
+###glm::vec4 & getTexCoords()
 
 <!--
 _syntax: getTexCoords()_
 _name: getTexCoords_
-_returns: const int &_
+_returns: glm::vec4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -746,12 +710,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int * getTexCoordsPtr()
+###const glm::vec4 & getTexCoords()
 
 <!--
-_syntax: getTexCoordsPtr()_
-_name: getTexCoordsPtr_
-_returns: int *_
+_syntax: getTexCoords()_
+_name: getTexCoords_
+_returns: const glm::vec4 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -782,16 +746,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int * getTexCoordsPtr()
+###glm::vec4 * getTexCoordsPtr()
 
 <!--
 _syntax: getTexCoordsPtr()_
 _name: getTexCoordsPtr_
-_returns: const int *_
+_returns: glm::vec4 *_
 _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const glm::vec4 * getTexCoordsPtr()
+
+<!--
+_syntax: getTexCoordsPtr()_
+_name: getTexCoordsPtr_
+_returns: const glm::vec4 *_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1113,7 +1113,7 @@ _syntax: of3dPrimitive(&mesh)_
 _name: of3dPrimitive_
 _returns: _
 _returns_description: _
-_parameters: const int &mesh_
+_parameters: const ofMesh &mesh_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

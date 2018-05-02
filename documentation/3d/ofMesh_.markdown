@@ -28,7 +28,7 @@ has different ways of connecting the vertices that you pass to it and none
 are as efficient as to only need eight vertices to create a cube.
 
 You've probably seen a version of the following image somewhere before.
-![PRIMATIVES](3d/gl_primitives_640x269.png)
+![PRIMATIVES](3d/primitives_new-640x269.gif)
 Generally you have to create your points to fit the drawing mode that
 you've selected because of whats called winding.
 A vertex gets connected to another vertex in the order that the mode does

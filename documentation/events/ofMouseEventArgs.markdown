@@ -135,16 +135,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofMouseEventArgs(type, x, y)
+### ofMouseEventArgs(type, x, y, button, modifiers)
 
 <!--
-_syntax: ofMouseEventArgs(type, x, y)_
+_syntax: ofMouseEventArgs(type, x, y, button, modifiers)_
 _name: ofMouseEventArgs_
 _returns: _
 _returns_description: _
-_parameters: ofMouseEventArgs::Type type, float x, float y_
+_parameters: ofMouseEventArgs::Type type, float x, float y, int button, int modifiers_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -171,16 +171,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofMouseEventArgs(type, x, y, button, modifiers)
+### ofMouseEventArgs(type, x, y)
 
 <!--
-_syntax: ofMouseEventArgs(type, x, y, button, modifiers)_
+_syntax: ofMouseEventArgs(type, x, y)_
 _name: ofMouseEventArgs_
 _returns: _
 _returns_description: _
-_parameters: ofMouseEventArgs::Type type, float x, float y, int button, int modifiers_
+_parameters: ofMouseEventArgs::Type type, float x, float y_
 _access: public_
-_version_started: 0.10.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

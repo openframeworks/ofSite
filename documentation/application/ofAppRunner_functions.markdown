@@ -1066,12 +1066,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetWindowSize()
+###glm::vec2 ofGetWindowSize()
 
 <!--
 _syntax: ofGetWindowSize()_
 _name: ofGetWindowSize_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _version_started: _

@@ -210,12 +210,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getResolution()
+###glm::vec2 getResolution()
 
 <!--
 _syntax: getResolution()_
 _name: getResolution_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _access: public_

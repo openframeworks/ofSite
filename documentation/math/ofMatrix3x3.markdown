@@ -271,7 +271,7 @@ _syntax: ofMatrix3x3(&mat)_
 _name: ofMatrix3x3_
 _returns: _
 _returns_description: _
-_parameters: const int &mat_
+_parameters: const glm::mat3 &mat_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -717,6 +717,43 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(_a, _b, _c, _d, _e, _f, _g, _h, _i)
+
+<!--
+_syntax: set(_a, _b, _c, _d, _e, _f, _g, _h, _i)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float _a, float _b, float _c, float _d, float _e, float _f, float _g, float _h, float _i_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\name Matrix access
+\{
 
 
 

@@ -2655,14 +2655,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getVec2f()
+###const ofParameter< ofDefaultVec2 > & getVec2f(&name)
 
 <!--
-_syntax: getVec2f()_
+_syntax: getVec2f(&name)_
 _name: getVec2f_
-_returns: const int &_
+_returns: const ofParameter< ofDefaultVec2 > &_
 _returns_description: _
-_parameters: _
+_parameters: const string &name_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2691,14 +2691,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getVec2f()
+###const ofParameter< ofDefaultVec2 > & getVec2f(pos)
 
 <!--
-_syntax: getVec2f()_
+_syntax: getVec2f(pos)_
 _name: getVec2f_
-_returns: const int &_
+_returns: const ofParameter< ofDefaultVec2 > &_
 _returns_description: _
-_parameters: _
+_parameters: size_t pos_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2727,14 +2727,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int & getVec2f()
+###ofParameter< ofDefaultVec2 > & getVec2f(&name)
 
 <!--
-_syntax: getVec2f()_
+_syntax: getVec2f(&name)_
 _name: getVec2f_
-_returns: int &_
+_returns: ofParameter< ofDefaultVec2 > &_
 _returns_description: _
-_parameters: _
+_parameters: const string &name_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2763,14 +2763,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int & getVec2f()
+###ofParameter< ofDefaultVec2 > & getVec2f(pos)
 
 <!--
-_syntax: getVec2f()_
+_syntax: getVec2f(pos)_
 _name: getVec2f_
-_returns: int &_
+_returns: ofParameter< ofDefaultVec2 > &_
 _returns_description: _
-_parameters: _
+_parameters: size_t pos_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2799,14 +2799,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getVec3f()
+###const ofParameter< ofDefaultVec3 > & getVec3f(&name)
 
 <!--
-_syntax: getVec3f()_
+_syntax: getVec3f(&name)_
 _name: getVec3f_
-_returns: const int &_
+_returns: const ofParameter< ofDefaultVec3 > &_
 _returns_description: _
-_parameters: _
+_parameters: const string &name_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2835,14 +2835,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getVec3f()
+###const ofParameter< ofDefaultVec3 > & getVec3f(pos)
 
 <!--
-_syntax: getVec3f()_
+_syntax: getVec3f(pos)_
 _name: getVec3f_
-_returns: const int &_
+_returns: const ofParameter< ofDefaultVec3 > &_
 _returns_description: _
-_parameters: _
+_parameters: size_t pos_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2871,14 +2871,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int & getVec3f()
+###ofParameter< ofDefaultVec3 > & getVec3f(&name)
 
 <!--
-_syntax: getVec3f()_
+_syntax: getVec3f(&name)_
 _name: getVec3f_
-_returns: int &_
+_returns: ofParameter< ofDefaultVec3 > &_
 _returns_description: _
-_parameters: _
+_parameters: const string &name_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2907,14 +2907,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int & getVec3f()
+###ofParameter< ofDefaultVec3 > & getVec3f(pos)
 
 <!--
-_syntax: getVec3f()_
+_syntax: getVec3f(pos)_
 _name: getVec3f_
-_returns: int &_
+_returns: ofParameter< ofDefaultVec3 > &_
 _returns_description: _
-_parameters: _
+_parameters: size_t pos_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2943,14 +2943,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getVec4f()
+###const ofParameter< ofDefaultVec4 > & getVec4f(&name)
 
 <!--
-_syntax: getVec4f()_
+_syntax: getVec4f(&name)_
 _name: getVec4f_
-_returns: const int &_
+_returns: const ofParameter< ofDefaultVec4 > &_
 _returns_description: _
-_parameters: _
+_parameters: const string &name_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2979,14 +2979,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getVec4f()
+###const ofParameter< ofDefaultVec4 > & getVec4f(pos)
 
 <!--
-_syntax: getVec4f()_
+_syntax: getVec4f(pos)_
 _name: getVec4f_
-_returns: const int &_
+_returns: const ofParameter< ofDefaultVec4 > &_
 _returns_description: _
-_parameters: _
+_parameters: size_t pos_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -3015,14 +3015,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int & getVec4f()
+###ofParameter< ofDefaultVec4 > & getVec4f(&name)
 
 <!--
-_syntax: getVec4f()_
+_syntax: getVec4f(&name)_
 _name: getVec4f_
-_returns: int &_
+_returns: ofParameter< ofDefaultVec4 > &_
 _returns_description: _
-_parameters: _
+_parameters: const string &name_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3051,14 +3051,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int & getVec4f()
+###ofParameter< ofDefaultVec4 > & getVec4f(pos)
 
 <!--
-_syntax: getVec4f()_
+_syntax: getVec4f(pos)_
 _name: getVec4f_
-_returns: int &_
+_returns: ofParameter< ofDefaultVec4 > &_
 _returns_description: _
-_parameters: _
+_parameters: size_t pos_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3375,14 +3375,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofParameterGroup(&name, p)
+### ofParameterGroup(&name)
 
 <!--
-_syntax: ofParameterGroup(&name, p)_
+_syntax: ofParameterGroup(&name)_
 _name: ofParameterGroup_
 _returns: _
 _returns_description: _
-_parameters: const string &name, Args &... p_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -3411,14 +3411,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofParameterGroup(&name)
+### ofParameterGroup(&name, p)
 
 <!--
-_syntax: ofParameterGroup(&name)_
+_syntax: ofParameterGroup(&name, p)_
 _name: ofParameterGroup_
 _returns: _
 _returns_description: _
-_parameters: const string &name_
+_parameters: const string &name, Args &... p_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

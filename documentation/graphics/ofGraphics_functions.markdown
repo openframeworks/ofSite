@@ -466,7 +466,7 @@ _syntax: ofBezierVertex(&p1, &p2, &p3)_
 _name: ofBezierVertex_
 _returns: void_
 _returns_description: _
-_parameters: const int &p1, const int &p2, const int &p3_
+_parameters: const glm::vec3 &p1, const glm::vec3 &p2, const glm::vec3 &p3_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -503,6 +503,41 @@ _returns: void_
 _returns_description: _
 _parameters: float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3_
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofBezierVertex(&p1, &p2, &p3)
+
+<!--
+_syntax: ofBezierVertex(&p1, &p2, &p3)_
+_name: ofBezierVertex_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p1, const glm::vec2 &p2, const glm::vec2 &p3_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -811,7 +846,7 @@ _syntax: ofCurveVertex(&p)_
 _name: ofCurveVertex_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -874,15 +909,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofCurveVertices(&curvePoints)
+###void ofCurveVertex(&p)
 
 <!--
-_syntax: ofCurveVertices(&curvePoints)_
-_name: ofCurveVertices_
+_syntax: ofCurveVertex(&p)_
+_name: ofCurveVertex_
 _returns: void_
 _returns_description: _
-_parameters: const int &curvePoints_
-_version_started: _
+_parameters: const glm::vec2 &p_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -901,7 +936,148 @@ _inlined_description: _
 
 _description: _
 
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofCurveVertices(&curvePoints)
+
+<!--
+_syntax: ofCurveVertices(&curvePoints)_
+_name: ofCurveVertices_
+_returns: void_
+_returns_description: _
+_parameters: const vector< glm::vec3 > &curvePoints_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a curve through a series of vertices stored as a vector of
+ofPoints. Should be called between ofBeginShape() and ofEndShape().
+
+
+
+
+
+_description: _
+
 Draws a curve through a series of vertices stored as a vector of ofPoints. Should be called between ofBeginShape() and ofEndShape().
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofCurveVertices(&curvePoints)
+
+<!--
+_syntax: ofCurveVertices(&curvePoints)_
+_name: ofCurveVertices_
+_returns: void_
+_returns_description: _
+_parameters: const vector< glm::vec2 > &curvePoints_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofCurveVertices(&curvePoints)
+
+<!--
+_syntax: ofCurveVertices(&curvePoints)_
+_name: ofCurveVertices_
+_returns: void_
+_returns_description: _
+_parameters: const vector< ofVec3f > &curvePoints_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofCurveVertices(&curvePoints)
+
+<!--
+_syntax: ofCurveVertices(&curvePoints)_
+_name: ofCurveVertices_
+_returns: void_
+_returns_description: _
+_parameters: const vector< ofVec2f > &curvePoints_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -1323,7 +1499,7 @@ _syntax: ofDrawBitmapString(&textString, &p)_
 _name: ofDrawBitmapString_
 _returns: void_
 _returns_description: _
-_parameters: const T &textString, const int &p_
+_parameters: const T &textString, const glm::vec2 &p_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1457,7 +1633,42 @@ _syntax: ofDrawBitmapString(&textString, &p)_
 _name: ofDrawBitmapString_
 _returns: void_
 _returns_description: _
-_parameters: const string &textString, const int &p_
+_parameters: const T &textString, const glm::vec3 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\}
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapString(&textString, &p)
+
+<!--
+_syntax: ofDrawBitmapString(&textString, &p)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const string &textString, const glm::vec3 &p_
 _version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
@@ -1485,14 +1696,49 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawBitmapStringHighlight(text, &position, &background, &foreground)
+###void ofDrawBitmapString(&textString, &p)
 
 <!--
-_syntax: ofDrawBitmapStringHighlight(text, &position, &background, &foreground)_
+_syntax: ofDrawBitmapString(&textString, &p)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const string &textString, const glm::vec2 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapStringHighlight(text, &position, &background = black, &foreground = white)
+
+<!--
+_syntax: ofDrawBitmapStringHighlight(text, &position, &background = black, &foreground = white)_
 _name: ofDrawBitmapStringHighlight_
 _returns: void_
 _returns_description: _
-_parameters: string text, const int &position, const ofColor &background, const ofColor &foreground_
+_parameters: string text, const glm::vec3 &position, const ofColor &background=black, const ofColor &foreground=white_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1527,8 +1773,43 @@ _syntax: ofDrawBitmapStringHighlight(text, x, y, &background = ofColor::black, &
 _name: ofDrawBitmapStringHighlight_
 _returns: void_
 _returns_description: _
-_parameters: string text, int x, int y, const ofColor &background, const ofColor &foreground_
+_parameters: string text, int x, int y, const ofColor &background=black, const ofColor &foreground=white_
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapStringHighlight(text, &position, &background = black, &foreground = white)
+
+<!--
+_syntax: ofDrawBitmapStringHighlight(text, &position, &background = black, &foreground = white)_
+_name: ofDrawBitmapStringHighlight_
+_returns: void_
+_returns_description: _
+_parameters: string text, const glm::vec2 &position, const ofColor &background=black, const ofColor &foreground=white_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1641,8 +1922,43 @@ _syntax: ofDrawCircle(&p, radius)_
 _name: ofDrawCircle_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float radius_
+_parameters: const glm::vec3 &p, float radius_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawCircle(&p, radius)
+
+<!--
+_syntax: ofDrawCircle(&p, radius)_
+_name: ofDrawCircle_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p, float radius_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1823,8 +2139,43 @@ _syntax: ofDrawEllipse(&p, width, height)_
 _name: ofDrawEllipse_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float width, float height_
+_parameters: const glm::vec3 &p, float width, float height_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawEllipse(&p, width, height)
+
+<!--
+_syntax: ofDrawEllipse(&p, width, height)_
+_name: ofDrawEllipse_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p, float width, float height_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1933,8 +2284,43 @@ _syntax: ofDrawLine(&p1, &p2)_
 _name: ofDrawLine_
 _returns: void_
 _returns_description: _
-_parameters: const int &p1, const int &p2_
+_parameters: const glm::vec3 &p1, const glm::vec3 &p2_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawLine(&p1, &p2)
+
+<!--
+_syntax: ofDrawLine(&p1, &p2)_
+_name: ofDrawLine_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p1, const glm::vec2 &p2_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2009,14 +2395,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+###void ofDrawRectRounded(&p, w, h, r)
 
 <!--
-_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_syntax: ofDrawRectRounded(&p, w, h, r)_
 _name: ofDrawRectRounded_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_parameters: const glm::vec2 &p, float w, float h, float r_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -2135,7 +2521,7 @@ _syntax: ofDrawRectRounded(&p, w, h, r)_
 _name: ofDrawRectRounded_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h, float r_
+_parameters: const glm::vec3 &p, float w, float h, float r_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -2147,7 +2533,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws a rectangle from point p with a given width, height and radius of
+rounded corners.
 
+~~~~{.cpp}
+void ofApp::draw(){
+    ofPoint p;
+    p.set ( 10, 10 );
+    ofDrawRectRounded( p, 100, 100, 10 );
+}
+~~~~
 
 
 
@@ -2238,6 +2633,83 @@ void ofApp::draw(){
     ofDrawRectRounded(10, 10, 10, 100, 100, 10, 20, 30, 40);
 }
 ~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rounded rectangle from point X, Y, at depth Z with a given width,
+height and radius of rounded corners.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawRectRounded(10, 10, 10, 100, 100, 10);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -2346,7 +2818,7 @@ _syntax: ofDrawRectangle(&p, w, h)_
 _name: ofDrawRectangle_
 _returns: void_
 _returns_description: _
-_parameters: const int &p, float w, float h_
+_parameters: const glm::vec3 &p, float w, float h_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -2358,7 +2830,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws an rectangle from point p, with a given width and height.
+~~~~{.cpp}
+void ofApp::draw(){
+    glm::vec3 p;      // create a point P
+    p.x = 10;       // set the x of the point
+    p.y = 10;       // set the y of the point
 
+    ofDrawRectangle(p, 80, 80); // Draw the rectangle
+}
+~~~~
 
 
 
@@ -2399,6 +2880,41 @@ void ofApp::draw(){
     ofDrawRectangle(10,10,-100, 80, 80); // Draw a rectangle at 100 pixels in depth
 }
 ~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectangle(&p, w, h)
+
+<!--
+_syntax: ofDrawRectangle(&p, w, h)_
+_name: ofDrawRectangle_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p, float w, float h_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -2496,8 +3012,43 @@ _syntax: ofDrawTriangle(&p1, &p2, &p3)_
 _name: ofDrawTriangle_
 _returns: void_
 _returns_description: _
-_parameters: const int &p1, const int &p2, const int &p3_
+_parameters: const glm::vec3 &p1, const glm::vec3 &p2, const glm::vec3 &p3_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawTriangle(&p1, &p2, &p3)
+
+<!--
+_syntax: ofDrawTriangle(&p1, &p2, &p3)_
+_name: ofDrawTriangle_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p1, const glm::vec2 &p2, const glm::vec2 &p3_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3088,14 +3639,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetCurrentMatrix()
+###glm::mat4 ofGetCurrentMatrix(matrixMode)
 
 <!--
-_syntax: ofGetCurrentMatrix()_
+_syntax: ofGetCurrentMatrix(matrixMode)_
 _name: ofGetCurrentMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
-_parameters: _
+_parameters: ofMatrixMode matrixMode_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -3123,12 +3674,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetCurrentNormalMatrix()
+###glm::mat4 ofGetCurrentNormalMatrix()
 
 <!--
 _syntax: ofGetCurrentNormalMatrix()_
 _name: ofGetCurrentNormalMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _version_started: 0.9.0_
@@ -3163,12 +3714,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetCurrentOrientationMatrix()
+###glm::mat4 ofGetCurrentOrientationMatrix()
 
 <!--
 _syntax: ofGetCurrentOrientationMatrix()_
 _name: ofGetCurrentOrientationMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _version_started: 0.9.0_
@@ -3204,12 +3755,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int ofGetCurrentViewMatrix()
+###glm::mat4 ofGetCurrentViewMatrix()
 
 <!--
 _syntax: ofGetCurrentViewMatrix()_
 _name: ofGetCurrentViewMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _version_started: 0.9.0_
@@ -3597,7 +4148,7 @@ _syntax: ofLoadMatrix(&m)_
 _name: ofLoadMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -3667,7 +4218,7 @@ _syntax: ofLoadViewMatrix(&m)_
 _name: ofLoadViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -3702,7 +4253,7 @@ _syntax: ofMultMatrix(&m)_
 _name: ofMultMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -3772,7 +4323,7 @@ _syntax: ofMultViewMatrix(&m)_
 _name: ofMultViewMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const int &m_
+_parameters: const glm::mat4 &m_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -4738,7 +5289,7 @@ _syntax: ofScale(&p)_
 _name: ofScale_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
@@ -5925,7 +6476,7 @@ _syntax: ofTranslate(&p)_
 _name: ofTranslate_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -5957,6 +6508,41 @@ void ofApp::draw(){
     ofDrawRectangle(0, 0, 10, 10);   // draw a rect at that position
 }
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofTranslate(&p)
+
+<!--
+_syntax: ofTranslate(&p)_
+_name: ofTranslate_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -6042,7 +6628,77 @@ _syntax: ofVertex(&p)_
 _name: ofVertex_
 _returns: void_
 _returns_description: _
-_parameters: const int &p_
+_parameters: const glm::vec3 &p_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofVertex(&p)
+
+<!--
+_syntax: ofVertex(&p)_
+_name: ofVertex_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofVertices(&polyPoints)
+
+<!--
+_syntax: ofVertices(&polyPoints)_
+_name: ofVertices_
+_returns: void_
+_returns_description: _
+_parameters: const vector< glm::vec3 > &polyPoints_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -6077,8 +6733,78 @@ _syntax: ofVertices(&polyPoints)_
 _name: ofVertices_
 _returns: void_
 _returns_description: _
-_parameters: const int &polyPoints_
-_version_started: _
+_parameters: const vector< glm::vec2 > &polyPoints_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofVertices(&polyPoints)
+
+<!--
+_syntax: ofVertices(&polyPoints)_
+_name: ofVertices_
+_returns: void_
+_returns_description: _
+_parameters: const vector< ofVec3f > &polyPoints_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofVertices(&polyPoints)
+
+<!--
+_syntax: ofVertices(&polyPoints)_
+_name: ofVertices_
+_returns: void_
+_returns_description: _
+_parameters: const vector< ofVec2f > &polyPoints_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

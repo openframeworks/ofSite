@@ -61,14 +61,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getMesh()
+###ofMesh getMesh(&text, x, y, mode = OF_BITMAPMODE_MODEL_BILLBOARD, vFlipped = true)
 
 <!--
-_syntax: getMesh()_
+_syntax: getMesh(&text, x, y, mode = OF_BITMAPMODE_MODEL_BILLBOARD, vFlipped = true)_
 _name: getMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
-_parameters: _
+_parameters: const string &text, int x, int y, ofDrawBitmapMode mode=OF_BITMAPMODE_MODEL_BILLBOARD, bool vFlipped=true_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

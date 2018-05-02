@@ -156,14 +156,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int cameraToWorld()
+###glm::vec3 cameraToWorld(CameraXYZ, &viewport)
 
 <!--
-_syntax: cameraToWorld()_
+_syntax: cameraToWorld(CameraXYZ, &viewport)_
 _name: cameraToWorld_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
-_parameters: _
+_parameters: glm::vec3 CameraXYZ, const ofRectangle &viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -176,7 +176,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\todo cameraToWorld()
 
 
 
@@ -192,14 +192,14 @@ When you have a position in camera coordinates you can get what it would be in w
 
 <!----------------------------------------------------------------------------->
 
-###int cameraToWorld()
+###glm::vec3 cameraToWorld(CameraXYZ)
 
 <!--
-_syntax: cameraToWorld()_
+_syntax: cameraToWorld(CameraXYZ)_
 _name: cameraToWorld_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
-_parameters: _
+_parameters: glm::vec3 CameraXYZ_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -606,12 +606,12 @@ This allows you to get the image plane distance from any viewport passed in. By 
 
 <!----------------------------------------------------------------------------->
 
-###int getLensOffset()
+###glm::vec2 getLensOffset()
 
 <!--
 _syntax: getLensOffset()_
 _name: getLensOffset_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -653,12 +653,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getModelViewMatrix()
+###glm::mat4 getModelViewMatrix()
 
 <!--
 _syntax: getModelViewMatrix()_
 _name: getModelViewMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -691,14 +691,14 @@ Access to the projection matrix.
 
 <!----------------------------------------------------------------------------->
 
-###int getModelViewProjectionMatrix()
+###glm::mat4 getModelViewProjectionMatrix(&viewport)
 
 <!--
-_syntax: getModelViewProjectionMatrix()_
+_syntax: getModelViewProjectionMatrix(&viewport)_
 _name: getModelViewProjectionMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
-_parameters: _
+_parameters: const ofRectangle &viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -711,7 +711,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\todo getModelViewProjectionMatrix()
 
 
 
@@ -727,12 +727,12 @@ Access to the projection ModelViewProjectionMatrix.
 
 <!----------------------------------------------------------------------------->
 
-###int getModelViewProjectionMatrix()
+###glm::mat4 getModelViewProjectionMatrix()
 
 <!--
 _syntax: getModelViewProjectionMatrix()_
 _name: getModelViewProjectionMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -835,12 +835,12 @@ Get whether the camera is in orthographic mode.
 
 <!----------------------------------------------------------------------------->
 
-###int getProjectionMatrix()
+###glm::mat4 getProjectionMatrix()
 
 <!--
 _syntax: getProjectionMatrix()_
 _name: getProjectionMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -855,7 +855,9 @@ _advanced: False_
 
 _inlined_description: _
 
+Access the projection matrix.
 
+Returns: the current 4x4 projection matrix.
 
 
 
@@ -871,14 +873,14 @@ Access to the projection matrix.
 
 <!----------------------------------------------------------------------------->
 
-###int getProjectionMatrix()
+###glm::mat4 getProjectionMatrix(&viewport)
 
 <!--
-_syntax: getProjectionMatrix()_
+_syntax: getProjectionMatrix(&viewport)_
 _name: getProjectionMatrix_
-_returns: int_
+_returns: glm::mat4_
 _returns_description: _
-_parameters: _
+_parameters: const ofRectangle &viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1051,14 +1053,14 @@ The default camera is positioned at (0, 0, 0) with a 60 degree field of view.  I
 
 <!----------------------------------------------------------------------------->
 
-###int screenToWorld()
+###glm::vec3 screenToWorld(ScreenXYZ, &viewport)
 
 <!--
-_syntax: screenToWorld()_
+_syntax: screenToWorld(ScreenXYZ, &viewport)_
 _name: screenToWorld_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
-_parameters: _
+_parameters: glm::vec3 ScreenXYZ, const ofRectangle &viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1071,7 +1073,16 @@ _advanced: False_
 
 _inlined_description: _
 
+Obtain the coordinates, in the 3D world, of a 2D point presumed to be on your screen.
 
+Takes a pixel location on your screen, encoded in an ofVec3f,
+and returns (also as an ofVec3f) the 3D world coordinates of that point.
+You'll also need to specify a Z value when providing your screen point.
+This Z value is interpreted as a distance into or away from the screen.
+
+
+Parameters:
+ScreenXYZ A point on your screen, whose 3D world coordinates you wish to know.
 
 
 
@@ -1087,14 +1098,14 @@ When you have a position in screen coordinates you can get what it would be in w
 
 <!----------------------------------------------------------------------------->
 
-###int screenToWorld()
+###glm::vec3 screenToWorld(ScreenXYZ)
 
 <!--
-_syntax: screenToWorld()_
+_syntax: screenToWorld(ScreenXYZ)_
 _name: screenToWorld_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
-_parameters: _
+_parameters: glm::vec3 ScreenXYZ_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1300,7 +1311,7 @@ _syntax: setLensOffset(&lensOffset)_
 _name: setLensOffset_
 _returns: void_
 _returns_description: _
-_parameters: const int &lensOffset_
+_parameters: const glm::vec2 &lensOffset_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1459,7 +1470,7 @@ _syntax: setupOffAxisViewPortal(&topLeft, &bottomLeft, &bottomRight)_
 _name: setupOffAxisViewPortal_
 _returns: void_
 _returns_description: _
-_parameters: const int &topLeft, const int &bottomLeft, const int &bottomRight_
+_parameters: const glm::vec3 &topLeft, const glm::vec3 &bottomLeft, const glm::vec3 &bottomRight_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1495,7 +1506,7 @@ _syntax: setupPerspective(vFlip = true, fov, nearDist, farDist, &lensOffset)_
 _name: setupPerspective_
 _returns: void_
 _returns_description: _
-_parameters: bool vFlip=true, float fov, float nearDist, float farDist, const int &lensOffset_
+_parameters: bool vFlip=true, float fov, float nearDist, float farDist, const glm::vec2 &lensOffset_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1526,14 +1537,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int worldToCamera()
+###glm::vec3 worldToCamera(WorldXYZ, &viewport)
 
 <!--
-_syntax: worldToCamera()_
+_syntax: worldToCamera(WorldXYZ, &viewport)_
 _name: worldToCamera_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
-_parameters: _
+_parameters: glm::vec3 WorldXYZ, const ofRectangle &viewport_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\todo worldToCamera()
+
+
+
+
+
+_description: _
+
+When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###glm::vec3 worldToCamera(WorldXYZ)
+
+<!--
+_syntax: worldToCamera(WorldXYZ)_
+_name: worldToCamera_
+_returns: glm::vec3_
+_returns_description: _
+_parameters: glm::vec3 WorldXYZ_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1562,50 +1609,14 @@ When you have a position in world coordinates you can get what it would be in ca
 
 <!----------------------------------------------------------------------------->
 
-###int worldToCamera()
+###glm::vec3 worldToScreen(WorldXYZ, &viewport)
 
 <!--
-_syntax: worldToCamera()_
-_name: worldToCamera_
-_returns: int_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-When you have a position in world coordinates you can get what it would be in camera coordinates, transforming it using the ofCamera.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int worldToScreen()
-
-<!--
-_syntax: worldToScreen()_
+_syntax: worldToScreen(WorldXYZ, &viewport)_
 _name: worldToScreen_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
-_parameters: _
+_parameters: glm::vec3 WorldXYZ, const ofRectangle &viewport_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1618,7 +1629,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Obtain the screen coordinates of a point in the 3D world.
 
+Takes an (X,Y,Z) point in your 3D world, encoded as an ofVec3f,
+and returns the location (also as an ofVec3f) where this point would
+appear on your (two-dimensional) display. The screen position's "Z
+coordinate" is set to be the same as your camera's.
+
+
+Parameters:
+WorldXYZ A 3D point in the world, whose screen coordinates you wish to know.
+viewport (Optional) A viewport. The default is ofGetCurrentViewport().
+
+Returns: An ofVec3f containing the screen coordinates of your 3D point of interest.
 
 
 
@@ -1634,14 +1657,14 @@ When you have a position in world coordinates you can get what it would be in sc
 
 <!----------------------------------------------------------------------------->
 
-###int worldToScreen()
+###glm::vec3 worldToScreen(WorldXYZ)
 
 <!--
-_syntax: worldToScreen()_
+_syntax: worldToScreen(WorldXYZ)_
 _name: worldToScreen_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
-_parameters: _
+_parameters: glm::vec3 WorldXYZ_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

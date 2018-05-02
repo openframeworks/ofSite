@@ -177,12 +177,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getResolution()
+###glm::vec3 getResolution()
 
 <!--
 _syntax: getResolution()_
 _name: getResolution_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -357,14 +357,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getSideMesh()
+###ofMesh getSideMesh(sideIndex)
 
 <!--
-_syntax: getSideMesh()_
+_syntax: getSideMesh(sideIndex)_
 _name: getSideMesh_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
-_parameters: _
+_parameters: int sideIndex_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -393,12 +393,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getSize()
+###glm::vec3 getSize()
 
 <!--
 _syntax: getSize()_
 _name: getSize_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_

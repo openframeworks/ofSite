@@ -144,7 +144,7 @@ _syntax: allocate(&data, usage)_
 _name: allocate_
 _returns: void_
 _returns_description: _
-_parameters: const ofPixels_< T > &data, GLenum usage_
+_parameters: const int &data, GLenum usage_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -180,7 +180,7 @@ _syntax: allocate(&data, usage)_
 _name: allocate_
 _returns: void_
 _returns_description: _
-_parameters: const int &data, GLenum usage_
+_parameters: const ofPixels_< T > &data, GLenum usage_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -728,7 +728,7 @@ _syntax: setData(&data, usage)_
 _name: setData_
 _returns: void_
 _returns_description: _
-_parameters: const ofPixels_< T > &data, GLenum usage_
+_parameters: const int &data, GLenum usage_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -741,7 +741,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
+typed version of setData, same functionality but guesses the size from the size
+of the passed vector and size of the type
 
 
 
@@ -764,7 +765,7 @@ _syntax: setData(&data, usage)_
 _name: setData_
 _returns: void_
 _returns_description: _
-_parameters: const int &data, GLenum usage_
+_parameters: const ofPixels_< T > &data, GLenum usage_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -777,8 +778,7 @@ _advanced: False_
 
 _inlined_description: _
 
-typed version of setData, same functionality but guesses the size from the size
-of the passed vector and size of the type
+
 
 
 

@@ -991,42 +991,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getValue()
-
-<!--
-_syntax: getValue()_
-_name: getValue_
-_returns: string_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Returns the value of the current element in the ofXml.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###T getValue()
 
 <!--
@@ -1066,6 +1030,42 @@ or an attribute:
 ~~~~{.cpp}
 xml.exists("picture/pictures[2][@id]");
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string getValue()
+
+<!--
+_syntax: getValue()_
+_name: getValue_
+_returns: string_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Returns the value of the current element in the ofXml.
 
 
 

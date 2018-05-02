@@ -32,7 +32,7 @@ _syntax: drawArrow(&start, &end, headSize)_
 _name: drawArrow_
 _returns: void_
 _returns_description: _
-_parameters: const int &start, const int &end, float headSize_
+_parameters: const glm::vec3 &start, const glm::vec3 &end, float headSize_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -297,7 +297,7 @@ _syntax: drawBox(&position, width, height, depth)_
 _name: drawBox_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float width, float height, float depth_
+_parameters: const glm::vec3 &position, float width, float height, float depth_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -346,7 +346,7 @@ _syntax: drawBox(&position, size)_
 _name: drawBox_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float size_
+_parameters: const glm::vec3 &position, float size_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -499,7 +499,7 @@ _syntax: drawCone(&position, radius, height)_
 _name: drawCone_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float radius, float height_
+_parameters: const glm::vec3 &position, float radius, float height_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -643,7 +643,7 @@ _syntax: drawCylinder(&position, radius, height)_
 _name: drawCylinder_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float radius, float height_
+_parameters: const glm::vec3 &position, float radius, float height_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -859,7 +859,7 @@ _syntax: drawIcoSphere(&position, radius)_
 _name: drawIcoSphere_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float radius_
+_parameters: const glm::vec3 &position, float radius_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1003,7 +1003,7 @@ _syntax: drawPlane(&position, width, height)_
 _name: drawPlane_
 _returns: void_
 _returns_description: _
-_parameters: int &position, float width, float height_
+_parameters: glm::vec3 &position, float width, float height_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1183,7 +1183,7 @@ _syntax: drawSphere(&position, radius)_
 _name: drawSphere_
 _returns: void_
 _returns_description: _
-_parameters: const int &position, float radius_
+_parameters: const glm::vec3 &position, float radius_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1212,12 +1212,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getBoxResolution()
+###glm::vec3 getBoxResolution()
 
 <!--
 _syntax: getBoxResolution()_
 _name: getBoxResolution_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1248,12 +1248,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getConeResolution()
+###glm::vec3 getConeResolution()
 
 <!--
 _syntax: getConeResolution()_
 _name: getConeResolution_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1293,12 +1293,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getCylinderResolution()
+###glm::vec3 getCylinderResolution()
 
 <!--
 _syntax: getCylinderResolution()_
 _name: getCylinderResolution_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1365,12 +1365,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getPlaneResolution()
+###glm::vec2 getPlaneResolution()
 
 <!--
 _syntax: getPlaneResolution()_
 _name: getPlaneResolution_
-_returns: int_
+_returns: glm::vec2_
 _returns_description: _
 _parameters: _
 _access: public_

@@ -2352,43 +2352,7 @@ _syntax: setMesh(&mesh, usage)_
 _name: setMesh_
 _returns: void_
 _returns_description: _
-_parameters: const int &mesh, int usage_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setMesh(&mesh, usage, useColors, useTextures, useNormals)
-
-<!--
-_syntax: setMesh(&mesh, usage, useColors, useTextures, useNormals)_
-_name: setMesh_
-_returns: void_
-_returns_description: _
-_parameters: const int &mesh, int usage, bool useColors, bool useTextures, bool useNormals_
+_parameters: const ofMesh &mesh, int usage_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2420,6 +2384,42 @@ vbo.setMesh(mesh, GL_STATIC_DRAW);
 ~~~~
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setMesh(&mesh, usage, useColors, useTextures, useNormals)
+
+<!--
+_syntax: setMesh(&mesh, usage, useColors, useTextures, useNormals)_
+_name: setMesh_
+_returns: void_
+_returns_description: _
+_parameters: const ofMesh &mesh, int usage, bool useColors, bool useTextures, bool useNormals_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -2572,7 +2572,7 @@ _syntax: setNormalData(*normals, total, usage)_
 _name: setNormalData_
 _returns: void_
 _returns_description: _
-_parameters: const int *normals, int total, int usage_
+_parameters: const glm::vec3 *normals, int total, int usage_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2720,7 +2720,7 @@ _syntax: setTexCoordData(*texCoords, total, usage)_
 _name: setTexCoordData_
 _returns: void_
 _returns_description: _
-_parameters: const int *texCoords, int total, int usage_
+_parameters: const glm::vec2 *texCoords, int total, int usage_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2906,7 +2906,7 @@ _syntax: setVertexData(*verts, total, usage)_
 _name: setVertexData_
 _returns: void_
 _returns_description: _
-_parameters: const int *verts, int total, int usage_
+_parameters: const glm::vec3 *verts, int total, int usage_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2942,7 +2942,7 @@ _syntax: setVertexData(*verts, total, usage)_
 _name: setVertexData_
 _returns: void_
 _returns_description: _
-_parameters: const int *verts, int total, int usage_
+_parameters: const glm::vec2 *verts, int total, int usage_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3158,7 +3158,7 @@ _syntax: updateMesh(&mesh)_
 _name: updateMesh_
 _returns: void_
 _returns_description: _
-_parameters: const int &mesh_
+_parameters: const ofMesh &mesh_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3266,7 +3266,7 @@ _syntax: updateNormalData(*normals, total)_
 _name: updateNormalData_
 _returns: void_
 _returns_description: _
-_parameters: const int *normals, int total_
+_parameters: const glm::vec3 *normals, int total_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3374,7 +3374,7 @@ _syntax: updateTexCoordData(*texCoords, total)_
 _name: updateTexCoordData_
 _returns: void_
 _returns_description: _
-_parameters: const int *texCoords, int total_
+_parameters: const glm::vec2 *texCoords, int total_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3518,7 +3518,7 @@ _syntax: updateVertexData(*verts, total)_
 _name: updateVertexData_
 _returns: void_
 _returns_description: _
-_parameters: const int *verts, int total_
+_parameters: const glm::vec3 *verts, int total_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3554,7 +3554,7 @@ _syntax: updateVertexData(*verts, total)_
 _name: updateVertexData_
 _returns: void_
 _returns_description: _
-_parameters: const int *verts, int total_
+_parameters: const glm::vec2 *verts, int total_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

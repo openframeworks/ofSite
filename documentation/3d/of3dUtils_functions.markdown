@@ -22,7 +22,7 @@ _syntax: ofDrawArrow(&start, &end, headSize = 0.05f)_
 _name: ofDrawArrow_
 _returns: void_
 _returns_description: _
-_parameters: const int &start, const int &end, float headSize=0.05f_
+_parameters: const glm::vec3 &start, const glm::vec3 &end, float headSize=0.05f_
 _version_started: _
 _version_deprecated: _
 _summary: _

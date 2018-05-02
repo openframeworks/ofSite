@@ -1989,7 +1989,43 @@ _syntax: ofVec2f(&v)_
 _name: ofVec2f_
 _returns: _
 _returns_description: _
-_parameters: const int &v_
+_parameters: const glm::vec2 &v_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\}
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec2f(&v)
+
+<!--
+_syntax: ofVec2f(&v)_
+_name: ofVec2f_
+_returns: _
+_returns_description: _
+_parameters: const glm::vec3 &v_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2025,43 +2061,7 @@ _syntax: ofVec2f(&v)_
 _name: ofVec2f_
 _returns: _
 _returns_description: _
-_parameters: const int &v_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec2f(&v)
-
-<!--
-_syntax: ofVec2f(&v)_
-_name: ofVec2f_
-_returns: _
-_returns_description: _
-_parameters: const int &v_
+_parameters: const glm::vec4 &v_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

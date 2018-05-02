@@ -61,12 +61,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getBackground()
+###ofMesh getBackground()
 
 <!--
 _syntax: getBackground()_
 _name: getBackground_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
 _parameters: _
 _access: private_
@@ -133,12 +133,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getColorPoint()
+###ofMesh getColorPoint()
 
 <!--
 _syntax: getColorPoint()_
 _name: getColorPoint_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
 _parameters: _
 _access: private_
@@ -241,12 +241,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getColorScaleBar()
+###ofMesh getColorScaleBar()
 
 <!--
 _syntax: getColorScaleBar()_
 _name: getColorScaleBar_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
 _parameters: _
 _access: private_
@@ -277,12 +277,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getColorWheel()
+###ofMesh getColorWheel()
 
 <!--
 _syntax: getColorWheel()_
 _name: getColorWheel_
-_returns: int_
+_returns: ofMesh_
 _returns_description: _
 _parameters: _
 _access: private_

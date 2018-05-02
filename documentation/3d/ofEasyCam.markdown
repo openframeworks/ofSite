@@ -744,12 +744,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const int & getUpAxis()
+###const glm::vec3 & getUpAxis()
 
 <!--
 _syntax: getUpAxis()_
 _name: getUpAxis_
-_returns: const int &_
+_returns: const glm::vec3 &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1428,7 +1428,7 @@ _syntax: setRotationSensitivity(&sensitivity)_
 _name: setRotationSensitivity_
 _returns: void_
 _returns_description: _
-_parameters: const int &sensitivity_
+_parameters: const glm::vec3 &sensitivity_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1503,7 +1503,7 @@ _syntax: setTarget(&target)_
 _name: setTarget_
 _returns: void_
 _returns_description: _
-_parameters: const int &target_
+_parameters: const glm::vec3 &target_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1624,7 +1624,7 @@ _syntax: setTranslationSensitivity(&sensitivity)_
 _name: setTranslationSensitivity_
 _returns: void_
 _returns_description: _
-_parameters: const int &sensitivity_
+_parameters: const glm::vec3 &sensitivity_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1660,7 +1660,7 @@ _syntax: setUpAxis(&up)_
 _name: setUpAxis_
 _returns: void_
 _returns_description: _
-_parameters: const int &up_
+_parameters: const glm::vec3 &up_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1690,12 +1690,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int up()
+###glm::vec3 up()
 
 <!--
 _syntax: up()_
 _name: up_
-_returns: int_
+_returns: glm::vec3_
 _returns_description: _
 _parameters: _
 _access: private_
@@ -1769,7 +1769,7 @@ _syntax: updateMouse(&mouse)_
 _name: updateMouse_
 _returns: void_
 _returns_description: _
-_parameters: const int &mouse_
+_parameters: const glm::vec2 &mouse_
 _access: private_
 _version_started: 0072_
 _version_deprecated: _
