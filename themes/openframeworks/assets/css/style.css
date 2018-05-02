@@ -1581,21 +1581,24 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
+    -webkit-animation-duration: 0.25s;
     animation-name: animatetop;
-	animation-duration: 0.4s;
+	animation-duration: 0.25s;
+	animation-timing-function: ease-out;
 	width: 600px;
+	font-size: 1.1em;
 }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+    from {top: -300px; opacity:0}
+    to {top: 0; opacity:1}
 }
 
+/* Add Animation */
 @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+    from {top: -300px; opacity: 0}
+	to {top: 0; opacity: 1}
 }
 
 /* The Close Button */
@@ -1608,7 +1611,7 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: #A617CE;
     text-decoration: none;
     cursor: pointer;
 }
@@ -1624,18 +1627,14 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 }
 
 .modal-body {
-	padding: 16px 16px;
+	padding: 16px 16px 0 16px;
 	text-align: left;
 }
 
 .modal-footer {
-    padding: 2px 16px;
+    padding: 4px 16px 24px 16px;
     background-color: white;
     color: white;
-}
-
-/* Add Animation */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+	font-size: 1.2em;
+	text-align: center;
 }
