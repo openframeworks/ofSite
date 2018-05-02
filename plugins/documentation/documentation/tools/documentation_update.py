@@ -30,7 +30,7 @@ official_addons = [
                     "ofxThreadedImageLoader",
                     "ofxXmlSettings",
                   ]
-currentversion = "0.9.0"
+currentversion = "0.10.0"
 alternatives = {
                  'size_t': ['int', 'unsigned int', 'long', 'unsigned long'],
                  'filesystem::path': ['string'],
