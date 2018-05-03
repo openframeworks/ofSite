@@ -32,7 +32,7 @@ _syntax: ofxTCPSettings(_address, _port)_
 _name: ofxTCPSettings_
 _returns: _
 _returns_description: _
-_parameters: string _address, int _port_
+_parameters: int _address, int _port_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

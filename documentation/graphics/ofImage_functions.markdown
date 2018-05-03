@@ -87,6 +87,216 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool ofLoadImage(&pix, &buffer, &settings)
+
+<!--
+_syntax: ofLoadImage(&pix, &buffer, &settings)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofShortPixels &pix, const ofBuffer &buffer, const ofImageLoadSettings &settings_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofLoadImage(&pix, &buffer, &settings)
+
+<!--
+_syntax: ofLoadImage(&pix, &buffer, &settings)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofFloatPixels &pix, const ofBuffer &buffer, const ofImageLoadSettings &settings_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofLoadImage(&pix, &buffer, &settings)
+
+<!--
+_syntax: ofLoadImage(&pix, &buffer, &settings)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofPixels &pix, const ofBuffer &buffer, const ofImageLoadSettings &settings_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofLoadImage(&pix, &path, &settings)
+
+<!--
+_syntax: ofLoadImage(&pix, &path, &settings)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofShortPixels &pix, const filesystem::path &path, const ofImageLoadSettings &settings_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofLoadImage(&pix, &path, &settings)
+
+<!--
+_syntax: ofLoadImage(&pix, &path, &settings)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofFloatPixels &pix, const filesystem::path &path, const ofImageLoadSettings &settings_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofLoadImage(&pix, &path, &settings)
+
+<!--
+_syntax: ofLoadImage(&pix, &path, &settings)_
+_name: ofLoadImage_
+_returns: bool_
+_returns_description: _
+_parameters: ofPixels &pix, const filesystem::path &path, const ofImageLoadSettings &settings_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\todo Needs documentation.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool ofLoadImage(&tex, &buffer, &settings)
 
 <!--
@@ -157,14 +367,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofLoadImage(&pix, &buffer, &settings)
+###bool ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)
 
 <!--
-_syntax: ofLoadImage(&pix, &buffer, &settings)_
-_name: ofLoadImage_
+_syntax: ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)_
+_name: ofSaveImage_
 _returns: bool_
 _returns_description: _
-_parameters: ofShortPixels &pix, const ofBuffer &buffer, const ofImageLoadSettings &settings_
+_parameters: const ofShortPixels &pix, ofBuffer &buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -177,181 +387,6 @@ _advanced: False_
 _inlined_description: _
 
 
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofLoadImage(&pix, &path, &settings)
-
-<!--
-_syntax: ofLoadImage(&pix, &path, &settings)_
-_name: ofLoadImage_
-_returns: bool_
-_returns_description: _
-_parameters: ofShortPixels &pix, const filesystem::path &path, const ofImageLoadSettings &settings_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofLoadImage(&pix, &buffer, &settings)
-
-<!--
-_syntax: ofLoadImage(&pix, &buffer, &settings)_
-_name: ofLoadImage_
-_returns: bool_
-_returns_description: _
-_parameters: ofFloatPixels &pix, const ofBuffer &buffer, const ofImageLoadSettings &settings_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofLoadImage(&pix, &path, &settings)
-
-<!--
-_syntax: ofLoadImage(&pix, &path, &settings)_
-_name: ofLoadImage_
-_returns: bool_
-_returns_description: _
-_parameters: ofFloatPixels &pix, const filesystem::path &path, const ofImageLoadSettings &settings_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofLoadImage(&pix, &buffer, &settings)
-
-<!--
-_syntax: ofLoadImage(&pix, &buffer, &settings)_
-_name: ofLoadImage_
-_returns: bool_
-_returns_description: _
-_parameters: ofPixels &pix, const ofBuffer &buffer, const ofImageLoadSettings &settings_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofLoadImage(&pix, &path, &settings)
-
-<!--
-_syntax: ofLoadImage(&pix, &path, &settings)_
-_name: ofLoadImage_
-_returns: bool_
-_returns_description: _
-_parameters: ofPixels &pix, const filesystem::path &path, const ofImageLoadSettings &settings_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-\todo Needs documentation.
 
 
 
@@ -374,7 +409,42 @@ _syntax: ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel =
 _name: ofSaveImage_
 _returns: bool_
 _returns_description: _
-_parameters: const ofShortPixels &pix, ofBuffer &buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
+_parameters: const ofFloatPixels &pix, ofBuffer &buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)
+
+<!--
+_syntax: ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)_
+_name: ofSaveImage_
+_returns: bool_
+_returns_description: _
+_parameters: const ofPixels &pix, ofBuffer &buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -437,41 +507,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)
-
-<!--
-_syntax: ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)_
-_name: ofSaveImage_
-_returns: bool_
-_returns_description: _
-_parameters: const ofFloatPixels &pix, ofBuffer &buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool ofSaveImage(&pix, &path, qualityLevel = OF_IMAGE_QUALITY_BEST)
 
 <!--
@@ -492,41 +527,6 @@ _advanced: False_
 _inlined_description: _
 
 \todo Needs documentation.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)
-
-<!--
-_syntax: ofSaveImage(&pix, &buffer, format = OF_IMAGE_FORMAT_PNG, qualityLevel = OF_IMAGE_QUALITY_BEST)_
-_name: ofSaveImage_
-_returns: bool_
-_returns_description: _
-_parameters: const ofPixels &pix, ofBuffer &buffer, ofImageFormat format=OF_IMAGE_FORMAT_PNG, ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 
@@ -577,6 +577,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###string ofToString(&imgType)
+
+<!--
+_syntax: ofToString(&imgType)_
+_name: ofToString_
+_returns: string_
+_returns_description: _
+_parameters: const ofImageType &imgType_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string ofToString(&v)
 
 <!--
@@ -611,45 +646,11 @@ Example:
 
 \tparam T The data type of the value to convert to a string.
 
-Parameters:
+**Parameters:**
+
 value The value to convert to a string.
 
-Returns: A string representing the value or an empty string on failure.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofToString(&imgType)
-
-<!--
-_syntax: ofToString(&imgType)_
-_name: ofToString_
-_returns: string_
-_returns_description: _
-_parameters: const ofImageType &imgType_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
+**Returns**: A string representing the value or an empty string on failure.
 
 
 

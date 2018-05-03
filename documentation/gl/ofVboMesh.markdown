@@ -463,14 +463,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofVboMesh()
+### ofVboMesh(&mom)
 
 <!--
-_syntax: ofVboMesh()_
+_syntax: ofVboMesh(&mom)_
 _name: ofVboMesh_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofMesh &mom_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -499,14 +499,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofVboMesh(&mom)
+### ofVboMesh()
 
 <!--
-_syntax: ofVboMesh(&mom)_
+_syntax: ofVboMesh()_
 _name: ofVboMesh_
 _returns: _
 _returns_description: _
-_parameters: const ofMesh &mom_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _

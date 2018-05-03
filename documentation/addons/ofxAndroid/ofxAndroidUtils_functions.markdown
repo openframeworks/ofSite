@@ -260,6 +260,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool ofxAndroidCheckPermission(permission)
+
+<!--
+_syntax: ofxAndroidCheckPermission(permission)_
+_name: ofxAndroidCheckPermission_
+_returns: bool_
+_returns_description: _
+_parameters: ofxAndroidPermission permission_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool ofxAndroidCheckSDCardMounted()
 
 <!--
@@ -785,6 +820,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofxAndroidPauseApp()
+
+<!--
+_syntax: ofxAndroidPauseApp()_
+_name: ofxAndroidPauseApp_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int ofxAndroidProgressBox(msg)
 
 <!--
@@ -829,6 +899,41 @@ _returns: string_
 _returns_description: _
 _parameters: _
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidRequestPermission(permission)
+
+<!--
+_syntax: ofxAndroidRequestPermission(permission)_
+_name: ofxAndroidRequestPermission_
+_returns: void_
+_returns_description: _
+_parameters: ofxAndroidPermission permission_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -995,6 +1100,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool ofxJavaCallBoolMethod(object, classID, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallBoolMethod(object, classID, methodName, methodSignature)_
+_name: ofxJavaCallBoolMethod_
+_returns: bool_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool ofxJavaCallBoolMethod(object, classID, methodName, methodSignature, args)
 
 <!--
@@ -1004,6 +1144,76 @@ _returns: bool_
 _returns_description: _
 _parameters: int object, int classID, string methodName, string methodSignature, va_list args_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofxJavaCallBoolMethod(object, className, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallBoolMethod(object, className, methodName, methodSignature)_
+_name: ofxJavaCallBoolMethod_
+_returns: bool_
+_returns_description: _
+_parameters: int object, string className, string methodName, string methodSignature_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofxJavaCallFloatMethod(object, classID, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallFloatMethod(object, classID, methodName, methodSignature)_
+_name: ofxJavaCallFloatMethod_
+_returns: float_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1065,6 +1275,76 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float ofxJavaCallFloatMethod(object, className, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallFloatMethod(object, className, methodName, methodSignature)_
+_name: ofxJavaCallFloatMethod_
+_returns: float_
+_returns_description: _
+_parameters: int object, string className, string methodName, string methodSignature_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxJavaCallIntMethod(object, classID, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallIntMethod(object, classID, methodName, methodSignature)_
+_name: ofxJavaCallIntMethod_
+_returns: int_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int ofxJavaCallIntMethod(object, classID, methodName, methodSignature, args)
 
 <!--
@@ -1100,6 +1380,76 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###int ofxJavaCallIntMethod(object, className, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallIntMethod(object, className, methodName, methodSignature)_
+_name: ofxJavaCallIntMethod_
+_returns: int_
+_returns_description: _
+_parameters: int object, string className, string methodName, string methodSignature_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int64_t ofxJavaCallLongMethod(object, classID, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallLongMethod(object, classID, methodName, methodSignature)_
+_name: ofxJavaCallLongMethod_
+_returns: int64_t_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int64_t ofxJavaCallLongMethod(object, classID, methodName, methodSignature, args)
 
 <!--
@@ -1109,6 +1459,41 @@ _returns: int64_t_
 _returns_description: _
 _parameters: int object, int classID, string methodName, string methodSignature, va_list args_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int64_t ofxJavaCallLongMethod(object, className, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallLongMethod(object, className, methodName, methodSignature)_
+_name: ofxJavaCallLongMethod_
+_returns: int64_t_
+_returns_description: _
+_parameters: int object, string className, string methodName, string methodSignature_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1205,6 +1590,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofxJavaCallStaticVoidMethod(classID, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallStaticVoidMethod(classID, methodName, methodSignature)_
+_name: ofxJavaCallStaticVoidMethod_
+_returns: void_
+_returns_description: _
+_parameters: int classID, string methodName, string methodSignature_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofxJavaCallStaticVoidMethod(classID, methodName, methodSignature, args)
 
 <!--
@@ -1275,6 +1695,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofxJavaCallVoidMethod(object, classID, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallVoidMethod(object, classID, methodName, methodSignature)_
+_name: ofxJavaCallVoidMethod_
+_returns: void_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofxJavaCallVoidMethod(object, classID, methodName, methodSignature, args)
 
 <!--
@@ -1284,6 +1739,41 @@ _returns: void_
 _returns_description: _
 _parameters: int object, int classID, string methodName, string methodSignature, va_list args_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxJavaCallVoidMethod(object, className, methodName, methodSignature)
+
+<!--
+_syntax: ofxJavaCallVoidMethod(object, className, methodName, methodSignature)_
+_name: ofxJavaCallVoidMethod_
+_returns: void_
+_returns_description: _
+_parameters: int object, string className, string methodName, string methodSignature_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1354,6 +1844,41 @@ _returns: string_
 _returns_description: _
 _parameters: int classID_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxJavaGetJString(&str, &jstr)
+
+<!--
+_syntax: ofxJavaGetJString(&str, &jstr)_
+_name: ofxJavaGetJString_
+_returns: void_
+_returns_description: _
+_parameters: const string &str, int &jstr_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1494,6 +2019,41 @@ _returns: int_
 _returns_description: _
 _parameters: _
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxJstringToString(*env, jstr, &str)
+
+<!--
+_syntax: ofxJstringToString(*env, jstr, &str)_
+_name: ofxJstringToString_
+_returns: void_
+_returns_description: _
+_parameters: int *env, int jstr, string &str_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

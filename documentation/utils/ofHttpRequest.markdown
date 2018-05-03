@@ -67,14 +67,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofHttpRequest()
+### ofHttpRequest(&url, &name, saveTo = false)
 
 <!--
-_syntax: ofHttpRequest()_
+_syntax: ofHttpRequest(&url, &name, saveTo = false)_
 _name: ofHttpRequest_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const string &url, const string &name, bool saveTo=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -103,14 +103,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofHttpRequest(&url, &name, saveTo = false)
+### ofHttpRequest()
 
 <!--
-_syntax: ofHttpRequest(&url, &name, saveTo = false)_
+_syntax: ofHttpRequest()_
 _name: ofHttpRequest_
 _returns: _
 _returns_description: _
-_parameters: const string &url, const string &name, bool saveTo=false_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _

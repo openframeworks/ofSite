@@ -642,14 +642,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(radius, height, radiusSegments, heightSegments, capSegments = 2, bCapped = true, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
+###void set(radius, height, bCapped = true)
 
 <!--
-_syntax: set(radius, height, radiusSegments, heightSegments, capSegments = 2, bCapped = true, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
+_syntax: set(radius, height, bCapped = true)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float radius, float height, int radiusSegments, int heightSegments, int capSegments=2, bool bCapped=true, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
+_parameters: float radius, float height, bool bCapped=true_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -678,14 +678,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(radius, height, bCapped = true)
+###void set(radius, height, radiusSegments, heightSegments, capSegments = 2, bCapped = true, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
 
 <!--
-_syntax: set(radius, height, bCapped = true)_
+_syntax: set(radius, height, radiusSegments, heightSegments, capSegments = 2, bCapped = true, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float radius, float height, bool bCapped=true_
+_parameters: float radius, float height, int radiusSegments, int heightSegments, int capSegments=2, bool bCapped=true, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

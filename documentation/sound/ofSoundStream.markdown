@@ -32,7 +32,7 @@ Some platforms (iOS, for example) will expose additional platform-specific
 sound stream functionality. See the platform-specific examples for demos.
 
 
-Warning: Be aware that audioIn() and audioOut() will be called on a different
+**Warning**: Be aware that audioIn() and audioOut() will be called on a different
 thread from your app's update() / draw() thread.
 
 
@@ -156,14 +156,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getDeviceList()
+###vector< ofSoundDevice > getDeviceList(api = DEFAULT)
 
 <!--
-_syntax: getDeviceList()_
+_syntax: getDeviceList(api = DEFAULT)_
 _name: getDeviceList_
-_returns: int_
+_returns: vector< ofSoundDevice >_
 _returns_description: _
-_parameters: _
+_parameters: ofSoundDevice::Api api=DEFAULT_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -192,14 +192,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getMatchingDevices()
+###vector< ofSoundDevice > getMatchingDevices(&name, inChannels, outChannels, api = DEFAULT)
 
 <!--
-_syntax: getMatchingDevices()_
+_syntax: getMatchingDevices(&name, inChannels, outChannels, api = DEFAULT)_
 _name: getMatchingDevices_
-_returns: int_
+_returns: vector< ofSoundDevice >_
 _returns_description: _
-_parameters: _
+_parameters: const string &name, unsigned int inChannels, unsigned int outChannels, ofSoundDevice::Api api=DEFAULT_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

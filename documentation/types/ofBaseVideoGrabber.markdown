@@ -48,7 +48,7 @@ _inlined_description: _
 
 Get the video grabber's height.
 
-Returns: the video grabber's height.
+**Returns**: the video grabber's height.
 
 
 
@@ -90,7 +90,7 @@ Get the video grabber's internal ofTexture pointer if available.
 upload video grabber pixels directly to an ofTexture.
 
 
-Returns: the internal ofTexture pointer or nullptr if not available.
+**Returns**: the internal ofTexture pointer or nullptr if not available.
 
 
 
@@ -128,7 +128,7 @@ _inlined_description: _
 
 Get the video grabber's width.
 
-Returns: the video grabber's width.
+**Returns**: the video grabber's width.
 
 
 
@@ -144,12 +144,12 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int listDevices()
+###vector< ofVideoDevice > listDevices()
 
 <!--
 _syntax: listDevices()_
 _name: listDevices_
-_returns: int_
+_returns: vector< ofVideoDevice >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -166,7 +166,7 @@ _inlined_description: _
 
 Get a list of available video grabber devices.
 
-Returns: a std::vector of ofVideoDevice objects.
+**Returns**: a std::vector of ofVideoDevice objects.
 
 
 
@@ -208,7 +208,8 @@ Many video grabbers support user-specified frame rates.  This frame rate
 should be considered a hint for the video grabber and is not guaranteed.
 
 
-Parameters:
+**Parameters:**
+
 framerate the desired frame rate.
 
 
@@ -252,7 +253,8 @@ device ID information should be available to the user via the
 listDevices() method.
 
 
-Parameters:
+**Parameters:**
+
 deviceID The device ID provided by listDevices().
 
 
@@ -291,7 +293,8 @@ _inlined_description: _
 
 Set the video grabber's hardware verbosity level.
 
-Parameters:
+**Parameters:**
+
 bTalkToMe true if verbose grabber logging feedback is required.
 
 
@@ -336,11 +339,13 @@ Users can check the actual width and height by calling getWidth() and
 getHeight() respectively after a successful setup.
 
 
-Parameters:
+**Parameters:**
+
 w the requested width.
+
 h the requested height.
 
-Returns: true if the video grabber was set up successfully.
+**Returns**: true if the video grabber was set up successfully.
 
 
 

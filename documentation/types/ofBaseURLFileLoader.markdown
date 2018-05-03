@@ -86,7 +86,8 @@ _inlined_description: _
 make an HTTP request
 blocks until a response is returned or the request times out
 
-Parameters:
+**Parameters:**
+
 url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
 \return HTTP response on success or failure
 
@@ -127,8 +128,10 @@ _inlined_description: _
 make an asynchronous HTTP request
 will not block, placed in a queue and run using a background thread
 
-Parameters:
+**Parameters:**
+
 url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+
 name optional key to use when sorting requests
 \return unique id for the active HTTP request
 
@@ -242,7 +245,8 @@ _inlined_description: _
 
 remove an active HTTP request from the queue
 
-Parameters:
+**Parameters:**
+
 unique HTTP request id
 
 
@@ -282,11 +286,13 @@ _inlined_description: _
 make an asynchronous HTTP request and save the response data to a file
 will not block, placed in a queue and run using a background thread
 
-Parameters:
+**Parameters:**
+
 url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+
 path file path to save to
 
-Returns: unique id for the active HTTP request
+**Returns**: unique id for the active HTTP request
 
 
 
@@ -325,8 +331,10 @@ _inlined_description: _
 make an HTTP request and save the response data to a file
 blocks until a response is returned or the request times out
 
-Parameters:
+**Parameters:**
+
 url HTTP url to request, ie. "http://somewebsite.com/someapi/someimage.jpg"
+
 path file path to save to
 \return HTTP response on success or failure
 

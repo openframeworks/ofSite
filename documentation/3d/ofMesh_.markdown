@@ -179,7 +179,7 @@ _syntax: addColors(&cols)_
 _name: addColors_
 _returns: void_
 _returns_description: _
-_parameters: const int &cols_
+_parameters: const vector< C > &cols_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -306,7 +306,7 @@ _syntax: addIndices(&inds)_
 _name: addIndices_
 _returns: void_
 _returns_description: _
-_parameters: const int &inds_
+_parameters: const vector< ofIndexType > &inds_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -424,7 +424,7 @@ _syntax: addNormals(&norms)_
 _name: addNormals_
 _returns: void_
 _returns_description: _
-_parameters: const int &norms_
+_parameters: const vector< N > &norms_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -540,7 +540,7 @@ _syntax: addTexCoords(&tCoords)_
 _name: addTexCoords_
 _returns: void_
 _returns_description: _
-_parameters: const int &tCoords_
+_parameters: const vector< T > &tCoords_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -696,7 +696,7 @@ _syntax: addVertices(&verts)_
 _name: addVertices_
 _returns: void_
 _returns_description: _
-_parameters: const int &verts_
+_parameters: const vector< V > &verts_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -824,7 +824,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: an ofMesh representing an XYZ coordinate system.
+**Returns**: an ofMesh representing an XYZ coordinate system.
 
 
 
@@ -1750,7 +1750,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: a ofVec3f defining the centroid of all the vetices in the mesh.
+**Returns**: a ofVec3f defining the centroid of all the vetices in the mesh.
 
 
 
@@ -1788,7 +1788,7 @@ _inlined_description: _
 
 Get the color at the index in the colors vector.
 
-Returns: the color at the index in the colors vector.
+**Returns**: the color at the index in the colors vector.
 
 
 
@@ -1804,50 +1804,12 @@ Returns the color at the index in the colors vector.
 
 <!----------------------------------------------------------------------------->
 
-###int & getColors()
+###vector< C > & getColors()
 
 <!--
 _syntax: getColors()_
 _name: getColors_
-_returns: int &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Use this if you plan to change the colors as part of this call as it will force a reset of the cache.
-
-Returns: the vector that contains all of the colors of the mesh, if it has any.
-
-
-
-
-
-_description: _
-
-Returns the vector that contains all of the colors of the mesh, if it has any. Use this if you plan to change the colors as part of this call as it will force a reset of the cache.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const int & getColors()
-
-<!--
-_syntax: getColors()_
-_name: getColors_
-_returns: const int &_
+_returns: vector< C > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -1862,7 +1824,9 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the vector that contains all of the colors of the mesh, if it has any. (read only)
+Use this if you plan to change the colors as part of this call as it will force a reset of the cache.
+
+**Returns**: the vector that contains all of the colors of the mesh, if it has any.
 
 
 
@@ -1871,6 +1835,42 @@ Returns: the vector that contains all of the colors of the mesh, if it has any. 
 _description: _
 
 Returns the vector that contains all of the colors of the mesh, if it has any. (read only)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const vector< C > & getColors()
+
+<!--
+_syntax: getColors()_
+_name: getColors_
+_returns: const vector< C > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+**Returns**: the vector that contains all of the colors of the mesh, if it has any. (read only)
+
+
+
+
+
+_description: _
+
+Returns the vector that contains all of the colors of the mesh, if it has any. Use this if you plan to change the colors as part of this call as it will force a reset of the cache.
 
 
 
@@ -1900,7 +1900,7 @@ _inlined_description: _
 
 Use this if you plan to change the colors as part of this call as it will force a reset of the cache.
 
-Returns: a pointer that contains all of the colors of the mesh, if it has any.
+**Returns**: a pointer that contains all of the colors of the mesh, if it has any.
 
 
 
@@ -1936,7 +1936,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: a pointer that contains all of the colors of the mesh, if it has any. (read only)
+**Returns**: a pointer that contains all of the colors of the mesh, if it has any. (read only)
 
 
 
@@ -1972,7 +1972,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the vector that contains all of the faces of the mesh. This isn't currently implemented.
+**Returns**: the vector that contains all of the faces of the mesh. This isn't currently implemented.
 
 
 
@@ -1988,14 +1988,14 @@ Returns the vector that contains all of the faces of the mesh. This isn't curren
 
 <!----------------------------------------------------------------------------->
 
-###int getFaceNormals()
+###vector< N > getFaceNormals(perVetex = false)
 
 <!--
-_syntax: getFaceNormals()_
+_syntax: getFaceNormals(perVetex = false)_
 _name: getFaceNormals_
-_returns: int_
+_returns: vector< N >_
 _returns_description: _
-_parameters: _
+_parameters: bool perVetex=false_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2013,7 +2013,7 @@ As a default it only calculates the normal for the face as a whole but
 by setting (perVertex = true) it will return the same normal value for
 each of the three vertices making up a face.
 
-Returns: a vector containing the calculated normals of each face in the mesh.
+**Returns**: a vector containing the calculated normals of each face in the mesh.
 
 
 
@@ -2049,7 +2049,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.
+**Returns**: the index from the index vector. Each index represents the index of the vertex in the vertices vector. This determines the way that the vertices are connected into the polgoynon type set in the primitiveMode.
 
 
 
@@ -2085,7 +2085,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: a pointer to the indices that the mesh contains.
+**Returns**: a pointer to the indices that the mesh contains.
 
 
 
@@ -2121,7 +2121,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: a pointer to the indices that the mesh contains.
+**Returns**: a pointer to the indices that the mesh contains.
 
 
 
@@ -2137,51 +2137,12 @@ Returns a pointer to the indices that the mesh contains.
 
 <!----------------------------------------------------------------------------->
 
-###int & getIndices()
+###vector< ofIndexType > & getIndices()
 
 <!--
 _syntax: getIndices()_
 _name: getIndices_
-_returns: int &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Use this if you plan to change the indices as part of this call as it
-will force a reset of the cache.
-
-Returns: the vector that contains all of the indices of the mesh, if it has any.
-
-
-
-
-
-_description: _
-
-Returns the vector that contains all of the indices of the mesh, if it has any. Use this if you plan to change the indices as part of this call as it will force a reset of the cache.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const int & getIndices()
-
-<!--
-_syntax: getIndices()_
-_name: getIndices_
-_returns: const int &_
+_returns: vector< ofIndexType > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2196,7 +2157,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the vector that contains all of the indices of the mesh, if it has any. (read only)
+Use this if you plan to change the indices as part of this call as it
+will force a reset of the cache.
+
+**Returns**: the vector that contains all of the indices of the mesh, if it has any.
 
 
 
@@ -2205,6 +2169,42 @@ Returns: the vector that contains all of the indices of the mesh, if it has any.
 _description: _
 
 Returns the vector that contains all of the indices of the mesh, if it has any. (read only)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const vector< ofIndexType > & getIndices()
+
+<!--
+_syntax: getIndices()_
+_name: getIndices_
+_returns: const vector< ofIndexType > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+**Returns**: the vector that contains all of the indices of the mesh, if it has any. (read only)
+
+
+
+
+
+_description: _
+
+Returns the vector that contains all of the indices of the mesh, if it has any. Use this if you plan to change the indices as part of this call as it will force a reset of the cache.
 
 
 
@@ -2234,7 +2234,7 @@ _inlined_description: _
 
 The new mesh includes the mesh mode, colors, textures, and normals of the original mesh (assuming any were added).
 
-Returns: a mesh made up of a range of indices from startIndex to the endIndex.
+**Returns**: a mesh made up of a range of indices from startIndex to the endIndex.
 
 
 
@@ -2307,7 +2307,7 @@ _advanced: False_
 _inlined_description: _
 
 \
-Returns: the primitive mode that the mesh is using.
+**Returns**: the primitive mode that the mesh is using.
 
 
 
@@ -2344,7 +2344,7 @@ _advanced: False_
 _inlined_description: _
 
 \
-Returns: the normal at the index in the normals vector.
+**Returns**: the normal at the index in the normals vector.
 
 
 
@@ -2360,52 +2360,12 @@ Returns the normal at the index in the normals vector.
 
 <!----------------------------------------------------------------------------->
 
-###int & getNormals()
+###vector< N > & getNormals()
 
 <!--
 _syntax: getNormals()_
 _name: getNormals_
-_returns: int &_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Use this if you plan to change the normals as part of this call as it
-will force a reset of the cache.
-
-Returns: the vector that contains all of the normals of the mesh,
-if it has any.
-
-
-
-
-
-_description: _
-
-Returns the vector that contains all of the normals of the mesh, if it has any. Use this if you plan to change the normals as part of this call as it will force a reset of the cache.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const int & getNormals()
-
-<!--
-_syntax: getNormals()_
-_name: getNormals_
-_returns: const int &_
+_returns: vector< N > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2420,8 +2380,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the vector that contains all of the normals of the mesh, if
-it has any. (read only)
+Use this if you plan to change the normals as part of this call as it
+will force a reset of the cache.
+
+**Returns**: the vector that contains all of the normals of the mesh,
+if it has any.
 
 
 
@@ -2430,6 +2393,43 @@ it has any. (read only)
 _description: _
 
 Returns the vector that contains all of the normals of the mesh, if it has any. (read only)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###const vector< N > & getNormals()
+
+<!--
+_syntax: getNormals()_
+_name: getNormals_
+_returns: const vector< N > &_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+**Returns**: the vector that contains all of the normals of the mesh, if
+it has any. (read only)
+
+
+
+
+
+_description: _
+
+Returns the vector that contains all of the normals of the mesh, if it has any. Use this if you plan to change the normals as part of this call as it will force a reset of the cache.
 
 
 
@@ -2457,7 +2457,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: a pointer to the normals that the mesh contains.
+**Returns**: a pointer to the normals that the mesh contains.
 
 
 
@@ -2493,7 +2493,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: a pointer to the normals that the mesh contains.
+**Returns**: a pointer to the normals that the mesh contains.
 
 
 
@@ -2529,7 +2529,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the size of the colors vector for the mesh.
+**Returns**: the size of the colors vector for the mesh.
 This will tell you how many colors are contained in the mesh.
 
 
@@ -2568,7 +2568,7 @@ _inlined_description: _
 
 This will tell you how many indices are contained in the mesh.
 
-Returns: the size of the indices vector for the mesh.
+**Returns**: the size of the indices vector for the mesh.
 
 
 
@@ -2606,7 +2606,7 @@ _inlined_description: _
 
 This will tell you how many normals are contained in the mesh.
 
-Returns: the size of the normals vector for the mesh.
+**Returns**: the size of the normals vector for the mesh.
 
 
 
@@ -2644,7 +2644,7 @@ _inlined_description: _
 
 This will tell you how many texture coordinates are contained in the mesh.
 
-Returns: the size of the texture coordinates vector for the mesh.
+**Returns**: the size of the texture coordinates vector for the mesh.
 
 
 
@@ -2680,7 +2680,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the size of the vertices vector for the mesh.
+**Returns**: the size of the vertices vector for the mesh.
 This will tell you how many vertices are contained in the mesh.
 
 
@@ -2717,7 +2717,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the Vec2f representing the texture coordinate.
+**Returns**: the Vec2f representing the texture coordinate.
 Because OF uses ARB textures these are in pixels rather than
 0-1 normalized coordinates.
 
@@ -2735,16 +2735,16 @@ Returns the Vec2f representing the texture coordinate. Because OF uses ARB textu
 
 <!----------------------------------------------------------------------------->
 
-###int & getTexCoords()
+###vector< T > & getTexCoords()
 
 <!--
 _syntax: getTexCoords()_
 _name: getTexCoords_
-_returns: int &_
+_returns: vector< T > &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2760,7 +2760,7 @@ Because OF uses ARB textures these are in pixels rather than 0-1 normalized coor
 Use this if you plan to change the texture coordinates as part of this
 call as it will force a reset of the cache.
 
-Returns: a vector of Vec2f representing the texture coordinates for the whole mesh.
+**Returns**: a vector of Vec2f representing the texture coordinates for the whole mesh.
 
 
 
@@ -2768,7 +2768,7 @@ Returns: a vector of Vec2f representing the texture coordinates for the whole me
 
 _description: _
 
-Returns a vector of Vec2f representing the texture coordinates for the whole mesh. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. Use this if you plan to change the texture coordinates as part of this call as it will force a reset of the cache.
+Returns a vector of Vec2f representing the texture coordinates for the whole mesh. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. (read only)
 
 
 
@@ -2776,16 +2776,16 @@ Returns a vector of Vec2f representing the texture coordinates for the whole mes
 
 <!----------------------------------------------------------------------------->
 
-###const int & getTexCoords()
+###const vector< T > & getTexCoords()
 
 <!--
 _syntax: getTexCoords()_
 _name: getTexCoords_
-_returns: const int &_
+_returns: const vector< T > &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2798,7 +2798,7 @@ _inlined_description: _
 
 Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates.
 
-Returns: a vector of Vec2f representing the texture coordinates for the whole mesh. (read only)
+**Returns**: a vector of Vec2f representing the texture coordinates for the whole mesh. (read only)
 
 
 
@@ -2806,7 +2806,7 @@ Returns: a vector of Vec2f representing the texture coordinates for the whole me
 
 _description: _
 
-Returns a vector of Vec2f representing the texture coordinates for the whole mesh. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. (read only)
+Returns a vector of Vec2f representing the texture coordinates for the whole mesh. Because OF uses ARB textures these are in pixels rather than 0-1 normalized coordinates. Use this if you plan to change the texture coordinates as part of this call as it will force a reset of the cache.
 
 
 
@@ -2834,7 +2834,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: a pointer to the texture coords that the mesh contains.
+**Returns**: a pointer to the texture coords that the mesh contains.
 
 
 
@@ -2886,12 +2886,12 @@ Get a pointer to the ofVec2f texture coordinates that the mesh contains.
 
 <!----------------------------------------------------------------------------->
 
-###const int & getUniqueFaces()
+###const vector<ofMeshFace_< V, N, C, T>  > & getUniqueFaces()
 
 <!--
 _syntax: getUniqueFaces()_
 _name: getUniqueFaces_
-_returns: const int &_
+_returns: const vector<ofMeshFace_< V, N, C, T>  > &_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -2906,7 +2906,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the mesh as a vector of unique ofMeshFace_s
+**Returns**: the mesh as a vector of unique ofMeshFace_s
 a list of triangles that do not share vertices or indices
 
 
@@ -2943,7 +2943,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the vertex at the index.
+**Returns**: the vertex at the index.
 
 
 
@@ -2959,16 +2959,16 @@ Returns the vertex at the index.
 
 <!----------------------------------------------------------------------------->
 
-###int & getVertices()
+###vector< V > & getVertices()
 
 <!--
 _syntax: getVertices()_
 _name: getVertices_
-_returns: int &_
+_returns: vector< V > &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 0.8.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2979,7 +2979,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the vector that contains all of the vertices of the mesh.
+**Returns**: the vector that contains all of the vertices of the mesh.
 
 
 
@@ -2995,16 +2995,16 @@ Returns the vector that contains all of the vertices of the mesh.
 
 <!----------------------------------------------------------------------------->
 
-###const int & getVertices()
+###const vector< V > & getVertices()
 
 <!--
 _syntax: getVertices()_
 _name: getVertices_
-_returns: const int &_
+_returns: const vector< V > &_
 _returns_description: _
 _parameters: _
 _access: public_
-_version_started: 007_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3015,7 +3015,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the vector that contains all of the vertices of the mesh.
+**Returns**: the vector that contains all of the vertices of the mesh.
 
 
 
@@ -3051,7 +3051,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: a pointer to the vertices that the mesh contains.
+**Returns**: a pointer to the vertices that the mesh contains.
 
 
 
@@ -3087,7 +3087,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: a pointer to the vertices that the mesh contains.
+**Returns**: a pointer to the vertices that the mesh contains.
 
 
 
@@ -3267,7 +3267,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: Whether the mesh has any vertices.
+**Returns**: Whether the mesh has any vertices.
 
 
 
@@ -3303,7 +3303,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: If the colors of the mesh have changed, been added or removed.
+**Returns**: If the colors of the mesh have changed, been added or removed.
 
 
 
@@ -3339,7 +3339,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: If the indices of the mesh have changed, been added or removed.
+**Returns**: If the indices of the mesh have changed, been added or removed.
 
 
 
@@ -3375,7 +3375,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: If the normals of the mesh have changed, been added or removed.
+**Returns**: If the normals of the mesh have changed, been added or removed.
 
 
 
@@ -3411,7 +3411,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: If the texture coords of the mesh have changed, been added or removed.
+**Returns**: If the texture coords of the mesh have changed, been added or removed.
 
 
 
@@ -3447,7 +3447,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: If the vertices of the mesh have changed, been added or removed.
+**Returns**: If the vertices of the mesh have changed, been added or removed.
 
 
 
@@ -3659,7 +3659,7 @@ _syntax: ofMesh_(mode, &verts)_
 _name: ofMesh__
 _returns: _
 _returns_description: _
-_parameters: ofPrimitiveMode mode, const int &verts_
+_parameters: ofPrimitiveMode mode, const vector< V > &verts_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -4034,14 +4034,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setFromTriangles(&tris, bUseFaceNormal = false)
+###void setFromTriangles(V, N, C, &tris, bUseFaceNormal = false)
 
 <!--
-_syntax: setFromTriangles(&tris, bUseFaceNormal = false)_
+_syntax: setFromTriangles(V, N, C, &tris, bUseFaceNormal = false)_
 _name: setFromTriangles_
 _returns: void_
 _returns_description: _
-_parameters: const int &tris, bool bUseFaceNormal=false_
+_parameters: const vector<ofMeshFace_< V, N, C, T>  > &tris, bool bUseFaceNormal=false_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

@@ -97,6 +97,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&rect)
+
+<!--
+_syntax: draw(&rect)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &rect_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw()
 
 <!--
@@ -141,42 +177,6 @@ _name: draw_
 _returns: void_
 _returns_description: _
 _parameters: float x, float y_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&rect)
-
-<!--
-_syntax: draw(&rect)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &rect_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

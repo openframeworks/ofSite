@@ -231,8 +231,10 @@ _inlined_description: _
 
 create and return a shader used to implement the materials effect for a given renderer
 
-Parameters:
+**Parameters:**
+
 textureTarget an implementation-specific value to specify the type of shader to use
+
 renderer programmable renderer instance to create the material shader for
 
 
@@ -343,8 +345,10 @@ _inlined_description: _
 
 update the given renderer's lights to the material shader
 
-Parameters:
+**Parameters:**
+
 shader the material shader, created by getShader()
+
 renderer programmable renderer instance that uses the material shader
 
 
@@ -383,8 +387,10 @@ _inlined_description: _
 
 update the material properties to the material shader
 
-Parameters:
+**Parameters:**
+
 shader the material shader, created by getShader()
+
 renderer programmable renderer instance that uses the material shader
 
 
@@ -423,8 +429,10 @@ _inlined_description: _
 
 upload the given renderer's normal matrix to the material shader
 
-Parameters:
+**Parameters:**
+
 shader the material shader, created by getShader()
+
 renderer programmable renderer instance that uses the material shader
 
 

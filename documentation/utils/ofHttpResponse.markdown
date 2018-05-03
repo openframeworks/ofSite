@@ -31,42 +31,6 @@ See also: ofHttpRequest
 
 
 
-### ofHttpResponse()
-
-<!--
-_syntax: ofHttpResponse()_
-_name: ofHttpResponse_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofHttpResponse(&request, &data, status, &error)
 
 <!--
@@ -111,6 +75,42 @@ _name: ofHttpResponse_
 _returns: _
 _returns_description: _
 _parameters: const ofHttpRequest &request, int status, const string &error_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofHttpResponse()
+
+<!--
+_syntax: ofHttpResponse()_
+_name: ofHttpResponse_
+_returns: _
+_returns_description: _
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _

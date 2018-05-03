@@ -71,9 +71,12 @@ _inlined_description: _
 
 show a file load dialog box
 
-Parameters:
+**Parameters:**
+
 windowTitle optional window title string, ie. "Load background image"
+
 bFolderSelection set to true to allow folder selection
+
 defaultPath optional default directory path to start the dialog in, ie. ofFilePath::getUserHomeDir()
 \return dialog result with selection (if any)
 
@@ -120,8 +123,10 @@ _inlined_description: _
 
 show a file save dialog box
 
-Parameters:
+**Parameters:**
+
 defaultName suggested filename to start dialog, ie "screenshot.png"
+
 messageName descriptive text for the save action, ie. "Saving screenshot as"
 \return dialog result with selection (if any)
 
@@ -168,8 +173,10 @@ _inlined_description: _
 
 show a text entry dialog box
 
-Parameters:
+**Parameters:**
+
 question descriptive text for the text entry, ie. "What's your favorite color?"
+
 text optional default text entry string, ie. "blue"
 
 

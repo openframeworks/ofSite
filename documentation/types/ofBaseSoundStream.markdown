@@ -97,14 +97,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int getDeviceList()
+###vector< ofSoundDevice > getDeviceList(api)
 
 <!--
-_syntax: getDeviceList()_
+_syntax: getDeviceList(api)_
 _name: getDeviceList_
-_returns: int_
+_returns: vector< ofSoundDevice >_
 _returns_description: _
-_parameters: _
+_parameters: ofSoundDevice::Api api_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

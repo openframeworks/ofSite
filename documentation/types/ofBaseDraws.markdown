@@ -25,132 +25,6 @@ _extends: _
 
 
 
-###void draw(x, y)
-
-<!--
-_syntax: draw(x, y)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw at a position at the native size.
-
-Native size is determined by getWidth() and getHeight().
-
-
-Parameters:
-x Draw position on the x axis.
-y Draw position on the y axis.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(x, y, w, h)
-
-<!--
-_syntax: draw(x, y, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float w, float h_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw at a position with the specified size.
-
-
-Parameters:
-x Draw position on the x axis.
-y Draw position on the y axis.
-w Draw width.
-h Draw height.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&rect)
-
-<!--
-_syntax: draw(&rect)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &rect_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw at a position and size specified by a rectangle.
-
-
-Parameters:
-rect Draw position and size.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(&point)
 
 <!--
@@ -176,7 +50,8 @@ Draw at a position at the native size.
 Native size is determined by getWidth() and getHeight().
 
 
-Parameters:
+**Parameters:**
+
 point Draw position.
 
 
@@ -216,9 +91,145 @@ _inlined_description: _
 Draw at a position.
 
 
-Parameters:
+**Parameters:**
+
 point Draw position.
+
 w Draw width.
+
+h Draw height.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&rect)
+
+<!--
+_syntax: draw(&rect)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &rect_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw at a position and size specified by a rectangle.
+
+
+**Parameters:**
+
+rect Draw position and size.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(x, y)
+
+<!--
+_syntax: draw(x, y)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw at a position at the native size.
+
+Native size is determined by getWidth() and getHeight().
+
+
+**Parameters:**
+
+x Draw position on the x axis.
+
+y Draw position on the y axis.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(x, y, w, h)
+
+<!--
+_syntax: draw(x, y, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float w, float h_
+_access: public_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw at a position with the specified size.
+
+
+**Parameters:**
+
+x Draw position on the x axis.
+
+y Draw position on the y axis.
+
+w Draw width.
+
 h Draw height.
 
 
@@ -257,7 +268,7 @@ _inlined_description: _
 
 Get the height.
 
-Returns: the height.
+**Returns**: the height.
 
 
 
@@ -295,7 +306,7 @@ _inlined_description: _
 
 Get the width.
 
-Returns: the width.
+**Returns**: the width.
 
 
 
@@ -373,8 +384,10 @@ This can be useful if you want to rotate an image around a particular
 point.
 
 
-Parameters:
+**Parameters:**
+
 xPct Horizontal position as a percentage (0 - 1).
+
 yPct Vertical position as a percentage (0 - 1).
 
 
@@ -417,8 +430,10 @@ This can be useful if you want to rotate an image around a particular
 point.
 
 
-Parameters:
+**Parameters:**
+
 x Horizontal texture position in pixels.
+
 y Vertical texture position in pixels.
 
 

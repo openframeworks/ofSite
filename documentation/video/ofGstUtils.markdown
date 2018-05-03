@@ -1033,14 +1033,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool setPipelineWithSink(pipeline, sinkname, isStream = false)
+###bool setPipelineWithSink(*pipeline, *sink, isStream = false)
 
 <!--
-_syntax: setPipelineWithSink(pipeline, sinkname, isStream = false)_
+_syntax: setPipelineWithSink(*pipeline, *sink, isStream = false)_
 _name: setPipelineWithSink_
 _returns: bool_
 _returns_description: _
-_parameters: string pipeline, string sinkname, bool isStream=false_
+_parameters: GstElement *pipeline, GstElement *sink, bool isStream=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1069,14 +1069,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool setPipelineWithSink(*pipeline, *sink, isStream = false)
+###bool setPipelineWithSink(pipeline, sinkname, isStream = false)
 
 <!--
-_syntax: setPipelineWithSink(*pipeline, *sink, isStream = false)_
+_syntax: setPipelineWithSink(pipeline, sinkname, isStream = false)_
 _name: setPipelineWithSink_
 _returns: bool_
 _returns_description: _
-_parameters: GstElement *pipeline, GstElement *sink, bool isStream=false_
+_parameters: string pipeline, string sinkname, bool isStream=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

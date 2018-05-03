@@ -66,7 +66,8 @@ Request that the buffer capacity be at least enough to contain a
 specified number of bytes.
 
 
-Parameters:
+**Parameters:**
+
 size number of bytes to reserve space for
 
 
@@ -106,7 +107,8 @@ _inlined_description: _
 Append bytes to the end of buffer from a string.
 
 
-Parameters:
+**Parameters:**
+
 buffer string to copy bytes from
 
 
@@ -146,12 +148,14 @@ _inlined_description: _
 Append bytes to the end of the buffer from a raw byte pointer.
 
 
-Warning: buffer *must* not be NULL
+**Warning**: buffer *must* not be NULL
 
-Warning: size *must* be <= the number of bytes allocated in buffer
+**Warning**: size *must* be <= the number of bytes allocated in buffer
 
-Parameters:
+**Parameters:**
+
 buffer pointer to the raw byte buffer to copy data from
+
 size the number of bytes to read
 
 
@@ -371,9 +375,9 @@ _inlined_description: _
 Access the buffer's contents using a raw byte pointer.
 
 
-Warning: Do not access bytes at indices beyond size()!
+**Warning**: Do not access bytes at indices beyond size()!
 
-Returns: pointer to internal raw bytes
+**Returns**: pointer to internal raw bytes
 
 
 
@@ -412,9 +416,9 @@ _inlined_description: _
 access the buffer's contents using a const raw byte pointer.
 
 
-Warning: Do not access bytes at indices beyond size()!
+**Warning**: Do not access bytes at indices beyond size()!
 
-Returns: const pointer to internal raw bytes
+**Returns**: const pointer to internal raw bytes
 
 
 
@@ -456,7 +460,7 @@ If the buffer loads a text file with lines separated by an endline
 char '\n', you can access each line individually using Line structs.
 
 
-Returns: buffer text lines
+**Returns**: buffer text lines
 
 
 
@@ -499,7 +503,7 @@ If the buffer loads a text file with lines separated by an endline
 char '\n' or '\r\n', you can access each line individually using Line structs.
 
 
-Returns: buffer text lines
+**Returns**: buffer text lines
 
 
 
@@ -538,7 +542,7 @@ _inlined_description: _
 get the contents of the buffer as a string.
 
 
-Returns: buffer contents as a string
+**Returns**: buffer contents as a string
 
 
 
@@ -547,6 +551,53 @@ Returns: buffer contents as a string
 _description: _
 
 Return the buffer data as a string.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofBuffer(&stream, ioBlockSize)
+
+<!--
+_syntax: ofBuffer(&stream, ioBlockSize)_
+_name: ofBuffer_
+_returns: _
+_returns_description: _
+_parameters: istream &stream, size_t ioBlockSize_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Create a buffer and set its contents from an input stream.
+
+
+**Parameters:**
+
+ioBlockSize the number of bytes to read from the stream in chunks
+
+
+
+
+
+_description: _
+
+Copy constructor, allows you to do:
+
+~~~~{.cpp}
+ofBuffer aBuff;
+// put some stuff in aBuff
+ofBuffer bBuff(aBuff); // now it's in bBuff as well
+~~~~
 
 
 
@@ -613,13 +664,15 @@ _inlined_description: _
 Create a buffer and set its contents from a raw byte pointer.
 
 
-Parameters:
+**Parameters:**
+
 buffer pointer to the raw byte buffer to copy data from
+
 size the number of bytes to read
 
-Warning: buffer *must* not be NULL
+**Warning**: buffer *must* not be NULL
 
-Warning: size *must* be <= the number of bytes allocated in buffer
+**Warning**: size *must* be <= the number of bytes allocated in buffer
 
 
 
@@ -632,52 +685,6 @@ Create a buffer with a character array.
 ~~~~{.cpp}
 string giantDataString;
 ofBuffer buff(giantDataString.c_str(), giantDataString.size());
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofBuffer(&stream, ioBlockSize)
-
-<!--
-_syntax: ofBuffer(&stream, ioBlockSize)_
-_name: ofBuffer_
-_returns: _
-_returns_description: _
-_parameters: istream &stream, size_t ioBlockSize_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Create a buffer and set its contents from an input stream.
-
-
-Parameters:
-ioBlockSize the number of bytes to read from the stream in chunks
-
-
-
-
-
-_description: _
-
-Copy constructor, allows you to do:
-
-~~~~{.cpp}
-ofBuffer aBuff;
-// put some stuff in aBuff
-ofBuffer bBuff(aBuff); // now it's in bBuff as well
 ~~~~
 
 
@@ -890,7 +897,8 @@ Request that the buffer capacity be at least enough to contain a
 specified number of bytes.
 
 
-Parameters:
+**Parameters:**
+
 size number of bytes to reserve space for
 
 
@@ -934,99 +942,9 @@ bytes & remaining bytes are removed. If size is > the current buffer
 size, the buffer's size is increased to size_ bytes.
 
 
-Parameters:
+**Parameters:**
+
 size number of bytes to resize the buffer to
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(*buffer, size)
-
-<!--
-_syntax: set(*buffer, size)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const char *buffer, size_t size_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the contents of the buffer from a raw byte pointer.
-
-
-Warning: buffer *must* not be NULL
-
-Warning: size *must* be <= the number of bytes allocated in buffer
-
-Parameters:
-buffer pointer to the raw byte buffer to copy data from
-size the number of bytes to read
-
-
-
-
-
-_description: _
-
-Set the buffer from a string.
-
-~~~~{.cpp}
-string giantDataString;
-ofBuffer buff;
-buff.set(giantDataString.c_str(), giantDataString.size());
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(&text)
-
-<!--
-_syntax: set(&text)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const string &text_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set contents of the buffer from a string.
-
-
-Parameters:
-text string to copy data from
 
 
 
@@ -1065,8 +983,10 @@ _inlined_description: _
 Set contents of the buffer from an input stream.
 
 
-Parameters:
+**Parameters:**
+
 stream input stream to copy data from
+
 ioBlockSize the number of bytes to read from the stream in chunks
 
 
@@ -1076,6 +996,100 @@ ioBlockSize the number of bytes to read from the stream in chunks
 _description: _
 
 Set the buffer from an istream.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(&text)
+
+<!--
+_syntax: set(&text)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const string &text_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set contents of the buffer from a string.
+
+
+**Parameters:**
+
+text string to copy data from
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(*buffer, size)
+
+<!--
+_syntax: set(*buffer, size)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const char *buffer, size_t size_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set the contents of the buffer from a raw byte pointer.
+
+
+**Warning**: buffer *must* not be NULL
+
+**Warning**: size *must* be <= the number of bytes allocated in buffer
+
+**Parameters:**
+
+buffer pointer to the raw byte buffer to copy data from
+
+size the number of bytes to read
+
+
+
+
+
+_description: _
+
+Set the buffer from a string.
+
+~~~~{.cpp}
+string giantDataString;
+ofBuffer buff;
+buff.set(giantDataString.c_str(), giantDataString.size());
+~~~~
 
 
 
@@ -1106,7 +1120,8 @@ _inlined_description: _
 Set all bytes in the buffer to a given value.
 
 
-Parameters:
+**Parameters:**
+
 mem byte value to set
 
 
@@ -1146,7 +1161,7 @@ _inlined_description: _
 Check the buffer's size.
 
 
-Returns: the size of the buffer's content in bytes
+**Returns**: the size of the buffer's content in bytes
 
 
 

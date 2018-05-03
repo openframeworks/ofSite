@@ -101,6 +101,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&args)
+
+<!--
+_syntax: draw(&args)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: ofEventArgs &args_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw()
 
 <!--
@@ -146,11 +182,11 @@ void draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&args)
+###void exit(&args)
 
 <!--
-_syntax: draw(&args)_
-_name: draw_
+_syntax: exit(&args)_
+_name: exit_
 _returns: void_
 _returns_description: _
 _parameters: ofEventArgs &args_
@@ -218,16 +254,16 @@ Add this function to your ofApp to have it called at the moment before the app i
 
 <!----------------------------------------------------------------------------->
 
-###void exit(&args)
+###void gotMessage(msg)
 
 <!--
-_syntax: exit(&args)_
-_name: exit_
+_syntax: gotMessage(msg)_
+_name: gotMessage_
 _returns: void_
 _returns_description: _
-_parameters: ofEventArgs &args_
+_parameters: ofMessage msg_
 _access: public_
-_version_started: 0073_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -254,16 +290,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void gotMessage(msg)
+###void keyPressed(&key)
 
 <!--
-_syntax: gotMessage(msg)_
-_name: gotMessage_
+_syntax: keyPressed(&key)_
+_name: keyPressed_
 _returns: void_
 _returns_description: _
-_parameters: ofMessage msg_
+_parameters: ofKeyEventArgs &key_
 _access: public_
-_version_started: 007_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -340,11 +376,11 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 <!----------------------------------------------------------------------------->
 
-###void keyPressed(&key)
+###void keyReleased(&key)
 
 <!--
-_syntax: keyPressed(&key)_
-_name: keyPressed_
+_syntax: keyReleased(&key)_
+_name: keyReleased_
 _returns: void_
 _returns_description: _
 _parameters: ofKeyEventArgs &key_
@@ -425,14 +461,14 @@ There are more complicated character codes, for keys such as F1-F12, Down, Enter
 
 <!----------------------------------------------------------------------------->
 
-###void keyReleased(&key)
+###void messageReceived(&message)
 
 <!--
-_syntax: keyReleased(&key)_
-_name: keyReleased_
+_syntax: messageReceived(&message)_
+_name: messageReceived_
 _returns: void_
 _returns_description: _
-_parameters: ofKeyEventArgs &key_
+_parameters: ofMessage &message_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -461,14 +497,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void messageReceived(&message)
+###void mouseDragged(&mouse)
 
 <!--
-_syntax: messageReceived(&message)_
-_name: messageReceived_
+_syntax: mouseDragged(&mouse)_
+_name: mouseDragged_
 _returns: void_
 _returns_description: _
-_parameters: ofMessage &message_
+_parameters: ofMouseEventArgs &mouse_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -534,16 +570,16 @@ This function gets called when the mouse is moving and the button is down. The b
 
 <!----------------------------------------------------------------------------->
 
-###void mouseDragged(&mouse)
+###void mouseEntered(&mouse)
 
 <!--
-_syntax: mouseDragged(&mouse)_
-_name: mouseDragged_
+_syntax: mouseEntered(&mouse)_
+_name: mouseEntered_
 _returns: void_
 _returns_description: _
 _parameters: ofMouseEventArgs &mouse_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -610,11 +646,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void mouseEntered(&mouse)
+###void mouseExited(&mouse)
 
 <!--
-_syntax: mouseEntered(&mouse)_
-_name: mouseEntered_
+_syntax: mouseExited(&mouse)_
+_name: mouseExited_
 _returns: void_
 _returns_description: _
 _parameters: ofMouseEventArgs &mouse_
@@ -686,16 +722,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void mouseExited(&mouse)
+###void mouseMoved(&mouse)
 
 <!--
-_syntax: mouseExited(&mouse)_
-_name: mouseExited_
+_syntax: mouseMoved(&mouse)_
+_name: mouseMoved_
 _returns: void_
 _returns_description: _
 _parameters: ofMouseEventArgs &mouse_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -758,11 +794,11 @@ This function gets when ever the mouse moves. You receive the x and y coordinate
 
 <!----------------------------------------------------------------------------->
 
-###void mouseMoved(&mouse)
+###void mousePressed(&mouse)
 
 <!--
-_syntax: mouseMoved(&mouse)_
-_name: mouseMoved_
+_syntax: mousePressed(&mouse)_
+_name: mousePressed_
 _returns: void_
 _returns_description: _
 _parameters: ofMouseEventArgs &mouse_
@@ -830,11 +866,11 @@ This function gets called when the mouse is pushed down. The button (left 0, cen
 
 <!----------------------------------------------------------------------------->
 
-###void mousePressed(&mouse)
+###void mouseReleased(&mouse)
 
 <!--
-_syntax: mousePressed(&mouse)_
-_name: mousePressed_
+_syntax: mouseReleased(&mouse)_
+_name: mouseReleased_
 _returns: void_
 _returns_description: _
 _parameters: ofMouseEventArgs &mouse_
@@ -902,16 +938,16 @@ This function gets called when the mouse is released. The button  (left 0, cente
 
 <!----------------------------------------------------------------------------->
 
-###void mouseReleased(&mouse)
+###void mouseScrolled(&mouse)
 
 <!--
-_syntax: mouseReleased(&mouse)_
-_name: mouseReleased_
+_syntax: mouseScrolled(&mouse)_
+_name: mouseScrolled_
 _returns: void_
 _returns_description: _
 _parameters: ofMouseEventArgs &mouse_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -974,42 +1010,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void mouseScrolled(&mouse)
-
-<!--
-_syntax: mouseScrolled(&mouse)_
-_name: mouseScrolled_
-_returns: void_
-_returns_description: _
-_parameters: ofMouseEventArgs &mouse_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofBaseApp()
 
 <!--
@@ -1039,42 +1039,6 @@ _inlined_description: _
 _description: _
 
 The openFrameworks engine is contained in the "app" category. The project works, similar to processing, in that you have a base class which extends a class that already exists. In the case of OF, there is a class called "ofBaseApp" which contains various event driven functions. When you create an OF project, you use a main.cpp which is the boot-strap, that kicks off the application and another class, which inherits the properties of ofSimpleApp. Essentially, when you write code in the ofApp, you are re-writing already defined functions that exist in OF, such as update, draw, etc.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setup()
-
-<!--
-_syntax: setup()_
-_name: setup_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This function gets called once, just at the start of the app. It would be a good place, for example, to allocate variables or load in any files.
 
 
 
@@ -1118,16 +1082,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void touchCancelled(x, y, id)
+###void setup()
 
 <!--
-_syntax: touchCancelled(x, y, id)_
-_name: touchCancelled_
+_syntax: setup()_
+_name: setup_
 _returns: void_
 _returns_description: _
-_parameters: int x, int y, int id_
+_parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1146,7 +1110,7 @@ _inlined_description: _
 
 _description: _
 
-
+This function gets called once, just at the start of the app. It would be a good place, for example, to allocate variables or load in any files.
 
 
 
@@ -1190,11 +1154,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void touchDoubleTap(x, y, id)
+###void touchCancelled(x, y, id)
 
 <!--
-_syntax: touchDoubleTap(x, y, id)_
-_name: touchDoubleTap_
+_syntax: touchCancelled(x, y, id)_
+_name: touchCancelled_
 _returns: void_
 _returns_description: _
 _parameters: int x, int y, int id_
@@ -1262,11 +1226,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void touchDown(x, y, id)
+###void touchDoubleTap(x, y, id)
 
 <!--
-_syntax: touchDown(x, y, id)_
-_name: touchDown_
+_syntax: touchDoubleTap(x, y, id)_
+_name: touchDoubleTap_
 _returns: void_
 _returns_description: _
 _parameters: int x, int y, int id_
@@ -1334,11 +1298,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void touchMoved(x, y, id)
+###void touchDown(x, y, id)
 
 <!--
-_syntax: touchMoved(x, y, id)_
-_name: touchMoved_
+_syntax: touchDown(x, y, id)_
+_name: touchDown_
 _returns: void_
 _returns_description: _
 _parameters: int x, int y, int id_
@@ -1406,11 +1370,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void touchUp(x, y, id)
+###void touchMoved(x, y, id)
 
 <!--
-_syntax: touchUp(x, y, id)_
-_name: touchUp_
+_syntax: touchMoved(x, y, id)_
+_name: touchMoved_
 _returns: void_
 _returns_description: _
 _parameters: int x, int y, int id_
@@ -1452,6 +1416,78 @@ _returns_description: _
 _parameters: ofTouchEventArgs &touch_
 _access: public_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void touchUp(x, y, id)
+
+<!--
+_syntax: touchUp(x, y, id)_
+_name: touchUp_
+_returns: void_
+_returns_description: _
+_parameters: int x, int y, int id_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void update(&args)
+
+<!--
+_syntax: update(&args)_
+_name: update_
+_returns: void_
+_returns_description: _
+_parameters: ofEventArgs &args_
+_access: public_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1530,14 +1566,14 @@ void draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void update(&args)
+###void windowResized(&resize)
 
 <!--
-_syntax: update(&args)_
-_name: update_
+_syntax: windowResized(&resize)_
+_name: windowResized_
 _returns: void_
 _returns_description: _
-_parameters: ofEventArgs &args_
+_parameters: ofResizeEventArgs &resize_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1595,42 +1631,6 @@ _inlined_description: _
 _description: _
 
 This function gets called when ever we resize the application window. You receive the new width (w) and the new height (h) of the window.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void windowResized(&resize)
-
-<!--
-_syntax: windowResized(&resize)_
-_name: windowResized_
-_returns: void_
-_returns_description: _
-_parameters: ofResizeEventArgs &resize_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 

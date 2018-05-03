@@ -565,6 +565,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofxLabel * setup(&labelName, label, width, height)
+
+<!--
+_syntax: setup(&labelName, label, width, height)_
+_name: setup_
+_returns: ofxLabel *_
+_returns_description: _
+_parameters: const string &labelName, string label, float width, float height_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofxLabel * setup(_label, width, height)
 
 <!--
@@ -611,42 +647,6 @@ _returns_description: _
 _parameters: ofReadOnlyParameter< string, F > _label, float width, float height_
 _access: public_
 _version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofxLabel * setup(&labelName, label, width, height)
-
-<!--
-_syntax: setup(&labelName, label, width, height)_
-_name: setup_
-_returns: ofxLabel *_
-_returns_description: _
-_parameters: const string &labelName, string label, float width, float height_
-_access: public_
-_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

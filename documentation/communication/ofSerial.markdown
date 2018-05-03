@@ -250,8 +250,10 @@ Clears data from one or both of the serial buffers.
 
 Any data in the cleared buffers is discarded.
 
-Parameters:
+**Parameters:**
+
 flushIn If true then it clears the incoming data buffer
+
 flushOut If true then it clears the outgoing data buffer.
 
 
@@ -268,12 +270,12 @@ Clears data from one or both of the serial buffers. Any data in the cleared buff
 
 <!----------------------------------------------------------------------------->
 
-###int getDeviceList()
+###vector< ofSerialDeviceInfo > getDeviceList()
 
 <!--
 _syntax: getDeviceList()_
 _name: getDeviceList_
-_returns: int_
+_returns: vector< ofSerialDeviceInfo >_
 _returns_description: _
 _parameters: _
 _access: public_
@@ -459,7 +461,7 @@ if ( myByte == OF_SERIAL_NO_DATA ){
 ~~~~
 
 
-Returns: The single byte as integer. If there is no data it will return
+**Returns**: The single byte as integer. If there is no data it will return
 `OF_SERIAL_NO_DATA`, and on error it returns `OF_SERIAL_ERROR`
 
 
@@ -483,6 +485,42 @@ else if ( myByte == OF_SERIAL_ERROR )
 else
   printf("myByte is %d", myByte);
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###long readBytes(&buffer, length)
+
+<!--
+_syntax: readBytes(&buffer, length)_
+_name: readBytes_
+_returns: long_
+_returns_description: _
+_parameters: ofBuffer &buffer, size_t length_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -648,42 +686,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###long readBytes(&buffer, length)
-
-<!--
-_syntax: readBytes(&buffer, length)_
-_name: readBytes_
-_returns: long_
-_returns_description: _
-_parameters: ofBuffer &buffer, size_t length_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###bool setup()
 
 <!--
@@ -726,6 +728,54 @@ if( mySerial.setup() ){
 	printf("serial is setup!
 ");	
 }
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool setup(deviceNumber, baudrate)
+
+<!--
+_syntax: setup(deviceNumber, baudrate)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: int deviceNumber, int baudrate_
+_access: public_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Opens the serial port based on the order in which is listed and
+sets the baud rate.
+
+The code bellow would open the first serial device found by the system:
+~~~~{.cpp}
+ofSerial mySerial;
+mySerial.setup(0, 9600);
+~~~~
+
+
+
+
+
+_description: _
+
+Opens the serial port based on the order in which is listed and sets the baud rate. The code bellow would open the first serial device found by the system:
+~~~~{.cpp}
+
+ofSerial mySerial;
+mySerial.setup(0, 9600);
 ~~~~
 
 
@@ -786,54 +836,6 @@ and on a pc, like:
 
 ofSerial mySerial;
 mySerial.setup("COM4", 57600);
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setup(deviceNumber, baudrate)
-
-<!--
-_syntax: setup(deviceNumber, baudrate)_
-_name: setup_
-_returns: bool_
-_returns_description: _
-_parameters: int deviceNumber, int baudrate_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Opens the serial port based on the order in which is listed and
-sets the baud rate.
-
-The code bellow would open the first serial device found by the system:
-~~~~{.cpp}
-ofSerial mySerial;
-mySerial.setup(0, 9600);
-~~~~
-
-
-
-
-
-_description: _
-
-Opens the serial port based on the order in which is listed and sets the baud rate. The code bellow would open the first serial device found by the system:
-~~~~{.cpp}
-
-ofSerial mySerial;
-mySerial.setup(0, 9600);
 ~~~~
 
 
@@ -933,6 +935,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###long writeBytes(&buffer)
+
+<!--
+_syntax: writeBytes(&buffer)_
+_name: writeBytes_
+_returns: long_
+_returns_description: _
+_parameters: const ofBuffer &buffer_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###long writeBytes(*buffer, length)
 
 <!--
@@ -987,42 +1025,6 @@ _name: writeBytes_
 _returns: long_
 _returns_description: _
 _parameters: const char *buffer, size_t length_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###long writeBytes(&buffer)
-
-<!--
-_syntax: writeBytes(&buffer)_
-_name: writeBytes_
-_returns: long_
-_returns_description: _
-_parameters: const ofBuffer &buffer_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

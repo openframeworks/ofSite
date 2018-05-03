@@ -50,7 +50,8 @@ _inlined_description: _
 
 Create a verbose log message.
 
-Parameters:
+**Parameters:**
+
 module The target module.
 
 
@@ -89,8 +90,10 @@ _inlined_description: _
 
 Create a verbose log message.
 
-Parameters:
+**Parameters:**
+
 module The target module.
+
 message The log message.
 
 

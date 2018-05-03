@@ -15,14 +15,14 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###void ofBackground(r, g, b, a = 255)
+###void ofBackground(&c)
 
 <!--
-_syntax: ofBackground(r, g, b, a = 255)_
+_syntax: ofBackground(&c)_
 _name: ofBackground_
 _returns: void_
 _returns_description: _
-_parameters: int r, int g, int b, int a=255_
+_parameters: const ofColor &c_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -34,19 +34,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Sets the background color.
 
-It takes as input r,g,b (0-255). The background is
-cleared automatically, just before the draw() command, so if the background
-color is not changing, you could call this inside of setup() (once, at the
-start of the application). If the background color is changing, you can call
-this inside of update().
-
-~~~~{.cpp}
-void ofApp::setup(){
-    ofBackground(255,0,0);  // Sets the background color to red
-}
-~~~~
 
 
 
@@ -97,14 +85,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofBackground(&c)
+###void ofBackground(r, g, b, a = 255)
 
 <!--
-_syntax: ofBackground(&c)_
+_syntax: ofBackground(r, g, b, a = 255)_
 _name: ofBackground_
 _returns: void_
 _returns_description: _
-_parameters: const ofColor &c_
+_parameters: int r, int g, int b, int a=255_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -116,7 +104,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Sets the background color.
 
+It takes as input r,g,b (0-255). The background is
+cleared automatically, just before the draw() command, so if the background
+color is not changing, you could call this inside of setup() (once, at the
+start of the application). If the background color is changing, you can call
+this inside of update().
+
+~~~~{.cpp}
+void ofApp::setup(){
+    ofBackground(255,0,0);  // Sets the background color to red
+}
+~~~~
 
 
 
@@ -294,7 +294,7 @@ void ofApp::setup(){
 }
 ~~~~
 
-See also: End drawing with ofEndSaveScreenAsPDF()
+**See also**: End drawing with ofEndSaveScreenAsPDF()
 
 
 
@@ -345,7 +345,7 @@ _inlined_description: _
 
 Begin rendering to a SVG file.
 
-See also: ofEndSaveScreenAsSVG(), ofBeginSaveScreenAsPDF()
+**See also**: ofEndSaveScreenAsSVG(), ofBeginSaveScreenAsPDF()
 
 
 
@@ -396,7 +396,7 @@ ofEndShape();
 ~~~~
 
 
-See also: ofEndShape()
+**See also**: ofEndShape()
 
 
 
@@ -423,15 +423,15 @@ ofEndShape();
 
 <!----------------------------------------------------------------------------->
 
-###void ofBezierVertex(x1,y1,x2,y2,x3,y3)
+###void ofBezierVertex(&p1, &p2, &p3)
 
 <!--
-_syntax: ofBezierVertex(x1,y1,x2,y2,x3,y3)_
+_syntax: ofBezierVertex(&p1, &p2, &p3)_
 _name: ofBezierVertex_
 _returns: void_
 _returns_description: _
-_parameters: float x1, float y1, float x2, float y2, float x3, float y3_
-_version_started: 006_
+_parameters: const glm::vec3 &p1, const glm::vec3 &p2, const glm::vec3 &p3_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -442,8 +442,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Describes a bezier curve through three points of a shape. To be called
-between ofBeginShape() and ofEndShape().
+
 
 
 
@@ -451,7 +450,7 @@ between ofBeginShape() and ofEndShape().
 
 _description: _
 
-Describes a bezier curve through three points of a shape. To be called between ofBeginShape() and ofEndShape().
+
 
 
 
@@ -466,8 +465,8 @@ _syntax: ofBezierVertex(&p1, &p2, &p3)_
 _name: ofBezierVertex_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec3 &p1, const glm::vec3 &p2, const glm::vec3 &p3_
-_version_started: _
+_parameters: const glm::vec2 &p1, const glm::vec2 &p2, const glm::vec2 &p3_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -529,15 +528,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofBezierVertex(&p1, &p2, &p3)
+###void ofBezierVertex(x1,y1,x2,y2,x3,y3)
 
 <!--
-_syntax: ofBezierVertex(&p1, &p2, &p3)_
+_syntax: ofBezierVertex(x1,y1,x2,y2,x3,y3)_
 _name: ofBezierVertex_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec2 &p1, const glm::vec2 &p2, const glm::vec2 &p3_
-_version_started: 0.10.0_
+_parameters: float x1, float y1, float x2, float y2, float x3, float y3_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -548,7 +547,8 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Describes a bezier curve through three points of a shape. To be called
+between ofBeginShape() and ofEndShape().
 
 
 
@@ -556,7 +556,112 @@ _inlined_description: _
 
 _description: _
 
+Describes a bezier curve through three points of a shape. To be called between ofBeginShape() and ofEndShape().
 
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofClear(&c)
+
+<!--
+_syntax: ofClear(&c)_
+_name: ofClear_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &c_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Clears the color and depth bits of current renderer and replaces it with
+an ofColor.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofColor myColor(0, 0, 255);
+    ofClear(myColor);
+    // Clears current screen and replaces it with myColor.
+}
+~~~~
+
+
+
+
+
+_description: _
+
+Clears the color and depth bits of current renderer and replaces it with an ofColor.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofColor myColor;
+    myColor.set ( 0, 0, 255 );
+    ofClear ( myColor );
+    // Clears current screen and replaces it with myColor.
+}
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofClear(brightness, a = 0)
+
+<!--
+_syntax: ofClear(brightness, a = 0)_
+_name: ofClear_
+_returns: void_
+_returns_description: _
+_parameters: float brightness, float a_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Clears the color and depth bits of current renderer and replaces it with a
+grayscale value.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofClear(128);
+    // Clears current screen and replaces it with a grayscale value.
+}
+~~~~
+
+
+
+
+
+_description: _
+
+Clears the color and depth bits of current renderer and replaces it with a grayscale value.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofColor myColor;
+    myColor.set ( 128 );
+    ofClear ( myColor );
+    // Clears current screen and replaces it with a grayscale value.
+}
+~~~~
 
 
 
@@ -659,111 +764,6 @@ ofClear(…) is based on glClear (http://www.opengl.org/sdk/docs/man/xhtml/glCle
 
 <!----------------------------------------------------------------------------->
 
-###void ofClear(brightness, a = 0)
-
-<!--
-_syntax: ofClear(brightness, a = 0)_
-_name: ofClear_
-_returns: void_
-_returns_description: _
-_parameters: float brightness, float a_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Clears the color and depth bits of current renderer and replaces it with a
-grayscale value.
-
-~~~~{.cpp}
-void ofApp::draw(){
-    ofClear(128);
-    // Clears current screen and replaces it with a grayscale value.
-}
-~~~~
-
-
-
-
-
-_description: _
-
-Clears the color and depth bits of current renderer and replaces it with a grayscale value.
-
-~~~~{.cpp}
-void ofApp::draw(){
-    ofColor myColor;
-    myColor.set ( 128 );
-    ofClear ( myColor );
-    // Clears current screen and replaces it with a grayscale value.
-}
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofClear(&c)
-
-<!--
-_syntax: ofClear(&c)_
-_name: ofClear_
-_returns: void_
-_returns_description: _
-_parameters: const ofColor &c_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Clears the color and depth bits of current renderer and replaces it with
-an ofColor.
-
-~~~~{.cpp}
-void ofApp::draw(){
-    ofColor myColor(0, 0, 255);
-    ofClear(myColor);
-    // Clears current screen and replaces it with myColor.
-}
-~~~~
-
-
-
-
-
-_description: _
-
-Clears the color and depth bits of current renderer and replaces it with an ofColor.
-
-~~~~{.cpp}
-void ofApp::draw(){
-    ofColor myColor;
-    myColor.set ( 0, 0, 255 );
-    ofClear ( myColor );
-    // Clears current screen and replaces it with myColor.
-}
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofClearAlpha()
 
 <!--
@@ -799,15 +799,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofCurveVertex(x,y)
+###void ofCurveVertex(&p)
 
 <!--
-_syntax: ofCurveVertex(x,y)_
+_syntax: ofCurveVertex(&p)_
 _name: ofCurveVertex_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y_
-_version_started: 006_
+_parameters: const glm::vec3 &p_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -818,12 +818,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Specifies a single point of a shape. The difference from ofVertex is that
-the line describing the edge of the shape between two points will be a
-curve as opposed to a straight line. The curve is automatically generated
-using the catmull from formula.
 
-This function has to be called between ofBeginShape() and ofEndShape().
 
 
 
@@ -831,7 +826,7 @@ This function has to be called between ofBeginShape() and ofEndShape().
 
 _description: _
 
-Specifies a single point of a shape. The difference from ofVertex is that the line describing the edge of the shape between two points will be a curve as opposed to a straight line. The curve is automatically generated using the catmull from formula. To be called between ofBeginShape() and ofEndShape().
+
 
 
 
@@ -846,8 +841,8 @@ _syntax: ofCurveVertex(&p)_
 _name: ofCurveVertex_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec3 &p_
-_version_started: _
+_parameters: const glm::vec2 &p_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -909,15 +904,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofCurveVertex(&p)
+###void ofCurveVertex(x,y)
 
 <!--
-_syntax: ofCurveVertex(&p)_
+_syntax: ofCurveVertex(x,y)_
 _name: ofCurveVertex_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec2 &p_
-_version_started: 0.10.0_
+_parameters: float x, float y_
+_version_started: 006_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -928,7 +923,12 @@ _advanced: False_
 
 _inlined_description: _
 
+Specifies a single point of a shape. The difference from ofVertex is that
+the line describing the edge of the shape between two points will be a
+curve as opposed to a straight line. The curve is automatically generated
+using the catmull from formula.
 
+This function has to be called between ofBeginShape() and ofEndShape().
 
 
 
@@ -936,7 +936,7 @@ _inlined_description: _
 
 _description: _
 
-
+Specifies a single point of a shape. The difference from ofVertex is that the line describing the edge of the shape between two points will be a curve as opposed to a straight line. The curve is automatically generated using the catmull from formula. To be called between ofBeginShape() and ofEndShape().
 
 
 
@@ -1116,7 +1116,7 @@ void ofApp::draw(){
 ~~~~
 
 
-See also: ofEnableAlphaBlending()
+**See also**: ofEnableAlphaBlending()
 
 
 
@@ -1260,7 +1260,7 @@ void ofApp::draw(){
 ~~~~
 
 
-See also: ofEnableDepthTest()
+**See also**: ofEnableDepthTest()
 
 
 
@@ -1440,58 +1440,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawBitmapString(&textString, x, y, z)
-
-<!--
-_syntax: ofDrawBitmapString(&textString, x, y, z)_
-_name: ofDrawBitmapString_
-_returns: void_
-_returns_description: _
-_parameters: const T &textString, float x, float y, float z_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws a bitmapped string, on screen, at point (x,y). For example, you can write some text on screen like this:
-~~~~{.cpp}
-void ofApp::draw(){
-    ofDrawBitmapString("hi!!", 100,100);
-}
-~~~~
-Your strings can even be multiline:
-~~~~{.cpp}
-ofDrawBitmapString("a test
-of multiline
-text", 100,100);
-~~~~
-you can also using dynamically generated strings. For example, to print the frame rate:
-~~~~{.cpp}
-string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
-ofDrawBitmapString(fpsStr, 100,100);
-~~~~
-Please note, ofDrawBitmapString wraps a glut function that uses glDrawPixels. On some graphics cards, you may discover that glDrawPixels is slow (or even, very slow). If so, you might want to investigate using ofTrueTypeFont with a small typeface, non-anti-aliased, as a suitable alternative.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofDrawBitmapString(&textString, &p)
 
 <!--
@@ -1501,105 +1449,6 @@ _returns: void_
 _returns_description: _
 _parameters: const T &textString, const glm::vec2 &p_
 _version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawBitmapString(&textString, x, y)
-
-<!--
-_syntax: ofDrawBitmapString(&textString, x, y)_
-_name: ofDrawBitmapString_
-_returns: void_
-_returns_description: _
-_parameters: const T &textString, float x, float y_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a bitmapped string, on screen, at point (x,y).
-
-For example, you can write some text on screen like this:
-~~~~{.cpp}
-void ofApp::draw(){
-    ofDrawBitmapString("hi!!", 100,100);
-}
-~~~~
-
-Your strings can even be multiline:
-~~~~{.cpp}
-ofDrawBitmapString("a test
-of multiline
-text", 100,100);
-~~~~
-
-you can also using dynamically generated strings. For example, to print
-the frame rate:
-~~~~{.cpp}
-string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
-ofDrawBitmapString(fpsStr, 100,100);
-~~~~
-
-\note ofDrawBitmapString wraps a glut function that uses glDrawPixels. On
-some graphics cards, you may discover that glDrawPixels is slow (or even,
-very slow). If so, you might want to investigate using ofTrueTypeFont
-with a small typeface, non-anti-aliased, as a suitable alternative.
-
-
-See also: ofTrueTypeFont
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawBitmapString(&textString, x, y, z)
-
-<!--
-_syntax: ofDrawBitmapString(&textString, x, y, z)_
-_name: ofDrawBitmapString_
-_returns: void_
-_returns_description: _
-_parameters: const string &textString, float x, float y, float z_
-_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1731,6 +1580,157 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofDrawBitmapString(&textString, x, y)
+
+<!--
+_syntax: ofDrawBitmapString(&textString, x, y)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const T &textString, float x, float y_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a bitmapped string, on screen, at point (x,y).
+
+For example, you can write some text on screen like this:
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawBitmapString("hi!!", 100,100);
+}
+~~~~
+
+Your strings can even be multiline:
+~~~~{.cpp}
+ofDrawBitmapString("a test
+of multiline
+text", 100,100);
+~~~~
+
+you can also using dynamically generated strings. For example, to print
+the frame rate:
+~~~~{.cpp}
+string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
+ofDrawBitmapString(fpsStr, 100,100);
+~~~~
+
+\note ofDrawBitmapString wraps a glut function that uses glDrawPixels. On
+some graphics cards, you may discover that glDrawPixels is slow (or even,
+very slow). If so, you might want to investigate using ofTrueTypeFont
+with a small typeface, non-anti-aliased, as a suitable alternative.
+
+
+**See also**: ofTrueTypeFont
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapString(&textString, x, y, z)
+
+<!--
+_syntax: ofDrawBitmapString(&textString, x, y, z)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const T &textString, float x, float y, float z_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws a bitmapped string, on screen, at point (x,y). For example, you can write some text on screen like this:
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawBitmapString("hi!!", 100,100);
+}
+~~~~
+Your strings can even be multiline:
+~~~~{.cpp}
+ofDrawBitmapString("a test
+of multiline
+text", 100,100);
+~~~~
+you can also using dynamically generated strings. For example, to print the frame rate:
+~~~~{.cpp}
+string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
+ofDrawBitmapString(fpsStr, 100,100);
+~~~~
+Please note, ofDrawBitmapString wraps a glut function that uses glDrawPixels. On some graphics cards, you may discover that glDrawPixels is slow (or even, very slow). If so, you might want to investigate using ofTrueTypeFont with a small typeface, non-anti-aliased, as a suitable alternative.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapString(&textString, x, y, z)
+
+<!--
+_syntax: ofDrawBitmapString(&textString, x, y, z)_
+_name: ofDrawBitmapString_
+_returns: void_
+_returns_description: _
+_parameters: const string &textString, float x, float y, float z_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofDrawBitmapStringHighlight(text, &position, &background = black, &foreground = white)
 
 <!--
@@ -1740,6 +1740,41 @@ _returns: void_
 _returns_description: _
 _parameters: string text, const glm::vec3 &position, const ofColor &background=black, const ofColor &foreground=white_
 _version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawBitmapStringHighlight(text, &position, &background = black, &foreground = white)
+
+<!--
+_syntax: ofDrawBitmapStringHighlight(text, &position, &background = black, &foreground = white)_
+_name: ofDrawBitmapStringHighlight_
+_returns: void_
+_returns_description: _
+_parameters: string text, const glm::vec2 &position, const ofColor &background=black, const ofColor &foreground=white_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1801,14 +1836,49 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawBitmapStringHighlight(text, &position, &background = black, &foreground = white)
+###void ofDrawCircle(&p, radius)
 
 <!--
-_syntax: ofDrawBitmapStringHighlight(text, &position, &background = black, &foreground = white)_
-_name: ofDrawBitmapStringHighlight_
+_syntax: ofDrawCircle(&p, radius)_
+_name: ofDrawCircle_
 _returns: void_
 _returns_description: _
-_parameters: string text, const glm::vec2 &position, const ofColor &background=black, const ofColor &foreground=white_
+_parameters: const glm::vec3 &p, float radius_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawCircle(&p, radius)
+
+<!--
+_syntax: ofDrawCircle(&p, radius)_
+_name: ofDrawCircle_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p, float radius_
 _version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
@@ -1915,76 +1985,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawCircle(&p, radius)
-
-<!--
-_syntax: ofDrawCircle(&p, radius)_
-_name: ofDrawCircle_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p, float radius_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawCircle(&p, radius)
-
-<!--
-_syntax: ofDrawCircle(&p, radius)_
-_name: ofDrawCircle_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &p, float radius_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofDrawCurve(x0, y0, x1, y1, x2, y2, x3, y3)
 
 <!--
@@ -2042,6 +2042,76 @@ _inlined_description: _
 
 Draws a 3-dimensional curve from point (x1, y1, z1) to point (x2, y2, z2).
 The curve is shaped by the two control points (x0, y0, z0) and (x3, y3, z3).
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawEllipse(&p, width, height)
+
+<!--
+_syntax: ofDrawEllipse(&p, width, height)_
+_name: ofDrawEllipse_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p, float width, float height_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawEllipse(&p, width, height)
+
+<!--
+_syntax: ofDrawEllipse(&p, width, height)_
+_name: ofDrawEllipse_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p, float width, float height_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -2132,14 +2202,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawEllipse(&p, width, height)
+###void ofDrawLine(&p1, &p2)
 
 <!--
-_syntax: ofDrawEllipse(&p, width, height)_
-_name: ofDrawEllipse_
+_syntax: ofDrawLine(&p1, &p2)_
+_name: ofDrawLine_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec3 &p, float width, float height_
+_parameters: const glm::vec3 &p1, const glm::vec3 &p2_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -2167,14 +2237,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawEllipse(&p, width, height)
+###void ofDrawLine(&p1, &p2)
 
 <!--
-_syntax: ofDrawEllipse(&p, width, height)_
-_name: ofDrawEllipse_
+_syntax: ofDrawLine(&p1, &p2)_
+_name: ofDrawLine_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec2 &p, float width, float height_
+_parameters: const glm::vec2 &p1, const glm::vec2 &p2_
 _version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
@@ -2277,76 +2347,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawLine(&p1, &p2)
-
-<!--
-_syntax: ofDrawLine(&p1, &p2)_
-_name: ofDrawLine_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p1, const glm::vec3 &p2_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawLine(&p1, &p2)
-
-<!--
-_syntax: ofDrawLine(&p1, &p2)_
-_name: ofDrawLine_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &p1, const glm::vec2 &p2_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofDrawRectRounded(&b, r)
 
 <!--
@@ -2395,6 +2395,54 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofDrawRectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofDrawRectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &b, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rounded rectangle from the given rectangle using different given
+radius for each of the corners.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofRectangle myRect;
+    myRect.x = 10;
+    myRect.y = 10;
+    myRect.width = 100;
+    myRect.height = 100;
+
+    ofDrawRectRounded( myRect, 10, 20, 30, 40 );
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofDrawRectRounded(&p, w, h, r)
 
 <!--
@@ -2404,6 +2452,127 @@ _returns: void_
 _returns_description: _
 _parameters: const glm::vec2 &p, float w, float h, float r_
 _version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(&p, w, h, r)
+
+<!--
+_syntax: ofDrawRectRounded(&p, w, h, r)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p, float w, float h, float r_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rectangle from point p with a given width, height and radius of
+rounded corners.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofPoint p;
+    p.set ( 10, 10 );
+    ofDrawRectRounded( p, 100, 100, 10 );
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rounded rectangle from point X, Y, at depth Z with a given width,
+height and radius of rounded corners.
+
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawRectRounded(10, 10, 10, 100, 100, 10);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: ofDrawRectRounded_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2514,98 +2683,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawRectRounded(&p, w, h, r)
-
-<!--
-_syntax: ofDrawRectRounded(&p, w, h, r)_
-_name: ofDrawRectRounded_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p, float w, float h, float r_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a rectangle from point p with a given width, height and radius of
-rounded corners.
-
-~~~~{.cpp}
-void ofApp::draw(){
-    ofPoint p;
-    p.set ( 10, 10 );
-    ofDrawRectRounded( p, 100, 100, 10 );
-}
-~~~~
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawRectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
-
-<!--
-_syntax: ofDrawRectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
-_name: ofDrawRectRounded_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &b, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a rounded rectangle from the given rectangle using different given
-radius for each of the corners.
-
-~~~~{.cpp}
-void ofApp::draw(){
-    ofRectangle myRect;
-    myRect.x = 10;
-    myRect.y = 10;
-    myRect.width = 100;
-    myRect.height = 100;
-
-    ofDrawRectRounded( myRect, 10, 20, 30, 40 );
-}
-~~~~
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofDrawRectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
 
 <!--
@@ -2631,169 +2708,6 @@ height and different radius for each rounded corner.
 ~~~~{.cpp}
 void ofApp::draw(){
     ofDrawRectRounded(10, 10, 10, 100, 100, 10, 20, 30, 40);
-}
-~~~~
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
-
-<!--
-_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
-_name: ofDrawRectRounded_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a rounded rectangle from point X, Y, at depth Z with a given width,
-height and radius of rounded corners.
-
-~~~~{.cpp}
-void ofApp::draw(){
-    ofDrawRectRounded(10, 10, 10, 100, 100, 10);
-}
-~~~~
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
-
-<!--
-_syntax: ofDrawRectRounded(&p, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
-_name: ofDrawRectRounded_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &p, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawRectangle(x1, y1, w, h)
-
-<!--
-_syntax: ofDrawRectangle(x1, y1, w, h)_
-_name: ofDrawRectangle_
-_returns: void_
-_returns_description: _
-_parameters: float x1, float y1, float w, float h_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a rectangle from point x,y with a given width and height.
-~~~~{.cpp}
-void ofApp::draw(){
-    ofDrawRect(10,10,100,100);
-}
-~~~~
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawRectangle(&r)
-
-<!--
-_syntax: ofDrawRectangle(&r)_
-_name: ofDrawRectangle_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &r_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws an rectangle from the given rectangle.
-~~~~{.cpp}
-void ofApp::draw(){
-    ofRectangle rect;
-    rect.x = 10;
-    rect.y = 10;
-    rect.width = 100;
-    rect.height = 100;
-
-    ofDrawRectangle(rect);
 }
 ~~~~
 
@@ -2855,6 +2769,87 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofDrawRectangle(&p, w, h)
+
+<!--
+_syntax: ofDrawRectangle(&p, w, h)_
+_name: ofDrawRectangle_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p, float w, float h_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawRectangle(&r)
+
+<!--
+_syntax: ofDrawRectangle(&r)_
+_name: ofDrawRectangle_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &r_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws an rectangle from the given rectangle.
+~~~~{.cpp}
+void ofApp::draw(){
+    ofRectangle rect;
+    rect.x = 10;
+    rect.y = 10;
+    rect.width = 100;
+    rect.height = 100;
+
+    ofDrawRectangle(rect);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofDrawRectangle(x, y, z, w, h)
 
 <!--
@@ -2895,14 +2890,89 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawRectangle(&p, w, h)
+###void ofDrawRectangle(x1, y1, w, h)
 
 <!--
-_syntax: ofDrawRectangle(&p, w, h)_
+_syntax: ofDrawRectangle(x1, y1, w, h)_
 _name: ofDrawRectangle_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec2 &p, float w, float h_
+_parameters: float x1, float y1, float w, float h_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rectangle from point x,y with a given width and height.
+~~~~{.cpp}
+void ofApp::draw(){
+    ofDrawRect(10,10,100,100);
+}
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawTriangle(&p1, &p2, &p3)
+
+<!--
+_syntax: ofDrawTriangle(&p1, &p2, &p3)_
+_name: ofDrawTriangle_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p1, const glm::vec3 &p2, const glm::vec3 &p3_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawTriangle(&p1, &p2, &p3)
+
+<!--
+_syntax: ofDrawTriangle(&p1, &p2, &p3)_
+_name: ofDrawTriangle_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p1, const glm::vec2 &p2, const glm::vec2 &p3_
 _version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
@@ -2979,76 +3049,6 @@ _returns: void_
 _returns_description: _
 _parameters: float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3_
 _version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawTriangle(&p1, &p2, &p3)
-
-<!--
-_syntax: ofDrawTriangle(&p1, &p2, &p3)_
-_name: ofDrawTriangle_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p1, const glm::vec3 &p2, const glm::vec3 &p3_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawTriangle(&p1, &p2, &p3)
-
-<!--
-_syntax: ofDrawTriangle(&p1, &p2, &p3)_
-_name: ofDrawTriangle_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &p1, const glm::vec2 &p2, const glm::vec2 &p3_
-_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3241,7 +3241,7 @@ Turns on depth testing so rendering happens according to z-depth rather
 than draw order.
 
 
-See also: ofDisableDepthTest()
+**See also**: ofDisableDepthTest()
 
 
 
@@ -3375,7 +3375,7 @@ _inlined_description: _
 
 Terminates draw to PDF through ofCairoRenderer and outputs the file.
 
-See also: ofBeginSaveScreenAsPDF()
+**See also**: ofBeginSaveScreenAsPDF()
 
 
 
@@ -3426,7 +3426,7 @@ _inlined_description: _
 
 Terminates draw to SVG and outputs the file.
 
-See also: ofBeginSaveScreenAsSVG()
+**See also**: ofBeginSaveScreenAsSVG()
 
 
 
@@ -3467,7 +3467,8 @@ draw it to the screen.
 This function must be called otherwise you will not see your shape.
 
 
-Parameters:
+**Parameters:**
+
 bClose If you set it to true it will automatically close your
 shape for you. Default false.
 
@@ -3811,7 +3812,7 @@ _inlined_description: _
 
 Get the position and size of the current viewport
 
-Returns: A rectangle describing the viewport
+**Returns**: A rectangle describing the viewport
 
 
 
@@ -3883,7 +3884,7 @@ _inlined_description: _
 
 Get the position and size of the native viewport
 
-Returns: A rectangle describing the viewport
+**Returns**: A rectangle describing the viewport
 
 
 
@@ -3934,7 +3935,7 @@ void ofApp::draw(){
 }
 ~~~~
 
-See also: ofSetRectMode()
+**See also**: ofSetRectMode()
 
 
 
@@ -4016,7 +4017,7 @@ _inlined_description: _
 
 Get the height of the current viewport
 
-Returns: A height in pixels
+**Returns**: A height in pixels
 
 
 
@@ -4053,7 +4054,7 @@ _inlined_description: _
 
 Get the width of the current viewport
 
-Returns: A width in pixels
+**Returns**: A width in pixels
 
 
 
@@ -4375,7 +4376,8 @@ between ofBeginShape() and ofEndShape() to create a new contour for your
 shape.
 
 
-Parameters:
+**Parameters:**
+
 bClose If set to true then the previous contour will be
 automatically closed. Default false
 
@@ -4499,7 +4501,7 @@ _inlined_description: _
 Restores the prior coordinate system.
 
 
-See also: ofPushMatrix()
+**See also**: ofPushMatrix()
 
 
 
@@ -4546,7 +4548,7 @@ _inlined_description: _
 Restores the prior style settings. It needs to be called after ofPushStyle.
 
 
-See also: ofPushStyle()
+**See also**: ofPushStyle()
 
 
 
@@ -4762,6 +4764,41 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void ofRotateDeg(degrees)
+
+<!--
+_syntax: ofRotateDeg(degrees)_
+_name: ofRotateDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate around the z-axis
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofRotateDeg(degrees, vecX, vecY, vecZ)
 
 <!--
@@ -4793,10 +4830,14 @@ void ofApp::draw(){
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 degrees Specifies the angle of rotation, in degrees.
+
 vecX specifies the x coordinates of a vector
+
 vecY specifies the y coordinates of a vector
+
 vecZ specifies the z coordinates of a vector
 
 
@@ -4813,11 +4854,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofRotateDeg(degrees)
+###void ofRotateRad(degrees)
 
 <!--
-_syntax: ofRotateDeg(degrees)_
-_name: ofRotateDeg_
+_syntax: ofRotateRad(degrees)_
+_name: ofRotateRad_
 _returns: void_
 _returns_description: _
 _parameters: float degrees_
@@ -4879,46 +4920,15 @@ void ofApp::draw(){
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 degrees Specifies the angle of rotation, in degrees.
+
 vecX specifies the x coordinates of a vector
+
 vecY specifies the y coordinates of a vector
+
 vecZ specifies the z coordinates of a vector
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofRotateRad(degrees)
-
-<!--
-_syntax: ofRotateRad(degrees)_
-_name: ofRotateRad_
-_returns: void_
-_returns_description: _
-_parameters: float degrees_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotate around the z-axis
 
 
 
@@ -4962,7 +4972,8 @@ void ofApp::draw(){
 }
 ~~~~
 
-Parameters:
+**Parameters:**
+
 degrees Specifies the angle of rotation, in degrees.
 
 
@@ -5007,7 +5018,8 @@ void ofApp::draw(){
 }
 ~~~~
 
-Parameters:
+**Parameters:**
+
 degrees Specifies the angle of rotation, in degrees.
 
 
@@ -5052,7 +5064,8 @@ void ofApp::draw(){
 }
 ~~~~
 
-Parameters:
+**Parameters:**
+
 degrees Specifies the angle of rotation, in degrees.
 
 
@@ -5097,7 +5110,8 @@ void ofApp::draw(){
 }
 ~~~~
 
-Parameters:
+**Parameters:**
+
 degrees Specifies the angle of rotation, in degrees.
 
 
@@ -5142,7 +5156,8 @@ void ofApp::draw(){
 }
 ~~~~
 
-Parameters:
+**Parameters:**
+
 degrees Specifies the angle of rotation, in degrees.
 
 
@@ -5187,8 +5202,79 @@ void ofApp::draw(){
 }
 ~~~~
 
-Parameters:
+**Parameters:**
+
 degrees Specifies the angle of rotation, in degrees.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofScale(&p)
+
+<!--
+_syntax: ofScale(&p)_
+_name: ofScale_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofScale(amount)
+
+<!--
+_syntax: ofScale(amount)_
+_name: ofScale_
+_returns: void_
+_returns_description: _
+_parameters: float amount_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Scale along the X, Y and Z axis with the same amount.
 
 
 
@@ -5240,76 +5326,6 @@ void ofApp::draw(){
 }
 ~~~~
 Rectangle width will be now 20px heigh!
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofScale(amount)
-
-<!--
-_syntax: ofScale(amount)_
-_name: ofScale_
-_returns: void_
-_returns_description: _
-_parameters: float amount_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Scale along the X, Y and Z axis with the same amount.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofScale(&p)
-
-<!--
-_syntax: ofScale(&p)_
-_name: ofScale_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -5377,6 +5393,76 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
+###void ofSetBackgroundColor(&c)
+
+<!--
+_syntax: ofSetBackgroundColor(&c)_
+_name: ofSetBackgroundColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &c_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetBackgroundColor(brightness, alpha = 255)
+
+<!--
+_syntax: ofSetBackgroundColor(brightness, alpha = 255)_
+_name: ofSetBackgroundColor_
+_returns: void_
+_returns_description: _
+_parameters: int brightness, int alpha=255_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void ofSetBackgroundColor(r, g, b, a = 255)
 
 <!--
@@ -5420,76 +5506,6 @@ void ofApp::setup(){
     ofSetBackgroundColor(255,0,0);  // Sets the background color to red
 }
 ~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetBackgroundColor(brightness, alpha = 255)
-
-<!--
-_syntax: ofSetBackgroundColor(brightness, alpha = 255)_
-_name: ofSetBackgroundColor_
-_returns: void_
-_returns_description: _
-_parameters: int brightness, int alpha=255_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetBackgroundColor(&c)
-
-<!--
-_syntax: ofSetBackgroundColor(&c)_
-_name: ofSetBackgroundColor_
-_returns: void_
-_returns_description: _
-_parameters: const ofColor &c_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -5588,6 +5604,118 @@ void ofApp::draw(){
     ofDrawCircle(150,150,100);          //draws a rough circle
     ofSetCircleResolution(100);
     ofDrawCircle(450,150,100);          //draws a fine circle
+}
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetColor(&color)
+
+<!--
+_syntax: ofSetColor(&color)_
+_name: ofSetColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &color_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetColor(&color, _a)
+
+<!--
+_syntax: ofSetColor(&color, _a)_
+_name: ofSetColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &color, int _a_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetColor(hexColor)
+
+<!--
+_syntax: ofSetColor(hexColor)_
+_name: ofSetColor_
+_returns: void_
+_returns_description: _
+_parameters: int gray_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Sets the draw color with r,g,b, passed in as a hex. Hex is a conventient way to write colors. Some examples:
+~~~~{.cpp}
+void ofApp::draw(){
+    ofSetColor(0xffffff);  // white  (255,255,255)
+    ofSetColor(0x000000);  // black  (0,0,0);
+    ofSetColor(0x00ff00);  // green  (0,255,0);
 }
 ~~~~
 
@@ -5697,118 +5825,6 @@ void ofApp::draw(){
     ofDisableAlphaBlending();   // turn it back off, if you don't need it
 }
 ~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetColor(hexColor)
-
-<!--
-_syntax: ofSetColor(hexColor)_
-_name: ofSetColor_
-_returns: void_
-_returns_description: _
-_parameters: int gray_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Sets the draw color with r,g,b, passed in as a hex. Hex is a conventient way to write colors. Some examples:
-~~~~{.cpp}
-void ofApp::draw(){
-    ofSetColor(0xffffff);  // white  (255,255,255)
-    ofSetColor(0x000000);  // black  (0,0,0);
-    ofSetColor(0x00ff00);  // green  (0,255,0);
-}
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetColor(&color)
-
-<!--
-_syntax: ofSetColor(&color)_
-_name: ofSetColor_
-_returns: void_
-_returns_description: _
-_parameters: const ofColor &color_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSetColor(&color, _a)
-
-<!--
-_syntax: ofSetColor(&color, _a)_
-_name: ofSetColor_
-_returns: void_
-_returns_description: _
-_parameters: const ofColor &color, int _a_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -6221,12 +6237,13 @@ _inlined_description: _
 
 Set the current style of the ofGraphics.
 
-Parameters:
+**Parameters:**
+
 style contains information of the graphics style such as
 ofColor, ofFill, polyMode and others.
 
 
-See also: See ofStyle for more details.
+**See also**: See ofStyle for more details.
 
 
 
@@ -6417,58 +6434,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofTranslate(x,y,z)
-
-<!--
-_syntax: ofTranslate(x,y,z)_
-_name: ofTranslate_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Translate by (x,y,z) vector of our coordinate system.
-The call of ofTranslate() modifies graphics positions.
-
-Use ofPushMatrix() and ofPopMatrix() to save and restore the untranslated
-coordinate system.
-~~~~{.cpp}
-void ofApp::draw(){
-    ofTranslate(100, 100, 0);   // move the coordinate system to position x 100 and y 100 and make that zero.
-    ofDrawRectangle(0, 0, 10, 10);       // draw a rect at that position
-}
-~~~~
-
-
-
-
-
-_description: _
-
-ofTranslate produces a translation by (x,y,z) vector of our coordinate system. The call of ofTranslate modifies graphics positions.
-Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate system.
-~~~~{.cpp}
-void ofApp::draw(){
-    ofTranslate(100, 100, 0);   // move the coordinate system to position x 100 and y 100 and make that zero.
-    ofDrawRectangle(0, 0, 10, 10);       // draw a rect at that position
-}
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofTranslate(&p)
 
 <!--
@@ -6550,14 +6515,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofVertex(x,y)
+###void ofTranslate(x,y,z)
 
 <!--
-_syntax: ofVertex(x,y)_
-_name: ofVertex_
+_syntax: ofTranslate(x,y,z)_
+_name: ofTranslate_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y_
+_parameters: float x, float y, float z_
 _version_started: 006_
 _version_deprecated: _
 _summary: _
@@ -6569,8 +6534,17 @@ _advanced: False_
 
 _inlined_description: _
 
-Specifies a single point of a shape. To be called between ofBeginShape() and
-ofEndShape().
+Translate by (x,y,z) vector of our coordinate system.
+The call of ofTranslate() modifies graphics positions.
+
+Use ofPushMatrix() and ofPopMatrix() to save and restore the untranslated
+coordinate system.
+~~~~{.cpp}
+void ofApp::draw(){
+    ofTranslate(100, 100, 0);   // move the coordinate system to position x 100 and y 100 and make that zero.
+    ofDrawRectangle(0, 0, 10, 10);       // draw a rect at that position
+}
+~~~~
 
 
 
@@ -6578,42 +6552,14 @@ ofEndShape().
 
 _description: _
 
-Specifies a single point of a shape. To be called between ofBeginShape() and ofEndShape().
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofVertex(x, y, z)
-
-<!--
-_syntax: ofVertex(x, y, z)_
-_name: ofVertex_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
+ofTranslate produces a translation by (x,y,z) vector of our coordinate system. The call of ofTranslate modifies graphics positions.
+Use ofPushMatrix and ofPopMatrix to save and restore the untranslated coordinate system.
+~~~~{.cpp}
+void ofApp::draw(){
+    ofTranslate(100, 100, 0);   // move the coordinate system to position x 100 and y 100 and make that zero.
+    ofDrawRectangle(0, 0, 10, 10);       // draw a rect at that position
+}
+~~~~
 
 
 
@@ -6684,6 +6630,77 @@ _inlined_description: _
 _description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofVertex(x, y, z)
+
+<!--
+_syntax: ofVertex(x, y, z)_
+_name: ofVertex_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofVertex(x,y)
+
+<!--
+_syntax: ofVertex(x,y)_
+_name: ofVertex_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Specifies a single point of a shape. To be called between ofBeginShape() and
+ofEndShape().
+
+
+
+
+
+_description: _
+
+Specifies a single point of a shape. To be called between ofBeginShape() and ofEndShape().
 
 
 
@@ -6852,7 +6869,8 @@ _inlined_description: _
 
 Setup the drawing viewport
 
-Parameters:
+**Parameters:**
+
 viewport A rectangle describing the size and position of the viewport.
 If the width or height are set to 0, it will assume the size to be the window
 size (ofGetWidth(), ofGetHeight())
@@ -6892,10 +6910,14 @@ _inlined_description: _
 
 Setup the drawing viewport
 
-Parameters:
+**Parameters:**
+
 x The x position of the viewport
+
 y The y position of the viewport
+
 width The width of the viewport, defaults to ofGetWidth()
+
 height The height of the viewport, defaults to ofGetHeight()
 
 

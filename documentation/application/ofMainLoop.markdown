@@ -385,42 +385,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void run(window, &&app)
-
-<!--
-_syntax: run(window, &&app)_
-_name: run_
-_returns: void_
-_returns_description: _
-_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > &&app_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void run(&&app)
 
 <!--
@@ -457,14 +421,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setCurrentWindow(window)
+###void run(window, &&app)
 
 <!--
-_syntax: setCurrentWindow(window)_
-_name: setCurrentWindow_
+_syntax: run(window, &&app)_
+_name: run_
 _returns: void_
 _returns_description: _
-_parameters: shared_ptr< ofAppBaseWindow > window_
+_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > &&app_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -501,6 +465,42 @@ _name: setCurrentWindow_
 _returns: void_
 _returns_description: _
 _parameters: ofAppBaseWindow *window_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setCurrentWindow(window)
+
+<!--
+_syntax: setCurrentWindow(window)_
+_name: setCurrentWindow_
+_returns: void_
+_returns_description: _
+_parameters: shared_ptr< ofAppBaseWindow > window_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

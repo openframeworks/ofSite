@@ -25,14 +25,14 @@ _extends: _
 
 
 
-### ofEventListeners()
+### ofEventListeners(&&)
 
 <!--
-_syntax: ofEventListeners()_
+_syntax: ofEventListeners(&&)_
 _name: ofEventListeners_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: ofEventListeners &&_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -97,12 +97,48 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofEventListeners(&&)
+### ofEventListeners()
 
 <!--
-_syntax: ofEventListeners(&&)_
+_syntax: ofEventListeners()_
 _name: ofEventListeners_
 _returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofEventListeners & operator=(&&)
+
+<!--
+_syntax: operator=(&&)_
+_name: operator=_
+_returns: ofEventListeners &_
 _returns_description: _
 _parameters: ofEventListeners &&_
 _access: public_
@@ -141,42 +177,6 @@ _name: operator=_
 _returns: ofEventListeners &_
 _returns_description: _
 _parameters: const ofEventListeners &_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofEventListeners & operator=(&&)
-
-<!--
-_syntax: operator=(&&)_
-_name: operator=_
-_returns: ofEventListeners &_
-_returns_description: _
-_parameters: ofEventListeners &&_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

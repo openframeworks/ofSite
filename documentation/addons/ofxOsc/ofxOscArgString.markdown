@@ -171,42 +171,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(*value)
-
-<!--
-_syntax: set(*value)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: const char *value_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-set value using C string
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void set(&value)
 
 <!--
@@ -228,6 +192,42 @@ _advanced: False_
 _inlined_description: _
 
 set value using string
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(*value)
+
+<!--
+_syntax: set(*value)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: const char *value_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+set value using C string
 
 
 

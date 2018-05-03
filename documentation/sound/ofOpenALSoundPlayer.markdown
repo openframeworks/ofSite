@@ -644,7 +644,7 @@ _syntax: mpg123ReadFile(&path, &buffer, &fftAuxBuffer)_
 _name: mpg123ReadFile_
 _returns: bool_
 _returns_description: _
-_parameters: const filesystem::path &path, int &buffer, int &fftAuxBuffer_
+_parameters: const filesystem::path &path, vector< short > &buffer, vector< float > &fftAuxBuffer_
 _access: private_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -680,7 +680,7 @@ _syntax: mpg123Stream(&path, &buffer, &fftAuxBuffer)_
 _name: mpg123Stream_
 _returns: bool_
 _returns_description: _
-_parameters: const filesystem::path &path, int &buffer, int &fftAuxBuffer_
+_parameters: const filesystem::path &path, vector< short > &buffer, vector< float > &fftAuxBuffer_
 _access: private_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -788,7 +788,7 @@ _syntax: readFile(&fileName, &buffer)_
 _name: readFile_
 _returns: bool_
 _returns_description: _
-_parameters: const filesystem::path &fileName, int &buffer_
+_parameters: const filesystem::path &fileName, vector< short > &buffer_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -824,7 +824,7 @@ _syntax: runWindow(&signal)_
 _name: runWindow_
 _returns: void_
 _returns_description: _
-_parameters: int &signal_
+_parameters: vector< float > &signal_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -1148,7 +1148,7 @@ _syntax: sfReadFile(&path, &buffer, &fftAuxBuffer)_
 _name: sfReadFile_
 _returns: bool_
 _returns_description: _
-_parameters: const filesystem::path &path, int &buffer, int &fftAuxBuffer_
+_parameters: const filesystem::path &path, vector< short > &buffer, vector< float > &fftAuxBuffer_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -1184,7 +1184,7 @@ _syntax: sfStream(&path, &buffer, &fftAuxBuffer)_
 _name: sfStream_
 _returns: bool_
 _returns_description: _
-_parameters: const filesystem::path &path, int &buffer, int &fftAuxBuffer_
+_parameters: const filesystem::path &path, vector< short > &buffer, vector< float > &fftAuxBuffer_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -1256,7 +1256,7 @@ _syntax: stream(&fileName, &buffer)_
 _name: stream_
 _returns: bool_
 _returns_description: _
-_parameters: const filesystem::path &fileName, int &buffer_
+_parameters: const filesystem::path &fileName, vector< short > &buffer_
 _access: private_
 _version_started: 007_
 _version_deprecated: _

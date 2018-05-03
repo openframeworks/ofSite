@@ -34,6 +34,42 @@ The 3x3 matrix can hold the values needed to transform a 2d vertex, which is pre
 
 
 
+###float determinant(&A)
+
+<!--
+_syntax: determinant(&A)_
+_name: determinant_
+_returns: float_
+_returns_description: _
+_parameters: const ofMatrix3x3 &A_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float determinant()
 
 <!--
@@ -56,43 +92,7 @@ _inlined_description: _
 
 Find the determinant of the matrix
 
-See also: [Wolfram explanation](http://mathworld.wolfram.com/Determinant.html)
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float determinant(&A)
-
-<!--
-_syntax: determinant(&A)_
-_name: determinant_
-_returns: float_
-_returns_description: _
-_parameters: const ofMatrix3x3 &A_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
+**See also**: [Wolfram explanation](http://mathworld.wolfram.com/Determinant.html)
 
 
 
@@ -175,7 +175,7 @@ find the adjoint by transposing the matrix of cofactors
 divide this through the determinant to get the inverse
 
 
-See also: invert();
+**See also**: invert();
 
 
 
@@ -201,6 +201,42 @@ _returns_description: _
 _parameters: _
 _access: public_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofMatrix3x3(&mat)
+
+<!--
+_syntax: ofMatrix3x3(&mat)_
+_name: ofMatrix3x3_
+_returns: _
+_returns_description: _
+_parameters: const glm::mat3 &mat_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -264,16 +300,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofMatrix3x3(&mat)
+###ofMatrix3x3 operator*(&B)
 
 <!--
-_syntax: ofMatrix3x3(&mat)_
-_name: ofMatrix3x3_
-_returns: _
+_syntax: operator*(&B)_
+_name: operator*_
+_returns: ofMatrix3x3_
 _returns_description: _
-_parameters: const glm::mat3 &mat_
+_parameters: const ofMatrix3x3 &B_
 _access: public_
-_version_started: 0.10.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -284,7 +320,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Multiply a 3x3 matrix with a 3x3 matrix
 
 
 
@@ -321,42 +357,6 @@ _advanced: False_
 _inlined_description: _
 
 Multiply a matrix with a scalar
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofMatrix3x3 operator*(&B)
-
-<!--
-_syntax: operator*(&B)_
-_name: operator*_
-_returns: ofMatrix3x3_
-_returns_description: _
-_parameters: const ofMatrix3x3 &B_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Multiply a 3x3 matrix with a 3x3 matrix
 
 
 
@@ -769,6 +769,45 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofMatrix3x3 transpose(&A)
+
+<!--
+_syntax: transpose(&A)_
+_name: transpose_
+_returns: ofMatrix3x3_
+_returns_description: _
+_parameters: const ofMatrix3x3 &A_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Transpose without changing the matrix.
+Uses the "swap" method with additions and subtractions to swap the elements that aren't on the main diagonal.
+
+**Returns**: transposed matrix.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void transpose()
 
 <!--
@@ -796,45 +835,6 @@ This changes the matrix.
     [ a b c ]T    [ a d g ]
     [ d e f ]  =  [ b e h ]
     [ g h i ]     [ c f i ]
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofMatrix3x3 transpose(&A)
-
-<!--
-_syntax: transpose(&A)_
-_name: transpose_
-_returns: ofMatrix3x3_
-_returns_description: _
-_parameters: const ofMatrix3x3 &A_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Transpose without changing the matrix.
-Uses the "swap" method with additions and subtractions to swap the elements that aren't on the main diagonal.
-
-Returns: transposed matrix.
 
 
 

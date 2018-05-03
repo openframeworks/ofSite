@@ -1250,16 +1250,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxTCPManager()
+### ofxTCPManager(&mom)
 
 <!--
-_syntax: ofxTCPManager()_
+_syntax: ofxTCPManager(&mom)_
 _name: ofxTCPManager_
 _returns: _
 _returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
+_parameters: const ofxTCPManager &mom_
+_access: private_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1286,16 +1286,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxTCPManager(&mom)
+### ofxTCPManager()
 
 <!--
-_syntax: ofxTCPManager(&mom)_
+_syntax: ofxTCPManager()_
 _name: ofxTCPManager_
 _returns: _
 _returns_description: _
-_parameters: const ofxTCPManager &mom_
-_access: private_
-_version_started: 0.8.0_
+_parameters: _
+_access: public_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

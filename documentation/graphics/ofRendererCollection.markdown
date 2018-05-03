@@ -241,14 +241,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void clear(r, g, b, a)
+###void clear(brightness, a)
 
 <!--
-_syntax: clear(r, g, b, a)_
+_syntax: clear(brightness, a)_
 _name: clear_
 _returns: void_
 _returns_description: _
-_parameters: float r, float g, float b, float a_
+_parameters: float brightness, float a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -277,14 +277,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void clear(brightness, a)
+###void clear(r, g, b, a)
 
 <!--
-_syntax: clear(brightness, a)_
+_syntax: clear(r, g, b, a)_
 _name: clear_
 _returns: void_
 _returns_description: _
-_parameters: float brightness, float a_
+_parameters: float r, float g, float b, float a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -421,114 +421,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&shape)
-
-<!--
-_syntax: draw(&shape)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPath &shape_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&model, renderType)
-
-<!--
-_syntax: draw(&model, renderType)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const of3dPrimitive &model, ofPolyRenderMode renderType_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&node)
-
-<!--
-_syntax: draw(&node)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofNode &node_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(&img, x, y, z, w, h, sx, sy, sw, sh)
 
 <!--
@@ -637,16 +529,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&video, x, y, w, h)
+###void draw(&model, renderType)
 
 <!--
-_syntax: draw(&video, x, y, w, h)_
+_syntax: draw(&model, renderType)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofBaseVideoDraws &video, float x, float y, float w, float h_
+_parameters: const of3dPrimitive &model, ofPolyRenderMode renderType_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&node)
+
+<!--
+_syntax: draw(&node)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofNode &node_
+_access: public_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -709,6 +637,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&shape)
+
+<!--
+_syntax: draw(&shape)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofPath &shape_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(&vertexData, mode, useColors, useTextures, useNormals)
 
 <!--
@@ -719,6 +683,42 @@ _returns_description: _
 _parameters: const ofMesh &vertexData, ofPolyRenderMode mode, bool useColors, bool useTextures, bool useNormals_
 _access: public_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&video, x, y, w, h)
+
+<!--
+_syntax: draw(&video, x, y, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseVideoDraws &video, float x, float y, float w, float h_
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -889,16 +889,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawString(text, x, y, z)
+###void drawString(&font, text, x, y)
 
 <!--
-_syntax: drawString(text, x, y, z)_
+_syntax: drawString(&font, text, x, y)_
 _name: drawString_
 _returns: void_
 _returns_description: _
-_parameters: string text, float x, float y, float z_
+_parameters: const ofTrueTypeFont &font, string text, float x, float y_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -925,16 +925,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawString(&font, text, x, y)
+###void drawString(text, x, y, z)
 
 <!--
-_syntax: drawString(&font, text, x, y)_
+_syntax: drawString(text, x, y, z)_
 _name: drawString_
 _returns: void_
 _returns_description: _
-_parameters: const ofTrueTypeFont &font, string text, float x, float y_
+_parameters: string text, float x, float y, float z_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1861,14 +1861,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadMatrix(*m)
+###void loadMatrix(&m)
 
 <!--
-_syntax: loadMatrix(*m)_
+_syntax: loadMatrix(&m)_
 _name: loadMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const float *m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -1897,14 +1897,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadMatrix(&m)
+###void loadMatrix(*m)
 
 <!--
-_syntax: loadMatrix(&m)_
+_syntax: loadMatrix(*m)_
 _name: loadMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const glm::mat4 &m_
+_parameters: const float *m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2005,14 +2005,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void multMatrix(*m)
+###void multMatrix(&m)
 
 <!--
-_syntax: multMatrix(*m)_
+_syntax: multMatrix(&m)_
 _name: multMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const float *m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2041,14 +2041,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void multMatrix(&m)
+###void multMatrix(*m)
 
 <!--
-_syntax: multMatrix(&m)_
+_syntax: multMatrix(*m)_
 _name: multMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const glm::mat4 &m_
+_parameters: const float *m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2401,42 +2401,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotateDeg(degrees, vecX, vecY, vecZ)
-
-<!--
-_syntax: rotateDeg(degrees, vecX, vecY, vecZ)_
-_name: rotateDeg_
-_returns: void_
-_returns_description: _
-_parameters: float degrees, float vecX, float vecY, float vecZ_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void rotateDeg(degrees)
 
 <!--
@@ -2473,14 +2437,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotateRad(radians, vecX, vecY, vecZ)
+###void rotateDeg(degrees, vecX, vecY, vecZ)
 
 <!--
-_syntax: rotateRad(radians, vecX, vecY, vecZ)_
-_name: rotateRad_
+_syntax: rotateDeg(degrees, vecX, vecY, vecZ)_
+_name: rotateDeg_
 _returns: void_
 _returns_description: _
-_parameters: float radians, float vecX, float vecY, float vecZ_
+_parameters: float degrees, float vecX, float vecY, float vecZ_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2517,6 +2481,42 @@ _name: rotateRad_
 _returns: void_
 _returns_description: _
 _parameters: float radians_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateRad(radians, vecX, vecY, vecZ)
+
+<!--
+_syntax: rotateRad(radians, vecX, vecY, vecZ)_
+_name: rotateRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians, float vecX, float vecY, float vecZ_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2977,78 +2977,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setColor(r, g, b)
-
-<!--
-_syntax: setColor(r, g, b)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: int r, int g, int b_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setColor(r, g, b, a)
-
-<!--
-_syntax: setColor(r, g, b, a)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: int r, int g, int b, int a_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setColor(&color)
 
 <!--
@@ -3129,6 +3057,78 @@ _name: setColor_
 _returns: void_
 _returns_description: _
 _parameters: int gray_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(r, g, b)
+
+<!--
+_syntax: setColor(r, g, b)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: int r, int g, int b_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(r, g, b, a)
+
+<!--
+_syntax: setColor(r, g, b, a)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: int r, int g, int b, int a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3733,14 +3733,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void translate(x, y, z)
+###void translate(&p)
 
 <!--
-_syntax: translate(x, y, z)_
+_syntax: translate(&p)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3769,14 +3769,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void translate(&p)
+###void translate(x, y, z)
 
 <!--
-_syntax: translate(&p)_
+_syntax: translate(x, y, z)_
 _name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec3 &p_
+_parameters: float x, float y, float z_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

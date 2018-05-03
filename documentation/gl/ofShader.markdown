@@ -145,42 +145,6 @@ _syntax: beginTransformFeedback(mode, &binding)_
 _name: beginTransformFeedback_
 _returns: void_
 _returns_description: _
-_parameters: GLenum mode, const int &binding_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void beginTransformFeedback(mode, &binding)
-
-<!--
-_syntax: beginTransformFeedback(mode, &binding)_
-_name: beginTransformFeedback_
-_returns: void_
-_returns_description: _
 _parameters: GLenum mode, const ofShader::TransformFeedbackBaseBinding &binding_
 _access: public_
 _version_started: 0.10.0_
@@ -217,7 +181,43 @@ _syntax: beginTransformFeedback(mode, &binding)_
 _name: beginTransformFeedback_
 _returns: void_
 _returns_description: _
-_parameters: GLenum mode, const int &binding_
+_parameters: GLenum mode, const vector< TransformFeedbackRangeBinding > &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void beginTransformFeedback(mode, &binding)
+
+<!--
+_syntax: beginTransformFeedback(mode, &binding)_
+_name: beginTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: GLenum mode, const vector< TransformFeedbackBaseBinding > &binding_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -573,42 +573,6 @@ After you call end() any drawing, vertexes and textures, do not have the effect 
 
 <!----------------------------------------------------------------------------->
 
-###void endTransformFeedback()
-
-<!--
-_syntax: endTransformFeedback()_
-_name: endTransformFeedback_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void endTransformFeedback(&binding)
 
 <!--
@@ -617,42 +581,6 @@ _name: endTransformFeedback_
 _returns: void_
 _returns_description: _
 _parameters: const ofShader::TransformFeedbackRangeBinding &binding_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void endTransformFeedback(&binding)
-
-<!--
-_syntax: endTransformFeedback(&binding)_
-_name: endTransformFeedback_
-_returns: void_
-_returns_description: _
-_parameters: const int &binding_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -724,7 +652,79 @@ _syntax: endTransformFeedback(&binding)_
 _name: endTransformFeedback_
 _returns: void_
 _returns_description: _
-_parameters: const int &binding_
+_parameters: const vector< TransformFeedbackRangeBinding > &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void endTransformFeedback(&binding)
+
+<!--
+_syntax: endTransformFeedback(&binding)_
+_name: endTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: const vector< TransformFeedbackBaseBinding > &binding_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void endTransformFeedback()
+
+<!--
+_syntax: endTransformFeedback()_
+_name: endTransformFeedback_
+_returns: void_
+_returns_description: _
+_parameters: _
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -918,7 +918,10 @@ _advanced: False_
 _inlined_description: _
 
 @brief returns the shader source as it was passed to the GLSL compiler
-@param type (GL_VERTEX_SHADER | GL_FRAGMENT_SHADER | GL_GEOMETRY_SHADER_EXT) the shader source you'd like to inspect.
+
+**Parameters:**
+
+type (GL_VERTEX_SHADER | GL_FRAGMENT_SHADER | GL_GEOMETRY_SHADER_EXT) the shader source you'd like to inspect.
 
 
 
@@ -1266,16 +1269,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofShader()
+### ofShader(&&shader)
 
 <!--
-_syntax: ofShader()_
+_syntax: ofShader(&&shader)_
 _name: ofShader_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: ofShader &&shader_
 _access: public_
-_version_started: _
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1338,16 +1341,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofShader(&&shader)
+### ofShader()
 
 <!--
-_syntax: ofShader(&&shader)_
+_syntax: ofShader()_
 _name: ofShader_
 _returns: _
 _returns_description: _
-_parameters: ofShader &&shader_
+_parameters: _
 _access: public_
-_version_started: 0.10.0_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1382,42 +1385,6 @@ _name: operator!=_
 _returns: bool_
 _returns_description: _
 _parameters: const ofShader &other_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofShader & operator=(&shader)
-
-<!--
-_syntax: operator=(&shader)_
-_name: operator=_
-_returns: ofShader &_
-_returns_description: _
-_parameters: const ofShader &shader_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1482,6 +1449,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofShader & operator=(&shader)
+
+<!--
+_syntax: operator=(&shader)_
+_name: operator=_
+_returns: ofShader &_
+_returns_description: _
+_parameters: const ofShader &shader_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool operator==(&other)
 
 <!--
@@ -1496,6 +1499,42 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath)
+
+<!--
+_syntax: parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath)_
+_name: parseForIncludes_
+_returns: string_
+_returns_description: _
+_parameters: const string &source, vector< string > &included, int level=0, const filesystem::path &sourceDirectoryPath_
+_access: private_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
@@ -1544,42 +1583,6 @@ _inlined_description: _
 @note			Include paths are always specified _relative to the including file's current path_
 	@note			Recursive #pragma include statements are possible
 @note			Includes will be processed up to 32 levels deep
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath)
-
-<!--
-_syntax: parseForIncludes(&source, &included, level = 0, &sourceDirectoryPath)_
-_name: parseForIncludes_
-_returns: string_
-_returns_description: _
-_parameters: const string &source, int &included, int level=0, const filesystem::path &sourceDirectoryPath_
-_access: private_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 
@@ -2617,16 +2620,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setUniform2f(&name, v1, v2)
+###void setUniform2f(&name, &v)
 
 <!--
-_syntax: setUniform2f(&name, v1, v2)_
+_syntax: setUniform2f(&name, &v)_
 _name: setUniform2f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float v1, float v2_
+_parameters: const string &name, const glm::vec2 &v_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2653,16 +2656,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setUniform2f(&name, &v)
+###void setUniform2f(&name, v1, v2)
 
 <!--
-_syntax: setUniform2f(&name, &v)_
+_syntax: setUniform2f(&name, v1, v2)_
 _name: setUniform2f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const glm::vec2 &v_
+_parameters: const string &name, float v1, float v2_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2803,42 +2806,6 @@ ivec2 iv[2];
 
 <!----------------------------------------------------------------------------->
 
-###void setUniform3f(&name, v1, v2, v3)
-
-<!--
-_syntax: setUniform3f(&name, v1, v2, v3)_
-_name: setUniform3f_
-_returns: void_
-_returns_description: _
-_parameters: const string &name, float v1, float v2, float v3_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-set a vec3 uniform on the shader
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setUniform3f(&name, &v)
 
 <!--
@@ -2868,6 +2835,42 @@ _inlined_description: _
 _description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setUniform3f(&name, v1, v2, v3)
+
+<!--
+_syntax: setUniform3f(&name, v1, v2, v3)_
+_name: setUniform3f_
+_returns: void_
+_returns_description: _
+_parameters: const string &name, float v1, float v2, float v3_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+set a vec3 uniform on the shader
 
 
 
@@ -2991,16 +2994,16 @@ ivec3 iv[2];
 
 <!----------------------------------------------------------------------------->
 
-###void setUniform4f(&name, v1, v2, v3, v4)
+###void setUniform4f(&name, &v)
 
 <!--
-_syntax: setUniform4f(&name, v1, v2, v3, v4)_
+_syntax: setUniform4f(&name, &v)_
 _name: setUniform4f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, float v1, float v2, float v3, float v4_
+_parameters: const string &name, const glm::vec4 &v_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3019,10 +3022,7 @@ _inlined_description: _
 
 _description: _
 
-set a vec4 uniform on the shader
-~~~~{.cpp}
-vec4 fv;
-~~~~
+
 
 
 
@@ -3066,16 +3066,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setUniform4f(&name, &v)
+###void setUniform4f(&name, v1, v2, v3, v4)
 
 <!--
-_syntax: setUniform4f(&name, &v)_
+_syntax: setUniform4f(&name, v1, v2, v3, v4)_
 _name: setUniform4f_
 _returns: void_
 _returns_description: _
-_parameters: const string &name, const glm::vec4 &v_
+_parameters: const string &name, float v1, float v2, float v3, float v4_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3094,7 +3094,10 @@ _inlined_description: _
 
 _description: _
 
-
+set a vec4 uniform on the shader
+~~~~{.cpp}
+vec4 fv;
+~~~~
 
 
 
@@ -3544,6 +3547,42 @@ This are more of advanced use function and doesn't need.
 
 <!----------------------------------------------------------------------------->
 
+###bool setupShaderFromSource(&&source)
+
+<!--
+_syntax: setupShaderFromSource(&&source)_
+_name: setupShaderFromSource_
+_returns: bool_
+_returns_description: _
+_parameters: ofShader::Source &&source_
+_access: private_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool setupShaderFromSource(type, source, sourceDirectoryPath)
 
 <!--
@@ -3603,42 +3642,6 @@ shader.setupShaderFromSource( GL_FRAGMENT_SHADER, fragmentSrc.str() );
 shader.bindDefaults();
 shader.linkProgram();
 ~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setupShaderFromSource(&&source)
-
-<!--
-_syntax: setupShaderFromSource(&&source)_
-_name: setupShaderFromSource_
-_returns: bool_
-_returns_description: _
-_parameters: ofShader::Source &&source_
-_access: private_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 

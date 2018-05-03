@@ -51,9 +51,12 @@ _inlined_description: _
 
 Log a message.
 
-Parameters:
+**Parameters:**
+
 level The log level.
+
 module The target module.
+
 message The log message.
 
 
@@ -92,10 +95,14 @@ _inlined_description: _
 
 Log a message.
 
-Parameters:
+**Parameters:**
+
 level The log level.
+
 module The target module.
+
 format The printf-style format string.
+
 args the list of printf-style arguments.
 
 

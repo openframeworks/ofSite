@@ -925,14 +925,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxSlider< Type > * setup(_val, width, height)
+###ofxSlider< Type > * setup(&sliderName, _val, _min, _max, width, height)
 
 <!--
-_syntax: setup(_val, width, height)_
+_syntax: setup(&sliderName, _val, _min, _max, width, height)_
 _name: setup_
 _returns: ofxSlider< Type > *_
 _returns_description: _
-_parameters: ofParameter< Type > _val, float width, float height_
+_parameters: const string &sliderName, Type _val, Type _min, Type _max, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -961,14 +961,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxSlider< Type > * setup(&sliderName, _val, _min, _max, width, height)
+###ofxSlider< Type > * setup(_val, width, height)
 
 <!--
-_syntax: setup(&sliderName, _val, _min, _max, width, height)_
+_syntax: setup(_val, width, height)_
 _name: setup_
 _returns: ofxSlider< Type > *_
 _returns_description: _
-_parameters: const string &sliderName, Type _val, Type _min, Type _max, float width, float height_
+_parameters: ofParameter< Type > _val, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _

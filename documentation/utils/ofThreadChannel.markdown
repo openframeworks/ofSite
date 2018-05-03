@@ -30,7 +30,7 @@ If multiple threads attempt to send data using the same ofThreadChannel, the
 send method will block the calling thread until it is free.
 
 
-See also: https://github.com/openframeworks/ofBook/blob/master/chapters/threads/chapter.md
+**See also**: https://github.com/openframeworks/ofBook/blob/master/chapters/threads/chapter.md
 \tparam T The data type sent by the ofThreadChannel.
 
 
@@ -214,72 +214,11 @@ if (myThreadChannel.receive(myPixelsToSet)) {
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 sentValue A reference to a sent value.
 
-Returns: True if a new value was received or false if the ofThreadChannel was closed.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool send(&value)
-
-<!--
-_syntax: send(&value)_
-_name: send_
-_returns: bool_
-_returns_description: _
-_parameters: const T &value_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Send a value to the receiver by making a copy.
-
-This method copies the contents of the sent value, leaving the original
-data unchanged.
-
-~~~~{.cpp}
-ofThreadChannel<ofPixels> myThreadChannel;
-
-// ofThreadChannel<ofPixels> initialized elsewhere.
-
-ofPixels myPixelsToSend;
-
-// Fill the pixels with valid data, an image for example.
-
-ofLoadImage(myPixelsToSend, "myImage.jpg");
-
-// Send `myPixelsToSend` by copying it. `myPixelsToSend` is still valid
-// after sending.
-if (myThreadChannel.send(myPixelsToSend)) {
-		// If true, `myPixelsToSend` was sent successfully.
-} else {
-		// If false, the thread channel was closed.
-}
-~~~~
-
-
-Returns: true if the value was sent successfully or false if the channel was closed.
+**Returns**: True if a new value was received or false if the ofThreadChannel was closed.
 
 
 
@@ -346,7 +285,69 @@ if (myThreadChannel.send(std::move(myPixelsToSend))) {
 ~~~~
 
 
-Returns: true if the value was sent successfully or false if the channel was closed.
+**Returns**: true if the value was sent successfully or false if the channel was closed.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool send(&value)
+
+<!--
+_syntax: send(&value)_
+_name: send_
+_returns: bool_
+_returns_description: _
+_parameters: const T &value_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Send a value to the receiver by making a copy.
+
+This method copies the contents of the sent value, leaving the original
+data unchanged.
+
+~~~~{.cpp}
+ofThreadChannel<ofPixels> myThreadChannel;
+
+// ofThreadChannel<ofPixels> initialized elsewhere.
+
+ofPixels myPixelsToSend;
+
+// Fill the pixels with valid data, an image for example.
+
+ofLoadImage(myPixelsToSend, "myImage.jpg");
+
+// Send `myPixelsToSend` by copying it. `myPixelsToSend` is still valid
+// after sending.
+if (myThreadChannel.send(myPixelsToSend)) {
+		// If true, `myPixelsToSend` was sent successfully.
+} else {
+		// If false, the thread channel was closed.
+}
+~~~~
+
+
+**Returns**: true if the value was sent successfully or false if the channel was closed.
 
 
 
@@ -411,10 +412,11 @@ if (myThreadChannel.tryReceive(myPixelsToSet)) {
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 sentValue A reference to a sent value.
 
-Returns: True if a new value was received or false if the ofThreadChannel was closed.
+**Returns**: True if a new value was received or false if the ofThreadChannel was closed.
 
 
 
@@ -480,11 +482,13 @@ if (myThreadChannel.tryReceive(myPixelsToSet)) {
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 sentValue A reference to a sent value.
+
 timeoutMs The number of milliseconds to wait for new data before continuing.
 
-Returns: True if a new value was received or false if the ofThreadChannel was closed.
+**Returns**: True if a new value was received or false if the ofThreadChannel was closed.
 
 
 

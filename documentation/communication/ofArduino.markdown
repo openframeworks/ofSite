@@ -119,9 +119,11 @@ _inlined_description: _
 
 Opens a serial port connection to the arduino
 
-Parameters:
+**Parameters:**
+
 device The name of the device.
 You can get the name from the Arduino IDE
+
 baud The baud rate the connection uses
 
 
@@ -416,7 +418,8 @@ because the Arduino has a 10 bit ADC you get between 0 and 1023 for
 possible values.
 
 
-Parameters:
+**Parameters:**
+
 pin The pin number (0-5)
 
 
@@ -455,7 +458,8 @@ _inlined_description: _
 
 Returns a pointer to the analog data history list for the given pin.
 
-Parameters:
+**Parameters:**
+
 pin The Arduino Uno pin: 0-5
 
 
@@ -493,7 +497,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: `ARD_ON` or `ARD_OFF`
+**Returns**: `ARD_ON` or `ARD_OFF`
 
 
 
@@ -593,7 +597,8 @@ given pin
 \note Pin 16-21 can also be used if analog inputs 0-5 are used as
 digital pins
 
-Parameters:
+**Parameters:**
+
 pin The pin number (2-13)
 
 
@@ -635,7 +640,7 @@ _inlined_description: _
 Get the pin mode of the given pin
 
 
-Returns: `ARD_INPUT`, `ARD_OUTPUT`, `ARD_PWM`, `ARD_SERVO`, `ARD_ANALOG`
+**Returns**: `ARD_INPUT`, `ARD_OUTPUT`, `ARD_PWM`, `ARD_SERVO`, `ARD_ANALOG`
 
 
 
@@ -707,7 +712,7 @@ _advanced: True_
 
 _inlined_description: _
 
-Returns: the name of the firmware.
+**Returns**: the name of the firmware.
 
 
 
@@ -779,7 +784,7 @@ _advanced: True_
 
 _inlined_description: _
 
-Returns: the major firmware version.
+**Returns**: the major firmware version.
 
 
 
@@ -815,7 +820,7 @@ _advanced: True_
 
 _inlined_description: _
 
-Returns: the minor firmware version.
+**Returns**: the minor firmware version.
 
 
 
@@ -967,7 +972,7 @@ _advanced: True_
 
 _inlined_description: _
 
-Returns: the last set servo value for a pin if the pin has a servo attached.
+**Returns**: the last set servo value for a pin if the pin has a servo attached.
 
 
 
@@ -1003,7 +1008,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the last received string.
+**Returns**: the last received string.
 
 
 
@@ -1039,7 +1044,7 @@ _advanced: True_
 
 _inlined_description: _
 
-Returns: a pointer to the string history.
+**Returns**: a pointer to the string history.
 
 
 
@@ -1075,7 +1080,7 @@ _advanced: True_
 
 _inlined_description: _
 
-Returns: the last received SysEx message.
+**Returns**: the last received SysEx message.
 
 
 
@@ -1111,7 +1116,7 @@ _advanced: True_
 
 _inlined_description: _
 
-Returns: a pointer to the SysEx history.
+**Returns**: a pointer to the SysEx history.
 
 
 
@@ -1841,8 +1846,10 @@ _inlined_description: _
 
 Setting a pins mode to ARD_INPUT turns on reporting for the port the pin is on
 
-Parameters:
+**Parameters:**
+
 pin Pin on arduino (2-13)
+
 mode `ARD_INPUT`, `ARD_OUTPUT`, `ARD_PWM`
 \note Analog pins 0-5 can be used as digitial pins 16-21 but if the
 mode of _one_ of these pins is set to `ARD_INPUT` then _all_ analog pin
@@ -1994,7 +2001,8 @@ Sends a I2C config request
 
  Must be called before an I2C Read or Write
 
-Parameters:
+**Parameters:**
+
 {number} delay in microseconds to set for I2C Read
 
 
@@ -2034,9 +2042,12 @@ _inlined_description: _
 Asks the arduino to request bytes from an I2C device
 
 
-Parameters:
+**Parameters:**
+
 {number} slaveAddress The address of the I2C device
+
 {number} numBytes The number of bytes to receive.
+
 {function} callback A function to call when we have received the bytes.
 
 
@@ -2076,8 +2087,10 @@ _inlined_description: _
 Asks the arduino to send an I2C request to a device
 
 
-Parameters:
+**Parameters:**
+
 {number} slaveAddress The address of the I2C device
+
 {Array} bytes The bytes to send to the device
 
 
@@ -2225,9 +2238,12 @@ _inlined_description: _
 Initialize a continuous I2C read.
 
 
-Parameters:
+**Parameters:**
+
 {number} address    The address of the I2C device
+
 {number} register   Optionally set the register to read from.
+
 {number} numBytes   The number of bytes to receive.
 
 
@@ -2267,7 +2283,8 @@ _inlined_description: _
 Searches for 1-wire devices on the bus in an alarmed state.
 
 
-Parameters:
+**Parameters:**
+
 pin
 
 
@@ -2308,8 +2325,10 @@ Configure the passed pin as the controller in a 1-wire bus.
 
 Pass as enableParasiticPower true if you want the data pin to power the bus.
 
-Parameters:
+**Parameters:**
+
 pin
+
 enableParasiticPower
 
 
@@ -2350,7 +2369,8 @@ Tells firmata to not do anything for the passed amount of ms.
 
 For when you need to give a device attached to the bus time to do a calculation.
 
-Parameters:
+**Parameters:**
+
 pin
 
 
@@ -2391,10 +2411,14 @@ Reads data from a device on the bus.
 
 N.b. ConfigurableFirmata will issue the 1-wire select command internally.
 
-Parameters:
+**Parameters:**
+
 pin
+
 device
+
 numBytesToRead
+
 callback
 
 
@@ -2469,7 +2493,8 @@ _inlined_description: _
 
 Resets all devices on the bus.
 
-Parameters:
+**Parameters:**
+
 pin
 
 
@@ -2509,7 +2534,8 @@ _inlined_description: _
 Searches for 1-wire devices on the bus.
 
 
-Parameters:
+**Parameters:**
+
 pin
 
 
@@ -2586,9 +2612,12 @@ Writes data to the bus to be received by the passed device.
 
 The device should be obtained from a previous call to sendOneWireSearch. ConfigurableFirmata will issue the 1-wire select command internally.
 
-Parameters:
+**Parameters:**
+
 pin
+
 device
+
 data
 
 
@@ -2629,11 +2658,16 @@ Sends the passed data to the passed device on the bus, reads the specified numbe
 
 ConfigurableFirmata will issue the 1-wire select command internally.
 
-Parameters:
+**Parameters:**
+
 pin
+
 device
+
 data
+
 numBytesToRead
+
 callback
 
 
@@ -2890,10 +2924,14 @@ _inlined_description: _
 Asks the Arduino to configure a hardware or serial port.
 
 
-Parameters:
+**Parameters:**
+
 portID The serial port to use (HW_SERIAL1, HW_SERIAL2, HW_SERIAL3, SW_SERIAL0, SW_SERIAL1, SW_SERIAL2, SW_SERIAL3)
+
 baud  The baud rate of the serial port
+
 rxPin [SW Serial only] The RX pin of the SoftwareSerial instance
+
 txPin [SW Serial only] The TX pin of the SoftwareSerial instance
 
 
@@ -2934,8 +2972,10 @@ Send a value to a servo.
 
 A servo has to be atached to the pin prior
 
-Parameters:
+**Parameters:**
+
 pin 9 or 10
+
 value The value to send
 
 
@@ -2973,7 +3013,8 @@ _advanced: True_
 
 _inlined_description: _
 
-Parameters:
+**Parameters:**
+
 angle parameter DEPRECATED as of Firmata 2.2
 
 
@@ -3271,7 +3312,8 @@ message.  Values in the range 0 - 16384 will be sent as two bytes
 within the 0-127 data range.
 
 
-Parameters:
+**Parameters:**
+
 value The value to send.
 
 
@@ -3311,7 +3353,8 @@ _inlined_description: _
  Close the specified serial port.
 
 
-Parameters:
+**Parameters:**
+
 portId The serial port to close.
 
 
@@ -3352,7 +3395,8 @@ Flush the specified serial port.
 
 For hardware serial, this waits for the transmission of outgoing serial data to complete.For software serial, this removed any buffered incoming serial data.
 
-Parameters:
+**Parameters:**
+
 portId The serial port to listen on.
 
 
@@ -3393,7 +3437,8 @@ For SoftwareSerial only. Only a single SoftwareSerial instance can read data at 
 
 Call this method to set this port to be the reading port in the case there are multiple SoftwareSerial instances.
 
-Parameters:
+**Parameters:**
+
 portId The serial port to flush.
 
 
@@ -3434,9 +3479,11 @@ _inlined_description: _
 
 The port is checked for data each iteration of the main Arduino loop.
 
-Parameters:
+**Parameters:**
+
 portId The serial port to start reading continuously.
- maxBytesToRead [Optional] The maximum number of bytes to read per iteration.
+
+maxBytesToRead [Optional] The maximum number of bytes to read per iteration.
 \note If there are less bytes in the buffer, the lesser number of bytes will be returned. A value of 0 indicates that all available bytes in the buffer should be read.
 
 
@@ -3477,7 +3524,8 @@ Stop continuous reading of the specified serial port.
 
 This does not close the port, it stops reading it but keeps the port open.
 
-Parameters:
+**Parameters:**
+
 portId The serial port to stop reading.
 
 
@@ -3517,9 +3565,12 @@ _inlined_description: _
 Write an array of bytes to the specified serial port.
 
 
-Parameters:
+**Parameters:**
+
 portId The serial port to write to.
+
 bytes An array of bytes to write to the serial port.
+
 numOfBytes length of the array of bytes.
 
 

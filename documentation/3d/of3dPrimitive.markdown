@@ -134,14 +134,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(renderType)
+###void draw()
 
 <!--
-_syntax: draw(renderType)_
+_syntax: draw()_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: ofPolyRenderMode renderType_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -170,14 +170,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw()
+###void draw(renderType)
 
 <!--
-_syntax: draw()_
+_syntax: draw(renderType)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: _
+_parameters: ofPolyRenderMode renderType_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1034,16 +1034,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### of3dPrimitive()
+### of3dPrimitive(&mesh)
 
 <!--
-_syntax: of3dPrimitive()_
+_syntax: of3dPrimitive(&mesh)_
 _name: of3dPrimitive_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofMesh &mesh_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1106,16 +1106,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### of3dPrimitive(&mesh)
+### of3dPrimitive()
 
 <!--
-_syntax: of3dPrimitive(&mesh)_
+_syntax: of3dPrimitive()_
 _name: of3dPrimitive_
 _returns: _
 _returns_description: _
-_parameters: const ofMesh &mesh_
+_parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_

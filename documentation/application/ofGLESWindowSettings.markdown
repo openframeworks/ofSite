@@ -25,14 +25,14 @@ _extends: ofWindowSettings_
 
 
 
-### ofGLESWindowSettings()
+### ofGLESWindowSettings(&settings)
 
 <!--
-_syntax: ofGLESWindowSettings()_
+_syntax: ofGLESWindowSettings(&settings)_
 _name: ofGLESWindowSettings_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofWindowSettings &settings_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -61,14 +61,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofGLESWindowSettings(&settings)
+### ofGLESWindowSettings()
 
 <!--
-_syntax: ofGLESWindowSettings(&settings)_
+_syntax: ofGLESWindowSettings()_
 _name: ofGLESWindowSettings_
 _returns: _
 _returns_description: _
-_parameters: const ofWindowSettings &settings_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

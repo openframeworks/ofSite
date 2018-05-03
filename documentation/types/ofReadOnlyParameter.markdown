@@ -18,7 +18,7 @@ write-access to the internal data.  Otherwise, all other access is
 "read only".
 
 
-See also: ofParameter
+**See also**: ofParameter
 \tparam ParameterType The data wrapped by the ofParameter.
 \tparam Friend The type of the "friend" class with write access.
 
@@ -612,16 +612,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofReadOnlyParameter()
+### ofReadOnlyParameter(&name, &v)
 
 <!--
-_syntax: ofReadOnlyParameter()_
+_syntax: ofReadOnlyParameter(&name, &v)_
 _name: ofReadOnlyParameter_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const string &name, const ParameterType &v_
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofReadOnlyParameter(&name, &v, &min, &max)
+
+<!--
+_syntax: ofReadOnlyParameter(&name, &v, &min, &max)_
+_name: ofReadOnlyParameter_
+_returns: _
+_returns_description: _
+_parameters: const string &name, const ParameterType &v, const ParameterType &min, const ParameterType &max_
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -684,52 +720,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofReadOnlyParameter(&name, &v)
+### ofReadOnlyParameter()
 
 <!--
-_syntax: ofReadOnlyParameter(&name, &v)_
+_syntax: ofReadOnlyParameter()_
 _name: ofReadOnlyParameter_
 _returns: _
 _returns_description: _
-_parameters: const string &name, const ParameterType &v_
+_parameters: _
 _access: public_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofReadOnlyParameter(&name, &v, &min, &max)
-
-<!--
-_syntax: ofReadOnlyParameter(&name, &v, &min, &max)_
-_name: ofReadOnlyParameter_
-_returns: _
-_returns_description: _
-_parameters: const string &name, const ParameterType &v, const ParameterType &min, const ParameterType &max_
-_access: public_
-_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -864,14 +864,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ParameterType operator++(v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator++()
 
 <!--
-_syntax: operator++(v)_
+_syntax: operator++()_
 _name: operator++_
-_returns: ParameterType_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
-_parameters: int v_
+_parameters: _
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -900,14 +900,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter< ParameterType, Friend > & operator++()
+###ParameterType operator++(v)
 
 <!--
-_syntax: operator++()_
+_syntax: operator++(v)_
 _name: operator++_
-_returns: ofReadOnlyParameter< ParameterType, Friend > &_
+_returns: ParameterType_
 _returns_description: _
-_parameters: _
+_parameters: int v_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -972,14 +972,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ParameterType operator--(v)
+###ofReadOnlyParameter< ParameterType, Friend > & operator--()
 
 <!--
-_syntax: operator--(v)_
+_syntax: operator--()_
 _name: operator--_
-_returns: ParameterType_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
-_parameters: int v_
+_parameters: _
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -1008,14 +1008,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter< ParameterType, Friend > & operator--()
+###ParameterType operator--(v)
 
 <!--
-_syntax: operator--()_
+_syntax: operator--(v)_
 _name: operator--_
-_returns: ofReadOnlyParameter< ParameterType, Friend > &_
+_returns: ParameterType_
 _returns_description: _
-_parameters: _
+_parameters: int v_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -1188,42 +1188,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter< ParameterType, Friend > & operator=(ParameterType, &v)
-
-<!--
-_syntax: operator=(ParameterType, &v)_
-_name: operator=_
-_returns: ofReadOnlyParameter< ParameterType, Friend > &_
-_returns_description: _
-_parameters: const ofReadOnlyParameter< ParameterType, Friend > &v_
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofReadOnlyParameter< ParameterType, Friend > & operator=(&v)
 
 <!--
@@ -1268,6 +1232,42 @@ _name: operator=_
 _returns: const ParameterType &_
 _returns_description: _
 _parameters: const ParameterType &v_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofReadOnlyParameter< ParameterType, Friend > & operator=(ParameterType, &v)
+
+<!--
+_syntax: operator=(ParameterType, &v)_
+_name: operator=_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
+_returns_description: _
+_parameters: const ofReadOnlyParameter< ParameterType, Friend > &v_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
@@ -1440,42 +1440,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter< ParameterType, Friend > & set(&v)
-
-<!--
-_syntax: set(&v)_
-_name: set_
-_returns: ofReadOnlyParameter< ParameterType, Friend > &_
-_returns_description: _
-_parameters: const ParameterType &v_
-_access: protected_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofReadOnlyParameter< ParameterType, Friend > & set(&name, &value)
 
 <!--
@@ -1520,6 +1484,42 @@ _name: set_
 _returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
 _parameters: const string &name, const ParameterType &value, const ParameterType &min, const ParameterType &max_
+_access: protected_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofReadOnlyParameter< ParameterType, Friend > & set(&v)
+
+<!--
+_syntax: set(&v)_
+_name: set_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
+_returns_description: _
+_parameters: const ParameterType &v_
 _access: protected_
 _version_started: 0073_
 _version_deprecated: _
