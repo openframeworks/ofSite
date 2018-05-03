@@ -22,8 +22,8 @@ using namespace glm;
 And then use the classes and functions without prefix:
 
 ```
-glm::vec3 v(2.f, 2.f, 2.f);
-float l = glm::length(v);
+vec3 v(2.f, 2.f, 2.f);
+float l = length(v);
 ```
 
 ### Functions not methods
@@ -70,7 +70,54 @@ float length = glm::length(v);
 
 Mostly when porting old code form ofVec to glm, because ofVec included such a method it's easy to try and call that function which will compile without errors but won't do what you expect.
 
-When doing that most modern compilers should show a warning because of calling a static method on an instance instead of a class. Be on the look for those when porting old code to GLM.
+When doing that most modern compilers should show a warning because of calling a static method on an instance instead of a class so be on the look for those when porting old code to GLM.
 
 
+### Type strictness
 
+glm has a strict type system, similar to how things work in glsl, meaning that you can't autoconvert from one type to another automatically as it was the case with ofVectorMath.
+
+For example:
+
+```
+glm::vec2 v2;
+glm::vec3 v3 = v2;
+```
+
+Wont' work anymore, you need to do now:
+
+```
+glm::vec3 v3 = glm::vec3(v2, 0.f);
+```
+
+Or in the oposite case:
+
+```
+glm::vec3 v3;
+glm::vec2 = v3.xy()
+```
+
+
+### Constants
+
+GLM has some useful constants but the way to use them might be a little bit weird at first. The main problem comes from the fact that this constants are defined as templated functions so to call them you need to specify the type as in:
+
+```
+float p = glm::pi();
+double dp = glm::pi();
+```
+
+### Multiplication order
+
+Finally, if you are used to the old openFrameworks vector math classes you would multiply vector and matrices like:
+
+```
+ofVec3 v;
+ofVec3f projected = v * model * view * projection;
+```
+
+with glm as in glsl the multiplication order is the oposite so now you would do:
+
+```
+glm::vec3 v;
+glm::vec3 projected = projection * view * model * v;
