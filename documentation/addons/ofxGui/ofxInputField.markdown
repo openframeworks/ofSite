@@ -1177,14 +1177,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxInputField< Type > * setup(_val, width, height)
+###ofxInputField< Type > * setup(&_name, _val)
 
 <!--
-_syntax: setup(_val, width, height)_
+_syntax: setup(&_name, _val)_
 _name: setup_
 _returns: ofxInputField< Type > *_
 _returns_description: _
-_parameters: ofParameter< Type > _val, float width, float height_
+_parameters: const string &_name, Type _val_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1249,14 +1249,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxInputField< Type > * setup(&_name, _val)
+###ofxInputField< Type > * setup(_val, width, height)
 
 <!--
-_syntax: setup(&_name, _val)_
+_syntax: setup(_val, width, height)_
 _name: setup_
 _returns: ofxInputField< Type > *_
 _returns_description: _
-_parameters: const string &_name, Type _val_
+_parameters: ofParameter< Type > _val, float width, float height_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

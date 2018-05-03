@@ -232,59 +232,6 @@ p.addVertices(verts, 5);
 
 <!----------------------------------------------------------------------------->
 
-###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, circleResolution = 20)
-
-<!--
-_syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, circleResolution = 20)_
-_name: arc_
-_returns: void_
-_returns_description: _
-_parameters: const T &center, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int circleResolution=20_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Adds an arc around the T `center` with the width of `radiusX`
-and the height of `radiusY` to the polyline.
-
-The `angleBegin` and `angleEnd` indicate the start and end angles of
-the arc in degrees measured clockwise from the x-axis.
-
-The `clockwise` boolean sets the drawing direction.  Passing 'false' to
-it will draw the arc counter-clockwise.
-
-Optionally, you can specify `circleResolution`, which is the number of
-line segments a circle would be drawn with.
-
-If the arc doesn't start at the same point the last vertex finished a
-straight line will be created to join both
-
-
-
-
-
-_description: _
-
-Draws an arc around the ofPoint ``center`` with the width of ``radiusX`` and the height of ``radiusY``.
-The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
-The ``clockwise`` boolean sets the drawing direction.  Passing 'false' to it will draw the arc counter-clockwise.
-
-Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, circleResolution = 20)
 
 <!--
@@ -367,6 +314,59 @@ polyline2.draw();
 ~~~~
 
 ![Arc Example](ofpolyline_arc.png)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, circleResolution = 20)
+
+<!--
+_syntax: arc(&center, radiusX, radiusY, angleBegin, angleEnd, clockwise, circleResolution = 20)_
+_name: arc_
+_returns: void_
+_returns_description: _
+_parameters: const T &center, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise, int circleResolution=20_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Adds an arc around the T `center` with the width of `radiusX`
+and the height of `radiusY` to the polyline.
+
+The `angleBegin` and `angleEnd` indicate the start and end angles of
+the arc in degrees measured clockwise from the x-axis.
+
+The `clockwise` boolean sets the drawing direction.  Passing 'false' to
+it will draw the arc counter-clockwise.
+
+Optionally, you can specify `circleResolution`, which is the number of
+line segments a circle would be drawn with.
+
+If the arc doesn't start at the same point the last vertex finished a
+straight line will be created to join both
+
+
+
+
+
+_description: _
+
+Draws an arc around the ofPoint ``center`` with the width of ``radiusX`` and the height of ``radiusY``.
+The ``angleBegin`` and ``angleEnd`` indicate the start and end angles of the arc in degrees measured clockwise from the x-axis.
+The ``clockwise`` boolean sets the drawing direction.  Passing 'false' to it will draw the arc counter-clockwise.
+
+Optionally, you can specify ``circleResolution``, which is the number of line segments a circle would be drawn with.
 
 
 
@@ -860,7 +860,7 @@ while (angle < TWO_PI ) {
 
 \note You need at least 4 points to be able to use curveTo()
 
-See also: [Catmull-Rom splines wiki](http://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline)
+**See also**: [Catmull-Rom splines wiki](http://en.wikipedia.org/wiki/Centripetal_Catmull%E2%80%93Rom_spline)
 
 
 
@@ -2309,50 +2309,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool inside(x, y, &polyline)
+###bool inside(&p)
 
 <!--
-_syntax: inside(x, y, &polyline)_
+_syntax: inside(&p)_
 _name: inside_
 _returns: bool_
 _returns_description: _
-_parameters: float x, float y, const ofPolyline_< T > &polyline_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Tests whether the x,y coordinates are within a closed ofPolyline.
-
-
-
-
-
-_description: _
-
-Test whether the x,y point is within anothe polyline, passed in as ofPolyline&
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool inside(x, y)
-
-<!--
-_syntax: inside(x, y)_
-_name: inside_
-_returns: bool_
-_returns_description: _
-_parameters: float x, float y_
+_parameters: const T &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2365,7 +2329,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Tests whether the x,y coordinates are within a closed ofPolyline.
+Tests whether the T is within a closed ofPolyline.
 
 
 
@@ -2373,7 +2337,7 @@ Tests whether the x,y coordinates are within a closed ofPolyline.
 
 _description: _
 
-Tests whether the x,y coordinates are within a closed ofPolyline.
+Tests whether the ofPoint is within a closed ofPolyline.
 
 
 
@@ -2417,14 +2381,14 @@ Test whether the ofPoint is within anothe polyline, passed in as ofPolyline&
 
 <!----------------------------------------------------------------------------->
 
-###bool inside(&p)
+###bool inside(x, y)
 
 <!--
-_syntax: inside(&p)_
+_syntax: inside(x, y)_
 _name: inside_
 _returns: bool_
 _returns_description: _
-_parameters: const T &p_
+_parameters: float x, float y_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2437,7 +2401,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Tests whether the T is within a closed ofPolyline.
+Tests whether the x,y coordinates are within a closed ofPolyline.
 
 
 
@@ -2445,7 +2409,43 @@ Tests whether the T is within a closed ofPolyline.
 
 _description: _
 
-Tests whether the ofPoint is within a closed ofPolyline.
+Tests whether the x,y coordinates are within a closed ofPolyline.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool inside(x, y, &polyline)
+
+<!--
+_syntax: inside(x, y, &polyline)_
+_name: inside_
+_returns: bool_
+_returns_description: _
+_parameters: float x, float y, const ofPolyline_< T > &polyline_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: True_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Tests whether the x,y coordinates are within a closed ofPolyline.
+
+
+
+
+
+_description: _
+
+Test whether the x,y point is within anothe polyline, passed in as ofPolyline&
 
 
 
@@ -2563,42 +2563,6 @@ Add a line from the last point added, or from 0,0 if no point is set, to the poi
 
 <!----------------------------------------------------------------------------->
 
-### ofPolyline_()
-
-<!--
-_syntax: ofPolyline_()_
-_name: ofPolyline__
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Creates an ofPolyline.
-
-
-
-
-
-_description: _
-
-Creates an ofPolyline.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofPolyline_(&verts)
 
 <!--
@@ -2638,6 +2602,42 @@ vector<ofPoint> pts;
 	ofPolyline cp(pts);
 ~~~~
 There is an easier way to draw circles though, using the arc() method.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPolyline_()
+
+<!--
+_syntax: ofPolyline_()_
+_name: ofPolyline__
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Creates an ofPolyline.
+
+
+
+
+
+_description: _
+
+Creates an ofPolyline.
 
 
 
@@ -2740,48 +2740,6 @@ while ( i<bounds.size()) {
 
 <!----------------------------------------------------------------------------->
 
-###void quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 20)
-
-<!--
-_syntax: quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 20)_
-_name: quadBezierTo_
-_returns: void_
-_returns_description: _
-_parameters: float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=20_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Adds a quadratic bezier line in 3D space from the current drawing
-point with the beginning indicated by the coordinates cx1, cy1, cz1,
-the control point at cx2, cy2, cz2, and that ends at the coordinates
-x, y, z.
-
-![polyline curves](graphics/curves.png)
-
-
-
-
-
-_description: _
-
-Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
-![polyline curves](curves.png)
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void quadBezierTo(&p1, &p2, &p3, curveResolution = 20)
 
 <!--
@@ -2851,6 +2809,48 @@ control point at cx2, cy2, and that ends at the coordinates x, y.
 _description: _
 
 Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, the control point at cx2, cy2, and that ends at the coordinates x, y.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 20)
+
+<!--
+_syntax: quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z, curveResolution = 20)_
+_name: quadBezierTo_
+_returns: void_
+_returns_description: _
+_parameters: float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z, int curveResolution=20_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Adds a quadratic bezier line in 3D space from the current drawing
+point with the beginning indicated by the coordinates cx1, cy1, cz1,
+the control point at cx2, cy2, cz2, and that ends at the coordinates
+x, y, z.
+
+![polyline curves](graphics/curves.png)
+
+
+
+
+
+_description: _
+
+Creates a quadratic bezier line in 3D space from the current drawing point with the beginning indicated by the coordinates cx1, cy1, cz1, the control point at cx2, cy2, cz2, and that ends at the coordinates x, y, z.
+![polyline curves](curves.png)
 
 
 
@@ -3211,7 +3211,8 @@ _inlined_description: _
 Simplifies the polyline, removing un-necessary vertices.
 
 
-Parameters:
+**Parameters:**
+
 tolerance determines how dis-similar points need to be to stay in the line.
 Higher tolerance means more points removed, lower tolerance means less
 points removed.

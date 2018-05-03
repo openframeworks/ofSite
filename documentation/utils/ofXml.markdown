@@ -127,42 +127,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofXml appendChild(&xml)
-
-<!--
-_syntax: appendChild(&xml)_
-_name: appendChild_
-_returns: ofXml_
-_returns_description: _
-_parameters: const ofXml &xml_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofXml appendChild(&&xml)
 
 <!--
@@ -207,6 +171,42 @@ _name: appendChild_
 _returns: ofXml_
 _returns_description: _
 _parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml appendChild(&xml)
+
+<!--
+_syntax: appendChild(&xml)_
+_name: appendChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: const ofXml &xml_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -451,14 +451,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###Range<ofXmlIterator< pugi::xml_node_iterator>  > getChildren()
+###Range<ofXmlIterator< pugi::xml_named_node_iterator>  > getChildren(&name)
 
 <!--
-_syntax: getChildren()_
+_syntax: getChildren(&name)_
 _name: getChildren_
-_returns: Range<ofXmlIterator< pugi::xml_node_iterator>  >_
+_returns: Range<ofXmlIterator< pugi::xml_named_node_iterator>  >_
 _returns_description: _
-_parameters: _
+_parameters: const string &name_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -487,14 +487,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###Range<ofXmlIterator< pugi::xml_named_node_iterator>  > getChildren(&name)
+###Range<ofXmlIterator< pugi::xml_node_iterator>  > getChildren()
 
 <!--
-_syntax: getChildren(&name)_
+_syntax: getChildren()_
 _name: getChildren_
-_returns: Range<ofXmlIterator< pugi::xml_named_node_iterator>  >_
+_returns: Range<ofXmlIterator< pugi::xml_node_iterator>  >_
 _returns_description: _
-_parameters: const string &name_
+_parameters: _
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -811,42 +811,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofXml getNextSibling()
-
-<!--
-_syntax: getNextSibling()_
-_name: getNextSibling_
-_returns: ofXml_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofXml getNextSibling(&name)
 
 <!--
@@ -883,11 +847,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofXml getPreviousSibling()
+###ofXml getNextSibling()
 
 <!--
-_syntax: getPreviousSibling()_
-_name: getPreviousSibling_
+_syntax: getNextSibling()_
+_name: getNextSibling_
 _returns: ofXml_
 _returns_description: _
 _parameters: _
@@ -927,6 +891,42 @@ _name: getPreviousSibling_
 _returns: ofXml_
 _returns_description: _
 _parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml getPreviousSibling()
+
+<!--
+_syntax: getPreviousSibling()_
+_name: getPreviousSibling_
+_returns: ofXml_
+_returns_description: _
+_parameters: _
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1145,16 +1145,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool load(&file)
+###bool load(&buffer)
 
 <!--
-_syntax: load(&file)_
+_syntax: load(&buffer)_
 _name: load_
 _returns: bool_
 _returns_description: _
-_parameters: const filesystem::path &file_
+_parameters: const ofBuffer &buffer_
 _access: public_
-_version_started: 0073_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1181,16 +1181,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool load(&buffer)
+###bool load(&file)
 
 <!--
-_syntax: load(&buffer)_
+_syntax: load(&file)_
 _name: load_
 _returns: bool_
 _returns_description: _
-_parameters: const ofBuffer &buffer_
+_parameters: const filesystem::path &file_
 _access: public_
-_version_started: 0.10.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1361,42 +1361,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofXml prependChild(&xml)
-
-<!--
-_syntax: prependChild(&xml)_
-_name: prependChild_
-_returns: ofXml_
-_returns_description: _
-_parameters: const ofXml &xml_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofXml prependChild(&&xml)
 
 <!--
@@ -1441,6 +1405,42 @@ _name: prependChild_
 _returns: ofXml_
 _returns_description: _
 _parameters: const string &name_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofXml prependChild(&xml)
+
+<!--
+_syntax: prependChild(&xml)_
+_name: prependChild_
+_returns: ofXml_
+_returns_description: _
+_parameters: const ofXml &xml_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

@@ -25,14 +25,14 @@ _extends: _
 
 
 
-### ConstPixels(*begin, *end, componentsPerPixel, pixelFormat)
+### ConstPixels(&begin, &end)
 
 <!--
-_syntax: ConstPixels(*begin, *end, componentsPerPixel, pixelFormat)_
+_syntax: ConstPixels(&begin, &end)_
 _name: ConstPixels_
 _returns: _
 _returns_description: _
-_parameters: const PixelType *begin, const PixelType *end, size_t componentsPerPixel, ofPixelFormat pixelFormat_
+_parameters: const ofPixels_::ConstPixel &begin, const ofPixels_::ConstPixel &end_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -61,14 +61,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ConstPixels(&begin, &end)
+### ConstPixels(*begin, *end, componentsPerPixel, pixelFormat)
 
 <!--
-_syntax: ConstPixels(&begin, &end)_
+_syntax: ConstPixels(*begin, *end, componentsPerPixel, pixelFormat)_
 _name: ConstPixels_
 _returns: _
 _returns_description: _
-_parameters: const ofPixels_::ConstPixel &begin, const ofPixels_::ConstPixel &end_
+_parameters: const PixelType *begin, const PixelType *end, size_t componentsPerPixel, ofPixelFormat pixelFormat_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

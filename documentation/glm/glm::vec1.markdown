@@ -61,42 +61,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator%=(scalar)
-
-<!--
-_syntax: operator%=(scalar)_
-_name: operator%=_
-_returns: glm::vec1 &_
-_returns_description: _
-_parameters: U scalar_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###glm::vec1 & operator%=(U, &v = P)
 
 <!--
@@ -133,11 +97,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator&=(scalar)
+###glm::vec1 & operator%=(scalar)
 
 <!--
-_syntax: operator&=(scalar)_
-_name: operator&=_
+_syntax: operator%=(scalar)_
+_name: operator%=_
 _returns: glm::vec1 &_
 _returns_description: _
 _parameters: U scalar_
@@ -205,11 +169,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator*=(scalar)
+###glm::vec1 & operator&=(scalar)
 
 <!--
-_syntax: operator*=(scalar)_
-_name: operator*=_
+_syntax: operator&=(scalar)_
+_name: operator&=_
 _returns: glm::vec1 &_
 _returns_description: _
 _parameters: U scalar_
@@ -249,6 +213,42 @@ _name: operator*=_
 _returns: glm::vec1 &_
 _returns_description: _
 _parameters: const tvec1< U, P > &v=P_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###glm::vec1 & operator*=(scalar)
+
+<!--
+_syntax: operator*=(scalar)_
+_name: operator*=_
+_returns: glm::vec1 &_
+_returns_description: _
+_parameters: U scalar_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -349,14 +349,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator+=(scalar)
+###glm::vec1 & operator+=(U, &v = P)
 
 <!--
-_syntax: operator+=(scalar)_
+_syntax: operator+=(U, &v = P)_
 _name: operator+=_
 _returns: glm::vec1 &_
 _returns_description: _
-_parameters: U scalar_
+_parameters: const tvec1< U, P > &v=P_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -385,14 +385,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator+=(U, &v = P)
+###glm::vec1 & operator+=(scalar)
 
 <!--
-_syntax: operator+=(U, &v = P)_
+_syntax: operator+=(scalar)_
 _name: operator+=_
 _returns: glm::vec1 &_
 _returns_description: _
-_parameters: const tvec1< U, P > &v=P_
+_parameters: U scalar_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -493,42 +493,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator-=(scalar)
-
-<!--
-_syntax: operator-=(scalar)_
-_name: operator-=_
-_returns: glm::vec1 &_
-_returns_description: _
-_parameters: U scalar_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###glm::vec1 & operator-=(U, &v = P)
 
 <!--
@@ -565,11 +529,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator/=(scalar)
+###glm::vec1 & operator-=(scalar)
 
 <!--
-_syntax: operator/=(scalar)_
-_name: operator/=_
+_syntax: operator-=(scalar)_
+_name: operator-=_
 _returns: glm::vec1 &_
 _returns_description: _
 _parameters: U scalar_
@@ -637,11 +601,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator<<=(scalar)
+###glm::vec1 & operator/=(scalar)
 
 <!--
-_syntax: operator<<=(scalar)_
-_name: operator<<=_
+_syntax: operator/=(scalar)_
+_name: operator/=_
 _returns: glm::vec1 &_
 _returns_description: _
 _parameters: U scalar_
@@ -681,6 +645,42 @@ _name: operator<<=_
 _returns: glm::vec1 &_
 _returns_description: _
 _parameters: const tvec1< U, P > &v=P_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###glm::vec1 & operator<<=(scalar)
+
+<!--
+_syntax: operator<<=(scalar)_
+_name: operator<<=_
+_returns: glm::vec1 &_
+_returns_description: _
+_parameters: U scalar_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -781,14 +781,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator>>=(scalar)
+###glm::vec1 & operator>>=(U, &v = P)
 
 <!--
-_syntax: operator>>=(scalar)_
+_syntax: operator>>=(U, &v = P)_
 _name: operator>>=_
 _returns: glm::vec1 &_
 _returns_description: _
-_parameters: U scalar_
+_parameters: const tvec1< U, P > &v=P_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -817,14 +817,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator>>=(U, &v = P)
+###glm::vec1 & operator>>=(scalar)
 
 <!--
-_syntax: operator>>=(U, &v = P)_
+_syntax: operator>>=(scalar)_
 _name: operator>>=_
 _returns: glm::vec1 &_
 _returns_description: _
-_parameters: const tvec1< U, P > &v=P_
+_parameters: U scalar_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -925,42 +925,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator^=(scalar)
-
-<!--
-_syntax: operator^=(scalar)_
-_name: operator^=_
-_returns: glm::vec1 &_
-_returns_description: _
-_parameters: U scalar_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###glm::vec1 & operator^=(U, &v = P)
 
 <!--
@@ -997,11 +961,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###glm::vec1 & operator|=(scalar)
+###glm::vec1 & operator^=(scalar)
 
 <!--
-_syntax: operator|=(scalar)_
-_name: operator|=_
+_syntax: operator^=(scalar)_
+_name: operator^=_
 _returns: glm::vec1 &_
 _returns_description: _
 _parameters: U scalar_
@@ -1069,14 +1033,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### tvec1()
+###glm::vec1 & operator|=(scalar)
 
 <!--
-_syntax: tvec1()_
-_name: tvec1_
-_returns: _
+_syntax: operator|=(scalar)_
+_name: operator|=_
+_returns: glm::vec1 &_
 _returns_description: _
-_parameters: _
+_parameters: U scalar_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1141,6 +1105,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### tvec1()
+
+<!--
+_syntax: tvec1()_
+_name: tvec1_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### tvec1(U, &v = Q)
 
 <!--
@@ -1162,78 +1162,6 @@ _advanced: False_
 _inlined_description: _
 
 Explicit conversions (From section 5.4.1 Conversion and scalar constructors of GLSL 1.30.08 specification)
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tvec1(glm::ctor)
-
-<!--
-_syntax: tvec1(glm::ctor)_
-_name: tvec1_
-_returns: _
-_returns_description: _
-_parameters: glm::ctor _
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tvec1(scalar)
-
-<!--
-_syntax: tvec1(scalar)_
-_name: tvec1_
-_returns: _
-_returns_description: _
-_parameters: T scalar_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 
@@ -1378,6 +1306,78 @@ _advanced: False_
 _inlined_description: _
 
 Explicit conversions (From section 5.4.1 Conversion and scalar constructors of GLSL 1.30.08 specification)
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### tvec1(glm::ctor)
+
+<!--
+_syntax: tvec1(glm::ctor)_
+_name: tvec1_
+_returns: _
+_returns_description: _
+_parameters: glm::ctor _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### tvec1(scalar)
+
+<!--
+_syntax: tvec1(scalar)_
+_name: tvec1_
+_returns: _
+_returns_description: _
+_parameters: T scalar_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 

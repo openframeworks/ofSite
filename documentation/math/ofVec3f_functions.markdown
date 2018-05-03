@@ -48,7 +48,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f operator+(f, &vec)
@@ -70,14 +69,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\cond INTERNAL
 
 
 
 
 
 _description: _
-
 
 
 
@@ -120,7 +118,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###ofVec3f operator/(f, &vec)
@@ -156,7 +153,6 @@ _description: _
 
 
 
-
 <!----------------------------------------------------------------------------->
 
 ###ostream & operator<<(&os, &vec)
@@ -178,14 +174,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\cond INTERNAL
 
 
 
 
 
 _description: _
-
 
 
 
@@ -221,7 +216,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 

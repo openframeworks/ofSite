@@ -566,42 +566,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxTCPServer()
-
-<!--
-_syntax: ofxTCPServer()_
-_name: ofxTCPServer_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Constructor. You need to call setup() before your server itself is ready to receive connections.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofxTCPServer(&mom)
 
 <!--
@@ -631,6 +595,42 @@ _inlined_description: _
 _description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofxTCPServer()
+
+<!--
+_syntax: ofxTCPServer()_
+_name: ofxTCPServer_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Constructor. You need to call setup() before your server itself is ready to receive connections.
 
 
 
@@ -1176,6 +1176,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool setup(&settings)
+
+<!--
+_syntax: setup(&settings)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: const ofxTCPSettings &settings_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool setup(_port, blocking = false)
 
 <!--
@@ -1206,42 +1242,6 @@ _description: _
 
 The port is the port that your server will serve up data on. It shouldn't be a commonly used port like 22 or 80, go with a higher number less likely to be used.
 The blocking parameter signals whether the client connections will be allowed to block on the servers thread as they send a message. This becomes important when you're dealing with very large messages coming from clients.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setup(&settings)
-
-<!--
-_syntax: setup(&settings)_
-_name: setup_
-_returns: bool_
-_returns_description: _
-_parameters: const ofxTCPSettings &settings_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 

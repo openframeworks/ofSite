@@ -134,6 +134,167 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd)
+
+<!--
+_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd)_
+_name: arc_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Create an arc at centre, which has the radiusX, radiusY, and begins at
+angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels
+at 100, 100:
+
+\note angleBegin needs to be larger than angleEnd, i.e. 0,180 is ok,
+while 180,0 is not.
+
+
+
+
+
+_description: _
+
+Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
+
+~~~~{.cpp}
+path.arc( 100, 100, 50, 50, 0, 360);
+~~~~
+
+Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd)
+
+<!--
+_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd)_
+_name: arc_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)
+
+<!--
+_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)_
+_name: arc_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
+
+~~~~{.cpp}
+path.arc( 100, 100, 50, 50, 0, 360);
+~~~~
+
+Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)
+
+<!--
+_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)_
+_name: arc_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void arc(x, y, radiusX, radiusY, angleBegin, angleEnd)
 
 <!--
@@ -228,103 +389,14 @@ Creates an arc at x,y,z, which has the radiusX, radiusY, and begins at angleBegi
 
 <!----------------------------------------------------------------------------->
 
-###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd)
+###void arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)
 
 <!--
-_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd)_
-_name: arc_
+_syntax: arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)_
+_name: arcNegative_
 _returns: void_
 _returns_description: _
 _parameters: const glm::vec3 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Create an arc at centre, which has the radiusX, radiusY, and begins at
-angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels
-at 100, 100:
-
-\note angleBegin needs to be larger than angleEnd, i.e. 0,180 is ok,
-while 180,0 is not.
-
-
-
-
-
-_description: _
-
-Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
-
-~~~~{.cpp}
-path.arc( 100, 100, 50, 50, 0, 360);
-~~~~
-
-Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)
-
-<!--
-_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)_
-_name: arc_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Creates an arc at centre, which has the radiusX, radiusY, and begins at angleBegin and ends at angleEnd. To draw a circle with a radius of 50 pixels at 100, 100:
-
-~~~~{.cpp}
-path.arc( 100, 100, 50, 50, 0, 360);
-~~~~
-
-Note that angleEnd needs to be larger than angleBegin, i.e. 0, 180 is ok, while 180,0 is not.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd)
-
-<!--
-_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd)_
-_name: arc_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -353,14 +425,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)
+###void arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)
 
 <!--
-_syntax: arc(&centre, radiusX, radiusY, angleBegin, angleEnd, clockwise)_
-_name: arc_
+_syntax: arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)_
+_name: arcNegative_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec2 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd, bool clockwise_
+_parameters: const glm::vec2 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -454,170 +526,6 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)
-
-<!--
-_syntax: arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)_
-_name: arcNegative_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)
-
-<!--
-_syntax: arcNegative(&centre, radiusX, radiusY, angleBegin, angleEnd)_
-_name: arcNegative_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &centre, float radiusX, float radiusY, float angleBegin, float angleEnd_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void bezierTo(cx1, cy1, cx2, cy2, x, y)
-
-<!--
-_syntax: bezierTo(cx1, cy1, cx2, cy2, x, y)_
-_name: bezierTo_
-_returns: void_
-_returns_description: _
-_parameters: float cx1, float cy1, float cx2, float cy2, float x, float y_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Create a cubic bezier line from the current drawing point with the 2
-control points indicated by the coordinates cx1, cy1 and cx2, cy2,
-that ends at the coordinates x, y.
-
-
-
-
-
-_description: _
-
-Create a cubic bezier line from the current drawing point with the two control points indicated by the coordinates (cx1, cy1) and (cx2, cy2), that ends at the coordinate (x, y).
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)
-
-<!--
-_syntax: bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)_
-_name: bezierTo_
-_returns: void_
-_returns_description: _
-_parameters: float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Create a cubic bezier line in 3D space from the current drawing point
-with the 2 control points indicated by the coordinates cx1, cy1, cz1
-and cx2, cy2, cz2, that ends at the coordinates x, y, z.
-
-
-
-
-
-_description: _
-
-Create a cubic bezier line in 3D space from the current drawing point with the two control points indicated by the coordinates (cx1, cy1, cz1) and (cx2, cy2, cz2), that ends at the coordinate (x, y, z).
-
-~~~~{.cpp}
-float cx = ofGetWidth()/2;
-float cy = 200;
-float step = TWO_PI / 60;
-for (float i = 0.0; i < TWO_PI; i+=step) {
-
-    if(i == 0.0) {
-        path.moveTo(cx + (400*cos(i)), cy+400, 400 * sin(i));
-    } else {
-        path.bezierTo( cx - (200*cos(i)), cy-100, 400 * sin(i),
-                       cx + (200*cos(i)), cy+600, 400 * sin(i),
-                       cx + (400*cos(i)), cy+400, 400 * sin(i));
-    }
-}
-~~~~
 
 
 
@@ -722,16 +630,16 @@ The control points are shown in yellow.
 
 <!----------------------------------------------------------------------------->
 
-###void circle(x, y, radius)
+###void bezierTo(cx1, cy1, cx2, cy2, x, y)
 
 <!--
-_syntax: circle(x, y, radius)_
-_name: circle_
+_syntax: bezierTo(cx1, cy1, cx2, cy2, x, y)_
+_name: bezierTo_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float radius_
+_parameters: float cx1, float cy1, float cx2, float cy2, float x, float y_
 _access: public_
-_version_started: 0073_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -742,7 +650,9 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Create a cubic bezier line from the current drawing point with the 2
+control points indicated by the coordinates cx1, cy1 and cx2, cy2,
+that ends at the coordinates x, y.
 
 
 
@@ -750,7 +660,7 @@ _inlined_description: _
 
 _description: _
 
-
+Create a cubic bezier line from the current drawing point with the two control points indicated by the coordinates (cx1, cy1) and (cx2, cy2), that ends at the coordinate (x, y).
 
 
 
@@ -758,16 +668,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void circle(x, y, z, radius)
+###void bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)
 
 <!--
-_syntax: circle(x, y, z, radius)_
-_name: circle_
+_syntax: bezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)_
+_name: bezierTo_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z, float radius_
+_parameters: float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z_
 _access: public_
-_version_started: 0073_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -778,7 +688,9 @@ _advanced: False_
 
 _inlined_description: _
 
-
+Create a cubic bezier line in 3D space from the current drawing point
+with the 2 control points indicated by the coordinates cx1, cy1, cz1
+and cx2, cy2, cz2, that ends at the coordinates x, y, z.
 
 
 
@@ -786,7 +698,23 @@ _inlined_description: _
 
 _description: _
 
+Create a cubic bezier line in 3D space from the current drawing point with the two control points indicated by the coordinates (cx1, cy1, cz1) and (cx2, cy2, cz2), that ends at the coordinate (x, y, z).
 
+~~~~{.cpp}
+float cx = ofGetWidth()/2;
+float cy = 200;
+float step = TWO_PI / 60;
+for (float i = 0.0; i < TWO_PI; i+=step) {
+
+    if(i == 0.0) {
+        path.moveTo(cx + (400*cos(i)), cy+400, 400 * sin(i));
+    } else {
+        path.bezierTo( cx - (200*cos(i)), cy-100, 400 * sin(i),
+                       cx + (200*cos(i)), cy+600, 400 * sin(i),
+                       cx + (400*cos(i)), cy+400, 400 * sin(i));
+    }
+}
+~~~~
 
 
 
@@ -838,6 +766,78 @@ _name: circle_
 _returns: void_
 _returns_description: _
 _parameters: const glm::vec2 &p, float radius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void circle(x, y, radius)
+
+<!--
+_syntax: circle(x, y, radius)_
+_name: circle_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float radius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void circle(x, y, z, radius)
+
+<!--
+_syntax: circle(x, y, z, radius)_
+_name: circle_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float radius_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -940,6 +940,78 @@ Closes the current subpath and creates a new subpath, either an ofPolyline or of
 
 <!----------------------------------------------------------------------------->
 
+###void curveTo(&p)
+
+<!--
+_syntax: curveTo(&p)_
+_name: curveTo_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a curve to p from the current drawing position
+
+
+
+
+
+_description: _
+
+Draws a curve to p from the current drawing position.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void curveTo(&p)
+
+<!--
+_syntax: curveTo(&p)_
+_name: curveTo_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws a curve to p from the current drawing position.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void curveTo(x, y)
 
 <!--
@@ -1025,78 +1097,6 @@ Draws a curve to x,y,z from the current drawing position.
 
 <!----------------------------------------------------------------------------->
 
-###void curveTo(&p)
-
-<!--
-_syntax: curveTo(&p)_
-_name: curveTo_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a curve to p from the current drawing position
-
-
-
-
-
-_description: _
-
-Draws a curve to p from the current drawing position.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void curveTo(&p)
-
-<!--
-_syntax: curveTo(&p)_
-_name: curveTo_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws a curve to p from the current drawing position.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw()
 
 <!--
@@ -1169,78 +1169,6 @@ Draws the path at x,y. Calling draw() also calls tessellate().
 
 <!----------------------------------------------------------------------------->
 
-###void ellipse(x, y, width, height)
-
-<!--
-_syntax: ellipse(x, y, width, height)_
-_name: ellipse_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float width, float height_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ellipse(x, y, z, width, height)
-
-<!--
-_syntax: ellipse(x, y, z, width, height)_
-_name: ellipse_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z, float width, float height_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ellipse(&p, width, height)
 
 <!--
@@ -1285,6 +1213,78 @@ _name: ellipse_
 _returns: void_
 _returns_description: _
 _parameters: const glm::vec2 &p, float width, float height_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ellipse(x, y, width, height)
+
+<!--
+_syntax: ellipse(x, y, width, height)_
+_name: ellipse_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float width, float height_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ellipse(x, y, z, width, height)
+
+<!--
+_syntax: ellipse(x, y, z, width, height)_
+_name: ellipse_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float width, float height_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1965,80 +1965,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void lineTo(x, y)
-
-<!--
-_syntax: lineTo(x, y)_
-_name: lineTo_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a straight line from the current drawing position to the
-location indicated by x,y.
-
-
-
-
-
-_description: _
-
-Draws a straight line from the current drawing position to the location indicated by x,y.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void lineTo(x, y, z)
-
-<!--
-_syntax: lineTo(x, y, z)_
-_name: lineTo_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a straight line from the current drawing position to the
-location indicated by x,y,z.
-
-
-
-
-
-_description: _
-
-Draws a straight line from the current drawing position to the location indicated by x,y,z.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void lineTo(&p)
 
 <!--
@@ -2112,11 +2038,48 @@ Draws a straight line from the current drawing position to the location indicate
 
 <!----------------------------------------------------------------------------->
 
-###void moveTo(x, y, z)
+###void lineTo(x, y)
 
 <!--
-_syntax: moveTo(x, y, z)_
-_name: moveTo_
+_syntax: lineTo(x, y)_
+_name: lineTo_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a straight line from the current drawing position to the
+location indicated by x,y.
+
+
+
+
+
+_description: _
+
+Draws a straight line from the current drawing position to the location indicated by x,y.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void lineTo(x, y, z)
+
+<!--
+_syntax: lineTo(x, y, z)_
+_name: lineTo_
 _returns: void_
 _returns_description: _
 _parameters: float x, float y, float z_
@@ -2132,9 +2095,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Move the drawing position to x,y.z. This means that a subsequent
-calls to, for instance, lineTo() or curveTo() will connect the
-location x,y,z to the new location.
+Draw a straight line from the current drawing position to the
+location indicated by x,y,z.
 
 
 
@@ -2142,7 +2104,7 @@ location x,y,z to the new location.
 
 _description: _
 
-Moves the drawing position to x,y.z. This means that a subsequent calls to, for instance, lineTo() or curveTo() will connect the location x,y,z to the new location.
+Draws a straight line from the current drawing position to the location indicated by x,y,z.
 
 
 
@@ -2224,6 +2186,44 @@ Moves the drawing position to p. This means that a subsequent calls to, for inst
 
 <!----------------------------------------------------------------------------->
 
+###void moveTo(x, y, z)
+
+<!--
+_syntax: moveTo(x, y, z)_
+_name: moveTo_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Move the drawing position to x,y.z. This means that a subsequent
+calls to, for instance, lineTo() or curveTo() will connect the
+location x,y,z to the new location.
+
+
+
+
+
+_description: _
+
+Moves the drawing position to x,y.z. This means that a subsequent calls to, for instance, lineTo() or curveTo() will connect the location x,y,z to the new location.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void newSubPath()
 
 <!--
@@ -2293,82 +2293,6 @@ Create a new ofPath instance.
 _description: _
 
 Creates a new ofPath instance.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void quadBezierTo(cx1, cy1, cx2, cy2, x, y)
-
-<!--
-_syntax: quadBezierTo(cx1, cy1, cx2, cy2, x, y)_
-_name: quadBezierTo_
-_returns: void_
-_returns_description: _
-_parameters: float cx1, float cy1, float cx2, float cy2, float x, float y_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Creates a quadratic bezier line in 2D space from the current drawing
-point with the beginning indicated by the point p1, the control point
-at p2, and that ends at the point p3.
-
-
-
-
-
-_description: _
-
-Creates a quadratic bezier line in 2D space from the current drawing point with the control points indicated by the coordinates (cx1, cy1) and (cx2, cy2), and that ends at the coordinate (x, y)
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)
-
-<!--
-_syntax: quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)_
-_name: quadBezierTo_
-_returns: void_
-_returns_description: _
-_parameters: float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Creates a quadratic bezier line in 3D space from the current drawing
-point with the beginning indicated by the coordinates cx1, cy1, the
-control point at cx2, cy2, and that ends at the coordinates x, y.
-
-
-
-
-
-_description: _
-
-Creates a quadratic bezier line in 3D space from the current drawing point with the control points indicated by the coordinates (cx1, cy1, cz1) and (cx2, cy2, cz2), and that ends at the coordinate (x, y, z).
 
 
 
@@ -2454,6 +2378,82 @@ Create a quadratic bezier line in 3D space from the current drawing point with t
 
 <!----------------------------------------------------------------------------->
 
+###void quadBezierTo(cx1, cy1, cx2, cy2, x, y)
+
+<!--
+_syntax: quadBezierTo(cx1, cy1, cx2, cy2, x, y)_
+_name: quadBezierTo_
+_returns: void_
+_returns_description: _
+_parameters: float cx1, float cy1, float cx2, float cy2, float x, float y_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Creates a quadratic bezier line in 2D space from the current drawing
+point with the beginning indicated by the point p1, the control point
+at p2, and that ends at the point p3.
+
+
+
+
+
+_description: _
+
+Creates a quadratic bezier line in 2D space from the current drawing point with the control points indicated by the coordinates (cx1, cy1) and (cx2, cy2), and that ends at the coordinate (x, y)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)
+
+<!--
+_syntax: quadBezierTo(cx1, cy1, cz1, cx2, cy2, cz2, x, y, z)_
+_name: quadBezierTo_
+_returns: void_
+_returns_description: _
+_parameters: float cx1, float cy1, float cz1, float cx2, float cy2, float cz2, float x, float y, float z_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Creates a quadratic bezier line in 3D space from the current drawing
+point with the beginning indicated by the coordinates cx1, cy1, the
+control point at cx2, cy2, and that ends at the coordinates x, y.
+
+
+
+
+
+_description: _
+
+Creates a quadratic bezier line in 3D space from the current drawing point with the control points indicated by the coordinates (cx1, cy1, cz1) and (cx2, cy2, cz2), and that ends at the coordinate (x, y, z).
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void rectRounded(&b, r)
 
 <!--
@@ -2490,42 +2490,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rectRounded(x, y, w, h, r)
-
-<!--
-_syntax: rectRounded(x, y, w, h, r)_
-_name: rectRounded_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float w, float h, float r_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void rectRounded(&b, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
 
 <!--
@@ -2534,42 +2498,6 @@ _name: rectRounded_
 _returns: void_
 _returns_description: _
 _parameters: const ofRectangle &b, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
-
-<!--
-_syntax: rectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
-_name: rectRounded_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2742,6 +2670,150 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void rectRounded(x, y, w, h, r)
+
+<!--
+_syntax: rectRounded(x, y, w, h, r)_
+_name: rectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float w, float h, float r_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)
+
+<!--
+_syntax: rectRounded(x, y, z, w, h, topLeftRadius, topRightRadius, bottomRightRadius, bottomLeftRadius)_
+_name: rectRounded_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float w, float h, float topLeftRadius, float topRightRadius, float bottomRightRadius, float bottomLeftRadius_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectangle(&p, w, h)
+
+<!--
+_syntax: rectangle(&p, w, h)_
+_name: rectangle_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p, float w, float h_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rectangle(&p, w, h)
+
+<!--
+_syntax: rectangle(&p, w, h)_
+_name: rectangle_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &p, float w, float h_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void rectangle(&r)
 
 <!--
@@ -2822,78 +2894,6 @@ _name: rectangle_
 _returns: void_
 _returns_description: _
 _parameters: float x, float y, float z, float w, float h_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rectangle(&p, w, h)
-
-<!--
-_syntax: rectangle(&p, w, h)_
-_name: rectangle_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p, float w, float h_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rectangle(&p, w, h)
-
-<!--
-_syntax: rectangle(&p, w, h)_
-_name: rectangle_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &p, float w, float h_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -3812,78 +3812,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void triangle(x1, y1, x2, y2, x3, y3)
-
-<!--
-_syntax: triangle(x1, y1, x2, y2, x3, y3)_
-_name: triangle_
-_returns: void_
-_returns_description: _
-_parameters: float x1, float y1, float x2, float y2, float x3, float y3_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void triangle(x1, y1, z1, x2, y2, z2, x3, y3, z3)
-
-<!--
-_syntax: triangle(x1, y1, z1, x2, y2, z2, x3, y3, z3)_
-_name: triangle_
-_returns: void_
-_returns_description: _
-_parameters: float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void triangle(&p1, &p2, &p3)
 
 <!--
@@ -3928,6 +3856,78 @@ _name: triangle_
 _returns: void_
 _returns_description: _
 _parameters: const glm::vec2 &p1, const glm::vec2 &p2, const glm::vec2 &p3_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void triangle(x1, y1, x2, y2, x3, y3)
+
+<!--
+_syntax: triangle(x1, y1, x2, y2, x3, y3)_
+_name: triangle_
+_returns: void_
+_returns_description: _
+_parameters: float x1, float y1, float x2, float y2, float x3, float y3_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void triangle(x1, y1, z1, x2, y2, z2, x3, y3, z3)
+
+<!--
+_syntax: triangle(x1, y1, z1, x2, y2, z2, x3, y3, z3)_
+_name: triangle_
+_returns: void_
+_returns_description: _
+_parameters: float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

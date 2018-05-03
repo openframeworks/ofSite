@@ -157,9 +157,12 @@ _inlined_description: _
 
 Draw a string s at position x,y
 
-Parameters:
+**Parameters:**
+
 s String to draw
+
 x X position of string
+
 y Y position of string
 
 
@@ -227,8 +230,10 @@ Draws the string as if it was geometrical shapes.
 Uses the information contained in ofTTFContour and ofTTFCharacter.
 
 
-Parameters:
+**Parameters:**
+
 x X position of shapes
+
 y Y position of shapes
 
 
@@ -308,7 +313,7 @@ The meaning of "character" coordinate depends on the font. Some fonts take accen
 others do not, and still others define it simply to be the highest coordinate over all glyphs.
 
 
-Returns: the font ascender height in pixels.
+**Returns**: the font ascender height in pixels.
 
 
 
@@ -388,7 +393,7 @@ others do not, and still others define it simply to be the lowest coordinate ove
 This value will be negative for descenders below the baseline (which is typical).
 
 
-Returns: the font descender height in pixels.
+**Returns**: the font descender height in pixels.
 
 
 
@@ -503,7 +508,7 @@ Glyphs are drawn starting from (0,0) in the returned box (though note that the b
 extend in any direction out from the origin).
 
 
-Returns: the font descender height in pixels.
+**Returns**: the font descender height in pixels.
 
 
 
@@ -617,7 +622,7 @@ You can control this by the ofTrueTypeFont::setLetterSpacing() function. 1.0 = d
 less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
 
 
-Returns: the letter spacing of font object.
+**Returns**: the letter spacing of font object.
 
 
 
@@ -655,7 +660,7 @@ _inlined_description: _
 
 Computes line height based on font size.
 
-Returns: the current line height.
+**Returns**: the current line height.
 
 
 
@@ -697,7 +702,7 @@ If you allocate the font using different parameters, you can load in partial
 and full character sets, this helps you know how many characters it can represent.
 
 
-Returns: Number of characters in loaded character set.
+**Returns**: Number of characters in loaded character set.
 
 
 
@@ -735,7 +740,7 @@ _inlined_description: _
 
 Returns the size of the font.
 
-Returns: Size of font, set when font was loaded.
+**Returns**: Size of font, set when font was loaded.
 
 
 
@@ -777,7 +782,7 @@ It's a scalar for the width of the letter 'p', so 1.0 means that a space will be
 case 'p' of that font. 2.0 means that it's 2 times the size of the lower case 'p', etc.
 
 
-Returns: the width of the space.
+**Returns**: the width of the space.
 
 
 
@@ -894,12 +899,15 @@ _inlined_description: _
 
 Returns the bounding box of a string as a rectangle.
 
-Parameters:
+**Parameters:**
+
 s The string to get bounding box of.
+
 x X position of returned rectangle.
+
 y Y position of returned rectangle.
 
-Returns: the bounding box of a string as a rectangle.
+**Returns**: the bounding box of a string as a rectangle.
 
 
 
@@ -1027,7 +1035,7 @@ _inlined_description: _
 
 Does the font have a full character set?
 
-Returns: true if the font was allocated with a full character set.
+**Returns**: true if the font was allocated with a full character set.
 
 
 
@@ -1137,7 +1145,7 @@ _inlined_description: _
 
 Is the font anti-aliased?
 
-Returns: true if the font was set to be anti-aliased.
+**Returns**: true if the font was set to be anti-aliased.
 
 
 
@@ -1175,7 +1183,7 @@ _inlined_description: _
 
 Has the font been loaded successfully?
 
-Returns: true if the font was loaded.
+**Returns**: true if the font was loaded.
 
 
 
@@ -1292,16 +1300,23 @@ the simplification amount for those contours and the dpi of the font.
 default (without dpi), non-full char set, anti aliased, 96 dpi
 
 
-Parameters:
+**Parameters:**
+
 filename The name of the font file to load.
+
 fontsize The size in pixels to load the font.
+
 _bAntiAliased true if the font should be anti-aliased.
+
 _bFullCharacterSet true if the full character set should be cached.
+
 makeControus true if the vector contours should be cached.
+
 simplifyAmt the amount to simplify the vector contours.  Larger number means more simplified.
+
 dpi the dots per inch used to specify rendering size.
 
-Returns: true if the font was loaded correctly.
+**Returns**: true if the font was loaded correctly.
 
 
 
@@ -1389,27 +1404,27 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofTrueTypeFont()
+### ofTrueTypeFont(&&mom)
 
 <!--
-_syntax: ofTrueTypeFont()_
+_syntax: ofTrueTypeFont(&&mom)_
 _name: ofTrueTypeFont_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: ofTrueTypeFont &&mom_
 _access: public_
-_version_started: 006_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
-_visible: False_
+_visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
-Construct a default ofTrueTypeFont.
+
 
 
 
@@ -1461,12 +1476,48 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofTrueTypeFont(&&mom)
+### ofTrueTypeFont()
 
 <!--
-_syntax: ofTrueTypeFont(&&mom)_
+_syntax: ofTrueTypeFont()_
 _name: ofTrueTypeFont_
 _returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: False_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construct a default ofTrueTypeFont.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofTrueTypeFont & operator=(&&mom)
+
+<!--
+_syntax: operator=(&&mom)_
+_name: operator=_
+_returns: ofTrueTypeFont &_
 _returns_description: _
 _parameters: ofTrueTypeFont &&mom_
 _access: public_
@@ -1505,42 +1556,6 @@ _name: operator=_
 _returns: ofTrueTypeFont &_
 _returns_description: _
 _parameters: const ofTrueTypeFont &mom_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofTrueTypeFont & operator=(&&mom)
-
-<!--
-_syntax: operator=(&&mom)_
-_name: operator=_
-_returns: ofTrueTypeFont &_
-_returns_description: _
-_parameters: ofTrueTypeFont &&mom_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1625,7 +1640,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: current font direction
+**Returns**: current font direction
 
 
 
@@ -1701,7 +1716,8 @@ Sets the letter spacing of the font object.
 
 1.0 = default spacing, less then 1.0 would be tighter spacing, greater then 1.0 would be wider spacing.
 
-Parameters:
+**Parameters:**
+
 spacing Spacing of font object.
 
 
@@ -1743,7 +1759,8 @@ Sets line height for text drawn on screen.
 Note the line height is automatically computed based on the font size, when you load in the font.
 
 
-Parameters:
+**Parameters:**
+
 height Line height for text drawn on screen.
 
 
@@ -1785,7 +1802,8 @@ Sets the size of the space ' ' character.
 This number, which defaults to 1.0, scales the width of the letter 'p' for the space.
 
 
-Parameters:
+**Parameters:**
+
 size Scales the width of the letter 'p' for the space.
 
 
@@ -1827,10 +1845,11 @@ Returns the string height.
 This is essentially the height component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
 
 
-Parameters:
+**Parameters:**
+
 s The string to get the height of.
 
-Returns: the string height.
+**Returns**: the string height.
 
 
 
@@ -1871,10 +1890,11 @@ Returns the string width.
 This is essentially the width component of the ofTrueTypeFont::getStringBoundingBox() rectangle.
 
 
-Parameters:
+**Parameters:**
+
 s The string to get the width of.
 
-Returns: the string width.
+**Returns**: the string width.
 
 
 

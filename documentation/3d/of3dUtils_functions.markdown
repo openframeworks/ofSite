@@ -48,9 +48,12 @@ current color (e.g. set with ofSetColor).
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 start The start point (tail) of the arrow, expressed as an ofVec3f.
+
 end The end point (head) of the arrow, expressed as an ofVec3f.
+
 headSize The size of the arrowhead.
 
 
@@ -86,7 +89,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Parameters:
+**Parameters:**
+
 size The size at which to draw the axes.
 
 
@@ -135,12 +139,18 @@ The xz plane (at y=0) is drawn in green.
 The xy plane (at z=0) is drawn in blue.
 
 
-Parameters:
+**Parameters:**
+
 stepSize distance between (parallel) lines on the grid
+
 numberOfSteps number of lines to draw on each side of the central axis of the grid. A number of 8 will draw 8 lines on each side of the central axis, plus one line at the central axis.
+
 labels Whether or not labels are drawn.
+
 x Whether or not the yz plane (at x=0) is drawn.
+
 y Whether or not the xz plane (at y=0) is drawn.
+
 z Whether or not the xy plane (at z=0) is drawn.
 
 
@@ -185,9 +195,12 @@ ofDrawBitmapString internally.) The grid is drawn with the current color
 (i.e. set with ofSetColor).
 
 
-Parameters:
+**Parameters:**
+
 stepSize distance between (parallel) lines on the grid
+
 numberOfSteps number of lines to draw on each side of the central axis of the grid. A number of 8 will draw 8 lines on each side of the central axis, plus one line at the central axis.
+
 labels Whether or not labels are drawn.
 
 
@@ -226,9 +239,12 @@ _inlined_description: _
 This function renders a set of 3 axis-aligned circular bands, centered at the origin.
 
 
-Parameters:
+**Parameters:**
+
 radius The radius of the circular bands.
+
 stripWidth The width of the circular bands. The default is 10 units.
+
 circleRes The resolution of the circular bands. The default is 60 segments.
 
 

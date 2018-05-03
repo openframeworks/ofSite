@@ -770,7 +770,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument as a binary blob
 
@@ -811,7 +812,8 @@ _inlined_description: _
 get argument as a bool, converts numeric types automatically
 this argument type matches both OFXOSC_TYPE_TRUE & OFXOSC_TYPE_FALSE
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument value as a bool
 
@@ -851,7 +853,8 @@ _inlined_description: _
 
 get argument as a string, converts numeric types with a warning
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument value as a string
 
@@ -891,7 +894,8 @@ _inlined_description: _
 
 get argument as a double, converts numeric types automatically
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument value as a double
 
@@ -932,7 +936,8 @@ _inlined_description: _
 get argument as a float, converts numeric types automatically
 prints a warning when converting higher precision types
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument value as a float
 
@@ -973,7 +978,8 @@ _inlined_description: _
 get argument as a trigger impulse
 this is an alias for getArgAsTrigger()
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return true if argument was a trigger
 
@@ -1014,7 +1020,8 @@ _inlined_description: _
 get argument as a trigger impulse
 this is an alias for getArgAsTrigger()
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return true if argument was a trigger
 
@@ -1055,7 +1062,8 @@ _inlined_description: _
 get argument as an integer, converts numeric types automatically
 prints a warning when converting higher precision types
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument value as a 32-bit int
 
@@ -1096,7 +1104,8 @@ _inlined_description: _
 get argument as an integer, converts numeric types automatically
 prints a warning when converting higher precision types
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument value as a 32-bit int
 
@@ -1137,7 +1146,8 @@ _inlined_description: _
 get argument as a 64-bit integer, converts numeric types automatically
 \return given argument value as a 64-bit int
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 
 
@@ -1174,7 +1184,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument value as a 4-byte midi message
 
@@ -1214,7 +1225,8 @@ _inlined_description: _
 
 get argument as a none/nil
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return true if argument was a none/nil
 
@@ -1254,7 +1266,8 @@ _inlined_description: _
 
 get an argument as an RGBA color, converts int32 automatically
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument as a 32-bit color value
 
@@ -1294,7 +1307,8 @@ _inlined_description: _
 
 get argument as a string, converts numeric types with a warning
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument value as a string
 
@@ -1334,7 +1348,8 @@ _inlined_description: _
 
 get argument as a symbol (string), converts numeric types with a warning
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument value as a symbol (string)
 
@@ -1372,7 +1387,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return given argument as a 64-bit NTP time tag
 
@@ -1412,7 +1428,8 @@ _inlined_description: _
 
 get argument as a trigger impulse
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return true if argument was a trigger
 
@@ -1450,7 +1467,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return argument type code for a given index
 
@@ -1488,7 +1506,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return argument type tag char as a string
 
@@ -1634,7 +1653,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Parameters:
+**Parameters:**
+
 index The index of the queried item.
 \return type tags for all arguments as a string, 1 char for each argument
 
@@ -1652,14 +1672,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscMessage()
+### ofxOscMessage(&other)
 
 <!--
-_syntax: ofxOscMessage()_
+_syntax: ofxOscMessage(&other)_
 _name: ofxOscMessage_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofxOscMessage &other_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1688,14 +1708,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscMessage(&other)
+### ofxOscMessage()
 
 <!--
-_syntax: ofxOscMessage(&other)_
+_syntax: ofxOscMessage()_
 _name: ofxOscMessage_
 _returns: _
 _returns_description: _
-_parameters: const ofxOscMessage &other_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _

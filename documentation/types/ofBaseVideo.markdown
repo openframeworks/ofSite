@@ -82,7 +82,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: the current ofPixelFormat.
+**Returns**: the current ofPixelFormat.
 
 
 
@@ -118,7 +118,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Returns: true if the pixel data was updated since the last call to update().
+**Returns**: true if the pixel data was updated since the last call to update().
 
 
 
@@ -161,7 +161,7 @@ setup() method.  Video sources such as movie players are often
 initialized with a load() method.
 
 
-Returns: true if the video source is initialized.
+**Returns**: true if the video source is initialized.
 
 
 
@@ -199,10 +199,11 @@ _inlined_description: _
 
 Set the requested ofPixelFormat.
 
-Parameters:
+**Parameters:**
+
 pixelFormat the requested ofPixelFormat.
 
-Returns: true if the format was successfully changed.
+**Returns**: true if the format was successfully changed.
 
 
 

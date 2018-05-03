@@ -48,7 +48,8 @@ _inlined_description: _
 
 Receive an audio buffer.
 
-Parameters:
+**Parameters:**
+
 buffer An audio buffer.
 
 
@@ -65,16 +66,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void audioIn(*input, bufferSize, nChannels, deviceID, tickCount)
+###void audioIn(*input, bufferSize, nChannels)
 
 <!--
-_syntax: audioIn(*input, bufferSize, nChannels, deviceID, tickCount)_
+_syntax: audioIn(*input, bufferSize, nChannels)_
 _name: audioIn_
 _returns: void_
 _returns_description: _
-_parameters: float *input, int bufferSize, int nChannels, int deviceID, unsigned long long tickCount_
+_parameters: float *input, int bufferSize, int nChannels_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -102,16 +103,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void audioIn(*input, bufferSize, nChannels)
+###void audioIn(*input, bufferSize, nChannels, deviceID, tickCount)
 
 <!--
-_syntax: audioIn(*input, bufferSize, nChannels)_
+_syntax: audioIn(*input, bufferSize, nChannels, deviceID, tickCount)_
 _name: audioIn_
 _returns: void_
 _returns_description: _
-_parameters: float *input, int bufferSize, int nChannels_
+_parameters: float *input, int bufferSize, int nChannels, int deviceID, unsigned long long tickCount_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

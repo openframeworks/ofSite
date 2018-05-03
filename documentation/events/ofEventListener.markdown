@@ -25,78 +25,6 @@ _extends: _
 
 
 
-### ofEventListener()
-
-<!--
-_syntax: ofEventListener()_
-_name: ofEventListener_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofEventListener(&)
-
-<!--
-_syntax: ofEventListener(&)_
-_name: ofEventListener_
-_returns: _
-_returns_description: _
-_parameters: const ofEventListener &_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofEventListener(&&)
 
 <!--
@@ -169,14 +97,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofEventListener & operator=(&)
+### ofEventListener(&)
 
 <!--
-_syntax: operator=(&)_
-_name: operator=_
-_returns: ofEventListener &_
+_syntax: ofEventListener(&)_
+_name: ofEventListener_
+_returns: _
 _returns_description: _
 _parameters: const ofEventListener &_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofEventListener()
+
+<!--
+_syntax: ofEventListener()_
+_name: ofEventListener_
+_returns: _
+_returns_description: _
+_parameters: _
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -249,6 +213,42 @@ _name: operator=_
 _returns: ofEventListener &_
 _returns_description: _
 _parameters: unique_ptr< of::priv::AbstractEventToken > &&token_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofEventListener & operator=(&)
+
+<!--
+_syntax: operator=(&)_
+_name: operator=_
+_returns: ofEventListener &_
+_returns_description: _
+_parameters: const ofEventListener &_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

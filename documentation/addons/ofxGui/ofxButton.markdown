@@ -349,16 +349,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxButton * setup(_bVal, width, height)
+###ofxButton * setup(&toggleName, width, height)
 
 <!--
-_syntax: setup(_bVal, width, height)_
+_syntax: setup(&toggleName, width, height)_
 _name: setup_
 _returns: ofxButton *_
 _returns_description: _
-_parameters: ofParameter< void > _bVal, float width, float height_
+_parameters: const string &toggleName, float width, float height_
 _access: public_
-_version_started: 0.10.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -385,16 +385,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxButton * setup(&toggleName, width, height)
+###ofxButton * setup(_bVal, width, height)
 
 <!--
-_syntax: setup(&toggleName, width, height)_
+_syntax: setup(_bVal, width, height)_
 _name: setup_
 _returns: ofxButton *_
 _returns_description: _
-_parameters: const string &toggleName, float width, float height_
+_parameters: ofParameter< void > _bVal, float width, float height_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

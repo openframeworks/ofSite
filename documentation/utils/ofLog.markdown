@@ -132,9 +132,12 @@ _inlined_description: _
 
 Print a log line.
 
-Parameters:
+**Parameters:**
+
 level The log level.
+
 module The target module.
+
 message The log message.
 
 
@@ -209,11 +212,13 @@ _inlined_description: _
 
 Determine if the given module is active at the given log level.
 
-Parameters:
+**Parameters:**
+
 level The log level.
+
 module The target module.
 
-Returns: true if the given module is active at the given log level.
+**Returns**: true if the given module is active at the given log level.
 
 
 
@@ -280,6 +285,42 @@ _summary: _
 _constant: False_
 _static: True_
 _visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofLog(&)
+
+<!--
+_syntax: ofLog(&)_
+_name: ofLog_
+_returns: _
+_returns_description: _
+_parameters: const ofLog &_
+_access: private_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: False_
 _advanced: False_
 -->
 
@@ -417,7 +458,8 @@ ofLogWarning() << "a string " << 100 << 20.234f;
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 level The ofLogLevel for this log message.
 
 
@@ -498,8 +540,10 @@ ofLog(OF_LOG_NOTICE, "the number is "
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 level The ofLogLevel for this log message.
+
 message The log message.
 
 
@@ -521,42 +565,6 @@ ofLog(OF_LOG_NOTICE, "the number is "
 ~~~~
 
 See [ofSetLogLevel(logLevel)](./ofLog.html#functions) for more info on log levels.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofLog(&)
-
-<!--
-_syntax: ofLog(&)_
-_name: ofLog_
-_returns: _
-_returns_description: _
-_parameters: const ofLog &_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -591,10 +599,11 @@ almost any type.
 
 \tparam T the data type to be streamed.
 
-Parameters:
+**Parameters:**
+
 value the data to be streamed.
 
-Returns: A reference to itself.
+**Returns**: A reference to itself.
 
 
 
@@ -636,10 +645,11 @@ This allows the class to use the << std::ostream to catch function
 pointers such as std::endl and std::hex.
 
 
-Parameters:
+**Parameters:**
+
 func A function pointer that takes a std::ostream as an argument.
 
-Returns: A reference to itself.
+**Returns**: A reference to itself.
 
 
 
@@ -716,7 +726,8 @@ Let the logger automaticly add spaces between messages.
 Default is `false`.
 
 
-Parameters:
+**Parameters:**
+
 autoSpace Set to true to add spaces between messages
 
 
@@ -758,9 +769,10 @@ Set the logging channel destinations for messages.
 This can be used to output to files instead of stdout.
 
 
-See also: ofFileLoggerChannel ofConsoleLoggerChannel
+**See also**: ofFileLoggerChannel ofConsoleLoggerChannel
 
-Parameters:
+**Parameters:**
+
 channel The channel to log to.
 
 

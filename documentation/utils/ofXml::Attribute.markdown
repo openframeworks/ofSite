@@ -25,15 +25,15 @@ _extends: _
 
 
 
-### Attribute()
+### Attribute(&attr)
 
 <!--
-_syntax: Attribute()_
+_syntax: Attribute(&attr)_
 _name: Attribute_
 _returns: _
 _returns_description: _
-_parameters: _
-_access: public_
+_parameters: const pugi::xml_attribute &attr_
+_access: private_
 _version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
@@ -61,15 +61,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### Attribute(&attr)
+### Attribute()
 
 <!--
-_syntax: Attribute(&attr)_
+_syntax: Attribute()_
 _name: Attribute_
 _returns: _
 _returns_description: _
-_parameters: const pugi::xml_attribute &attr_
-_access: private_
+_parameters: _
+_access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
 _summary: _

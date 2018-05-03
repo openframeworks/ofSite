@@ -16,7 +16,7 @@ An ofVideoFormat is used to describe the size, pixel format and frame rates
 offered by a video device.
 
 
-See also: ofVideoDevice
+**See also**: ofVideoDevice
 
 
 

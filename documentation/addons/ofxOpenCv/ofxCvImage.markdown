@@ -401,78 +401,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(x, y)
-
-<!--
-_syntax: draw(x, y)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draw the image at the x,y.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(x, y, w, h)
-
-<!--
-_syntax: draw(x, y, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float w, float h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draw the image at the x,y with the w,h.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(&point)
 
 <!--
@@ -538,6 +466,78 @@ _inlined_description: _
 _description: _
 
 Draw the image into the ofRectangle passed in.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(x, y)
+
+<!--
+_syntax: draw(x, y)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draw the image at the x,y.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(x, y, w, h)
+
+<!--
+_syntax: draw(x, y, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float w, float h_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draw the image at the x,y with the w,h.
 
 
 
@@ -1501,46 +1501,6 @@ first *= second; // both are ofxCvImage instances
 
 <!----------------------------------------------------------------------------->
 
-###void operator+=(value)
-
-<!--
-_syntax: operator+=(value)_
-_name: operator+=_
-_returns: void_
-_returns_description: _
-_parameters: float value_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Adds the pixel data of the right hand side image from the current image:
-
-~~~~{.cpp}
-first += second; // both are ofxCvImage instances
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void operator+=(&mom)
 
 <!--
@@ -1581,14 +1541,54 @@ first += second; // both are ofxCvImage instances
 
 <!----------------------------------------------------------------------------->
 
-###void operator-=(value)
+###void operator+=(value)
 
 <!--
-_syntax: operator-=(value)_
-_name: operator-=_
+_syntax: operator+=(value)_
+_name: operator+=_
 _returns: void_
 _returns_description: _
 _parameters: float value_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Adds the pixel data of the right hand side image from the current image:
+
+~~~~{.cpp}
+first += second; // both are ofxCvImage instances
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void operator-=(&mom)
+
+<!--
+_syntax: operator-=(&mom)_
+_name: operator-=_
+_returns: void_
+_returns_description: _
+_parameters: ofxCvImage &mom_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1621,14 +1621,14 @@ first -= second; // both are ofxCvImage instances
 
 <!----------------------------------------------------------------------------->
 
-###void operator-=(&mom)
+###void operator-=(value)
 
 <!--
-_syntax: operator-=(&mom)_
+_syntax: operator-=(value)_
 _name: operator-=_
 _returns: void_
 _returns_description: _
-_parameters: ofxCvImage &mom_
+_parameters: float value_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2320,42 +2320,6 @@ Set the anchor point of the image, i.e. the center point for rotations, at the x
 
 <!----------------------------------------------------------------------------->
 
-###void setFromPixels(*_pixels, w, h)
-
-<!--
-_syntax: setFromPixels(*_pixels, w, h)_
-_name: setFromPixels_
-_returns: void_
-_returns_description: _
-_parameters: const unsigned char *_pixels, int w, int h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Set all the pixels in a ofxCvImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setFromPixels(&pixels)
 
 <!--
@@ -2385,6 +2349,42 @@ _inlined_description: _
 _description: _
 
 Set all the pixels in a ofxCvImage from an ofPixels reference.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setFromPixels(*_pixels, w, h)
+
+<!--
+_syntax: setFromPixels(*_pixels, w, h)_
+_name: setFromPixels_
+_returns: void_
+_returns_description: _
+_parameters: const unsigned char *_pixels, int w, int h_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Set all the pixels in a ofxCvImage from a pointer to an array of unsigned char values, using the w and h parameters to determine the dimensions of the image.
 
 
 
@@ -2428,42 +2428,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setROI(x, y, w, h)
-
-<!--
-_syntax: setROI(x, y, w, h)_
-_name: setROI_
-_returns: void_
-_returns_description: _
-_parameters: int x, int y, int w, int h_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Sets the region of interest on the image.  Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setROI(&rect)
 
 <!--
@@ -2500,14 +2464,14 @@ Sets the region of interest on the image.  Region of Interest is a rectangular a
 
 <!----------------------------------------------------------------------------->
 
-###void setRoiFromPixels(*_pixels, w, h)
+###void setROI(x, y, w, h)
 
 <!--
-_syntax: setRoiFromPixels(*_pixels, w, h)_
-_name: setRoiFromPixels_
+_syntax: setROI(x, y, w, h)_
+_name: setROI_
 _returns: void_
 _returns_description: _
-_parameters: const unsigned char *_pixels, int w, int h_
+_parameters: int x, int y, int w, int h_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2528,7 +2492,7 @@ _inlined_description: _
 
 _description: _
 
-Set the Region Of Interest using a pointer to an unsigned char array and a w,h to define the area of the ROI
+Sets the region of interest on the image.  Region of Interest is a rectangular area in an image, to segment object for further processing. Once the ROI is defined, OpenCV functions will operate on the ROI, reducing the number of pixels that the operation will examine.
 
 
 
@@ -2565,6 +2529,42 @@ _inlined_description: _
 _description: _
 
 Set the Region Of Interest using an ofPixels reference The w,h of the ofPixels will define the area of the ROI
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setRoiFromPixels(*_pixels, w, h)
+
+<!--
+_syntax: setRoiFromPixels(*_pixels, w, h)_
+_name: setRoiFromPixels_
+_returns: void_
+_returns_description: _
+_parameters: const unsigned char *_pixels, int w, int h_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Set the Region Of Interest using a pointer to an unsigned char array and a w,h to define the area of the ROI
 
 
 

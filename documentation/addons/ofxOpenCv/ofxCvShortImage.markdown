@@ -543,42 +543,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxCvShortImage()
-
-<!--
-_syntax: ofxCvShortImage()_
-_name: ofxCvShortImage_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Constructor.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofxCvShortImage(&mom)
 
 <!--
@@ -621,14 +585,14 @@ ofxCvShortImage new(old);
 
 <!----------------------------------------------------------------------------->
 
-###void operator=(*_pixels)
+### ofxCvShortImage()
 
 <!--
-_syntax: operator=(*_pixels)_
-_name: operator=_
-_returns: void_
+_syntax: ofxCvShortImage()_
+_name: ofxCvShortImage_
+_returns: _
 _returns_description: _
-_parameters: unsigned char *_pixels_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -649,7 +613,7 @@ _inlined_description: _
 
 _description: _
 
-Sets the ofxCvShortImage from the pixels pointer. Be sure that the pixels are the same size and dimensions as the ofxCvShortImage.
+Constructor.
 
 
 
@@ -810,6 +774,42 @@ Copies a ofxCvShortImage into a ofxCvShortImage using the = symbol.
 ~~~~{.cpp}
 grayImage = shortColorImage; // make sure that the dimensions and ROI match
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void operator=(*_pixels)
+
+<!--
+_syntax: operator=(*_pixels)_
+_name: operator=_
+_returns: void_
+_returns_description: _
+_parameters: unsigned char *_pixels_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Sets the ofxCvShortImage from the pixels pointer. Be sure that the pixels are the same size and dimensions as the ofxCvShortImage.
 
 
 

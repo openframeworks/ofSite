@@ -41,7 +41,7 @@ the corresponding int value.
 
 \value The binary string.
 
-Returns: the char represented by the string or 0 on failure.
+**Returns**: the char represented by the string or 0 on failure.
 
 
 
@@ -83,7 +83,7 @@ Interprets a string consisting only of 1s and 0s as an a float
 
 \value The binary string.
 
-Returns: the float represented by the string or 0 on failure.
+**Returns**: the float represented by the string or 0 on failure.
 
 
 
@@ -125,7 +125,7 @@ Interprets a string consisting only of 1s and 0s as an int (little-endian,
 
 \value The binary string.
 
-Returns: the integer represented by the string or 0 on failure.
+**Returns**: the integer represented by the string or 0 on failure.
 
 
 
@@ -167,7 +167,7 @@ and returns the corresponding string.
 
 \value The binary string.
 
-Returns: the ASCII string represented by the string.
+**Returns**: the ASCII string represented by the string.
 
 
 
@@ -205,11 +205,13 @@ _inlined_description: _
 Search for a target value in a vector of values.
 \tparam T the type contained by the vector.
 
-Parameters:
+**Parameters:**
+
 values The vector of values to be searched.
+
 target The target value to be found.
 
-Returns: true if at least one value equal to the target value is found.
+**Returns**: true if at least one value equal to the target value is found.
 
 
 
@@ -324,13 +326,15 @@ _inlined_description: _
 Search for a target value in a vector of values.
 \tparam T the type contained by the vector.
 
-Parameters:
+**Parameters:**
+
 values The vector of values to be searched.
+
 target The target value to be found.
 
-Returns: true the index of the first target value found.
+**Returns**: true the index of the first target value found.
 
-See also: http://www.cplusplus.com/reference/iterator/distance/
+**See also**: http://www.cplusplus.com/reference/iterator/distance/
 
 
 
@@ -370,10 +374,11 @@ Convert a string represetnation to another string.
 Equivalent to calling the `.c_str()` on a std::string.
 
 
-Parameters:
+**Parameters:**
+
 value The string value to convert to another string.
 
-Returns: the string converted to a c-style string.
+**Returns**: the string converted to a c-style string.
 
 
 
@@ -414,10 +419,11 @@ Often, this method will be used to convert a string to a numerical type.
 
 \tparam T The target data type.
 
-Parameters:
+**Parameters:**
+
 value The string value to convert to type T.
 
-Returns: the string converted to the target data type T.
+**Returns**: the string converted to the target data type T.
 
 
 
@@ -454,10 +460,11 @@ _inlined_description: _
 
 Convert a string represetnation to another string.
 
-Parameters:
+**Parameters:**
+
 value The string value to convert to another string.
 
-Returns: the string converted to another string.
+**Returns**: the string converted to another string.
 
 
 
@@ -494,7 +501,7 @@ _inlined_description: _
 
 Get the system time.
 
-Returns: the system time.
+**Returns**: the system time.
 
 
 
@@ -531,7 +538,7 @@ _inlined_description: _
 
 Get the current day within the month.
 
-Returns: the day witin the month [1-31].
+**Returns**: the day witin the month [1-31].
 
 
 
@@ -573,7 +580,7 @@ Usually ofResetElapsedTimeCounter() is called automatically upon program
 startup.
 
 
-Returns: the elapsed time in microseconds (1000000 microseconds = 1 second).
+**Returns**: the elapsed time in microseconds (1000000 microseconds = 1 second).
 
 
 
@@ -615,7 +622,7 @@ Usually ofResetElapsedTimeCounter() is called automatically once during
 program startup.
 
 
-Returns: the elapsed time in milliseconds (1000 milliseconds = 1 second).
+**Returns**: the elapsed time in milliseconds (1000 milliseconds = 1 second).
 
 
 
@@ -657,7 +664,7 @@ Usually ofResetElapsedTimeCounter() is called automatically once during
 program startup.
 
 
-Returns: the floating point elapsed time in seconds.
+**Returns**: the floating point elapsed time in seconds.
 
 
 
@@ -695,7 +702,7 @@ _inlined_description: _
 Get the value of a given environment variable.
 \note The available environment variables differ between operating systems.
 
-Returns: the environmnt variable's value or an empty string if not found.
+**Returns**: the environmnt variable's value or an empty string if not found.
 
 
 
@@ -732,7 +739,7 @@ _inlined_description: _
 
 Get the number of frames rendered since the program started.
 
-Returns: the number of frames rendered since the program started.
+**Returns**: the number of frames rendered since the program started.
 
 
 
@@ -769,7 +776,7 @@ _inlined_description: _
 
 Get the hour of the day.
 
-Returns: the hour of the day [0-23].
+**Returns**: the hour of the day [0-23].
 
 
 
@@ -806,7 +813,7 @@ _inlined_description: _
 
 Get minutes after the hour.
 
-Returns: the minutes after the hour [0-59].
+**Returns**: the minutes after the hour [0-59].
 
 
 
@@ -843,7 +850,7 @@ _inlined_description: _
 
 Get the current month.
 
-Returns: the current month [1-12].
+**Returns**: the current month [1-12].
 
 
 
@@ -881,7 +888,7 @@ _inlined_description: _
 \section System Time
 Get the seconds after the minute.
 
-Returns: the seconds after the minute [0-59].
+**Returns**: the seconds after the minute [0-59].
 
 
 
@@ -918,7 +925,7 @@ _inlined_description: _
 
 Get the system time in microseconds.
 
-Returns: the system time in microseconds.
+**Returns**: the system time in microseconds.
 
 
 
@@ -955,7 +962,7 @@ _inlined_description: _
 
 Get the system time in milliseconds.
 
-Returns: the system time in milliseconds.
+**Returns**: the system time in milliseconds.
 
 
 
@@ -992,48 +999,7 @@ _inlined_description: _
 
 Get the target platform of the current system.
 
-Returns: the current ofTargetPlatform.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofGetTimestampString()
-
-<!--
-_syntax: ofGetTimestampString()_
-_name: ofGetTimestampString_
-_returns: string_
-_returns_description: _
-_parameters: _
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Formats the current system time according to the given format.
-
-The default timestamp format is "%Y-%m-%d-%H-%M-%S-%i" (e.g.
-2011-01-15-18-29-35-299).
-
-
-Returns: the current time as a string with the default format.
+**Returns**: the current ofTargetPlatform.
 
 
 
@@ -1101,12 +1067,13 @@ characters, which are replaced by the corresponding value.
   * %% - percent sign
 
 
-Parameters:
+**Parameters:**
+
 timestampFormat The formatting pattern.
 
-Returns: the formatted timestamp as a string.
+**Returns**: the formatted timestamp as a string.
 
-Warning: an invalid timestampFormat may crash windows apps.
+**Warning**: an invalid timestampFormat may crash windows apps.
 
 
 
@@ -1151,6 +1118,47 @@ which are replaced by the corresponding value.
 
 <!----------------------------------------------------------------------------->
 
+###string ofGetTimestampString()
+
+<!--
+_syntax: ofGetTimestampString()_
+_name: ofGetTimestampString_
+_returns: string_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Formats the current system time according to the given format.
+
+The default timestamp format is "%Y-%m-%d-%H-%M-%S-%i" (e.g.
+2011-01-15-18-29-35-299).
+
+
+**Returns**: the current time as a string with the default format.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###unsigned int ofGetUnixTime()
 
 <!--
@@ -1175,7 +1183,7 @@ Get the number of seconds since Midnight, January 1, 1970.
 Resolution is in seconds.
 
 
-Returns: the number of seconds since Midnight, January 1, 1970 (epoch time).
+**Returns**: the number of seconds since Midnight, January 1, 1970 (epoch time).
 
 
 
@@ -1216,9 +1224,9 @@ Get the current version of openFrameworks as a string.
 openFrameworks uses the semantic versioning system.
 
 
-See also: http://semver.org/
+**See also**: http://semver.org/
 
-Returns: The string representation of the version (e.g. `0.9.0`).
+**Returns**: The string representation of the version (e.g. `0.9.0`).
 
 
 
@@ -1258,9 +1266,9 @@ Get the major version number of openFrameworks.
 openFrameworks uses the semantic versioning system.
 
 
-See also: http://semver.org/
+**See also**: http://semver.org/
 
-Returns: The major version number.
+**Returns**: The major version number.
 
 
 
@@ -1300,9 +1308,9 @@ Get the minor version number of openFrameworks.
 openFrameworks uses the semantic versioning system.
 
 
-See also: http://semver.org/
+**See also**: http://semver.org/
 
-Returns: The minor version number.
+**Returns**: The minor version number.
 
 
 
@@ -1342,9 +1350,9 @@ Get the patch version number of openFrameworks.
 openFrameworks uses the semantic versioning system.
 
 
-See also: http://semver.org/
+**See also**: http://semver.org/
 
-Returns: The patch version number.
+**Returns**: The patch version number.
 
 
 
@@ -1389,9 +1397,9 @@ this string will describe the pre-release state. Examples might include
 empty.
 
 
-See also: http://semver.org/
+**See also**: http://semver.org/
 
-Returns: The pre-release version string.
+**Returns**: The pre-release version string.
 
 
 
@@ -1431,7 +1439,7 @@ Get the current weekday.
 Values 0 = Sunday, 1 = Monday, ..., 6 = Saturday.
 
 
-Returns: the current weekday [0-6].
+**Returns**: the current weekday [0-6].
 
 
 
@@ -1468,7 +1476,7 @@ _inlined_description: _
 
 Get the current year.
 
-Returns: the current year.
+**Returns**: the current year.
 
 
 
@@ -1509,10 +1517,11 @@ Converts a hexadecimal representation of an char (e.g., `"61"`) to an actual
 `char` (e.g., `a`).
 
 
-Parameters:
+**Parameters:**
+
 charHexString The string representing an char in hexadecimal.
 
-Returns: the char represented by the string.
+**Returns**: the char represented by the string.
 
 
 
@@ -1553,10 +1562,11 @@ Converts a hexadecimal representation of an float (little-endian, 32-bit
 IEEE 754, e.g., `"43000000"`) to an actual float (e.g., `128.f`).
 
 
-Parameters:
+**Parameters:**
+
 floatHexString The string representing an float in hexadecimal.
 
-Returns: the float represented by the string.
+**Returns**: the float represented by the string.
 
 
 
@@ -1597,10 +1607,11 @@ Converts a hexadecimal representation of an int (little-endian, 32-bit,
 e.g., `"0xbadf00d"` or `"badf00d"`) to an actual `int`.
 
 
-Parameters:
+**Parameters:**
+
 intHexString The string representing an integer in hexadecimal.
 
-Returns: the integer represented by the string.
+**Returns**: the integer represented by the string.
 
 
 
@@ -1641,10 +1652,11 @@ Converts a hexadecimal representation of an string (e.g.,
 `"61626364656667"`) to an actual string (`"abcdefg"`).
 
 
-Parameters:
+**Parameters:**
+
 stringHexString The string representing an string in hexadecimal.
 
-Returns: the string represented by the string.
+**Returns**: the string represented by the string.
 
 
 
@@ -1689,8 +1701,10 @@ Example:
     ofLog() << ofIsStringInString(haystack, "something else"); // Outputs 0.
 ~~~
 
-Parameters:
+**Parameters:**
+
 haystack The string to check for occurrence in.
+
 needle The string to check for.
 
 
@@ -1735,8 +1749,10 @@ _inlined_description: _
 
 Join a vector of strings together into one string.
 
-Parameters:
+**Parameters:**
+
 stringElements The vector of strings to join.
+
 delimiter The delimiter to put betweeen each string.
 
 
@@ -1811,10 +1827,11 @@ _inlined_description: _
 Randomly reorder the values in a vector.
 \tparam T the type contained by the vector.
 
-Parameters:
+**Parameters:**
+
 values The vector of values to modify.
 
-See also: http://www.cplusplus.com/reference/algorithm/random_shuffle/
+**See also**: http://www.cplusplus.com/reference/algorithm/random_shuffle/
 
 
 
@@ -1885,11 +1902,13 @@ The resulting vector will contain the following values:
 \tparam T the type contained by the vector.
 \tparam BoolFunction the boolean function used to erase.
 
-Parameters:
+**Parameters:**
+
 values The vector of values to modify.
+
 shouldErase A boolean function as described above.
 
-See also: http://www.cplusplus.com/reference/algorithm/remove_if/
+**See also**: http://www.cplusplus.com/reference/algorithm/remove_if/
 
 
 
@@ -2012,7 +2031,8 @@ The PNG image will be named according to an internal counter in sequence.
 The count will be restarted each time the program is restarted.
 
 
-Parameters:
+**Parameters:**
+
 bUseViewport Set to true if the current viewport should be used.
 
 
@@ -2059,7 +2079,8 @@ Example:
 The output file type will be deduced from the given file name.
 
 
-Parameters:
+**Parameters:**
+
 filename The image output file.
 
 
@@ -2107,7 +2128,8 @@ Saves the current viewport as an image.
 The output file type will be deduced from the given file name.
 
 
-Parameters:
+**Parameters:**
+
 filename The image output file.
 
 
@@ -2150,9 +2172,10 @@ folder within an *.app bundle on OSX or perhaps work from a shared data
 folder in the user's Documents directory.
 
 
-Warning: The provided path must have a trailing slash (/).
+**Warning**: The provided path must have a trailing slash (/).
 
-Parameters:
+**Parameters:**
+
 root The path to the data/ folder relative to the app executable.
 
 
@@ -2190,8 +2213,56 @@ _inlined_description: _
 
 Sleeps the current thread for the specified amount of milliseconds.
 
-Parameters:
+**Parameters:**
+
 millis The number of millseconds to sleep.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSort(&values)
+
+<!--
+_syntax: ofSort(&values)_
+_name: ofSort_
+_returns: void_
+_returns_description: _
+_parameters: int &values_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Sort a vector of values into ascending order.
+
+The elements are compared using operator< for the first version.
+Equivalent elements are not guaranteed to keep their original relative
+order.
+
+\tparam T the type contained by the vector.
+
+**Parameters:**
+
+values The vector of values to be sorted.
+
+**See also**: http://www.cplusplus.com/reference/algorithm/sort/
 
 
 
@@ -2264,57 +2335,13 @@ The resulting vector will contain the following values:
 
 \tparam T the type contained by the vector.
 
-Parameters:
+**Parameters:**
+
 values The vector of values to be sorted.
+
 compare The comparison function.
 
-See also: http://www.cplusplus.com/reference/algorithm/sort/
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofSort(&values)
-
-<!--
-_syntax: ofSort(&values)_
-_name: ofSort_
-_returns: void_
-_returns_description: _
-_parameters: int &values_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Sort a vector of values into ascending order.
-
-The elements are compared using operator< for the first version.
-Equivalent elements are not guaranteed to keep their original relative
-order.
-
-\tparam T the type contained by the vector.
-
-Parameters:
-values The vector of values to be sorted.
-
-See also: http://www.cplusplus.com/reference/algorithm/sort/
+**See also**: http://www.cplusplus.com/reference/algorithm/sort/
 
 
 
@@ -2371,13 +2398,17 @@ each token.  This might be useful when a delimted string is padded with
 with spaces (e.g. "of    ,   rocks   ,!").
 
 
-Parameters:
+**Parameters:**
+
 source The string to split.
+
 delimiter The delimiter string.
+
 ignoreEmpty Set to true to remove empty tokens.
+
 trim Set to true to trim the resulting tokens.
 
-Returns: A vector of strings split with the delimiter.
+**Returns**: A vector of strings split with the delimiter.
 
 
 
@@ -2415,9 +2446,12 @@ _inlined_description: _
 Replace all occurrences of a string with another string.
 \note The input string is passed by reference, so it will be modified.
 
-Parameters:
+**Parameters:**
+
 input The string to run the replacement on.
+
 searchStr The string to be replaced.
+
 replaceStr The string to put in place.
 
 
@@ -2461,8 +2495,10 @@ _inlined_description: _
 
 Check how many times a string contains another string.
 
-Parameters:
+**Parameters:**
+
 haystack The string to check for occurrence in .
+
 needle The string to check for.
 
 
@@ -2501,7 +2537,7 @@ _inlined_description: _
 Executes a system command. Similar to run a command in terminal.
 \note Will block until the executed program/command has finished.
 
-Returns: the system command output as string.
+**Returns**: the system command output as string.
 
 
 
@@ -2578,10 +2614,11 @@ in memory.
 
 \tparam T The data type of the value to convert to a binary string.
 
-Parameters:
+**Parameters:**
+
 value The data to convert to a binary string.
 
-Returns: a binary string.
+**Returns**: a binary string.
 
 
 
@@ -2622,10 +2659,11 @@ The corresponding string of 1s and 0s corresponds to the way value is stored
 in memory.
 
 
-Parameters:
+**Parameters:**
+
 value The string to convert to a binary string.
 
-Returns: a binary string.
+**Returns**: a binary string.
 
 
 
@@ -2666,10 +2704,11 @@ The corresponding string of 1s and 0s corresponds to the way value is stored
 in memory.
 
 
-Parameters:
+**Parameters:**
+
 value The c-style string to convert to a binary string.
 
-Returns: a binary string.
+**Returns**: a binary string.
 
 
 
@@ -2711,10 +2750,11 @@ actual `bool` using a case-insensitive comparison against the words `"true"`
 and `"false"`.
 
 
-Parameters:
+**Parameters:**
+
 boolString The string representation of the boolean.
 
-Returns: the boolean represented by the string or 0 on failure.
+**Returns**: the boolean represented by the string or 0 on failure.
 
 
 
@@ -2757,10 +2797,11 @@ actual `char`.
 \note Multi-byte chars and multi-char strings are not supported.
 
 
-Parameters:
+**Parameters:**
+
 charString The char string to convert.
 
-Returns: The string as a char or 0 on failure.
+**Returns**: The string as a char or 0 on failure.
 
 
 
@@ -2804,11 +2845,13 @@ By default, a relative path is returned. Users requiring absolute paths for
 be returned.
 
 
-Parameters:
+**Parameters:**
+
 path The path to make relative to the data/ folder.
+
 absolute Set to true to return an absolute path.
 
-Returns: the new path, unless paths were disabled with ofDisableDataPath().
+**Returns**: the new path, unless paths were disabled with ofDisableDataPath().
 
 
 
@@ -2851,10 +2894,11 @@ Converts a std::string representation of a double (e.g., `"3.14"`) to an
 actual `double`.
 
 
-Parameters:
+**Parameters:**
+
 doubleString The string representation of the double.
 
-Returns: the double represented by the string or 0 on failure.
+**Returns**: the double represented by the string or 0 on failure.
 
 
 
@@ -2895,10 +2939,11 @@ Converts a std::string representation of a float (e.g., `"3.14"`) to an
 actual `float`.
 
 
-Parameters:
+**Parameters:**
+
 floatString string representation of the float.
 
-Returns: the float represented by the string or 0 on failure.
+**Returns**: the float represented by the string or 0 on failure.
 
 
 
@@ -2940,10 +2985,11 @@ memory.
 
 \tparam T The data type of the value to convert to a hexadecimal string.
 
-Parameters:
+**Parameters:**
+
 value The value to convert to a hexadecimal string.
 
-Returns: the hexadecimal string representation of the value.
+**Returns**: the hexadecimal string representation of the value.
 
 
 
@@ -2984,10 +3030,11 @@ Converts a string (e.g., `"abc"`) to its equivalent hexadecimal
 representation (e.g., `"616263"`).
 
 
-Parameters:
+**Parameters:**
+
 value The value to convert to a hexadecimal string.
 
-Returns: a hexadecimal string.
+**Returns**: a hexadecimal string.
 
 
 
@@ -3028,10 +3075,11 @@ Converts a string (e.g., `"abc"`) to its equivalent hexadecimal
 representation (e.g., `"616263"`).
 
 
-Parameters:
+**Parameters:**
+
 value The value to convert to a hexadecimal string.
 
-Returns: a hexadecimal string.
+**Returns**: a hexadecimal string.
 
 
 
@@ -3073,10 +3121,11 @@ Converts a `std::string` representation of an int (e.g., `"3"`) to an actual
 `int`.
 
 
-Parameters:
+**Parameters:**
+
 intString The string representation of the integer.
 
-Returns: the integer represented by the string or 0 on failure.
+**Returns**: the integer represented by the string or 0 on failure.
 
 
 
@@ -3117,10 +3166,11 @@ Converts a `std::string` representation of a long integer
 (e.g., `"9223372036854775807"`) to an actual `int64_t`.
 
 
-Parameters:
+**Parameters:**
+
 intString The string representation of the long integer.
 
-Returns: the long integer represented by the string or 0 on failure.
+**Returns**: the long integer represented by the string or 0 on failure.
 
 
 
@@ -3167,10 +3217,11 @@ Resulting strings will be returned as UTF-8 encoded multi-byte strings.
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 src The UTF-8 encoded string to convert to lowercase.
 
-Returns: the UTF-8 encoded string as all lowercase characters.
+**Returns**: the UTF-8 encoded string as all lowercase characters.
 
 
 
@@ -3220,10 +3271,11 @@ Example:
 
 \tparam T The data type of the value to convert to a string.
 
-Parameters:
+**Parameters:**
+
 value The value to convert to a string.
 
-Returns: A string representing the value or an empty string on failure.
+**Returns**: A string representing the value or an empty string on failure.
 
 
 
@@ -3264,11 +3316,113 @@ Like sprintf "%4f" format, in this example precision=4
 
 \tparam T The data type of the value to convert to a string.
 
-Parameters:
+**Parameters:**
+
 value The value to convert to a string.
+
 precision The precision to use when converting to a string.
 
-Returns: The string representation of the value.
+**Returns**: The string representation of the value.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofToString(&value, precision, width, fill)
+
+<!--
+_syntax: ofToString(&value, precision, width, fill)_
+_name: ofToString_
+_returns: string_
+_returns_description: _
+_parameters: const T &value, int precision, int width, char fill_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Convert a value to a string with a specific precision, width and filll
+
+Like sprintf "%04.2d" or "%04.2f" format, in this example precision=2, width=4, fill='0'
+
+\tparam T The data type of the value to convert to a string.
+
+**Parameters:**
+
+value The value to convert to a string.
+
+precision The precision to use when converting to a string.
+
+width The width of the value to use when converting to a string.
+
+fill The character to use when padding the converted string.
+
+**Returns**: The string representation of the value.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofToString(&value, width, fill)
+
+<!--
+_syntax: ofToString(&value, width, fill)_
+_name: ofToString_
+_returns: string_
+_returns_description: _
+_parameters: const T &value, int width, char fill_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Convert a value to a string with a specific width and fill
+
+Like sprintf "% 4d" or "% 4f" format, in this example width=4, fill=' '
+
+\tparam T The data type of the value to convert to a string.
+
+**Parameters:**
+
+value The value to convert to a string.
+
+width The width of the value to use when converting to a string.
+
+fill The character to use when padding the converted string.
+
+**Returns**: The string representation of the value.
 
 
 
@@ -3310,10 +3464,11 @@ as a comma-delimited string.
 
 \tparam T The data type held by the vector.
 
-Parameters:
+**Parameters:**
+
 values The vector of values to be converted to a string.
 
-Returns: a comma-delimited string representation of the intput values.
+**Returns**: a comma-delimited string representation of the intput values.
 
 
 
@@ -3329,99 +3484,6 @@ vec.push_back(2);
 vec.push_back(3);
 cout << ofToString(vec) << endl; // prints "{1, 2, 3}"
 ~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofToString(&value, width, fill)
-
-<!--
-_syntax: ofToString(&value, width, fill)_
-_name: ofToString_
-_returns: string_
-_returns_description: _
-_parameters: const T &value, int width, char fill_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Convert a value to a string with a specific width and fill
-
-Like sprintf "% 4d" or "% 4f" format, in this example width=4, fill=' '
-
-\tparam T The data type of the value to convert to a string.
-
-Parameters:
-value The value to convert to a string.
-width The width of the value to use when converting to a string.
-fill The character to use when padding the converted string.
-
-Returns: The string representation of the value.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofToString(&value, precision, width, fill)
-
-<!--
-_syntax: ofToString(&value, precision, width, fill)_
-_name: ofToString_
-_returns: string_
-_returns_description: _
-_parameters: const T &value, int precision, int width, char fill_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Convert a value to a string with a specific precision, width and filll
-
-Like sprintf "%04.2d" or "%04.2f" format, in this example precision=2, width=4, fill='0'
-
-\tparam T The data type of the value to convert to a string.
-
-Parameters:
-value The value to convert to a string.
-precision The precision to use when converting to a string.
-width The width of the value to use when converting to a string.
-fill The character to use when padding the converted string.
-
-Returns: The string representation of the value.
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -3460,10 +3522,11 @@ Resulting strings will be returned as UTF-8 encoded multi-byte strings.
 ~~~~
 
 
-Parameters:
+**Parameters:**
+
 src The UTF-8 encoded string to convert to uppercase.
 
-Returns: the UTF-8 encoded string as all uppercase characters.
+**Returns**: the UTF-8 encoded string as all uppercase characters.
 
 
 
@@ -3821,10 +3884,11 @@ _inlined_description: _
 
 Convert a variable length argument to a string.
 
-Parameters:
+**Parameters:**
+
 format a printf-style format string.
 
-Returns: A string representation of the argument list.
+**Returns**: A string representation of the argument list.
 
 
 
@@ -3861,11 +3925,13 @@ _inlined_description: _
 
 Convert a variable length argument to a string.
 
-Parameters:
+**Parameters:**
+
 format A printf-style format string.
+
 args A variable argument list.
 
-Returns: A string representation of the argument list.
+**Returns**: A string representation of the argument list.
 
 
 

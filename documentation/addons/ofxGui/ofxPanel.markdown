@@ -133,14 +133,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxPanel()
+### ofxPanel(&parameters, &filename, x, y)
 
 <!--
-_syntax: ofxPanel()_
+_syntax: ofxPanel(&parameters, &filename, x, y)_
 _name: ofxPanel_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofParameterGroup &parameters, const string &filename, float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -169,14 +169,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxPanel(&parameters, &filename, x, y)
+### ofxPanel()
 
 <!--
-_syntax: ofxPanel(&parameters, &filename, x, y)_
+_syntax: ofxPanel()_
 _name: ofxPanel_
 _returns: _
 _returns_description: _
-_parameters: const ofParameterGroup &parameters, const string &filename, float x, float y_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _

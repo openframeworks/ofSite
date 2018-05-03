@@ -573,14 +573,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(width, height, depth, resWidth, resHeight, resDepth)
+###void set(size)
 
 <!--
-_syntax: set(width, height, depth, resWidth, resHeight, resDepth)_
+_syntax: set(size)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float width, float height, float depth, int resWidth, int resHeight, int resDepth_
+_parameters: float size_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -645,14 +645,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(size)
+###void set(width, height, depth, resWidth, resHeight, resDepth)
 
 <!--
-_syntax: set(size)_
+_syntax: set(width, height, depth, resWidth, resHeight, resDepth)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float size_
+_parameters: float width, float height, float depth, int resWidth, int resHeight, int resDepth_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

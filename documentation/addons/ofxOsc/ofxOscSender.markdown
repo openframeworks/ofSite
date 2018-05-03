@@ -351,16 +351,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscSender()
+### ofxOscSender(&mom)
 
 <!--
-_syntax: ofxOscSender()_
+_syntax: ofxOscSender(&mom)_
 _name: ofxOscSender_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofxOscSender &mom_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -387,16 +387,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscSender(&mom)
+### ofxOscSender()
 
 <!--
-_syntax: ofxOscSender(&mom)_
+_syntax: ofxOscSender()_
 _name: ofxOscSender_
 _returns: _
 _returns_description: _
-_parameters: const ofxOscSender &mom_
+_parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -627,7 +627,7 @@ _inlined_description: _
 
 set up the sender with the given settings
 
-Returns: true on success
+**Returns**: true on success
 
 
 

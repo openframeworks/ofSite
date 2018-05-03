@@ -683,16 +683,52 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofParameter()
+### ofParameter(&name, &v)
 
 <!--
-_syntax: ofParameter()_
+_syntax: ofParameter(&name, &v)_
 _name: ofParameter_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const string &name, const ParameterType &v_
 _access: public_
 _version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofParameter(&name, &v, &min, &max)
+
+<!--
+_syntax: ofParameter(&name, &v, &min, &max)_
+_name: ofParameter_
+_returns: _
+_returns_description: _
+_parameters: const string &name, const ParameterType &v, const ParameterType &min, const ParameterType &max_
+_access: public_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -791,52 +827,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofParameter(&name, &v)
+### ofParameter()
 
 <!--
-_syntax: ofParameter(&name, &v)_
+_syntax: ofParameter()_
 _name: ofParameter_
 _returns: _
 _returns_description: _
-_parameters: const string &name, const ParameterType &v_
+_parameters: _
 _access: public_
 _version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofParameter(&name, &v, &min, &max)
-
-<!--
-_syntax: ofParameter(&name, &v, &min, &max)_
-_name: ofParameter_
-_returns: _
-_returns_description: _
-_parameters: const string &name, const ParameterType &v, const ParameterType &min, const ParameterType &max_
-_access: public_
-_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -971,14 +971,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ParameterType operator++(v)
+###ofParameter< ParameterType > & operator++()
 
 <!--
-_syntax: operator++(v)_
+_syntax: operator++()_
 _name: operator++_
-_returns: ParameterType_
+_returns: ofParameter< ParameterType > &_
 _returns_description: _
-_parameters: int v_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1007,14 +1007,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ParameterType > & operator++()
+###ParameterType operator++(v)
 
 <!--
-_syntax: operator++()_
+_syntax: operator++(v)_
 _name: operator++_
-_returns: ofParameter< ParameterType > &_
+_returns: ParameterType_
 _returns_description: _
-_parameters: _
+_parameters: int v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1079,14 +1079,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ParameterType operator--(v)
+###ofParameter< ParameterType > & operator--()
 
 <!--
-_syntax: operator--(v)_
+_syntax: operator--()_
 _name: operator--_
-_returns: ParameterType_
+_returns: ofParameter< ParameterType > &_
 _returns_description: _
-_parameters: int v_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1115,14 +1115,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ParameterType > & operator--()
+###ParameterType operator--(v)
 
 <!--
-_syntax: operator--()_
+_syntax: operator--(v)_
 _name: operator--_
-_returns: ofParameter< ParameterType > &_
+_returns: ParameterType_
 _returns_description: _
-_parameters: _
+_parameters: int v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1511,42 +1511,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ParameterType > & set(&v)
-
-<!--
-_syntax: set(&v)_
-_name: set_
-_returns: ofParameter< ParameterType > &_
-_returns_description: _
-_parameters: const ParameterType &v_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofParameter< ParameterType > & set(&name, &v)
 
 <!--
@@ -1591,6 +1555,42 @@ _name: set_
 _returns: ofParameter< ParameterType > &_
 _returns_description: _
 _parameters: const string &name, const ParameterType &v, const ParameterType &min, const ParameterType &max_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofParameter< ParameterType > & set(&v)
+
+<!--
+_syntax: set(&v)_
+_name: set_
+_returns: ofParameter< ParameterType > &_
+_returns_description: _
+_parameters: const ParameterType &v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

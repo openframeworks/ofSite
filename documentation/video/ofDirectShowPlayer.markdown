@@ -745,16 +745,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofDirectShowPlayer()
+### ofDirectShowPlayer(&&)
 
 <!--
-_syntax: ofDirectShowPlayer()_
+_syntax: ofDirectShowPlayer(&&)_
 _name: ofDirectShowPlayer_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: ofDirectShowPlayer &&_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -817,12 +817,48 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofDirectShowPlayer(&&)
+### ofDirectShowPlayer()
 
 <!--
-_syntax: ofDirectShowPlayer(&&)_
+_syntax: ofDirectShowPlayer()_
 _name: ofDirectShowPlayer_
 _returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofDirectShowPlayer & operator=(&&)
+
+<!--
+_syntax: operator=(&&)_
+_name: operator=_
+_returns: ofDirectShowPlayer &_
 _returns_description: _
 _parameters: ofDirectShowPlayer &&_
 _access: public_
@@ -861,42 +897,6 @@ _name: operator=_
 _returns: ofDirectShowPlayer &_
 _returns_description: _
 _parameters: const ofDirectShowPlayer &_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofDirectShowPlayer & operator=(&&)
-
-<!--
-_syntax: operator=(&&)_
-_name: operator=_
-_returns: ofDirectShowPlayer &_
-_returns_description: _
-_parameters: ofDirectShowPlayer &&_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

@@ -82,42 +82,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofTessellator()
-
-<!--
-_syntax: ofTessellator()_
-_name: ofTessellator_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofTessellator(&mom)
 
 <!--
@@ -147,6 +111,42 @@ Copy constructor to copy properties from one tessellator to another.
 _description: _
 
 Copy constructor to copy properties from one tessellator to another. 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofTessellator()
+
+<!--
+_syntax: ofTessellator()_
+_name: ofTessellator_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -190,14 +190,14 @@ Operator overloading to copy properties from one tessellator to another.
 
 <!----------------------------------------------------------------------------->
 
-###void performTessellation(polyWindingMode, &dstpoly, bIs2D)
+###void performTessellation(polyWindingMode, &dstmesh, bIs2D)
 
 <!--
-_syntax: performTessellation(polyWindingMode, &dstpoly, bIs2D)_
+_syntax: performTessellation(polyWindingMode, &dstmesh, bIs2D)_
 _name: performTessellation_
 _returns: void_
 _returns_description: _
-_parameters: ofPolyWindingMode polyWindingMode, int &dstpoly, bool bIs2D_
+_parameters: ofPolyWindingMode polyWindingMode, ofMesh &dstmesh, bool bIs2D_
 _access: private_
 _version_started: 007_
 _version_deprecated: _
@@ -226,14 +226,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void performTessellation(polyWindingMode, &dstmesh, bIs2D)
+###void performTessellation(polyWindingMode, &dstpoly, bIs2D)
 
 <!--
-_syntax: performTessellation(polyWindingMode, &dstmesh, bIs2D)_
+_syntax: performTessellation(polyWindingMode, &dstpoly, bIs2D)_
 _name: performTessellation_
 _returns: void_
 _returns_description: _
-_parameters: ofPolyWindingMode polyWindingMode, ofMesh &dstmesh, bool bIs2D_
+_parameters: ofPolyWindingMode polyWindingMode, int &dstpoly, bool bIs2D_
 _access: private_
 _version_started: 007_
 _version_deprecated: _

@@ -278,42 +278,6 @@ Returns whether the client is currently connected to a server.
 
 <!----------------------------------------------------------------------------->
 
-### ofxTCPClient()
-
-<!--
-_syntax: ofxTCPClient()_
-_name: ofxTCPClient_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Constructor. This doesn't prepare your client to send and receive information though, you need to call the setup() method for that.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofxTCPClient(&mom)
 
 <!--
@@ -343,6 +307,42 @@ _inlined_description: _
 _description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofxTCPClient()
+
+<!--
+_syntax: ofxTCPClient()_
+_name: ofxTCPClient_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Constructor. This doesn't prepare your client to send and receive information though, you need to call the setup() method for that.
 
 
 
@@ -848,6 +848,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool setup(&settings)
+
+<!--
+_syntax: setup(&settings)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: const ofxTCPSettings &settings_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool setup(ip, _port, blocking = false)
 
 <!--
@@ -883,42 +919,6 @@ tcpClient.setup("127.0.0.1", 11999);
 ~~~~
 
 It returns whether the connection has successfully been made. Don't mistake this for a URI or URL, it comes before that, where the connection is made so that files or data streams can be requested.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setup(&settings)
-
-<!--
-_syntax: setup(&settings)_
-_name: setup_
-_returns: bool_
-_returns_description: _
-_parameters: const ofxTCPSettings &settings_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
 
 
 

@@ -32,7 +32,7 @@ Some platforms (iOS, for example) will expose additional platform-specific
 sound stream functionality. See the platform-specific examples for demos.
 
 
-Warning: Be aware that audioIn() and audioOut() will be called on a different
+**Warning**: Be aware that audioIn() and audioOut() will be called on a different
 thread from your app's update() / draw() thread.
 
 

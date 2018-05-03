@@ -73,9 +73,12 @@ _inlined_description: _
 
 Allocates space for pixel data
 
-Parameters:
+**Parameters:**
+
 w Width of pixel array
+
 h Height of pixel array
+
 channels Number of channels per pixel
 
 
@@ -85,6 +88,63 @@ channels Number of channels per pixel
 _description: _
 
 Allocates space for pixel data of the given width (w), height (h) and number of channels (channels). If an ofImageType or ofPixelFormat is passed in, it will allocate based on the required number of channels.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(w, h, imageType)
+
+<!--
+_syntax: allocate(w, h, imageType)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: size_t w, size_t h, ofImageType imageType_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Allocates space for pixel data
+
+The imageType can be one of the following:
+
+    OF_IMAGE_GRAYSCALE
+    OF_IMAGE_COLOR
+    OF_IMAGE_COLOR_ALPHA
+
+
+**Parameters:**
+
+w Width of pixel array
+
+h Height of pixel array
+
+imageType ofImageType defining number of channels per pixel
+
+
+
+
+
+_description: _
+
+ofImageType:
+
+	OF_IMAGE_GRAYSCALE
+
+	OF_IMAGE_COLOR
+
+	OF_IMAGE_COLOR_ALPHA
 
 
 
@@ -122,9 +182,12 @@ The pixelFormat can be one of the following:
     OF_PIXELS_MONO
 
 
-Parameters:
+**Parameters:**
+
 w Width of pixel array
+
 h Height of pixel array
+
 pixelFormat ofPixelFormat defining number of channels per pixel
 
 
@@ -142,60 +205,6 @@ ofPixelFormat:
 	OF_PIXELS_BGRA
 
 	OF_PIXELS_MONO
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void allocate(w, h, imageType)
-
-<!--
-_syntax: allocate(w, h, imageType)_
-_name: allocate_
-_returns: void_
-_returns_description: _
-_parameters: size_t w, size_t h, ofImageType imageType_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Allocates space for pixel data
-
-The imageType can be one of the following:
-
-    OF_IMAGE_GRAYSCALE
-    OF_IMAGE_COLOR
-    OF_IMAGE_COLOR_ALPHA
-
-
-Parameters:
-w Width of pixel array
-h Height of pixel array
-imageType ofImageType defining number of channels per pixel
-
-
-
-
-
-_description: _
-
-ofImageType:
-
-	OF_IMAGE_GRAYSCALE
-
-	OF_IMAGE_COLOR
-
-	OF_IMAGE_COLOR_ALPHA
 
 
 
@@ -895,6 +904,42 @@ This returns a single channel, for instance, the Red pixel values, from the ofPi
 
 <!----------------------------------------------------------------------------->
 
+###ofColor_< PixelType > getColor(index)
+
+<!--
+_syntax: getColor(index)_
+_name: getColor_
+_returns: ofColor_< PixelType >_
+_returns_description: _
+_parameters: size_t index_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get the color at a specific index
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofColor_< PixelType > getColor(x, y)
 
 <!--
@@ -927,42 +972,6 @@ This method returns the ofColor that the pixels contains at an x, y pair:
 ~~~~{.cpp}
 ofColor c = pix.getColor(mouseX, mouseY);
 ~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofColor_< PixelType > getColor(index)
-
-<!--
-_syntax: getColor(index)_
-_name: getColor_
-_returns: ofColor_< PixelType >_
-_returns_description: _
-_parameters: size_t index_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get the color at a specific index
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -1137,7 +1146,7 @@ _inlined_description: _
 Retrieves pixel data from the ofPixel object.
 
 
-Returns: A raw pointer to the pixel data.
+**Returns**: A raw pointer to the pixel data.
 
 
 
@@ -1247,7 +1256,7 @@ _inlined_description: _
 
 Get the type of the image
 
-Returns: One of the following types: `OF_IMAGE_GRAYSCALE`,
+**Returns**: One of the following types: `OF_IMAGE_GRAYSCALE`,
 `OF_IMAGE_COLOR`, `OF_IMAGE_COLOR_ALPHA`
 
 
@@ -1733,8 +1742,10 @@ _inlined_description: _
 
 Mirror the pixels across the vertical and/or horizontal axis.
 
-Parameters:
+**Parameters:**
+
 vertically Set to true to mirror vertically
+
 horizontal Set to true to mirror horizontal
 
 
@@ -1761,79 +1772,6 @@ _returns_description: _
 _parameters: ofPixels_< PixelType > &dst, bool vertically, bool horizontal_
 _access: public_
 _version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofPixels_()
-
-<!--
-_syntax: ofPixels_()_
-_name: ofPixels__
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-\name Construction And Allocation
-\{
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofPixels_(&mom)
-
-<!--
-_syntax: ofPixels_(&mom)_
-_name: ofPixels__
-_returns: _
-_returns_description: _
-_parameters: const ofPixels_< PixelType > &mom_
-_access: public_
-_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1903,9 +1841,118 @@ _syntax: ofPixels_(&mom)_
 _name: ofPixels__
 _returns: _
 _returns_description: _
+_parameters: const ofPixels_< PixelType > &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_(&mom)
+
+<!--
+_syntax: ofPixels_(&mom)_
+_name: ofPixels__
+_returns: _
+_returns_description: _
 _parameters: const ofPixels_< SrcType > &mom_
 _access: public_
 _version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofPixels_()
+
+<!--
+_syntax: ofPixels_()_
+_name: ofPixels__
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\name Construction And Allocation
+\{
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofPixels_< PixelType > & operator=(&&mom)
+
+<!--
+_syntax: operator=(&&mom)_
+_name: operator=_
+_returns: ofPixels_< PixelType > &_
+_returns_description: _
+_parameters: ofPixels_< PixelType > &&mom_
+_access: public_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1942,42 +1989,6 @@ _returns_description: _
 _parameters: const ofPixels_< PixelType > &mom_
 _access: public_
 _version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofPixels_< PixelType > & operator=(&&mom)
-
-<!--
-_syntax: operator=(&&mom)_
-_name: operator=_
-_returns: ofPixels_< PixelType > &_
-_returns_description: _
-_parameters: ofPixels_< PixelType > &&mom_
-_access: public_
-_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2505,6 +2516,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void set(channel, val)
+
+<!--
+_syntax: set(channel, val)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: size_t channel, PixelType val_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void set(val)
 
 <!--
@@ -2528,42 +2575,6 @@ _inlined_description: _
 \}
 \name Set Pixel Data
 \{
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(channel, val)
-
-<!--
-_syntax: set(channel, val)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: size_t channel, PixelType val_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 
@@ -2617,16 +2628,16 @@ This sets all the pixel data for a single channel, for instance, the Red pixel v
 
 <!----------------------------------------------------------------------------->
 
-###void setColor(x, y, &color)
+###void setColor(&color)
 
 <!--
-_syntax: setColor(x, y, &color)_
+_syntax: setColor(&color)_
 _name: setColor_
 _returns: void_
 _returns_description: _
-_parameters: size_t x, size_t y, const ofColor_< PixelType > &color_
+_parameters: const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 007_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2637,7 +2648,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the color of the pixel at the x,y location
+Set the color of all pixels
 
 
 
@@ -2645,7 +2656,7 @@ Set the color of the pixel at the x,y location
 
 _description: _
 
-Sets the color of the pixel at the x,y location.
+
 
 
 
@@ -2689,16 +2700,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setColor(&color)
+###void setColor(x, y, &color)
 
 <!--
-_syntax: setColor(&color)_
+_syntax: setColor(x, y, &color)_
 _name: setColor_
 _returns: void_
 _returns_description: _
-_parameters: const ofColor_< PixelType > &color_
+_parameters: size_t x, size_t y, const ofColor_< PixelType > &color_
 _access: public_
-_version_started: 0073_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2709,7 +2720,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the color of all pixels
+Set the color of the pixel at the x,y location
 
 
 
@@ -2717,7 +2728,7 @@ Set the color of all pixels
 
 _description: _
 
-
+Sets the color of the pixel at the x,y location.
 
 
 
@@ -3036,7 +3047,8 @@ _inlined_description: _
 Changes the image type for the ofPixels object
 
 
-Parameters:
+**Parameters:**
+
 imageType Can be one of the following: OF_IMAGE_GRAYSCALE, OF_IMAGE_COLOR, OF_IMAGE_COLOR_ALPHA
 
 

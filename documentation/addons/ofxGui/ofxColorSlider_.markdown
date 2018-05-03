@@ -313,14 +313,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxColorSlider_< ColorType > * setup(value, width, height)
+###ofxColorSlider_< ColorType > * setup(&controlName, &value, &min, &max, width, height)
 
 <!--
-_syntax: setup(value, width, height)_
+_syntax: setup(&controlName, &value, &min, &max, width, height)_
 _name: setup_
 _returns: ofxColorSlider_< ColorType > *_
 _returns_description: _
-_parameters: ofParameter<ofColor_< ColorType>  > value, float width, float height_
+_parameters: const string &controlName, const ofColor_< ColorType > &value, const ofColor_< ColorType > &min, const ofColor_< ColorType > &max, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -349,14 +349,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxColorSlider_< ColorType > * setup(&controlName, &value, &min, &max, width, height)
+###ofxColorSlider_< ColorType > * setup(value, width, height)
 
 <!--
-_syntax: setup(&controlName, &value, &min, &max, width, height)_
+_syntax: setup(value, width, height)_
 _name: setup_
 _returns: ofxColorSlider_< ColorType > *_
 _returns_description: _
-_parameters: const string &controlName, const ofColor_< ColorType > &value, const ofColor_< ColorType > &min, const ofColor_< ColorType > &max, float width, float height_
+_parameters: ofParameter<ofColor_< ColorType>  > value, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _

@@ -34,14 +34,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+provides Vector3 * Matrix multiplication. Vectors are implicitly treated as row-matrices.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -70,14 +69,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+provides Vector4 * Matrix multiplication. Vectors are implicitly treated as row-matrices.
 
 
 
 
 
 _description: _
-
 
 
 
@@ -106,14 +104,13 @@ _advanced: False_
 
 _inlined_description: _
 
-
+\cond INTERNAL
 
 
 
 
 
 _description: _
-
 
 
 
@@ -149,7 +146,6 @@ _inlined_description: _
 
 
 _description: _
-
 
 
 

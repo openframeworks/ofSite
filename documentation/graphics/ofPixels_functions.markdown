@@ -15,6 +15,41 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
+###string ofToString(&pixelType)
+
+<!--
+_syntax: ofToString(&pixelType)_
+_name: ofToString_
+_returns: string_
+_returns_description: _
+_parameters: const ofPixelFormat &pixelType_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###string ofToString(&v)
 
 <!--
@@ -49,45 +84,11 @@ Example:
 
 \tparam T The data type of the value to convert to a string.
 
-Parameters:
+**Parameters:**
+
 value The value to convert to a string.
 
-Returns: A string representing the value or an empty string on failure.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string ofToString(&pixelType)
-
-<!--
-_syntax: ofToString(&pixelType)_
-_name: ofToString_
-_returns: string_
-_returns_description: _
-_parameters: const ofPixelFormat &pixelType_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
+**Returns**: A string representing the value or an empty string on failure.
 
 
 

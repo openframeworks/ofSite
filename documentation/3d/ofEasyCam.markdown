@@ -463,7 +463,7 @@ _inlined_description: _
 
 Get the distance to the target.
 
-Returns: the distance to the target.
+**Returns**: the distance to the target.
 
 
 
@@ -501,7 +501,7 @@ _inlined_description: _
 
 Get the camera's drag coefficient.
 
-Returns: the camera's drag coefficient.
+**Returns**: the camera's drag coefficient.
 
 
 
@@ -576,7 +576,7 @@ _inlined_description: _
 Determine if mouse camera control is enabled.
 \todo Rename to isMouseInputEnabled().
 
-Returns: true iff mouse camera control is enabled.
+**Returns**: true iff mouse camera control is enabled.
 
 
 
@@ -615,7 +615,7 @@ _inlined_description: _
 Determine if the middle mouse button is enabled.
 \todo Rename to isMouseMiddleButtonEnabled().
 
-Returns: true iff the mouse's middle button is enabled.
+**Returns**: true iff the mouse's middle button is enabled.
 
 
 
@@ -690,7 +690,7 @@ _inlined_description: _
 
 Get the camera's target node reference.
 
-Returns: a reference the the camera's target node.
+**Returns**: a reference the the camera's target node.
 
 
 
@@ -728,7 +728,7 @@ _inlined_description: _
 
 Get the current translation key code.
 
-Returns: the current translation key code.
+**Returns**: the current translation key code.
 
 
 
@@ -780,14 +780,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool hasInteraction(type, mouseButton, key)
+###bool hasInteraction(mouseButton, key)
 
 <!--
-_syntax: hasInteraction(type, mouseButton, key)_
+_syntax: hasInteraction(mouseButton, key)_
 _name: hasInteraction_
 _returns: bool_
 _returns_description: _
-_parameters: ofEasyCam::TransformType type, int mouseButton, int key_
+_parameters: int mouseButton, int key_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -816,14 +816,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool hasInteraction(mouseButton, key)
+###bool hasInteraction(type, mouseButton, key)
 
 <!--
-_syntax: hasInteraction(mouseButton, key)_
+_syntax: hasInteraction(type, mouseButton, key)_
 _name: hasInteraction_
 _returns: bool_
 _returns_description: _
-_parameters: int mouseButton, int key_
+_parameters: ofEasyCam::TransformType type, int mouseButton, int key_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1130,7 +1130,8 @@ Allow the camera to attempt to set the distance based on the camera's
 current viewpoirt.
 
 
-Parameters:
+**Parameters:**
+
 bAutoDistance true to enable auto distance.
 
 
@@ -1206,7 +1207,8 @@ _inlined_description: _
 
 Set the camera's distance to the target.
 
-Parameters:
+**Parameters:**
+
 distance The distance to the target.
 
 
@@ -1285,7 +1287,8 @@ Drag is affects how quickly the camera starts up and slows down when
 a user interacts with its position using a pointer.
 
 
-Parameters:
+**Parameters:**
+
 drag The normalized coefficient value between 0 and 1.
 
 
@@ -1378,49 +1381,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setRotationSensitivity(x, y, z)
-
-<!--
-_syntax: setRotationSensitivity(x, y, z)_
-_name: setRotationSensitivity_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the input sensitivity of the rotation.
-X and Y axes - when the value is 1.0, moving the mouse from one side to
-the other of the arcball (min(viewport.width, viewport.height)) will
-rotate 180 degrees. When the value is 0.5, the rotation will be 90
-degrees.
-
-Parameters:
-value Scales the xyz axes rotation factor by these values.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setRotationSensitivity(&sensitivity)
 
 <!--
@@ -1457,16 +1417,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setTarget(&target)
+###void setRotationSensitivity(x, y, z)
 
 <!--
-_syntax: setTarget(&target)_
-_name: setTarget_
+_syntax: setRotationSensitivity(x, y, z)_
+_name: setRotationSensitivity_
 _returns: void_
 _returns_description: _
-_parameters: ofNode &target_
+_parameters: float x, float y, float z_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1477,10 +1437,15 @@ _advanced: False_
 
 _inlined_description: _
 
-Set the camera's target.
+Set the input sensitivity of the rotation.
+X and Y axes - when the value is 1.0, moving the mouse from one side to
+the other of the arcball (min(viewport.width, viewport.height)) will
+rotate 180 degrees. When the value is 0.5, the rotation will be 90
+degrees.
 
-Parameters:
-target The position of the target.
+**Parameters:**
+
+value Scales the xyz axes rotation factor by these values.
 
 
 
@@ -1518,7 +1483,48 @@ _inlined_description: _
 
 Set the camera's target.
 
-Parameters:
+**Parameters:**
+
+target The position of the target.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setTarget(&target)
+
+<!--
+_syntax: setTarget(&target)_
+_name: setTarget_
+_returns: void_
+_returns_description: _
+_parameters: ofNode &target_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set the camera's target.
+
+**Parameters:**
+
 target The position of the target.
 
 
@@ -1560,9 +1566,46 @@ Set the key used to switch between camera rotation and translation.
 Translation will only happen when the translation key is pressed.
 
 
-Parameters:
+**Parameters:**
+
 key The key code for the translation key.
 \todo char is not the right data type for this. Should be int.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setTranslationSensitivity(&sensitivity)
+
+<!--
+_syntax: setTranslationSensitivity(&sensitivity)_
+_name: setTranslationSensitivity_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &sensitivity_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
 
 
 
@@ -1600,44 +1643,9 @@ _inlined_description: _
 
 Set the input sensitivity of the translation.
 
-Parameters:
+**Parameters:**
+
 value Scales the xyz axes translation factor by these values.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setTranslationSensitivity(&sensitivity)
-
-<!--
-_syntax: setTranslationSensitivity(&sensitivity)_
-_name: setTranslationSensitivity_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &sensitivity_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 

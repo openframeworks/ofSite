@@ -183,7 +183,8 @@ Sets the frequency in \p nanoseconds that events happen.
 The timer will begin calculating the events beginning the moment
 the function is called.
 
-Parameters:
+**Parameters:**
+
 nanoseconds The number of nanoseconds between events.
 
 

@@ -1921,42 +1921,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofVbo()
-
-<!--
-_syntax: ofVbo()_
-_name: ofVbo_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Simple constructor for the ofVbo. When the ofVbo is first created there are no vertices or normals within it.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofVbo(&mom)
 
 <!--
@@ -1992,6 +1956,42 @@ ofVbo v1;
 // filll v1;
 ofVbo v2(v1); // v2 now contains all of v1s properties in a separate VBO
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVbo()
+
+<!--
+_syntax: ofVbo()_
+_name: ofVbo_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Simple constructor for the ofVbo. When the ofVbo is first created there are no vertices or normals within it.
 
 
 
@@ -2189,6 +2189,44 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setColorData(*color0r, total, usage, stride = 0)
+
+<!--
+_syntax: setColorData(*color0r, total, usage, stride = 0)_
+_name: setColorData_
+_returns: void_
+_returns_description: _
+_parameters: const float *color0r, int total, int usage, int stride=0_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+This sets the color data for the ofVbo from a pointer to an array of floats. The colors are RGB and are floats from 0.f - 1.f
+
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setColorData(*colors, total, usage)
 
 <!--
@@ -2224,44 +2262,6 @@ ofFloatColor c[12];
 // fill in the colors and vertices
 vbo.setColorData( &c[0], 12, GL_STATIC_DRAW );
 ~~~~
-
-The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setColorData(*color0r, total, usage, stride = 0)
-
-<!--
-_syntax: setColorData(*color0r, total, usage, stride = 0)_
-_name: setColorData_
-_returns: void_
-_returns_description: _
-_parameters: const float *color0r, int total, int usage, int stride=0_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This sets the color data for the ofVbo from a pointer to an array of floats. The colors are RGB and are floats from 0.f - 1.f
 
 The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
@@ -2463,70 +2463,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setNormalData(*normals, total, usage)
-
-<!--
-_syntax: setNormalData(*normals, total, usage)_
-_name: setNormalData_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f *normals, int total, int usage_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This sets the normal data for the VBO from a pointer to an array of ofVec3f instances. The normals are calculated as the vector perpendicular to a face. The mathematical definition of a normal is shown on the left, while the way that a normal is calculated for a triangle is shown on the right.
-
-![vbo normals](vboNormals.png)
-
-One technique for calculating normals is something like the following:
-
-~~~~{.cpp}
-int* indices;
-ofVec3f* verts;
-ofVec3f* normals;
-// allocate and create normals, indices, and verts
-for ( int i = 0, int j = 0; i < NUM_INDICES; i+=3, j++) {
-    ofVec3f v[3] = { vertices[i], verts[(i+1)], verts[(i+2)] };
-    ofVec3f temp1 = v[1] - v[0];
-    ofVec3f temp2 = v[2] - v[0];
-    ofVec3f norm = temp1.getCrossed(temp2);
-
-      for (int j = 0; j < 3; ++j) {
-        Vector3 a = v[(i+1) % 3] - v[j];
-        Vector3 b = v[(j+2) % 3] - v[j];
-        float weight = acos(a.dot(b) / (a.length() * b.length()));
-        norm += weight * normal;
-    }
-
-    normals[j] = norm;
-}
-~~~~
-
-The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void setNormalData(*normal0x, total, usage, stride = 0)
 
 <!--
@@ -2601,6 +2537,70 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setNormalData(*normals, total, usage)
+
+<!--
+_syntax: setNormalData(*normals, total, usage)_
+_name: setNormalData_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec3f *normals, int total, int usage_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+This sets the normal data for the VBO from a pointer to an array of ofVec3f instances. The normals are calculated as the vector perpendicular to a face. The mathematical definition of a normal is shown on the left, while the way that a normal is calculated for a triangle is shown on the right.
+
+![vbo normals](vboNormals.png)
+
+One technique for calculating normals is something like the following:
+
+~~~~{.cpp}
+int* indices;
+ofVec3f* verts;
+ofVec3f* normals;
+// allocate and create normals, indices, and verts
+for ( int i = 0, int j = 0; i < NUM_INDICES; i+=3, j++) {
+    ofVec3f v[3] = { vertices[i], verts[(i+1)], verts[(i+2)] };
+    ofVec3f temp1 = v[1] - v[0];
+    ofVec3f temp2 = v[2] - v[0];
+    ofVec3f norm = temp1.getCrossed(temp2);
+
+      for (int j = 0; j < 3; ++j) {
+        Vector3 a = v[(i+1) % 3] - v[j];
+        Vector3 b = v[(j+2) % 3] - v[j];
+        float weight = acos(a.dot(b) / (a.length() * b.length()));
+        norm += weight * normal;
+    }
+
+    normals[j] = norm;
+}
+~~~~
+
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setTexCoordBuffer(&buffer, stride, offset = 0)
 
 <!--
@@ -2630,44 +2630,6 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setTexCoordData(*texCoords, total, usage)
-
-<!--
-_syntax: setTexCoordData(*texCoords, total, usage)_
-_name: setTexCoordData_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec2f *texCoords, int total, int usage_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This sets the texture coordinate data for the VBO from a pointer to an array of ofVec2f instances. Each ofVec2f represents the texture coordinate of a vertex. By default OF uses ARB coords, so you can use pixel coordinates rather than normalized UV coordinates.
-
-The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 
@@ -2749,6 +2711,44 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setTexCoordData(*texCoords, total, usage)
+
+<!--
+_syntax: setTexCoordData(*texCoords, total, usage)_
+_name: setTexCoordData_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec2f *texCoords, int total, int usage_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+This sets the texture coordinate data for the VBO from a pointer to an array of ofVec2f instances. Each ofVec2f represents the texture coordinate of a vertex. By default OF uses ARB coords, so you can use pixel coordinates rather than normalized UV coordinates.
+
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setVertexBuffer(&buffer, numCoords, stride, offset = 0)
 
 <!--
@@ -2778,82 +2778,6 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVertexData(*verts, total, usage)
-
-<!--
-_syntax: setVertexData(*verts, total, usage)_
-_name: setVertexData_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f *verts, int total, int usage_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This sets the vertex data for the ofVbo from a pointer to an array of ofVec3f instances. This creates a 3D vbo.
-
-The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVertexData(*verts, total, usage)
-
-<!--
-_syntax: setVertexData(*verts, total, usage)_
-_name: setVertexData_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec2f *verts, int total, int usage_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This sets the vertex data for the ofVbo from a pointer to an array of ofVec2f instances. This creates a 2D vbo.
-
-The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
 
 
 
@@ -2971,6 +2895,82 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setVertexData(*verts, total, usage)
+
+<!--
+_syntax: setVertexData(*verts, total, usage)_
+_name: setVertexData_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec3f *verts, int total, int usage_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+This sets the vertex data for the ofVbo from a pointer to an array of ofVec3f instances. This creates a 3D vbo.
+
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setVertexData(*verts, total, usage)
+
+<!--
+_syntax: setVertexData(*verts, total, usage)_
+_name: setVertexData_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec2f *verts, int total, int usage_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+This sets the vertex data for the ofVbo from a pointer to an array of ofVec2f instances. This creates a 2D vbo.
+
+The possible options for usage are: GL_STREAM_DRAW, GL_STREAM_READ, GL_STREAM_COPY, GL_STATIC_DRAW, GL_STATIC_READ, GL_STATIC_COPY, GL_DYNAMIC_DRAW, GL_DYNAMIC_READ, or GL_DYNAMIC_COPY
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void unbind()
 
 <!--
@@ -3043,42 +3043,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void updateColorData(*colors, total)
-
-<!--
-_syntax: updateColorData(*colors, total)_
-_name: updateColorData_
-_returns: void_
-_returns_description: _
-_parameters: const ofFloatColor *colors, int total_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-If the color data for each vertex of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertex colors at any time.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void updateColorData(*color0r, total)
 
 <!--
@@ -3108,6 +3072,42 @@ _inlined_description: _
 _description: _
 
 If the vertex colors of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the colors at any time using an array of floats.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateColorData(*colors, total)
+
+<!--
+_syntax: updateColorData(*colors, total)_
+_name: updateColorData_
+_returns: void_
+_returns_description: _
+_parameters: const ofFloatColor *colors, int total_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+If the color data for each vertex of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertex colors at any time.
 
 
 
@@ -3187,42 +3187,6 @@ Updates all the data within the VBO from the data in the ofMesh.
 
 <!----------------------------------------------------------------------------->
 
-###void updateNormalData(*normals, total)
-
-<!--
-_syntax: updateNormalData(*normals, total)_
-_name: updateNormalData_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f *normals, int total_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-If the normals of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the normals at any time.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void updateNormalData(*normal0x, total)
 
 <!--
@@ -3295,14 +3259,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void updateTexCoordData(*texCoords, total)
+###void updateNormalData(*normals, total)
 
 <!--
-_syntax: updateTexCoordData(*texCoords, total)_
-_name: updateTexCoordData_
+_syntax: updateNormalData(*normals, total)_
+_name: updateNormalData_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec2f *texCoords, int total_
+_parameters: const ofVec3f *normals, int total_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3323,7 +3287,7 @@ _inlined_description: _
 
 _description: _
 
-If the texture coordinates of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the texcoords at any time.
+If the normals of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the normals at any time.
 
 
 
@@ -3403,14 +3367,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void updateVertexData(*verts, total)
+###void updateTexCoordData(*texCoords, total)
 
 <!--
-_syntax: updateVertexData(*verts, total)_
-_name: updateVertexData_
+_syntax: updateTexCoordData(*texCoords, total)_
+_name: updateTexCoordData_
 _returns: void_
 _returns_description: _
-_parameters: const ofVec3f *verts, int total_
+_parameters: const ofVec2f *texCoords, int total_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3431,43 +3395,7 @@ _inlined_description: _
 
 _description: _
 
-If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertices at any time.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void updateVertexData(*verts, total)
-
-<!--
-_syntax: updateVertexData(*verts, total)_
-_name: updateVertexData_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec2f *verts, int total_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertices at any time.
+If the texture coordinates of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the texcoords at any time.
 
 
 
@@ -3576,6 +3504,78 @@ _inlined_description: _
 _description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateVertexData(*verts, total)
+
+<!--
+_syntax: updateVertexData(*verts, total)_
+_name: updateVertexData_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec3f *verts, int total_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertices at any time.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void updateVertexData(*verts, total)
+
+<!--
+_syntax: updateVertexData(*verts, total)_
+_name: updateVertexData_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec2f *verts, int total_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+If the vertices of the VBO have been declared as GL_DYNAMIC_DRAW, then you can update the vertices at any time.
 
 
 

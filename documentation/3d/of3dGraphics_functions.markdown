@@ -15,143 +15,6 @@ _advanced: False_
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawBox(x, y, z, width, height, depth)
-
-<!--
-_syntax: ofDrawBox(x, y, z, width, height, depth)_
-_name: ofDrawBox_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z, float width, float height, float depth_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a rectangular box with the specified dimensions, starting from the specified coordinates.
-
-A box is a rectangular solid: an extruded rectangle.
-It is drawn starting from a 3D reference coordinate.
-It has a width (in x), a height (in y), and a depth (in z).
-The box is drawn with the current color, e.g. set with ofSetColor().
-The box is drawn filled by default; change this with ofFill();
-
-
-Parameters:
-x The x-coordinate of the box's origin.
-y The y-coordinate of the box's origin.
-z The z-coordinate of the box's origin.
-width The width of the box.
-height The height of the box.
-depth The depth of the box.
-
-
-
-
-
-_description: _
-
-Draws a rectangular box with the specified dimensions, starting from the specified coordinates. 
-A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with ofSetColor(). The box is drawn filled by default; change this with ofFill();
-
-~~~~{.cpp}
-void ofApp::draw(){
-
-    //  Draw a red cuboid slightly off the center of the canvas so to see the 3d shape.
-
-    ofSetColor(255, 0, 0);
-    ofFill();
-    ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .7, 0, 200, 100, 200);
-
-    //NOTE: to better see the 3D shape you need to create a light spot...
-    //check `ofLight' documentation
-
-}
-
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofDrawBox(x, y, z, size)
-
-<!--
-_syntax: ofDrawBox(x, y, z, size)_
-_name: ofDrawBox_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z, float size_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a cube with the specified size, starting from the specified coordinates.
-
-A cube is a rectangular solid bounded by six square faces of equal size.
-It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid
-and a right rhombohedron. It is a regular square prism in three orientations.
-
-It is drawn starting from a 3D reference coordinate, with the specified size.
-The cube is drawn with the current color, e.g. set with ofSetColor().
-The cube is drawn filled by default; change this with ofFill();
-
-
-Parameters:
-x The x-coordinate of the cube's origin.
-y The y-coordinate of the cube's origin.
-z The z-coordinate of the cube's origin.
-size The size of the cube.
-
-
-
-
-
-_description: _
-
-Draws a cube with the specified size, starting from the specified coordinates. 
-
-A cube is a rectangular solid bounded by six square faces of equal size. It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid and a right rhombohedron. It is a regular square prism in three orientations.
-
-It is drawn starting from a 3D reference coordinate, with the specified size. The cube is drawn with the current color, e.g. set with ofSetColor(). The cube is drawn filled by default; change this with ofFill();
-
-~~~~{.cpp}
-void ofApp::draw(){
-
-    //  Draw a blue cube slightly off the center of the canvas so to see the 3d shape.
-    //(note that you cannot draw a rectangular cuboid with this function ... only a cube)
-    ofSetColor(0, 0, 255);
-    ofFill();
-    ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .7, 0, 200);
-
-    //NOTE: to better see the 3D shape you need to create a light spot...
-    //check `ofLight' documentation
-
-}
-
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofDrawBox(&position, size)
 
 <!--
@@ -178,8 +41,10 @@ The cube is drawn with the current color, e.g. set with ofSetColor().
 The cube is drawn filled by default; change this with ofFill();
 
 
-Parameters:
+**Parameters:**
+
 position an glm::vec3 which contains the (x,y,z) coordinates for the cube's reference corner.
+
 size The size of the cube.
 
 
@@ -240,10 +105,14 @@ The box is drawn with the current color, e.g. set with ofSetColor().
 The box is drawn filled by default; change this with ofFill();
 
 
-Parameters:
+**Parameters:**
+
 position an glm::vec3 which contains the (x,y,z) coordinates for the box's reference corner.
+
 width The width of the box.
+
 height The height of the box.
+
 depth The depth of the box.
 
 
@@ -303,7 +172,8 @@ The cube is drawn with the current color, e.g. set with ofSetColor().
 The cube is drawn filled by default; change this with ofFill();
 
 
-Parameters:
+**Parameters:**
+
 size The size of the cube.
 
 
@@ -364,9 +234,12 @@ The box is drawn with the current color, e.g. set with ofSetColor().
 The box is drawn filled by default; change this with ofFill();
 
 
-Parameters:
+**Parameters:**
+
 width The width of the box.
+
 height The height of the box.
+
 depth The depth of the box.
 
 
@@ -400,14 +273,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawCone(x, y, z, radius, height)
+###void ofDrawBox(x, y, z, size)
 
 <!--
-_syntax: ofDrawCone(x, y, z, radius, height)_
-_name: ofDrawCone_
+_syntax: ofDrawBox(x, y, z, size)_
+_name: ofDrawBox_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z, float radius, float height_
+_parameters: float x, float y, float z, float size_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -419,7 +292,26 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws a cube with the specified size, starting from the specified coordinates.
 
+A cube is a rectangular solid bounded by six square faces of equal size.
+It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid
+and a right rhombohedron. It is a regular square prism in three orientations.
+
+It is drawn starting from a 3D reference coordinate, with the specified size.
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();
+
+
+**Parameters:**
+
+x The x-coordinate of the cube's origin.
+
+y The y-coordinate of the cube's origin.
+
+z The z-coordinate of the cube's origin.
+
+size The size of the cube.
 
 
 
@@ -427,15 +319,20 @@ _inlined_description: _
 
 _description: _
 
-Draws a cone with specified radius and height starting from the specified position (x, y and z coordinates). The cone is drawn with the current color, e.g. set with ofSetColor(). The cone is drawn filled by default; change this with ofFill();
+Draws a cube with the specified size, starting from the specified coordinates. 
+
+A cube is a rectangular solid bounded by six square faces of equal size. It is also known as a regular hexahedron, a square parallelepiped, an equilateral cuboid and a right rhombohedron. It is a regular square prism in three orientations.
+
+It is drawn starting from a 3D reference coordinate, with the specified size. The cube is drawn with the current color, e.g. set with ofSetColor(). The cube is drawn filled by default; change this with ofFill();
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a red cone at the center of the canvas.
-    ofSetColor(255, 0, 0);
+    //  Draw a blue cube slightly off the center of the canvas so to see the 3d shape.
+    //(note that you cannot draw a rectangular cuboid with this function ... only a cube)
+    ofSetColor(0, 0, 255);
     ofFill();
-    ofDrawCone(ofGetWidth() * .5, ofGetHeight()* .5, 0, 200, 300);
+    ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .7, 0, 200);
 
     //NOTE: to better see the 3D shape you need to create a light spot...
     //check `ofLight' documentation
@@ -450,14 +347,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawCone(x, y, radius, height)
+###void ofDrawBox(x, y, z, width, height, depth)
 
 <!--
-_syntax: ofDrawCone(x, y, radius, height)_
-_name: ofDrawCone_
+_syntax: ofDrawBox(x, y, z, width, height, depth)_
+_name: ofDrawBox_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float radius, float height_
+_parameters: float x, float y, float z, float width, float height, float depth_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -469,7 +366,28 @@ _advanced: False_
 
 _inlined_description: _
 
+Draws a rectangular box with the specified dimensions, starting from the specified coordinates.
 
+A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from a 3D reference coordinate.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();
+
+
+**Parameters:**
+
+x The x-coordinate of the box's origin.
+
+y The y-coordinate of the box's origin.
+
+z The z-coordinate of the box's origin.
+
+width The width of the box.
+
+height The height of the box.
+
+depth The depth of the box.
 
 
 
@@ -477,15 +395,17 @@ _inlined_description: _
 
 _description: _
 
-Draws a cone with specified radius and height starting from the specified position (x and y coordinates). The cone is drawn with the current color, e.g. set with ofSetColor(). The cone is drawn filled by default; change this with ofFill();
+Draws a rectangular box with the specified dimensions, starting from the specified coordinates. 
+A box is a rectangular solid: an extruded rectangle. It is drawn starting from a 3D reference coordinate. It has a width (in x), a height (in y), and a depth (in z). The box is drawn with the current color, e.g. set with ofSetColor(). The box is drawn filled by default; change this with ofFill();
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a red cone at the center of the canvas.
+    //  Draw a red cuboid slightly off the center of the canvas so to see the 3d shape.
+
     ofSetColor(255, 0, 0);
     ofFill();
-    ofDrawCone(ofGetWidth() * .5, ofGetHeight()* .5, 200, 300);
+    ofDrawBox(ofGetWidth() * .5, ofGetHeight() * .7, 0, 200, 100, 200);
 
     //NOTE: to better see the 3D shape you need to create a light spot...
     //check `ofLight' documentation
@@ -600,11 +520,11 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawCylinder(x, y, radius, height)
+###void ofDrawCone(x, y, radius, height)
 
 <!--
-_syntax: ofDrawCylinder(x, y, radius, height)_
-_name: ofDrawCylinder_
+_syntax: ofDrawCone(x, y, radius, height)_
+_name: ofDrawCone_
 _returns: void_
 _returns_description: _
 _parameters: float x, float y, float radius, float height_
@@ -627,15 +547,15 @@ _inlined_description: _
 
 _description: _
 
-Draws a cylinder with specified radius and height starting from the specified position (x and y coordinates). The cylinder is drawn with the current color, e.g. set with ofSetColor(). The cylinder is drawn filled by default; change this with ofFill();
+Draws a cone with specified radius and height starting from the specified position (x and y coordinates). The cone is drawn with the current color, e.g. set with ofSetColor(). The cone is drawn filled by default; change this with ofFill();
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a red cylinder at the center of the canvas.
+    //  Draw a red cone at the center of the canvas.
     ofSetColor(255, 0, 0);
     ofFill();
-    ofDrawCylinder(ofGetWidth() * .5, ofGetHeight()* .5, 50, 200);
+    ofDrawCone(ofGetWidth() * .5, ofGetHeight()* .5, 200, 300);
 
     //NOTE: to better see the 3D shape you need to create a light spot...
     //check `ofLight' documentation
@@ -650,11 +570,11 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawCylinder(x, y, z, radius, height)
+###void ofDrawCone(x, y, z, radius, height)
 
 <!--
-_syntax: ofDrawCylinder(x, y, z, radius, height)_
-_name: ofDrawCylinder_
+_syntax: ofDrawCone(x, y, z, radius, height)_
+_name: ofDrawCone_
 _returns: void_
 _returns_description: _
 _parameters: float x, float y, float z, float radius, float height_
@@ -677,15 +597,15 @@ _inlined_description: _
 
 _description: _
 
-Draws a cylinder with specified radius and height starting from the specified position (x, y and z coordinates). The cylinder is drawn with the current color, e.g. set with ofSetColor(). The cylinder is drawn filled by default; change this with ofFill();
+Draws a cone with specified radius and height starting from the specified position (x, y and z coordinates). The cone is drawn with the current color, e.g. set with ofSetColor(). The cone is drawn filled by default; change this with ofFill();
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a red cylinder at the center of the canvas.
+    //  Draw a red cone at the center of the canvas.
     ofSetColor(255, 0, 0);
     ofFill();
-    ofDrawCylinder(ofGetWidth() * .5, ofGetHeight()* .5, 100, 50, 200);
+    ofDrawCone(ofGetWidth() * .5, ofGetHeight()* .5, 0, 200, 300);
 
     //NOTE: to better see the 3D shape you need to create a light spot...
     //check `ofLight' documentation
@@ -800,14 +720,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawIcoSphere(x, y, z, radius)
+###void ofDrawCylinder(x, y, radius, height)
 
 <!--
-_syntax: ofDrawIcoSphere(x, y, z, radius)_
-_name: ofDrawIcoSphere_
+_syntax: ofDrawCylinder(x, y, radius, height)_
+_name: ofDrawCylinder_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z, float radius_
+_parameters: float x, float y, float radius, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -827,15 +747,15 @@ _inlined_description: _
 
 _description: _
 
-Draws an icosphere (i.e. a sphere based on faces as opposed to UV map) with specified radius starting from specified position (x,y and z coordinates). The icosphere is drawn with the current color, e.g. set with ofSetColor(). The icosphere is drawn filled by default; change this with ofFill();
+Draws a cylinder with specified radius and height starting from the specified position (x and y coordinates). The cylinder is drawn with the current color, e.g. set with ofSetColor(). The cylinder is drawn filled by default; change this with ofFill();
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a blue icosphere at the center of the canvas.
-    ofSetColor(0, 0, 255);
+    //  Draw a red cylinder at the center of the canvas.
+    ofSetColor(255, 0, 0);
     ofFill();
-    ofDrawIcoSphere(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100);
+    ofDrawCylinder(ofGetWidth() * .5, ofGetHeight()* .5, 50, 200);
 
     //NOTE: to better see the 3D shape you need to create a light spot...
     //check `ofLight' documentation
@@ -850,14 +770,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawIcoSphere(x, y, radius)
+###void ofDrawCylinder(x, y, z, radius, height)
 
 <!--
-_syntax: ofDrawIcoSphere(x, y, radius)_
-_name: ofDrawIcoSphere_
+_syntax: ofDrawCylinder(x, y, z, radius, height)_
+_name: ofDrawCylinder_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float radius_
+_parameters: float x, float y, float z, float radius, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -877,15 +797,15 @@ _inlined_description: _
 
 _description: _
 
-Draws an icosphere (i.e. a sphere based on faces as opposed to UV map) with specified radius starting from specified position (x and y coordinates). The icosphere is drawn with the current color, e.g. set with ofSetColor(). The icosphere is drawn filled by default; change this with ofFill(); 
+Draws a cylinder with specified radius and height starting from the specified position (x, y and z coordinates). The cylinder is drawn with the current color, e.g. set with ofSetColor(). The cylinder is drawn filled by default; change this with ofFill();
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a blue icosphere at the center of the canvas.
-    ofSetColor(0, 0, 255);
+    //  Draw a red cylinder at the center of the canvas.
+    ofSetColor(255, 0, 0);
     ofFill();
-    ofDrawIcoSphere(ofGetWidth() * .5, ofGetHeight()* .5, 100);
+    ofDrawCylinder(ofGetWidth() * .5, ofGetHeight()* .5, 100, 50, 200);
 
     //NOTE: to better see the 3D shape you need to create a light spot...
     //check `ofLight' documentation
@@ -1000,14 +920,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawPlane(x, y, width, height)
+###void ofDrawIcoSphere(x, y, radius)
 
 <!--
-_syntax: ofDrawPlane(x, y, width, height)_
-_name: ofDrawPlane_
+_syntax: ofDrawIcoSphere(x, y, radius)_
+_name: ofDrawIcoSphere_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float width, float height_
+_parameters: float x, float y, float radius_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1027,15 +947,18 @@ _inlined_description: _
 
 _description: _
 
-Draws a plane with specified width and height starting from the specified position (x and y coordinates). The plane is drawn with the current color, e.g. set with ofSetColor(). The plane is drawn filled by default; change this with ofFill(); 
+Draws an icosphere (i.e. a sphere based on faces as opposed to UV map) with specified radius starting from specified position (x and y coordinates). The icosphere is drawn with the current color, e.g. set with ofSetColor(). The icosphere is drawn filled by default; change this with ofFill(); 
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a green plane at the center of the canvas.
-    ofSetColor(0, 255, 0);
+    //  Draw a blue icosphere at the center of the canvas.
+    ofSetColor(0, 0, 255);
     ofFill();
-    ofDrawPlane(ofGetWidth() * .5, ofGetHeight()* .5, 100, 200);
+    ofDrawIcoSphere(ofGetWidth() * .5, ofGetHeight()* .5, 100);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
 
 }
 
@@ -1047,14 +970,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawPlane(x, y, z, width, height)
+###void ofDrawIcoSphere(x, y, z, radius)
 
 <!--
-_syntax: ofDrawPlane(x, y, z, width, height)_
-_name: ofDrawPlane_
+_syntax: ofDrawIcoSphere(x, y, z, radius)_
+_name: ofDrawIcoSphere_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z, float width, float height_
+_parameters: float x, float y, float z, float radius_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1074,15 +997,18 @@ _inlined_description: _
 
 _description: _
 
-Draws a plane with specified width and height starting from the specified position (x, y and z coordinates). The plane is drawn with the current color, e.g. set with ofSetColor(). The plane is drawn filled by default; change this with ofFill();
+Draws an icosphere (i.e. a sphere based on faces as opposed to UV map) with specified radius starting from specified position (x,y and z coordinates). The icosphere is drawn with the current color, e.g. set with ofSetColor(). The icosphere is drawn filled by default; change this with ofFill();
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a green plane at the center of the canvas.
-    ofSetColor(0, 255, 0);
+    //  Draw a blue icosphere at the center of the canvas.
+    ofSetColor(0, 0, 255);
     ofFill();
-    ofDrawPlane(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100, 200);
+    ofDrawIcoSphere(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
 
 }
 
@@ -1188,14 +1114,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawSphere(x, y, radius)
+###void ofDrawPlane(x, y, width, height)
 
 <!--
-_syntax: ofDrawSphere(x, y, radius)_
-_name: ofDrawSphere_
+_syntax: ofDrawPlane(x, y, width, height)_
+_name: ofDrawPlane_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float radius_
+_parameters: float x, float y, float width, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1215,18 +1141,15 @@ _inlined_description: _
 
 _description: _
 
-Draws a UV sphere with specified radius starting from the specified position (x and y coordinates).The sphere is drawn with the current color, e.g. set with ofSetColor(). The sphere is drawn filled by default; change this with ofFill();
+Draws a plane with specified width and height starting from the specified position (x and y coordinates). The plane is drawn with the current color, e.g. set with ofSetColor(). The plane is drawn filled by default; change this with ofFill(); 
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a green sphere at the center of the canvas.
+    //  Draw a green plane at the center of the canvas.
     ofSetColor(0, 255, 0);
     ofFill();
-    ofDrawSphere(ofGetWidth() * .5, ofGetHeight()* .5, 100);
-
-    //NOTE: to better see the 3D shape you need to create a light spot...
-    //check `ofLight' documentation
+    ofDrawPlane(ofGetWidth() * .5, ofGetHeight()* .5, 100, 200);
 
 }
 
@@ -1238,14 +1161,14 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
-###void ofDrawSphere(x, y, z, radius)
+###void ofDrawPlane(x, y, z, width, height)
 
 <!--
-_syntax: ofDrawSphere(x, y, z, radius)_
-_name: ofDrawSphere_
+_syntax: ofDrawPlane(x, y, z, width, height)_
+_name: ofDrawPlane_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z, float radius_
+_parameters: float x, float y, float z, float width, float height_
 _version_started: _
 _version_deprecated: _
 _summary: _
@@ -1265,18 +1188,15 @@ _inlined_description: _
 
 _description: _
 
-Draws a UV sphere with specified radius starting from the specified position (x, y and z coordinates). The sphere is drawn with the current color, e.g. set with ofSetColor(). The sphere is drawn filled by default; change this with ofFill();
+Draws a plane with specified width and height starting from the specified position (x, y and z coordinates). The plane is drawn with the current color, e.g. set with ofSetColor(). The plane is drawn filled by default; change this with ofFill();
 
 ~~~~{.cpp}
 void ofApp::draw(){
 
-    //  Draw a green sphere at the center of the canvas.
+    //  Draw a green plane at the center of the canvas.
     ofSetColor(0, 255, 0);
     ofFill();
-    ofDrawSphere(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100);
-
-    //NOTE: to better see the 3D shape you need to create a light spot...
-    //check `ofLight' documentation
+    ofDrawPlane(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100, 200);
 
 }
 
@@ -1388,6 +1308,106 @@ void ofApp::draw(){
 
 <!----------------------------------------------------------------------------->
 
+###void ofDrawSphere(x, y, radius)
+
+<!--
+_syntax: ofDrawSphere(x, y, radius)_
+_name: ofDrawSphere_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float radius_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws a UV sphere with specified radius starting from the specified position (x and y coordinates).The sphere is drawn with the current color, e.g. set with ofSetColor(). The sphere is drawn filled by default; change this with ofFill();
+
+~~~~{.cpp}
+void ofApp::draw(){
+
+    //  Draw a green sphere at the center of the canvas.
+    ofSetColor(0, 255, 0);
+    ofFill();
+    ofDrawSphere(ofGetWidth() * .5, ofGetHeight()* .5, 100);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
+
+}
+
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofDrawSphere(x, y, z, radius)
+
+<!--
+_syntax: ofDrawSphere(x, y, z, radius)_
+_name: ofDrawSphere_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z, float radius_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws a UV sphere with specified radius starting from the specified position (x, y and z coordinates). The sphere is drawn with the current color, e.g. set with ofSetColor(). The sphere is drawn filled by default; change this with ofFill();
+
+~~~~{.cpp}
+void ofApp::draw(){
+
+    //  Draw a green sphere at the center of the canvas.
+    ofSetColor(0, 255, 0);
+    ofFill();
+    ofDrawSphere(ofGetWidth() * .5, ofGetHeight()* .5, 0, 100);
+
+    //NOTE: to better see the 3D shape you need to create a light spot...
+    //check `ofLight' documentation
+
+}
+
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###glm::vec3 ofGetBoxResolution()
 
 <!--
@@ -1466,7 +1486,7 @@ Encoded as "y": heightSegments, the number of subdivisions from the cone's top t
 Encoded as "z": capSegments, the number of annular (ring-shaped) subdivisions of the cone's endcap.
 
 
-Returns: An ofVec3f containing (radiusSegments, heightSegments, capSegments) for cone polygonization.
+**Returns**: An ofVec3f containing (radiusSegments, heightSegments, capSegments) for cone polygonization.
 
 
 
@@ -1926,9 +1946,12 @@ Set the resolution of a polygonized cone.
 Allows you to set the polygonization resolution of any cones you subsequently draw with ofDrawCone().
 
 
-Parameters:
+**Parameters:**
+
 radiusSegments The number of facets (subdivisions) around the cone's circular footprint.
+
 heightSegments The number of subdivisions from the cone's top to bottom.
+
 capSegments The number of annular (ring-shaped) subdivisions of the cone's endcap.
 
 

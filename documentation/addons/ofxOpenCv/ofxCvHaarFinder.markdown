@@ -86,6 +86,90 @@ Draws any detected objects to the screen with a rectangle, like so:
 
 <!----------------------------------------------------------------------------->
 
+###int findHaarObjects(&, x, y, w, h, minWidth = 0, minHeight = 0)
+
+<!--
+_syntax: findHaarObjects(&, x, y, w, h, minWidth = 0, minHeight = 0)_
+_name: findHaarObjects_
+_returns: int_
+_returns_description: _
+_parameters: const ofxCvGrayscaleImage &, int x, int y, int w, int h, int minWidth=0, int minHeight=0_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int findHaarObjects(&input, &roi, minWidth = 0, minHeight = 0)
+
+<!--
+_syntax: findHaarObjects(&input, &roi, minWidth = 0, minHeight = 0)_
+_name: findHaarObjects_
+_returns: int_
+_returns_description: _
+_parameters: const ofxCvGrayscaleImage &input, ofRectangle &roi, int minWidth=0, int minHeight=0_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
+
+~~~~{.cpp}
+colorImg.setFromPixels(vidGrabber.getPixels());
+grayImage = colorImg; // convert our color image to a grayscale image
+
+faceFinder.findHaarObjects(grayImage);
+
+for(int i = 0; i < faceFinder.blobs.size(); i++) {
+	ofRectangle roi = faceFinder.blobs[i].boundingRect;
+	eyeFinder.findHaarObjects(grayImage, roi);
+}
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###int findHaarObjects(&input, minWidth = 0, minHeight = 0)
 
 <!--
@@ -160,90 +244,6 @@ _inlined_description: _
 _description: _
 
 Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int findHaarObjects(&input, &roi, minWidth = 0, minHeight = 0)
-
-<!--
-_syntax: findHaarObjects(&input, &roi, minWidth = 0, minHeight = 0)_
-_name: findHaarObjects_
-_returns: int_
-_returns_description: _
-_parameters: const ofxCvGrayscaleImage &input, ofRectangle &roi, int minWidth=0, int minHeight=0_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
-
-~~~~{.cpp}
-colorImg.setFromPixels(vidGrabber.getPixels());
-grayImage = colorImg; // convert our color image to a grayscale image
-
-faceFinder.findHaarObjects(grayImage);
-
-for(int i = 0; i < faceFinder.blobs.size(); i++) {
-	ofRectangle roi = faceFinder.blobs[i].boundingRect;
-	eyeFinder.findHaarObjects(grayImage, roi);
-}
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###int findHaarObjects(&, x, y, w, h, minWidth = 0, minHeight = 0)
-
-<!--
-_syntax: findHaarObjects(&, x, y, w, h, minWidth = 0, minHeight = 0)_
-_name: findHaarObjects_
-_returns: int_
-_returns_description: _
-_parameters: const ofxCvGrayscaleImage &, int x, int y, int w, int h, int minWidth=0, int minHeight=0_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Takes an input ofxCvGrayscaleImage object and allows you to set the minimum width and height of areas that should be returned and a region of interest as an ofRectangle that you would like to limit haar finding to.
 
 
 
@@ -359,42 +359,6 @@ Returns the width of the image area that is being examined.
 
 <!----------------------------------------------------------------------------->
 
-### ofxCvHaarFinder()
-
-<!--
-_syntax: ofxCvHaarFinder()_
-_name: ofxCvHaarFinder_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Constructor.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofxCvHaarFinder(&finder)
 
 <!--
@@ -424,6 +388,42 @@ _inlined_description: _
 _description: _
 
 Copy constructor.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofxCvHaarFinder()
+
+<!--
+_syntax: ofxCvHaarFinder()_
+_name: ofxCvHaarFinder_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Constructor.
 
 
 
