@@ -61,6 +61,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### Value(v)
+
+<!--
+_syntax: Value(v)_
+_name: Value_
+_returns: _
+_returns_description: _
+_parameters: ParameterType v_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### Value(name, v)
 
 <!--
@@ -105,42 +141,6 @@ _name: Value_
 _returns: _
 _returns_description: _
 _parameters: string name, ParameterType v, ParameterType min, ParameterType max_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### Value(v)
-
-<!--
-_syntax: Value(v)_
-_name: Value_
-_returns: _
-_returns_description: _
-_parameters: ParameterType v_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

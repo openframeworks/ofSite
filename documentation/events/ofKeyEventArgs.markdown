@@ -99,14 +99,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofKeyEventArgs(type, key)
+### ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)
 
 <!--
-_syntax: ofKeyEventArgs(type, key)_
+_syntax: ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)_
 _name: ofKeyEventArgs_
 _returns: _
 _returns_description: _
-_parameters: ofKeyEventArgs::Type type, int key_
+_parameters: ofKeyEventArgs::Type type, int key, int keycode, int scancode, unsigned int codepoint, int modifiers_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -135,14 +135,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)
+### ofKeyEventArgs(type, key)
 
 <!--
-_syntax: ofKeyEventArgs(type, key, keycode, scancode, codepoint, modifiers)_
+_syntax: ofKeyEventArgs(type, key)_
 _name: ofKeyEventArgs_
 _returns: _
 _returns_description: _
-_parameters: ofKeyEventArgs::Type type, int key, int keycode, int scancode, unsigned int codepoint, int modifiers_
+_parameters: ofKeyEventArgs::Type type, int key_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -255,8 +255,7 @@ _advanced: False_
 
 _inlined_description: _
 
-For special keys, one of OF_KEY_* (
-**See also**: ofConstants.h). For all other keys, the Unicode code point you'd expect if this key combo (including modifier keys that may be down) was pressed in a text editor (same as codepoint).
+For special keys, one of OF_KEY_* (@see ofConstants.h). For all other keys, the Unicode code point you'd expect if this key combo (including modifier keys that may be down) was pressed in a text editor (same as codepoint).
 
 
 
@@ -288,8 +287,7 @@ _advanced: False_
 
 _inlined_description: _
 
-The keycode returned by the windowing system, independent of any modifier keys or keyboard layout settings. For ofAppGLFWWindow this value is one of GLFW_KEY_* (
-**See also**: glfw3.h) - typically, ASCII representation of the symbol on the physical key, so A key always returns 0x41 even if shift, alt, ctrl are down.
+The keycode returned by the windowing system, independent of any modifier keys or keyboard layout settings. For ofAppGLFWWindow this value is one of GLFW_KEY_* (@see glfw3.h) - typically, ASCII representation of the symbol on the physical key, so A key always returns 0x41 even if shift, alt, ctrl are down.
 
 
 

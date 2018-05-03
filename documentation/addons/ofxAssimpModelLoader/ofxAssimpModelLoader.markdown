@@ -1807,14 +1807,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadModel(&buffer, optimize = false, *extension)
+###bool loadModel(modelName, optimize = false)
 
 <!--
-_syntax: loadModel(&buffer, optimize = false, *extension)_
+_syntax: loadModel(modelName, optimize = false)_
 _name: loadModel_
 _returns: bool_
 _returns_description: _
-_parameters: ofBuffer &buffer, bool optimize=false, const char *extension_
+_parameters: string modelName, bool optimize=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1843,14 +1843,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool loadModel(modelName, optimize = false)
+###bool loadModel(&buffer, optimize = false, *extension)
 
 <!--
-_syntax: loadModel(modelName, optimize = false)_
+_syntax: loadModel(&buffer, optimize = false, *extension)_
 _name: loadModel_
 _returns: bool_
 _returns_description: _
-_parameters: string modelName, bool optimize=false_
+_parameters: ofBuffer &buffer, bool optimize=false, const char *extension_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

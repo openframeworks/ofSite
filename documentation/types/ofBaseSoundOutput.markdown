@@ -48,8 +48,7 @@ _inlined_description: _
 
 Output an audio buffer.
 
-**Parameters:**
-
+Parameters:
 buffer An audio buffer.
 
 
@@ -66,16 +65,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void audioOut(*output, bufferSize, nChannels)
+###void audioOut(*output, bufferSize, nChannels, deviceID, tickCount)
 
 <!--
-_syntax: audioOut(*output, bufferSize, nChannels)_
+_syntax: audioOut(*output, bufferSize, nChannels, deviceID, tickCount)_
 _name: audioOut_
 _returns: void_
 _returns_description: _
-_parameters: float *output, int bufferSize, int nChannels_
+_parameters: float *output, int bufferSize, int nChannels, int deviceID, unsigned long long tickCount_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -103,16 +102,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void audioOut(*output, bufferSize, nChannels, deviceID, tickCount)
+###void audioOut(*output, bufferSize, nChannels)
 
 <!--
-_syntax: audioOut(*output, bufferSize, nChannels, deviceID, tickCount)_
+_syntax: audioOut(*output, bufferSize, nChannels)_
 _name: audioOut_
 _returns: void_
 _returns_description: _
-_parameters: float *output, int bufferSize, int nChannels, int deviceID, unsigned long long tickCount_
+_parameters: float *output, int bufferSize, int nChannels_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_

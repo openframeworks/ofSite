@@ -457,16 +457,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void swipe(&args)
+###void swipe(swipeDir, id)
 
 <!--
-_syntax: swipe(&args)_
+_syntax: swipe(swipeDir, id)_
 _name: swipe_
 _returns: void_
 _returns_description: _
-_parameters: ofxAndroidSwipeEventArgs &args_
+_parameters: ofxAndroidSwipeDir swipeDir, int id_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.8.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -493,16 +493,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void swipe(swipeDir, id)
+###void swipe(&args)
 
 <!--
-_syntax: swipe(swipeDir, id)_
+_syntax: swipe(&args)_
 _name: swipe_
 _returns: void_
 _returns_description: _
-_parameters: ofxAndroidSwipeDir swipeDir, int id_
+_parameters: ofxAndroidSwipeEventArgs &args_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

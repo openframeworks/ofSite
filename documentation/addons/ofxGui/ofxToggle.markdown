@@ -529,14 +529,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxToggle * setup(&toggleName, _bVal, width, height)
+###ofxToggle * setup(_bVal, width, height)
 
 <!--
-_syntax: setup(&toggleName, _bVal, width, height)_
+_syntax: setup(_bVal, width, height)_
 _name: setup_
 _returns: ofxToggle *_
 _returns_description: _
-_parameters: const string &toggleName, bool _bVal, float width, float height_
+_parameters: ofParameter< bool > _bVal, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -565,14 +565,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofxToggle * setup(_bVal, width, height)
+###ofxToggle * setup(&toggleName, _bVal, width, height)
 
 <!--
-_syntax: setup(_bVal, width, height)_
+_syntax: setup(&toggleName, _bVal, width, height)_
 _name: setup_
 _returns: ofxToggle *_
 _returns_description: _
-_parameters: ofParameter< bool > _bVal, float width, float height_
+_parameters: const string &toggleName, bool _bVal, float width, float height_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _

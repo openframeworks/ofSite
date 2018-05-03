@@ -447,8 +447,7 @@ _inlined_description: _
 
 set the ambient reflectance
 
-**Parameters:**
-
+Parameters:
 oAmbient the ambient reflectance
 
 
@@ -487,14 +486,10 @@ _inlined_description: _
 
 set all material colors: reflectance type & light intensity
 
-**Parameters:**
-
+Parameters:
 oDiffuse the diffuse reflectance
-
 oAmbient the ambient reflectance
-
 oSpecular the specular reflectance
-
 oEmmissive the emitted light intensity
 
 
@@ -965,8 +960,7 @@ _inlined_description: _
 
 set the diffuse reflectance
 
-**Parameters:**
-
+Parameters:
 oDiffuse the diffuse reflectance
 
 
@@ -1005,8 +999,7 @@ _inlined_description: _
 
 set the emitted light intensity
 
-**Parameters:**
-
+Parameters:
 oEmmissive the emitted light intensity
 
 
@@ -1081,8 +1074,7 @@ _inlined_description: _
 
 set the specular reflectance
 
-**Parameters:**
-
+Parameters:
 oSpecular the specular reflectance
 
 
@@ -1121,8 +1113,7 @@ _inlined_description: _
 
 setup using settings struct
 
-**Parameters:**
-
+Parameters:
 settings color & other properties struct
 
 

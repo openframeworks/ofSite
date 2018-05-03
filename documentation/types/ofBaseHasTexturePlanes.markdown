@@ -46,7 +46,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**Returns**: a reference to a std::vector containing the ofTexture planes.
+Returns: a reference to a std::vector containing the ofTexture planes.
 
 
 
@@ -82,7 +82,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**Returns**: a const reference to a std::vector containing the ofTexture planes.
+Returns: a const reference to a std::vector containing the ofTexture planes.
 
 
 

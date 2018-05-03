@@ -36,7 +36,7 @@ _inlined_description: _
 
 Get the currently set global logging level.
 
-**Returns**: The currently set global logging level.
+Returns: The currently set global logging level.
 
 
 
@@ -77,11 +77,10 @@ _inlined_description: _
 
 Get the logging level for a specific module.
 
-**Parameters:**
-
+Parameters:
 module specific module name.
 
-**Returns**: The currently set specific module logging level.
+Returns: The currently set specific module logging level.
 
 
 
@@ -118,13 +117,11 @@ _inlined_description: _
 
 Get log level name as a string.
 
-**Parameters:**
-
+Parameters:
 level The ofLogLevel you want as a string.
-
 pad True if you want all log level names to be the same length.
 
-**Returns**: The log level name as a string.
+Returns: The log level name as a string.
 
 
 
@@ -234,10 +231,8 @@ _inlined_description: _
 
 Set the logging to output to a file instead of the console.
 
-**Parameters:**
-
+Parameters:
 path The path to the log file to use.
-
 append True if you want to append to the existing file.
 
 
@@ -306,8 +301,7 @@ OF_LOG_SILENT will prevent any messages from being printed.
 The default ofLogLevel is `OF_LOG_NOTICE`.
 
 
-**Parameters:**
-
+Parameters:
 level the ofLogLevel (and below) you want to show
 
 
@@ -437,8 +431,7 @@ can be useful for combining logging methods, logging to a server, logging
 to email or even Twitter.
 
 
-**Parameters:**
-
+Parameters:
 loggerChannel A shared pointer to the logger channel.
 
 

@@ -45,13 +45,11 @@ revolutions. For example:
 ~~~~
 
 
-**Parameters:**
-
+Parameters:
 currentAngle The current angle in degrees.
-
 targetAngle the angle to be compared to in degrees.
 
-**Returns**: The difference between two angles in degrees.
+Returns: The difference between two angles in degrees.
 
 
 
@@ -97,13 +95,11 @@ revolutions. For example:
 ~~~~
 
 
-**Parameters:**
-
+Parameters:
 currentAngle The current angle in radians.
-
 targetAngle the angle to be compared to in radians.
 
-**Returns**: The difference between two angles in radians.
+Returns: The difference between two angles in radians.
 
 
 
@@ -140,19 +136,14 @@ _inlined_description: _
 
 Given the four points that determine a bezier curve, return an interpolated point on the curve.
 
-**Parameters:**
-
+Parameters:
 a The beginning point of the curve.
-
 b The first control point.
-
 c The second control point.
-
 d The end point of the curve.
-
 t an offset along the curve, normalized between 0 and 1.
 
-**Returns**: A glm::vec3 on the curve.
+Returns: A glm::vec3 on the curve.
 
 
 
@@ -190,19 +181,14 @@ _inlined_description: _
 Given the four points that determine a bezier curve and an offset along the curve, return an tangent vector to a point on the curve.
 Currently this is not a normalized point, and will need to be normalized.
 
-**Parameters:**
-
+Parameters:
 a The beginning point of the curve.
-
 b The first control point.
-
 c The second control point.
-
 d The end point of the curve.
-
 t an offset along the curve, normalized between 0 and 1.
 
-**Returns**: A glm::vec3 on the curve.
+Returns: A glm::vec3 on the curve.
 
 
 
@@ -253,15 +239,12 @@ Otherwise, return the value unchanged.
 ~~~~
 
 
-**Parameters:**
-
+Parameters:
 value The number to be clamped.
-
 min The lower bound of the range.
-
 max The upper bound of the range.
 
-**Returns**: a floating point number in the range [min, max].
+Returns: a floating point number in the range [min, max].
 
 
 
@@ -298,19 +281,14 @@ _inlined_description: _
 
 Given the four points that determine a Catmull Rom curve, return an interpolated point on the curve.
 
-**Parameters:**
-
+Parameters:
 a The first control point.
-
 b The beginning point of the curve.
-
 c The end point of the curve.
-
 d The second control point.
-
 t an offset along the curve, normalized between 0 and 1.
 
-**Returns**: A glm::vec3 on the curve.
+Returns: A glm::vec3 on the curve.
 
 
 
@@ -347,19 +325,14 @@ _inlined_description: _
 
 Return a tangent point for an offset along a Catmull Rom curve.
 
-**Parameters:**
-
+Parameters:
 a The first control point.
-
 b The beginning point of the curve.
-
 c The end point of the curve.
-
 d The second control point.
-
 t an offset along the curve, normalized between 0 and 1.
 
-**Returns**: A glm::vec3 on the curve.
+Returns: A glm::vec3 on the curve.
 
 
 
@@ -402,61 +375,10 @@ Example:
 ~~~~
 
 
-**Parameters:**
-
+Parameters:
 degrees An angle in degrees.
 
-**Returns**: the angle in radians.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofDist(x1, y1, x2, y2)
-
-<!--
-_syntax: ofDist(x1, y1, x2, y2)_
-_name: ofDist_
-_returns: float_
-_returns_description: _
-_parameters: float x1, float y1, float x2, float y2_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates the 2D distance between two points.
-
-Uses the [Pythagorean theorem](http://en.wikipedia.org/wiki/Pythagorean_theorem).
-
-
-**Parameters:**
-
-x1 X position of first point.
-
-y1 Y position of first point.
-
-x2 X position of second point.
-
-y2 Y position of second point.
-
-**Returns**: float Distance between points.
+Returns: the angle in radians.
 
 
 
@@ -496,21 +418,15 @@ Calculates the 3D distance between two points.
 Uses the [Pythagorean theorem](http://en.wikipedia.org/wiki/Pythagorean_theorem).
 
 
-**Parameters:**
-
+Parameters:
 x1 X position of first point.
-
 y1 Y position of first point.
-
 z1 Z position of first point.
-
 x2 X position of second point.
-
 y2 Y position of second point.
-
 z2 Z position of second point.
 
-**Returns**: float Distance between points.
+Returns: float Distance between points.
 
 
 
@@ -526,11 +442,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float ofDistSquared(x1, y1, x2, y2)
+###float ofDist(x1, y1, x2, y2)
 
 <!--
-_syntax: ofDistSquared(x1, y1, x2, y2)_
-_name: ofDistSquared_
+_syntax: ofDist(x1, y1, x2, y2)_
+_name: ofDist_
 _returns: float_
 _returns_description: _
 _parameters: float x1, float y1, float x2, float y2_
@@ -545,24 +461,18 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates the squared 2D distance between two points.
+Calculates the 2D distance between two points.
 
-Same as ofDist() but doesn't take the square root sqrt() of the result,
-which is a faster operation if you need to calculate and compare multiple
-distances.
+Uses the [Pythagorean theorem](http://en.wikipedia.org/wiki/Pythagorean_theorem).
 
 
-**Parameters:**
-
+Parameters:
 x1 X position of first point.
-
 y1 Y position of first point.
-
 x2 X position of second point.
-
 y2 Y position of second point.
 
-**Returns**: distance-squared between two points.
+Returns: float Distance between points.
 
 
 
@@ -604,21 +514,63 @@ which is a faster operation if you need to calculate and compare multiple
 distances.
 
 
-**Parameters:**
-
+Parameters:
 x1 X position of first point.
-
 y1 Y position of first point.
-
 z1 Z position of first point.
-
 x2 X position of second point.
-
 y2 Y position of second point.
-
 z2 Z position of second point.
 
-**Returns**: distance-squared between two points.
+Returns: distance-squared between two points.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofDistSquared(x1, y1, x2, y2)
+
+<!--
+_syntax: ofDistSquared(x1, y1, x2, y2)_
+_name: ofDistSquared_
+_returns: float_
+_returns_description: _
+_parameters: float x1, float y1, float x2, float y2_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates the squared 2D distance between two points.
+
+Same as ofDist() but doesn't take the square root sqrt() of the result,
+which is a faster operation if you need to calculate and compare multiple
+distances.
+
+
+Parameters:
+x1 X position of first point.
+y1 Y position of first point.
+x2 X position of second point.
+y2 Y position of second point.
+
+Returns: distance-squared between two points.
 
 
 
@@ -655,15 +607,12 @@ _inlined_description: _
 
 Determine if a number is inside of a giv(float)(en range.
 
-**Parameters:**
-
+Parameters:
 t The value to test.
-
 min The lower bound of the range.
-
 max The upper bound of the range.
 
-**Returns**: true if the number t is the range of [min, max].
+Returns: true if the number t is the range of [min, max].
 
 
 
@@ -886,18 +835,16 @@ standpoint, this does not usually occur when the magnitudes of x and y are
 significantly larger than epsilon, but your mileage may vary.
 
 
-**See also**: https://isocpp.org/wiki/faq/newbie#floating-point-arith
+See also: https://isocpp.org/wiki/faq/newbie#floating-point-arith
 
-**See also**: https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+See also: https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
 \tparam The floating point data type.
 
-**Parameters:**
-
+Parameters:
 a The first floating point type variable to compare.
-
 b The second floating point type variable to compare.
 
-**Returns**: True if `std::abs(x - y) <= std::numeric_limits<Type>::epsilon() * std::abs(x)`.
+Returns: True if `std::abs(x - y) <= std::numeric_limits<Type>::epsilon() * std::abs(x)`.
 
 
 
@@ -950,17 +897,14 @@ the values.
 ~~~~
 
 
-**See also**: float ofClamp(float value, float min, float max)
+See also: float ofClamp(float value, float min, float max)
 
-**Parameters:**
-
+Parameters:
 start The lower bound of the range.
-
 stop The upper bound of the range.
-
 amt The normalized [0, 1] value within the range to return.
 
-**Returns**: A float between start and stop.
+Returns: A float between start and stop.
 
 
 
@@ -1002,15 +946,12 @@ increment (amt). This does constrain the result into a single rotation,
 but does not clamp the values
 
 
-**Parameters:**
-
+Parameters:
 currentAngle The lower bound of the range in degrees.
-
 targetAngle The upper bound of the range in degrees.
-
 pct An amount between [0.0, 1.0] within the range to return.
 
-**Returns**: An angle in degrees between currentAngle and targetAngle.
+Returns: An angle in degrees between currentAngle and targetAngle.
 
 
 
@@ -1052,15 +993,12 @@ increment (amt).  This does constrain the result into a single rotation, but
 does not clamp the values
 
 
-**Parameters:**
-
+Parameters:
 currentAngle The lower bound of the range in radians.
-
 targetAngle The upper bound of the range in radians.
-
 pct An amount between [0.0, 1.0] within the range to return.
 
-**Returns**: An angle in radians between currentAngle and targetAngle.
+Returns: An angle in radians between currentAngle and targetAngle.
 
 
 
@@ -1097,19 +1035,14 @@ _inlined_description: _
 
 Determine the intersection between two lines.
 
-**Parameters:**
-
+Parameters:
 line1Start Starting point for first line.
-
 line1End End point for first line.
-
 line2Start Starting point for second line.
-
 line2End End point for second line.
-
 intersection glm::vec3 reference in which to store the computed intersection point.
 
-**Returns**: True if the lines intersect.
+Returns: True if the lines intersect.
 
 
 
@@ -1166,24 +1099,18 @@ Example:
 ~~~~~
 
 
-**Parameters:**
-
+Parameters:
 value The number to be mapped.
-
 inputMin The lower bound of the input range.
-
 inputMax The upper bound of the input range.
-
 outputMin The lower bound of the output range.
-
 outputMax The upper bound of the output range.
-
 clamp True if the value should be clamped to [outputMin, outputMax).
 \note If the absolute difference between inputMin and inputMax is less than
 		  FLT_EPSILON, outputMin will be returned to prevent divide by zero
 		  errors.
 
-**Returns**: a mapped floating point number.
+Returns: a mapped floating point number.
 
 
 
@@ -1230,116 +1157,10 @@ ofNextPow2(401); // returns 512
 ~~~~
 
 
-**Parameters:**
-
+Parameters:
 a The starting point for finding the next power of 2.
 
-**Returns**: value^2.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofNoise(&p)
-
-<!--
-_syntax: ofNoise(&p)_
-_name: ofNoise_
-_returns: float_
-_returns_description: _
-_parameters: const glm::vec2 &p_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a two dimensional Perlin noise value between 0.0...1.0.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofNoise(&p)
-
-<!--
-_syntax: ofNoise(&p)_
-_name: ofNoise_
-_returns: float_
-_returns_description: _
-_parameters: const glm::vec3 &p_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a three dimensional Perlin noise value between 0.0...1.0.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofNoise(&p)
-
-<!--
-_syntax: ofNoise(&p)_
-_name: ofNoise_
-_returns: float_
-_returns_description: _
-_parameters: const glm::vec4 &p_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a four dimensional Perlin noise value between 0.0...1.0.
+Returns: value^2.
 
 
 
@@ -1495,6 +1316,111 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float ofNoise(&p)
+
+<!--
+_syntax: ofNoise(&p)_
+_name: ofNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec2 &p_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a two dimensional Perlin noise value between 0.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofNoise(&p)
+
+<!--
+_syntax: ofNoise(&p)_
+_name: ofNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec3 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a three dimensional Perlin noise value between 0.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofNoise(&p)
+
+<!--
+_syntax: ofNoise(&p)_
+_name: ofNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec4 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a four dimensional Perlin noise value between 0.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float ofNormalize(float value, float min, float max)
 
 <!--
@@ -1522,15 +1448,12 @@ then finds where within that range a value sits.  If the value is outside
 the range, it will be mapped to 0 or 1.
 
 
-**Parameters:**
-
+Parameters:
 value The number to be normalized.
-
 min The lower bound of the range.
-
 max The upper bound of the range.
 
-**Returns**: A float between 0 and 1.
+Returns: A float between 0 and 1.
 
 
 
@@ -1573,62 +1496,10 @@ Example:
 ~~~~
 
 
-**Parameters:**
-
+Parameters:
 radians An angle in radians.
 
-**Returns**: the angle in degrees.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofRandom(max)
-
-<!--
-_syntax: ofRandom(max)_
-_name: ofRandom_
-_returns: float_
-_returns_description: _
-_parameters: float max_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Get a random floating point number between 0 and max.
-
-A random number in the range [0, max) will be returned.
-
-Example:
-	~~~~~{.cpp}
-// Return a random floating point number between 0 and 20.
-float randomNumber = ofRandom(20);
-~~~~~
-
-
-**Warning**: ofRandom wraps C++'s `rand()` which is not reentrant or thread safe.
-
-
-**Parameters:**
-
-max The maximum value of the random number.
+Returns: the angle in degrees.
 
 
 
@@ -1674,16 +1545,64 @@ float randomNumber = ofRandom(-30, 20);
 ~~~~~
 
 
-**Warning**: ofRandom wraps `rand()` which is not reentrant or thread safe.
+Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
 
 
-**Parameters:**
-
+Parameters:
 val0 the minimum value of the random number.
-
 val1 The maximum value of the random number.
 
-**Returns**: A random floating point number between val0 and val1.
+Returns: A random floating point number between val0 and val1.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofRandom(max)
+
+<!--
+_syntax: ofRandom(max)_
+_name: ofRandom_
+_returns: float_
+_returns_description: _
+_parameters: float max_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Get a random floating point number between 0 and max.
+
+A random number in the range [0, max) will be returned.
+
+Example:
+	~~~~~{.cpp}
+// Return a random floating point number between 0 and 20.
+float randomNumber = ofRandom(20);
+~~~~~
+
+
+Warning: ofRandom wraps C++'s `rand()` which is not reentrant or thread safe.
+
+
+Parameters:
+max The maximum value of the random number.
 
 
 
@@ -1723,10 +1642,10 @@ Get a random floating point number between 0 and the screen height.
 A random number in the range [0, ofGetHeight()) will be returned.
 
 
-**Warning**: ofRandom wraps `rand()` which is not reentrant or thread safe.
+Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
 
 
-**Returns**: a random number between 0 and ofGetHeight().
+Returns: a random number between 0 and ofGetHeight().
 
 
 
@@ -1766,10 +1685,10 @@ Get a random floating point number between 0 and the screen width.
 A random number in the range [0, ofGetWidth()) will be returned.
 
 
-**Warning**: ofRandom wraps `rand()` which is not reentrant or thread safe.
+Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
 
 
-**Returns**: a random number between 0 and ofGetWidth().
+Returns: a random number between 0 and ofGetWidth().
 
 
 
@@ -1807,10 +1726,10 @@ _inlined_description: _
 Get a random floating point number.
 
 
-**Warning**: ofRandom wraps `rand()` which is not reentrant or thread safe.
+Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
 
 
-**Returns**: A random floating point number between -1 and 1.
+Returns: A random floating point number between -1 and 1.
 
 
 
@@ -1848,10 +1767,10 @@ _inlined_description: _
 Get a random unsigned floating point number.
 
 
-**Warning**: ofRandom wraps `rand()` which is not reentrant or thread safe.
+Warning: ofRandom wraps `rand()` which is not reentrant or thread safe.
 
 
-**Returns**: A random floating point number between 0 and 1.
+Returns: A random floating point number between 0 and 1.
 
 
 
@@ -1931,8 +1850,7 @@ seed can be used to initialize the random number generator during app
 setup.  This can be useful for debugging and testing.
 
 
-**Parameters:**
-
+Parameters:
 val The value with which to seed the generator.
 
 
@@ -1970,112 +1888,7 @@ _inlined_description: _
 
 Returns the sign of a number.
 
-**Returns**: int -1 if n is negative, 1 if n is positive, and 0 is n == 0;
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofSignedNoise(&p)
-
-<!--
-_syntax: ofSignedNoise(&p)_
-_name: ofSignedNoise_
-_returns: float_
-_returns_description: _
-_parameters: const glm::vec2 &p_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a two dimensional Perlin noise value between -1.0...1.0.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofSignedNoise(&p)
-
-<!--
-_syntax: ofSignedNoise(&p)_
-_name: ofSignedNoise_
-_returns: float_
-_returns_description: _
-_parameters: const glm::vec3 &p_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a three dimensional Perlin noise value between -1.0...1.0.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float ofSignedNoise(&p)
-
-<!--
-_syntax: ofSignedNoise(&p)_
-_name: ofSignedNoise_
-_returns: float_
-_returns_description: _
-_parameters: const glm::vec4 &p_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Calculates a four dimensional Perlin noise value between -1.0...1.0.
+Returns: int -1 if n is negative, 1 if n is positive, and 0 is n == 0;
 
 
 
@@ -2231,6 +2044,111 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###float ofSignedNoise(&p)
+
+<!--
+_syntax: ofSignedNoise(&p)_
+_name: ofSignedNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec2 &p_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a two dimensional Perlin noise value between -1.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofSignedNoise(&p)
+
+<!--
+_syntax: ofSignedNoise(&p)_
+_name: ofSignedNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec3 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a three dimensional Perlin noise value between -1.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofSignedNoise(&p)
+
+<!--
+_syntax: ofSignedNoise(&p)_
+_name: ofSignedNoise_
+_returns: float_
+_returns_description: _
+_parameters: const glm::vec4 &p_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Calculates a four dimensional Perlin noise value between -1.0...1.0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###float ofWrap(value, from, to)
 
 <!--
@@ -2263,13 +2181,11 @@ Example:
 ~~~~
 
 
-**Parameters:**
-
+Parameters:
 value The value to map.
-
 from The lower bound of the range.
 
-**Returns**: to The upper bound of the range.
+Returns: to The upper bound of the range.
 
 
 

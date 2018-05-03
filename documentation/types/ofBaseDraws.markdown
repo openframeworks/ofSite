@@ -25,135 +25,6 @@ _extends: _
 
 
 
-###void draw(&point)
-
-<!--
-_syntax: draw(&point)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &point_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw at a position at the native size.
-
-Native size is determined by getWidth() and getHeight().
-
-
-**Parameters:**
-
-point Draw position.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&point, w, h)
-
-<!--
-_syntax: draw(&point, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec2 &point, float w, float h_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw at a position.
-
-
-**Parameters:**
-
-point Draw position.
-
-w Draw width.
-
-h Draw height.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&rect)
-
-<!--
-_syntax: draw(&rect)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &rect_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw at a position and size specified by a rectangle.
-
-
-**Parameters:**
-
-rect Draw position and size.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(x, y)
 
 <!--
@@ -179,10 +50,8 @@ Draw at a position at the native size.
 Native size is determined by getWidth() and getHeight().
 
 
-**Parameters:**
-
+Parameters:
 x Draw position on the x axis.
-
 y Draw position on the y axis.
 
 
@@ -222,14 +91,134 @@ _inlined_description: _
 Draw at a position with the specified size.
 
 
-**Parameters:**
-
+Parameters:
 x Draw position on the x axis.
-
 y Draw position on the y axis.
-
 w Draw width.
+h Draw height.
 
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&rect)
+
+<!--
+_syntax: draw(&rect)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &rect_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw at a position and size specified by a rectangle.
+
+
+Parameters:
+rect Draw position and size.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&point)
+
+<!--
+_syntax: draw(&point)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &point_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw at a position at the native size.
+
+Native size is determined by getWidth() and getHeight().
+
+
+Parameters:
+point Draw position.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&point, w, h)
+
+<!--
+_syntax: draw(&point, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec2 &point, float w, float h_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw at a position.
+
+
+Parameters:
+point Draw position.
+w Draw width.
 h Draw height.
 
 
@@ -268,7 +257,7 @@ _inlined_description: _
 
 Get the height.
 
-**Returns**: the height.
+Returns: the height.
 
 
 
@@ -306,7 +295,7 @@ _inlined_description: _
 
 Get the width.
 
-**Returns**: the width.
+Returns: the width.
 
 
 
@@ -384,10 +373,8 @@ This can be useful if you want to rotate an image around a particular
 point.
 
 
-**Parameters:**
-
+Parameters:
 xPct Horizontal position as a percentage (0 - 1).
-
 yPct Vertical position as a percentage (0 - 1).
 
 
@@ -430,10 +417,8 @@ This can be useful if you want to rotate an image around a particular
 point.
 
 
-**Parameters:**
-
+Parameters:
 x Horizontal texture position in pixels.
-
 y Vertical texture position in pixels.
 
 

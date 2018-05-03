@@ -263,7 +263,7 @@ threads.  On occasion, it may be useful to interact with the
 underlying Poco::Thread directly.
 
 
-**Returns**: A reference to the backing Poco thread.
+Returns: A reference to the backing Poco thread.
 
 
 
@@ -306,7 +306,7 @@ threads.  On occasion, it may be useful to interact with the
 underlying Poco::Thread directly.
 
 
-**Returns**: A reference to the backing Poco thread.
+Returns: A reference to the backing Poco thread.
 
 
 
@@ -381,7 +381,7 @@ _inlined_description: _
 
 Get the unique thread name, in the form of "Thread id#"
 
-**Returns**: the Thread ID string.
+Returns: the Thread ID string.
 
 
 
@@ -447,7 +447,7 @@ send copy some ofPixels to an ofTexture on the graphics
 card.
 
 
-**Returns**: True iff this ofThread the currently active thread.
+Returns: True iff this ofThread the currently active thread.
 
 
 
@@ -485,7 +485,7 @@ _inlined_description: _
 
 Check the running status of the thread.
 
-**Returns**: true iff the thread is currently running.
+Returns: true iff the thread is currently running.
 
 
 
@@ -552,7 +552,7 @@ startThread(false), this call will return true iff the mutex is
 was successfully acquired.
 
 
-**Returns**: true if the lock was successfully acquired.
+Returns: true if the lock was successfully acquired.
 
 
 
@@ -734,8 +734,7 @@ waits for something to do.  This may lead to poor application
 performance.
 
 
-**Parameters:**
-
+Parameters:
 milliseconds The number of milliseconds to sleep.
 
 
@@ -981,7 +980,7 @@ startThread(false), this call will return true iff the mutex is
 was successfully acquired.
 
 
-**Returns**: true if the lock was successfully acquired.
+Returns: true if the lock was successfully acquired.
 
 
 
@@ -1070,8 +1069,7 @@ without releasing those sockets (or other resources), may result in
 segmentation faults, error signals or other undefined behaviors.
 
 
-**Parameters:**
-
+Parameters:
 callStopThread Set stop to true if you want to signal the thread
     to exit before waiting.  This is the equivalent to calling
     stopThread(). If you your threadedFunction uses a while-loop that
@@ -1079,7 +1077,6 @@ callStopThread Set stop to true if you want to signal the thread
     stop == true, waitForThread will hang indefinitely.  Set stop ==
     false ONLY if you have already called stopThread() and you simply
     need to be sure your thread has finished its tasks.
-
 
 milliseconds If millseconds is set to INFINITE_JOIN_TIMEOUT, the
     waitForThread will wait indefinitely for the thread to complete.  If
@@ -1092,13 +1089,13 @@ milliseconds If millseconds is set to INFINITE_JOIN_TIMEOUT, the
     for a thread to complete via other signalling methods such as
     Poco::Event, Poco::Condition, or Poco::Semaphore.
 
-**See also**: http://pocoproject.org/slides/090-NotificationsEvents.pdf
+See also: http://pocoproject.org/slides/090-NotificationsEvents.pdf
 
-**See also**: http://pocoproject.org/docs/Poco.Condition.html
+See also: http://pocoproject.org/docs/Poco.Condition.html
 
-**See also**: http://pocoproject.org/docs/Poco.Event.html
+See also: http://pocoproject.org/docs/Poco.Event.html
 
-**See also**: http://pocoproject.org/docs/Poco.Semaphore.html
+See also: http://pocoproject.org/docs/Poco.Semaphore.html
 
 
 

@@ -313,14 +313,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setData(*attrib0x, numCoords, total, usage, stride, normalize = false)
+###void setData(bytes, *data, usage)
 
 <!--
-_syntax: setData(*attrib0x, numCoords, total, usage, stride, normalize = false)_
+_syntax: setData(bytes, *data, usage)_
 _name: setData_
 _returns: void_
 _returns_description: _
-_parameters: const float *attrib0x, int numCoords, int total, int usage, int stride, bool normalize=false_
+_parameters: GLsizeiptr bytes, const void *data, GLenum usage_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -349,14 +349,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setData(bytes, *data, usage)
+###void setData(*attrib0x, numCoords, total, usage, stride, normalize = false)
 
 <!--
-_syntax: setData(bytes, *data, usage)_
+_syntax: setData(*attrib0x, numCoords, total, usage, stride, normalize = false)_
 _name: setData_
 _returns: void_
 _returns_description: _
-_parameters: GLsizeiptr bytes, const void *data, GLenum usage_
+_parameters: const float *attrib0x, int numCoords, int total, int usage, int stride, bool normalize=false_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

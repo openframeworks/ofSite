@@ -390,14 +390,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(width, height)
+###void set(width, height, columns, rows, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
 
 <!--
-_syntax: set(width, height)_
+_syntax: set(width, height, columns, rows, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float width, float height_
+_parameters: float width, float height, int columns, int rows, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -426,14 +426,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(width, height, columns, rows, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
+###void set(width, height)
 
 <!--
-_syntax: set(width, height, columns, rows, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
+_syntax: set(width, height)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float width, float height, int columns, int rows, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
+_parameters: float width, float height_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

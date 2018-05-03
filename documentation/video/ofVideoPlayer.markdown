@@ -99,9 +99,9 @@ For advanced users who need to manually manage texture drawing
 without calling draw(). Only binds the texture if one exists.
 
 
-**See also**: ofTexture::bind()
+See also: ofTexture::bind()
 
-**See also**: http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml
+See also: http://www.opengl.org/sdk/docs/man4/html/glBindTexture.xhtml
 
 
 
@@ -142,7 +142,7 @@ Closes the movie file releases its resources.
 This is an alias for closeMovie().
 
 
-**See also**: closeMovie()
+See also: closeMovie()
 
 
 
@@ -183,7 +183,7 @@ Closes the movie file and releases its resources.
 This is an alias for close().
 
 
-**See also**: close()
+See also: close()
 
 
 
@@ -198,42 +198,6 @@ ofVideoPlayer myPlayer;
 myPlayer.loadMovie("myMovie.mov"); //Loads video resources
 myPlayer.closeMovie(); //Unloads video resources
 ~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(x, y)
-
-<!--
-_syntax: draw(x, y)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y_
-_access: public_
-_version_started: 006_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws the texture of the movie player class as the position (x,y) with the internal width and height of the loaded movie. 
 
 
 
@@ -270,6 +234,42 @@ _inlined_description: _
 _description: _
 
 Draws the texture of the movie player class at the position (x,y) with the given width (w) and height (h). 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(x, y)
+
+<!--
+_syntax: draw(x, y)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y_
+_access: public_
+_version_started: 006_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws the texture of the movie player class as the position (x,y) with the internal width and height of the loaded movie. 
 
 
 
@@ -518,7 +518,7 @@ Get the path to the loaded video file.
 If no video file is loaded this returns an empty string.
 
 
-**Returns**: A path to the loaded video or an empty string if not loaded.
+Returns: A path to the loaded video or an empty string if not loaded.
 
 
 
@@ -679,7 +679,7 @@ using dynamic_cast<MyVideoPlayerImplementation>(getPlayer()) or the
 templated getPlayer<MyVideoPlayerImplementation>() method.
 
 
-**Returns**: A pointer to the internal video player implementation.
+Returns: A pointer to the internal video player implementation.
 
 
 
@@ -723,7 +723,7 @@ using dynamic_pointer_cast<MyVideoPlayerImplementation>(getPlayer())
 or the templated getPlayer<MyVideoPlayerImplementation>() method.
 
 
-**Returns**: A const pointer to the internal video player implementation.
+Returns: A const pointer to the internal video player implementation.
 
 
 
@@ -765,7 +765,7 @@ Calling getPlayer<MyVideoPlayerImplementation>() is equivalent to
 dynamic_pointer_cast<MyVideoPlayerImplementation>(getPlayer()).
 
 
-**Returns**: A pointer to the internal video player implementation or
+Returns: A pointer to the internal video player implementation or
 			 nullptr if the cast fails.
 
 
@@ -808,7 +808,7 @@ Calling getPlayer<MyVideoPlayerImplementation>() is equivalent to
 dynamic_pointer_cast<MyVideoPlayerImplementation>(getPlayer()).
 
 
-**Returns**: A const pointer to the internal video player implementation
+Returns: A const pointer to the internal video player implementation
 			 or nullptr if the cast fails.
 
 
@@ -1873,8 +1873,7 @@ player implementation. The custom video player must implment the
 ofBaseVideoPlayer interface.
 
 
-**Parameters:**
-
+Parameters:
 newPlayer Shared pointer to the new video player that extends
 from ofBaseVideoPlayer.
 
@@ -2103,7 +2102,7 @@ For advanced users who need to manually manage texture drawing
 without calling draw(). Only binds the texture if one exists.
 
 
-**See also**: ofTexture::unbind()
+See also: ofTexture::unbind()
 
 
 

@@ -25,6 +25,118 @@ _extends: _
 
 
 
+###void allocate()
+
+<!--
+_syntax: allocate()_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+creates a buffer without allocating any memory yet
+glGenBuffers, allocates a GL buffer
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(bytes, usage)
+
+<!--
+_syntax: allocate(bytes, usage)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: GLsizeiptr bytes, GLenum usage_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+creates a buffer and allocates the required number of bytes
+glGenBuffers + glNamedBufferData: https://www.opengl.org/sdk/docs/man4/html/glBufferData.xhtml
+before GL 4.5 emulates glNamedBufferData by binding to last known target
+for this buffer uploading data to that target and unbinding again
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(bytes, *data, usage)
+
+<!--
+_syntax: allocate(bytes, *data, usage)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: GLsizeiptr bytes, const void *data, GLenum usage_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void allocate(&data, usage)
 
 <!--
@@ -82,118 +194,6 @@ _advanced: False_
 _inlined_description: _
 
 
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void allocate()
-
-<!--
-_syntax: allocate()_
-_name: allocate_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-creates a buffer without allocating any memory yet
-glGenBuffers, allocates a GL buffer
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void allocate(bytes, *data, usage)
-
-<!--
-_syntax: allocate(bytes, *data, usage)_
-_name: allocate_
-_returns: void_
-_returns_description: _
-_parameters: GLsizeiptr bytes, const void *data, GLenum usage_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void allocate(bytes, usage)
-
-<!--
-_syntax: allocate(bytes, usage)_
-_name: allocate_
-_returns: void_
-_returns_description: _
-_parameters: GLsizeiptr bytes, GLenum usage_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-creates a buffer and allocates the required number of bytes
-glGenBuffers + glNamedBufferData: https://www.opengl.org/sdk/docs/man4/html/glBufferData.xhtml
-before GL 4.5 emulates glNamedBufferData by binding to last known target
-for this buffer uploading data to that target and unbinding again
 
 
 
@@ -683,6 +683,44 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void setData(bytes, *data, usage)
+
+<!--
+_syntax: setData(bytes, *data, usage)_
+_name: setData_
+_returns: void_
+_returns_description: _
+_parameters: GLsizeiptr bytes, const void *data, GLenum usage_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+glNamedBufferData: https://www.opengl.org/sdk/docs/man4/html/glBufferData.xhtml
+before GL 4.5 emulates glNamedBufferData by binding to last known target
+for this buffer uploading data to that target and unbinding again
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setData(&data, usage)
 
 <!--
@@ -741,44 +779,6 @@ _advanced: False_
 _inlined_description: _
 
 
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setData(bytes, *data, usage)
-
-<!--
-_syntax: setData(bytes, *data, usage)_
-_name: setData_
-_returns: void_
-_returns_description: _
-_parameters: GLsizeiptr bytes, const void *data, GLenum usage_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-glNamedBufferData: https://www.opengl.org/sdk/docs/man4/html/glBufferData.xhtml
-before GL 4.5 emulates glNamedBufferData by binding to last known target
-for this buffer uploading data to that target and unbinding again
 
 
 
@@ -1012,14 +1012,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void updateData(&data)
+###void updateData(offset, bytes, *data)
 
 <!--
-_syntax: updateData(&data)_
+_syntax: updateData(offset, bytes, *data)_
 _name: updateData_
 _returns: void_
 _returns_description: _
-_parameters: const int &data_
+_parameters: GLintptr offset, GLsizeiptr bytes, const void *data_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1032,8 +1032,9 @@ _advanced: False_
 
 _inlined_description: _
 
-typed version of updateData, same functionality but guesses the size from the size
-of the passed vector and size of the type
+glNamedBufferSubData: https://www.opengl.org/sdk/docs/man4/html/glBufferSubData.xhtml
+before GL 4.5 emulates glNamedBufferSubData by binding to last known target
+for this buffer uploading data to that target and unbinding again
 
 
 
@@ -1122,14 +1123,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void updateData(offset, bytes, *data)
+###void updateData(&data)
 
 <!--
-_syntax: updateData(offset, bytes, *data)_
+_syntax: updateData(&data)_
 _name: updateData_
 _returns: void_
 _returns_description: _
-_parameters: GLintptr offset, GLsizeiptr bytes, const void *data_
+_parameters: const int &data_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1142,9 +1143,8 @@ _advanced: False_
 
 _inlined_description: _
 
-glNamedBufferSubData: https://www.opengl.org/sdk/docs/man4/html/glBufferSubData.xhtml
-before GL 4.5 emulates glNamedBufferSubData by binding to last known target
-for this buffer uploading data to that target and unbinding again
+typed version of updateData, same functionality but guesses the size from the size
+of the passed vector and size of the type
 
 
 

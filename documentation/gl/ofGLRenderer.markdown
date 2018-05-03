@@ -219,50 +219,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void bind(&camera, &viewport)
+###void bind(&video)
 
 <!--
-_syntax: bind(&camera, &viewport)_
+_syntax: bind(&video)_
 _name: bind_
 _returns: void_
 _returns_description: _
-_parameters: const ofCamera &camera, const ofRectangle &viewport_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void bind(&fbo)
-
-<!--
-_syntax: bind(&fbo)_
-_name: bind_
-_returns: void_
-_returns_description: _
-_parameters: const ofFbo &fbo_
+_parameters: const ofBaseVideoDraws &video_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -399,14 +363,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void bind(&video)
+###void bind(&camera, &viewport)
 
 <!--
-_syntax: bind(&video)_
+_syntax: bind(&camera, &viewport)_
 _name: bind_
 _returns: void_
 _returns_description: _
-_parameters: const ofBaseVideoDraws &video_
+_parameters: const ofCamera &camera, const ofRectangle &viewport_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void bind(&fbo)
+
+<!--
+_syntax: bind(&fbo)_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: const ofFbo &fbo_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -507,14 +507,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void clear(brightness, a)
+###void clear(r, g, b, a)
 
 <!--
-_syntax: clear(brightness, a)_
+_syntax: clear(r, g, b, a)_
 _name: clear_
 _returns: void_
 _returns_description: _
-_parameters: float brightness, float a_
+_parameters: float r, float g, float b, float a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -543,14 +543,14 @@ See [ofClear](ofGraphics.html#show_ofClear)
 
 <!----------------------------------------------------------------------------->
 
-###void clear(r, g, b, a)
+###void clear(brightness, a)
 
 <!--
-_syntax: clear(r, g, b, a)_
+_syntax: clear(brightness, a)_
 _name: clear_
 _returns: void_
 _returns_description: _
-_parameters: float r, float g, float b, float a_
+_parameters: float brightness, float a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -867,6 +867,114 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void draw(&model, renderType)
+
+<!--
+_syntax: draw(&model, renderType)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const of3dPrimitive &model, ofPolyRenderMode renderType_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws a of3dPrimitive. Called internally.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&model)
+
+<!--
+_syntax: draw(&model)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofNode &model_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws an texture.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&path)
+
+<!--
+_syntax: draw(&path)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofPath &path_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Handles drawing ofPath. This is called when you call ofPath::draw().
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
 
 <!--
@@ -1011,14 +1119,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&mesh, renderType)
+###void draw(&video, x, y, w, h)
 
 <!--
-_syntax: draw(&mesh, renderType)_
+_syntax: draw(&video, x, y, w, h)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType_
+_parameters: const ofBaseVideoDraws &video, float x, float y, float w, float h_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1047,150 +1155,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&model)
-
-<!--
-_syntax: draw(&model)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofNode &model_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws an texture.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&model, renderType)
-
-<!--
-_syntax: draw(&model, renderType)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const of3dPrimitive &model, ofPolyRenderMode renderType_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws a of3dPrimitive. Called internally.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&path)
-
-<!--
-_syntax: draw(&path)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPath &path_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Handles drawing ofPath. This is called when you call ofPath::draw().
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&poly)
-
-<!--
-_syntax: draw(&poly)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPolyline &poly_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws an ofMesh.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw(&vbo, drawMode, first, total)
 
 <!--
@@ -1199,6 +1163,42 @@ _name: draw_
 _returns: void_
 _returns_description: _
 _parameters: const ofVbo &vbo, GLuint drawMode, int first, int total_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&mesh, renderType)
+
+<!--
+_syntax: draw(&mesh, renderType)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1263,16 +1263,16 @@ Handles drawing ofPolylines. This is called when you call line.draw().
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&video, x, y, w, h)
+###void draw(&poly)
 
 <!--
-_syntax: draw(&video, x, y, w, h)_
+_syntax: draw(&poly)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofBaseVideoDraws &video, float x, float y, float w, float h_
+_parameters: const ofPolyline &poly_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0071_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1291,7 +1291,7 @@ _inlined_description: _
 
 _description: _
 
-
+Draws an ofMesh.
 
 
 
@@ -1443,14 +1443,14 @@ See [ofDrawEllipse](ofGraphics.html#show_ofDrawEllipse)
 
 <!----------------------------------------------------------------------------->
 
-###void drawInstanced(&mesh, renderType, primCount)
+###void drawInstanced(&vbo, drawMode, first, total, primCount)
 
 <!--
-_syntax: drawInstanced(&mesh, renderType, primCount)_
+_syntax: drawInstanced(&vbo, drawMode, first, total, primCount)_
 _name: drawInstanced_
 _returns: void_
 _returns_description: _
-_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType, int primCount_
+_parameters: const ofVbo &vbo, GLuint drawMode, int first, int total, int primCount_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1479,14 +1479,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawInstanced(&vbo, drawMode, first, total, primCount)
+###void drawInstanced(&mesh, renderType, primCount)
 
 <!--
-_syntax: drawInstanced(&vbo, drawMode, first, total, primCount)_
+_syntax: drawInstanced(&mesh, renderType, primCount)_
 _name: drawInstanced_
 _returns: void_
 _returns_description: _
-_parameters: const ofVbo &vbo, GLuint drawMode, int first, int total, int primCount_
+_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType, int primCount_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1587,42 +1587,6 @@ See [ofRect](ofGraphics.html#show_ofRect)
 
 <!----------------------------------------------------------------------------->
 
-###void drawString(&font, text, x, y)
-
-<!--
-_syntax: drawString(&font, text, x, y)_
-_name: drawString_
-_returns: void_
-_returns_description: _
-_parameters: const ofTrueTypeFont &font, string text, float x, float y_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void drawString(text, x, y, z)
 
 <!--
@@ -1652,6 +1616,42 @@ _inlined_description: _
 _description: _
 
 Draws a characters to the screen.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawString(&font, text, x, y)
+
+<!--
+_syntax: drawString(&font, text, x, y)_
+_name: drawString_
+_returns: void_
+_returns_description: _
+_parameters: const ofTrueTypeFont &font, string text, float x, float y_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -2847,14 +2847,14 @@ See [ofLoadIdentityMatrix](ofGraphics.html#show_ofLoadIdentityMatrix)
 
 <!----------------------------------------------------------------------------->
 
-###void loadMatrix(&m)
+###void loadMatrix(*m)
 
 <!--
-_syntax: loadMatrix(&m)_
+_syntax: loadMatrix(*m)_
 _name: loadMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const glm::mat4 &m_
+_parameters: const float *m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2883,14 +2883,14 @@ See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
 
 <!----------------------------------------------------------------------------->
 
-###void loadMatrix(*m)
+###void loadMatrix(&m)
 
 <!--
-_syntax: loadMatrix(*m)_
+_syntax: loadMatrix(&m)_
 _name: loadMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const float *m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -2991,14 +2991,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void multMatrix(&m)
+###void multMatrix(*m)
 
 <!--
-_syntax: multMatrix(&m)_
+_syntax: multMatrix(*m)_
 _name: multMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const glm::mat4 &m_
+_parameters: const float *m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -3027,14 +3027,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void multMatrix(*m)
+###void multMatrix(&m)
 
 <!--
-_syntax: multMatrix(*m)_
+_syntax: multMatrix(&m)_
 _name: multMatrix_
 _returns: void_
 _returns_description: _
-_parameters: const float *m_
+_parameters: const glm::mat4 &m_
 _access: public_
 _version_started: 0072_
 _version_deprecated: _
@@ -3351,42 +3351,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotateDeg(radians)
-
-<!--
-_syntax: rotateDeg(radians)_
-_name: rotateDeg_
-_returns: void_
-_returns_description: _
-_parameters: float radians_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void rotateDeg(radians, vecX, vecY, vecZ)
 
 <!--
@@ -3423,11 +3387,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotateRad(radians)
+###void rotateDeg(radians)
 
 <!--
-_syntax: rotateRad(radians)_
-_name: rotateRad_
+_syntax: rotateDeg(radians)_
+_name: rotateDeg_
 _returns: void_
 _returns_description: _
 _parameters: float radians_
@@ -3467,6 +3431,42 @@ _name: rotateRad_
 _returns: void_
 _returns_description: _
 _parameters: float radians, float vecX, float vecY, float vecZ_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateRad(radians)
+
+<!--
+_syntax: rotateRad(radians)_
+_name: rotateRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -4035,6 +4035,78 @@ See [ofSetCircleResolution](ofGraphics.html#show_ofSetCircleResolution)
 
 <!----------------------------------------------------------------------------->
 
+###void setColor(r, g, b)
+
+<!--
+_syntax: setColor(r, g, b)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: int r, int g, int b_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+See [ofSetColor](ofGraphics.html#show_ofSetColor)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(r, g, b, a)
+
+<!--
+_syntax: setColor(r, g, b, a)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: int r, int g, int b, int a_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+See [ofSetColor](ofGraphics.html#show_ofSetColor)
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setColor(&color)
 
 <!--
@@ -4115,78 +4187,6 @@ _name: setColor_
 _returns: void_
 _returns_description: _
 _parameters: int gray_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-See [ofSetColor](ofGraphics.html#show_ofSetColor)
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setColor(r, g, b)
-
-<!--
-_syntax: setColor(r, g, b)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: int r, int g, int b_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-See [ofSetColor](ofGraphics.html#show_ofSetColor)
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setColor(r, g, b, a)
-
-<!--
-_syntax: setColor(r, g, b, a)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: int r, int g, int b, int a_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -5259,42 +5259,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void translate(&p)
-
-<!--
-_syntax: translate(&p)_
-_name: translate_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-See [ofTranslate](ofGraphics.html#show_ofTranslate)
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void translate(x, y, z)
 
 <!--
@@ -5331,16 +5295,16 @@ See [ofTranslate](ofGraphics.html#show_ofTranslate)
 
 <!----------------------------------------------------------------------------->
 
-###void unbind(&camera)
+###void translate(&p)
 
 <!--
-_syntax: unbind(&camera)_
-_name: unbind_
+_syntax: translate(&p)_
+_name: translate_
 _returns: void_
 _returns_description: _
-_parameters: const ofCamera &camera_
+_parameters: const glm::vec3 &p_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -5359,7 +5323,7 @@ _inlined_description: _
 
 _description: _
 
-
+See [ofTranslate](ofGraphics.html#show_ofTranslate)
 
 
 
@@ -5367,14 +5331,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void unbind(&fbo)
+###void unbind(&video)
 
 <!--
-_syntax: unbind(&fbo)_
+_syntax: unbind(&video)_
 _name: unbind_
 _returns: void_
 _returns_description: _
-_parameters: const ofFbo &fbo_
+_parameters: const ofBaseVideoDraws &video_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -5511,14 +5475,50 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void unbind(&video)
+###void unbind(&camera)
 
 <!--
-_syntax: unbind(&video)_
+_syntax: unbind(&camera)_
 _name: unbind_
 _returns: void_
 _returns_description: _
-_parameters: const ofBaseVideoDraws &video_
+_parameters: const ofCamera &camera_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unbind(&fbo)
+
+<!--
+_syntax: unbind(&fbo)_
+_name: unbind_
+_returns: void_
+_returns_description: _
+_parameters: const ofFbo &fbo_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

@@ -1,19 +1,10 @@
-#class ofGstUtils
+#functions
 
 
 <!--
 _visible: True_
-_advanced: True_
-_istemplated: False_
-_extends: _
+_advanced: False_
 -->
-
-##InlineDescription
-
-
-
-
-
 
 ##Description
 
@@ -21,20 +12,18 @@ _extends: _
 
 
 
-##Methods
 
+<!----------------------------------------------------------------------------->
 
-
-###GstFlowReturn buffer_cb(buffer)
+###int * ofGetJNIEnv()
 
 <!--
-_syntax: buffer_cb(buffer)_
-_name: buffer_cb_
-_returns: GstFlowReturn_
+_syntax: ofGetJNIEnv()_
+_name: ofGetJNIEnv_
+_returns: int *_
 _returns_description: _
-_parameters: shared_ptr< GstSample > buffer_
-_access: public_
-_version_started: 007_
+_parameters: _
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -61,52 +50,155 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool busFunction(*bus, *message, *app)
+###int ofGetJavaOFAndroid()
 
 <!--
-_syntax: busFunction(*bus, *message, *app)_
-_name: busFunction_
+_syntax: ofGetJavaOFAndroid()_
+_name: ofGetJavaOFAndroid_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int * ofGetJavaVMPtr()
+
+<!--
+_syntax: ofGetJavaVMPtr()_
+_name: ofGetJavaVMPtr_
+_returns: int *_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofGetOFActivityObject()
+
+<!--
+_syntax: ofGetOFActivityObject()_
+_name: ofGetOFActivityObject_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidAlertBox(msg)
+
+<!--
+_syntax: ofxAndroidAlertBox(msg)_
+_name: ofxAndroidAlertBox_
+_returns: void_
+_returns_description: _
+_parameters: string msg_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofxAndroidAlertListBox(title, &list)
+
+<!--
+_syntax: ofxAndroidAlertListBox(title, &list)_
+_name: ofxAndroidAlertListBox_
 _returns: bool_
 _returns_description: _
-_parameters: GstBus *bus, GstMessage *message, ofGstUtils *app_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void close()
-
-<!--
-_syntax: close()_
-_name: close_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
+_parameters: string title, const int &list_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -133,16 +225,15 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void eos_cb()
+###void ofxAndroidAlertTextBox(question, text)
 
 <!--
-_syntax: eos_cb()_
-_name: eos_cb_
+_syntax: ofxAndroidAlertTextBox(question, text)_
+_name: ofxAndroidAlertTextBox_
 _returns: void_
 _returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
+_parameters: string question, string text_
+_version_started: _
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -169,16 +260,785 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float getDuration()
+###bool ofxAndroidCheckSDCardMounted()
 
 <!--
-_syntax: getDuration()_
-_name: getDuration_
+_syntax: ofxAndroidCheckSDCardMounted()_
+_name: ofxAndroidCheckSDCardMounted_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidDisableMulticast()
+
+<!--
+_syntax: ofxAndroidDisableMulticast()_
+_name: ofxAndroidDisableMulticast_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidDismissProgressBox(id)
+
+<!--
+_syntax: ofxAndroidDismissProgressBox(id)_
+_name: ofxAndroidDismissProgressBox_
+_returns: void_
+_returns_description: _
+_parameters: int id_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidEnableMulticast()
+
+<!--
+_syntax: ofxAndroidEnableMulticast()_
+_name: ofxAndroidEnableMulticast_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofxAndroidEventsClass & ofxAndroidEvents()
+
+<!--
+_syntax: ofxAndroidEvents()_
+_name: ofxAndroidEvents_
+_returns: ofxAndroidEventsClass &_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofxAndroidGetStringRes(id)
+
+<!--
+_syntax: ofxAndroidGetStringRes(id)_
+_name: ofxAndroidGetStringRes_
+_returns: string_
+_returns_description: _
+_parameters: string id_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofxAndroidGetTextBoxResult()
+
+<!--
+_syntax: ofxAndroidGetTextBoxResult()_
+_name: ofxAndroidGetTextBoxResult_
+_returns: string_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofxAndroidIsMobileOnline()
+
+<!--
+_syntax: ofxAndroidIsMobileOnline()_
+_name: ofxAndroidIsMobileOnline_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofxAndroidIsOnline()
+
+<!--
+_syntax: ofxAndroidIsOnline()_
+_name: ofxAndroidIsOnline_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofxAndroidIsWifiOnline()
+
+<!--
+_syntax: ofxAndroidIsWifiOnline()_
+_name: ofxAndroidIsWifiOnline_
+_returns: bool_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidLaunchBrowser(url)
+
+<!--
+_syntax: ofxAndroidLaunchBrowser(url)_
+_name: ofxAndroidLaunchBrowser_
+_returns: void_
+_returns_description: _
+_parameters: string url_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidLockScreenSleep()
+
+<!--
+_syntax: ofxAndroidLockScreenSleep()_
+_name: ofxAndroidLockScreenSleep_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidMonitorNetworkState()
+
+<!--
+_syntax: ofxAndroidMonitorNetworkState()_
+_name: ofxAndroidMonitorNetworkState_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidNotifyLoadPercent(percent)
+
+<!--
+_syntax: ofxAndroidNotifyLoadPercent(percent)_
+_name: ofxAndroidNotifyLoadPercent_
+_returns: void_
+_returns_description: _
+_parameters: float percent_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidOkCancelBox(msg)
+
+<!--
+_syntax: ofxAndroidOkCancelBox(msg)_
+_name: ofxAndroidOkCancelBox_
+_returns: void_
+_returns_description: _
+_parameters: string msg_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int ofxAndroidProgressBox(msg)
+
+<!--
+_syntax: ofxAndroidProgressBox(msg)_
+_name: ofxAndroidProgressBox_
+_returns: int_
+_returns_description: _
+_parameters: string msg_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###string ofxAndroidRandomUUID()
+
+<!--
+_syntax: ofxAndroidRandomUUID()_
+_name: ofxAndroidRandomUUID_
+_returns: string_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidSetViewItemChecked(item_name, checked)
+
+<!--
+_syntax: ofxAndroidSetViewItemChecked(item_name, checked)_
+_name: ofxAndroidSetViewItemChecked_
+_returns: void_
+_returns_description: _
+_parameters: string item_name, bool checked_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidToast(msg)
+
+<!--
+_syntax: ofxAndroidToast(msg)_
+_name: ofxAndroidToast_
+_returns: void_
+_returns_description: _
+_parameters: string msg_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidUnlockScreenSleep()
+
+<!--
+_syntax: ofxAndroidUnlockScreenSleep()_
+_name: ofxAndroidUnlockScreenSleep_
+_returns: void_
+_returns_description: _
+_parameters: _
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofxAndroidYesNoBox(msg)
+
+<!--
+_syntax: ofxAndroidYesNoBox(msg)_
+_name: ofxAndroidYesNoBox_
+_returns: void_
+_returns_description: _
+_parameters: string msg_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###bool ofxJavaCallBoolMethod(object, classID, methodName, methodSignature, args)
+
+<!--
+_syntax: ofxJavaCallBoolMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallBoolMethod_
+_returns: bool_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###float ofxJavaCallFloatMethod(object, classID, methodName, methodSignature, args)
+
+<!--
+_syntax: ofxJavaCallFloatMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallFloatMethod_
 _returns: float_
 _returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -205,739 +1065,53 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###int64_t getDurationNanos()
+###int ofxJavaCallIntMethod(object, classID, methodName, methodSignature, args)
 
 <!--
-_syntax: getDurationNanos()_
-_name: getDurationNanos_
+_syntax: ofxJavaCallIntMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallIntMethod_
+_returns: int_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###int64_t ofxJavaCallLongMethod(object, classID, methodName, methodSignature, args)
+
+<!--
+_syntax: ofxJavaCallLongMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallLongMethod_
 _returns: int64_t_
 _returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GstElement * getGstElementByName(&name)
-
-<!--
-_syntax: getGstElementByName(&name)_
-_name: getGstElementByName_
-_returns: GstElement *_
-_returns_description: _
-_parameters: const string &name_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GMainLoop * getGstMainLoop()
-
-<!--
-_syntax: getGstMainLoop()_
-_name: getGstMainLoop_
-_returns: GMainLoop *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool getIsMovieDone()
-
-<!--
-_syntax: getIsMovieDone()_
-_name: getIsMovieDone_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofLoopType getLoopState()
-
-<!--
-_syntax: getLoopState()_
-_name: getLoopState_
-_returns: ofLoopType_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###uint64_t getMaxLatencyNanos()
-
-<!--
-_syntax: getMaxLatencyNanos()_
-_name: getMaxLatencyNanos_
-_returns: uint64_t_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###uint64_t getMinLatencyNanos()
-
-<!--
-_syntax: getMinLatencyNanos()_
-_name: getMinLatencyNanos_
-_returns: uint64_t_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GstElement * getPipeline()
-
-<!--
-_syntax: getPipeline()_
-_name: getPipeline_
-_returns: GstElement *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getPosition()
-
-<!--
-_syntax: getPosition()_
-_name: getPosition_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GstElement * getSink()
-
-<!--
-_syntax: getSink()_
-_name: getSink_
-_returns: GstElement *_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###float getSpeed()
-
-<!--
-_syntax: getSpeed()_
-_name: getSpeed_
-_returns: float_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool gstHandleMessage(*bus, *message)
-
-<!--
-_syntax: gstHandleMessage(*bus, *message)_
-_name: gstHandleMessage_
-_returns: bool_
-_returns_description: _
-_parameters: GstBus *bus, GstMessage *message_
-_access: private_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isFrameByFrame()
-
-<!--
-_syntax: isFrameByFrame()_
-_name: isFrameByFrame_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isLoaded()
-
-<!--
-_syntax: isLoaded()_
-_name: isLoaded_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isPaused()
-
-<!--
-_syntax: isPaused()_
-_name: isPaused_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool isPlaying()
-
-<!--
-_syntax: isPlaying()_
-_name: isPlaying_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofGstUtils()
-
-<!--
-_syntax: ofGstUtils()_
-_name: ofGstUtils_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void play()
-
-<!--
-_syntax: play()_
-_name: play_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###GstFlowReturn preroll_cb(buffer)
-
-<!--
-_syntax: preroll_cb(buffer)_
-_name: preroll_cb_
-_returns: GstFlowReturn_
-_returns_description: _
-_parameters: shared_ptr< GstSample > buffer_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void quitGstMainLoop()
-
-<!--
-_syntax: quitGstMainLoop()_
-_name: quitGstMainLoop_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setFrameByFrame(bFrameByFrame)
-
-<!--
-_syntax: setFrameByFrame(bFrameByFrame)_
-_name: setFrameByFrame_
-_returns: void_
-_returns_description: _
-_parameters: bool bFrameByFrame_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
 _static: False_
 _visible: True_
 _advanced: False_
@@ -961,645 +1135,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setLoopState(state)
+###int ofxJavaCallObjectMethod()
 
 <!--
-_syntax: setLoopState(state)_
-_name: setLoopState_
-_returns: void_
-_returns_description: _
-_parameters: ofLoopType state_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setPaused(bPause)
-
-<!--
-_syntax: setPaused(bPause)_
-_name: setPaused_
-_returns: void_
-_returns_description: _
-_parameters: bool bPause_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setPipelineWithSink(pipeline, sinkname, isStream = false)
-
-<!--
-_syntax: setPipelineWithSink(pipeline, sinkname, isStream = false)_
-_name: setPipelineWithSink_
-_returns: bool_
-_returns_description: _
-_parameters: string pipeline, string sinkname, bool isStream=false_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setPipelineWithSink(*pipeline, *sink, isStream = false)
-
-<!--
-_syntax: setPipelineWithSink(*pipeline, *sink, isStream = false)_
-_name: setPipelineWithSink_
-_returns: bool_
-_returns_description: _
-_parameters: GstElement *pipeline, GstElement *sink, bool isStream=false_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setPosition(pct)
-
-<!--
-_syntax: setPosition(pct)_
-_name: setPosition_
-_returns: void_
-_returns_description: _
-_parameters: float pct_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setSinkListener(*appsink)
-
-<!--
-_syntax: setSinkListener(*appsink)_
-_name: setSinkListener_
-_returns: void_
-_returns_description: _
-_parameters: ofGstAppSink *appsink_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setSpeed(speed)
-
-<!--
-_syntax: setSpeed(speed)_
-_name: setSpeed_
-_returns: void_
-_returns_description: _
-_parameters: float speed_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setVolume(volume)
-
-<!--
-_syntax: setVolume(volume)_
-_name: setVolume_
-_returns: void_
-_returns_description: _
-_parameters: float volume_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void startGstMainLoop()
-
-<!--
-_syntax: startGstMainLoop()_
-_name: startGstMainLoop_
-_returns: void_
+_syntax: ofxJavaCallObjectMethod()_
+_name: ofxJavaCallObjectMethod_
+_returns: int_
 _returns_description: _
 _parameters: _
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool startPipeline()
-
-<!--
-_syntax: startPipeline()_
-_name: startPipeline_
-_returns: bool_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void stop()
-
-<!--
-_syntax: stop()_
-_name: stop_
-_returns: void_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ~ofGstUtils()
-
-<!--
-_syntax: ~ofGstUtils()_
-_name: ~ofGstUtils_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-##Variables
-
-
-
-###ofGstAppSink appsink
-
-<!--
-_name: appsink_
-_type: ofGstAppSink_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bFrameByFrame
-
-<!--
-_name: bFrameByFrame_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bIsMovieDone
-
-<!--
-_name: bIsMovieDone_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bLoaded
-
-<!--
-_name: bLoaded_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bPaused
-
-<!--
-_name: bPaused_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool bPlaying
-
-<!--
-_name: bPlaying_
-_type: bool_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_visible: True_
-_constant: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###guint busWatchID
-
-<!--
-_name: busWatchID_
-_type: guint_
-_access: private_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
-_visible: True_
 _constant: False_
+_static: False_
+_visible: True_
 _advanced: False_
 -->
 
@@ -1621,49 +1170,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool closing
+###int ofxJavaCallStaticObjectMethod()
 
 <!--
-_name: closing_
-_type: bool_
-_access: protected_
+_syntax: ofxJavaCallStaticObjectMethod()_
+_name: ofxJavaCallStaticObjectMethod_
+_returns: int_
+_returns_description: _
+_parameters: _
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
-_visible: True_
 _constant: False_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###gint64 durationNanos
-
-<!--
-_name: durationNanos_
-_type: gint64_
-_access: private_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
@@ -1685,17 +1205,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###condition_variable eosCondition
+###void ofxJavaCallStaticVoidMethod(classID, methodName, methodSignature, args)
 
 <!--
-_name: eosCondition_
-_type: condition_variable_
-_access: private_
+_syntax: ofxJavaCallStaticVoidMethod(classID, methodName, methodSignature, args)_
+_name: ofxJavaCallStaticVoidMethod_
+_returns: void_
+_returns_description: _
+_parameters: int classID, string methodName, string methodSignature, va_list args_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
-_visible: True_
 _constant: False_
+_static: False_
+_visible: True_
 _advanced: False_
 -->
 
@@ -1717,17 +1240,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###mutex eosMutex
+###void ofxJavaCallStaticVoidMethod(className, methodName, methodSignature)
 
 <!--
-_name: eosMutex_
-_type: mutex_
-_access: private_
+_syntax: ofxJavaCallStaticVoidMethod(className, methodName, methodSignature)_
+_name: ofxJavaCallStaticVoidMethod_
+_returns: void_
+_returns_description: _
+_parameters: string className, string methodName, string methodSignature_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
-_visible: True_
 _constant: False_
+_static: False_
+_visible: True_
 _advanced: False_
 -->
 
@@ -1749,17 +1275,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GstElement * gstPipeline
+###void ofxJavaCallVoidMethod(object, classID, methodName, methodSignature, args)
 
 <!--
-_name: gstPipeline_
-_type: GstElement *_
-_access: private_
-_version_started: 007_
+_syntax: ofxJavaCallVoidMethod(object, classID, methodName, methodSignature, args)_
+_name: ofxJavaCallVoidMethod_
+_returns: void_
+_returns_description: _
+_parameters: int object, int classID, string methodName, string methodSignature, va_list args_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
@@ -1781,17 +1310,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###GstElement * gstSink
+###int ofxJavaGetClassID()
 
 <!--
-_name: gstSink_
-_type: GstElement *_
-_access: private_
-_version_started: 007_
+_syntax: ofxJavaGetClassID()_
+_name: ofxJavaGetClassID_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
@@ -1813,17 +1345,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool isAppSink
+###string ofxJavaGetClassName(classID)
 
 <!--
-_name: isAppSink_
-_type: bool_
-_access: private_
-_version_started: 007_
+_syntax: ofxJavaGetClassName(classID)_
+_name: ofxJavaGetClassName_
+_returns: string_
+_returns_description: _
+_parameters: int classID_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
@@ -1845,17 +1380,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool isStream
+###int ofxJavaGetMethodID()
 
 <!--
-_name: isStream_
-_type: bool_
-_access: private_
-_version_started: 007_
+_syntax: ofxJavaGetMethodID()_
+_name: ofxJavaGetMethodID_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
@@ -1877,17 +1415,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofLoopType loopMode
+###int ofxJavaGetStaticFieldID()
 
 <!--
-_name: loopMode_
-_type: ofLoopType_
-_access: private_
-_version_started: 007_
+_syntax: ofxJavaGetStaticFieldID()_
+_name: ofxJavaGetStaticFieldID_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
@@ -1909,17 +1450,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofGstMainLoopThread * mainLoop
+###int ofxJavaGetStaticMethodID()
 
 <!--
-_name: mainLoop_
-_type: ofGstMainLoopThread *_
-_access: private_
-_version_started: 0073_
+_syntax: ofxJavaGetStaticMethodID()_
+_name: ofxJavaGetStaticMethodID_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 
@@ -1941,17 +1485,20 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###float speed
+###int ofxJavaGetStaticObjectField()
 
 <!--
-_name: speed_
-_type: float_
-_access: private_
-_version_started: 007_
+_syntax: ofxJavaGetStaticObjectField()_
+_name: ofxJavaGetStaticObjectField_
+_returns: int_
+_returns_description: _
+_parameters: _
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
+_constant: False_
+_static: False_
 _visible: True_
-_constant: True_
 _advanced: False_
 -->
 

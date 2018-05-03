@@ -781,14 +781,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setShape(r)
+###void setShape(x, y, w, h)
 
 <!--
-_syntax: setShape(r)_
+_syntax: setShape(x, y, w, h)_
 _name: setShape_
 _returns: void_
 _returns_description: _
-_parameters: ofRectangle r_
+_parameters: float x, float y, float w, float h_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -817,14 +817,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setShape(x, y, w, h)
+###void setShape(r)
 
 <!--
-_syntax: setShape(x, y, w, h)_
+_syntax: setShape(r)_
 _name: setShape_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float w, float h_
+_parameters: ofRectangle r_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

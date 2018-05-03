@@ -86,7 +86,7 @@ _inlined_description: _
 
 Get the current playhead position as a frame number.
 
-**Returns**: The current playhead position as a frame number.
+Returns: The current playhead position as a frame number.
 
 
 
@@ -124,7 +124,7 @@ _inlined_description: _
 
 Get the duration of the loaded video in seconds.
 
-**Returns**: The duration of the loaded video in seconds.
+Returns: The duration of the loaded video in seconds.
 
 
 
@@ -162,7 +162,7 @@ _inlined_description: _
 
 Get the height in pixels of the loaded video.
 
-**Returns**: The height in pixels of the loaded video or 0 if none is loaded.
+Returns: The height in pixels of the loaded video or 0 if none is loaded.
 
 
 
@@ -200,7 +200,7 @@ _inlined_description: _
 
 Returns true if the loaded video has finished playing.
 
-**Returns**: True if the loaded video has finished playing.
+Returns: True if the loaded video has finished playing.
 
 
 
@@ -238,7 +238,7 @@ _inlined_description: _
 
 Get the current loop state of the video.
 
-**See also**: ::ofLoopType
+See also: ::ofLoopType
 
 
 
@@ -281,7 +281,7 @@ represents the position of the playhead. 0.0 maps to the first frame of
 the loaded video and 1.0 maps to the last frame of the loaded video.
 
 
-**Returns**: A value between 0.0 and 1.0 representing playhead position.
+Returns: A value between 0.0 and 1.0 representing playhead position.
 
 
 
@@ -326,7 +326,7 @@ the direction of playback will change each loop, but the playback rate
 will still be scaled by the absolute value of the speed.
 
 
-**Returns**: The playback speed of the video player.
+Returns: The playback speed of the video player.
 
 
 
@@ -369,7 +369,7 @@ this method will return a pointer to the internal texture. If
 direct-to-texture rendering is not supported, nullptr is returned.
 
 
-**Returns**: A valid pointer to the internal texture, otherwise a nullptr.
+Returns: A valid pointer to the internal texture, otherwise a nullptr.
 
 
 
@@ -407,7 +407,7 @@ _inlined_description: _
 
 Get the total number of frames in the currently loaded video.
 
-**Returns**: The total number of frames in the currently loaded video.
+Returns: The total number of frames in the currently loaded video.
 
 
 
@@ -445,7 +445,7 @@ _inlined_description: _
 
 Get the width in pixels of the loaded video.
 
-**Returns**: The width in pixels of the loaded video or 0 if none is loaded.
+Returns: The width in pixels of the loaded video or 0 if none is loaded.
 
 
 
@@ -487,9 +487,9 @@ This is helpful when loading a video with loadAsync(). This is also
 an alias of isLoaded().
 
 
-**See also**: loadAsync()
+See also: loadAsync()
 
-**Returns**: True if a video is loaded.
+Returns: True if a video is loaded.
 
 
 
@@ -531,9 +531,9 @@ This is helpful when loading a video with loadAsync(). This is also an
 alias of isInitialized().
 
 
-**See also**: loadAsync()
+See also: loadAsync()
 
-**Returns**: True if a video is loaded.
+Returns: True if a video is loaded.
 
 
 
@@ -571,7 +571,7 @@ _inlined_description: _
 
 Returns true if the video is paused.
 
-**Returns**: True if the video is paused.
+Returns: True if the video is paused.
 
 
 
@@ -609,7 +609,7 @@ _inlined_description: _
 
 Returns true if the loaded video is playing.
 
-**Returns**: True if the loaded video is playing.
+Returns: True if the loaded video is playing.
 
 
 
@@ -651,13 +651,12 @@ The list of supported video types and sources (e.g. rtsp:// sources) is
 implementation dependent.
 
 
-**Parameters:**
-
+Parameters:
 name The name of the video resource to load.
 
-**Returns**: True if the video was loaded successfully.
+Returns: True if the video was loaded successfully.
 
-**See also**: loadAsync()
+See also: loadAsync()
 
 
 
@@ -702,11 +701,10 @@ When this method is used to load a video resouce, users can determine
 when the video is loaded by calling isLoaded().
 
 
-**Parameters:**
-
+Parameters:
 name The name of the video resource to load.
 
-**See also**: isLoaded()
+See also: isLoaded()
 
 
 
@@ -783,9 +781,9 @@ _inlined_description: _
 
 Play the video from the current playhead position.
 
-**See also**: getPosition()
+See also: getPosition()
 
-**See also**: setPostion()
+See also: setPostion()
 
 
 
@@ -867,8 +865,7 @@ a normalized floating point value. Frame count begins with the first
 frame as 0 and the last frame as getTotalNumFrames() - 1.
 
 
-**Parameters:**
-
+Parameters:
 frame The frame number to set the new playhead to.
 
 
@@ -907,11 +904,10 @@ _inlined_description: _
 
 Set the video loop state.
 
-**Parameters:**
-
+Parameters:
 state The loop state of the video.
 
-**See also**: ::ofLoopType
+See also: ::ofLoopType
 
 
 
@@ -949,8 +945,7 @@ _inlined_description: _
 
 Set the paused state of the video.
 
-**Parameters:**
-
+Parameters:
 bPause True to pause the video, false to play.
 
 
@@ -994,8 +989,7 @@ represents the position of the playhead. 0.0 maps to the first frame of
 the loaded video and 1.0 maps to the last frame of the loaded video.
 
 
-**Parameters:**
-
+Parameters:
 pct A value between 0.0 and 1.0 representing playhead position.
 
 
@@ -1047,8 +1041,7 @@ speed to a negative number. A speed 0.25 will play the video at 1/4 the
 the normal rate and a rate of 0.0 will effectively stop playback.
 
 
-**Parameters:**
-
+Parameters:
 speed The desired playback speed of the video.
 
 
@@ -1092,8 +1085,7 @@ represents the video player volume. 0.0 maps to silence and 1.0 maps to
 maximum volume.
 
 
-**Parameters:**
-
+Parameters:
 volume A value between 0.0 and 1.0 representing volume.
 
 

@@ -61,42 +61,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void bind(&fbo)
-
-<!--
-_syntax: bind(&fbo)_
-_name: bind_
-_returns: void_
-_returns_description: _
-_parameters: const ofFbo &fbo_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void bind(&material)
 
 <!--
@@ -213,6 +177,42 @@ _name: bind_
 _returns: void_
 _returns_description: _
 _parameters: const ofBaseVideoDraws &video_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void bind(&fbo)
+
+<!--
+_syntax: bind(&fbo)_
+_name: bind_
+_returns: void_
+_returns_description: _
+_parameters: const ofFbo &fbo_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -529,14 +529,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&mesh, renderType)
+###void draw(&vbo, drawMode, first, total)
 
 <!--
-_syntax: draw(&mesh, renderType)_
+_syntax: draw(&vbo, drawMode, first, total)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType_
+_parameters: const ofVbo &vbo, GLuint drawMode, int first, int total_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -565,14 +565,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&vbo, drawMode, first, total)
+###void draw(&mesh, renderType)
 
 <!--
-_syntax: draw(&vbo, drawMode, first, total)_
+_syntax: draw(&mesh, renderType)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofVbo &vbo, GLuint drawMode, int first, int total_
+_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -673,14 +673,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawInstanced(&mesh, renderType, primCount)
+###void drawInstanced(&vbo, drawMode, first, total, primCount)
 
 <!--
-_syntax: drawInstanced(&mesh, renderType, primCount)_
+_syntax: drawInstanced(&vbo, drawMode, first, total, primCount)_
 _name: drawInstanced_
 _returns: void_
 _returns_description: _
-_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType, int primCount_
+_parameters: const ofVbo &vbo, GLuint drawMode, int first, int total, int primCount_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -709,14 +709,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawInstanced(&vbo, drawMode, first, total, primCount)
+###void drawInstanced(&mesh, renderType, primCount)
 
 <!--
-_syntax: drawInstanced(&vbo, drawMode, first, total, primCount)_
+_syntax: drawInstanced(&mesh, renderType, primCount)_
 _name: drawInstanced_
 _returns: void_
 _returns_description: _
-_parameters: const ofVbo &vbo, GLuint drawMode, int first, int total, int primCount_
+_parameters: const ofVboMesh &mesh, ofPolyRenderMode renderType, int primCount_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1537,42 +1537,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void unbind(&fbo)
-
-<!--
-_syntax: unbind(&fbo)_
-_name: unbind_
-_returns: void_
-_returns_description: _
-_parameters: const ofFbo &fbo_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void unbind(&material)
 
 <!--
@@ -1689,6 +1653,42 @@ _name: unbind_
 _returns: void_
 _returns_description: _
 _parameters: const ofBaseVideoDraws &video_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void unbind(&fbo)
+
+<!--
+_syntax: unbind(&fbo)_
+_name: unbind_
+_returns: void_
+_returns_description: _
+_parameters: const ofFbo &fbo_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

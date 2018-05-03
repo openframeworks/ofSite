@@ -387,6 +387,305 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### tquat()
+
+<!--
+_syntax: tquat()_
+_name: tquat_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### tquat(&q = P)
+
+<!--
+_syntax: tquat(&q = P)_
+_name: tquat_
+_returns: _
+_returns_description: _
+_parameters: const glm::quat &q=P_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### tquat(U, &q = Q)
+
+<!--
+_syntax: tquat(U, &q = Q)_
+_name: tquat_
+_returns: _
+_returns_description: _
+_parameters: const tquat< U, Q > &q=Q_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### tquat(glm::ctor)
+
+<!--
+_syntax: tquat(glm::ctor)_
+_name: tquat_
+_returns: _
+_returns_description: _
+_parameters: glm::ctor _
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### tquat(&s, &v = P)
+
+<!--
+_syntax: tquat(&s, &v = P)_
+_name: tquat_
+_returns: _
+_returns_description: _
+_parameters: const T &s, const glm::vec3 &v=P_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### tquat(&w, &x, &y, &z)
+
+<!--
+_syntax: tquat(&w, &x, &y, &z)_
+_name: tquat_
+_returns: _
+_returns_description: _
+_parameters: const T &w, const T &x, const T &y, const T &z_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### tquat(U, &q = Q)
+
+<!--
+_syntax: tquat(U, &q = Q)_
+_name: tquat_
+_returns: _
+_returns_description: _
+_parameters: const tquat< U, Q > &q=Q_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### tquat(&u = P, &v = P)
+
+<!--
+_syntax: tquat(&u = P, &v = P)_
+_name: tquat_
+_returns: _
+_returns_description: _
+_parameters: const glm::vec3 &u=P, const glm::vec3 &v=P_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Create a quaternion from two normalized axis
+
+
+**Parameters:**
+
+u A first normalized axis
+
+v A second normalized axis
+
+See also: gtc_quaternion
+
+See also: http://lolengine.net/blog/2013/09/18/beautiful-maths-quaternion-from-vectors
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### tquat(&eulerAngles = P)
 
 <!--
@@ -467,305 +766,6 @@ _name: tquat_
 _returns: _
 _returns_description: _
 _parameters: const glm::mat4 &m=P_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tquat(&q = P)
-
-<!--
-_syntax: tquat(&q = P)_
-_name: tquat_
-_returns: _
-_returns_description: _
-_parameters: const glm::quat &q=P_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tquat(&s, &v = P)
-
-<!--
-_syntax: tquat(&s, &v = P)_
-_name: tquat_
-_returns: _
-_returns_description: _
-_parameters: const T &s, const glm::vec3 &v=P_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tquat(&u = P, &v = P)
-
-<!--
-_syntax: tquat(&u = P, &v = P)_
-_name: tquat_
-_returns: _
-_returns_description: _
-_parameters: const glm::vec3 &u=P, const glm::vec3 &v=P_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Create a quaternion from two normalized axis
-
-
-**Parameters:**
-
-u A first normalized axis
-
-v A second normalized axis
-
-**See also**: gtc_quaternion
-
-**See also**: http://lolengine.net/blog/2013/09/18/beautiful-maths-quaternion-from-vectors
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tquat(&w, &x, &y, &z)
-
-<!--
-_syntax: tquat(&w, &x, &y, &z)_
-_name: tquat_
-_returns: _
-_returns_description: _
-_parameters: const T &w, const T &x, const T &y, const T &z_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tquat()
-
-<!--
-_syntax: tquat()_
-_name: tquat_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tquat(U, &q = Q)
-
-<!--
-_syntax: tquat(U, &q = Q)_
-_name: tquat_
-_returns: _
-_returns_description: _
-_parameters: const tquat< U, Q > &q=Q_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tquat(U, &q = Q)
-
-<!--
-_syntax: tquat(U, &q = Q)_
-_name: tquat_
-_returns: _
-_returns_description: _
-_parameters: const tquat< U, Q > &q=Q_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### tquat(glm::ctor)
-
-<!--
-_syntax: tquat(glm::ctor)_
-_name: tquat_
-_returns: _
-_returns_description: _
-_parameters: glm::ctor _
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

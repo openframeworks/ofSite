@@ -36,7 +36,7 @@ _inlined_description: _
 
 \cond INTERNAL
 
-**Warning**: The internal z component of the glm::vec3 is preserved even though it
+Warning: The internal z-component of the ofPoint is preserved even though it
 is not used.
 
 
@@ -80,7 +80,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**Warning**: The internal z component of the glm::vec3 is preserved even though it
+Warning: The internal z-component of the ofPoint is preserved even though it
 is not used.
 
 

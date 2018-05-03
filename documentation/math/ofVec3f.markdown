@@ -77,9 +77,9 @@ single 'float's or 'int's, and can reduce the number of lines of code you have
 to write by half, at the same time making your code much easier to read and
 understand!
 
-**See also**: ofVec2f for 2D vectors
+See also: ofVec2f for 2D vectors
 
-**See also**: ofVec4f for 4D vectors
+See also: ofVec4f for 4D vectors
 
 
 
@@ -1103,44 +1103,6 @@ ofVec3f v3 = v1.getRotated(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getRotated(angle, &pivot, &axis)
-
-<!--
-_syntax: getRotated(angle, &pivot, &axis)_
-_name: getRotated_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: float angle, const ofVec3f &pivot, const ofVec3f &axis_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: True_
--->
-
-_inlined_description: _
-
-Returns a new vector that is the result of rotating this vector by
-'angle' degrees about the axis specified by 'axis', using 'pivot' as the
-origin of rotation.
-
-
-
-
-
-_description: _
-
-Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' degrees around the axis specified by 'axis', using 'pivot' as the origin of rotation.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f getRotated(ax, ay, az)
 
 <!--
@@ -1188,6 +1150,44 @@ ofVec3f v3 = v1.getRotated( 45, 0, 0 ); // v is now (0, √2, √2)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f getRotated(angle, &pivot, &axis)
+
+<!--
+_syntax: getRotated(angle, &pivot, &axis)_
+_name: getRotated_
+_returns: ofVec3f_
+_returns_description: _
+_parameters: float angle, const ofVec3f &pivot, const ofVec3f &axis_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: True_
+-->
+
+_inlined_description: _
+
+Returns a new vector that is the result of rotating this vector by
+'angle' degrees about the axis specified by 'axis', using 'pivot' as the
+origin of rotation.
+
+
+
+
+
+_description: _
+
+Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' degrees around the axis specified by 'axis', using 'pivot' as the origin of rotation.
 
 
 
@@ -1246,44 +1246,6 @@ ofVec3f v3 = v1.getRotated(PI/4, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f getRotatedRad(angle, &pivot, &axis)
-
-<!--
-_syntax: getRotatedRad(angle, &pivot, &axis)_
-_name: getRotatedRad_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: float angle, const ofVec3f &pivot, const ofVec3f &axis_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Returns a new vector that is the result of rotating this vector by
-'angle' radians about the axis specified by 'axis', using 'pivot' as the
-origin of rotation.
-
-
-
-
-
-_description: _
-
-Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' radians around the axis specified by 'axis', using 'pivot' as the origin of rotation.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f getRotatedRad(ax, ay, az)
 
 <!--
@@ -1331,6 +1293,44 @@ ofVec3f v3 = v1.getRotatedRad( PI/4, 0, 0 ); // v is now (0, √2, √2)
 ~~~~~
 
 Watch out for gimbal lock when specifying multiple rotations in the same call.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f getRotatedRad(angle, &pivot, &axis)
+
+<!--
+_syntax: getRotatedRad(angle, &pivot, &axis)_
+_name: getRotatedRad_
+_returns: ofVec3f_
+_returns_description: _
+_parameters: float angle, const ofVec3f &pivot, const ofVec3f &axis_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Returns a new vector that is the result of rotating this vector by
+'angle' radians about the axis specified by 'axis', using 'pivot' as the
+origin of rotation.
+
+
+
+
+
+_description: _
+
+Return a new 'ofVec3f' that is the result of rotating this vector by 'angle' radians around the axis specified by 'axis', using 'pivot' as the origin of rotation.
 
 
 
@@ -1895,6 +1895,131 @@ v2.normalize(); // v2 is now (√2, 0, √2)
 
 <!----------------------------------------------------------------------------->
 
+### ofVec3f()
+
+<!--
+_syntax: ofVec3f()_
+_name: ofVec3f_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construct a 3D vector. Defaults to (0,0,0).
+
+~~~~{.cpp}
+ofVec3f v1;
+// default: v1.x is 0, v1.y is 0, v1.z is 0
+
+ofVec3f v2 = ofVec3f(40, 20, 10);
+// v2.x is 40, v2.y is 20, v2.z is 10
+
+ofVec3f v3(0.1, 0.3, -1.5);
+// v3.x is 0.1, v3.y is 0.3, v3.z is -1.5
+~~~~
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec3f(x, y, z)
+
+<!--
+_syntax: ofVec3f(x, y, z)_
+_name: ofVec3f_
+_returns: _
+_returns_description: _
+_parameters: float x, float y, float z_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construt a 3D vector with `x`, `y` and `z` specified
+
+
+
+
+
+_description: _
+
+Construct a 3D vector. Defaults to (0,0).
+
+~~~~{.cpp}
+ofVec3f v1; // default: v1.x is 0, v1.y is 0, v1.z is 0
+ofVec3f v2 = ofVec3f(40, 20, 10); // v2.x is 40, v2.y is 20, v2.z is 10
+ofVec3f v3(0.1, 0.3, -1.5); // v3.x is 0.1, v3.y is 0.3, v3.z is -1.5
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofVec3f(scalar)
+
+<!--
+_syntax: ofVec3f(scalar)_
+_name: ofVec3f_
+_returns: _
+_returns_description: _
+_parameters: float scalar_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construct a 3D vector with `x`, `y` and `z` set to `scalar`
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofVec3f(&vec)
 
 <!--
@@ -2079,131 +2204,6 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec3f()
-
-<!--
-_syntax: ofVec3f()_
-_name: ofVec3f_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct a 3D vector. Defaults to (0,0,0).
-
-~~~~{.cpp}
-ofVec3f v1;
-// default: v1.x is 0, v1.y is 0, v1.z is 0
-
-ofVec3f v2 = ofVec3f(40, 20, 10);
-// v2.x is 40, v2.y is 20, v2.z is 10
-
-ofVec3f v3(0.1, 0.3, -1.5);
-// v3.x is 0.1, v3.y is 0.3, v3.z is -1.5
-~~~~
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec3f(scalar)
-
-<!--
-_syntax: ofVec3f(scalar)_
-_name: ofVec3f_
-_returns: _
-_returns_description: _
-_parameters: float scalar_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct a 3D vector with `x`, `y` and `z` set to `scalar`
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofVec3f(x, y, z)
-
-<!--
-_syntax: ofVec3f(x, y, z)_
-_name: ofVec3f_
-_returns: _
-_returns_description: _
-_parameters: float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construt a 3D vector with `x`, `y` and `z` specified
-
-
-
-
-
-_description: _
-
-Construct a 3D vector. Defaults to (0,0).
-
-~~~~{.cpp}
-ofVec3f v1; // default: v1.x is 0, v1.y is 0, v1.z is 0
-ofVec3f v2 = ofVec3f(40, 20, 10); // v2.x is 40, v2.y is 20, v2.z is 10
-ofVec3f v3(0.1, 0.3, -1.5); // v3.x is 0.1, v3.y is 0.3, v3.z is -1.5
-~~~~
 
 
 
@@ -2739,53 +2739,6 @@ ofVec3f v3 = v1 - v2; // v3 is (15, -30, 0)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f operator-()
-
-<!--
-_syntax: operator-()_
-_name: operator-_
-_returns: ofVec3f_
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Returns a new 'ofVec3f' that is the inverted version (mirrored in X, Y and Z)
-of this vector.
-
-~~~~{.cpp}
-ofVec3f v1(2, 5, 1);
-ofVec3f v2 = -v1; // (-2, -5, -1)
-~~~~
-
-
-
-
-
-_description: _
-
-Returns a new 'ofVec3f' that is the inverted version (mirrored in X, Y and Z) of this vector.
-
-~~~~{.cpp}
-ofVec3f v1(2, 5, 1);
-ofVec3f v2 = -v1; // (-2, -5, -1)
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f operator-(f)
 
 <!--
@@ -2825,6 +2778,53 @@ Returns a new vector with a float value 'f' subtracted from 'x', 'y' and 'z' mem
 ~~~~{.cpp}
 ofVec3f v1(2, 5, 1);
 ofVec3f v2 = v1 - 10; // (-8, -5, -9)
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofVec3f operator-()
+
+<!--
+_syntax: operator-()_
+_name: operator-_
+_returns: ofVec3f_
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Returns a new 'ofVec3f' that is the inverted version (mirrored in X, Y and Z)
+of this vector.
+
+~~~~{.cpp}
+ofVec3f v1(2, 5, 1);
+ofVec3f v2 = -v1; // (-2, -5, -1)
+~~~~
+
+
+
+
+
+_description: _
+
+Returns a new 'ofVec3f' that is the inverted version (mirrored in X, Y and Z) of this vector.
+
+~~~~{.cpp}
+ofVec3f v1(2, 5, 1);
+ofVec3f v2 = -v1; // (-2, -5, -1)
 ~~~~
 
 
@@ -3388,43 +3388,6 @@ v1.rotate(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f & rotate(angle, &pivot, &axis)
-
-<!--
-_syntax: rotate(angle, &pivot, &axis)_
-_name: rotate_
-_returns: ofVec3f &_
-_returns_description: _
-_parameters: float angle, const ofVec3f &pivot, const ofVec3f &axis_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotates this vector by 'angle' degrees about the axis specified by 'axis',
-using 'pivot' as the origin of rotation.
-
-
-
-
-
-_description: _
-
-Rotate this vector by 'angle' degrees around the axis specified by 'axis', using 'pivot' as the origin of rotation.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f & rotate(ax, ay, az)
 
 <!--
@@ -3479,6 +3442,43 @@ Watch out for gimbal lock when specifying multiple rotations in the same call.
 
 <!----------------------------------------------------------------------------->
 
+###ofVec3f & rotate(angle, &pivot, &axis)
+
+<!--
+_syntax: rotate(angle, &pivot, &axis)_
+_name: rotate_
+_returns: ofVec3f &_
+_returns_description: _
+_parameters: float angle, const ofVec3f &pivot, const ofVec3f &axis_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotates this vector by 'angle' degrees about the axis specified by 'axis',
+using 'pivot' as the origin of rotation.
+
+
+
+
+
+_description: _
+
+Rotate this vector by 'angle' degrees around the axis specified by 'axis', using 'pivot' as the origin of rotation.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofVec3f & rotateRad(angle, &axis)
 
 <!--
@@ -3525,43 +3525,6 @@ v1.set(1, 0, 0);
 // then rotate around the y axis
 v1.rotate(45, ofVec3f(0, 1, 0)); // v3 is (√2, 0, √2)
 ~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofVec3f & rotateRad(angle, &pivot, &axis)
-
-<!--
-_syntax: rotateRad(angle, &pivot, &axis)_
-_name: rotateRad_
-_returns: ofVec3f &_
-_returns_description: _
-_parameters: float angle, const ofVec3f &pivot, const ofVec3f &axis_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotates this vector by 'angle' radians around the axis specified by 'axis',
-using 'pivot' as the origin of rotation.
-
-
-
-
-
-_description: _
-
-Rotate this vector by 'angle' radians around the axis specified by 'axis', using 'pivot' as the origin of rotation.
 
 
 
@@ -3623,6 +3586,43 @@ Watch out for gimbal lock when specifying multiple rotations in the same call.
 
 <!----------------------------------------------------------------------------->
 
+###ofVec3f & rotateRad(angle, &pivot, &axis)
+
+<!--
+_syntax: rotateRad(angle, &pivot, &axis)_
+_name: rotateRad_
+_returns: ofVec3f &_
+_returns_description: _
+_parameters: float angle, const ofVec3f &pivot, const ofVec3f &axis_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotates this vector by 'angle' radians around the axis specified by 'axis',
+using 'pivot' as the origin of rotation.
+
+
+
+
+
+_description: _
+
+Rotate this vector by 'angle' radians around the axis specified by 'axis', using 'pivot' as the origin of rotation.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofVec3f & scale(length)
 
 <!--
@@ -3661,6 +3661,53 @@ Scales this vector up or down so that it has the requested length.
 ~~~~{.cpp}
 ofVec3f v1(3, 4); // length is 5
 v1.scale(15); // v1 is now (9, 12), which has length of 15
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(x, y, z)
+
+<!--
+_syntax: set(x, y, z)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float z_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set 'x', 'y' and 'z' components of this vector with just one function call.
+'z' is optional, it defaults to 0.
+
+~~~~{.cpp}
+ofVec3f v1;
+v1.set(40, 20, 70);
+~~~~
+
+
+
+
+
+_description: _
+
+Set 'x', 'y' and 'z' components of this vector with just one function call. 'z' is optional, it defaults to 0.
+
+~~~~{.cpp}
+ofVec3f v1;
+v1.set(40, 20, 70);
 ~~~~
 
 
@@ -3748,53 +3795,6 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(x, y, z)
-
-<!--
-_syntax: set(x, y, z)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float z_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set 'x', 'y' and 'z' components of this vector with just one function call.
-'z' is optional, it defaults to 0.
-
-~~~~{.cpp}
-ofVec3f v1;
-v1.set(40, 20, 70);
-~~~~
-
-
-
-
-
-_description: _
-
-Set 'x', 'y' and 'z' components of this vector with just one function call. 'z' is optional, it defaults to 0.
-
-~~~~{.cpp}
-ofVec3f v1;
-v1.set(40, 20, 70);
-~~~~
 
 
 

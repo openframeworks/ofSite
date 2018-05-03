@@ -387,14 +387,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscBundle(&other)
+### ofxOscBundle()
 
 <!--
-_syntax: ofxOscBundle(&other)_
+_syntax: ofxOscBundle()_
 _name: ofxOscBundle_
 _returns: _
 _returns_description: _
-_parameters: const ofxOscBundle &other_
+_parameters: _
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -423,14 +423,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscBundle()
+### ofxOscBundle(&other)
 
 <!--
-_syntax: ofxOscBundle()_
+_syntax: ofxOscBundle(&other)_
 _name: ofxOscBundle_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofxOscBundle &other_
 _access: public_
 _version_started: 007_
 _version_deprecated: _

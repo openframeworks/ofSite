@@ -106,42 +106,6 @@ This method allows you to render the results of a shading pass to all the textur
 
 <!----------------------------------------------------------------------------->
 
-###void allocate(settings)
-
-<!--
-_syntax: allocate(settings)_
-_name: allocate_
-_returns: void_
-_returns_description: _
-_parameters: ofFboSettings settings_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-You can also allocate the ofFbo using a Settings object
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void allocate(width, height, internalformat, numSamples = 0)
 
 <!--
@@ -173,6 +137,42 @@ _description: _
 Before you use the fbo you need to allocate it. This sets the width, height, and GL type of the fbo (i.e. whether it has alpha data or not) and the number of samples for MSAA. MSAA is sort of a big topic.
 MSAA is what you typically have in hardware on a modern graphics card. The graphics card renders to a surface that is larger than the final image, but in shading each "cluster" of samples (that will end up in a single pixel on the final screen) the pixel shader is run only once. We save a ton of fill rate, but we still burn memory bandwidth.
 This technique does not anti-alias any effects coming out of the shader, because the shader runs at 1x, so alpha cutouts are jagged. This is the most common way to run a forward-rendering game. MSAA does not work for a deferred renderer because lighting decisions are made after the MSAA is "resolved" (down-sized) to its final image size.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void allocate(settings)
+
+<!--
+_syntax: allocate(settings)_
+_name: allocate_
+_returns: void_
+_returns_description: _
+_parameters: ofFboSettings settings_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+You can also allocate the ofFbo using a Settings object
 
 
 
@@ -256,13 +256,13 @@ Passing OF_FBOMODE_NODEFAULTS won't change anything and just bind the fbo
 and set it as current rendering surface in OF
 
 
-**Warning**:  This is a convenience method, and is considered unsafe
+Warning:  This is a convenience method, and is considered unsafe
           in multi-window and/or multi-renderer scenarios.
           If you use more than one renderer, use each renderer's
           explicit void ofBaseGLRenderer::begin(const ofFbo & fbo, ofFboMode mode)
           method instead.
 
-**See also**:       void ofBaseGLRenderer::begin(const ofFbo & fbo, ofFboMode mode)
+See also:       void ofBaseGLRenderer::begin(const ofFbo & fbo, ofFboMode mode)
 
 
 
@@ -300,7 +300,7 @@ _inlined_description: _
 
    Bind OpenGL GL_FRAMEBUFFER target to this ofFbo
 
-**Warning**:  If you use this method, you need to manually keep track of the
+Warning:  If you use this method, you need to manually keep track of the
           currently bound framebuffer, if you ever want to restore state.
           * use ofBaseGLRenderer::getCurrentFramebuffer() to query the current
           framebuffer binding state within the renderer.
@@ -308,9 +308,9 @@ _inlined_description: _
           ofBaseGLRenderer::bind(const ofFbo & fbo) to bind the fbo, to allow
           the renderer to keep track of any bound fbos.
 
-**See also**:       unbind()
+See also:       unbind()
 
-**See also**:       virtual void ofBaseGLRenderer::bind(const ofFbo & fbo)
+See also:       virtual void ofBaseGLRenderer::bind(const ofFbo & fbo)
 
 
 
@@ -655,8 +655,7 @@ _inlined_description: _
 
 Copy the fbo to an ofBufferObject.
 
-**Parameters:**
-
+Parameters:
 buffer the target buffer to copy to.
 
 
@@ -929,7 +928,7 @@ _inlined_description: _
 
    Ends the current framebuffer render context.
 
-**See also**:       void begin(bool setupScreen=true) const;
+See also:       void begin(bool setupScreen=true) const;
 
 
 
@@ -1342,14 +1341,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofTexture & getTexture()
+###ofTexture & getTexture(attachmentPoint)
 
 <!--
-_syntax: getTexture()_
+_syntax: getTexture(attachmentPoint)_
 _name: getTexture_
-_returns: const ofTexture &_
+_returns: ofTexture &_
 _returns_description: _
-_parameters: _
+_parameters: int attachmentPoint_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1378,14 +1377,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofTexture & getTexture(attachmentPoint)
+###const ofTexture & getTexture()
 
 <!--
-_syntax: getTexture(attachmentPoint)_
+_syntax: getTexture()_
 _name: getTexture_
-_returns: ofTexture &_
+_returns: const ofTexture &_
 _returns_description: _
-_parameters: int attachmentPoint_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1666,16 +1665,16 @@ This is the maximum number of MSAA samples that your graphic card supports.
 
 <!----------------------------------------------------------------------------->
 
-### ofFbo(&&mom)
+### ofFbo()
 
 <!--
-_syntax: ofFbo(&&mom)_
+_syntax: ofFbo()_
 _name: ofFbo_
 _returns: _
 _returns_description: _
-_parameters: ofFbo &&mom_
+_parameters: _
 _access: public_
-_version_started: 0.10.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1694,7 +1693,7 @@ _inlined_description: _
 
 _description: _
 
-
+This is the default constructor for the ofFbo.
 
 
 
@@ -1738,50 +1737,14 @@ Copies all data from the mom fbo
 
 <!----------------------------------------------------------------------------->
 
-### ofFbo()
+### ofFbo(&&mom)
 
 <!--
-_syntax: ofFbo()_
+_syntax: ofFbo(&&mom)_
 _name: ofFbo_
 _returns: _
 _returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-This is the default constructor for the ofFbo.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofFbo & operator=(&&fbo)
-
-<!--
-_syntax: operator=(&&fbo)_
-_name: operator=_
-_returns: ofFbo &_
-_returns_description: _
-_parameters: ofFbo &&fbo_
+_parameters: ofFbo &&mom_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1839,6 +1802,42 @@ _inlined_description: _
 _description: _
 
 This overloaded operator allows you to set one fbo from another using the = operator. Very convenient.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofFbo & operator=(&&fbo)
+
+<!--
+_syntax: operator=(&&fbo)_
+_name: operator=_
+_returns: ofFbo &_
+_returns_description: _
+_parameters: ofFbo &&fbo_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 
@@ -2265,9 +2264,9 @@ _inlined_description: _
    Unbinds OpenGL framebuffer target and restores the OpenGL framebuffer
           render target to whatever this ofFbo stores in previousFramebufferBinding.
 
-**See also**:       bind()
+See also:       bind()
 
-**See also**:       void setPreviousFramebufferBinding(const GLuint& previousFramebufferBinding_) const
+See also:       void setPreviousFramebufferBinding(const GLuint& previousFramebufferBinding_) const
 
 
 

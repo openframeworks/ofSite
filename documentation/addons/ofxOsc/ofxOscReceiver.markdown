@@ -317,16 +317,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscReceiver(&mom)
+### ofxOscReceiver()
 
 <!--
-_syntax: ofxOscReceiver(&mom)_
+_syntax: ofxOscReceiver()_
 _name: ofxOscReceiver_
 _returns: _
 _returns_description: _
-_parameters: const ofxOscReceiver &mom_
+_parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -353,16 +353,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxOscReceiver()
+### ofxOscReceiver(&mom)
 
 <!--
-_syntax: ofxOscReceiver()_
+_syntax: ofxOscReceiver(&mom)_
 _name: ofxOscReceiver_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofxOscReceiver &mom_
 _access: public_
-_version_started: 007_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -425,6 +425,48 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###bool setup(port)
+
+<!--
+_syntax: setup(port)_
+_name: setup_
+_returns: bool_
+_returns_description: _
+_parameters: int port_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+set up the receiver with the port to listen for messages on
+and start listening
+
+multiple receivers can share the same port if port reuse is
+enabled (true by default)
+
+\return true if listening started
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###bool setup(&settings)
 
 <!--
@@ -453,48 +495,6 @@ multiple receivers can share the same port if port reuse is
 enabled (true by default)
 
 \return true if listening was started or start was not required
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###bool setup(port)
-
-<!--
-_syntax: setup(port)_
-_name: setup_
-_returns: bool_
-_returns_description: _
-_parameters: int port_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-set up the receiver with the port to listen for messages on
-and start listening
-
-multiple receivers can share the same port if port reuse is
-enabled (true by default)
-
-\return true if listening started
 
 
 

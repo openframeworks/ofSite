@@ -960,14 +960,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetPixelStoreiAlignment(panme, stride)
+###void ofSetPixelStoreiAlignment(pname, w, bpc, numChannels)
 
 <!--
-_syntax: ofSetPixelStoreiAlignment(panme, stride)_
+_syntax: ofSetPixelStoreiAlignment(pname, w, bpc, numChannels)_
 _name: ofSetPixelStoreiAlignment_
 _returns: void_
 _returns_description: _
-_parameters: GLenum panme, int stride_
+_parameters: GLenum pname, int w, int bpc, int numChannels_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
@@ -995,14 +995,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetPixelStoreiAlignment(pname, w, bpc, numChannels)
+###void ofSetPixelStoreiAlignment(panme, stride)
 
 <!--
-_syntax: ofSetPixelStoreiAlignment(pname, w, bpc, numChannels)_
+_syntax: ofSetPixelStoreiAlignment(panme, stride)_
 _name: ofSetPixelStoreiAlignment_
 _returns: void_
 _returns_description: _
-_parameters: GLenum pname, int w, int bpc, int numChannels_
+_parameters: GLenum panme, int stride_
 _version_started: 0.9.0_
 _version_deprecated: _
 _summary: _

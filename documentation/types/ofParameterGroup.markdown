@@ -531,6 +531,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###const ofAbstractParameter & get(pos)
+
+<!--
+_syntax: get(pos)_
+_name: get_
+_returns: const ofAbstractParameter &_
+_returns_description: _
+_parameters: size_t pos_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofAbstractParameter & get(&name)
 
 <!--
@@ -539,6 +575,42 @@ _name: get_
 _returns: ofAbstractParameter &_
 _returns_description: _
 _parameters: const string &name_
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofAbstractParameter & get(pos)
+
+<!--
+_syntax: get(pos)_
+_name: get_
+_returns: ofAbstractParameter &_
+_returns_description: _
+_parameters: size_t pos_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -603,14 +675,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ParameterType > & get(&name)
+###const ofParameter< ParameterType > & get(pos)
 
 <!--
-_syntax: get(&name)_
+_syntax: get(pos)_
 _name: get_
-_returns: ofParameter< ParameterType > &_
+_returns: const ofParameter< ParameterType > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -639,86 +711,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofAbstractParameter & get(pos)
+###ofParameter< ParameterType > & get(&name)
 
 <!--
-_syntax: get(pos)_
+_syntax: get(&name)_
 _name: get_
-_returns: const ofAbstractParameter &_
+_returns: ofParameter< ParameterType > &_
 _returns_description: _
-_parameters: size_t pos_
-_access: public_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofAbstractParameter & get(pos)
-
-<!--
-_syntax: get(pos)_
-_name: get_
-_returns: ofAbstractParameter &_
-_returns_description: _
-_parameters: size_t pos_
-_access: public_
-_version_started: 0073_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###const ofParameter< ParameterType > & get(pos)
-
-<!--
-_syntax: get(pos)_
-_name: get_
-_returns: const ofParameter< ParameterType > &_
-_returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -819,16 +819,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< bool > & getBool(&name)
+###const ofParameter< bool > & getBool(pos)
 
 <!--
-_syntax: getBool(&name)_
+_syntax: getBool(pos)_
 _name: getBool_
-_returns: ofParameter< bool > &_
+_returns: const ofParameter< bool > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -855,16 +855,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< bool > & getBool(pos)
+###ofParameter< bool > & getBool(&name)
 
 <!--
-_syntax: getBool(pos)_
+_syntax: getBool(&name)_
 _name: getBool_
-_returns: const ofParameter< bool > &_
+_returns: ofParameter< bool > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -963,16 +963,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< char > & getChar(&name)
+###const ofParameter< char > & getChar(pos)
 
 <!--
-_syntax: getChar(&name)_
+_syntax: getChar(pos)_
 _name: getChar_
-_returns: ofParameter< char > &_
+_returns: const ofParameter< char > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -999,16 +999,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< char > & getChar(pos)
+###ofParameter< char > & getChar(&name)
 
 <!--
-_syntax: getChar(pos)_
+_syntax: getChar(&name)_
 _name: getChar_
-_returns: const ofParameter< char > &_
+_returns: ofParameter< char > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1107,16 +1107,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofColor > & getColor(&name)
+###const ofParameter< ofColor > & getColor(pose)
 
 <!--
-_syntax: getColor(&name)_
+_syntax: getColor(pose)_
 _name: getColor_
-_returns: ofParameter< ofColor > &_
+_returns: const ofParameter< ofColor > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pose_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1143,16 +1143,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofColor > & getColor(pose)
+###ofParameter< ofColor > & getColor(&name)
 
 <!--
-_syntax: getColor(pose)_
+_syntax: getColor(&name)_
 _name: getColor_
-_returns: const ofParameter< ofColor > &_
+_returns: ofParameter< ofColor > &_
 _returns_description: _
-_parameters: size_t pose_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1323,16 +1323,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< float > & getFloat(&name)
+###const ofParameter< float > & getFloat(pos)
 
 <!--
-_syntax: getFloat(&name)_
+_syntax: getFloat(pos)_
 _name: getFloat_
-_returns: ofParameter< float > &_
+_returns: const ofParameter< float > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1359,16 +1359,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< float > & getFloat(pos)
+###ofParameter< float > & getFloat(&name)
 
 <!--
-_syntax: getFloat(pos)_
+_syntax: getFloat(&name)_
 _name: getFloat_
-_returns: const ofParameter< float > &_
+_returns: ofParameter< float > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1467,16 +1467,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofFloatColor > & getFloatColor(&name)
+###const ofParameter< ofFloatColor > & getFloatColor(pos)
 
 <!--
-_syntax: getFloatColor(&name)_
+_syntax: getFloatColor(pos)_
 _name: getFloatColor_
-_returns: ofParameter< ofFloatColor > &_
+_returns: const ofParameter< ofFloatColor > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1503,16 +1503,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofFloatColor > & getFloatColor(pos)
+###ofParameter< ofFloatColor > & getFloatColor(&name)
 
 <!--
-_syntax: getFloatColor(pos)_
+_syntax: getFloatColor(&name)_
 _name: getFloatColor_
-_returns: const ofParameter< ofFloatColor > &_
+_returns: ofParameter< ofFloatColor > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1611,16 +1611,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameterGroup & getGroup(&name)
+###const ofParameterGroup & getGroup(pos)
 
 <!--
-_syntax: getGroup(&name)_
+_syntax: getGroup(pos)_
 _name: getGroup_
-_returns: ofParameterGroup &_
+_returns: const ofParameterGroup &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1647,16 +1647,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameterGroup & getGroup(pos)
+###ofParameterGroup & getGroup(&name)
 
 <!--
-_syntax: getGroup(pos)_
+_syntax: getGroup(&name)_
 _name: getGroup_
-_returns: const ofParameterGroup &_
+_returns: ofParameterGroup &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1755,16 +1755,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< int > & getInt(&name)
+###const ofParameter< int > & getInt(pos)
 
 <!--
-_syntax: getInt(&name)_
+_syntax: getInt(pos)_
 _name: getInt_
-_returns: ofParameter< int > &_
+_returns: const ofParameter< int > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1791,16 +1791,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< int > & getInt(pos)
+###ofParameter< int > & getInt(&name)
 
 <!--
-_syntax: getInt(pos)_
+_syntax: getInt(&name)_
 _name: getInt_
-_returns: const ofParameter< int > &_
+_returns: ofParameter< int > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1935,14 +1935,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getName()
+###string getName(position)
 
 <!--
-_syntax: getName()_
+_syntax: getName(position)_
 _name: getName_
 _returns: string_
 _returns_description: _
-_parameters: _
+_parameters: size_t position_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -1971,14 +1971,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###string getName(position)
+###string getName()
 
 <!--
-_syntax: getName(position)_
+_syntax: getName()_
 _name: getName_
 _returns: string_
 _returns_description: _
-_parameters: size_t position_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -2043,16 +2043,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofPoint > & getPoint(&name)
+###const ofParameter< ofPoint > & getPoint(pos)
 
 <!--
-_syntax: getPoint(&name)_
+_syntax: getPoint(pos)_
 _name: getPoint_
-_returns: ofParameter< ofPoint > &_
+_returns: const ofParameter< ofPoint > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2079,16 +2079,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofPoint > & getPoint(pos)
+###ofParameter< ofPoint > & getPoint(&name)
 
 <!--
-_syntax: getPoint(pos)_
+_syntax: getPoint(&name)_
 _name: getPoint_
-_returns: const ofParameter< ofPoint > &_
+_returns: ofParameter< ofPoint > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2223,14 +2223,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofReadOnlyParameter< ParameterType, Friend > & getReadOnly(&name)
+###const ofReadOnlyParameter< ParameterType, Friend > & getReadOnly(pos)
 
 <!--
-_syntax: getReadOnly(&name)_
+_syntax: getReadOnly(pos)_
 _name: getReadOnly_
-_returns: ofReadOnlyParameter< ParameterType, Friend > &_
+_returns: const ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2259,14 +2259,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofReadOnlyParameter< ParameterType, Friend > & getReadOnly(pos)
+###ofReadOnlyParameter< ParameterType, Friend > & getReadOnly(&name)
 
 <!--
-_syntax: getReadOnly(pos)_
+_syntax: getReadOnly(&name)_
 _name: getReadOnly_
-_returns: const ofReadOnlyParameter< ParameterType, Friend > &_
+_returns: ofReadOnlyParameter< ParameterType, Friend > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2367,16 +2367,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofShortColor > & getShortColor(&name)
+###const ofParameter< ofShortColor > & getShortColor(pos)
 
 <!--
-_syntax: getShortColor(&name)_
+_syntax: getShortColor(pos)_
 _name: getShortColor_
-_returns: ofParameter< ofShortColor > &_
+_returns: const ofParameter< ofShortColor > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2403,16 +2403,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofShortColor > & getShortColor(pos)
+###ofParameter< ofShortColor > & getShortColor(&name)
 
 <!--
-_syntax: getShortColor(pos)_
+_syntax: getShortColor(&name)_
 _name: getShortColor_
-_returns: const ofParameter< ofShortColor > &_
+_returns: ofParameter< ofShortColor > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2511,16 +2511,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< string > & getString(&name)
+###const ofParameter< string > & getString(pos)
 
 <!--
-_syntax: getString(&name)_
+_syntax: getString(pos)_
 _name: getString_
-_returns: ofParameter< string > &_
+_returns: const ofParameter< string > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2547,16 +2547,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< string > & getString(pos)
+###ofParameter< string > & getString(&name)
 
 <!--
-_syntax: getString(pos)_
+_syntax: getString(&name)_
 _name: getString_
-_returns: const ofParameter< string > &_
+_returns: ofParameter< string > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2691,16 +2691,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofDefaultVec2 > & getVec2f(&name)
+###const ofParameter< ofDefaultVec2 > & getVec2f(pos)
 
 <!--
-_syntax: getVec2f(&name)_
+_syntax: getVec2f(pos)_
 _name: getVec2f_
-_returns: ofParameter< ofDefaultVec2 > &_
+_returns: const ofParameter< ofDefaultVec2 > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2727,16 +2727,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofDefaultVec2 > & getVec2f(pos)
+###ofParameter< ofDefaultVec2 > & getVec2f(&name)
 
 <!--
-_syntax: getVec2f(pos)_
+_syntax: getVec2f(&name)_
 _name: getVec2f_
-_returns: const ofParameter< ofDefaultVec2 > &_
+_returns: ofParameter< ofDefaultVec2 > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2835,16 +2835,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofDefaultVec3 > & getVec3f(&name)
+###const ofParameter< ofDefaultVec3 > & getVec3f(pos)
 
 <!--
-_syntax: getVec3f(&name)_
+_syntax: getVec3f(pos)_
 _name: getVec3f_
-_returns: ofParameter< ofDefaultVec3 > &_
+_returns: const ofParameter< ofDefaultVec3 > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2871,16 +2871,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofDefaultVec3 > & getVec3f(pos)
+###ofParameter< ofDefaultVec3 > & getVec3f(&name)
 
 <!--
-_syntax: getVec3f(pos)_
+_syntax: getVec3f(&name)_
 _name: getVec3f_
-_returns: const ofParameter< ofDefaultVec3 > &_
+_returns: ofParameter< ofDefaultVec3 > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2979,16 +2979,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< ofDefaultVec4 > & getVec4f(&name)
+###const ofParameter< ofDefaultVec4 > & getVec4f(pos)
 
 <!--
-_syntax: getVec4f(&name)_
+_syntax: getVec4f(pos)_
 _name: getVec4f_
-_returns: ofParameter< ofDefaultVec4 > &_
+_returns: const ofParameter< ofDefaultVec4 > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3015,16 +3015,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< ofDefaultVec4 > & getVec4f(pos)
+###ofParameter< ofDefaultVec4 > & getVec4f(&name)
 
 <!--
-_syntax: getVec4f(pos)_
+_syntax: getVec4f(&name)_
 _name: getVec4f_
-_returns: const ofParameter< ofDefaultVec4 > &_
+_returns: ofParameter< ofDefaultVec4 > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3123,14 +3123,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofParameter< void > & getVoid(&name)
+###const ofParameter< void > & getVoid(pos)
 
 <!--
-_syntax: getVoid(&name)_
+_syntax: getVoid(pos)_
 _name: getVoid_
-_returns: ofParameter< void > &_
+_returns: const ofParameter< void > &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3159,14 +3159,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofParameter< void > & getVoid(pos)
+###ofParameter< void > & getVoid(&name)
 
 <!--
-_syntax: getVoid(pos)_
+_syntax: getVoid(&name)_
 _name: getVoid_
-_returns: const ofParameter< void > &_
+_returns: ofParameter< void > &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -3339,6 +3339,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofParameterGroup()
+
+<!--
+_syntax: ofParameterGroup()_
+_name: ofParameterGroup_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 0073_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofParameterGroup(&name)
 
 <!--
@@ -3385,42 +3421,6 @@ _returns_description: _
 _parameters: const string &name, Args &... p_
 _access: public_
 _version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofParameterGroup()
-
-<!--
-_syntax: ofParameterGroup()_
-_name: ofParameterGroup_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3519,16 +3519,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofAbstractParameter & operator[](&name)
+###const ofAbstractParameter & operator[](pos)
 
 <!--
-_syntax: operator[](&name)_
+_syntax: operator[](pos)_
 _name: operator[]_
-_returns: ofAbstractParameter &_
+_returns: const ofAbstractParameter &_
 _returns_description: _
-_parameters: const string &name_
+_parameters: size_t pos_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3555,16 +3555,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###const ofAbstractParameter & operator[](pos)
+###ofAbstractParameter & operator[](&name)
 
 <!--
-_syntax: operator[](pos)_
+_syntax: operator[](&name)_
 _name: operator[]_
-_returns: const ofAbstractParameter &_
+_returns: ofAbstractParameter &_
 _returns_description: _
-_parameters: size_t pos_
+_parameters: const string &name_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -3735,42 +3735,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void remove(&name)
-
-<!--
-_syntax: remove(&name)_
-_name: remove_
-_returns: void_
-_returns_description: _
-_parameters: const string &name_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void remove(&param)
 
 <!--
@@ -3815,6 +3779,42 @@ _name: remove_
 _returns: void_
 _returns_description: _
 _parameters: size_t index_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void remove(&name)
+
+<!--
+_syntax: remove(&name)_
+_name: remove_
+_returns: void_
+_returns_description: _
+_parameters: const string &name_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

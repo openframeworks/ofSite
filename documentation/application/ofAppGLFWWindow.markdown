@@ -1647,16 +1647,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofAppGLFWWindow(&w)
+### ofAppGLFWWindow()
 
 <!--
-_syntax: ofAppGLFWWindow(&w)_
+_syntax: ofAppGLFWWindow()_
 _name: ofAppGLFWWindow_
 _returns: _
 _returns_description: _
-_parameters: ofAppGLFWWindow &w_
+_parameters: _
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0073_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1683,16 +1683,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofAppGLFWWindow()
+### ofAppGLFWWindow(&w)
 
 <!--
-_syntax: ofAppGLFWWindow()_
+_syntax: ofAppGLFWWindow(&w)_
 _name: ofAppGLFWWindow_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: ofAppGLFWWindow &w_
 _access: public_
-_version_started: 0073_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -2079,14 +2079,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setWindowIcon(&iconPixels)
+###void setWindowIcon(&path)
 
 <!--
-_syntax: setWindowIcon(&iconPixels)_
+_syntax: setWindowIcon(&path)_
 _name: setWindowIcon_
 _returns: void_
 _returns_description: _
-_parameters: const ofPixels &iconPixels_
+_parameters: const string &path_
 _access: private_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2115,14 +2115,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setWindowIcon(&path)
+###void setWindowIcon(&iconPixels)
 
 <!--
-_syntax: setWindowIcon(&path)_
+_syntax: setWindowIcon(&iconPixels)_
 _name: setWindowIcon_
 _returns: void_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const ofPixels &iconPixels_
 _access: private_
 _version_started: 0.9.0_
 _version_deprecated: _

@@ -53,7 +53,7 @@ Gets the ID of the device
 Example: `0`,`1`,`2`,`3` etc.
 
 
-**Returns**: the device ID.
+Returns: the device ID.
 
 
 
@@ -94,7 +94,7 @@ Gets the name of the device
 Example: `usbdevice-a440` or `COM4`.
 
 
-**Returns**: the device name.
+Returns: the device name.
 
 
 
@@ -135,43 +135,7 @@ Gets the path to the device
 Example: `/dev/tty.cu/usbdevice-a440`.
 
 
-**Returns**: the device path.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofSerialDeviceInfo()
-
-<!--
-_syntax: ofSerialDeviceInfo()_
-_name: ofSerialDeviceInfo_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct an undefined serial device.
+Returns: the device path.
 
 
 
@@ -209,13 +173,46 @@ _inlined_description: _
 
 Construct an ofSerialDeviceInfo with parameters.
 
-**Parameters:**
-
+Parameters:
 devicePathIn The path to the device.
-
 deviceNameIn The name of the device.
-
 deviceIDIn The ID of the device.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofSerialDeviceInfo()
+
+<!--
+_syntax: ofSerialDeviceInfo()_
+_name: ofSerialDeviceInfo_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construct an undefined serial device.
 
 
 

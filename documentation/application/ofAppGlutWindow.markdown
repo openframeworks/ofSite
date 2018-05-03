@@ -1363,14 +1363,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setWindowIcon(&iconPixels)
+###void setWindowIcon(&path)
 
 <!--
-_syntax: setWindowIcon(&iconPixels)_
+_syntax: setWindowIcon(&path)_
 _name: setWindowIcon_
 _returns: void_
 _returns_description: _
-_parameters: const ofPixels &iconPixels_
+_parameters: const string &path_
 _access: private_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1399,14 +1399,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setWindowIcon(&path)
+###void setWindowIcon(&iconPixels)
 
 <!--
-_syntax: setWindowIcon(&path)_
+_syntax: setWindowIcon(&iconPixels)_
 _name: setWindowIcon_
 _returns: void_
 _returns_description: _
-_parameters: const string &path_
+_parameters: const ofPixels &iconPixels_
 _access: private_
 _version_started: 0.9.0_
 _version_deprecated: _

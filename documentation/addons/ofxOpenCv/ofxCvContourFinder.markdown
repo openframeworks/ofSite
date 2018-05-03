@@ -111,78 +111,6 @@ void ofApp::keyPressed(int key) {
 
 
 
-###void draw(&point)
-
-<!--
-_syntax: draw(&point)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPoint &point_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws the detected contours at the point passed in.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&rect)
-
-<!--
-_syntax: draw(&rect)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofRectangle &rect_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Draws the detected contours into the ofRectangle passed in scaling if necessary.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void draw()
 
 <!--
@@ -284,6 +212,78 @@ _inlined_description: _
 _description: _
 
 Draws the detected contours at the point passed in with the height and width, scaling as necessary.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&point)
+
+<!--
+_syntax: draw(&point)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofPoint &point_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws the detected contours at the point passed in.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&rect)
+
+<!--
+_syntax: draw(&rect)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofRectangle &rect_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Draws the detected contours into the ofRectangle passed in scaling if necessary.
 
 
 

@@ -140,7 +140,7 @@ Clamps the value of each component, R, G, B and A to a maximum of
 limit() and a minimum of zero.
 
 
-**Returns**: A reference to itself.
+Returns: A reference to itself.
 
 
 
@@ -232,10 +232,8 @@ _inlined_description: _
 Create an ofColor_ from a hexadecimal value.
 
 
-**Parameters:**
-
+Parameters:
 hexColor A color in hexadecimal form.
-
 alpha The alpha value of the color.
 
 
@@ -285,14 +283,10 @@ _inlined_description: _
 Create an ofColor_ from an HSB representation.
 
 
-**Parameters:**
-
+Parameters:
 hue The hue of the color.
-
 saturation The saturation of the color.
-
 brightness The brightness of the color.
-
 alpha The alpha value of the color.
 
 
@@ -352,7 +346,7 @@ method of calculating brightness is used by Photoshop (HSB) and
 Processing (HSB).  Note that brightness is also called "Value".
 
 
-**Returns**: the brightness in the range 0 - limit().
+Returns: the brightness in the range 0 - limit().
 
 
 
@@ -396,9 +390,9 @@ _inlined_description: _
 A non-destructive version of clamp().
 
 
-**See also**: clamp()
+See also: clamp()
 
-**Returns**: A copy of this color, clamped.
+Returns: A copy of this color, clamped.
 
 
 
@@ -445,10 +439,10 @@ _inlined_description: _
 Get a 24-bit hexadecimal representation of the RGB color.
 
 
-**Warning**: This method does _not_ encode the alpha component.
+Warning: This method does _not_ encode the alpha component.
 
 
-**Returns**: An integer representing an RGB color.
+Returns: An integer representing an RGB color.
 
 
 
@@ -495,14 +489,11 @@ _inlined_description: _
 Extract the hue, saturation and brightness (HSB) from this color.
 
 
-**Parameters:**
-
+Parameters:
 hue A reference to the hue to fill. Will be in the range of
     0 - limit().
-
 saturation A reference to the saturation to fill. Will be in the
 		range of 0 - limit().
-
 brightness A reference to the brightness to fill. Will be in the
     range of 0 - limit().
 
@@ -559,7 +550,7 @@ the resulting Hue value is returned.  The resulting hue value will
 always be returned in the range 0 - limit().
 
 
-**Returns**: The Hue value in the range 0 - limit().
+Returns: The Hue value in the range 0 - limit().
 
 
 
@@ -607,7 +598,7 @@ the resulting Hue angle is returned.  The resulting hue value will
 always be returned in degrees in the range 0 - 360.
 
 
-**Returns**: The Hue angle in the range 0 - 360.
+Returns: The Hue angle in the range 0 - 360.
 
 
 
@@ -650,9 +641,9 @@ _inlined_description: _
 A non-destructive version of invert().
 
 
-**See also**: invert()
+See also: invert()
 
-**Returns**: A copy of this color, inverted.
+Returns: A copy of this color, inverted.
 
 
 
@@ -699,17 +690,15 @@ _inlined_description: _
 A non-destructive version of lerp().
 
 
-**Parameters:**
-
+Parameters:
 target The target color corresponding to an amount of 1.0.
-
 amount The amount (between 0.0 and 1.0) to interpolate.
     A value of 0.0 will yield an unchanged color.  A value of 1.0
     will yield the target color.
 
-**Returns**: A copy of this color, lerped.
+Returns: A copy of this color, lerped.
 
-**See also**: lerp()
+See also: lerp()
 
 
 
@@ -759,7 +748,7 @@ Lightness is simply the average of the three color components. This
 method of calculating lightness is used by the Lab and HSL color spaces.
 
 
-**Returns**: the lightness in the range 0 - limit().
+Returns: the lightness in the range 0 - limit().
 
 
 
@@ -805,9 +794,9 @@ _inlined_description: _
 A non-destructive version of normalize().
 
 
-**See also**: normalize()
+See also: normalize()
 
-**Returns**: A copy of this color, normalized.
+Returns: A copy of this color, normalized.
 
 
 
@@ -858,7 +847,7 @@ the resulting saturation is returned.  The resulting saturation value
 will always be returned in the range 0 - limit().
 
 
-**Returns**: The saturation in the range 0 - limit().
+Returns: The saturation in the range 0 - limit().
 
 
 
@@ -903,7 +892,7 @@ and blue components with their original value subtracted from the
 limit().
 
 
-**Returns**: A reference to itself.
+Returns: A reference to itself.
 
 
 
@@ -966,15 +955,13 @@ The linear interpolation is carried out
 on _all_ components, R, G, B _and_ A.
 
 
-**Parameters:**
-
+Parameters:
 target The target color corresponding to an amount of 1.0.
-
 amount The amount (between 0.0 and 1.0) to interpolate.
     A value of 0.0 will yield an unchanged color.  A value of 1.0
     will yield the target color.
 
-**Returns**: A reference to itself.
+Returns: A reference to itself.
 
 
 
@@ -1029,7 +1016,7 @@ _inlined_description: _
 Get the maximum value of a color component.
 
 
-**Returns**: The value associated with a fully saturated color component.
+Returns: The value associated with a fully saturated color component.
 
 
 
@@ -1079,7 +1066,7 @@ original red, green and blue components.
 In short: ofColor / (brightness / limit())
 
 
-**Returns**: A reference to itself.
+Returns: A reference to itself.
 
 
 
@@ -1124,6 +1111,147 @@ will create this:
 
 <!----------------------------------------------------------------------------->
 
+### ofColor_()
+
+<!--
+_syntax: ofColor_()_
+_name: ofColor__
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construct a default white color.
+
+
+
+
+
+_description: _
+
+Creates a color and sets it to white.
+
+~~~~{.cpp}
+    ofColor c;
+    ofSetColor(c); // Draw color is now white.
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(red, green, blue, alpha)
+
+<!--
+_syntax: ofColor_(red, green, blue, alpha)_
+_name: ofColor__
+_returns: _
+_returns_description: _
+_parameters: float red, float green, float blue, float alpha_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construct an ofColor_ by using channel values.
+
+
+Parameters:
+red The red component.
+green The green component.
+blue The blue component.
+alpha The alpha component.
+
+
+
+
+
+_description: _
+
+Creates a color using RGB values and optional alpha value. The default alpha 
+value makes a completely opaque color:
+
+~~~~{.cpp}
+    ofColor c1(255, 0, 0); // Red with 100% alpha.
+    ofColor c2(255, 0, 0, 128); // Red with 50% alpha.
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofColor_(gray, alpha)
+
+<!--
+_syntax: ofColor_(gray, alpha)_
+_name: ofColor__
+_returns: _
+_returns_description: _
+_parameters: float gray, float alpha_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construct a grayscale ofColor_ by specifying a single number.
+
+
+Parameters:
+gray A grayscale value.
+alpha The opacity of the color.
+
+
+
+
+
+_description: _
+
+Creates a gray color from a single value to describe a grayscale color. 
+This single value will be taken by each of the R, G and B components. 
+Alpha value defaults to completely opaque.
+
+~~~~{.cpp}
+    ofColor c(0.5); // c is now gray.
+~~~~
+
+~~~~{.cpp}
+    ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofColor_(&color)
 
 <!--
@@ -1147,13 +1275,12 @@ _inlined_description: _
 Construct an ofColor_ from an existing ofColor_.
 
 
-**Warning**: Depending on the PixelType and SrcType used, color precision
+Warning: Depending on the PixelType and SrcType used, color precision
          may be lost when converting a higher precision to a lower
          precision representation.
 
 
-**Parameters:**
-
+Parameters:
 color The ofColor_ to copy.
 
 
@@ -1204,10 +1331,8 @@ _inlined_description: _
 Construct an ofColor_ from an existing ofColor_.
 
 
-**Parameters:**
-
+Parameters:
 color The ofColor_ to copy.
-
 alpha The new alpha value to replace the alpha value in color.
 
 
@@ -1221,153 +1346,6 @@ Creates a color by copying another color, overriding the existing alpha value wi
 ~~~~{.cpp}
 ofColor mom(255, 0, 0); // red
 ofColor c(mom, 128); // now c is red with 50% alpha
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofColor_()
-
-<!--
-_syntax: ofColor_()_
-_name: ofColor__
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct a default white color.
-
-
-
-
-
-_description: _
-
-Creates a color and sets it to white.
-
-~~~~{.cpp}
-    ofColor c;
-    ofSetColor(c); // Draw color is now white.
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofColor_(gray, alpha)
-
-<!--
-_syntax: ofColor_(gray, alpha)_
-_name: ofColor__
-_returns: _
-_returns_description: _
-_parameters: float gray, float alpha_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct a grayscale ofColor_ by specifying a single number.
-
-
-**Parameters:**
-
-gray A grayscale value.
-
-alpha The opacity of the color.
-
-
-
-
-
-_description: _
-
-Creates a gray color from a single value to describe a grayscale color. 
-This single value will be taken by each of the R, G and B components. 
-Alpha value defaults to completely opaque.
-
-~~~~{.cpp}
-    ofColor c(0.5); // c is now gray.
-~~~~
-
-~~~~{.cpp}
-    ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofColor_(red, green, blue, alpha)
-
-<!--
-_syntax: ofColor_(red, green, blue, alpha)_
-_name: ofColor__
-_returns: _
-_returns_description: _
-_parameters: float red, float green, float blue, float alpha_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct an ofColor_ by using channel values.
-
-
-**Parameters:**
-
-red The red component.
-
-green The green component.
-
-blue The blue component.
-
-alpha The alpha component.
-
-
-
-
-
-_description: _
-
-Creates a color using RGB values and optional alpha value. The default alpha 
-value makes a completely opaque color:
-
-~~~~{.cpp}
-    ofColor c1(255, 0, 0); // Red with 100% alpha.
-    ofColor c2(255, 0, 0, 128); // Red with 50% alpha.
 ~~~~
 
 
@@ -1398,7 +1376,7 @@ _inlined_description: _
 
 Test two colors for inequality.
 
-**Returns**: true iff any of the R, G, B or A components are not equal.
+Returns: true iff any of the R, G, B or A components are not equal.
 
 
 
@@ -1447,14 +1425,13 @@ Multiply two colors by multiplying and clamping their R, G and B
 components.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 color The color to multiply.
 
-**Returns**: The new clamped color.
+Returns: The new clamped color.
 
 
 
@@ -1503,14 +1480,13 @@ Clamped scalar multiplication operator.
 Multiply the R, G and B components by a scaler and clamp each.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 value The value to multiply.
 
-**Returns**: The new clamped color.
+Returns: The new clamped color.
 
 
 
@@ -1558,14 +1534,13 @@ Multiply two colors by multiplying and clamping their R, G and B
 components.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 color The color to multiply.
 
-**Returns**: A reference to itself, the new clamped color.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1614,14 +1589,13 @@ Clamped scalar multiplication operator.
 Multiply the R, G and B components by a scaler and clamp each.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 value The scaler value.
 
-**Returns**: A reference to itself, the new clamped color.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1669,14 +1643,13 @@ Clamped addition operator.
 Add two colors by summing and clamping their R, G and B components.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 color The color to add.
 
-**Returns**: The new clamped color.
+Returns: The new clamped color.
 
 
 
@@ -1725,14 +1698,13 @@ Clamped addition operator.
 Add a value to each of the R, G and B components and clamp each.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 color The value to add.
 
-**Returns**: The new clamped color.
+Returns: The new clamped color.
 
 
 
@@ -1780,14 +1752,13 @@ Clamped addition operator.
 Add two colors by summing and clamping their R, G and B components.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 color The color to add.
 
-**Returns**: A reference to itself, the new clamped color.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1836,14 +1807,13 @@ Clamped addition operator.
 Add a value to each of the R, G and B components and clamp each.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 color The value to add.
 
-**Returns**: A reference to itself, the new clamped color.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -1892,14 +1862,13 @@ Subtract two colors by subtracting and clamping their R, G and B
 components.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 color The color to subtract.
 
-**Returns**: The new clamped color.
+Returns: The new clamped color.
 
 
 
@@ -1948,14 +1917,13 @@ Clamped subtraction operator.
 Subtract a value from each of the R, G and B components and clamp each.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 value The value to subtract.
 
-**Returns**: The new clamped color.
+Returns: The new clamped color.
 
 
 
@@ -2003,11 +1971,10 @@ Clamped subtraction operator.
 Add two colors by subtracting and clamping their R, G and B components.
 
 
-**Parameters:**
-
+Parameters:
 color The color to subtract.
 
-**Returns**: A reference to itself, the new clamped color.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -2057,14 +2024,13 @@ Clamped subtraction operator.
 Subtract a value to each of the R, G and B components and clamp each.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 color The value to subtract.
 
-**Returns**: A reference to itself, the new clamped color.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -2112,14 +2078,13 @@ Clamped division operator.
 Divide two colors by treating the passed color components as divisors.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 color The divisor color.
 
-**Returns**: The new clamped color.
+Returns: The new clamped color.
 
 
 
@@ -2168,14 +2133,13 @@ Clamped scalar division operator.
 Divide each of the R, G and B components by a scalar and clamp each.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 value The divisor value.
 
-**Returns**: The new clamped color.
+Returns: The new clamped color.
 
 
 
@@ -2223,11 +2187,10 @@ Clamped division operator.
 Divide two colors by treating the passed color components as divisors.
 
 
-**Parameters:**
-
+Parameters:
 color The divisor color.
 
-**Returns**: A reference to itself, the new clamped color.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -2276,14 +2239,13 @@ Clamped scalar division operator.
 Divide each of the R, G and B components by a scalar and clamp each.
 
 
-**Warning**: The alpha component is ignored.
+Warning: The alpha component is ignored.
 
 
-**Parameters:**
-
+Parameters:
 value The divisor value.
 
-**Returns**: A reference to itself, the new clamped color.
+Returns: A reference to itself, the new clamped color.
 
 
 
@@ -2332,16 +2294,15 @@ R, G, B and A components are set to the the values of the assigned
 color.
 
 
-**Warning**: Depending on the PixelType and SrcType used, color precision
+Warning: Depending on the PixelType and SrcType used, color precision
     may be lost when converting a higher precision to a lower precision
     representation.
 
 
-**Parameters:**
-
+Parameters:
 color The color to assign.
 
-**Returns**: A reference to itself.
+Returns: A reference to itself.
 
 
 
@@ -2388,11 +2349,10 @@ _inlined_description: _
 Assign a color using a grayscale value.
 
 
-**Parameters:**
-
+Parameters:
 value The grayscale value.
 
-**Returns**: A reference to itself.
+Returns: A reference to itself.
 
 
 
@@ -2442,7 +2402,7 @@ _inlined_description: _
 Test two colors for equality.
 
 
-**Returns**: true iff the R, G, B and A components are all equal.
+Returns: true iff the R, G, B and A components are all equal.
 
 
 
@@ -2492,11 +2452,10 @@ If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
 alpha.
 
 
-**Parameters:**
-
+Parameters:
 n An index 0-3 of the component to get.
 
-**Returns**: The value of the requested component.
+Returns: The value of the requested component.
 
 
 
@@ -2544,11 +2503,10 @@ If n is 0 returns .r, if 1 returns .g, if 2 returns .b, if 3 returns
 alpha.
 
 
-**Parameters:**
-
+Parameters:
 n An index 0-3 of the component to get.
 
-**Returns**: The value of the requested component.
+Returns: The value of the requested component.
 
 
 
@@ -2561,6 +2519,103 @@ Array subscript operator. If n is 0 returns .r, if 1 returns .g, if 2 returns .b
 ~~~~{.cpp}
 	ofColor c(128, 64, 255);
 	float red = c[0]; // red is 128
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(red, green, blue, alpha)
+
+<!--
+_syntax: set(red, green, blue, alpha)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float red, float green, float blue, float alpha_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set an ofColor_ by using RGB values.
+
+
+Parameters:
+red The red component.
+green The green component.
+blue The blue component.
+alpha The alpha component.
+
+
+
+
+
+_description: _
+
+Creates a color using RGB values and optional alpha value. The default 
+alpha value makes a completely opaque color. By default, the alpha
+component will take the PixelType's maximum, producing an opaque color.
+The channel values must fall within the range represented by the PixelType
+
+~~~~{.cpp}
+    ofColor c(255, 0, 0); // Red ...
+    c.set(0, 255, 0); // ... and now green.
+~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void set(gray, alpha)
+
+<!--
+_syntax: set(gray, alpha)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float gray, float alpha_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set a grayscale ofColor_ by specifying a single number.
+
+
+Parameters:
+gray A grayscale value.
+alpha The opacity of the color.
+
+
+
+
+
+_description: _
+
+Creates a gray color from the value of gray. This single value will be taken by each of the R, G and B components. The alpha value defaults to completely opaque.
+
+~~~~{.cpp}
+    ofColor c(255, 0, 0); // Red ...
+    c.set(128, 128); // ... and now 50% gray with 50% alpha.
 ~~~~
 
 
@@ -2594,8 +2649,7 @@ Set an ofColor_ from an existing ofColor_.
 This will use the R, G, B and A components from the passed color.
 
 
-**Parameters:**
-
+Parameters:
 color The ofColor_ to copy.
 
 
@@ -2610,109 +2664,6 @@ This will use the R, G, B and A components from the passed color.
     ofColor r(255, 0, 0); // Red 
     ofColor b(0,0,255); // Blue
     r.set(b); // now the RGB value of r is (0,0,255)
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(gray, alpha)
-
-<!--
-_syntax: set(gray, alpha)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: float gray, float alpha_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set a grayscale ofColor_ by specifying a single number.
-
-
-**Parameters:**
-
-gray A grayscale value.
-
-alpha The opacity of the color.
-
-
-
-
-
-_description: _
-
-Creates a gray color from the value of gray. This single value will be taken by each of the R, G and B components. The alpha value defaults to completely opaque.
-
-~~~~{.cpp}
-    ofColor c(255, 0, 0); // Red ...
-    c.set(128, 128); // ... and now 50% gray with 50% alpha.
-~~~~
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(red, green, blue, alpha)
-
-<!--
-_syntax: set(red, green, blue, alpha)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: float red, float green, float blue, float alpha_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set an ofColor_ by using RGB values.
-
-
-**Parameters:**
-
-red The red component.
-
-green The green component.
-
-blue The blue component.
-
-alpha The alpha component.
-
-
-
-
-
-_description: _
-
-Creates a color using RGB values and optional alpha value. The default 
-alpha value makes a completely opaque color. By default, the alpha
-component will take the PixelType's maximum, producing an opaque color.
-The channel values must fall within the range represented by the PixelType
-
-~~~~{.cpp}
-    ofColor c(255, 0, 0); // Red ...
-    c.set(0, 255, 0); // ... and now green.
 ~~~~
 
 
@@ -2744,8 +2695,7 @@ _inlined_description: _
 Set the brightness of this color.
 
 
-**Parameters:**
-
+Parameters:
 brightness A brightness value to set in the range of 0 - limit().
 
 
@@ -2792,14 +2742,12 @@ _inlined_description: _
 Set an ofColor_ from a hexadecimal representation.
 
 
-**Warning**: The alpha value _should not_ be packed in the hexColor and
+Warning: The alpha value _should not_ be packed in the hexColor and
     must be specified separately.
 
 
-**Parameters:**
-
+Parameters:
 hexColor An RGB color in hexadecimal form.
-
 alpha The alpha value of the color.
 
 
@@ -2852,14 +2800,10 @@ _inlined_description: _
 Set the color using HSB components.
 
 
-**Parameters:**
-
+Parameters:
 hue A hue value to set in the range of 0 - limit().
-
 saturation A saturation value to set in the range of 0 - limit().
-
 brightness A brightness value to set in the range of 0 - limit().
-
 alpha An alpha value to set in the range of 0 - limit().
 
 
@@ -2915,8 +2859,7 @@ _inlined_description: _
 Set the hue of this color.
 
 
-**Parameters:**
-
+Parameters:
 hue A hue value to set in the range of 0 - limit().
 
 
@@ -2963,8 +2906,7 @@ _inlined_description: _
 Set the hue angle of this color.
 
 
-**Parameters:**
-
+Parameters:
 angle A hue angle value to set in the range of 0 - 360 degrees.
 
 
@@ -3011,11 +2953,10 @@ Set the saturation of this color.
 This method uses HSB not HSL. So red desaturated is white, not gray
 
 
-**Parameters:**
-
+Parameters:
 saturation A saturation value value in the range of 0 - limit().
 
-**See also**: http://en.wikipedia.org/wiki/HSL_and_HSV
+See also: http://en.wikipedia.org/wiki/HSL_and_HSV
 
 
 

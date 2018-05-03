@@ -475,7 +475,7 @@ _inlined_description: _
 
 Get the number of frames rendered since the program started.
 
-**Returns**: the number of frames rendered since the program started.
+Returns: the number of frames rendered since the program started.
 
 
 
@@ -1296,7 +1296,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**Returns**: a random number between 0 and the height of the window.
+Returns: a random number between 0 and the height of the window.
 
 
 
@@ -1331,7 +1331,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**Returns**: a random number between 0 and the width of the window.
+Returns: a random number between 0 and the width of the window.
 
 
 
@@ -1340,6 +1340,46 @@ _inlined_description: _
 _description: _
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofRunApp(window, app)
+
+<!--
+_syntax: ofRunApp(window, app)_
+_name: ofRunApp_
+_returns: void_
+_returns_description: _
+_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > &&app_
+_version_started: 0.01_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Begins the openGL cycle of the application. It's only called once from main function in main.cpp after setting the window with ofSetupOpenGL.
+From 0.06 the app is deleted on exit, so you need to call this function as shown in syntax:
+
+~~~~{.cpp}
+ofRunApp(new ofApp());
+~~~~
 
 
 
@@ -1410,46 +1450,6 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void ofRunApp(window, app)
-
-<!--
-_syntax: ofRunApp(window, app)_
-_name: ofRunApp_
-_returns: void_
-_returns_description: _
-_parameters: shared_ptr< ofAppBaseWindow > window, shared_ptr< ofBaseApp > &&app_
-_version_started: 0.01_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Begins the openGL cycle of the application. It's only called once from main function in main.cpp after setting the window with ofSetupOpenGL.
-From 0.06 the app is deleted on exit, so you need to call this function as shown in syntax:
-
-~~~~{.cpp}
-ofRunApp(new ofApp());
-~~~~
 
 
 
@@ -2023,41 +2023,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void ofSetupOpenGL(w, h, screenMode)
-
-<!--
-_syntax: ofSetupOpenGL(w, h, screenMode)_
-_name: ofSetupOpenGL_
-_returns: void_
-_returns_description: _
-_parameters: int w, int h, ofWindowMode screenMode_
-_version_started: _
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void ofSetupOpenGL(windowPtr, w, h, screenMode)
 
 <!--
@@ -2090,6 +2055,41 @@ w and h are the width and height of the window.
 screenMode can be one of:
 - OF_WINDOW: normal window
 - OF_FULLSCREEN: fullscreen, the size of the app will be that of the current screen resolution. The w and h parameters will be ignored. 
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void ofSetupOpenGL(w, h, screenMode)
+
+<!--
+_syntax: ofSetupOpenGL(w, h, screenMode)_
+_name: ofSetupOpenGL_
+_returns: void_
+_returns_description: _
+_parameters: int w, int h, ofWindowMode screenMode_
+_version_started: _
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
 
 
 

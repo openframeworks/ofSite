@@ -505,42 +505,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxCvGrayscaleImage(&mom)
-
-<!--
-_syntax: ofxCvGrayscaleImage(&mom)_
-_name: ofxCvGrayscaleImage_
-_returns: _
-_returns_description: _
-_parameters: const ofxCvGrayscaleImage &mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Copy constructor, allows you copy one ofxCvGrayscaleImage into another.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofxCvGrayscaleImage()
 
 <!--
@@ -570,6 +534,42 @@ _inlined_description: _
 _description: _
 
 Constructor.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofxCvGrayscaleImage(&mom)
+
+<!--
+_syntax: ofxCvGrayscaleImage(&mom)_
+_name: ofxCvGrayscaleImage_
+_returns: _
+_returns_description: _
+_parameters: const ofxCvGrayscaleImage &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Copy constructor, allows you copy one ofxCvGrayscaleImage into another.
 
 
 

@@ -25,6 +25,78 @@ _extends: ofxBaseGui_
 
 
 
+###void add(*element)
+
+<!--
+_syntax: add(*element)_
+_name: add_
+_returns: void_
+_returns_description: _
+_parameters: ofxBaseGui *element_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void add(&parameters)
+
+<!--
+_syntax: add(&parameters)_
+_name: add_
+_returns: void_
+_returns_description: _
+_parameters: const ofParameterGroup &parameters_
+_access: public_
+_version_started: 0.8.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###typename enable_if<is_arithmetic< T>::value, void >::type add(&p)
 
 <!--
@@ -169,6 +241,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void add(string, &parameter)
+
+<!--
+_syntax: add(string, &parameter)_
+_name: add_
+_returns: void_
+_returns_description: _
+_parameters: ofReadOnlyParameter< string, F > &parameter_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void add(&parameter)
 
 <!--
@@ -251,114 +359,6 @@ _returns_description: _
 _parameters: ofParameter< ofVec4f > &parameter_
 _access: public_
 _version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< glm::vec2 > &parameter_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< glm::vec3 > &parameter_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void add(&parameter)
-
-<!--
-_syntax: add(&parameter)_
-_name: add_
-_returns: void_
-_returns_description: _
-_parameters: ofParameter< glm::vec4 > &parameter_
-_access: public_
-_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -493,16 +493,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void add(&parameters)
+###void add(&parameter)
 
 <!--
-_syntax: add(&parameters)_
+_syntax: add(&parameter)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: const ofParameterGroup &parameters_
+_parameters: ofParameter< glm::vec2 > &parameter_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -529,16 +529,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void add(*element)
+###void add(&parameter)
 
 <!--
-_syntax: add(*element)_
+_syntax: add(&parameter)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: ofxBaseGui *element_
+_parameters: ofParameter< glm::vec3 > &parameter_
 _access: public_
-_version_started: 0.8.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -565,14 +565,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void add(string, &parameter)
+###void add(&parameter)
 
 <!--
-_syntax: add(string, &parameter)_
+_syntax: add(&parameter)_
 _name: add_
 _returns: void_
 _returns_description: _
-_parameters: ofReadOnlyParameter< string, F > &parameter_
+_parameters: ofParameter< glm::vec4 > &parameter_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1429,14 +1429,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxGuiGroup(&parameters, &_filename, x, y)
+### ofxGuiGroup()
 
 <!--
-_syntax: ofxGuiGroup(&parameters, &_filename, x, y)_
+_syntax: ofxGuiGroup()_
 _name: ofxGuiGroup_
 _returns: _
 _returns_description: _
-_parameters: const ofParameterGroup &parameters, const string &_filename, float x, float y_
+_parameters: _
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1465,14 +1465,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxGuiGroup()
+### ofxGuiGroup(&parameters, &_filename, x, y)
 
 <!--
-_syntax: ofxGuiGroup()_
+_syntax: ofxGuiGroup(&parameters, &_filename, x, y)_
 _name: ofxGuiGroup_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofParameterGroup &parameters, const string &_filename, float x, float y_
 _access: public_
 _version_started: 0.8.0_
 _version_deprecated: _

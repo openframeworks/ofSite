@@ -53,8 +53,7 @@ method called from ofApp::setup() will also repaint the background with
 this color each frame.
 
 
-**Parameters:**
-
+Parameters:
 c The color to paint the background with.
 
 
@@ -98,8 +97,7 @@ method called from ofApp::setup() will also repaint the background with
 this color each frame.
 
 
-**Parameters:**
-
+Parameters:
 brightness The grayscale value between 0 and 255 to paint the
 background with.
 
@@ -144,11 +142,9 @@ method called from ofApp::setup() will also repaint the background with
 this color each frame.
 
 
-**Parameters:**
-
+Parameters:
 hexColor The 24-bit hex representation of the color to paint the
 background with.
-
 _a The alpha value between 0 and 255 to apply to \p hexColor when
 when painting the background.
 
@@ -189,14 +185,10 @@ _inlined_description: _
 Immediately paint a background color to the screen.
 
 
-**Parameters:**
-
+Parameters:
 r The red value between 0 and 255 to use for the background.
-
 g The green value between 0 and 255 to use for the background.
-
 b The blue value between 0 and 255 to use for the background.
-
 a The alpha value between 0 and 255 to use for the background.
 
 
@@ -240,10 +232,8 @@ renderer's matrix stack using \p viewport. Should be followed with a
 call to unbind().
 
 
-**Parameters:**
-
+Parameters:
 camera The camera to bind to this renderer.
-
 viewport The viewport to use when binding \p camera to this
 renderer.
 
@@ -299,53 +289,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void clear(brightness, a)
-
-<!--
-_syntax: clear(brightness, a)_
-_name: clear_
-_returns: void_
-_returns_description: _
-_parameters: float brightness, float a_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Clear this renderer's color and bit depths replacing them.
-
-clear() will clear the screen entirely.
-
-
-**Parameters:**
-
-brightness The grayscale value between 0 and 255 to use when
-clearing the screen.
-
-a The alpha value between 0 and 255 to use when clearing the
-screen. Defaults to 0.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void clear(r, g, b, a)
 
 <!--
@@ -371,18 +314,59 @@ Clear this renderer's color and bit depths and replace them.
 clear() will clear the screen entirely.
 
 
-**Parameters:**
-
+Parameters:
 r The red value between 0 and 255 to use when clearing the
 screen.
-
 g The green value between 0 and 255 to use when clearing the
 screen.
-
 b The blue value between 0 and 255 use when clearing the screen.
-
 a The alpha value between 0 and 255 use when clearing the screen.
 Defaults to 0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void clear(brightness, a)
+
+<!--
+_syntax: clear(brightness, a)_
+_name: clear_
+_returns: void_
+_returns_description: _
+_parameters: float brightness, float a_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Clear this renderer's color and bit depths replacing them.
+
+clear() will clear the screen entirely.
+
+
+Parameters:
+brightness The grayscale value between 0 and 255 to use when
+clearing the screen.
+a The alpha value between 0 and 255 to use when clearing the
+screen. Defaults to 0.
 
 
 
@@ -470,189 +454,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
+###void draw(&shape)
 
 <!--
-_syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
+_syntax: draw(&shape)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw an \p image with this renderer.
-
-**Parameters:**
-
-image The image to draw with this renderer.
-
-x The x coordinate to use when drawing \p image with this
-renderer.
-
-y The y coordinate to use to draw \p image with this renderer.
-
-z The z coordinate to use to drawing \p image with this renderer.
-
-w The width to use to draw the \p image with this renderer.
-
-h The height to use to draw the \p image with this renderer.
-
-sx The subsection x axis offset within the image texture.
-
-sy The subsection y axis offset within the image texture.
-
-sw The subsection width offset within the image texture.
-
-sh The subsection height offset within the image texture.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
-
-<!--
-_syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofFloatImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw an \p image with this renderer.
-
-**Parameters:**
-
-image The image to draw with this renderer.
-
-x The x coordinate to use to draw \p image with this renderer.
-
-y The y coordinate to use to draw \p image with this renderer.
-
-z The z coordinate to use to draw \p image with this renderer.
-
-w The width to use to draw \p image with this renderer.
-
-h The height to use to draw \p image with this renderer.
-
-sx The subsection x axis offset within the image texture.
-
-sy The subsection y axis offset within the image texture.
-
-sw The subsection width offset within the image texture.
-
-sh The subsection height offset within the image texture.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
-
-<!--
-_syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofShortImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw an \p image with this renderer.
-
-**Parameters:**
-
-image The image to draw with this renderer.
-
-x The x coordinate to use to draw \p image with this renderer.
-
-y The y coordinate to use to draw \p image with this renderer.
-
-z The z coordinate to use to draw \p image with this renderer.
-
-w The width to use when drawing the image with this renderer.
-
-h The height to use when drawing the image with this renderer.
-
-sx The subsection x axis offset within the image texture.
-
-sy The subsection y axis offset within the image texture.
-
-sw The subsection width offset within the image texture.
-
-sh The subsection height offset within the image texture.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&mesh, renderType)
-
-<!--
-_syntax: draw(&mesh, renderType)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofMesh &mesh, ofPolyRenderMode renderType_
+_parameters: const ofPath &shape_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -665,22 +474,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Draw a \p mesh with this renderer using the \p renderType.
+Draw a path with this renderer.
 
-\p renderType defines how the \p mesh will be rendered and may be:
-	OF_MESH_POINTS,
-		OF_MESH_WIREFRAME,
-		OF_MESH_FILL
-
-
-**Parameters:**
-
-mesh The mesh to draw with this renderer.
-
-renderType The render mode to use to draw \p mesh with this
-renderer.
-
-**See also**: ofPolyRenderMode
+Parameters:
+shape The path to draw with this renderer.
 
 
 
@@ -696,14 +493,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&model)
+###void draw(&shape, x, y)
 
 <!--
-_syntax: draw(&model)_
+_syntax: draw(&shape, x, y)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofNode &model_
+_parameters: const ofPath &shape, float x, float y_
 _access: public_
 _version_started: 0071_
 _version_deprecated: _
@@ -716,13 +513,12 @@ _advanced: False_
 
 _inlined_description: _
 
-Draw a node with this renderer using ofNode::customDraw().
+Draw a path with this renderer at \p x and \p y.
 
-**Parameters:**
-
-model The node to draw with this renderer.
-
-**See also**: ofNode::customDraw()
+Parameters:
+shape The path to draw with this renderer.
+x The x coordinate to use to draw \p shape.
+y The y coordinate to use to draw \p shape.
 
 
 
@@ -766,14 +562,241 @@ Draw a \p model with this renderer using the \p renderType.
 		OF_MESH_FILL
 
 
-**Parameters:**
-
+Parameters:
 model The model to draw with this renderer.
-
 renderType The render mode to use when drawing the \p model
 with this renderer.
 
-**See also**: ofPolyRenderMode
+See also: ofPolyRenderMode
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&model)
+
+<!--
+_syntax: draw(&model)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofNode &model_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a node with this renderer using ofNode::customDraw().
+
+Parameters:
+model The node to draw with this renderer.
+
+See also: ofNode::customDraw()
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
+
+<!--
+_syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_access: public_
+_version_started: 0071_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw an \p image with this renderer.
+
+Parameters:
+image The image to draw with this renderer.
+x The x coordinate to use when drawing \p image with this
+renderer.
+y The y coordinate to use to draw \p image with this renderer.
+z The z coordinate to use to drawing \p image with this renderer.
+w The width to use to draw the \p image with this renderer.
+h The height to use to draw the \p image with this renderer.
+sx The subsection x axis offset within the image texture.
+sy The subsection y axis offset within the image texture.
+sw The subsection width offset within the image texture.
+sh The subsection height offset within the image texture.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
+
+<!--
+_syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofFloatImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw an \p image with this renderer.
+
+Parameters:
+image The image to draw with this renderer.
+x The x coordinate to use to draw \p image with this renderer.
+y The y coordinate to use to draw \p image with this renderer.
+z The z coordinate to use to draw \p image with this renderer.
+w The width to use to draw \p image with this renderer.
+h The height to use to draw \p image with this renderer.
+sx The subsection x axis offset within the image texture.
+sy The subsection y axis offset within the image texture.
+sw The subsection width offset within the image texture.
+sh The subsection height offset within the image texture.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&image, x, y, z, w, h, sx, sy, sw, sh)
+
+<!--
+_syntax: draw(&image, x, y, z, w, h, sx, sy, sw, sh)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofShortImage &image, float x, float y, float z, float w, float h, float sx, float sy, float sw, float sh_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw an \p image with this renderer.
+
+Parameters:
+image The image to draw with this renderer.
+x The x coordinate to use to draw \p image with this renderer.
+y The y coordinate to use to draw \p image with this renderer.
+z The z coordinate to use to draw \p image with this renderer.
+w The width to use when drawing the image with this renderer.
+h The height to use when drawing the image with this renderer.
+sx The subsection x axis offset within the image texture.
+sy The subsection y axis offset within the image texture.
+sw The subsection width offset within the image texture.
+sh The subsection height offset within the image texture.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void draw(&video, x, y, w, h)
+
+<!--
+_syntax: draw(&video, x, y, w, h)_
+_name: draw_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseVideoDraws &video, float x, float y, float w, float h_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a \p video with this renderer.
+
+Parameters:
+video The video with draw with this renderer.
+x The x coordinate to use to draw \p video with this renderer.
+y The y coordinate to use to draw \p video with this renderer.
+w The width to use to draw the video with this renderer.
+h The height to use to draw the video with this renderer.
 
 
 
@@ -811,8 +834,7 @@ _inlined_description: _
 
 Draw a polyline with this renderer.
 
-**Parameters:**
-
+Parameters:
 poly The polyline to draw with this renderer.
 
 
@@ -829,14 +851,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void draw(&shape)
+###void draw(&mesh, renderType)
 
 <!--
-_syntax: draw(&shape)_
+_syntax: draw(&mesh, renderType)_
 _name: draw_
 _returns: void_
 _returns_description: _
-_parameters: const ofPath &shape_
+_parameters: const ofMesh &mesh, ofPolyRenderMode renderType_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -849,55 +871,20 @@ _advanced: False_
 
 _inlined_description: _
 
-Draw a path with this renderer.
+Draw a \p mesh with this renderer using the \p renderType.
 
-**Parameters:**
-
-shape The path to draw with this renderer.
-
-
-
+\p renderType defines how the \p mesh will be rendered and may be:
+	OF_MESH_POINTS,
+		OF_MESH_WIREFRAME,
+		OF_MESH_FILL
 
 
-_description: _
+Parameters:
+mesh The mesh to draw with this renderer.
+renderType The render mode to use to draw \p mesh with this
+renderer.
 
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&shape, x, y)
-
-<!--
-_syntax: draw(&shape, x, y)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofPath &shape, float x, float y_
-_access: public_
-_version_started: 0071_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a path with this renderer at \p x and \p y.
-
-**Parameters:**
-
-shape The path to draw with this renderer.
-
-x The x coordinate to use to draw \p shape.
-
-y The y coordinate to use to draw \p shape.
+See also: ofPolyRenderMode
 
 
 
@@ -941,70 +928,17 @@ Draw a mesh with this renderer.
 		OF_MESH_FILL
 
 
-**Parameters:**
-
+Parameters:
 vertexData The mesh to draw with this renderer.
-
 renderType The render mode to use to draw \p vertexData to
 this renderer.
-
 useColors True to use per-vertex coloring to draw the
 \p vertexData.
-
 useTextures True to use texture coordinates to draw the \p
 vertexData.
-
 useNormals True to use normals to draw the \p vertexData.
 
-**See also**: ofPolyRenderMode
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void draw(&video, x, y, w, h)
-
-<!--
-_syntax: draw(&video, x, y, w, h)_
-_name: draw_
-_returns: void_
-_returns_description: _
-_parameters: const ofBaseVideoDraws &video, float x, float y, float w, float h_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a \p video with this renderer.
-
-**Parameters:**
-
-video The video with draw with this renderer.
-
-x The x coordinate to use to draw \p video with this renderer.
-
-y The y coordinate to use to draw \p video with this renderer.
-
-w The width to use to draw the video with this renderer.
-
-h The height to use to draw the video with this renderer.
+See also: ofPolyRenderMode
 
 
 
@@ -1086,8 +1020,7 @@ respectively. This can be helpful when trying to orient other objects
 in respect to the coordinate system.
 
 
-**Parameters:**
-
+Parameters:
 size The length to draw each axis line.
 
 
@@ -1104,14 +1037,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawBox(&position, size)
+###void drawBox(x, y, z, width, height, depth)
 
 <!--
-_syntax: drawBox(&position, size)_
+_syntax: drawBox(x, y, z, width, height, depth)_
 _name: drawBox_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec3 &position, float size_
+_parameters: float x, float y, float z, float width, float height, float depth_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1124,57 +1057,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a cube with the specified size, starting from the specified
-position.
-
-A cube is drawn starting from a 3D reference position, with the
-specified size. The cube is drawn with the current color, e.g. set with
-ofSetColor(). The cube is drawn filled by default; change this with
-ofFill().
-
-
-**Parameters:**
-
-position an glm::vec3 which contains the (x,y,z) coordinates for
-the cube's reference corner.
-
-size The size of the cube.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawBox(&position, width, height, depth)
-
-<!--
-_syntax: drawBox(&position, width, height, depth)_
-_name: drawBox_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &position, float width, float height, float depth_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a rectangular box using position, width, height and depth.
+Draws a rectangular box using x, y, z, width, height, and depth.
 
 A box is a rectangular solid: an extruded rectangle.
 It is drawn starting from a 3D reference coordinate.
@@ -1183,109 +1066,12 @@ The box is drawn with the current color, e.g. set with ofSetColor().
 The box is drawn filled by default; change this with ofFill();
 
 
-**Parameters:**
-
-position an glm::vec3 which contains the (x,y,z) coordinates for the box's reference corner.
-
+Parameters:
+x The x-coordinate of the box's origin.
+y The y-coordinate of the box's origin.
+z The z-coordinate of the box's origin.
 width The width of the box.
-
 height The height of the box.
-
-depth The depth of the box.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawBox(size)
-
-<!--
-_syntax: drawBox(size)_
-_name: drawBox_
-_returns: void_
-_returns_description: _
-_parameters: float size_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a cube with the specified size at the origin.
-
-The cube is drawn with the current color, e.g. set with ofSetColor().
-The cube is drawn filled by default; change this with ofFill();
-
-
-**Parameters:**
-
-size The size of the cube.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawBox(width, height, depth)
-
-<!--
-_syntax: drawBox(width, height, depth)_
-_name: drawBox_
-_returns: void_
-_returns_description: _
-_parameters: float width, float height, float depth_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draws a rectangular box with the specified dimensions, starting from the origin.
-
-A box is a rectangular solid: an extruded rectangle.
-It is drawn starting from the origin of the current reference frame.
-It has a width (in x), a height (in y), and a depth (in z).
-The box is drawn with the current color, e.g. set with ofSetColor().
-The box is drawn filled by default; change this with ofFill();
-
-
-**Parameters:**
-
-width The width of the box.
-
-height The height of the box.
-
 depth The depth of the box.
 
 
@@ -1336,14 +1122,10 @@ ofSetColor(). The cube is drawn filled by default; change this with
 ofFill().
 
 
-**Parameters:**
-
+Parameters:
 x The x-coordinate of the cube's origin.
-
 y The y-coordinate of the cube's origin.
-
 z The z-coordinate of the cube's origin.
-
 size The size of the cube.
 
 
@@ -1360,14 +1142,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawBox(x, y, z, width, height, depth)
+###void drawBox(size)
 
 <!--
-_syntax: drawBox(x, y, z, width, height, depth)_
+_syntax: drawBox(size)_
 _name: drawBox_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z, float width, float height, float depth_
+_parameters: float size_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1380,7 +1162,98 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws a rectangular box using x, y, z, width, height, and depth.
+Draws a cube with the specified size at the origin.
+
+The cube is drawn with the current color, e.g. set with ofSetColor().
+The cube is drawn filled by default; change this with ofFill();
+
+
+Parameters:
+size The size of the cube.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawBox(width, height, depth)
+
+<!--
+_syntax: drawBox(width, height, depth)_
+_name: drawBox_
+_returns: void_
+_returns_description: _
+_parameters: float width, float height, float depth_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rectangular box with the specified dimensions, starting from the origin.
+
+A box is a rectangular solid: an extruded rectangle.
+It is drawn starting from the origin of the current reference frame.
+It has a width (in x), a height (in y), and a depth (in z).
+The box is drawn with the current color, e.g. set with ofSetColor().
+The box is drawn filled by default; change this with ofFill();
+
+
+Parameters:
+width The width of the box.
+height The height of the box.
+depth The depth of the box.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawBox(&position, width, height, depth)
+
+<!--
+_syntax: drawBox(&position, width, height, depth)_
+_name: drawBox_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &position, float width, float height, float depth_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a rectangular box using position, width, height and depth.
 
 A box is a rectangular solid: an extruded rectangle.
 It is drawn starting from a 3D reference coordinate.
@@ -1389,19 +1262,59 @@ The box is drawn with the current color, e.g. set with ofSetColor().
 The box is drawn filled by default; change this with ofFill();
 
 
-**Parameters:**
-
-x The x-coordinate of the box's origin.
-
-y The y-coordinate of the box's origin.
-
-z The z-coordinate of the box's origin.
-
+Parameters:
+position an glm::vec3 which contains the (x,y,z) coordinates for the box's reference corner.
 width The width of the box.
-
 height The height of the box.
-
 depth The depth of the box.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawBox(&position, size)
+
+<!--
+_syntax: drawBox(&position, size)_
+_name: drawBox_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &position, float size_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draws a cube with the specified size, starting from the specified
+position.
+
+A cube is drawn starting from a 3D reference position, with the
+specified size. The cube is drawn with the current color, e.g. set with
+ofSetColor(). The cube is drawn filled by default; change this with
+ofFill().
+
+
+Parameters:
+position an glm::vec3 which contains the (x,y,z) coordinates for
+the cube's reference corner.
+size The size of the cube.
 
 
 
@@ -1439,14 +1352,10 @@ _inlined_description: _
 
 Draw a circle using a 3D point and a radius.
 
-**Parameters:**
-
+Parameters:
 x The x coordinate of the center of the circle.
-
 y The y coordinate of the center of the circle.
-
 z The z coordinate of the center of the circle.
-
 radius The length of the radius of the circle.
 
 
@@ -1463,14 +1372,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawCone(&position, radius, height)
+###void drawCone(x, y, z, radius, height)
 
 <!--
-_syntax: drawCone(&position, radius, height)_
+_syntax: drawCone(x, y, z, radius, height)_
 _name: drawCone_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec3 &position, float radius, float height_
+_parameters: float x, float y, float z, float radius, float height_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1487,65 +1396,16 @@ Draw a cone with this renderer using x, y, z, radius, and
 height.
 
 Cones are drawn with x, y, and z coordinates representing the centroid
-of the cone. \p Radius is the radius of the cone's circular
-footprint and \p height representing the height of the cone's.
+of the cone. Radius is the radius of the cone's circular
+footprint and height representing the height of the cone.
 
 
-**Parameters:**
-
-position The 3D point representing this cone's position.
-
+Parameters:
+x The x coordinate to use when drawing this cone.
+y The y coordinate to use when drawing this cone.
+z The z coordinate to use when drawing this cone.
 radius The radius to use when drawing this cone's circular
 footprint.
-
-height The height to use when drawing this cone.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawCone(radius, height)
-
-<!--
-_syntax: drawCone(radius, height)_
-_name: drawCone_
-_returns: void_
-_returns_description: _
-_parameters: float radius, float height_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a cone at the origin using radius and height.
-
-This cone will be drawn with its position at the coordinate system's
-origin. \p Radius is the radius of the cone's circular footprint and
-\p height representing the height of the cone.
-
-
-**Parameters:**
-
-radius The radius to use when drawing this cone's circular
-footprint.
-
 height The height to use when drawing this cone.
 
 
@@ -1590,15 +1450,11 @@ of the cylinder. Radius is the radius of the cone's circular
 footprint and height representing the height of the cone's.
 
 
-**Parameters:**
-
+Parameters:
 x The x coordinate to use when drawing this cone.
-
 y The y coordinate to use when drawing this cone.
-
 radius The radius to use when drawing this cone's circular
 footprint.
-
 height The height to use when drawing this cone.
 
 
@@ -1615,14 +1471,60 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawCone(x, y, z, radius, height)
+###void drawCone(radius, height)
 
 <!--
-_syntax: drawCone(x, y, z, radius, height)_
+_syntax: drawCone(radius, height)_
 _name: drawCone_
 _returns: void_
 _returns_description: _
-_parameters: float x, float y, float z, float radius, float height_
+_parameters: float radius, float height_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a cone at the origin using radius and height.
+
+This cone will be drawn with its position at the coordinate system's
+origin. \p Radius is the radius of the cone's circular footprint and
+\p height representing the height of the cone.
+
+
+Parameters:
+radius The radius to use when drawing this cone's circular
+footprint.
+height The height to use when drawing this cone.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawCone(&position, radius, height)
+
+<!--
+_syntax: drawCone(&position, radius, height)_
+_name: drawCone_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &position, float radius, float height_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -1639,123 +1541,15 @@ Draw a cone with this renderer using x, y, z, radius, and
 height.
 
 Cones are drawn with x, y, and z coordinates representing the centroid
-of the cone. Radius is the radius of the cone's circular
-footprint and height representing the height of the cone.
+of the cone. \p Radius is the radius of the cone's circular
+footprint and \p height representing the height of the cone's.
 
 
-**Parameters:**
-
-x The x coordinate to use when drawing this cone.
-
-y The y coordinate to use when drawing this cone.
-
-z The z coordinate to use when drawing this cone.
-
+Parameters:
+position The 3D point representing this cone's position.
 radius The radius to use when drawing this cone's circular
 footprint.
-
 height The height to use when drawing this cone.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawCylinder(&position, radius, height)
-
-<!--
-_syntax: drawCylinder(&position, radius, height)_
-_name: drawCylinder_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &position, float radius, float height_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a cylinder with this renderer using position, radius, and
-height.
-
-Cyliners are drawn with x, y, and z coordinates representing the
-centroid of the cylinder. Radius is the radius of the cylinder's
-circular footprint and height representing the height of the cylinder.
-
-
-**Parameters:**
-
-position The 3D point to use as a position coordinate when
-drawing this cylinder.
-
-
-radius The radius to use when drawing this cylinder's circular
-footprint.
-
-height The height to use when drawing this cylinder.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawCylinder(radius, height)
-
-<!--
-_syntax: drawCylinder(radius, height)_
-_name: drawCylinder_
-_returns: void_
-_returns_description: _
-_parameters: float radius, float height_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a cylinder at the origin using radius and height.
-
-A cylinder drawn in this way will be positioned at the origin. Radius is
-the radius of the cylinder's circular footprint and height representing
-the height of the cylinder.
-
-
-**Parameters:**
-
-radius The radius to use when drawing this cylinder's circular
-footprint.
-
-height The height to use when drawing this cylinder.
 
 
 
@@ -1799,15 +1593,11 @@ centroid of the cylinder. Radius is the radius of the cylinder's
 circular footprint and height representing the height of the cylinder.
 
 
-**Parameters:**
-
+Parameters:
 x The x coordinate to use when drawing this cylinder.
-
 y The y coordinate to use when drawing this cylinder.
-
 radius The radius to use when drawing this cylinder's circular
 footprint.
-
 height The height to use when drawing this cylinder.
 
 
@@ -1852,17 +1642,108 @@ centroid of the cylinder. Radius is the radius of the cylinder's
 circular footprint and height representing the height of the cylinder.
 
 
-**Parameters:**
-
+Parameters:
 x The x coordinate to use when drawing this cylinder.
-
 y The y coordinate to use when drawing this cylinder.
-
 z The z coordinate to use when drawing this cylinder.
+radius The radius to use when drawing this cylinder's circular
+footprint.
+height The height to use when drawing this cylinder.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawCylinder(radius, height)
+
+<!--
+_syntax: drawCylinder(radius, height)_
+_name: drawCylinder_
+_returns: void_
+_returns_description: _
+_parameters: float radius, float height_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a cylinder at the origin using radius and height.
+
+A cylinder drawn in this way will be positioned at the origin. Radius is
+the radius of the cylinder's circular footprint and height representing
+the height of the cylinder.
+
+
+Parameters:
+radius The radius to use when drawing this cylinder's circular
+footprint.
+height The height to use when drawing this cylinder.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawCylinder(&position, radius, height)
+
+<!--
+_syntax: drawCylinder(&position, radius, height)_
+_name: drawCylinder_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &position, float radius, float height_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a cylinder with this renderer using position, radius, and
+height.
+
+Cyliners are drawn with x, y, and z coordinates representing the
+centroid of the cylinder. Radius is the radius of the cylinder's
+circular footprint and height representing the height of the cylinder.
+
+
+Parameters:
+position The 3D point to use as a position coordinate when
+drawing this cylinder.
 
 radius The radius to use when drawing this cylinder's circular
 footprint.
-
 height The height to use when drawing this cylinder.
 
 
@@ -1901,16 +1782,11 @@ _inlined_description: _
 
 Draw an ellipse using a 3D point, width, and height.
 
-**Parameters:**
-
+Parameters:
 x The x coordinate of the center of the circle.
-
 y The y coordinate of the center of the circle.
-
 z The z coordinate of the center of the circle.
-
 width The width of the circle.
-
 height The height of the circle.
 
 
@@ -1949,19 +1825,13 @@ _inlined_description: _
 
 Draw the coordinate system's axes as a grid with the renderer.
 
-**Parameters:**
-
+Parameters:
 stepSize The size of each row/column in each axis grid.
-
 numberOfSteps The number of rows/columns in each axis grid.
-
 labels True to draw the name and values of the axis as a bitmap
 string.
-
 x True to draw the x axis.
-
 y True to draw the y axis.
-
 z True to draw the z axis.
 
 
@@ -2000,148 +1870,10 @@ _inlined_description: _
 
 Draw a coordinate system plane using the y and z axes.
 
-**Parameters:**
-
+Parameters:
 stepSize The size of each row/column on the axis grid.
-
 numberOfSteps The number of rows/columns on the axis grid.
-
 labels True to draw the names and values of the axes.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawIcoSphere(&position, radius)
-
-<!--
-_syntax: drawIcoSphere(&position, radius)_
-_name: drawIcoSphere_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &position, float radius_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw an icosphere with this renderer using x, y, and radius.
-
-Icospheres are drawn with x, y, and z coordinates representing the
-center of the icosphere.
-
-
-**Parameters:**
-
-position The 3D position point to use when drawing the icosphere.
-
-radius The radius to use when drawing this icosphere.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawIcoSphere(radius)
-
-<!--
-_syntax: drawIcoSphere(radius)_
-_name: drawIcoSphere_
-_returns: void_
-_returns_description: _
-_parameters: float radius_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw an icosphere with the renderer at the origin using radius.
-
-**Parameters:**
-
-radius The radius to use when drawing the icosphere with this
-renderer.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawIcoSphere(x, y, radius)
-
-<!--
-_syntax: drawIcoSphere(x, y, radius)_
-_name: drawIcoSphere_
-_returns: void_
-_returns_description: _
-_parameters: float x, float y, float radius_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw an icosphere with this renderer using x, y, and radius.
-
-Spheres are drawn with x, y, and z coordinates representing the center
-of the icosphere.
-
-
-**Parameters:**
-
-x The x coordinate to use when drawing this icosphere.
-
-y The y coordinate to use when drawing this icosphere.
-
-radius The radius to use when drawing this icosphere.
 
 
 
@@ -2183,14 +1915,139 @@ Spheres are drawn with x, y, and z coordinates representing the center
 of the icosphere.
 
 
-**Parameters:**
-
+Parameters:
 x The x coordinate to use when drawing this icosphere.
-
 y The y coordinate to use when drawing this icosphere.
-
 z The z coordinate to use when drawing this icosphere.
+radius The radius to use when drawing this icosphere.
 
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawIcoSphere(x, y, radius)
+
+<!--
+_syntax: drawIcoSphere(x, y, radius)_
+_name: drawIcoSphere_
+_returns: void_
+_returns_description: _
+_parameters: float x, float y, float radius_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw an icosphere with this renderer using x, y, and radius.
+
+Spheres are drawn with x, y, and z coordinates representing the center
+of the icosphere.
+
+
+Parameters:
+x The x coordinate to use when drawing this icosphere.
+y The y coordinate to use when drawing this icosphere.
+radius The radius to use when drawing this icosphere.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawIcoSphere(radius)
+
+<!--
+_syntax: drawIcoSphere(radius)_
+_name: drawIcoSphere_
+_returns: void_
+_returns_description: _
+_parameters: float radius_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw an icosphere with the renderer at the origin using radius.
+
+Parameters:
+radius The radius to use when drawing the icosphere with this
+renderer.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawIcoSphere(&position, radius)
+
+<!--
+_syntax: drawIcoSphere(&position, radius)_
+_name: drawIcoSphere_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &position, float radius_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw an icosphere with this renderer using x, y, and radius.
+
+Icospheres are drawn with x, y, and z coordinates representing the
+center of the icosphere.
+
+
+Parameters:
+position The 3D position point to use when drawing the icosphere.
 radius The radius to use when drawing this icosphere.
 
 
@@ -2229,117 +2086,13 @@ _inlined_description: _
 
 Draw a line between two 3D points.
 
-**Parameters:**
-
+Parameters:
 x1 The x coordinate of the first point.
-
 y1 The y coordinate of the first point.
-
 z1 The z coordinate of the first point.
-
 x2 The x coordinate of the second point.
-
 y2 The y coordinate of the second point.
-
 z2 The z coordinate of the second point.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawPlane(&position, width, height)
-
-<!--
-_syntax: drawPlane(&position, width, height)_
-_name: drawPlane_
-_returns: void_
-_returns_description: _
-_parameters: glm::vec3 &position, float width, float height_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a plane with the renderer using a 3D point, width, and height.
-
-The number of rows and columns this plane will have is dependent on this
-renderer's current plane resolution set with setPlaneResolution().
-
-
-**Parameters:**
-
-position A 3D point to use as the position to draw the plane with
-this renderer.
-
-width The width to use when drawing the plane with this renderer.
-
-height The height to use when drawing the plane with this
-renderer.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawPlane(width, height)
-
-<!--
-_syntax: drawPlane(width, height)_
-_name: drawPlane_
-_returns: void_
-_returns_description: _
-_parameters: float width, float height_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a plane with the renderer at the origin.
-
-The number of rows and columns this plane will have is dependent on this
-renderer's current plane resolution set with setPlaneResolution().
-
-
-**Parameters:**
-
-width The width of the plane to use when drawing the plane with
-this renderer.
-
-height The height to use when drawing the plane with this
-renderer.
 
 
 
@@ -2381,16 +2134,12 @@ The number of rows and columns this plane will have is dependent on this
 renderer's current plane resolution set with setPlaneResolution().
 
 
-**Parameters:**
-
+Parameters:
 x The x coordinate to use when drawing the plane with this
 renderer.
-
 y The y coordinate to use when drawing the plane with this
 renderer.
-
 width The width to use when drawing the plane with this renderer.
-
 height The height to use when drawing the plane with this
 renderer.
 
@@ -2434,19 +2183,107 @@ The number of rows and columns this plane will have is dependent on this
 renderer's current plane resolution set with setPlaneResolution().
 
 
-**Parameters:**
-
+Parameters:
 x The x coordinate to use when drawing the plane with this
 renderer.
-
 y The y coordinate to use when drawing the plane with this
 renderer.
-
 z The z coordinate to use when drawing the plane with this
 renderer.
-
 width The width to use when drawing the plane with this renderer.
+height The height to use when drawing the plane with this
+renderer.
 
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawPlane(width, height)
+
+<!--
+_syntax: drawPlane(width, height)_
+_name: drawPlane_
+_returns: void_
+_returns_description: _
+_parameters: float width, float height_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a plane with the renderer at the origin.
+
+The number of rows and columns this plane will have is dependent on this
+renderer's current plane resolution set with setPlaneResolution().
+
+
+Parameters:
+width The width of the plane to use when drawing the plane with
+this renderer.
+height The height to use when drawing the plane with this
+renderer.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawPlane(&position, width, height)
+
+<!--
+_syntax: drawPlane(&position, width, height)_
+_name: drawPlane_
+_returns: void_
+_returns_description: _
+_parameters: glm::vec3 &position, float width, float height_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a plane with the renderer using a 3D point, width, and height.
+
+The number of rows and columns this plane will have is dependent on this
+renderer's current plane resolution set with setPlaneResolution().
+
+
+Parameters:
+position A 3D point to use as the position to draw the plane with
+this renderer.
+width The width to use when drawing the plane with this renderer.
 height The height to use when drawing the plane with this
 renderer.
 
@@ -2486,19 +2323,14 @@ _inlined_description: _
 
 Draw a rectangle using a 3D point and a width and height.
 
-**Parameters:**
-
+Parameters:
 x The x coordinate of the rectangle.
-
 y The y coordinate of the rectangle.
-
 z The z coordinate of the rectangle.
-
 w The width of the rectangle.
-
 h The height of the rectangle.
 
-**See also**: ofRectMode
+See also: ofRectMode
 
 
 
@@ -2541,102 +2373,10 @@ axes respectively. This can be helpful when trying to orient other
 object's rotation in respect to the coordinate system.
 
 
-**Parameters:**
-
+Parameters:
 radius The radius to draw the rotation axes with.
-
 stripWidth The width of each axis line.
-
 circleRes The circle resolution to use when drawing the axes.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawSphere(&position, radius)
-
-<!--
-_syntax: drawSphere(&position, radius)_
-_name: drawSphere_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &position, float radius_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a sphere with this renderer using a position point and
-radius.
-
-Spheres are drawn with x, y, and z coordinates representing the center
-of the sphere.
-
-
-**Parameters:**
-
-position The 3D position point to use when drawing the sphere.
-
-radius The radius to use when drawing this sphere.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void drawSphere(radius)
-
-<!--
-_syntax: drawSphere(radius)_
-_name: drawSphere_
-_returns: void_
-_returns_description: _
-_parameters: float radius_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Draw a sphere with the renderer at the defualt origin using
-radius.
-
-**Parameters:**
-
-radius The radius to use when drawing the sphere with this
-renderer.
 
 
 
@@ -2678,12 +2418,9 @@ Spheres are drawn with x, y, and z coordinates representing the center
 of the sphere.
 
 
-**Parameters:**
-
+Parameters:
 x The x coordinate to use when drawing this sphere.
-
 y The y coordinate to use when drawing this sphere.
-
 radius The radius to use when drawing this sphere.
 
 
@@ -2726,14 +2463,10 @@ Spheres are drawn with x, y, and z coordinates representing the center
 of the sphere.
 
 
-**Parameters:**
-
+Parameters:
 x The x coordinate to use when drawing this sphere.
-
 y The y coordinate to use when drawing this sphere.
-
 z The z coordinate to use when drawing this sphere.
-
 radius The radius to use when drawing this sphere.
 
 
@@ -2750,14 +2483,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void drawString(&font, text, x, y)
+###void drawSphere(radius)
 
 <!--
-_syntax: drawString(&font, text, x, y)_
-_name: drawString_
+_syntax: drawSphere(radius)_
+_name: drawSphere_
 _returns: void_
 _returns_description: _
-_parameters: const ofTrueTypeFont &font, string text, float x, float y_
+_parameters: float radius_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -2770,17 +2503,57 @@ _advanced: False_
 
 _inlined_description: _
 
-Draw text with this renderer using an ofTrueType font.
+Draw a sphere with the renderer at the defualt origin using
+radius.
 
-**Parameters:**
+Parameters:
+radius The radius to use when drawing the sphere with this
+renderer.
 
-font The font to use when drawing \p text.
 
-text The text to draw with the renderer.
 
-x The x position for the bottom of \p text.
 
-y The y position for the left alignment of \p text.
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawSphere(&position, radius)
+
+<!--
+_syntax: drawSphere(&position, radius)_
+_name: drawSphere_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &position, float radius_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw a sphere with this renderer using a position point and
+radius.
+
+Spheres are drawn with x, y, and z coordinates representing the center
+of the sphere.
+
+
+Parameters:
+position The 3D position point to use when drawing the sphere.
+radius The radius to use when drawing this sphere.
 
 
 
@@ -2828,15 +2601,53 @@ setBitmapTextMode() can transform this default behavior with modes like:
 		OF_BITMAPMODE_MODEL_BILLBOARD
 
 
-**Parameters:**
-
+Parameters:
 text The text to draw with the renderer.
-
 x The x position for the bottom of \p text.
-
 y The y position for the left alignment of \p text.
-
 z The z position of the text.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void drawString(&font, text, x, y)
+
+<!--
+_syntax: drawString(&font, text, x, y)_
+_name: drawString_
+_returns: void_
+_returns_description: _
+_parameters: const ofTrueTypeFont &font, string text, float x, float y_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Draw text with this renderer using an ofTrueType font.
+
+Parameters:
+font The font to use when drawing \p text.
+text The text to draw with the renderer.
+x The x position for the bottom of \p text.
+y The y position for the left alignment of \p text.
 
 
 
@@ -2874,24 +2685,15 @@ _inlined_description: _
 
 Draw a triangle using three 3D points.
 
-**Parameters:**
-
+Parameters:
 x1 The x coordinate of the first point.
-
 y1 The y coordinate of the first point.
-
 z1 The z coordinate of the first point.
-
 x2 The x coordinate of the second point.
-
 y2 The y coordinate of the second point.
-
 z2 The z coordinate of the second point.
-
 x3 The x coordinate of the third point.
-
 y3 The y coordinate of the third point.
-
 z3 The z coordinate of the third point.
 
 
@@ -3002,7 +2804,7 @@ _inlined_description: _
 
 Get a const reference of this renderer's 3D graphics object.
 
-**Returns**: The 3D graphics object currently being used by this renderer.
+Returns: The 3D graphics object currently being used by this renderer.
 
 
 
@@ -3040,7 +2842,7 @@ _inlined_description: _
 
 Get a reference with this renderer's 3D graphics object.
 
-**Returns**: the 3D graphics object currently being used by this renderer.
+Returns: the 3D graphics object currently being used by this renderer.
 
 
 
@@ -3078,7 +2880,7 @@ _inlined_description: _
 
 Get the current auto redraw background setting for this renderer.
 
-**Returns**: True if this renderer is set to redraw the background each
+Returns: True if this renderer is set to redraw the background each
 frame.
 
 
@@ -3117,7 +2919,7 @@ _inlined_description: _
 
 Get this renderer's current background color.
 
-**Returns**: This renderer's current background color.
+Returns: This renderer's current background color.
 
 
 
@@ -3160,7 +2962,7 @@ current resolution width, resolution height, and resolution depth
 respectively.
 
 
-**Returns**: This renderer's current box resolution as a 3D vector.
+Returns: This renderer's current box resolution as a 3D vector.
 
 
 
@@ -3203,7 +3005,7 @@ segments, height segments, and cap segments of this renderer's cone
 resolution respectively.
 
 
-**Returns**: A 3D vector representing this renderer's current cone
+Returns: A 3D vector representing this renderer's current cone
 resolution.
 
 
@@ -3250,11 +3052,11 @@ and y axes point right and up, and the negative z axis points forward
 and positive rotation is counterclockwise about the axis of rotation.
 
 
-**Returns**: The handedness this renderer is using.
+Returns: The handedness this renderer is using.
 
-**See also**: http://seanmiddleditch.com/matrices-handedness-pre-and-post-multiplication-row-vs-column-major-and-notations/
+See also: http://seanmiddleditch.com/matrices-handedness-pre-and-post-multiplication-row-vs-column-major-and-notations/
 
-**See also**: https://www.evl.uic.edu/ralph/508S98/coordinates.html
+See also: https://www.evl.uic.edu/ralph/508S98/coordinates.html
 
 
 
@@ -3298,13 +3100,12 @@ Possible matrix modes include:
 		OF_MATRIX_TEXTURE
 
 
-**Parameters:**
-
+Parameters:
 matrixMode_ The matrix mode to get the current matrix of.
 
-**Returns**: The current matrix specified by \p matrixMode_
+Returns: The current matrix specified by \p matrixMode_
 
-**See also**: ofMatrixMode
+See also: ofMatrixMode
 
 
 
@@ -3342,7 +3143,7 @@ _inlined_description: _
 
 Get this renderer's current normal matrix.
 
-**Returns**: This renderer's current normal matrix.
+Returns: This renderer's current normal matrix.
 
 
 
@@ -3380,7 +3181,7 @@ _inlined_description: _
 
 Get this renderer's current orientation matrix.
 
-**Returns**: This renderer's current orientation matrix.
+Returns: This renderer's current orientation matrix.
 
 
 
@@ -3418,7 +3219,7 @@ _inlined_description: _
 
 Get this renderer's current view matrix.
 
-**Returns**: This renderer's current view matrix.
+Returns: This renderer's current view matrix.
 
 
 
@@ -3460,9 +3261,9 @@ Unlike getNativeViewport(), this method gets this renderer's current
 viewport with orientation and vertical flipping applied.
 
 
-**Returns**: This renderer's viewport as a rectangle.
+Returns: This renderer's viewport as a rectangle.
 
-**See also**: getNativeViewport()
+See also: getNativeViewport()
 
 
 
@@ -3505,7 +3306,7 @@ segments, height segments, and cap segments of this renderer's cylinder
 resolution respectively.
 
 
-**Returns**: A 3D vector representing this renderer's current cylinder
+Returns: A 3D vector representing this renderer's current cylinder
 resolution.
 
 
@@ -3547,9 +3348,9 @@ Get this renderer's current fill flag.
 Possible fill flags include OF_OUTLINE and OF_FILLED.
 
 
-**Returns**: The fill flag this render is currently using.
+Returns: The fill flag this render is currently using.
 
-**See also**: ofFillFlag
+See also: ofFillFlag
 
 
 
@@ -3587,7 +3388,7 @@ _inlined_description: _
 
 Get this renderer's current icosphere resolution.
 
-**Returns**: This renderer's current icosphere resolution.
+Returns: This renderer's current icosphere resolution.
 
 
 
@@ -3629,9 +3430,9 @@ Unlike getViewport(), this method gets this renderer's current viewport
 without orientation and vertical flipping applied.
 
 
-**Returns**: This renderer's native viewport as a rectangle.
+Returns: This renderer's native viewport as a rectangle.
 
-**See also**: getViewport()
+See also: getViewport()
 
 
 
@@ -3669,7 +3470,7 @@ _inlined_description: _
 
 Get a reference to the path used internally by this renderer.
 
-**Returns**: A reference to the path used internally by this renderer.
+Returns: A reference to the path used internally by this renderer.
 
 
 
@@ -3711,7 +3512,7 @@ The resulting vector's x and y values corresponds to the current column
 and row resolutions of this renderer's plane resolution respectively.
 
 
-**Returns**: A 2D vector representing this renderer's plane resolution in
+Returns: A 2D vector representing this renderer's plane resolution in
 columns and rows.
 
 
@@ -3753,9 +3554,9 @@ Get this renderer's current rect mode.
 Possible rect modes include OF_RECTMODE_CORNER and OF_RECTMODE_CENTER.
 
 
-**Returns**: The renderer's current rect mode.
+Returns: The renderer's current rect mode.
 
-**See also**: ofRectMode
+See also: ofRectMode
 
 
 
@@ -3793,7 +3594,7 @@ _inlined_description: _
 
 Get this renderer's current sphere resolution.
 
-**Returns**: This renderer's current sphere resolution.
+Returns: This renderer's current sphere resolution.
 
 
 
@@ -3831,7 +3632,7 @@ _inlined_description: _
 
 Get this renderer's current style object.
 
-**Returns**: This renderer's current style object.
+Returns: This renderer's current style object.
 
 
 
@@ -3873,7 +3674,7 @@ For example, this method may return "GL", "ProgrammableGL", or another
 type depending on the renderer being used.
 
 
-**Returns**: The string representation of the renderer type.
+Returns: The string representation of the renderer type.
 
 
 
@@ -3911,7 +3712,7 @@ _inlined_description: _
 
 Get the renderer's current viewport width.
 
-**Returns**: The renderer's current viewport width.
+Returns: The renderer's current viewport width.
 
 
 
@@ -3949,7 +3750,7 @@ _inlined_description: _
 
 Get the renderer's current viewport width.
 
-**Returns**: The renderer's current viewport width.
+Returns: The renderer's current viewport width.
 
 
 
@@ -3988,7 +3789,7 @@ _inlined_description: _
 Returns true if the renderer's current viewport is vertically
 flipped.
 
-**Returns**: True if the renderer's current viewport is vertically flipped.
+Returns: True if the renderer's current viewport is vertically flipped.
 
 
 
@@ -4052,46 +3853,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void loadMatrix(&m)
-
-<!--
-_syntax: loadMatrix(&m)_
-_name: loadMatrix_
-_returns: void_
-_returns_description: _
-_parameters: const glm::mat4 &m_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Load a matrix as this renderer's current matrix.
-
-**Parameters:**
-
-m The matrix to load into this renderer.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void loadMatrix(*m)
 
 <!--
@@ -4117,9 +3878,47 @@ Load m as this renderer's current matrix.
 \p m can be passed to loadMatrix() in this way from raw data
 
 
-**Parameters:**
-
+Parameters:
 m Float pointer to an 4x4 matrix.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void loadMatrix(&m)
+
+<!--
+_syntax: loadMatrix(&m)_
+_name: loadMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const glm::mat4 &m_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Load a matrix as this renderer's current matrix.
+
+Parameters:
+m The matrix to load into this renderer.
 
 
 
@@ -4157,8 +3956,7 @@ _inlined_description: _
 
 Load \p m into this renderer's matrix stack as a view matrix.
 
-**Parameters:**
-
+Parameters:
 m The view matrix to load into this renderer's matrix stack.
 
 
@@ -4203,49 +4001,8 @@ The possible matrix modes include:
 		OF_MATRIX_TEXTURE
 
 
-**Parameters:**
-
+Parameters:
 mode The matrix mode this renderer's matrix should use.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void multMatrix(&m)
-
-<!--
-_syntax: multMatrix(&m)_
-_name: multMatrix_
-_returns: void_
-_returns_description: _
-_parameters: const glm::mat4 &m_
-_access: public_
-_version_started: 0072_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Multiply this renderer's current matrix by \p m.
-
-**Parameters:**
-
-m The matrix to multiply this renderer's current matrix by.
 
 
 
@@ -4286,10 +4043,48 @@ Multiply this renderer's current matrix by \p m.
 \p m can be passed to loadMatrix() in this way with raw data
 
 
-**Parameters:**
-
+Parameters:
 m Float pointer to an mat4 to multiply this renderer's
 current matrix by.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void multMatrix(&m)
+
+<!--
+_syntax: multMatrix(&m)_
+_name: multMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const glm::mat4 &m_
+_access: public_
+_version_started: 0072_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Multiply this renderer's current matrix by \p m.
+
+Parameters:
+m The matrix to multiply this renderer's current matrix by.
 
 
 
@@ -4327,8 +4122,7 @@ _inlined_description: _
 
 Multiply this renderer's view matrix by \p m.
 
-**Parameters:**
-
+Parameters:
 m The matrix to multiply this renderer's view matrix by.
 
 
@@ -4448,7 +4242,7 @@ popView() restores the renderer's viewport to the state it was last
 saved with with a call to pushView().
 
 
-**See also**: viewport()
+See also: viewport()
 
 
 
@@ -4570,7 +4364,49 @@ history stack allowing new viewport operations to effect only the new
 viewport created by this method. Should be paired with popView.
 
 
-**See also**: viewport()
+See also: viewport()
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateDeg(degrees, vecX, vecY, vecZ)
+
+<!--
+_syntax: rotateDeg(degrees, vecX, vecY, vecZ)_
+_name: rotateDeg_
+_returns: void_
+_returns_description: _
+_parameters: float degrees, float vecX, float vecY, float vecZ_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate this renderer's current matrix by \p degrees about a euler.
+
+Parameters:
+degrees Degrees to rotate about vecX, vecY, and vecZ.
+vecX The x axis to rotate about.
+vecY The y axis to rotate about.
+vecZ The z axis to rotate about.
 
 
 
@@ -4612,11 +4448,10 @@ axis.
 This method is an alias of rotateZ().
 
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about the z axis.
 
-**See also**: rotateZ()
+See also: rotateZ()
 
 
 
@@ -4632,11 +4467,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotateDeg(degrees, vecX, vecY, vecZ)
+###void rotateRad(degrees, vecX, vecY, vecZ)
 
 <!--
-_syntax: rotateDeg(degrees, vecX, vecY, vecZ)_
-_name: rotateDeg_
+_syntax: rotateRad(degrees, vecX, vecY, vecZ)_
+_name: rotateRad_
 _returns: void_
 _returns_description: _
 _parameters: float degrees, float vecX, float vecY, float vecZ_
@@ -4654,14 +4489,10 @@ _inlined_description: _
 
 Rotate this renderer's current matrix by \p degrees about a euler.
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about vecX, vecY, and vecZ.
-
 vecX The x axis to rotate about.
-
 vecY The y axis to rotate about.
-
 vecZ The z axis to rotate about.
 
 
@@ -4704,57 +4535,10 @@ axis.
 This method is an alias of rotateZ().
 
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about the z axis.
 
-**See also**: rotateZ()
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rotateRad(degrees, vecX, vecY, vecZ)
-
-<!--
-_syntax: rotateRad(degrees, vecX, vecY, vecZ)_
-_name: rotateRad_
-_returns: void_
-_returns_description: _
-_parameters: float degrees, float vecX, float vecY, float vecZ_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotate this renderer's current matrix by \p degrees about a euler.
-
-**Parameters:**
-
-degrees Degrees to rotate about vecX, vecY, and vecZ.
-
-vecX The x axis to rotate about.
-
-vecY The y axis to rotate about.
-
-vecZ The z axis to rotate about.
+See also: rotateZ()
 
 
 
@@ -4793,8 +4577,7 @@ _inlined_description: _
 Rotate this renderer's current matrix by \p degrees about the x
 axis.
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about the x axis.
 
 
@@ -4834,8 +4617,7 @@ _inlined_description: _
 Rotate this renderer's current matrix by \p degrees about the x
 axis.
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about the x axis.
 
 
@@ -4875,8 +4657,7 @@ _inlined_description: _
 Rotate this renderer's current matrix by \p degrees about the y
 axis.
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about the y axis.
 
 
@@ -4916,8 +4697,7 @@ _inlined_description: _
 Rotate this renderer's current matrix by \p degrees about the y
 axis.
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about the y axis.
 
 
@@ -4957,8 +4737,7 @@ _inlined_description: _
 Rotate this renderer's current matrix by \p degrees about the z
 axis.
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about the z axis.
 
 
@@ -4998,8 +4777,7 @@ _inlined_description: _
 Rotate this renderer's current matrix by \p degrees about the z
 axis.
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about the z axis.
 
 
@@ -5038,14 +4816,11 @@ _inlined_description: _
 
 Scale this renderer's current matrix by xAmnt, yAmnt, and zAmnt.
 
-**Parameters:**
-
+Parameters:
 xAmnt The amount to scale this renderer's current matrix's x
 axis by.
-
 yAmnt The amount to scale this renderer's current matrix's y
 axis by.
-
 zAmnt The amount to scale this renderer's current matrix's z
 axis by. Defaults to 1.
 
@@ -5085,8 +4860,7 @@ _inlined_description: _
 
 Enable/disable automatic redrawing of the background each frame.
 
-**Parameters:**
-
+Parameters:
 bManual False to disable automatic background redrawing.
 
 
@@ -5125,8 +4899,7 @@ _inlined_description: _
 
 Set this renderer's background color.
 
-**Parameters:**
-
+Parameters:
 c The color to request this renderer to use.
 
 
@@ -5173,11 +4946,10 @@ Possible bitmap texture modes include:
 		OF_BITMAPMODE_MODEL_BILLBOARD
 
 
-**Parameters:**
-
+Parameters:
 mode The bitmap mode to request this renderer to use.
 
-**See also**: ofDrawBitmapMode
+See also: ofDrawBitmapMode
 
 
 
@@ -5222,11 +4994,10 @@ axis.
 This method is an alias of rotateZ().
 
 
-**Parameters:**
-
+Parameters:
 degrees Degrees to rotate about the z axis.
 
-**See also**: rotateZ()
+See also: rotateZ()
 		OF_BLENDMODE_DISABLED
 		OF_BLENDMODE_ALPHA
 		OF_BLENDMODE_ADD
@@ -5234,12 +5005,11 @@ degrees Degrees to rotate about the z axis.
 		OF_BLENDMODE_MULTIPLY
 		OF_BLENDMODE_SCREEN
 
-
 blendMode The blend mode to request this renderer to use.
 
-**See also**: ofBlendMode
+See also: ofBlendMode
 
-**See also**: https://helpx.adobe.com/photoshop/using/blending-modes.html
+See also: https://helpx.adobe.com/photoshop/using/blending-modes.html
 
 
 
@@ -5277,8 +5047,7 @@ _inlined_description: _
 
 Set the resolution this renderer uses when drawing boxes.
 
-**Parameters:**
-
+Parameters:
 res The resolution to use for box widths, heights, and depths.
 
 
@@ -5317,14 +5086,11 @@ _inlined_description: _
 
 Set the resolution this renderer uses when drawing boxes.
 
-**Parameters:**
-
+Parameters:
 resWidth The width resolution this renderer uses when drawing
 boxes.
-
 resHeight The height resolution this renderer uses when drawing
 boxes.
-
 resDepth The depth resolution this renderer uses when drawing
 boxes.
 
@@ -5365,144 +5131,9 @@ _inlined_description: _
 Set the resolution to use when drawing ellipses with this
 renderer.
 
-**Parameters:**
-
+Parameters:
 res The number of points to use when drawing circles and ellipses
 with this renderer.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setColor(&color)
-
-<!--
-_syntax: setColor(&color)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: const ofColor &color_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the global color this renderer will use when drawing.
-
-The renderer will continue using a color set by setColor() until another
-call to setColor() changes the drawing color.
-
-
-**Parameters:**
-
-color The color to use when drawing.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setColor(&color, _a)
-
-<!--
-_syntax: setColor(&color, _a)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: const ofColor &color, int _a_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the global color this renderer will use when drawing.
-
-The renderer will continue using a color set by setColor() until another
-call to setColor() changes the drawing color.
-
-
-**Parameters:**
-
-color The color to use when drawing.
-
-_a The alpha value between 0 and 255 to use when drawing.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setColor(gray)
-
-<!--
-_syntax: setColor(gray)_
-_name: setColor_
-_returns: void_
-_returns_description: _
-_parameters: int gray_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the global color this renderer will use when drawing.
-
-The renderer will continue using a color set by setColor() until another
-call to setColor() changes the drawing color.
-
-
-**Parameters:**
-
-gray The grayscale value to use when drawing.
 
 
 
@@ -5544,12 +5175,9 @@ The renderer will continue using a color set by setColor() until another
 call to setColor() changes the drawing color.
 
 
-**Parameters:**
-
+Parameters:
 r The red value between 0 and 255 to use when drawing.
-
 g The green value between 0 and 255 to use when drawing.
-
 b The blue value between 0 and 255 to use when drawing.
 
 
@@ -5592,15 +5220,141 @@ The renderer will continue using a color set by setColor() until another
 call to setColor() changes the drawing color.
 
 
-**Parameters:**
-
+Parameters:
 r The red value between 0 and 255 to use when drawing.
-
 g The green value between 0 and 255 to use when drawing.
-
 b The blue value between 0 and 255 to use when drawing.
-
 a The alpha value between 0 and 255 to use when drawing.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(&color)
+
+<!--
+_syntax: setColor(&color)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &color_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set the global color this renderer will use when drawing.
+
+The renderer will continue using a color set by setColor() until another
+call to setColor() changes the drawing color.
+
+
+Parameters:
+color The color to use when drawing.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(&color, _a)
+
+<!--
+_syntax: setColor(&color, _a)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: const ofColor &color, int _a_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set the global color this renderer will use when drawing.
+
+The renderer will continue using a color set by setColor() until another
+call to setColor() changes the drawing color.
+
+
+Parameters:
+color The color to use when drawing.
+_a The alpha value between 0 and 255 to use when drawing.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setColor(gray)
+
+<!--
+_syntax: setColor(gray)_
+_name: setColor_
+_returns: void_
+_returns_description: _
+_parameters: int gray_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set the global color this renderer will use when drawing.
+
+The renderer will continue using a color set by setColor() until another
+call to setColor() changes the drawing color.
+
+
+Parameters:
+gray The grayscale value to use when drawing.
 
 
 
@@ -5642,14 +5396,11 @@ Allows you to set the polygonization resolution of any cones you
 subsequently draw with ofDrawCone().
 
 
-**Parameters:**
-
+Parameters:
 radiusSegments The number of facets (subdivisions) around the
 cone's circular footprint.
-
 heightSegments The number of subdivisions from the cone's top to
 bottom.
-
 capSegments The number of annular (ring-shaped) subdivisions of
 the cone's endcap.
 
@@ -5697,13 +5448,12 @@ and y axes point right and up, and the negative z axis points forward
 and positive rotation is counterclockwise about the axis of rotation.
 
 
-**Parameters:**
-
+Parameters:
 handedness The handedness to set this renderer to use.
 
-**See also**: http://seanmiddleditch.com/matrices-handedness-pre-and-post-multiplication-row-vs-column-major-and-notations/
+See also: http://seanmiddleditch.com/matrices-handedness-pre-and-post-multiplication-row-vs-column-major-and-notations/
 
-**See also**: https://www.evl.uic.edu/ralph/508S98/coordinates.html
+See also: https://www.evl.uic.edu/ralph/508S98/coordinates.html
 
 
 
@@ -5741,8 +5491,7 @@ _inlined_description: _
 
 Set the resolution used when drawing curves with this renderer.
 
-**Parameters:**
-
+Parameters:
 resolution The resolution to request this renderer to use when
 drawing curves.
 
@@ -5782,15 +5531,12 @@ _inlined_description: _
 
 Set this renderer's cylinder resolution.
 
-**Parameters:**
-
+Parameters:
 radiusSegments The number of facets (subdivisions) around the
 icosphere's circular footprint. A larger number yields a higher
 resolution.
-
 heightSegments The number of subdivisions from the cylinder's top
 to bottom.
-
 capSegments The number of annular (ring-shaped) subdivisions of
 the cylinder's endcap. Defaults to 2.
 
@@ -5836,8 +5582,7 @@ order their drawing methods were called. This should be enabled when
 expecting normal behavior when drawing 3D scenes.
 
 
-**Parameters:**
-
+Parameters:
 depthTest True to enable depth testing.
 
 
@@ -5879,11 +5624,10 @@ set this renderer's fill flag.
 Possible fill flags include OF_OUTLINE and OF_FILLED.
 
 
-**Parameters:**
-
+Parameters:
 fill The fill flag to request this renderer to use.
 
-**See also**: ofFillFlag
+See also: ofFillFlag
 
 
 
@@ -5925,8 +5669,7 @@ The renderer will continue using a color set by setColor() until another
 call to setColor() changes the drawing color.
 
 
-**Parameters:**
-
+Parameters:
 hexColor The hexidecimal representation of the color to use when
 drawing.
 
@@ -5967,8 +5710,7 @@ _inlined_description: _
 Set the point resolution to use when drawing an icosphere with
 this renderer.
 
-**Parameters:**
-
+Parameters:
 res The desired icosphere resolution to use with this renderer.
 
 
@@ -6007,8 +5749,7 @@ _inlined_description: _
 
 Enable/disable line smoothing for this renderer if it's supported.
 
-**Parameters:**
-
+Parameters:
 smooth True to enable line smoothing for this renderer if it's
 supported.
 
@@ -6048,8 +5789,7 @@ _inlined_description: _
 
 Set the line width this renderer should use when drawing lines.
 
-**Parameters:**
-
+Parameters:
 lineWidth The line width to request this renderer to use.
 
 
@@ -6096,13 +5836,11 @@ Possible orientation values include:
 		OF_ORIENTATION_UNKNOWN
 
 
-**Parameters:**
-
+Parameters:
 orientation The orientation to use with this renderer.
-
 vFlip True if the orientation should be vertically flipped.
 
-**See also**: ofOrientation
+See also: ofOrientation
 
 
 
@@ -6140,11 +5878,9 @@ _inlined_description: _
 
 Set this renderer's plane resolution using \p column and \p rows.
 
-**Parameters:**
-
+Parameters:
 columns The number of columns to use when drawing planes with
 this renderer.
-
 rows The number of rows to use when drawing planes with this
 renderer.
 
@@ -6192,11 +5928,10 @@ Possible poly winding modes include:
 		OF_POLY_WINDING_ABS_GEQ_TWO
 
 
-**Parameters:**
-
+Parameters:
 mode The poly winding mode to request this renderer to use.
 
-**See also**: ofPolyWindingMode
+See also: ofPolyWindingMode
 
 
 
@@ -6237,11 +5972,10 @@ Set this renderer's rect mode.
 Possible rect modes include OF_RECTMODE_CORNER and OF_RECTMODE_CENTER.
 
 
-**Parameters:**
-
+Parameters:
 mode The rect mode to request this renderer to use.
 
-**See also**: ofRectMode
+See also: ofRectMode
 
 
 
@@ -6281,8 +6015,7 @@ UV Sphere
 Set the point resolution to use when drawing a sphere with this
 renderer.
 
-**Parameters:**
-
+Parameters:
 res The desired sphere resolution to use with this renderer.
 
 
@@ -6321,8 +6054,7 @@ _inlined_description: _
 
 Set this renderer's current style object.
 
-**Parameters:**
-
+Parameters:
 style The style object to set this renderer to use.
 
 
@@ -6433,18 +6165,14 @@ _inlined_description: _
 
 Setup the renderer to use an orthographic matrix.
 
-**Parameters:**
-
+Parameters:
 width The width of the desired orthographic matrix. Defaults to
 -1 setting its width according to the rendering surface's width.
-
 height The height of the desired orthographic matrix. Defaults to
 -1 setting its height according to the rendering surface's height.
-
 nearDist The near clipping distance to use with the orthographic
 matrix. Setting this value to 0 uses the defualt near distance. Defaults
 to 0.
-
 farDist The far clipping distance to use with the orthographic
 matrix. Setting this value to 0 uses the defualt near distance. Defaults
 to 0.
@@ -6485,22 +6213,17 @@ _inlined_description: _
 
 Setup the renderer to use a perspective matrix.
 
-**Parameters:**
-
+Parameters:
 width The width of the desired perspective matrix. Defaults to -1
 setting its width according to the rendering surface's width.
-
 height The height of the desired perspective matrix. Defaults to
 Defaults to -1 setting its width according to the rendering surface's
 width.
-
 fov The field of view to use with the perspective matrix.
 Defaults to 60.
-
 nearDist The near clipping distance to use with the perspective
 matrix. Setting this value to 0 uses the default near distance. Defaults
 to 0.
-
 farDist The far clipping distance to use with the perspective
 matrix. Setting this value to 0 uses the default near distance. Defaults
 to 0.
@@ -6555,46 +6278,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void translate(&p)
-
-<!--
-_syntax: translate(&p)_
-_name: translate_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Translate this renderer's current matrix by a point.
-
-**Parameters:**
-
-p The 3D point to translate this renderer's current matrix by.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void translate(x, y, z)
 
 <!--
@@ -6617,16 +6300,52 @@ _inlined_description: _
 
 Translate this renderer's current matrix by x, y, and z.
 
-**Parameters:**
-
+Parameters:
 x The x coordinate to translate this renderer's current matrix
 by.
-
 y The y coordinate to translate this renderer's current matrix
 by.
-
 z The z coordinate to translate this renderer's current matrix
 by. Defaults to 0.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void translate(&p)
+
+<!--
+_syntax: translate(&p)_
+_name: translate_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &p_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Translate this renderer's current matrix by a point.
+
+Parameters:
+p The 3D point to translate this renderer's current matrix by.
 
 
 
@@ -6664,8 +6383,7 @@ _inlined_description: _
 
 Unbind the camera from this renderer.
 
-**Parameters:**
-
+Parameters:
 camera The camera to unbind from this renderer.
 
 
@@ -6745,15 +6463,11 @@ _inlined_description: _
 Set this renderer's viewport manually using x, y, width, and
 height.
 
-**Parameters:**
-
+Parameters:
 x The x coordinate of the viewport. Defaults to 0.
-
 y The y coordinate of the viewport. Defaults to 0.
-
 w The width of the viewport. Defaults to -1 setting its width
 according to the rendering surface's width.
-
 h The height of the viewport. Defaults to -1 setting its height
 according to the rendering surface's height.
 

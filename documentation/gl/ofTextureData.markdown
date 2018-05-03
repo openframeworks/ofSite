@@ -280,7 +280,7 @@ _inlined_description: _
 
 < GL internal format, e.g. GL_RGB8.
 <
-**See also**: http://www.opengl.org/wiki/Image_Format
+See also: http://www.opengl.org/wiki/Image_Format
 
 
 

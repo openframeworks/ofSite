@@ -147,14 +147,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofEvent::FunctionPtr make_function(*, f, priority)
+###ofEvent::FunctionPtr make_function(*listener, method, priority)
 
 <!--
-_syntax: make_function(*, f, priority)_
+_syntax: make_function(*listener, method, priority)_
 _name: make_function_
 _returns: ofEvent::FunctionPtr_
 _returns_description: _
-_parameters: function< bool (const void *, T &) > f, int priority_
+_parameters: TObj *listener, bool (TObj::*)(T &) method, int priority_
 _access: protected_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -183,14 +183,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofEvent::FunctionPtr make_function(*, f, priority)
+###ofEvent::FunctionPtr make_function(*listener, method, priority)
 
 <!--
-_syntax: make_function(*, f, priority)_
+_syntax: make_function(*listener, method, priority)_
 _name: make_function_
 _returns: ofEvent::FunctionPtr_
 _returns_description: _
-_parameters: function< void (const void *, T &) > f, int priority_
+_parameters: TObj *listener, void (TObj::*)(T &) method, int priority_
 _access: protected_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -291,78 +291,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofEvent::FunctionPtr make_function(*listener, method, priority)
-
-<!--
-_syntax: make_function(*listener, method, priority)_
-_name: make_function_
-_returns: ofEvent::FunctionPtr_
-_returns_description: _
-_parameters: TObj *listener, bool (TObj::*)(T &) method, int priority_
-_access: protected_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###ofEvent::FunctionPtr make_function(*listener, method, priority)
-
-<!--
-_syntax: make_function(*listener, method, priority)_
-_name: make_function_
-_returns: ofEvent::FunctionPtr_
-_returns_description: _
-_parameters: TObj *listener, void (TObj::*)(T &) method, int priority_
-_access: protected_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofEvent::FunctionPtr make_function(f, priority)
 
 <!--
@@ -399,6 +327,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###ofEvent::FunctionPtr make_function(*, f, priority)
+
+<!--
+_syntax: make_function(*, f, priority)_
+_name: make_function_
+_returns: ofEvent::FunctionPtr_
+_returns_description: _
+_parameters: function< bool (const void *, T &) > f, int priority_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###ofEvent::FunctionPtr make_function(f, priority)
 
 <!--
@@ -407,6 +371,42 @@ _name: make_function_
 _returns: ofEvent::FunctionPtr_
 _returns_description: _
 _parameters: function< void (T &) > f, int priority_
+_access: protected_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###ofEvent::FunctionPtr make_function(*, f, priority)
+
+<!--
+_syntax: make_function(*, f, priority)_
+_name: make_function_
+_returns: ofEvent::FunctionPtr_
+_returns_description: _
+_parameters: function< void (const void *, T &) > f, int priority_
 _access: protected_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -579,16 +579,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool notify(&param)
+###bool notify(*sender, &param)
 
 <!--
-_syntax: notify(&param)_
+_syntax: notify(*sender, &param)_
 _name: notify_
 _returns: bool_
 _returns_description: _
-_parameters: T &param_
+_parameters: const void *sender, T &param_
 _access: public_
-_version_started: 0.10.0_
+_version_started: 0.9.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -615,16 +615,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###bool notify(*sender, &param)
+###bool notify(&param)
 
 <!--
-_syntax: notify(*sender, &param)_
+_syntax: notify(&param)_
 _name: notify_
 _returns: bool_
 _returns_description: _
-_parameters: const void *sender, T &param_
+_parameters: T &param_
 _access: public_
-_version_started: 0.9.0_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_

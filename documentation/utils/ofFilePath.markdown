@@ -52,11 +52,10 @@ _inlined_description: _
 Prepend path with a slash, ie. "images" -> "/images".
 
 
-**Parameters:**
-
+Parameters:
 path file or directory path
 
-**Returns**: slah + path
+Returns: slah + path
 
 
 
@@ -95,11 +94,10 @@ _inlined_description: _
 Append path with a slash, ie. "images" -> "images/".
 
 
-**Parameters:**
-
+Parameters:
 path directory path
 
-**Returns**: path + slash
+Returns: path + slash
 
 
 
@@ -142,16 +140,14 @@ Assumes the path is in the data folder & automatically creates nested
 directories as required.
 
 
-**Parameters:**
-
+Parameters:
 bRecursive set to false to override automatically nested
 directory creation
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data folder and want the direct path without relative
 "../../"
 
-**Returns**: true if the enclosing directory was created
+Returns: true if the enclosing directory was created
 
 
 
@@ -191,15 +187,13 @@ Get the absolute, full path for a given path,
 ie. "images" -> "/Users/mickey/of/apps/myApps/Donald/bin/data/images".
 
 
-**Parameters:**
-
+Parameters:
 path file or directory path
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data folder and want the direct path without relative
 "../../"
 
-**Returns**: absolute path
+Returns: absolute path
 
 
 
@@ -240,11 +234,10 @@ ie. "images/duck.jpg" -> "duck" and
 "images/some/folder" -> "folder"
 
 
-**Parameters:**
-
+Parameters:
 filePath file path
 
-**Returns**: basename
+Returns: basename
 
 
 
@@ -289,7 +282,7 @@ Windows & Linux: the application's parent directory
 Mac: the Contents/MacOS folder within the application's .app bundle
 
 
-**Returns**: current executable directory
+Returns: current executable directory
 
 
 
@@ -332,7 +325,7 @@ Windows: the .exe
 Linux: the binary file itself
 
 
-**Returns**: current executable path
+Returns: current executable path
 
 
 
@@ -374,10 +367,10 @@ This may be the app's parent directory or the location the app was
 launched from (aka on the commandline).
 
 
-**Warning**: This location *may* change if you or a library calls the cd()
+Warning: This location *may* change if you or a library calls the cd()
 std C function.
 
-**Returns**: current working directory
+Returns: current working directory
 
 
 
@@ -418,15 +411,13 @@ ie. "images/duck.jpg" -> "images", assumes the path is in the data
 directory.
 
 
-**Parameters:**
-
+Parameters:
 filePath file path
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data folder and want the direct path without relative
 "../../"
 
-**Returns**: enclosing directory
+Returns: enclosing directory
 
 
 
@@ -465,11 +456,10 @@ _inlined_description: _
 Get the extension of a filename, ie. "duck.jpg" -> "jpg".
 
 
-**Parameters:**
-
+Parameters:
 filename file path
 
-**Returns**: filename extension only
+Returns: filename extension only
 
 
 
@@ -513,15 +503,13 @@ directories ie. "images/duck.jpg" -> "duck.jpg", assumes the path is in
 the data folder.
 
 
-**Parameters:**
-
+Parameters:
 filePath file path
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data folder and want the direct path without relative
 "../../"
 
-**Returns**: filename
+Returns: filename
 
 
 
@@ -566,11 +554,10 @@ For Windows-style path strings using "\", a "\" will be added.
 For Unix-style path strings using "/", a "/" will be added.
 
 
-**Parameters:**
-
+Parameters:
 path directory path
 
-**Returns**: cleaned path + trailing slash (if needed)
+Returns: cleaned path + trailing slash (if needed)
 
 
 
@@ -613,7 +600,7 @@ Windows: <root>\Users\<username>
 Linux: /home/<username>
 
 
-**Returns**: home directory path
+Returns: home directory path
 
 
 
@@ -654,11 +641,10 @@ ie. "images" -> false,
 "/Users/mickey/of/apps/myApps/Donald/bin/data/images" -> true.
 
 
-**Parameters:**
-
+Parameters:
 path file or directory path
 
-**Returns**: true if the path is an absolute path
+Returns: true if the path is an absolute path
 
 
 
@@ -698,13 +684,11 @@ Create a single path by joining path1 & path2 using a slash,
 ie. "/hello/world" + "foo/bar" -> "/hello/world/foo/bar".
 
 
-**Parameters:**
-
+Parameters:
 path1 left half of the path to join
-
 path2 right half of the path to join
 
-**Returns**: joined path
+Returns: joined path
 
 
 
@@ -745,13 +729,11 @@ ie. the relative path of "images/felines/lions" to
 "images/felines/tigers" is "../tigers".
 
 
-**Parameters:**
-
+Parameters:
 from starting path
-
 to destination path
 
-**Returns**: relative path
+Returns: relative path
 
 
 
@@ -790,11 +772,10 @@ _inlined_description: _
 Remove extension from a filename, ie. "duck.jpg" ->"duck".
 
 
-**Parameters:**
-
+Parameters:
 filename file path
 
-**Returns**: filename without extension
+Returns: filename without extension
 
 
 
@@ -834,11 +815,10 @@ Remove a path's trailing slash (if found),
 ie. "images/" -> "images".
 
 
-**Parameters:**
-
+Parameters:
 path directory path
 
-**Returns**: path minus trailing slash
+Returns: path minus trailing slash
 
 
 

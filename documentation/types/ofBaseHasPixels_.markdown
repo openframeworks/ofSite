@@ -49,7 +49,7 @@ _inlined_description: _
 
 Get a reference to the underlying ofPixels.
 
-**Returns**: a reference the underlying ofPixels.
+Returns: a reference the underlying ofPixels.
 
 
 
@@ -87,7 +87,7 @@ _inlined_description: _
 
 Get a const reference to the underlying ofPixels.
 
-**Returns**: a const reference the underlying ofPixels.
+Returns: a const reference the underlying ofPixels.
 
 
 

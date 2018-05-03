@@ -39,10 +39,8 @@ Read the contents of a file at path into a buffer.
 Opens as a text file by default.
 
 
-**Parameters:**
-
+Parameters:
 path file to open
-
 binary set to false if you are reading a text file & want lines
 split at endline characters automatically
 
@@ -84,12 +82,9 @@ Write the contents of a buffer to a file at path.
 Saves as a text file by default.
 
 
-**Parameters:**
-
+Parameters:
 path file to open
-
 buffer data source to write from
-
 binary set to false if you are writing a text file & want lines
 split at endline characters automatically
 

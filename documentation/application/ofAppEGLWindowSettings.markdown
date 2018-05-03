@@ -25,14 +25,14 @@ _extends: ofGLESWindowSettings_
 
 
 
-### ofAppEGLWindowSettings(&settings)
+### ofAppEGLWindowSettings()
 
 <!--
-_syntax: ofAppEGLWindowSettings(&settings)_
+_syntax: ofAppEGLWindowSettings()_
 _name: ofAppEGLWindowSettings_
 _returns: _
 _returns_description: _
-_parameters: const ofGLESWindowSettings &settings_
+_parameters: _
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -61,14 +61,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofAppEGLWindowSettings()
+### ofAppEGLWindowSettings(&settings)
 
 <!--
-_syntax: ofAppEGLWindowSettings()_
+_syntax: ofAppEGLWindowSettings(&settings)_
 _name: ofAppEGLWindowSettings_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofGLESWindowSettings &settings_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

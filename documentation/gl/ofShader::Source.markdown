@@ -25,14 +25,14 @@ _extends: _
 
 
 
-### Source()
+### Source(type, &source, &directoryPath)
 
 <!--
-_syntax: Source()_
+_syntax: Source(type, &source, &directoryPath)_
 _name: Source_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: GLuint type, const string &source, const filesystem::path &directoryPath_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -61,14 +61,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### Source(type, &source, &directoryPath)
+### Source()
 
 <!--
-_syntax: Source(type, &source, &directoryPath)_
+_syntax: Source()_
 _name: Source_
 _returns: _
 _returns_description: _
-_parameters: GLuint type, const string &source, const filesystem::path &directoryPath_
+_parameters: _
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

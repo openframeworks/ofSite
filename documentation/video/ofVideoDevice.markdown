@@ -114,7 +114,7 @@ _inlined_description: _
 
 A list of video device formats provided by the device.
 
-**See also**: ofVideoFormat
+See also: ofVideoFormat
 
 
 

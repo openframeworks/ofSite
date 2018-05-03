@@ -25,14 +25,14 @@ _extends: ofGLWindowSettings_
 
 
 
-### ofGLFWWindowSettings(&settings)
+### ofGLFWWindowSettings()
 
 <!--
-_syntax: ofGLFWWindowSettings(&settings)_
+_syntax: ofGLFWWindowSettings()_
 _name: ofGLFWWindowSettings_
 _returns: _
 _returns_description: _
-_parameters: const ofGLWindowSettings &settings_
+_parameters: _
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -61,14 +61,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofGLFWWindowSettings()
+### ofGLFWWindowSettings(&settings)
 
 <!--
-_syntax: ofGLFWWindowSettings()_
+_syntax: ofGLFWWindowSettings(&settings)_
 _name: ofGLFWWindowSettings_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: const ofGLWindowSettings &settings_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _

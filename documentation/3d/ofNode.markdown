@@ -88,8 +88,7 @@ _inlined_description: _
 
 Move node up+down relative to current position (in local y axis).
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative position change along local y axis as float.
 
 
@@ -128,8 +127,7 @@ _inlined_description: _
 
 Remove parent node linking.
 
-**Parameters:**
-
+Parameters:
 param0 Boolean if maintain child's global transformations (default = false).
 
 
@@ -167,6 +165,47 @@ _advanced: False_
 _inlined_description: _
 
 \}
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void customDraw(*renderer)
+
+<!--
+_syntax: customDraw(*renderer)_
+_name: customDraw_
+_returns: void_
+_returns_description: _
+_parameters: const ofBaseRenderer *renderer_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+If you extend ofNode and wish to change the way it draws, extend this.
+
+Parameters:
+param0 A pointer to the renderer you want to draw to.
+\note Try to not use global functions for rendering and instead use the passed
+renderer.
 
 
 
@@ -220,48 +259,6 @@ If you extend ofNode and wish to change the way it draws, extend this.
 
 <!----------------------------------------------------------------------------->
 
-###void customDraw(*renderer)
-
-<!--
-_syntax: customDraw(*renderer)_
-_name: customDraw_
-_returns: void_
-_returns_description: _
-_parameters: const ofBaseRenderer *renderer_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-If you extend ofNode and wish to change the way it draws, extend this.
-
-**Parameters:**
-
-param0 A pointer to the renderer you want to draw to.
-\note Try to not use global functions for rendering and instead use the passed
-renderer.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void dolly(amount)
 
 <!--
@@ -284,8 +281,7 @@ _inlined_description: _
 
 Move node backward+forward relative to current position (in local z axis).
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative position change along local z axis as float.
 
 
@@ -363,7 +359,7 @@ _inlined_description: _
 
 Get the global orientation of the node as a quaternion.
 
-**Returns**: An quaternion of the global orientations(useful for complex rotations)
+Returns: An quaternion of the global orientations(useful for complex rotations)
 
 
 
@@ -401,7 +397,7 @@ _inlined_description: _
 
 Get node's global position as a 3D vector.
 
-**Returns**: A 3D vector with the global coordinates.
+Returns: A 3D vector with the global coordinates.
 
 
 
@@ -439,7 +435,7 @@ _inlined_description: _
 
 Get global scale of node in xyz axes where 1 is default.
 
-**Returns**: The global scale in the xyz axes where 1 = 100% of size.
+Returns: The global scale in the xyz axes where 1 = 100% of size.
 
 
 
@@ -477,9 +473,9 @@ _inlined_description: _
 
 Get node's global transformations (position, orientation, scale).
 
-**Returns**: A refrence to mat4 containing node's global transformations.
+Returns: A refrence to mat4 containing node's global transformations.
 
-**See also**: https://open.gl/transformations
+See also: https://open.gl/transformations
 
 
 
@@ -517,7 +513,7 @@ _inlined_description: _
 
 Get heading of node, aka the rotation along local y axis.
 
-**Returns**: The rotation around the local y axis in degrees, as a float.
+Returns: The rotation around the local y axis in degrees, as a float.
 
 
 
@@ -555,7 +551,7 @@ _inlined_description: _
 
 Get heading of node, aka the rotation along local y axis.
 
-**Returns**: The rotation around the local y axis in degrees, as a float.
+Returns: The rotation around the local y axis in degrees, as a float.
 
 
 
@@ -593,9 +589,9 @@ _inlined_description: _
 
 Get node's local transformations (position, orientation, scale).
 
-**Returns**: A refrence to mat4 containing node's local transformations.
+Returns: A refrence to mat4 containing node's local transformations.
 
-**See also**: https://open.gl/transformations
+See also: https://open.gl/transformations
 
 
 
@@ -633,7 +629,7 @@ _inlined_description: _
 
 Get direction the node looks at aka local -z axis, as 3d vector.
 
-**Returns**: A normalized 3D vector of the node's local -z axis direction.
+Returns: A normalized 3D vector of the node's local -z axis direction.
 
 
 
@@ -671,7 +667,7 @@ _inlined_description: _
 
 Get local orientation of node in degrees around x, y, and z axes.
 
-**Returns**: The local x, y and z axes orientation in degrees, as a 3D vector.
+Returns: The local x, y and z axes orientation in degrees, as a 3D vector.
 
 
 
@@ -709,7 +705,7 @@ _inlined_description: _
 
 Get local orientation of node in degrees around x, y, and z axes.
 
-**Returns**: The local x, y and z axes orientation in degrees, as a 3D vector.
+Returns: The local x, y and z axes orientation in degrees, as a 3D vector.
 
 
 
@@ -747,7 +743,7 @@ _inlined_description: _
 
 Get the local orientation of the node as a quaternion.
 
-**Returns**: A quaternion of local orientation (useful for complex rotations)
+Returns: A quaternion of local orientation (useful for complex rotations)
 
 
 
@@ -785,7 +781,7 @@ _inlined_description: _
 
 Get the parent node of this node.
 
-**Returns**: Pointer to parent ofNode.
+Returns: Pointer to parent ofNode.
 
 
 
@@ -823,7 +819,7 @@ _inlined_description: _
 
 Get pitch of node, aka the rotation along local x axis.
 
-**Returns**: The rotation around the local x axis in degrees, as a float.
+Returns: The rotation around the local x axis in degrees, as a float.
 
 
 
@@ -861,7 +857,7 @@ _inlined_description: _
 
 Get pitch of node, aka the rotation along local x axis.
 
-**Returns**: The rotation around the local x axis in degrees, as a float.
+Returns: The rotation around the local x axis in degrees, as a float.
 
 
 
@@ -899,7 +895,7 @@ _inlined_description: _
 
 Get node's local position as a 3D vector.
 
-**Returns**: A 3D vector with the local coordinates.
+Returns: A 3D vector with the local coordinates.
 
 
 
@@ -937,7 +933,7 @@ _inlined_description: _
 
 Get roll of node, aka the rotation along local z axis.
 
-**Returns**: The rotation around the local z axis in degrees, as a float.
+Returns: The rotation around the local z axis in degrees, as a float.
 
 
 
@@ -975,7 +971,7 @@ _inlined_description: _
 
 Get roll of node, aka the rotation along local z axis.
 
-**Returns**: The rotation around the local z axis in degrees, as a float.
+Returns: The rotation around the local z axis in degrees, as a float.
 
 
 
@@ -1013,7 +1009,7 @@ _inlined_description: _
 
 Get local scale of node in xyz axes where 1 is default.
 
-**Returns**: The local scale in the xyz axes where 1 = 100% of size.
+Returns: The local scale in the xyz axes where 1 = 100% of size.
 
 
 
@@ -1051,7 +1047,7 @@ _inlined_description: _
 
 Get direction of node's side aka local x axis, as 3d vector.
 
-**Returns**: A normalized 3D vector of the node's local x axis direction.
+Returns: A normalized 3D vector of the node's local x axis direction.
 
 
 
@@ -1089,7 +1085,7 @@ _inlined_description: _
 
 Get direction of node's top aka local y axis, as 3d vector.
 
-**Returns**: A normalized 3D vector of the node's local y axis direction.
+Returns: A normalized 3D vector of the node's local y axis direction.
 
 
 
@@ -1127,7 +1123,7 @@ _inlined_description: _
 
 Get node's local x position.
 
-**Returns**: Local x coordinate as a float.
+Returns: Local x coordinate as a float.
 
 
 
@@ -1165,7 +1161,7 @@ _inlined_description: _
 
 Get the node's local x axis as 3d vector.
 
-**Returns**: A normalized 3D vector of the node's local x axis direction.
+Returns: A normalized 3D vector of the node's local x axis direction.
 
 
 
@@ -1203,7 +1199,7 @@ _inlined_description: _
 
 Get node's local y position.
 
-**Returns**: Local y coordinate as a float.
+Returns: Local y coordinate as a float.
 
 
 
@@ -1241,7 +1237,7 @@ _inlined_description: _
 
 Get the node's local y axis as 3d vector.
 
-**Returns**: A normalized 3D vector of the node's local y axis direction.
+Returns: A normalized 3D vector of the node's local y axis direction.
 
 
 
@@ -1279,7 +1275,7 @@ _inlined_description: _
 
 Get node's local z position.
 
-**Returns**: Local z coordinate as a float.
+Returns: Local z coordinate as a float.
 
 
 
@@ -1317,7 +1313,7 @@ _inlined_description: _
 
 Get the node's local z axis as 3d vector.
 
-**Returns**: A normalized 3D vector of the node's local z axis direction.
+Returns: A normalized 3D vector of the node's local z axis direction.
 
 
 
@@ -1355,8 +1351,7 @@ _inlined_description: _
 
 Orient node to look at another node (-z axis pointing at other node).
 
-**Parameters:**
-
+Parameters:
 param0 A reference to the node to look at.
 \note This version calculates the up vector automatically to try to keep
 	  it relatively consistant with the original angle.
@@ -1368,48 +1363,6 @@ param0 A reference to the node to look at.
 _description: _
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void lookAt(&lookAtNode, &upVector)
-
-<!--
-_syntax: lookAt(&lookAtNode, &upVector)_
-_name: lookAt_
-_returns: void_
-_returns_description: _
-_parameters: const ofNode &lookAtNode, const glm::vec3 &upVector_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Orient node to look at another node (-z axis pointing at other node).
-
-**Parameters:**
-
-param0 A reference to the node to look at.
-
-param1 The desired up axis as a ref to cartesian 3D vector.
-
-
-
-
-
-_description: _
-
-Orient node to look at node (-z axis pointing to node).
 
 
 
@@ -1439,8 +1392,7 @@ _inlined_description: _
 
 Orient node to look at point (-z axis pointing to global position).
 
-**Parameters:**
-
+Parameters:
 param0 XYZ coordinates of point to look at as ref to 3D vector.
 \note This version calculates the up vector automatically to try to keep
 	  it relatively consistant with the original angle.
@@ -1481,10 +1433,8 @@ _inlined_description: _
 
 Orient node to look at point (-z axis pointing to global position).
 
-**Parameters:**
-
+Parameters:
 param0 XYZ coordinates of point to look at as ref to 3D vector.
-
 param1 The desired up axis as a cartesian 3D vector.
 
 
@@ -1501,14 +1451,14 @@ Orient node to look at position (-z axis pointing to position).
 
 <!----------------------------------------------------------------------------->
 
-###void move(&offset)
+###void lookAt(&lookAtNode, &upVector)
 
 <!--
-_syntax: move(&offset)_
-_name: move_
+_syntax: lookAt(&lookAtNode, &upVector)_
+_name: lookAt_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec3 &offset_
+_parameters: const ofNode &lookAtNode, const glm::vec3 &upVector_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -1521,11 +1471,11 @@ _advanced: False_
 
 _inlined_description: _
 
-Move node by relative amount with xyz as ref to 3D vector.
+Orient node to look at another node (-z axis pointing at other node).
 
-**Parameters:**
-
-param0 Desired relative position change along all axes as ref to 3D vector.
+Parameters:
+param0 A reference to the node to look at.
+param1 The desired up axis as a ref to cartesian 3D vector.
 
 
 
@@ -1533,7 +1483,7 @@ param0 Desired relative position change along all axes as ref to 3D vector.
 
 _description: _
 
-Move by arbitrary amount.
+Orient node to look at node (-z axis pointing to node).
 
 
 
@@ -1563,12 +1513,9 @@ _inlined_description: _
 
 Move node by relative amount with xyz coordinates.
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative position change along x axis as a float.
-
 param1 Desired relative position change along y axis as a float.
-
 param2 Desired relative position change along z axis as a float.
 
 
@@ -1585,16 +1532,16 @@ Move by arbitrary amount.
 
 <!----------------------------------------------------------------------------->
 
-### ofNode(&&node)
+###void move(&offset)
 
 <!--
-_syntax: ofNode(&&node)_
-_name: ofNode_
-_returns: _
+_syntax: move(&offset)_
+_name: move_
+_returns: void_
 _returns_description: _
-_parameters: ofNode &&node_
+_parameters: const glm::vec3 &offset_
 _access: public_
-_version_started: 0.10.0_
+_version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1605,7 +1552,46 @@ _advanced: False_
 
 _inlined_description: _
 
+Move node by relative amount with xyz as ref to 3D vector.
 
+Parameters:
+param0 Desired relative position change along all axes as ref to 3D vector.
+
+
+
+
+
+_description: _
+
+Move by arbitrary amount.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofNode()
+
+<!--
+_syntax: ofNode()_
+_name: ofNode_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+\cond INTERNAL
 
 
 
@@ -1657,16 +1643,16 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofNode()
+### ofNode(&&node)
 
 <!--
-_syntax: ofNode()_
+_syntax: ofNode(&&node)_
 _name: ofNode_
 _returns: _
 _returns_description: _
-_parameters: _
+_parameters: ofNode &&node_
 _access: public_
-_version_started: 007_
+_version_started: 0.10.0_
 _version_deprecated: _
 _summary: _
 _constant: False_
@@ -1677,7 +1663,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\cond INTERNAL
+
 
 
 
@@ -1910,14 +1896,14 @@ Classes extending ofNode can override these methods to get notified when the sca
 
 <!----------------------------------------------------------------------------->
 
-###ofNode & operator=(&&node)
+###ofNode & operator=(&node)
 
 <!--
-_syntax: operator=(&&node)_
+_syntax: operator=(&node)_
 _name: operator=_
 _returns: ofNode &_
 _returns_description: _
-_parameters: ofNode &&node_
+_parameters: const ofNode &node_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -1946,14 +1932,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofNode & operator=(&node)
+###ofNode & operator=(&&node)
 
 <!--
-_syntax: operator=(&node)_
+_syntax: operator=(&&node)_
 _name: operator=_
 _returns: ofNode &_
 _returns_description: _
-_parameters: const ofNode &node_
+_parameters: ofNode &&node_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2004,14 +1990,10 @@ _inlined_description: _
 
 Orbit node around another node at a specific radius.
 
-**Parameters:**
-
+Parameters:
 param0 The longitudinal position of the node in degrees as float.
-
 param1 The latitudinal position of the node in degrees as float.
-
 param2 The desired radius from the other node in degrees as float.
-
 param3 A reference to the node to rotate around.
 
 
@@ -2050,14 +2032,10 @@ _inlined_description: _
 
 Orbit node around a global position at a specific radius.
 
-**Parameters:**
-
+Parameters:
 param0 The longitudinal position of the node in degrees as float.
-
 param1 The latitudinal position of the node in degrees as float.
-
 param2 The desired radius from the position in degrees as float.
-
 param3 The global position to orbit around as ref to 3D vector. Default = (0, 0, 0).
 
 
@@ -2096,14 +2074,10 @@ _inlined_description: _
 
 Orbit node around another node at a specific radius.
 
-**Parameters:**
-
+Parameters:
 param0 The longitudinal position of the node in radians as float.
-
 param1 The latitudinal position of the node in radians as float.
-
 param2 The desired radius from the other node in radians as float.
-
 param3 A reference to the node to rotate around.
 
 
@@ -2142,14 +2116,10 @@ _inlined_description: _
 
 Orbit node around a global position at a specific radius.
 
-**Parameters:**
-
+Parameters:
 param0 The longitudinal position of the node in radians as float.
-
 param1 The latitudinal position of the node in radians as float.
-
 param2 The desired radius from the position in radians as float.
-
 param3 The global position to orbit around as ref to 3D vector. Default = (0, 0, 0).
 
 
@@ -2188,8 +2158,7 @@ _inlined_description: _
 
 Rotate left+right relative to current orientation (around local y axis).
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative rotation change along local y axis in degrees as float.
 
 
@@ -2228,8 +2197,7 @@ _inlined_description: _
 
 Rotate left+right relative to current orientation (around local y axis).
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative rotation change along local y axis in radians as float.
 
 
@@ -2340,8 +2308,7 @@ _inlined_description: _
 
 Restore opengl renderer's previous modelview transform matrix.
 
-**Parameters:**
-
+Parameters:
 param0 A pointer to the renderer you want to restore transformation to;
 
 
@@ -2380,8 +2347,7 @@ _inlined_description: _
 
 Roll left+right relative to current orientation (around local z axis).
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative rotation change along local z axis in degrees as float.
 
 
@@ -2420,8 +2386,7 @@ _inlined_description: _
 
 Roll left+right relative to current orientation (around local z axis).
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative rotation change along local z axis in radians as float.
 
 
@@ -2460,8 +2425,7 @@ _inlined_description: _
 
 Rotate relative to current orientation by quaternion.
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative rotation change as a ref to quaternion.
 
 
@@ -2500,10 +2464,8 @@ _inlined_description: _
 
 Rotate relative to current orientation by quaternion around point.
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative rotation change as a ref to quaternion.
-
 param1 Point to rotate around in local xyz coordinates as ref to 3D vector.
 
 
@@ -2542,12 +2504,9 @@ _inlined_description: _
 
 Rotate relative to current orientation around arbitrary axis around point.
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative angle change in degrees as float.
-
 param1 The arbitrary axis to rotate around as ref to cartesian 3D vector.
-
 param2 Point to rotate around in local xyz coordinates as ref to 3D vector.
 
 
@@ -2586,55 +2545,10 @@ _inlined_description: _
 
 Rotate relative to current orientation around arbitrary axis around point.
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative angle change in degrees as float.
-
 param1 The arbitrary axis to rotate around as ref to cartesian 3D vector.
-
 param2 Point to rotate around in local xyz coordinates as ref to 3D vector.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void rotateDeg(degrees, &v)
-
-<!--
-_syntax: rotateDeg(degrees, &v)_
-_name: rotateDeg_
-_returns: void_
-_returns_description: _
-_parameters: float degrees, const glm::vec3 &v_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotate relative to current orientation around arbitrary axis.
-
-**Parameters:**
-
-param0 Desired relative angle change in degrees as float.
-
-param1 Desired axis to rotate around as a ref to cartesian 3D Vector.
 
 
 
@@ -2672,14 +2586,10 @@ _inlined_description: _
 
 Rotate relative to current orientation around arbitrary axis.
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative angle change in degrees as float.
-
 param1 X angle of the axis to rotate around in degrees as float.
-
 param2 Y angle of the axis to rotate around in degrees as float.
-
 param3 Z angle of the axis to rotate around in degrees as float.
 
 
@@ -2696,14 +2606,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotateRad(radians, &v)
+###void rotateDeg(degrees, &v)
 
 <!--
-_syntax: rotateRad(radians, &v)_
-_name: rotateRad_
+_syntax: rotateDeg(degrees, &v)_
+_name: rotateDeg_
 _returns: void_
 _returns_description: _
-_parameters: float radians, const glm::vec3 &v_
+_parameters: float degrees, const glm::vec3 &v_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -2718,10 +2628,8 @@ _inlined_description: _
 
 Rotate relative to current orientation around arbitrary axis.
 
-**Parameters:**
-
-param0 Desired relative angle change in radians as float.
-
+Parameters:
+param0 Desired relative angle change in degrees as float.
 param1 Desired axis to rotate around as a ref to cartesian 3D Vector.
 
 
@@ -2760,15 +2668,51 @@ _inlined_description: _
 
 Rotate relative to current orientation around arbitrary axis.
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative angle change in radians as float.
-
 param1 X angle of the axis to rotate around in degrees as float.
-
 param2 Y angle of the axis to rotate around in degrees as float.
-
 param3 Z angle of the axis to rotate around in degrees as float.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotateRad(radians, &v)
+
+<!--
+_syntax: rotateRad(radians, &v)_
+_name: rotateRad_
+_returns: void_
+_returns_description: _
+_parameters: float radians, const glm::vec3 &v_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotate relative to current orientation around arbitrary axis.
+
+Parameters:
+param0 Desired relative angle change in radians as float.
+param1 Desired axis to rotate around as a ref to cartesian 3D Vector.
 
 
 
@@ -2806,49 +2750,8 @@ _inlined_description: _
 
 Set global orientation with a quaternion.
 
-**Parameters:**
-
+Parameters:
 param0 Desired global orientation as ref to an glm::quat.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setGlobalPosition(&p)
-
-<!--
-_syntax: setGlobalPosition(&p)_
-_name: setGlobalPosition_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the global position of the node using a 3D vector of coordinates.
-
-**Parameters:**
-
-param0 Desired global xyz coordinates as ref to 3D vector.
 
 
 
@@ -2886,12 +2789,9 @@ _inlined_description: _
 
 Set the global position of the node using xyz coordinates.
 
-**Parameters:**
-
+Parameters:
 param0 Desired global x coordinate as a float.
-
 param1 Desired global y coordinate as a float.
-
 param2 Desired global z coordinate as a float.
 
 
@@ -2908,14 +2808,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setOrientation(&eulerAngles)
+###void setGlobalPosition(&p)
 
 <!--
-_syntax: setOrientation(&eulerAngles)_
-_name: setOrientation_
+_syntax: setGlobalPosition(&p)_
+_name: setGlobalPosition_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec3 &eulerAngles_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2928,14 +2828,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Set local orientation with xyz euler angles.
+Set the global position of the node using a 3D vector of coordinates.
 
-**Parameters:**
-
-param0 Desired local xyz angles in degrees, as ref to 3D vector.
-\note Using euler angles can cause gimbal lock.
-
-**See also**: https://en.wikipedia.org/wiki/Gimbal_lock
+Parameters:
+param0 Desired global xyz coordinates as ref to 3D vector.
 
 
 
@@ -2973,9 +2869,50 @@ _inlined_description: _
 
 Set local orientation with a quaternion.
 
-**Parameters:**
-
+Parameters:
 param0 Desired local orientation as ref to an glm::quat.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setOrientation(&eulerAngles)
+
+<!--
+_syntax: setOrientation(&eulerAngles)_
+_name: setOrientation_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &eulerAngles_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set local orientation with xyz euler angles.
+
+Parameters:
+param0 Desired local xyz angles in degrees, as ref to 3D vector.
+\note Using euler angles can cause gimbal lock.
+
+See also: https://en.wikipedia.org/wiki/Gimbal_lock
 
 
 
@@ -3013,10 +2950,8 @@ _inlined_description: _
 
 Set parent for the node. The node will inherit transformations from parent.
 
-**Parameters:**
-
+Parameters:
 param0 Reference to the ofNode which becomes the parent node.
-
 param1 Boolean if maintain child's global transformations (default = false).
 
 
@@ -3026,46 +2961,6 @@ param1 Boolean if maintain child's global transformations (default = false).
 _description: _
 
 Set parent to link nodes transformations are inherited from parent node set to NULL if not needed (default).
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setPosition(&p)
-
-<!--
-_syntax: setPosition(&p)_
-_name: setPosition_
-_returns: void_
-_returns_description: _
-_parameters: const glm::vec3 &p_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Set the local position of the node using a 3D vector of coordinates.
-
-**Parameters:**
-
-param0 Desired local xyz coordinates as ref to 3D vector.
-
-
-
-
-
-_description: _
-
-
 
 
 
@@ -3095,12 +2990,9 @@ _inlined_description: _
 
 Set the local position of the node using xyz coordinates.
 
-**Parameters:**
-
+Parameters:
 param0 Desired local x coordinate as a float.
-
 param1 Desired local y coordinate as a float.
-
 param2 Desired local z coordinate as a float.
 
 
@@ -3117,14 +3009,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void setScale(&s)
+###void setPosition(&p)
 
 <!--
-_syntax: setScale(&s)_
-_name: setScale_
+_syntax: setPosition(&p)_
+_name: setPosition_
 _returns: void_
 _returns_description: _
-_parameters: const glm::vec3 &s_
+_parameters: const glm::vec3 &p_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -3137,11 +3029,10 @@ _advanced: False_
 
 _inlined_description: _
 
-Set local scale for xyz axes individually with a 3D vector.
+Set the local position of the node using a 3D vector of coordinates.
 
-**Parameters:**
-
-param0 Desired local scale for all axes as ref to 3D vector where 1 = 100%.
+Parameters:
+param0 Desired local xyz coordinates as ref to 3D vector.
 
 
 
@@ -3179,8 +3070,7 @@ _inlined_description: _
 
 Set local uniform scale (x, y, and z are equally scaled).
 
-**Parameters:**
-
+Parameters:
 param0 Desired scale for all axes as a float where 1 = 100%.
 
 
@@ -3219,13 +3109,49 @@ _inlined_description: _
 
 Set local scale for xyz axes individually.
 
-**Parameters:**
-
+Parameters:
 param0 Desired local scale for x axis as a float where 1 = 100%.
-
 param1 Desired local scale for y axis as a float where 1 = 100%.
-
 param2 Desired local scale for z axis as a float where 1 = 100%.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void setScale(&s)
+
+<!--
+_syntax: setScale(&s)_
+_name: setScale_
+_returns: void_
+_returns_description: _
+_parameters: const glm::vec3 &s_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Set local scale for xyz axes individually with a 3D vector.
+
+Parameters:
+param0 Desired local scale for all axes as ref to 3D vector where 1 = 100%.
 
 
 
@@ -3263,8 +3189,7 @@ _inlined_description: _
 
 Tilt up+down relative to current orientation (around local x axis).
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative rotation change along local x axis in degrees as float.
 
 
@@ -3303,8 +3228,7 @@ _inlined_description: _
 
 Tilt up+down relative to current orientation (around local x axis).
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative rotation change along local x axis in radians as float.
 
 
@@ -3343,8 +3267,7 @@ _inlined_description: _
 
 Set opengl renderer's modelview matrix to this nodes transform.
 
-**Parameters:**
-
+Parameters:
 param0 A pointer to the renderer you want to set to this node's transform;
 \note If you want to draw something at the position+orientation+scale of this node,
 call ofNode::transform(); write your draw code, and ofNode::restoreTransform();
@@ -3389,8 +3312,7 @@ _inlined_description: _
 
 Move node left+right relative to current position (in local x axis).
 
-**Parameters:**
-
+Parameters:
 param0 Desired relative position change along local x axis as float.
 
 

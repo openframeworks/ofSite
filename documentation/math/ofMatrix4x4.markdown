@@ -354,7 +354,7 @@ reality center display are used.
 In these configuration one should use the getFrustum method instead.
 
 
-**Returns**: false if matrix is not a perspective matrix,
+Returns: false if matrix is not a perspective matrix,
 where parameter values are undefined.
 
 
@@ -666,42 +666,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void glRotate(&q)
-
-<!--
-_syntax: glRotate(&q)_
-_name: glRotate_
-_returns: void_
-_returns_description: _
-_parameters: const ofQuaternion &q_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-**See also**: rotate
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void glRotate(angle, x, y, z)
 
 <!--
@@ -722,7 +686,43 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: rotate
+See also: rotate
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void glRotate(&q)
+
+<!--
+_syntax: glRotate(&q)_
+_name: glRotate_
+_returns: void_
+_returns_description: _
+_parameters: const ofQuaternion &q_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+See also: rotate
 
 
 
@@ -758,43 +758,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: rotate
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void glScale(&v)
-
-<!--
-_syntax: glScale(&v)_
-_name: glScale_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f &v_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-**See also**: scale
+See also: rotate
 
 
 
@@ -830,7 +794,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: scale
+See also: scale
 
 
 
@@ -846,11 +810,11 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void glTranslate(&v)
+###void glScale(&v)
 
 <!--
-_syntax: glTranslate(&v)_
-_name: glTranslate_
+_syntax: glScale(&v)_
+_name: glScale_
 _returns: void_
 _returns_description: _
 _parameters: const ofVec3f &v_
@@ -866,7 +830,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: translate
+See also: scale
 
 
 
@@ -902,7 +866,43 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: translate
+See also: translate
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void glTranslate(&v)
+
+<!--
+_syntax: glTranslate(&v)_
+_name: glTranslate_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec3f &v_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+See also: translate
 
 
 
@@ -1205,12 +1205,9 @@ along its z-axis. Use this function if you want an object to look at a
 point from another point in space.
 
 
-**Parameters:**
-
+Parameters:
 eye The position of the object.
-
 center The point which the object is "looking" at.
-
 up The direction which the object considers to be "up".
 
 
@@ -1467,49 +1464,9 @@ _inlined_description: _
 Matrix becomes a rotation transform.
 
 
-**Parameters:**
-
+Parameters:
 from Matrix becomes a rotation from this vector direction.
-
 to Matrix becomes a rotation to this vector direction.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void makeRotationMatrix(&quaternion)
-
-<!--
-_syntax: makeRotationMatrix(&quaternion)_
-_name: makeRotationMatrix_
-_returns: void_
-_returns_description: _
-_parameters: const ofQuaternion &quaternion_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-**Parameters:**
-
-quaternion Matrix becomes a rotation that produces the quaternion's orientation.
 
 
 
@@ -1545,10 +1502,8 @@ _advanced: False_
 
 _inlined_description: _
 
-**Parameters:**
-
+Parameters:
 angle Matrix becomes a rotation by angle (degrees).
-
 axis Rotation is performed around this vector.
 
 
@@ -1585,15 +1540,48 @@ _advanced: False_
 
 _inlined_description: _
 
-**Parameters:**
-
+Parameters:
 angle Matrix becomes a rotation by angle (degrees).
-
 x X-value of the rotation axis.
-
 y Y-value of the rotation axis.
-
 z Z-value of the rotation axis.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void makeRotationMatrix(&quaternion)
+
+<!--
+_syntax: makeRotationMatrix(&quaternion)_
+_name: makeRotationMatrix_
+_returns: void_
+_returns_description: _
+_parameters: const ofQuaternion &quaternion_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Parameters:
+quaternion Matrix becomes a rotation that produces the quaternion's orientation.
 
 
 
@@ -1821,7 +1809,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: makeFrustumMatrix
+See also: makeFrustumMatrix
 
 
 
@@ -1857,7 +1845,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: makeIdentityMatrix
+See also: makeIdentityMatrix
 
 
 
@@ -1893,7 +1881,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: makeLookAtMatrix
+See also: makeLookAtMatrix
 
 
 
@@ -1929,7 +1917,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: makeOrtho2DMatrix
+See also: makeOrtho2DMatrix
 
 
 
@@ -1965,7 +1953,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: makeOrthoMatrix
+See also: makeOrthoMatrix
 
 
 
@@ -2001,7 +1989,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: makePerspectiveMatrix
+See also: makePerspectiveMatrix
 
 
 
@@ -2037,7 +2025,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: makeRotationMatrix
+See also: makeRotationMatrix
 
 
 
@@ -2053,14 +2041,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 newRotationMatrix(&quat)
+###ofMatrix4x4 newRotationMatrix(angle, x, y, z)
 
 <!--
-_syntax: newRotationMatrix(&quat)_
+_syntax: newRotationMatrix(angle, x, y, z)_
 _name: newRotationMatrix_
 _returns: ofMatrix4x4_
 _returns_description: _
-_parameters: const ofQuaternion &quat_
+_parameters: float angle, float x, float y, float z_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2125,14 +2113,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 newRotationMatrix(angle, x, y, z)
+###ofMatrix4x4 newRotationMatrix(angle1, &axis1, angle2, &axis2, angle3, &axis3)
 
 <!--
-_syntax: newRotationMatrix(angle, x, y, z)_
+_syntax: newRotationMatrix(angle1, &axis1, angle2, &axis2, angle3, &axis3)_
 _name: newRotationMatrix_
 _returns: ofMatrix4x4_
 _returns_description: _
-_parameters: float angle, float x, float y, float z_
+_parameters: float angle1, const ofVec3f &axis1, float angle2, const ofVec3f &axis2, float angle3, const ofVec3f &axis3_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2161,14 +2149,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofMatrix4x4 newRotationMatrix(angle1, &axis1, angle2, &axis2, angle3, &axis3)
+###ofMatrix4x4 newRotationMatrix(&quat)
 
 <!--
-_syntax: newRotationMatrix(angle1, &axis1, angle2, &axis2, angle3, &axis3)_
+_syntax: newRotationMatrix(&quat)_
 _name: newRotationMatrix_
 _returns: ofMatrix4x4_
 _returns_description: _
-_parameters: float angle1, const ofVec3f &axis1, float angle2, const ofVec3f &axis2, float angle3, const ofVec3f &axis3_
+_parameters: const ofQuaternion &quat_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -2217,7 +2205,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: makeScaleMatrix
+See also: makeScaleMatrix
 
 
 
@@ -2289,7 +2277,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**See also**: makeTranslationMatrix
+See also: makeTranslationMatrix
 
 
 
@@ -2341,6 +2329,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+### ofMatrix4x4()
+
+<!--
+_syntax: ofMatrix4x4()_
+_name: ofMatrix4x4_
+_returns: _
+_returns_description: _
+_parameters: _
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+The default constructor provides an identity matrix.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ### ofMatrix4x4(&mat)
 
 <!--
@@ -2362,6 +2386,48 @@ _advanced: False_
 _inlined_description: _
 
 
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofMatrix4x4(ptr)
+
+<!--
+_syntax: ofMatrix4x4(ptr)_
+_name: ofMatrix4x4_
+_returns: _
+_returns_description: _
+_parameters: const float *const ptr_
+_access: public_
+_version_started: 0.10.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Construct with a pointer.
+
+You can pass a pointer to floats, and the first 16 contents will be
+extracted into this matrix.
+
+
+Warning: the validity of these values is not checked!
 
 
 
@@ -2413,42 +2479,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofMatrix4x4()
-
-<!--
-_syntax: ofMatrix4x4()_
-_name: ofMatrix4x4_
-_returns: _
-_returns_description: _
-_parameters: _
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-The default constructor provides an identity matrix.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofMatrix4x4(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)
 
 <!--
@@ -2472,48 +2502,6 @@ _inlined_description: _
 Positional style.
 
 All 16 values of the matrix as positional arguments in row-major order.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofMatrix4x4(ptr)
-
-<!--
-_syntax: ofMatrix4x4(ptr)_
-_name: ofMatrix4x4_
-_returns: _
-_returns_description: _
-_parameters: const float *const ptr_
-_access: public_
-_version_started: 0.10.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Construct with a pointer.
-
-You can pass a pointer to floats, and the first 16 contents will be
-extracted into this matrix.
-
-
-**Warning**: the validity of these values is not checked!
 
 
 
@@ -2787,44 +2775,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void postMult(&)
-
-<!--
-_syntax: postMult(&)_
-_name: postMult_
-_returns: void_
-_returns_description: _
-_parameters: const ofMatrix4x4 &_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Post-multiply by another matrix.
-
-This matrix becomes `this * other`.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f postMult(&v)
 
 <!--
@@ -2885,6 +2835,44 @@ _inlined_description: _
 
 post-multiplies the vector by the matrix (i.e. returns M mult v).
 The vector is implicitly treated as a column-matrix
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void postMult(&)
+
+<!--
+_syntax: postMult(&)_
+_name: postMult_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Post-multiply by another matrix.
+
+This matrix becomes `this * other`.
 
 
 
@@ -3116,44 +3104,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void preMult(&)
-
-<!--
-_syntax: preMult(&)_
-_name: preMult_
-_returns: void_
-_returns_description: _
-_parameters: const ofMatrix4x4 &_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Pre-multiply by another matrix.
-
-This matrix becomes `other * this`.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###ofVec3f preMult(&v)
 
 <!--
@@ -3214,6 +3164,44 @@ _inlined_description: _
 
 pre-multiplies the vector by the matrix (i.e. returns v mult M)
 The vector is implicitly treated as a row-matrix
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void preMult(&)
+
+<!--
+_syntax: preMult(&)_
+_name: preMult_
+_returns: void_
+_returns_description: _
+_parameters: const ofMatrix4x4 &_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Pre-multiply by another matrix.
+
+This matrix becomes `other * this`.
 
 
 
@@ -3337,42 +3325,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void rotate(&q)
-
-<!--
-_syntax: rotate(&q)_
-_name: rotate_
-_returns: void_
-_returns_description: _
-_parameters: const ofQuaternion &q_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Rotates based on the quarternion.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void rotate(angle, x, y, z)
 
 <!--
@@ -3394,6 +3346,42 @@ _advanced: False_
 _inlined_description: _
 
 Rotates by angle (degrees) around the given x, y, z axis.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void rotate(&q)
+
+<!--
+_syntax: rotate(&q)_
+_name: rotate_
+_returns: void_
+_returns_description: _
+_parameters: const ofQuaternion &q_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Rotates based on the quarternion.
 
 
 
@@ -3445,42 +3433,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void scale(&v)
-
-<!--
-_syntax: scale(&v)_
-_name: scale_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f &v_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Scales each axis by the corresponding x, y, z of the vector.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void scale(x, y, z)
 
 <!--
@@ -3502,6 +3454,42 @@ _advanced: False_
 _inlined_description: _
 
 Scales each axis by the corresponding x, y, z.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void scale(&v)
+
+<!--
+_syntax: scale(&v)_
+_name: scale_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec3f &v_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Scales each axis by the corresponding x, y, z of the vector.
 
 
 
@@ -3540,42 +3528,6 @@ _inlined_description: _
 Set the data of the matrix.
 
 These functions are analogous to the corresponding constructors.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void set(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)
-
-<!--
-_syntax: set(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)_
-_name: set_
-_returns: void_
-_returns_description: _
-_parameters: float a00, float a01, float a02, float a03, float a10, float a11, float a12, float a13, float a20, float a21, float a22, float a23, float a30, float a31, float a32, float a33_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 
@@ -3663,6 +3615,42 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
+###void set(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)
+
+<!--
+_syntax: set(a00, a01, a02, a03, a10, a11, a12, a13, a20, a21, a22, a23, a30, a31, a32, a33)_
+_name: set_
+_returns: void_
+_returns_description: _
+_parameters: float a00, float a01, float a02, float a03, float a10, float a11, float a12, float a13, float a20, float a21, float a22, float a23, float a30, float a31, float a32, float a33_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void setRotate(&q)
 
 <!--
@@ -3688,42 +3676,6 @@ _inlined_description: _
 
 All of these methods alter the components,
 deleting the previous data only in that component.
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void setTranslation(&v)
-
-<!--
-_syntax: setTranslation(&v)_
-_name: setTranslation_
-_returns: void_
-_returns_description: _
-_parameters: const ofVec3f &v_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
 
 
 
@@ -3775,27 +3727,27 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###ofVec3f transform3x3(&m, &v)
+###void setTranslation(&v)
 
 <!--
-_syntax: transform3x3(&m, &v)_
-_name: transform3x3_
-_returns: ofVec3f_
+_syntax: setTranslation(&v)_
+_name: setTranslation_
+_returns: void_
 _returns_description: _
-_parameters: const ofMatrix4x4 &m, const ofVec3f &v_
+_parameters: const ofVec3f &v_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: True_
+_static: False_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
-Apply a 3x3 transform (no translation) of M * v.
+
 
 
 
@@ -3847,27 +3799,27 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void translate(&v)
+###ofVec3f transform3x3(&m, &v)
 
 <!--
-_syntax: translate(&v)_
-_name: translate_
-_returns: void_
+_syntax: transform3x3(&m, &v)_
+_name: transform3x3_
+_returns: ofVec3f_
 _returns_description: _
-_parameters: const ofVec3f &v_
+_parameters: const ofMatrix4x4 &m, const ofVec3f &v_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
 _summary: _
 _constant: False_
-_static: False_
+_static: True_
 _visible: True_
 _advanced: False_
 -->
 
 _inlined_description: _
 
-Translates along the vector.
+Apply a 3x3 transform (no translation) of M * v.
 
 
 
@@ -3904,6 +3856,42 @@ _advanced: False_
 _inlined_description: _
 
 Translates by tx, ty, tz.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void translate(&v)
+
+<!--
+_syntax: translate(&v)_
+_name: translate_
+_returns: void_
+_returns_description: _
+_parameters: const ofVec3f &v_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Translates along the vector.
 
 
 

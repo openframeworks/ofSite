@@ -536,14 +536,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(radius, height)
+###void set(radius, height, radiusSegments, heightSegments, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
 
 <!--
-_syntax: set(radius, height)_
+_syntax: set(radius, height, radiusSegments, heightSegments, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float radius, float height_
+_parameters: float radius, float height, int radiusSegments, int heightSegments, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -572,14 +572,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void set(radius, height, radiusSegments, heightSegments, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)
+###void set(radius, height)
 
 <!--
-_syntax: set(radius, height, radiusSegments, heightSegments, capSegments = 2, mode = OF_PRIMITIVE_TRIANGLE_STRIP)_
+_syntax: set(radius, height)_
 _name: set_
 _returns: void_
 _returns_description: _
-_parameters: float radius, float height, int radiusSegments, int heightSegments, int capSegments=2, ofPrimitiveMode mode=OF_PRIMITIVE_TRIANGLE_STRIP_
+_parameters: float radius, float height_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _

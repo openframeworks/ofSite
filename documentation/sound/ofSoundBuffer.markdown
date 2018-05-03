@@ -93,42 +93,6 @@ LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCRLsRsLfe LCR
 
 
 
-###void addTo(&outBuffer, fromFrame, loop = false)
-
-<!--
-_syntax: addTo(&outBuffer, fromFrame, loop = false)_
-_name: addTo_
-_returns: void_
-_returns_description: _
-_parameters: ofSoundBuffer &outBuffer, size_t fromFrame, bool loop=false_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-as addTo above but reads outNumFrames and outNumChannels from outBuffer
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ###void addTo(&outBuffer, outNumFrames, outNumChannels, fromFrame, loop = false)
 
 <!--
@@ -150,6 +114,42 @@ _advanced: False_
 _inlined_description: _
 
 as copyTo but mixes source audio with audio in `outBuffer` by adding samples together (+), instead of overwriting.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void addTo(&outBuffer, fromFrame, loop = false)
+
+<!--
+_syntax: addTo(&outBuffer, fromFrame, loop = false)_
+_name: addTo_
+_returns: void_
+_returns_description: _
+_parameters: ofSoundBuffer &outBuffer, size_t fromFrame, bool loop=false_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+as addTo above but reads outNumFrames and outNumChannels from outBuffer
 
 
 
@@ -345,14 +345,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void copyFrom(&floatBuffer, numChannels, sampleRate)
+###void copyFrom(*shortBuffer, numFrames, numChannels, sampleRate)
 
 <!--
-_syntax: copyFrom(&floatBuffer, numChannels, sampleRate)_
+_syntax: copyFrom(*shortBuffer, numFrames, numChannels, sampleRate)_
 _name: copyFrom_
 _returns: void_
 _returns_description: _
-_parameters: const int &floatBuffer, size_t numChannels, unsigned int sampleRate_
+_parameters: const short *shortBuffer, size_t numFrames, size_t numChannels, unsigned int sampleRate_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -365,43 +365,7 @@ _advanced: False_
 
 _inlined_description: _
 
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void copyFrom(&floatBuffer, numChannels, sampleRate)
-
-<!--
-_syntax: copyFrom(&floatBuffer, numChannels, sampleRate)_
-_name: copyFrom_
-_returns: void_
-_returns_description: _
-_parameters: const int &floatBuffer, size_t numChannels, unsigned int sampleRate_
-_access: public_
-_version_started: 0.9.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
+copy length samples from shortBuffer and interpret as interleaved with the given number of channels at the given samplerate
 
 
 
@@ -453,14 +417,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void copyFrom(*shortBuffer, numFrames, numChannels, sampleRate)
+###void copyFrom(&floatBuffer, numChannels, sampleRate)
 
 <!--
-_syntax: copyFrom(*shortBuffer, numFrames, numChannels, sampleRate)_
+_syntax: copyFrom(&floatBuffer, numChannels, sampleRate)_
 _name: copyFrom_
 _returns: void_
 _returns_description: _
-_parameters: const short *shortBuffer, size_t numFrames, size_t numChannels, unsigned int sampleRate_
+_parameters: const int &floatBuffer, size_t numChannels, unsigned int sampleRate_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -473,7 +437,7 @@ _advanced: False_
 
 _inlined_description: _
 
-copy length samples from shortBuffer and interpret as interleaved with the given number of channels at the given samplerate
+
 
 
 
@@ -489,14 +453,14 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-###void copyTo(&outBuffer, frameFrame, loop = false)
+###void copyFrom(&floatBuffer, numChannels, sampleRate)
 
 <!--
-_syntax: copyTo(&outBuffer, frameFrame, loop = false)_
-_name: copyTo_
+_syntax: copyFrom(&floatBuffer, numChannels, sampleRate)_
+_name: copyFrom_
 _returns: void_
 _returns_description: _
-_parameters: ofSoundBuffer &outBuffer, size_t frameFrame, bool loop=false_
+_parameters: const int &floatBuffer, size_t numChannels, unsigned int sampleRate_
 _access: public_
 _version_started: 0.9.0_
 _version_deprecated: _
@@ -509,7 +473,7 @@ _advanced: False_
 
 _inlined_description: _
 
-as copyTo above but reads outNumFrames and outNumChannels from outBuffer
+
 
 
 
@@ -549,6 +513,42 @@ resize outBuffer to outNumFrames with outNumChannels, and then copy outNumFrames
 fromFrame is a frame offset. if we don't have enough source data, loop with fromFrame=0 until we have filled outBuffer.
 if outBuffer has fewer channels than our buffer, just copy the first outNumChannels of our data and skip the rest.
 if outBuffer has more channels than our buffer, loop through our channels repeatedly until done.
+
+
+
+
+
+_description: _
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void copyTo(&outBuffer, frameFrame, loop = false)
+
+<!--
+_syntax: copyTo(&outBuffer, frameFrame, loop = false)_
+_name: copyTo_
+_returns: void_
+_returns_description: _
+_parameters: ofSoundBuffer &outBuffer, size_t frameFrame, bool loop=false_
+_access: public_
+_version_started: 0.9.0_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+as copyTo above but reads outNumFrames and outNumChannels from outBuffer
 
 
 

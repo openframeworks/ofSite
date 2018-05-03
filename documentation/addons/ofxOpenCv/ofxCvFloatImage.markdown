@@ -683,42 +683,6 @@ _description: _
 
 <!----------------------------------------------------------------------------->
 
-### ofxCvFloatImage(&mom)
-
-<!--
-_syntax: ofxCvFloatImage(&mom)_
-_name: ofxCvFloatImage_
-_returns: _
-_returns_description: _
-_parameters: const ofxCvFloatImage &mom_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Copy constructor.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
 ### ofxCvFloatImage()
 
 <!--
@@ -748,6 +712,42 @@ _inlined_description: _
 _description: _
 
 Constructor.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+### ofxCvFloatImage(&mom)
+
+<!--
+_syntax: ofxCvFloatImage(&mom)_
+_name: ofxCvFloatImage_
+_returns: _
+_returns_description: _
+_parameters: const ofxCvFloatImage &mom_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Copy constructor.
 
 
 
@@ -803,14 +803,14 @@ andPuppy &= cvPuppy; // will & all the bits
 
 <!----------------------------------------------------------------------------->
 
-###void operator*=(&mom)
+###void operator*=(scalar)
 
 <!--
-_syntax: operator*=(&mom)_
+_syntax: operator*=(scalar)_
 _name: operator*=_
 _returns: void_
 _returns_description: _
-_parameters: ofxCvImage &mom_
+_parameters: float scalar_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -843,14 +843,14 @@ first *= second; // both are ofxCvFloatImage instances
 
 <!----------------------------------------------------------------------------->
 
-###void operator*=(scalar)
+###void operator*=(&mom)
 
 <!--
-_syntax: operator*=(scalar)_
+_syntax: operator*=(&mom)_
 _name: operator*=_
 _returns: void_
 _returns_description: _
-_parameters: float scalar_
+_parameters: ofxCvImage &mom_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -916,6 +916,78 @@ Divides each pixel of the pixel data of the right hand side image from the curre
 ~~~~{.cpp}
 first /= second; // both are ofxCvFloatImage instances
 ~~~~
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void operator=(*_pixels)
+
+<!--
+_syntax: operator=(*_pixels)_
+_name: operator=_
+_returns: void_
+_returns_description: _
+_parameters: unsigned char *_pixels_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Copy the data from an array of unsigned char numbers into the ofxCvFloatImage instance. The dimensions of the array are assumed to match the dimensions of the image. The values will be converted to a 0.0 - 1.0 scale.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+###void operator=(*_pixels)
+
+<!--
+_syntax: operator=(*_pixels)_
+_name: operator=_
+_returns: void_
+_returns_description: _
+_parameters: float *_pixels_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+
+
+
+
+
+
+_description: _
+
+Copy the data from an array of floating point numbers into the ofxCvFloatImage instance. The dimensions of the array are assumed to match the dimensions of the image.
 
 
 
@@ -1060,78 +1132,6 @@ _inlined_description: _
 _description: _
 
 
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void operator=(*_pixels)
-
-<!--
-_syntax: operator=(*_pixels)_
-_name: operator=_
-_returns: void_
-_returns_description: _
-_parameters: unsigned char *_pixels_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Copy the data from an array of unsigned char numbers into the ofxCvFloatImage instance. The dimensions of the array are assumed to match the dimensions of the image. The values will be converted to a 0.0 - 1.0 scale.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###void operator=(*_pixels)
-
-<!--
-_syntax: operator=(*_pixels)_
-_name: operator=_
-_returns: void_
-_returns_description: _
-_parameters: float *_pixels_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-Copy the data from an array of floating point numbers into the ofxCvFloatImage instance. The dimensions of the array are assumed to match the dimensions of the image.
 
 
 

@@ -76,8 +76,7 @@ Setting an allowed extension enables a whitelist mode which only lists
 extensions which have been explicitly allowed.
 
 
-**Parameters:**
-
+Parameters:
 extension file type extension ie. "jpg", "png", "txt", etc
 
 
@@ -164,7 +163,7 @@ _inlined_description: _
 Check if the current path is executable.
 
 
-**Returns**: true if executable
+Returns: true if executable
 
 
 
@@ -203,7 +202,7 @@ _inlined_description: _
 Check if the current path is readable.
 
 
-**Returns**: true if readable
+Returns: true if readable
 
 
 
@@ -242,7 +241,7 @@ _inlined_description: _
 Check if the current path is writeable.
 
 
-**Returns**: true if writable
+Returns: true if writable
 
 
 
@@ -321,17 +320,14 @@ does not change the current path & assumes the new path is in the data
 directory.
 
 
-**Parameters:**
-
+Parameters:
 path destination file or directory path
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data directory
-
 overwrite set to true if you want to overwrite the file or
 directory at the new path
 
-**Returns**: true if the copy was successful
+Returns: true if the copy was successful
 
 
 
@@ -370,8 +366,7 @@ _inlined_description: _
 Create a directory at the current path.
 
 
-**Parameters:**
-
+Parameters:
 bRecursive set to true to automatically create nested directories
 as required
 
@@ -425,17 +420,14 @@ Create a directory at a given path.
 Creates relative to the data path by default.
 
 
-**Parameters:**
-
+Parameters:
 dirPath directory path
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data directory
-
 bRecursive set to true to automatically create nested directories
 as required
 
-**Returns**: true if directory was created successfully
+Returns: true if directory was created successfully
 
 
 
@@ -476,14 +468,12 @@ Check if a directory exists at a given path.
 Assumes directory path is relative to the data path by default.
 
 
-**Parameters:**
-
+Parameters:
 dirPath directory path
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data directory
 
-**Returns**: true if the directory exists
+Returns: true if the directory exists
 
 
 
@@ -558,7 +548,7 @@ _inlined_description: _
 Check if a directory exists at the current path.
 
 
-**Returns**: true if exists
+Returns: true if exists
 
 
 
@@ -639,22 +629,19 @@ directory contents list.
 Opens as a binary file with readonly access by default.
 
 
-**Warning**: Call listDir() before using this function or the directory
+Warning: Call listDir() before using this function or the directory
 contents list will be empty.
 \throw Throws an out of bounds exception if position >= the number of
 listed directory contents.
 
-**Parameters:**
-
+Parameters:
 position array index in the directory contents list
-
 mode file access mode depending on how you plan to use the file
 (read only, read write, etc)
-
 binary set to false if you are working with a text file & want
 lines split at endline characters automatically
 
-**Returns**: ofFile instance
+Returns: ofFile instance
 
 
 
@@ -695,7 +682,7 @@ Get files and directories in the directory contents list.
 Directory contents are automatically listed.
 
 
-**Returns**: vector of files in the directory
+Returns: vector of files in the directory
 
 
 
@@ -735,16 +722,15 @@ Get the filename at a given position in the directory contents
 list, ie. "duck.jpg".
 
 
-**Warning**: Call listDir() before using this function or the directory
+Warning: Call listDir() before using this function or the directory
 contents list will be empty.
 \throws Throws an out of bounds exception if position >= the number of
 listed directory contents.
 
-**Parameters:**
-
+Parameters:
 position array index in the directory contents list
 
-**Returns**: file or directory name
+Returns: file or directory name
 
 
 
@@ -780,7 +766,7 @@ _advanced: False_
 
 _inlined_description: _
 
-**Returns**: the current path
+Returns: the current path
 
 
 
@@ -820,16 +806,15 @@ Get the full path of the file or directory at a given position in
 the directory contents list.
 
 
-**Warning**: Call listDir() before using this function or the directory
+Warning: Call listDir() before using this function or the directory
 contents list will be empty.
 \throws Throws an out of bounds exception if position >= the number of
 listed directory contents.
 
-**Parameters:**
-
+Parameters:
 position array index in the directory contents list
 
-**Returns**: file or directory name including the current path
+Returns: file or directory name including the current path
 
 
 
@@ -872,7 +857,7 @@ Mac & Linux denote hidden directories by prepending a period
 -> ".hello".
 
 
-**Returns**: true if hidden files are shown
+Returns: true if hidden files are shown
 
 
 
@@ -911,7 +896,7 @@ _inlined_description: _
 Get a sorted ofDirectory instance using the current path.
 
 
-**Returns**: sorted ofDirectory instance
+Returns: sorted ofDirectory instance
 
 
 
@@ -950,7 +935,7 @@ _inlined_description: _
 Check if the current path is indeed a directory and not a file.
 
 
-**Returns**: true if a directory
+Returns: true if a directory
 
 
 
@@ -991,14 +976,12 @@ Check if a directory at a given path is empty.
 Assumes directory path is relative to the data path by default.
 
 
-**Parameters:**
-
+Parameters:
 dirPath directory path
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data directory
 
-**Returns**: true if the directory is empty aka contains no files or
+Returns: true if the directory is empty aka contains no files or
 directories
 
 
@@ -1041,7 +1024,7 @@ Works on Mac & Linux which denote hidden directories by prepending
 a period -> ".hello", however always returns false on Windows.
 
 
-**Returns**: true if hidden
+Returns: true if hidden
 
 
 
@@ -1083,11 +1066,10 @@ Uses allowed extension whitelist to ignore unwanted file types if
 allowExt() has been called.
 
 
-**Parameters:**
-
+Parameters:
 path directory path
 
-**Returns**: number of paths found
+Returns: number of paths found
 
 
 
@@ -1129,7 +1111,7 @@ Uses allowed extension whitelist to ignore unwanted file types if
 allowExt() has been called.
 
 
-**Returns**: number of paths found
+Returns: number of paths found
 
 
 
@@ -1172,17 +1154,14 @@ does not change the current path & assumes the new path is in the data
 directory.
 
 
-**Parameters:**
-
+Parameters:
 path destination file or directory path
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data directory
-
 overwrite set to true if you want to overwrite the file or
 directory at the new path
 
-**Returns**: true if the copy was successful
+Returns: true if the copy was successful
 
 
 
@@ -1191,47 +1170,6 @@ directory at the new path
 _description: _
 
 Moves the directory into another directory at path.  If bRelativeToData is set to false then path should be absolute. If overwrite is set to true any existing files with the same name will be overwritten by the move.
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-### ofDirectory(&path)
-
-<!--
-_syntax: ofDirectory(&path)_
-_name: ofDirectory_
-_returns: _
-_returns_description: _
-_parameters: const filesystem::path &path_
-_access: public_
-_version_started: 007_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-Create an ofDirectory instance and attempt to open the path.
-
-
-**Parameters:**
-
-path directory path
-
-
-
-
-
-_description: _
-
-Constructs a directory object and calls open() on the provided path.  The contents of the path are not accessible until listDir() is called.
 
 
 
@@ -1278,6 +1216,46 @@ Constructs an empty directory object.
 
 <!----------------------------------------------------------------------------->
 
+### ofDirectory(&path)
+
+<!--
+_syntax: ofDirectory(&path)_
+_name: ofDirectory_
+_returns: _
+_returns_description: _
+_parameters: const filesystem::path &path_
+_access: public_
+_version_started: 007_
+_version_deprecated: _
+_summary: _
+_constant: False_
+_static: False_
+_visible: True_
+_advanced: False_
+-->
+
+_inlined_description: _
+
+Create an ofDirectory instance and attempt to open the path.
+
+
+Parameters:
+path directory path
+
+
+
+
+
+_description: _
+
+Constructs a directory object and calls open() on the provided path.  The contents of the path are not accessible until listDir() is called.
+
+
+
+
+
+<!----------------------------------------------------------------------------->
+
 ###void open(&path)
 
 <!--
@@ -1301,8 +1279,7 @@ _inlined_description: _
 Open a directory path, clears the current file list.
 
 
-**Parameters:**
-
+Parameters:
 path directory path
 
 
@@ -1344,8 +1321,7 @@ _inlined_description: _
 Open a directory path relative to the current working directory without calling ofToDataPath internally, clears the current file list.
 
 
-**Parameters:**
-
+Parameters:
 path directory path
 
 
@@ -1601,16 +1577,15 @@ _inlined_description: _
 Access directory contents via th array operator.
 
 
-**Warning**: Call listDir() before using this function or the directory
+Warning: Call listDir() before using this function or the directory
 contents list will be empty.
 \throw Throws an out of bounds exception if position >= the number of
 listed directory contents.
 
-**Parameters:**
-
+Parameters:
 position array index in the directory contents list
 
-**Returns**: opened ofFile instance
+Returns: opened ofFile instance
 
 
 
@@ -1649,7 +1624,7 @@ _inlined_description: _
 Get the current path.
 
 
-**Returns**: current path
+Returns: current path
 
 
 
@@ -1726,14 +1701,13 @@ Removes the file or directory at the current path.
 Does not remove non-empty directories by default.
 
 
-**Warning**: Be careful! This deletes a file or folder. :)
+Warning: Be careful! This deletes a file or folder. :)
 
-**Parameters:**
-
+Parameters:
 recursive set to true to remove a non-empty directory and its
 contents
 
-**Returns**: true if the path was removed successfully
+Returns: true if the path was removed successfully
 
 
 
@@ -1772,15 +1746,13 @@ _inlined_description: _
 remove a directory at a given path
 
 
-**Parameters:**
-
+Parameters:
 deleteIfNotEmpty set to true if you want to recursively delete
 the directory *and* its contents
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data directory
 
-**Returns**: true if the path was removed successfully
+Returns: true if the path was removed successfully
 
 
 
@@ -1823,17 +1795,14 @@ does not change the current path & assumes the new path is in the data
 directory.
 
 
-**Parameters:**
-
+Parameters:
 path destination file or directory path
-
 bRelativeToData set to false if you are working with paths that
 are *not* in the data folder
-
 overwrite set to true if you want to overwrite the file or
 directory at the new path
 
-**Returns**: true if the copy was successful
+Returns: true if the copy was successful
 
 
 
@@ -1946,8 +1915,7 @@ _inlined_description: _
 Set the executable flag of the current path.
 
 
-**Parameters:**
-
+Parameters:
 executable set to true to make path executable
 
 
@@ -1987,8 +1955,7 @@ _inlined_description: _
 Set the readable flag of the current path.
 
 
-**Parameters:**
-
+Parameters:
 readable set to true to make path readable
 
 
@@ -2031,8 +1998,7 @@ Mac & Linux denote hidden directories by prepending a period
 -> ".hello".
 
 
-**Parameters:**
-
+Parameters:
 showHidden set to true to show hidden files
 
 
@@ -2072,8 +2038,7 @@ _inlined_description: _
 Set the writable flag of the current path.
 
 
-**Parameters:**
-
+Parameters:
 writable set to true to make path writable
 
 
@@ -2113,10 +2078,10 @@ _inlined_description: _
 Get the number of paths in the current directory list.
 
 
-**Warning**: Call listDir() before using this function or it will return 0
+Warning: Call listDir() before using this function or it will return 0
 since the directory list will be empty.
 
-**Returns**: number of paths
+Returns: number of paths
 
 
 
@@ -2155,7 +2120,7 @@ _inlined_description: _
 Sort the directory contents list alphabetically.
 
 
-**Warning**: Call listDir() before using this function or there will be
+Warning: Call listDir() before using this function or there will be
 nothing to sort.
 
 
@@ -2195,7 +2160,7 @@ _inlined_description: _
 Sort the directory contents list by date.
 
 
-**Warning**: Call listDir() before using this function or there will be
+Warning: Call listDir() before using this function or there will be
 nothing to sort.
 
 
