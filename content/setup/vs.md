@@ -7,7 +7,7 @@ Here are the setup instructions for those of you who wish to work with Visual St
 
 Download
 --------
-> [Download Visual Studio Community 2015][0]
+> [Download Visual Studio Community 2017][0]
 
 Install
 -------
@@ -22,7 +22,7 @@ Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickT
 openFrameworks plugin for Visual Studio
 ---------------------------------------------------
 
-Before you're able to use openFrameworks with Visual Studio, you have to have Common Tools for Visual C++ 2015 installed, otherwise you'll get an error message later on. To install, go to File > New > Project and choose Visual C++ in the installed templates section. There now should be an option to install the tools, if they aren't already. Select it, confirm with 'OK' and follow the instructions.
+Before you're able to use openFrameworks with Visual Studio, you have to have Common Tools for Visual C++ 2017 installed, otherwise you'll get an error message later on. To install, go to File > New > Project and choose Visual C++ in the installed templates section. There now should be an option to install the tools, if they aren't already. Select it, confirm with 'OK' and follow the instructions.
 
 From Visual Studio, go to Tools > Extensions and Updates. Select online and search for openFrameworks and install the plugin.
 
@@ -32,5 +32,5 @@ There's more information in the [Visual Studio Gallery page](https://visualstudi
 
 <iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-[0]: https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409
+[0]: https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15
 [1]: http://filehippo.com/download_klite_codec_pack/67445/
