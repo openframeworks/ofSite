@@ -3163,7 +3163,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofPopMatrix](ofGraphics.html#show_ofPopMatrix)
+See [ofPopMatrix](../graphics/ofGraphics/#!show_ofPopMatrix)
 
 
 
