@@ -354,7 +354,7 @@ class DocsTask(Task):
             }
             for lang in self.kw['translations']:
                 env["lang"] = lang
-                env["title"] = clazz.name
+                env["title"] = functions_file.name
                 env["permalink"] = self.kw['translations'][lang] + '/documentation/' + functions_file.module + "/" + functions_file.name + "/"
                 short_tdst = os.path.join(self.kw['translations'][lang], 'documentation', functions_file.module, functions_file.name,"index.html")
                 tdst = os.path.normpath(os.path.join(self.kw['output_folder'], short_tdst))
