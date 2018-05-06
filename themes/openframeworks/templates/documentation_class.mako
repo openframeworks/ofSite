@@ -13,9 +13,9 @@
               <div id="editdocs">
                 % if not clazz is None:
                   % if is_addon:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/addons/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/addons/${clazz.module}/${clazz.link_name()}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
                   % else:
-                    <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/${clazz.module}/${clazz.name}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
+                    <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/${clazz.module}/${clazz.link_name()}.markdown" class="nohover"><img title="edit class on GitHub" src="/images/editclass.png?a=5"/></a>
                   % endif
                 % endif
                 % if not functions is None and len(functions.function_list)>0:

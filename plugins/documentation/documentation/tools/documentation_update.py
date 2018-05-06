@@ -31,6 +31,7 @@ official_addons = [
                     "ofxSvg",
                     "ofxThreadedImageLoader",
                     "ofxXmlSettings",
+                    "ofxPoco",
                   ]
 currentversion = "0.10.0"
 alternatives = {

@@ -172,6 +172,12 @@ class DocsClass:
     def is_class(self):
         return True
 
+    def link_name(self):
+        if self.istemplated:
+            return self.name + "_"
+        else:
+            return self.name
+
     # def __eq__(self, other):
     #     """Overrides the default implementation"""
     #     if isinstance(self, other.__class__):
