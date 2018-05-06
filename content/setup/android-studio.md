@@ -71,7 +71,7 @@ Creating new projects
 To create new projects just use the project generator for your platform that you can find in the root folder. For linux you'll need to run
 
 ```sh
-scripts/linux/compilePG.sh
+scripts/android/compileLinuxPG.sh
 ```
 
 before being able to run the project generator
