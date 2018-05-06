@@ -188,8 +188,16 @@ myfont.drawString("hi!!", 100,100);
 Your strings can even be multiline:
 ~~~~{.cpp}
 
-myfont.drawString("a test of multiline text", 300,300);
+myfont.drawString("a test of\nmultiline text", 300,300);
 ~~~~
+
+Or:
+~~~~{.cpp}
+
+myfont.drawString(R"(a test of
+multiline text)", 300,300);
+~~~~
+
 
 you can also using dynamically gengerated strings. For example, to print the frame rate:
 ~~~~{.cpp}
