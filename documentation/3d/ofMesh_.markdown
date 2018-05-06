@@ -3676,7 +3676,7 @@ This allows to you to use one of the other ofPrimitiveModes:
 OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP,
 OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP,
 OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS.
-See [ofGLUtils](../gl/ofGLUtils.htm) for more information on these types.
+See [ofGLUtils](../gl/ofGLUtils) for more information on these types.
 
 
 
@@ -3684,7 +3684,7 @@ See [ofGLUtils](../gl/ofGLUtils.htm) for more information on these types.
 
 _description: _
 
-This allows to you to use one of the other ofPrimitiveModes: OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. See [ofGLUtils](../gl/ofGLUtils.htm) for more information on these types.
+This allows to you to use one of the other ofPrimitiveModes: OF_PRIMITIVE_TRIANGLES, OF_PRIMITIVE_TRIANGLE_STRIP, OF_PRIMITIVE_TRIANGLE_FAN, OF_PRIMITIVE_LINES, OF_PRIMITIVE_LINE_STRIP, OF_PRIMITIVE_LINE_LOOP, OF_PRIMITIVE_POINTS. See [ofGLUtils](../gl/ofGLUtils) for more information on these types.
 
 
 
