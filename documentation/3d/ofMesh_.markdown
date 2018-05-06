@@ -266,7 +266,7 @@ _advanced: False_
 _inlined_description: _
 
 Will give you this shape:
-![image of basic use of indices](3d/index.jpg)
+![image of basic use of indices](../index.jpg)
 
 
 

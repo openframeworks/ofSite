@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###glm::mat4 glm::rotateNormalizedAxis(&m = P, &angle, &axis = P)

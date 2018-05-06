@@ -824,7 +824,7 @@ _syntax: loadStencilFromHex(&img, *data)_
 _name: loadStencilFromHex_
 _returns: void_
 _returns_description: _
-_parameters: ofImage &img, unsigned char *data_
+_parameters: ofTexture &img, unsigned char *data_
 _access: protected_
 _version_started: 0.8.0_
 _version_deprecated: _
@@ -1191,42 +1191,6 @@ _version_deprecated: _
 _summary: _
 _constant: False_
 _static: False_
-_visible: True_
-_advanced: False_
--->
-
-_inlined_description: _
-
-
-
-
-
-
-
-_description: _
-
-
-
-
-
-
-
-<!----------------------------------------------------------------------------->
-
-###string saveStencilToHex(&img)
-
-<!--
-_syntax: saveStencilToHex(&img)_
-_name: saveStencilToHex_
-_returns: string_
-_returns_description: _
-_parameters: const ofImage &img_
-_access: protected_
-_version_started: 0.8.0_
-_version_deprecated: _
-_summary: _
-_constant: False_
-_static: True_
 _visible: True_
 _advanced: False_
 -->

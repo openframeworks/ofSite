@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###tmat4x4< T, defaultp > glm::frustum(left, right, bottom, top, near, far)

@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool glm::leftHanded(&tangent = P, &binormal = P, &normal = P)

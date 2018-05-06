@@ -165,7 +165,7 @@ _description: _
 
 Blurs the image
 
-![Blurring] (blur.png "Blurring an image original on Left")
+![Blurring] (../blur.png "Blurring an image original on Left")
 
 
 
@@ -321,7 +321,7 @@ second.convertToRange(100, 140); // super low contrast
 
 ~~~~
 
-![Image convert to range](convertToRangeColor.png "Converting the range of an image")
+![Image convert to range](../convertToRangeColor.png "Converting the range of an image")
 
 
 
@@ -393,7 +393,7 @@ _inlined_description: _
 
 _description: _
 
-![Dilating] (dilate.png "Dilating an image, original on Left")
+![Dilating] (../dilate.png "Dilating an image, original on Left")
 
 
 
@@ -683,7 +683,7 @@ _description: _
 
 Erodes the image.
 
-![Eroding] (erode.png "Eroding an image, original on Left")
+![Eroding] (../erode.png "Eroding an image, original on Left")
 
 
 
@@ -1261,7 +1261,7 @@ _description: _
 
 Flip the pixel values of the image.
 
-![Inverting an image] (invert.png "Original on Left")
+![Inverting an image] (../invert.png "Original on Left")
 
 
 
@@ -1444,16 +1444,16 @@ _description: _
 Binary & (Logical AND http://en.wikipedia.org/wiki/Bitwise_operation) the pixel data of the right hand side image from the current image:
 
 ~~~~{.cpp}
-cvPuppy.allocate( 320, 240 );    
+cvPuppy.allocate( 320, 240 );
 cvPuppy = puppyImg.getPixels(); // copy pixels from a loaded image
-    
+
 andPuppy.allocate( 320, 240 );
-    
+
 andPuppy.set(255, 0, 0); // make the AND image red
-andPuppy &= cvPuppy; // will & all the bits 
+andPuppy &= cvPuppy; // will & all the bits
 ~~~~
 
-![puppy AND](ANDoperation.png "Using the &= operation")
+![puppy AND](../ANDoperation.png)
 
 
 
@@ -1977,7 +1977,7 @@ _inlined_description: _
 
 _description: _
 
-Reset the anchor point of the image, i.e. the center point for rotations, 
+Reset the anchor point of the image, i.e. the center point for rotations,
 
 
 
@@ -2193,7 +2193,7 @@ _inlined_description: _
 
 _description: _
 
-Scales the image passed in to be the size of the current image, 
+Scales the image passed in to be the size of the current image,
 
 ~~~~{.cpp}
 
@@ -2839,7 +2839,7 @@ image.warpIntoMe(parent, src, dst);
 
 ~~~~
 
-![Warping] (warpPerspective.png "Four corners for warping")
+![Warping] (../warpPerspective.png "Four corners for warping")
 
 
 
@@ -2877,7 +2877,7 @@ _description: _
 
 This warps the image perspective to the four points passed in:
 
-![Warping] (warpPerspective.png "Four corners for warping")
+![Warping] (../warpPerspective.png "Four corners for warping")
 
 
 

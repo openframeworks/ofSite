@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###detail::fquatSIMD glm::angleAxisSIMD(&angle, &axis)

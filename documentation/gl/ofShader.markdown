@@ -145,7 +145,7 @@ _syntax: beginTransformFeedback(mode, &binding)_
 _name: beginTransformFeedback_
 _returns: void_
 _returns_description: _
-_parameters: GLenum mode, const ofShader::TransformFeedbackBaseBinding &binding_
+_parameters: GLenum mode, const vector< TransformFeedbackRangeBinding > &binding_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -181,7 +181,7 @@ _syntax: beginTransformFeedback(mode, &binding)_
 _name: beginTransformFeedback_
 _returns: void_
 _returns_description: _
-_parameters: GLenum mode, const vector< TransformFeedbackRangeBinding > &binding_
+_parameters: GLenum mode, const ofShader::TransformFeedbackBaseBinding &binding_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -616,7 +616,7 @@ _syntax: endTransformFeedback(&binding)_
 _name: endTransformFeedback_
 _returns: void_
 _returns_description: _
-_parameters: const ofShader::TransformFeedbackBaseBinding &binding_
+_parameters: const vector< TransformFeedbackRangeBinding > &binding_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _
@@ -652,7 +652,7 @@ _syntax: endTransformFeedback(&binding)_
 _name: endTransformFeedback_
 _returns: void_
 _returns_description: _
-_parameters: const vector< TransformFeedbackRangeBinding > &binding_
+_parameters: const ofShader::TransformFeedbackBaseBinding &binding_
 _access: public_
 _version_started: 0.10.0_
 _version_deprecated: _

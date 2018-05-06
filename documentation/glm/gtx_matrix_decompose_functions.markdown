@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool glm::decompose(&modelMatrix = P, &scale = P, &orientation = P, &translation = P, &skew = P, &perspective = P)

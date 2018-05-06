@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###T glm::linearGradient(&Point0 = P, &Point1 = P, &Position = P)

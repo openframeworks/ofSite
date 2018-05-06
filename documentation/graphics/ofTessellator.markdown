@@ -269,7 +269,7 @@ _syntax: tessellateToMesh(&src, polyWindingMode, &dstmesh, bIs2D = false)_
 _name: tessellateToMesh_
 _returns: void_
 _returns_description: _
-_parameters: const ofPolyline &src, ofPolyWindingMode polyWindingMode, ofMesh &dstmesh, bool bIs2D=false_
+_parameters: const vector< ofPolyline > &src, ofPolyWindingMode polyWindingMode, ofMesh &dstmesh, bool bIs2D=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -282,8 +282,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Tessellates a ofPolyline instance into a single ofMesh instance
-using the winding mode set in ofPolyWindingMode.
+Tessellates a vector of ofPolyline instances into a single
+ofMesh instance using the winding mode set in ofPolyWindingMode.
 
 
 
@@ -306,7 +306,7 @@ _syntax: tessellateToMesh(&src, polyWindingMode, &dstmesh, bIs2D = false)_
 _name: tessellateToMesh_
 _returns: void_
 _returns_description: _
-_parameters: const vector< ofPolyline > &src, ofPolyWindingMode polyWindingMode, ofMesh &dstmesh, bool bIs2D=false_
+_parameters: const ofPolyline &src, ofPolyWindingMode polyWindingMode, ofMesh &dstmesh, bool bIs2D=false_
 _access: public_
 _version_started: 007_
 _version_deprecated: _
@@ -319,8 +319,8 @@ _advanced: False_
 
 _inlined_description: _
 
-Tessellates a vector of ofPolyline instances into a single
-ofMesh instance using the winding mode set in ofPolyWindingMode.
+Tessellates a ofPolyline instance into a single ofMesh instance
+using the winding mode set in ofPolyWindingMode.
 
 
 

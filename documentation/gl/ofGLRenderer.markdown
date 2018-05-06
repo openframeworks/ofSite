@@ -67,7 +67,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofBackground](ofGraphics.html#show_ofBackground)
+See [ofBackground](../ofGraphics/!#show_ofBackground)
 
 
 
@@ -139,7 +139,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofBackground](ofGraphics.html#show_ofBackground)
+See [ofBackground](../ofGraphics/!#show_ofBackground)
 
 
 
@@ -175,7 +175,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofBackground](ofGraphics.html#show_ofBackground)
+See [ofBackground](../ofGraphics/!#show_ofBackground)
 
 
 
@@ -535,7 +535,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofClear](ofGraphics.html#show_ofClear)
+See [ofClear](../ofGraphics/!#show_ofClear)
 
 
 
@@ -571,7 +571,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofClear](ofGraphics.html#show_ofClear)
+See [ofClear](../ofGraphics/!#show_ofClear)
 
 
 
@@ -607,7 +607,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofClear](ofGraphics.html#show_ofClear)
+See [ofClear](../ofGraphics/!#show_ofClear)
 
 
 
@@ -679,7 +679,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofDisableAntiAliasing](ofGraphics.html#show_ofDisableAntiAliasing)
+See [ofDisableAntiAliasing](../ofGraphics/!#show_ofDisableAntiAliasing)
 
 
 
@@ -1327,7 +1327,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofDrawCircle](ofGraphics.html#show_ofDrawCircle)
+See [ofDrawCircle](../ofGraphics/!#show_ofDrawCircle)
 
 
 
@@ -1435,7 +1435,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofDrawEllipse](ofGraphics.html#show_ofDrawEllipse)
+See [ofDrawEllipse](../ofGraphics/!#show_ofDrawEllipse)
 
 
 
@@ -1543,7 +1543,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofLine](ofGraphics.html#show_ofLine)
+See [ofLine](../ofGraphics/!#show_ofLine)
 
 
 
@@ -1579,7 +1579,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofRect](ofGraphics.html#show_ofRect)
+See [ofRect](../ofGraphics/!#show_ofRect)
 
 
 
@@ -1723,7 +1723,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofEnableAntiAliasing](ofGraphics.html#show_ofEnableAntiAliasing)
+See [ofEnableAntiAliasing](../ofGraphics/!#show_ofEnableAntiAliasing)
 
 
 
@@ -2191,7 +2191,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofGetCoordHandedness](ofGraphics.html#show_ofGetCoordHandedness)
+See [ofGetCoordHandedness](../ofGraphics/!#show_ofGetCoordHandedness)
 
 
 
@@ -2371,7 +2371,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofGetCurrentViewport](ofGraphics.html#show_ofGetCurrentViewport)
+See [ofGetCurrentViewport](../ofGraphics/!#show_ofGetCurrentViewport)
 
 
 
@@ -2407,7 +2407,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofGetFill](ofGraphics.html#show_ofGetFill)
+See [ofGetFill](../ofGraphics/!#show_ofGetFill)
 
 
 
@@ -2551,7 +2551,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofGetNativeViewport](ofGraphics.html#show_ofGetNativeViewport)
+See [ofGetNativeViewport](../ofGraphics/!#show_ofGetNativeViewport)
 
 
 
@@ -2623,7 +2623,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofGetRectMode](ofGraphics.html#show_ofGetRectMode)
+See [ofGetRectMode](../ofGraphics/!#show_ofGetRectMode)
 
 
 
@@ -2731,7 +2731,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofGetViewportHeight](ofGraphics.html#show_ofGetViewportHeight)
+See [ofGetViewportHeight](../ofGraphics/!#show_ofGetViewportHeight)
 
 
 
@@ -2767,7 +2767,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofGetViewportWidth](ofGraphics.html#show_ofGetViewportWidth)
+See [ofGetViewportWidth](../ofGraphics/!#show_ofGetViewportWidth)
 
 
 
@@ -2803,7 +2803,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofIsVFlipped](ofGraphics.html#show_ofIsVFlipped)
+See [ofIsVFlipped](../ofGraphics/!#show_ofIsVFlipped)
 
 
 
@@ -2839,7 +2839,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofLoadIdentityMatrix](ofGraphics.html#show_ofLoadIdentityMatrix)
+See [ofLoadIdentityMatrix](../ofGraphics/!#show_ofLoadIdentityMatrix)
 
 
 
@@ -2875,7 +2875,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
+See [ofLoadMatrix](../ofGraphics/!#show_ofLoadMatrix)
 
 
 
@@ -2911,7 +2911,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofLoadMatrix](ofGraphics.html#show_ofLoadMatrix)
+See [ofLoadMatrix](../ofGraphics/!#show_ofLoadMatrix)
 
 
 
@@ -3271,7 +3271,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofPushMatrix](ofGraphics.html#show_ofPushMatrix)
+See [ofPushMatrix](../ofGraphics/!#show_ofPushMatrix)
 
 
 
@@ -3811,7 +3811,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofScale](../graphics/ofGraphics.html#show_ofScale)
+See [ofScale](../graphics/../ofGraphics/!#show_ofScale)
 
 
 
@@ -3991,7 +3991,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofEnableBlendMode](ofGraphics.html#show_ofEnableBlendMode)
+See [ofEnableBlendMode](../ofGraphics/!#show_ofEnableBlendMode)
 
 
 
@@ -4027,7 +4027,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetCircleResolution](ofGraphics.html#show_ofSetCircleResolution)
+See [ofSetCircleResolution](../ofGraphics/!#show_ofSetCircleResolution)
 
 
 
@@ -4063,7 +4063,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetColor](ofGraphics.html#show_ofSetColor)
+See [ofSetColor](../ofGraphics/!#show_ofSetColor)
 
 
 
@@ -4099,7 +4099,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetColor](ofGraphics.html#show_ofSetColor)
+See [ofSetColor](../ofGraphics/!#show_ofSetColor)
 
 
 
@@ -4135,7 +4135,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetColor](ofGraphics.html#show_ofSetColor)
+See [ofSetColor](../ofGraphics/!#show_ofSetColor)
 
 
 
@@ -4171,7 +4171,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetColor](ofGraphics.html#show_ofSetColor)
+See [ofSetColor](../ofGraphics/!#show_ofSetColor)
 
 
 
@@ -4207,7 +4207,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetColor](ofGraphics.html#show_ofSetColor)
+See [ofSetColor](../ofGraphics/!#show_ofSetColor)
 
 
 
@@ -4243,7 +4243,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetCoordHandedness](ofGraphics.html#show_ofSetCoordHandedness)
+See [ofSetCoordHandedness](../ofGraphics/!#show_ofSetCoordHandedness)
 
 
 
@@ -4315,7 +4315,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofDisableDepthTest](ofGraphics.html#show_ofDisableDepthTest) and [ofEnableDepthTest](ofGraphics.html#show_ofEnableDepthTest)
+See [ofDisableDepthTest](../ofGraphics/!#show_ofDisableDepthTest) and [ofEnableDepthTest](../ofGraphics/!#show_ofEnableDepthTest)
 
 
 
@@ -4423,7 +4423,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetColor](ofGraphics.html#show_ofSetColor)
+See [ofSetColor](../ofGraphics/!#show_ofSetColor)
 
 
 
@@ -4783,7 +4783,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetLineWidth](ofGraphics.html#show_ofSetLineWidth)
+See [ofSetLineWidth](../ofGraphics/!#show_ofSetLineWidth)
 
 
 
@@ -4891,7 +4891,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetRectMode](ofGraphics.html#show_ofSetRectMode)
+See [ofSetRectMode](../ofGraphics/!#show_ofSetRectMode)
 
 
 
@@ -5071,7 +5071,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetupScreen](ofGraphics.html#show_ofSetupScreen)
+See [ofSetupScreen](../ofGraphics/!#show_ofSetupScreen)
 
 
 
@@ -5107,7 +5107,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetupScreenOrth](ofGraphics.html#show_ofSetupScreenOrtho)
+See [ofSetupScreenOrth](../ofGraphics/!#show_ofSetupScreenOrtho)
 
 
 
@@ -5143,7 +5143,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofSetupScreenPerspective](ofGraphics.html#show_ofSetupScreenPerspective)
+See [ofSetupScreenPerspective](../ofGraphics/!#show_ofSetupScreenPerspective)
 
 
 
@@ -5287,7 +5287,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofTranslate](ofGraphics.html#show_ofTranslate)
+See [ofTranslate](../ofGraphics/!#show_ofTranslate)
 
 
 
@@ -5323,7 +5323,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofTranslate](ofGraphics.html#show_ofTranslate)
+See [ofTranslate](../ofGraphics/!#show_ofTranslate)
 
 
 

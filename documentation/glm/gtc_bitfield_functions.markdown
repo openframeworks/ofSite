@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###vecType< T, P > glm::bitfieldFillOne(T, &Value = P, FirstBit, BitCount)

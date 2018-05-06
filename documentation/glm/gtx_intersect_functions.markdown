@@ -12,6 +12,7 @@ _advanced: False_
 
 
 
+
 <!----------------------------------------------------------------------------->
 
 ###bool glm::intersectLineSphere(&point0, &point1, &sphereCenter, sphereRadius, &intersectionPosition1, &intersectionNormal1, &intersectionPosition2, &intersectionNormal2)
