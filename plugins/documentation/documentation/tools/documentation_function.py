@@ -26,6 +26,13 @@ class DocsFunction:
     def get_inlined_docs_similarity(self):
         return Levenshtein.ratio(self.inlined_description, self.description)
 
+    # def __eq__(self, other):
+    #     """Overrides the default implementation"""
+    #     print("using eq to check function equality")
+    #     if isinstance(self, other.__class__):
+    #         return self.syntax == other.syntax
+    #     return NotImplemented
+
 class DocsFunctionsFile:
     def __init__(self,fileid):
         self.id = fileid

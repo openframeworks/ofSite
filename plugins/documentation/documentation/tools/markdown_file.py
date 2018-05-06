@@ -56,6 +56,9 @@ def addfield(method,line):
     #print field, "=", value
     setattr(method,field,value)
 
+def rreplace(s, old, new, occurrence):
+    li = s.rsplit(old, occurrence)
+    return new.join(li)
 
 def getfunctionsfiles_list():
     functionsfiles_list = []
@@ -63,11 +66,11 @@ def getfunctionsfiles_list():
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown':
-                f = open(os.path.join(root,name),'rU')
+                f = open(os.path.join(root, name),'rU')
                 state = 'begin'
                 for line in f:
                     if state == 'begin' and line.find('#functions') == 0:
-                        functionsfile = file_split[0].replace('_functions','')
+                        functionsfile = rreplace(file_split[0], '_functions', '', 1)
                         functionsfiles_list.append(functionsfile)
                         f.close()
                         break
@@ -83,6 +86,7 @@ def getfunctionsfile(filename):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown' and file_split[0] == filename+"_functions":
+                functionsfile.path = name
                 f = open(os.path.join(root,name),'rU')
                 state = 'begin'
                 linenum = 0
@@ -133,7 +137,7 @@ def getfunctionsfile(filename):
                 if(state=='description'):
                     functionsfile.function_list.append(function)
 
-    functionsfile.function_list.sort(key=lambda function: function.name)
+    functionsfile.function_list.sort(key=lambda function: function.syntax)
     return functionsfile
 
 def getclass_list(getTemplated=True):
@@ -437,7 +441,7 @@ def setfunctionsfile(functionfile,is_addon=False):
     except:
         pass
 
-    f = open(os.path.join(path,functionfile.name)+"_functions.markdown",'w')
+    f = open(os.path.join(path, functionfile.name)+"_functions.markdown",'w')
     f.write('#functions\n\n\n')
     f.write("<!--\n");
     f.write("_visible: " + str(functionfile.visible) + "_\n")
@@ -450,3 +454,18 @@ def setfunctionsfile(functionfile,is_addon=False):
         if function.name.find('OF_DEPRECATED_MSG')==-1:
             serialize_function(f,function,False)
 
+
+def remove_functionsfile(functionfile,is_addon=False):
+    path = ""
+    if is_addon:
+        path = os.path.join(documentation_root,"addons",functionfile.module)
+    else:
+        path = os.path.join(documentation_root,functionfile.module)
+
+    path = os.path.join(path, functionfile.name)+"_functions.markdown"
+
+    # try:
+    if functionfile.module != "":
+        os.remove(path)
+    # except:
+    #     pass

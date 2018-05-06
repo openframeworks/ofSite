@@ -171,3 +171,9 @@ class DocsClass:
 
     def is_class(self):
         return True
+
+    # def __eq__(self, other):
+    #     """Overrides the default implementation"""
+    #     if isinstance(self, other.__class__):
+    #         return self.name == other.name
+    #     return NotImplemented

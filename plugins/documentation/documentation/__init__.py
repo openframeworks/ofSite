@@ -326,6 +326,8 @@ class DocsTask(Task):
             if functionfile_name in classes_simple_name:
                 continue
             functions_file = markdown_file.getfunctionsfile(functionfile_name)
+            # logging.info(functionfile_name)
+            # logging.info(functionfile_name + " " + functions_file.path)
 
     # might be needed at some point?
     #        functions_file.reference = str(functions_file.reference)
