@@ -27,8 +27,8 @@
                 % endif
               </div>
         </div>
-          
-          
+
+
         <div class="page-wide">
 		    <div class="submenucol-left">
 		     <!-- list of methods -->
@@ -43,16 +43,16 @@
                          % else:
                          <li>
                          % endif
-                         <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
+                         <a href="#show_${method.name.replace("_","")}" class="${method.name.replace("_","")}" data-lookup="${method.name.replace("_","")}">${method.name}()</a></li>
                      % endif
                      <% prevmethod = method.name %>
                  % endfor
              </ul>
              % endif
-            
-             
-             
-             <!-- list of variables -->              
+
+
+
+             <!-- list of variables -->
              % if not clazz is None and len([x for x in clazz.var_list if not x.advanced and x.visible and x.access=='public'])>0:
                 <p class="top_list_header">variables</p>
                 <ul class="functionslist">
@@ -63,15 +63,15 @@
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${var.name}" class="${var.name}" data-lookup="${var.name}">${var.type} ${var.name}</a> </li>
+                            <a href="#show_${var.name.replace("_","")}" class="${var.name.replace("_","")}" data-lookup="${var.name.replace("_","")}">${var.type} ${var.name}</a> </li>
                          % endif
                      % endfor
                  </ul>
              % endif
-            
-             
-            
-             <!-- list of functions -->              
+
+
+
+             <!-- list of functions -->
              % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
             <p class="top_list_header">global functions</p>
                 <ul class="functionslist">
@@ -83,7 +83,7 @@
                             % else:
                             <li>
                             % endif
-                            <a href="#show_${method.name}" class="${method.name}" data-lookup="${method.name}">${method.name}()</a></li>
+                            <a href="#show_${method.name.replace("_","")}" class="${method.name.replace("_","")}" data-lookup="${method.name.replace("_","")}">${method.name}()</a></li>
                          % endif
                          <% prevmethod = method.name %>
                      % endfor
@@ -112,21 +112,21 @@
                     <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
                     ${clazz.detailed_inline_description}
                   % if clazz.reference.strip("\n").strip(" ") != "":
-                    </div>   
-                  % endif                   
+                    </div>
+                  % endif
               % endif
-              
+
               % if not functions is None:
                     ${functions.description}
               % endif
            </div>
-                  
+
             <!-- methods detail -->
             % if not clazz is None and len([x for x in clazz.function_list if not x.advanced and x.visible and x.access=='public'])>0:
               <!--h2><a name="methods"></a>${clazz.name} methods</h2-->
               % for method in clazz.function_list:
                     % if method.visible and not method.advanced and method.access=='public':
-                        <%include file="documentation_method.mako" args="method=method" />    
+                        <%include file="documentation_method.mako" args="method=method" />
                     % endif
               % endfor
             % endif
@@ -136,25 +136,25 @@
               <!--h2><a name="variables"></a>${clazz.name} variables</h2!-->
               % for var in clazz.var_list:
                     % if var.visible and not var.advanced and var.access=='public':
-                        <%include file="documentation_var.mako" args="var=var" />    
+                        <%include file="documentation_var.mako" args="var=var" />
                     % endif
               % endfor
-            % endif 
+            % endif
 
             <!-- functions detail -->
             % if len([x for x in functions.function_list if not x.advanced and x.visible])>0:
               <!--h2><a name="functions"></a>${functions.name} functions</h2-->
               % for method in functions.function_list:
                     % if method.visible and not method.advanced:
-                        <%include file="documentation_function.mako" args="function=method" />    
+                        <%include file="documentation_function.mako" args="function=method" />
                     % endif
               % endfor
             % endif
             <hr/>
-            
+
             <div id="comments_header">
             <p>If you have any doubt about the usage of this module you can ask in the <a href="http://forum.openframeworks.cc">forum</a>.</p>
-            <p>If you want to contribute better documentation or start documenting this section you can do so 
+            <p>If you want to contribute better documentation or start documenting this section you can do so
                 % if not clazz is None:
                   % if is_addon:
                     <a href="https://github.com/openframeworks/ofSite/edit/master/documentation/addons/${clazz.module}/${clazz.name}.markdown">here</a>
@@ -169,7 +169,7 @@
                    % endif
                 % endif.
             </p>
-            <p>If you find anything wrong with this docs you can report any error by opening an 
+            <p>If you find anything wrong with this docs you can report any error by opening an
                 % if not clazz is None:
                     <a href="https://github.com/openframeworks/ofSite/issues/new?title=Documentation problem in ${clazz.name}">issue</a></p>
                 % elif not functions is None:

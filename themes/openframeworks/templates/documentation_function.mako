@@ -1,8 +1,8 @@
 ## -*- coding: utf-8 -*-
 <%page args="function"/>
-<div class="documentation_detail ${function.name}" data-lookup="${function.name}" data-item-type="function">
-  	<% params = "()" if function.parameters=="" else "(...)" %> 
-	<h1><a name="show_${function.name}" class="nohover">${function.name}${params}</a></h1>
+<div class="documentation_detail ${function.name.replace("_","")}" data-lookup="${function.name.replace("_","")}" data-item-type="function">
+  	<% params = "()" if function.parameters=="" else "(...)" %>
+	<h1><a name="show_${function.name.replace("_","")}" class="nohover">${function.name}${params}</a></h1>
 	<h2>${function.returns} ${function.name}(${function.parameters})</h2>
 	<div class="documentation_detail_description">
         ${function.summary}
@@ -14,7 +14,7 @@
             % endif
             <h2><strong><em>Documentation from code comments</em></strong></h2><br/>
             ${function.inlined_description}
-            
+
             % if function.description.strip("\n").strip(" ") != "":
                 </div>
             % endif

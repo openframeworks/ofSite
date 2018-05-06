@@ -38,7 +38,7 @@
                         % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
                             <% htmlclass = htmlclass + " noDoc" %>
                         % endif
-                        <li class="${htmlclass}"><a href="${'/documentation/' + module + '/' + clazz.name}/#!show_${method.name}" title="${method.name}" class="documentation_func">${method.name}()</a></li>
+                        <li class="${htmlclass}"><a href="${'/documentation/' + module + '/' + clazz.name}/#!show_${method.name.replace("_","")}" title="${method.name.replace("_","")}" class="documentation_func">${method.name}()</a></li>
                         <% prevmethod = method.name %>
                     % endif
                 % endfor
