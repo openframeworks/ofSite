@@ -6,23 +6,7 @@
 <%namespace name="of" file="of_helpers.tmpl"/>
 ${set_locale(lang)}
 <!DOCTYPE html>
-<html \
-prefix='\
-%if use_open_graph or (twitter_card and twitter_card['use_twitter_cards']):
-og: http://ogp.me/ns# article: http://ogp.me/ns/article# \
-%endif
-%if comment_system == 'facebook':
-fb: http://ogp.me/ns/fb#
-%endif
-' \
-%if use_open_graph or (twitter_card and twitter_card['use_twitter_cards']):
-vocab="http://ogp.me/ns" \
-%endif
-% if is_rtl:
-dir="rtl" \
-% endif
-\
-lang="${lang}">
+<html lang="${lang}">
 <head>
     <meta charset="utf-8">
     % if use_base_tag:
@@ -70,7 +54,7 @@ lang="${lang}">
 
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" media="all" />
 
-    <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="openFrameworks" />
 
