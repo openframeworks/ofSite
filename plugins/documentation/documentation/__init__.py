@@ -199,7 +199,7 @@ class DocsTask(Task):
 
         classes = markdown_file.getclass_list()
         classes_simple_name = markdown_file.getclass_list(False)
-        addon_classes = markdown_file.list_all_addons()
+        addons = markdown_file.list_all_addons()
 
         module_lookup = dict()
         core_index = dict()
@@ -278,7 +278,7 @@ class DocsTask(Task):
                 "clazz": clazz,
                 "functions": functions_file,
                 "classes_list": classes,
-                "is_addon": (clazz.name in addon_classes)
+                "is_addon": (clazz.module in addons)
             }
             md_file = "documentation/" + module_lookup[class_name] + "/" + class_name + ".markdown"
             for lang in self.kw['translations']:
@@ -304,7 +304,7 @@ class DocsTask(Task):
                 content_js[lang] += class_to_js(clazz, self.site, lang)
 
             # add to index core or addons
-            if not clazz.module in addon_classes:
+            if not clazz.module in addons:
                 if not clazz.module in core_index.keys():
                     core_index[clazz.module] = []
                 if functions_file!=None:
@@ -350,7 +350,7 @@ class DocsTask(Task):
                 "modulename": functions_file.name,
                 "clazz": None,
                 "functions": functions_file,
-                "is_addon": (functions_file.name in addon_classes)
+                "is_addon": (functions_file.module in addons)
             }
             for lang in self.kw['translations']:
                 env["lang"] = lang
@@ -362,7 +362,7 @@ class DocsTask(Task):
                 content_js[lang] += functions_file_to_js(functions_file, self.site, lang)
 
             # add to index core or addons
-            if not functions_file.module in addon_classes:
+            if not functions_file.module in addons:
                 if not functions_file.module in core_index:
                     core_index[functions_file.module] = []
                 core_index[functions_file.module].append(functions_file)
