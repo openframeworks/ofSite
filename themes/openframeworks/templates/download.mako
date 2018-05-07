@@ -60,7 +60,7 @@ $(document).ready(function(){
         <div id="download-latest-platform-last">
 	        <h2>windows</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_vs_release.zip">visual studio (2017)</a></p>
+	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_vs2017_release.zip">visual studio (2017)</a></p>
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_msys2_release.zip">qt creator / msys2</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/vs">visual studio</a></p>

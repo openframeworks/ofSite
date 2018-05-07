@@ -280,7 +280,7 @@ class DocsTask(Task):
                 "classes_list": classes,
                 "is_addon": (clazz.module in addons)
             }
-            md_file = "documentation/" + module_lookup[class_name] + "/" + class_name + ".markdown"
+            # md_file = "documentation/" + module_lookup[class_name] + "/" + class_name + ".markdown"
             for lang in self.kw['translations']:
                 env["lang"] = lang
                 env["title"] = clazz.name
