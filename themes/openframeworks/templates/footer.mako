@@ -7,7 +7,7 @@ Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<
 <a href="http://www.rackspace.com" target="_blank" class="rackspace">
 Hosting for openFrameworks is generously provided by Rackspace
 <br/>
-<img src="http://c1776742.cdn.cloudfiles.rackspacecloud.com/images/information/mediacenter/links/130x33_grey.png">
+<img src="/assets/images/rackspace.png">
 </a>
 
 </p>
@@ -25,12 +25,12 @@ var pageTracker = _gat._getTracker("UA-9614675-1");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 
-<%def name="getTime()"><% 
+<%def name="getTime()"><%
     from time import gmtime, strftime
     currentTime = strftime("%A, %d %B %Y %H:%M:%S UTC", gmtime())
 %>${currentTime}</%def>
 
-<%def name="getLastCommitHash()"><% 
+<%def name="getLastCommitHash()"><%
     import subprocess
     p1 = subprocess.Popen(["git", "log", "-1"], stdout=subprocess.PIPE)
     (out,err) = p1.communicate()
