@@ -28,7 +28,7 @@ $(document).ready(function(){
           ltr = coded.charAt(i)
           link += (ltr)
         }
-        else {     
+        else {
           ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
           link += (key.charAt(ltr))
         }
@@ -47,34 +47,10 @@ $(document).ready(function(){
 <div class="page-right-narrow">
 <div class="home-links">
 
-<div class="donations"><strong>One-time Donation</strong><br>
-<form action="https://www.paypal.com/cgi-bin/webscr"  method="post" target="_blank">
-    <input name="business" value="donations@openframeworks.cc" type="hidden">
-    <input name="cmd" value="_donations" type="hidden">
-    <input name="item_name" value="openFrameworks one time donation" type="hidden">
-    <input name="item_number" value="One Time Donation" type="hidden">
-    <input name="amount" value="" type="text"><br/>
-    <em> €1 minimum</em><p></p>
-    <input name="lc" value="US" type="hidden">
-    <input name="currency_code" value="EUR" type="hidden">
-    <input class="buyButton" alt="PayPal – The safer, easier way to pay online." name="submit" value="Donate" type="submit">
-</form>
-<p>&nbsp;</p>
-<p style="font-size: 1.0em; margin-bottom: 0;"><strong>Monthly Subscription</strong><br></p>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-    <input name="business" value="donations@openframeworks.cc" type="hidden">
-    <input name="cmd" value="_xclick-subscriptions" type="hidden">
-    <input name="item_name" value="openFrameworks monthly donation" type="hidden">
-    <input name="item_number" value="Monthly Donation" type="hidden">
-    <input name="a3" value="" value="1" type="text"><br/>
-    <em> €1 minimum</em><p></p>
-    <input name="p3" value="1" type="hidden">
-    <input name="t3" value="M" type="hidden">
-    <input name="lc" value="US" type="hidden">
-    <input name="currency_code" value="EUR" type="hidden">
-    <input name="src" value="1" type="hidden">
-    <input class="buyButton" alt="PayPal – The safer, easier way to pay online." name="submit" value="Subscribe" type="submit">
-</form>
+<div class="donations">
+<script src="https://donorbox.org/widget.js" paypalExpress="false"></script><iframe src="https://donorbox.org/embed/openframeworks-donations" height="685px" width="100%"
+        style="max-width:500px; min-width:310px; max-height:none!important" seamless="seamless" name="donorbox" frameborder="0" scrolling="no" allowpaymentrequest></iframe>
+
 </div>
 </div>
 </div>

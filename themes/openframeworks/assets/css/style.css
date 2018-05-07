@@ -1522,9 +1522,9 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 }
 
 .donations{
-	padding: 1.8em;
-	background-color: #dedede;
-	border-radius: 0.2em;
+	padding: 0;/*1.8em;*/
+	/*background-color: #dedede;
+	border-radius: 0.2em;*/
 }
 
 .donations input[type=submit]{
