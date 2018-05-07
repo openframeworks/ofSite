@@ -48,7 +48,9 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>linux</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64_release.tar.gz">linux</a></p><br/>
+	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64gcc6_release.tar.gz">linux gcc6 or later</a></p>
+	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64gcc5_release.tar.gz">linux gcc5</a> /
+			   <a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64gcc4_release.tar.gz">linux gcc4</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/linux-install">linux install</a></p>
 	        <p><a href="../setup/qtcreator">qt creator</a></p>
