@@ -12,7 +12,7 @@ msys2 설치
 우선,[원클릭 인스톨러](https://msys2.github.io/)나 [코드 저장소](http://sourceforge.net/projects/msys2/files/Base/x86_64/)
 에서 압축파일을 받아 압축을 직접 해제하여 MSYS2를 설치합니다.
 
-만약 QtCreator를 사용할 예정이라면, msys2를 디폴트 경로인 c:\msys64에 설치하셔야 합니다.
+만약 QtCreator를 사용할 예정이라면, 반드시 msys2를 기본 경로인 c:\msys64에 설치하셔야 합니다.
 
 **MSYS2 쉘** (`C:\msys64\msys2_shell.bat`)을 실행하고 시스템 패키지를 업데이트 합니다:
 
@@ -31,10 +31,13 @@ openFrameworks 설치하기
 오픈프레임웍스의 qt **creator / msys2** 버전을 다운받아 압축을 해제합니다.
 
 **MSYS shell** (`C:\msys64\msys2_shell.bat`)을 열고 오픈프레임웍스의 의존성 패키지를 설치합니다:
+
     cd your_oF_directory/scripts/msys2
     ./install_dependencies.sh`
 	
-**MINGW32**쉘을 열고 (`C:\msys64\ming32_shell.bat`을 실행), OF라이브러리들을 컴파일합니다:
+만약 Qt Creator를 사용할거라면, install_dependencies 스크립트를 실행한 뒤 컴퓨터를 재부팅하는것을 추천드립니다. 이로써 시스템에 변경된 사항이 적용됩니다.
+
+**MINGW32**쉘을 열고 (`C:\msys64\ming32_shell.bat`을 실행), OF 라이브러리들을 컴파일합니다:
 
     cd your_oF_directory/libs/openFrameworksCompiled/project
     make
@@ -44,16 +47,14 @@ openFrameworks 설치하기
 
 PATH 변수 세팅
 -------------------------
-MSYS2에서, 오픈프레임웍스는 MSYS2 패키지 매니저인 `pacman`에 의해 제공되는 dll파일들을 필요로 합니다. PATH 변수는 시스템에게 이러한 dll파일을 찾아야 할 위치를 알려줍니다. 윈도우즈운영체제에서는, 시스템이 구동되면 실행가능한 폴더들을 살펴보고, 이 폴더들을 시스템 PATH(system PATH)로 정의한 뒤, 최종적으로 사용자 PATH(user PATH)로 지정합니다.
+일반적으로 install_dependencies.sh 스크립트가 환경변수경로를 추가합니다. 만약 컴퓨터를 재부팅했음에도 Qt Create와 관련한 이슈가 발생하거나, 그냥 컴파일 했다면, 환경변수가 제대로 설정되었는지 체크하고, 만약 그렇지 않다면 다음의 단계에 따라 직접 설정해주시기 바랍니다:
+
+MSYS2에서, 오픈프레임웍스는 MSYS2 패키지 매니저인 `pacman`에 의해 제공되는 dll파일들을 필요로 합니다. PATH 변수는 시스템에게 이러한 dll파일을 찾아야 할 위치를 알려줍니다. 윈도우즈 운영체제에서는, 시스템이 구동되면 실행가능한 폴더들을 살펴보고, 이 폴더들을 시스템 PATH(system PATH)로 정의한 뒤, 최종적으로 사용자 PATH(user PATH)로 지정합니다.
 
 윈도우즈에서 PATH를 세팅하는 방법은 이곳에서 살펴볼 수 있습니다: http://www.computerhope.com/issues/ch000549.htm
 
-You'll need to add `c:\msys64\mingw32\bin` and `c:\msys64\usr\bin` to your PATH. There are two ways:
 `c:\msys64\mingw32\bin` 와 `c:\msys64\usr\bin`를 여러분의 PATH에 추가해야 합니다. 이렇게 하기 위해서 두가지 방법이 있습니다:
 
-
-1. Either add them via 'Environment Variables' from the Control Panel > System > Advanced System Settings.
-2. Or you can also set the PATH from the command line: open a Windows cmd prompt and set you user PATH.
 
 1. 제어판>시스템>고급 시스템 설정의  '환경변수'에 추가하거나
 2. 또는 아래의 명령을 커맨드라인에서 사용해 PATH를 추가할 수 있습니다 : 윈도우 CMD 프롬프트를 열고 PATH를 지정합니다. 
@@ -96,11 +97,10 @@ msys2와 함께라면, QtCreator를 IDE로 사용할 수 있습니다. 좀 더 �
 --------------------- 
 - exe 파일을 더블클릭했더니 "TLSv1_1_client_method missing" 오류가 뜹니다.
 
-실행파일이 ssleay32.dll와 libeay32.dll를 참조하였으나, TLS v1.1를 지원하지 않은 다는 의미입니다. 이는 일반적으로 인텔 iCls소프트웨어때문에 발생합니다. 해결법은 `_msys2디렉토리_/mingw32/bin` 폴더를 충돌 전의 경로로 이동시키는 것입니다. 만약 충돌하는 경로가 system PATH에 있고, 사용자계정이 관리자권한이 없다면, `_msys2디렉토리/mingw32/bin`의 ssleay32.dll파일을 복사해 실행파일이 있는 폴더로 붙여넣는 것입니다.
+실행파일이 ssleay32.dll와 libeay32.dll를 참조하였으나, TLS v1.1를 지원하지 않은 다는 의미입니다. 이는 일반적으로 인텔 iCls소프트웨어때문에 발생합니다. 해결법은 `_msys2디렉토리_/mingw32/bin` 폴더를 충돌 전의 경로로 이동시키는 것입니다. 만약 충돌하는 경로가 system PATH에 있고, 사용자계정이 관리자권한이 없다면, `_msys2디렉토리/mingw32/bin`의 ssleay32.dll파일을 복사해 실행파일이 있는 폴더로 붙여넣습니다.
 
 - "저는 프록시를 사용하여 회사 네트워크를 사용하고 있습니다. pacman으로 패키지를 다운받을수 없네요."
 
-You may need to set HTTP_PROXY and HTTPS_PROXY environment variables.
 환경변수에 HTTP_PROXY와 HTTPS_PROXY를 설정해주어야 합니다.
 
     커맨드 프롬프트에 아래 명령어를 입력하세요 :    
@@ -108,6 +108,7 @@ You may need to set HTTP_PROXY and HTTPS_PROXY environment variables.
     set http_proxy=http://username:password@your_proxy:your_port
     set https_proxy=https://your_proxy:your_port
     set https_proxy=https://username:password@your_proxy:your_port
+
 패스워드에 포함된 특수문자가 있을경우 escape 처리하는것을 잊지 마세요..
 
  
