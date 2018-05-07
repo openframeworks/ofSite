@@ -4,13 +4,13 @@
 오픈프레임웍스를 위한 라즈베리파이 준비하기
 ============
 
-    
+
 ## Raspbian "wheezy" 설치
 0. 가장 최신의 _**Raspbian** (데비안 Wheezy) 이미지를 [라즈베리파이 다운로드 페이지](http://www.raspberrypi.org/downloads)에서 다운받으세요
 onto your SD Card -->
 1. [라즈베리파이를 위한 SD카드 준비하기](http://elinux.org/RPi_Easy_SD_Card_Setup)의 설명에 따라 SD카드에 Raspbian을 설치해주세요.
 
-## 라즈베리파이 설정하기 
+## 라즈베리파이 설정하기
 이 가이드는 새 Raspbian 설치본에서 시작하는 것을 염두하고 있으며, 이제부터 라즈베리파이에 접속하여 명령을 입력할 수 있습니다.
 
 두가지 옵션의 명령이 있습니다:
@@ -27,7 +27,7 @@ onto your SD Card -->
 	* `A3 Memory Split`을 선택하고 엔터를 입력한다
 	* `64`를 입력하고 `<ok>`를 누른다
 
-	 
+
 0. 재부팅을 물어볼 때 또는 추후 콘솔에서 `sudo reboot`를 입력하여 재부팅한다.
 0. 인터넷 연결이 되어있는지 확인하고, 최신 패키지로 업데이트 하기위해 아래의 명령어를 입력한다.
     * `sudo apt-get clean`
@@ -37,9 +37,9 @@ onto your SD Card -->
 
 ## 오픈프레임웍스 다운받기
 이제 오픈프레임웍스의 armv6 리눅스를 다운받아 폴더에 압축을 풀 수 있습니다. 쉘에서 아래의 명령을 입력하여, 오픈프레임웍스를 다운받고 `/home/pi/openFrameworks`의 폴더에 압축을 풉니다.
- 
-0. `cd` 
-0. `curl -O http://openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv6l_release.tar.gz` 
+
+0. `cd`
+0. `curl -O https://openframeworks.cc/versions/v0.8.4/of_v0.8.4_linuxarmv6l_release.tar.gz`
 0.  `mkdir openFrameworks`
 0.  `tar vxfz of_v0.8.4_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 
@@ -48,8 +48,8 @@ onto your SD Card -->
 
 오픈프레임웍스가 `home/pi/openFramework`에 위치해있다고 가정하고, 아래의 명령어를 사용하여 필요한 패키지를 설치하고 오픈프레임웍스를 컴파일합니다.
 
-0. `cd /home/pi/openFrameworks/scripts/linux/debian_armv6l`  
-0. `sudo ./install_dependencies.sh` 
+0. `cd /home/pi/openFrameworks/scripts/linux/debian_armv6l`
+0. `sudo ./install_dependencies.sh`
 
 이제 오픈프레임웍스를 컴파일할 준비가 되었습니다!
 
@@ -58,15 +58,15 @@ onto your SD Card -->
 ## 컴파일 속도 높이기
 라즈베리파이에서 네이티브로 컴파일할 경우 시간이 오래 걸립니다. 일반적인 오픈프레임웍스 어플리케이션의 경우에는 코어 라이리브러리보다 훨씬 적게 걸립니다. 크로스 컴파일 해결법을 사용하면 엄청난 시간을 절약할 수 있습니다.
 
-[라즈베리파이 DISTCC 가이드](../raspberry-pi-distcc-guide/)    
+[라즈베리파이 DISTCC 가이드](../raspberry-pi-distcc-guide/)
 [라즈베리파이 크로스 컴파일 가이드](../raspberry-pi-cross-compiling-guide/)
 
 ## 여러분의 첫 앱을 컴파일 하기
 다른 플랫폼들과 마찬가지로, 오픈프레임웍스는 `openFrameworks/example`폴더에 다양한 예제파일을 함께 제공합니다. 예제의 프로젝트들은 카테고리별로 아래와 같이 정리될 수 있습니다.
 
-* 3d 
-* addons 
-* communication 
+* 3d
+* addons
+* communication
 * empty
 * events
 * gl

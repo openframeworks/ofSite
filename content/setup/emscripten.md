@@ -11,7 +11,7 @@ These instruction will show you how to compile one example project in the openFr
 Install Emscripten
 ------------------
 
-Go at this [page](http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) and download the SDK for your Operating System
+Go at this [page](https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html) and download the SDK for your Operating System
 If your are on windows, double click the `.exe` installer and follow the wizard.
 If you are on Mac or Linux, search for the `Portable Emscripten SDK for Linux and OS X`, click on it and start the download. Once the download is finished, unzip the folder, open a terminal there and run the followings commands:
 

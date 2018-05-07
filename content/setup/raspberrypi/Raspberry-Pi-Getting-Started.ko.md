@@ -7,8 +7,8 @@
 ## Raspbian "Jessie" 설치
 0. 가장 최신의 _**Raspbian** (데비안 Jessie)_ 이미지를 [라즈베리파이 다운로드 페이지](http://www.raspberrypi.org/downloads)에서 다운받으세요.
 1. [라즈베리파이를 위한 SD카드 준비하기](http://elinux.org/RPi_Easy_SD_Card_Setup)의 설명에 따라 SD카드에 Raspbian을 설치해주세요.
-         
-## 라즈베리파이 설정하기 
+
+## 라즈베리파이 설정하기
 이 가이드는 새 Raspbian 설치본에서 시작하는 것을 염두하고 있으며, 이제부터 라즈베리파이에 접속하여 명령을 입력할 수 있습니다.
 
 라즈베리파이에서 아래와 같은 방법으로 명령을 입력할 수 있습니다:
@@ -27,7 +27,7 @@ _오픈프레임웍스를 컴파일 하기 위해 CPU가 RAM의 192MB를 사용�
 
 
 오픈프레임웍스는 오픈프레임웍스 프로그램구동을 위해 X11 데스크탑 을 사용하지 않습니다. 데스크탑 환경을 비활성화 시켜 GPU메모리를 절약할 수 있습니다. 이는 옵션이지만 추천됩니다.
- 
+
 0. `3 Boot Options`을 선택한다
 0. `B1 Console` 또는 `B2 Console Autologin`를 선택한다
 
@@ -42,21 +42,21 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 
 ## 오픈프레임웍스 다운받기
 이제 오픈프레임웍스를 다운받아 폴더에 압축을 풀 수 있습니다. 쉘에서 아래의 명령을 입력하여, 오픈프레임웍스를 다운받고 `/home/pi/openFrameworks`의 폴더에 압축을 풉니다.
- 
+
 <h3> 라즈베리파이2/arm7/arm6</h3>
-0. `cd` 
-0. `wget http://openframeworks.cc/versions/v0.9.3/of_v0.9.3_linuxarmv6l_release.tar.gz` 
+0. `cd`
+0. `wget https://openframeworks.cc/versions/v0.9.3/of_v0.9.3_linuxarmv6l_release.tar.gz`
 0.  `mkdir openFrameworks`
 0.  `tar vxfz of_v0.9.3_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1`
 
 
 ## 패키지 인스톨 및 오픈프레임웍스 컴파일하기
 위 _**라즈베리파이 설정하기*_ 섹션의 메모리 설정을 하였는지 꼭 확인하십시오. 그렇지 않으면 설치가 되지 않습니다.
- 
+
 이 단계에서 소요되는 시간은 라즈베리파이1인지 라즈베리파이2인지에 따라, 또 패키지를 다운받는 Raspbian 미러의 속도에 따라 달라질 수 있습니다.
 
-0. `cd /home/pi/openFrameworks/scripts/linux/debian`  
-0. `sudo ./install_dependencies.sh` 
+0. `cd /home/pi/openFrameworks/scripts/linux/debian`
+0. `sudo ./install_dependencies.sh`
 
 이제 오픈프레임웍스를 컴파일할 준비가 되었습니다!
 
@@ -71,9 +71,9 @@ Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 
 ## 여러분의 첫 앱을 컴파일 하기
 오픈프레임웍스는 `openFrameworks/example`폴더에 다양한 예제파일을 함께 제공합니다. 예제의 프로젝트들은 카테고리별로 아래와 같이 정리될 수 있습니다.
 
-* 3d 
-* addons 
-* communication 
+* 3d
+* addons
+* communication
 * empty
 * events
 * gl

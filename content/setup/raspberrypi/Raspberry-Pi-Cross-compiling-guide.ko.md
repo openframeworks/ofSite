@@ -59,6 +59,6 @@
 
 export를 사용하므로써, 세션을 통해 `make`명령어를 축약하여 사용할 수 있습니다. 이 구문들을 `~/.profile` 파일의 끝에 라인을 추가하여 영구적으로 사용할 수 있습니다.
 
-## 0.9.0 을 위한 크로스 컴파일링 가이드 
-[맥에서, 가상머신을 통해 Debian 사용하기](http://forum.openframeworks.cc/t/cross-compiler-for-of-0-9-0-jessie-arm6-rpi1)
+## 0.9.0 을 위한 크로스 컴파일링 가이드
+[맥에서, 가상머신을 통해 Debian 사용하기](https://forum.openframeworks.cc/t/cross-compiler-for-of-0-9-0-jessie-arm6-rpi1)
 

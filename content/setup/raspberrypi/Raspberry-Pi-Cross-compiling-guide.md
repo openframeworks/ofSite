@@ -12,7 +12,7 @@ Creating a cross-compiler is a fairly advanced process but can be useful for hea
 ## Do you need it?
 The RPI2/arm7 is much faster and can natively compile openFrameworks in about 15 minutes by utilizing all 4 cores (`make -j4`). Applications are typically much faster depending on complexity, use of ofxAddons, etc.
 
-Compiling openFrameworks on the RPI1/arm6 is much slower and can take over an hour. Applications can be much faster however still slow. 
+Compiling openFrameworks on the RPI1/arm6 is much slower and can take over an hour. Applications can be much faster however still slow.
 
 A typical cross-compiler on a modern Desktop PC will compile the OF core library in about 3 minutes.
 
@@ -59,5 +59,5 @@ or set via environmental variables
 Using export allows you just use the shorter `make` command throughout a session. You can make these variables permanent by adding the export lines to the end of `~/.profile`.
 
 ## Cross compiling guides for 0.9.0
-[Mac based, uses Debian VM, custom compiled  GCC](http://forum.openframeworks.cc/t/cross-compiler-for-of-0-9-0-jessie-arm6-rpi1)
+[Mac based, uses Debian VM, custom compiled  GCC](https://forum.openframeworks.cc/t/cross-compiler-for-of-0-9-0-jessie-arm6-rpi1)
 

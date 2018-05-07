@@ -11,7 +11,7 @@ emscripten 셋업
 Emscripten 설치
 ------------------
 
-[이 페이지](http://kripken.github.io/emscripten-site/docs/getting_started/downloads.html)로 가셔서 여러분이 사용하고 있는 운영체제에 맞는 SDK를 다운받습니다.
+[이 페이지](https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html)로 가셔서 여러분이 사용하고 있는 운영체제에 맞는 SDK를 다운받습니다.
 만약 윈도우즈 운영체제를 사용한다면, `.exe`를 더블클릭하여 마법사의 진행을 따라주시면 됩니다.
 만약 매킨토시나 리눅스를 사용한다면, `Portable Emscripten SDK for Linux and OS X`를 찾아, 클릭해 다운로드합니다. 다운로드가 완료되면, 압축을 폴더에 풀고, 터미널을 여러 해당 폴더로 이동한 뒤 아래의 명령을 사용하시면 됩니다:
 

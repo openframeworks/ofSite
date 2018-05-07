@@ -19,7 +19,7 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 2. At the fdisk prompt, delete old partitions and create a new one:
 
 	Type **o**. This will clear out any partitions on the drive.
- 
+
 	Type **p** to list partitions. There should be no partitions left.
 
 	Type **n**, then **p** for primary, **1** for the first partition on the drive, press **ENTER** to accept the default first sector, then type **+100M** for the last sector
@@ -53,7 +53,7 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 		mv root/boot/* boot
 
 8. Unmount the two partitions:
-	
+
 		umount boot root
 
 Insert the SD card into the Raspberry Pi, connect ethernet, and apply 5V power.
@@ -67,7 +67,7 @@ The default root password is root.
 1. Login as **root**
 
 + Change password
-	
+
 	* passwd
 
 + Install sudo
@@ -77,7 +77,7 @@ The default root password is root.
 + Delete **alarm** user
 
 	* userdel alarm
-	
+
 + Create new **pi** user
 
 	* useradd -m -G users -s /bin/bash pi
@@ -85,28 +85,28 @@ The default root password is root.
 + Modify _sudoers_ file
 
 	* sudo nano /etc/sudoers
-	
+
 			## Uncomment to allow members of group sudo to execute any command
 			#%sudo ALL=(ALL) NOPASSWD: ALL
-			
+
 	* Uncomment the second of the above lines, so that it reads as follows:
-	
+
 			## Uncomment to allow members of group sudo to execute any command
 			%sudo ALL=(ALL) NOPASSWD: ALL
-	
-* Control-O + Control-X to save and exit 
+
+* Control-O + Control-X to save and exit
 
 + Add superpowers to user **pi**
 
 	* groupadd sudo
 	* usermod -a -G sudo pi
-	
+
 + Modify you bash for ease of use
-	
+
 	* nano .bashrc
-	
+
 			# This reads .bash_aliases file for aliases
-			if [ -f ~/.bash_aliases ]; then			 		
+			if [ -f ~/.bash_aliases ]; then
 			. ~/.bash_aliases
 			fi
 
@@ -122,7 +122,7 @@ The default root password is root.
 			  alias screen='/opt/vc/bin/tvservice -s'
 
 	* nano .bash_profile
-	
+
 			#Setup openFrameworks variables
 			export MAKEFLAGS=-j4 PLATFORM_ARCH=armv7l PLATFORM_VARIANT=raspberry2
 
@@ -137,49 +137,49 @@ Archlinux doesn't have an rtaudio package in their armv7 repositories. You can d
 	* sudo rm rtaudio-armv7hf.tar.bz2
 
 + Reboot and then you can delete the builds folder (packages have been already installed)
-	
+
 ---
 ##openFrameworks
 
 
 1. Get openframeworks from website:
 
-	* curl -O http://openframeworks.cc/versions/v0.9.2/of_v0.9.2_linuxarmv7l_release.tar.gz
+	* curl -O https://openframeworks.cc/versions/v0.9.2/of_v0.9.2_linuxarmv7l_release.tar.gz
 
-+ Make oF directory 
++ Make oF directory
 
 	* mkdir of_v0.9.2_linuxarmv7l
 
 + Unpack tar
 
 	* tar vxfz of_v0.9.2_linuxarmv7l_release.tar.gz -C of_v0.9.2_linuxarmv7l --strip-components 1
-	
-+ Update 
+
++ Update
 
 	* pacman -Syu
-	
+
 + Run scripts
 
 	* cd of_v0.9.2_linuxarmv7l/scripts/linux/archlinux
-	
+
 	* sudo ./install_dependencies.sh
-	
+
 	[This usually takes some time and has some prompts (accept them)]
-	
+
 	* sudo install_codecs.sh
-	
+
 + Set makeflags (you can put this in your .bash_profile so you don't have to type it in every time)
 
 	* export MAKEFLAGS=-j4 PLATFORM_ARCH=armv7l PLATFORM_VARIANT=raspberry2
-	
+
 + Compile oF
 
 	* make Release -C /home/pi/of_v0.9.2_linuxarmv7l/libs/openFrameworksCompiled/project
-	
+
 + Run an example
 
 	*cd /home/pi/of_v0.9.2_linuxarmv7l/examples/graphics/polygonExample
-	
+
 	*make && make run
 
 Have lots of fun ! **:)**

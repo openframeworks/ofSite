@@ -21,9 +21,9 @@ Installation
 
 <h3>Install Android Studio and the SDK</h3>
 
-Download and install Android Studio from [http://tools.android.com/download/studio/stable]() (you need Android Studio 1.0 or higher). It should come with (or automatically install) a recent SDK, though you can customize the SDK version later from within Android Studio using **Tools ➞ Android ➞ SDK Manager**.
+Download and install Android Studio from [https://tools.android.com/download/studio/stable]() (you need Android Studio 1.0 or higher). It should come with (or automatically install) a recent SDK, though you can customize the SDK version later from within Android Studio using **Tools ➞ Android ➞ SDK Manager**.
 
-In the event that Android Studio does not come with an SDK, you can install it from [http://developer.android.com/sdk/index.html]() (under "Get the SDK for an existing IDE").
+In the event that Android Studio does not come with an SDK, you can install it from [https://developer.android.com/sdk/index.html]() (under "Get the SDK for an existing IDE").
 
 <h3>Install the Android NDK</h3>
 
