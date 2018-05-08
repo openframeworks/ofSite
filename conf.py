@@ -267,7 +267,7 @@ PAGES = (
     ("content/older.md", "download", "fullpage.mako"),
     ("content/gallery.md", "", "gallery.mako"),
     ("content/community.md", "", "mediumpage.mako"),
-    ("content/development.md", "", "fullpage.mako"),
+    ("content/development.md", "", "development.mako"),
     ("learning/*.markdown", "learning", "tutorial.mako"),
     ("learning/*.asciidoc", "learning", "tutorial.mako"),
     ("content/setup/*.md", "setup", "setup_guide.mako"),

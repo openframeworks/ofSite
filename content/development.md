@@ -31,7 +31,7 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 <p>openFrameworks is actively developed by <a href="http://thesystemis.com/">Zach Lieberman</a>, <a href="http://muonics.net/">Theodore Watson</a>, and <a href="http://arturocastro.net/">Arturo Castro</a> ("the core"), with help from the <a href="../community/">OF community</a>. openFrameworks is indebted to two significant precursors: the <a href="http://processing.org/">Processing development environment</a>, created by <a href="http://reas.com/">Casey Reas</a>, <a href="http://benfry.com/">Ben Fry</a> and the Processing community; and the ACU Toolkit, a privately distributed C++ library developed by Ben Fry and others in the <a href="http://acg.media.mit.edu/">MIT Media Lab's Aesthetics and Computation Group</a>.</p>
 
 <p>The following people have contributed to the openFrameworks core:</p>
-<ul>
+<ul id="core_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://christopherbaker.net">Christopher Baker</a></li>
 <li><a href="https://github.com/ofTheo">Theodore Watson</a></li>
@@ -136,7 +136,7 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 
 
 <p>The following people have contributed to the openFrameworks site or documentation:</p>
-<ul>
+<ul id="site_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://icq4ever.net/">Yi donghoon</a></li>
 <li><a href="http://kylemcdonald.net/">Kyle McDonald</a></li>
@@ -241,7 +241,7 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 
 
 <p>The following people have contributed to the ofBook project:</p>
-<ul>
+<ul id="book_contributors">
 <li><a href="http://mikewesthad.com">Michael Hadley</a></li>
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="https://github.com/ofZach">ofZach</a></li>
@@ -313,7 +313,7 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 </ul>
 
 <p>The following people have contributed to the ofxaddons site:</p>
-<ul>
+<ul id="addons_contributors">
 <li><a href="http://www.virtualjames.com">James Hughes</a></li>
 <li><a href="http://jamesgeorge.org">James George</a></li>
 <li><a href="http://kikko.fr">Cyril Diagne</a></li>
@@ -337,7 +337,6 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 <li><a href="http://www.roxlu.com/">Diederick Huijbers</a> (roxlu) as tutorial leader</li>
 <li><a href="http://www.jeffcrouse.info/">Jeff Crouse</a> (jefftimesten) as tutorial leader</li>
 <li><a href="http://genekogan.com/">Gene Kogan</a> (genekogan) as addons curator at ofxaddons.com</li>
-<li><a href="http://schoolofma.org/">Rachel Uwa</a> ofbook project coordination</li>
 </ul>
 
 
