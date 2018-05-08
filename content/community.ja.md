@@ -54,7 +54,7 @@
 
 <p>This code of conduct applies both within project spaces and in public spaces when an individual is representing the openFrameworks community.</p>
 
-<p><em>This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org) and the [Berlin Code of Conduct](http://berlincodeofconduct.org/)</em></p>
+<p><em>This Code of Conduct is adapted from the <a href="http://contributor-covenant.org" target="blank">Contributor Covenant</a> and the <a href="http://berlincodeofconduct.org/" target="blank">Berlin Code of Conduct</a></em></p>
 </div>
 
 <div class="page-right-narrow">

@@ -44,7 +44,7 @@
 
 <p>이 행동 강령은 개인이 오픈프레임웍스 커뮤니티를 대표할 때 프로젝트 공간 및 공공 장소 모두에서 적용됩니다.</p>
 
-<p><em>이 행동 강령은 [기여자 규약](http://contributor-covenant.org)과 [베를린 행동 강령](http://berlincodeofconduct.org/)에서 발췌하였습니다.</em></p>
+<p><em>이 행동 강령은 <a href="http://contributor-covenant.org" target="blank">기여자 규약</a>과 <a href="http://berlincodeofconduct.org/" target="blank">베를린 행동 강령</a>에서 발췌하였습니다.</em></p>
 
 </div>
 
