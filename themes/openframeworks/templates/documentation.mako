@@ -2,7 +2,7 @@
 <%inherit file="base.tmpl" />
 
 <%block name="extra_head">
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
     <script src="/assets/js/documentation_index.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/css/tipuesearch.css">

@@ -4,7 +4,7 @@
 
 <%block name="extra_head">
     <script src="/assets/js/documentation.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
 <style>
 </style>
 </%block>
@@ -29,7 +29,7 @@
     	    <div class="article">
                 ${post.text()}
     		</div>
-            
-        </div><!-- End Page Wide -->      
+
+        </div><!-- End Page Wide -->
       </div><!-- End Body Wrap -->
 </%block>
