@@ -36,7 +36,7 @@ function feedCANLoaded(result) {
       var indexOfSrc = imgHTML.indexOf('src="')+5;
       img.src = imgHTML
         .substr(indexOfSrc,imgHTML.indexOf('"',indexOfSrc)-indexOfSrc)
-        .replace("http://creativeapplications.net", "/can_https");
+        .replace("http://www.creativeapplications.net", "/can_https");
 
       var dot = document.createElement("span");
       dot.className = "external-dot";
