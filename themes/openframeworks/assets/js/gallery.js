@@ -32,9 +32,11 @@ function feedCANLoaded(result) {
       var content = entry.getElementsByTagNameNS("*","description")[0].textContent;
       var indexOfFirstImg = content.indexOf('<img');
       var endImg = content.indexOf("/>",indexOfFirstImg);
-      var imgHTML = content.substr(indexOfFirstImg,endImg-indexOfFirstImg);
+      var imgHTML = content.substr(indexOfFirstImg, endImg-indexOfFirstImg);
       var indexOfSrc = imgHTML.indexOf('src="')+5;
-      img.src = imgHTML.substr(indexOfSrc,imgHTML.indexOf('"',indexOfSrc)-indexOfSrc);
+      img.src = imgHTML
+        .substr(indexOfSrc,imgHTML.indexOf('"',indexOfSrc)-indexOfSrc)
+        .replace("http://creativeapplications.net", "/can_https");
 
       var dot = document.createElement("span");
       dot.className = "external-dot";
@@ -51,7 +53,7 @@ function feedCANLoaded(result) {
 
       h2.appendChild(dot);
       h2.appendChild(a)
-      var description = content.substr(content.lastIndexOf("/>")+2);
+      var description = content.substr(content.lastIndexOf("</div>")+6);
       if(description.indexOf('.')!=-1){
         description = Encoder.htmlDecode(description.substr(0,description.indexOf('.')+1));
       }else{
