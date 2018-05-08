@@ -24,7 +24,7 @@ BLOG_TITLE = "openFrameworks"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 if socket.gethostbyname(socket.gethostname()) == socket.gethostbyname('openframeworks.cc'):
-    SITE_URL = "http://openframeworks.cc/"
+    SITE_URL = "https://openframeworks.cc/"
 else:
     SITE_URL = "http://localhost:8000"
 # This is the URL where Nikola's output will be deployed.
