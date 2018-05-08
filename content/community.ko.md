@@ -4,73 +4,88 @@
 <div class="page-left-medium">
 
 <h3>오픈프레임웍스는 전세계의 해커, 아티스트, 디자이너, 학생, 교수등의 다양한 커뮤니티입니다.</h3>
-<p>오픈프레임웍스 관련에 정보를 더 얻고 싶다면, <a href="http://openframeworks.cc/list-info/">커뮤니티 메일링 리스트</a>에 등록해주시기 바랍니다.</p>
-<p>커뮤니티 리스트에서 앞으로 열릴 워크샵이나 컨퍼런스와 같은 행사 정보를 얻을 수 있습니다</p>
-<p>지금 당장 관여하고 싶으신가요? 오픈프레임웍스 커뮤니티는 항상 개발자, 디자이너, 작가, 이벤트 관리자, 또는 보다 나은 경험을 할 수 있도록 돕는 일반적인 열정을 가진 분들을 찾고 있습니다. 만약 이런 분들을 살펴보고 싶다면, 포럼의 <a href="http://forum.openframeworks.cc/index.php?board=31.0">collaborations</a>섹션을 살펴보시거나, 제공되고 있는 <a href="/tutorials/">튜토리얼</a>을 살펴보시기 바랍니다.</p>
 
-<ul class="external_links" >
-    <li><a href="http://openframeworks.cc/list-info/"> 메일링 리스트</a></li>
-    <li><a href="http://twitter.com/openFrameworks"> 트위터</a></li>
-    <li><a href="http://www.facebook.com/groups/openframeworks.kr/"> 오픈프레임웍스 대한민국 사용자 모임</a></li>
-    <li><a href="http://forum.openframeworks.kr/"> 오픈프레임웍스 대한민국 포럼</a></li>
+<p>여러분이 이제 막 시작해서 다른 사람에게 배우길 원하거나, 프로젝트에 기여할 방법을 찾고 계신다구요? 엄청난 양의 자료와 커뮤니티의 일원이 될 기회가 있습니다.</p>
+
+<h2>커뮤니티</h2>
+<p>오픈프레임웍스의 코어는 크게 두 곳을 중심으로 이루어져 있습니다 :</p>
+
+<h3>포럼</h3>
+<p> <strong><a href="https://forum.openframeworks.cc/">오픈프레임웍스 포럼</a></strong>은 커뮤니티의 온라인 보금자리입니다. 오픈프레임웍스에 관해 궁금한 점이 있거나, 다른 유저들을 만나거나, 여러분이 아는 지식을 공유하여 프레임워크에 대해 배우고 싶은 다른분들을 도울 기회를 찾고 있다구요? 이곳이야말로 가장 먼저 방문해야할 곳입니다.</p>
+
+<h3>Github</h3>
+<p><strong><a href="https://github.com/openframeworks/">오픈프레잉뭑스 github 코드저장소</a></strong>는 개발에 관한 논의, 진행 및 프로젝트에 대한 코드 기여, 문서화, 웹사이트 제작이 이루어지는 핵심 장소입니다. 버그 수정을 하거나, 새로운 아이디어 및 요청사항이 있거나, 혹은 직접 프로젝트에 기여하고 싶다면 방문해야할 곳입니다.</p>
+
+<h2>기여</h2>
+<p>오픈프레임웍스 커뮤니티는 새로운 개발자, 디자이너, 작가, 이벤트 기획자, 보다 나은 경험을 위해 열정을 가진 일반인들에게 항상 열려있습니다. 참여하는 방법은 다음을 확인해보세요.</p>
+<ul>
+    <li><a href="https://github.com/openframeworks/openFrameworks">개발에 기여하기</a></li>
+    <li><a href="https://github.com/openframeworks/ofSite">문서화에 기여하기</a></li>
+    <li><a href="https://forum.openframeworks.cc/guidelines">포럼에 참여하기</a></li>
 </ul>
 
+<h2>행동 강령</h2>
+<p>오픈프레임웍스의 목표중 하나는 가능한 가장 다양한, 다양한 배경을 가진, 가장 많은 수의 기여자를 포괄하는 것입니다. 따라서, 우리는 성별, 성적 지향, 능력, 사회 경제적 지위, 연령, 경험 수준, 외모, 인종, 종교 및 철학에 상관없이 친절하고, 안전한 환경을 위해 노력합니다. </p>
 
-<hr>
+<p>오픈프레임웍스 커뮤니티로써, 우리는 포럼에 글을 게시하는, IRC에서 채팅하는, 메일링리스트에 게시하는, 문제를 보고하는, 기능을 제시하는, 끌어오기 요청과 패치를 하는, 문서를 업데이트하는, 미팅및 워크샵에 참석하는, 또는 다른 방법으로 엮여있는 기존 회원과 신입회원 모두령를 존중할 것을 약속합니다.</p>
 
-
-<h2 id="contribute">공헌하기</h2>
-
-<p><b><a href="/tutorials">튜토리얼 작성하기</a></b> - 특정 분야에 대해 경험이 있으신가요? 튜토리얼을 작성해서 다른분들께 지식을 공유해주세요. <a href="/tutorials#wishlist">튜토리얼 제작 희망 리스트</a>를 체크해주세요.</p>
-
-<p><b><a href="http://ofxaddons.com">애드온 제작하기</a></b> - 애드온은 보다 고급 기능을 하도록 오픈프레임웍스를 확장시켜주는 코드입니다. <a href="http://ofxaddons.com">ofxaddons.com</a>를 방문하여 공개된 애드온 리스트를 보시고 <a href="http://ofxaddons.com/howto/">애드온 제작 튜토리얼</a>을 참고하여 시작해보세요.</p>
-
-<p><b>오픈프레임웍스 교육</b> - 혹시 워크샵, 수업 또는 어떤 이벤트에서 가르치시나요? <a href="http://openframeworks.cc/list-info/">오픈프레임웍스 메일링 리스트</a>에 올려주시면 이 페이지에 추가됩니다. 이미 진행된 워크샵, 수업이 있다면 <a href="http://wiki.openframeworks.cc/index.php?title=Education">교육 위키</a>페이지에 공유해주세요. <a href="http://forum.openframeworks.cc/">포럼</a>에서 다른 교육기회가 있는지도 확인해주세요.</p>
-
-<p><b><a href="/development">오픈프레임웍스 개발</a></b> - 오픈프레임웍스에 대해서 더 깊은 정보를 원하신다면, <a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">오픈프레임웍스 개발 리스트</a>에 참여하세요! 개발리스트는 오픈프레임웍스가 나아갈 방향에 대해 토론할 수 있는 곳입니다. 리스트는 누구에게나 열려있으며, 다양한 분들이 오픈프레임웍스가 유용하고 가능한 재미있게 될 수 있도록 돕기를 희망하고 있습니다! </p>
-
-<p><b>다른 공헌들</b> - 오픈프레임웍스 커뮤니티는 항상 개발자, 디자이너, 작가, 이벤트 관리자, 또는 보다 나은 경험을 할 수 있도록 돕는 일반적인 열정을 가진 분들을 찾고 있습니다. <a href="http://openframeworks.cc/list-info/">메일링 리스트</a>와 <a href="http://twitter.com/openFrameworks"> 트위터</a>에서 기회가 있는지 알아보세요</p>
-
-
-<h2>Code of conduct</h2>
-<p>One of the goals of openFrameworks is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, socioeconomic status, age, level of experience, personal appearance, ethnicity, religion or philosophy.</p>
-
-<p>As the openFrameworks community, we pledge to respect both old and new members who post on the forum, chat on IRC, post on mailing lists, report issues, post feature requests, submit pull requests or patches, update documentation, participate in meetups and workshops, or are involved in any way with openFrameworks.
-
-<p>Examples of unacceptable behavior include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, exclusion, or other disrespectful conduct. We promise each other to:
+<p>허용되지 않는 행동의 예로는 성적인 언어나 이미지의 사용, 경멸적인 의견게시나 개인적인 공격, 트롤링, 공개적이거나 혹은 사적인 괴롭힘, 모욕, 따돌림, 그 외 불손한 행위등이 있습니다. 우리는 서로 약속합니다 :</p>
 
 <ul>
-<li>Participate in an authentic and active way. In doing so, we contribute to the health and longevity of this community.</li>
-<li>Exercise consideration and respect in our speech and actions.</li>
-<li>Attempt collaboration before conflict.</li>
-<li>Be mindful of other community members.</li>
+<li>진심을 가지고 적극적으로 참여합니다. 그렇게 함으로써, 우리는 이 커뮤니티의 건강과 장수에 기여합니다.</li>
+<li>언행과 행동에 배려와 존경을 담도록 노력합니다.</li>
+<li>충돌하기 전에 협업을 시도하세요.</li>
+<li>다른 커뮤니티 회원을 고려하세요.</li>
 </ul>
 
-<p>Alert <a href="mailto:of@openframeworks.cc">the core</a> if you notice a dangerous situation, someone in distress, or violations of this Code of Conduct, even if they seem inconsequential. We'll treat reports as anonymous submissions, and do our best to work with everyone in private to resolve the conflict.
+<p>만약 위험한 상황, 곤란한 사람 또는 이 행동 강령을 위반하는 경우를 발견했다면, 그것이 대수롭지 않은 상황이더라도 <a href="mailto:of@openframeworks.cc">이 메일주소</a>로 알려주십시오. 우리는 익명으로 보고를 처리할것이며, 사적인 모든 사람들과 협력하여 분쟁을 해결하기 위해 최선을 다할 것입니다.</p>
 
-<p>Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct. Contributors who do not follow the Code of Conduct will be removed from the project team.
+<p>프로젝트 관리자는 이 행동 규범에 부합하지 않는 의견, 커밋, 코드, 위키편집, 이슈 및 기타 기여들에 대해여 삭제, 편집 또는 거부할 권리와 의무가 있습니다. 이 행동 강령에 따르지 않는 기여자는 프로젝트 팀에서 배제됩니다.</p>
 
-<p>This code of conduct applies both within project spaces and in public spaces when an individual is representing the openFrameworks community.
+<p>이 행동 강령은 개인이 오픈프레임웍스 커뮤니티를 대표할 때 프로젝트 공간 및 공공 장소 모두에서 적용됩니다.</p>
 
-<p><em>This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org) and the [Berlin Code of Conduct](http://berlincodeofconduct.org/)</em></p>
+<p><em>이 행동 강령은 [기여자 규약](http://contributor-covenant.org)과 [베를린 행동 강령](http://berlincodeofconduct.org/)에서 발췌하였습니다.</em></p>
+
 </div>
 
 <div class="page-right-narrow">
-    <div class="home-links">
+<div class="home-links">
 
-        <h3 style="padding-top:30px">정기 모임</h3>
-        <p>오픈프레임웍스와 함께하는 사람들 혹은 참여를 원하는 데에 관심있는 분들의 모임입니다. 사람들을 만나거나 아이디어 혹은 프로젝트를 공유하기 좋은 곳이죠!</p>
-        <ul>
-        <li><a href="http://groups.google.com/group/freakdays/feed/">Amsterdam</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/boston-creative-coders">Boston</a></li>
-        <li><a href="https://www.facebook.com/GeneratorLeipzig">Leipzig</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/nyc-of">NYC</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/openframeworks-meetup-to">Toronto</a></li>
-        <li><a href="http://www.meetup.com/Creative-Code-SEA">Seattle</a></li>
-        </ul>
+<h3>최신 소식</h3>
+<p>커뮤티니의 최신 소식 및 정보</p>
+<p>
+<ul>
+	<li><a href="http://blog.openframeworks.cc/">블로그</a></li>
+    <li><a href="https://twitter.com/openframeworks">트위터</a></li>
+	<li><a href="https://forum.openframeworks.cc/c/announcements">포럼 공지</a></li>
+</ul>
+</p>
 
-        <h3 style="padding-top:30px">질문이 있으신가요??</h3>
-        <p><a href="http://webchat.freenode.net/?channels=openframeworks">IRC channel</a>에 접속하셔서, 자신을 소개해주세요! 저희 모두는 지금까지 서로 배우고 도와왔습니다. 또한 여러분들께도 도움이 되길 희망합니다.</p>
-    </div>
+<h3>살펴보기</h3>
+<p>커뮤니티에서 작업 살펴보기</p>
+<p><ul>
+    <li><a href="/gallery/">갤러리</a></li>
+	<li><a href="https://www.instagram.com/explore/tags/openframeworks/">인스타그램</a></li>
+    <li><a href="https://twitter.com/search?f=tweets&vertical=default&q=%23openframeworks">트위터</a></li>
+	<li><a href="https://www.behance.net/search?content=projects&sort=published_date&time=all&search=openframeworks">Behance</a></li>
+	<li><a href="https://www.flickr.com/groups/openframeworks/">Flickr</a></li>
+	<li><a href="http://www.creativeapplications.net/category/openframeworks/">Creative Applications Network</a></li>
+</ul></p>
+
+<h3>개발</h3>
+<p>다른 개발자 및 기여자와 함께하기</p>
+<ul>
+    <li><a href="https://github.com/openframeworks">Github</a></li>
+	<li><a href="http://ofslack.herokuapp.com">Slack</a></li>
+    <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">개발자 메일링 리스트</a> <span style="font-size:75%">(Low Volume)</span></li>
+	<li><a href="http://webchat.freenode.net/?channels=openframeworks">IRC</a> <span style="font-size:75%">(Low Volume)</span></li>
+</ul>
+
+<h3>모임</h3>
+<p>배우고, 공유하고, 영감을 얻기위해 커뮤니티 회원과 함께하세요.</p>
+<ul>
+    <li><a href="https://forum.openframeworks.cc/c/events">이벤트 포럼</a></li>
+</ul>
+</p>
 </div>
-
+</div>
