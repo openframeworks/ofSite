@@ -28,7 +28,7 @@
 openFrameworksは、2つの先行するプロジェクトの恩恵を受けています。<a href="http://reas.com/">Casey Reas</a>, <a href="http://benfry.com/">Ben Fry</a>そして、Processingコミュニティーによる<a href="http://processing.org/">Processing開発環境</a>。そして、Ben Fry達によって<a href="http://acg.media.mit.edu/">MIT Media Lab's Aesthetics and Computation Group</a>で開発された、ACU Toolkitです。openFrameworksの多くの主要開発者達は、チームで共に作業をしています:</p>
 
 <p>The following people have contributed to the openFrameworks core:</p>
-<ul>
+<ul id="core_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://christopherbaker.net">Christopher Baker</a></li>
 <li><a href="https://github.com/ofTheo">Theodore Watson</a></li>
@@ -133,7 +133,7 @@ openFrameworksは、2つの先行するプロジェクトの恩恵を受けて�
 
 
 <p>The following people have contributed to the openFrameworks site or documentation:</p>
-<ul>
+<ul id="site_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://icq4ever.net/">Yi donghoon</a></li>
 <li><a href="http://kylemcdonald.net/">Kyle McDonald</a></li>
@@ -238,7 +238,7 @@ openFrameworksは、2つの先行するプロジェクトの恩恵を受けて�
 
 
 <p>The following people have contributed to the ofBook project:</p>
-<ul>
+<ul id="book_contributors">
 <li><a href="http://mikewesthad.com">Michael Hadley</a></li>
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="https://github.com/ofZach">ofZach</a></li>
@@ -310,7 +310,7 @@ openFrameworksは、2つの先行するプロジェクトの恩恵を受けて�
 </ul>
 
 <p>The following people have contributed to the ofxaddons site:</p>
-<ul>
+<ul id="addons_contributors">
 <li><a href="http://www.virtualjames.com">James Hughes</a></li>
 <li><a href="http://jamesgeorge.org">James George</a></li>
 <li><a href="http://kikko.fr">Cyril Diagne</a></li>
@@ -334,5 +334,4 @@ openFrameworksは、2つの先行するプロジェクトの恩恵を受けて�
 <li><a href="http://www.roxlu.com/">Diederick Huijbers</a> (roxlu) as tutorial leader</li>
 <li><a href="http://www.jeffcrouse.info/">Jeff Crouse</a> (jefftimesten) as tutorial leader</li>
 <li><a href="http://genekogan.com/">Gene Kogan</a> (genekogan) as addons curator at ofxaddons.com</li>
-<li><a href="http://schoolofma.org/">Rachel Uwa</a> ofbook project coordination</li>
 </ul>

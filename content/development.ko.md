@@ -32,7 +32,7 @@
 <p>오픈프레임웍스는 <a href="http://thesystemis.com/">Zach Lieberman</a>, <a href="http://muonics.net/">Theodore Watson</a>, and <a href="http://arturocastro.net/">Arturo Castro</a>에 의해 주도적으로 개발되었으며("핵심 부분"), <a href="../community/">오픈프레임웍스 커뮤니티</a>의 도움을 받았습니다. 오픈프레임웍스는 두개의 선지자의 은혜를 입었습니다: <a href="http://reas.com/">Casey Reas</a>와 <a href="http://benfry.com/">Ben Fry</a>, 그리고 프로세싱 커뮤니티에 의해 개발된 <a href="http://processing.org/">프로세싱 개발 환경</a>; 그리고 Ben Fry와 <a href="http://acg.media.mit.edu/">MIT Media Lab's Aesthetics and Computation Group</a>에 의해 개발된 privately distributed C++ library인 ACU Toolkit입니다. 이외에 많은 일반 공헌자들이 오픈프레임웍스에서 팀으로 함께 일하고 있습니다:
 
 <p>The following people have contributed to the openFrameworks core:</p>
-<ul>
+<ul id="core_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://christopherbaker.net">Christopher Baker</a></li>
 <li><a href="https://github.com/ofTheo">Theodore Watson</a></li>
@@ -137,7 +137,7 @@
 
 
 <p>The following people have contributed to the openFrameworks site or documentation:</p>
-<ul>
+<ul id="site_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://icq4ever.net/">Yi donghoon</a></li>
 <li><a href="http://kylemcdonald.net/">Kyle McDonald</a></li>
@@ -242,7 +242,7 @@
 
 
 <p>The following people have contributed to the ofBook project:</p>
-<ul>
+<ul id="book_contributors">
 <li><a href="http://mikewesthad.com">Michael Hadley</a></li>
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="https://github.com/ofZach">ofZach</a></li>
@@ -314,7 +314,7 @@
 </ul>
 
 <p>The following people have contributed to the ofxaddons site:</p>
-<ul>
+<ul id="addons_contributors">
 <li><a href="http://www.virtualjames.com">James Hughes</a></li>
 <li><a href="http://jamesgeorge.org">James George</a></li>
 <li><a href="http://kikko.fr">Cyril Diagne</a></li>
@@ -338,5 +338,4 @@
 <li><a href="http://www.roxlu.com/">Diederick Huijbers</a> (roxlu) as tutorial leader</li>
 <li><a href="http://www.jeffcrouse.info/">Jeff Crouse</a> (jefftimesten) as tutorial leader</li>
 <li><a href="http://genekogan.com/">Gene Kogan</a> (genekogan) as addons curator at ofxaddons.com</li>
-<li><a href="http://schoolofma.org/">Rachel Uwa</a> ofbook project coordination</li>
 </ul>
