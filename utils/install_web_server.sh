@@ -2,10 +2,23 @@
 sudo apt-get install vim git libjpeg-dev bash-completion libxml2-dev libxslt1-dev zlib1g-dev nginx php5-common php5-cli php5-fpm ntp
 
 # nginx config
+debian_version=$(cat /etc/debian_version | sed s/\([0-9]+\)\.?[0-9]*/\1/)
 sudo cp nginx.conf /etc/nginx/sites-available/default
 sudo sed "s/;cgi.fix_pathinfo = 1;/cgi.fix_pathinfo = 0;/g" /etc/php5/fpm/php.ini
 sudo service php5-fpm restart
 sudo service nginx restart
+if [ $debian_version -eq 8 ]; then
+        sudo echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
+        sudo certbot certonly --webroot -w /home/ofadmin/openframeworks.cc -d openframeworks.cc -d openframeworks.cc
+elif [ $debian_version -eq 9]; then
+        sudo echo "deb http://ftp.debian.org/debian stretch-backports main" >> /etc/apt/sources.list
+        sudo apt-get install python-certbot-nginx -t stretch-backports
+        sudo certbot --authenticator webroot --installer nginx
+else
+	echo "This version of debian is not supported yet, review the letsencrypt method at https://certbot.eff.org/ and fix this script"
+	exit 1
+fi
+
 
 # Install ofSite
 cd ~
