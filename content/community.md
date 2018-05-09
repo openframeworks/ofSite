@@ -25,26 +25,26 @@
 </ul>
 
 <h2>Code of conduct</h2>
-<p>One of the goals of openFrameworks is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, socioeconomic status, age, level of experience, personal appearance, ethnicity, religion or philosophy.</p>
+<p>One of the goals of openFrameworks is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds po를ssible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, socioeconomic status, age, level of experience, personal appearance, ethnicity, religion or philosophy.</p>
 
-<p>As the openFrameworks community, we pledge to respect both old and new members who post on the forum, chat on IRC, post on mailing lists, report issues, post feature requests, submit pull requests or patches, update documentation, participate in meetups and workshops, or are involved in any way with openFrameworks.
+<p>As the openFrameworks community, we pledge to respect both old and new members who post on the forum, chat on IRC, post on mailing lists, report issues, post feature requests, submit pull requests or patches, update documentation, participate in meetups and workshops, or are involved in any way with openFrameworks.</p>
 
-<p>Examples of unacceptable behavior include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, exclusion, or other disrespectful conduct. We promise each other to:
+<p>Examples of unacceptable behavior include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, exclusion, or other disrespectful conduct. We promise each other to:</p>
 
 <ul>
-<li>Participate in an authentic and active way. In doing so, we contribute to the health and longevity of this community.</li>
-<li>Exercise consideration and respect in our speech and actions.</li>
-<li>Attempt collaboration before conflict.</li>
-<li>Be mindful of other community members.</li>
+	<li>Participate in an authentic and active way. In doing so, we contribute to the health and longevity of this community.</li>
+	<li>Exercise consideration and respect in our speech and actions.</li>
+	<li>Attempt collaboration before conflict.</li>
+	<li>Be mindful of other community members.</li>
 </ul>
 
-<p>Alert <a href="mailto:of@openframeworks.cc">the core</a> if you notice a dangerous situation, someone in distress, or violations of this Code of Conduct, even if they seem inconsequential. We'll treat reports as anonymous submissions, and do our best to work with everyone in private to resolve the conflict.
+<p>Alert <a href="mailto:of@openframeworks.cc">the core</a> if you notice a dangerous situation, someone in distress, or violations of this Code of Conduct, even if they seem inconsequential. We'll treat reports as anonymous submissions, and do our best to work with everyone in private to resolve the conflict.</p>
 
-<p>Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct. Contributors who do not follow the Code of Conduct will be removed from the project team.
+<p>Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct. Contributors who do not follow the Code of Conduct will be removed from the project team.</p>
 
-<p>This code of conduct applies both within project spaces and in public spaces when an individual is representing the openFrameworks community.
+<p>This code of conduct applies both within project spaces and in public spaces when an individual is representing the openFrameworks community.</p>
 
-<p><em>This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org) and the [Berlin Code of Conduct](http://berlincodeofconduct.org/)</em></p>
+<p><em>This Code of Conduct is adapted from the <a href="http://contributor-covenant.org" target="blank">Contributor Covenant</a> and the <a href="http://berlincodeofconduct.org/" target="blank">Berlin Code of Conduct</a></em></p>
 
 </div>
 
@@ -82,10 +82,10 @@
 </ul>
 
 <h3>Meet</h3>
-	<p>Get together with other community members to learn, share and be inspired.</p>
-	<ul>
+<p>Get together with other community members to learn, share and be inspired.</p>
+<ul>
 	<li><a href="https://forum.openframeworks.cc/c/events">Events Forum</a></li>
-	</ul>
+</ul>
 </div>
 </div>
 
