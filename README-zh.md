@@ -2,12 +2,6 @@
 
 这个仓库是[openFrameworks](http://openFrameworks.cc/)网站的源代码和内容源文件。
 
-支持的语言有：
-
-- 英文(English) : [readme.md](readme.md)
-- 日本语(日本語) : [readme.ja.md](readme.ja.md)
-- 韩国语(韩国語) : [readme.ko.md](readme.ko.md)
-
 ## 贡献你的一份力量
 
 修改网站内容原文件时需要先fork到你的github里面，然后在你的github里面将修改的内容通过pull request提交。

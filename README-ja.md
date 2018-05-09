@@ -2,12 +2,6 @@
 
 このリポジトリは、[openFrameworks](http://openFrameworks.cc/)のWebサイトのコンテンツと、サイトを生成するコードを保持しています。
 
-他の言語でこの文書を閲覧するには、下記のリンクを参照してください
-
-- 英語 : [readme.md](readme.md)
-- 韓国語 (한국어) : [readme.ko.md](readme.ko.md)
-- 中国語 (簡體中文) : [readme.zh_cn.md](readme.zh_cn.md)
-
 ## 貢献
 
 Webページやドキュメントの修正に協力するには、このリポジトリをforkして、githubのシステムから直接送信してください。
