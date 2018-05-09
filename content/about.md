@@ -95,9 +95,9 @@ If you are not yet a part of the group, welcome!
 faq
 ----------------
 
-**Why create another library for C++, since many libraries exist?**
+**Why create another library for C++, when many libraries exist?**
 
-There are plenty of libraries that exist make it easier to make software, especially with OpenGL. For example, ogre, irrlicht, JUCE, SDL, wxWidgets, etc.
+There are plenty of libraries that make it easier to make software, especially with OpenGL. For example, ogre, irrlicht, JUCE, SDL, wxWidgets, etc.
 
 Originally, openFrameworks was meant to provide a "bare-bones" alternative. We wanted to write a library that would be the bare minimum necessary to get started doing audio-visual work with C++.
 
