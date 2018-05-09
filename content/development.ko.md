@@ -28,10 +28,10 @@
 <p><a href="https://docs.google.com/document/d/1GjgjQZCHTcOD3cT9OFSl0AZ1nhfYwwvxTl5L4OJE6qA/edit?usp=sharing">1.0 로드맵</a> - 가장 최근 개발 컨퍼런스에서 채택된 앞으로의 1.0 버전을 위한 개발 스타일 결정사항들</p>
 
 <hr>
-<h2 id="contributors">기여자들</h2>
-<p>오픈프레임웍스는 <a href="http://thesystemis.com/">Zach Lieberman</a>, <a href="http://muonics.net/">Theodore Watson</a>, and <a href="http://arturocastro.net/">Arturo Castro</a>에 의해 주도적으로 개발되었으며("핵심 부분"), <a href="../community/">오픈프레임웍스 커뮤니티</a>의 도움을 받았습니다. 오픈프레임웍스는 두개의 선지자의 은혜를 입었습니다: <a href="http://reas.com/">Casey Reas</a>와 <a href="http://benfry.com/">Ben Fry</a>, 그리고 프로세싱 커뮤니티에 의해 개발된 <a href="http://processing.org/">프로세싱 개발 환경</a>; 그리고 Ben Fry와 <a href="http://acg.media.mit.edu/">MIT Media Lab's Aesthetics and Computation Group</a>에 의해 개발된 privately distributed C++ library인 ACU Toolkit입니다. 이외에 많은 일반 공헌자들이 오픈프레임웍스에서 팀으로 함께 일하고 있습니다:
+<h2 id="contributors">공헌자들</h2>
+<p>오픈프레임웍스는 <a href="http://thesystemis.com/">Zach Lieberman</a>, <a href="http://muonics.net/">Theodore Watson</a>, <a href="http://arturocastro.net/">Arturo Castro</a>에 의해 주도적으로 개발되었으며("핵심 부분"), <a href="../community/">오픈프레임웍스 커뮤니티</a>의 도움을 받았습니다. 오픈프레임웍스는 <a href="http://reas.com/">Casey Reas</a>와 <a href="http://benfry.com/">Ben Fry</a>, 그리고 프로세싱 커뮤니티에 의해 개발된 <a href="http://processing.org/">프로세싱 개발 환경</a>과, Ben Fry와 <a href="http://acg.media.mit.edu/">MIT Media Lab's Aesthetics and Computation Group</a>에 의해 개발된 privately distributed C++ library인 ACU Toolkit, 이 두 중요한 선구자에게 빚을 지고 있습니다. 이외에 많은 일반 공헌자들이 오픈프레임웍스에서 팀으로 함께 일하고 있습니다:
 
-<p>다음은 오픈프레임웍스의 코어개발에 기여해주신 분들입니다 :</p>
+<p>다음은 오픈프레임웍스의 코어개발에 공헌해주신 분들입니다 :</p>
 <ul id="core_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://christopherbaker.net">Christopher Baker</a></li>
@@ -136,7 +136,7 @@
 </ul>
 
 
-<p>다음은 오픈프레임웍스 웹사이트와 도큐먼트 제작에 기여해주신 분들입니다 :</p>
+<p>다음은 오픈프레임웍스 웹사이트와 도큐먼트 제작에 공헌해주신 분들입니다 :</p>
 <ul id="site_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://icq4ever.net/">Yi donghoon</a></li>
@@ -240,12 +240,12 @@
 <li><a href="http://yongbakos.com">Yong Joseph Bakos</a></li>
 </ul>
 
-<p>The Korean version of this site is maintained by <a href="http://icq4ever.net/">Yi donghoon</a></p>
-<p>The Japanese version of this site is maintained by <a href="http://yoppa.org/">Atsushi Tadokoro</a></p>
-<p>The Chinese version of this site was started by <a href="https://github.com/craftweak">Yeh TingHao</a></p>
+<p>이 사이트의 한국어 버전은 <a href="http://icq4ever.net/">Yi donghoon</a>에 의해 관리되고 있습니다.</p>
+<p>이 사이트의 일본어 버전은 <a href="http://yoppa.org/">Atsushi Tadokoro</a에 의해 관리되고 있습니다.></p>
+<p>이 사이트의 중국어 버전은 <a href="https://github.com/craftweak">Yeh TingHao</a에 의해 관리되고 있습니다.></p>
 
 
-<p>다음은 오픈프레임웍스 ofBook 프로젝트에 기여해주신 분들입니다 :</p>
+<p>다음은 오픈프레임웍스 ofBook 프로젝트에 공헌해주신 분들입니다 :</p>
 <ul id="book_contributors">
 <li><a href="http://mikewesthad.com">Michael Hadley</a></li>
 <li><a href="http://arturocastro.net">arturo</a></li>
@@ -317,7 +317,7 @@
 <li><a href="http://patriciogonzalezvivo.com">Patricio Gonzalez Vivo</a></li>
 </ul>
 
-<p>다음은 오픈프레임웍스 ofaddons 사이트 제작에 기여해 주신 분들입니다 :</p>
+<p>다음은 오픈프레임웍스 ofaddons 사이트 제작에 공헌해 주신 분들입니다 :</p>
 <ul id="addons_contributors">
 <li><a href="http://www.virtualjames.com">James Hughes</a></li>
 <li><a href="http://jamesgeorge.org">James George</a></li>
@@ -332,7 +332,7 @@
 </ul>
 
 
-<p>The following people have contributed to apothecary the tool we use to maintain external dependencies:</p>
+<p>다음은 외부 의존성패키지들을 관리하기 위해 사용하는 도구인 apothecary에 공헌해주신 분들입니다 :</p>
 <ul id="apothecary_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://poniesandlight.co.uk">Tim Gfrerer</a></li>
@@ -352,7 +352,7 @@
 <li><a href="http://www.kimchiandchips.com">Elliot Woods</a></li>
 </ul>
 
-<p>The following people have contributed to the project generator:</p>
+<p>다음은 프로젝트 생성기에 공헌해주신 분들입니다 :</p>
 <ul id="pg_contributors">
 <li><a href="http://arturocastro.net">arturo</a></li>
 <li><a href="http://www.daandelange.com/">Daan de Lange</a></li>
@@ -387,11 +387,11 @@
 
 <p>다음은 코드 이외의 분야에서 과거에 기여해주신 분들입니다 :</p>
 <ul>
-<li><a href="https://github.com/caitlinmorris">Caitlin Morris</a> (caitlinmorris) as community management and outreach</a></li>
-<li><a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald) for community management</li>
-<li><a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi) for community management and GitHub leadership</li>
-<li><a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave) as forum leader</li>
-<li><a href="http://www.roxlu.com/">Diederick Huijbers</a> (roxlu) as tutorial leader</li>
-<li><a href="http://www.jeffcrouse.info/">Jeff Crouse</a> (jefftimesten) as tutorial leader</li>
-<li><a href="http://genekogan.com/">Gene Kogan</a> (genekogan) as addons curator at ofxaddons.com</li>
+<li><a href="https://github.com/caitlinmorris">Caitlin Morris</a> (caitlinmorris) - 커뮤니티의 관리와 지원</a></li>
+<li><a href="https://github.com/kylemcdonald">Kyle McDonald</a> (kylemcdonald) - 커뮤티티의 관리</li>
+<li><a href="https://github.com/bilderbuchi">Christoph Buchner</a> (bilderbuchi) - 커뮤니티의 관리 및 GitHub 리더십</li>
+<li><a href="https://github.com/jvcleave">Jason Van Cleave</a> (jvcleave) - 포럼 리더</li>
+<li><a href="http://www.roxlu.com/">Diederick Huijbers</a> (roxlu) - 튜토리얼 리더</li>
+<li><a href="http://www.jeffcrouse.info/">Jeff Crouse</a> (jefftimesten) - 튜토리얼 리더</li>
+<li><a href="http://genekogan.com/">Gene Kogan</a> (genekogan) - ofxaddons.com에서의 애드온 큐레이터</li>
 </ul>
