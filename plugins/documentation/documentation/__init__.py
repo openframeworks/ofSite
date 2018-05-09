@@ -276,6 +276,7 @@ class DocsTask(Task):
             env = {
                 "modulename": clazz.name,
                 "clazz": clazz,
+                "site_url": self.site.config["SITE_URL"],
                 "functions": functions_file,
                 "classes_list": classes,
                 "is_addon": (clazz.module in addons)
@@ -349,6 +350,7 @@ class DocsTask(Task):
             env = {
                 "modulename": functions_file.name,
                 "clazz": None,
+                "site_url": self.site.config["SITE_URL"],
                 "functions": functions_file,
                 "is_addon": (functions_file.module in addons)
             }
@@ -395,6 +397,7 @@ class DocsTask(Task):
                         module_intro_content = markdown(module_intro_content, md_extensions)
                         for lang in self.kw['translations']:
                             context = {}
+                            context["site_url"] = self.site.config["SITE_URL"]
                             context["lang"] = lang
                             context["title"] = module
                             context["module"] = module
@@ -440,6 +443,7 @@ class DocsTask(Task):
             docs_intro = markdown(docs_intro, md_extensions)
             context = {}
             context["lang"] = lang
+            context["site_url"] = self.site.config["SITE_URL"]
             context["title"] = "documentation"
             context["docs_intro"] = docs_intro
             context['core'] = core_index
@@ -460,6 +464,7 @@ class DocsTask(Task):
             'translations': self.site.config['TRANSLATIONS'],
             'global_context': self.site.GLOBAL_CONTEXT,
             'tzinfo': self.site.tzinfo,
+            "site_url": self.site.config["SITE_URL"],
         }
         template_name = "documentation.mako"
         template_dep = self.site.template_system.template_deps(template_name)
