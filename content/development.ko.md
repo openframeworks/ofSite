@@ -241,8 +241,8 @@
 </ul>
 
 <p>이 사이트의 한국어 버전은 <a href="http://icq4ever.net/">Yi donghoon</a>에 의해 관리되고 있습니다.</p>
-<p>이 사이트의 일본어 버전은 <a href="http://yoppa.org/">Atsushi Tadokoro</a>에 의해 관리되고 있습니다.></p>
-<p>이 사이트의 중국어 버전은 <a href="https://github.com/craftweak">Yeh TingHao</a>에 의해 관리되고 있습니다.></p>
+<p>이 사이트의 일본어 버전은 <a href="http://yoppa.org/">Atsushi Tadokoro</a>에 의해 관리되고 있습니다.</p>
+<p>이 사이트의 중국어 버전은 <a href="https://github.com/craftweak">Yeh TingHao</a>에 의해 관리되고 있습니다.</p>
 
 
 <p>다음은 오픈프레임웍스 ofBook 프로젝트에 공헌해주신 분들입니다 :</p>
