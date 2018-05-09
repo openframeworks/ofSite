@@ -241,8 +241,8 @@
 </ul>
 
 <p>이 사이트의 한국어 버전은 <a href="http://icq4ever.net/">Yi donghoon</a>에 의해 관리되고 있습니다.</p>
-<p>이 사이트의 일본어 버전은 <a href="http://yoppa.org/">Atsushi Tadokoro</a에 의해 관리되고 있습니다.></p>
-<p>이 사이트의 중국어 버전은 <a href="https://github.com/craftweak">Yeh TingHao</a에 의해 관리되고 있습니다.></p>
+<p>이 사이트의 일본어 버전은 <a href="http://yoppa.org/">Atsushi Tadokoro</a>에 의해 관리되고 있습니다.></p>
+<p>이 사이트의 중국어 버전은 <a href="https://github.com/craftweak">Yeh TingHao</a>에 의해 관리되고 있습니다.></p>
 
 
 <p>다음은 오픈프레임웍스 ofBook 프로젝트에 공헌해주신 분들입니다 :</p>
@@ -383,7 +383,7 @@
 <li><a href="https://github.com/bilderbuchi">Christoph Buchner</a></li>
 </ul>
 
-<p>위의 기여자 리스트는 코드저장소에서 자동으로 생성되었습니다. 혹시 프로젝트에 어떠한 방법이라도 공헌했음에도 위의 리스트에서 이름을 찾을 수 없다면, 저희에게 알려주시기 바랍니다. 이름을 추가해드리도록 하겠습니다.</p>
+<p>위의 공헌자 리스트는 코드저장소에서 자동으로 생성되었습니다. 혹시 프로젝트에 어떠한 방법이라도 공헌했음에도 위의 리스트에서 이름을 찾을 수 없다면, 저희에게 알려주시기 바랍니다. 이름을 추가해드리도록 하겠습니다.</p>헌
 
 <p>다음은 코드 이외의 분야에서 과거에 기여해주신 분들입니다 :</p>
 <ul>
