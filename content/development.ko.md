@@ -240,6 +240,10 @@
 <li><a href="http://yongbakos.com">Yong Joseph Bakos</a></li>
 </ul>
 
+<p>The Korean version of this site is maintained by <a href="http://icq4ever.net/">Yi donghoon</a></p>
+<p>The Japanese version of this site is maintained by <a href="http://yoppa.org/">Atsushi Tadokoro</a></p>
+<p>The Chinese version of this site was started by <a href="https://github.com/craftweak">Yeh TingHao</a></p>
+
 
 <p>다음은 오픈프레임웍스 ofBook 프로젝트에 기여해주신 분들입니다 :</p>
 <ul id="book_contributors">
@@ -325,6 +329,58 @@
 <li><a href="http://davideprati.com">Davide Prati</a></li>
 <li><a href="http://www.dwellable.com">James Hughes</a></li>
 <li><a href="https://github.com/lmccart">Lauren McCarthy</a></li>
+</ul>
+
+
+<p>The following people have contributed to apothecary the tool we use to maintain external dependencies:</p>
+<ul id="apothecary_contributors">
+<li><a href="http://arturocastro.net">arturo</a></li>
+<li><a href="http://poniesandlight.co.uk">Tim Gfrerer</a></li>
+<li><a href="http://halfdanj.dk">Jonas Jongejan</a></li>
+<li><a href="https://colombaro.fr">Léo Colombaro</a></li>
+<li><a href="http://danomatika.com">Dan Wilcox</a></li>
+<li><a href="http://christopherbaker.net">Christopher Baker</a></li>
+<li><a href="http://www.danoli3.com">Daniel Rosser</a></li>
+<li><a href="http://makeitdoathing.com">Dan Moore</a></li>
+<li><a href="https://github.com/ofTheo">Theodore Watson</a></li>
+<li><a href="https://github.com/oxillo">Olivier XILLO</a></li>
+<li><a href="https://github.com/expokorea">expokorea</a></li>
+<li><a href="https://github.com/pizthewiz">pizthewiz</a></li>
+<li><a href="https://github.com/johnkingsley">John Kingsley</a></li>
+<li><a href="https://hamoid.com">Abe Pazos</a></li>
+<li><a href="http://antoine.villeret.free.fr">Antoine Villeret</a></li>
+<li><a href="http://www.kimchiandchips.com">Elliot Woods</a></li>
+</ul>
+
+<p>The following people have contributed to the project generator:</p>
+<ul id="pg_contributors">
+<li><a href="http://arturocastro.net">arturo</a></li>
+<li><a href="http://www.daandelange.com/">Daan de Lange</a></li>
+<li><a href="https://github.com/ofZach">ofZach</a></li>
+<li><a href="https://colombaro.fr">Léo Colombaro</a></li>
+<li><a href="http://halfdanj.dk">Jonas Jongejan</a></li>
+<li><a href="http://mattfelsen.com/">Matt Felsen</a></li>
+<li><a href="http://uri.cat">Oriol Ferrer Mesià</a></li>
+<li><a href="http://danomatika.com">Dan Wilcox</a></li>
+<li><a href="http://patriciogonzalezvivo.com">Patricio Gonzalez Vivo</a></li>
+<li><a href="http://www.danoli3.com">Daniel Rosser</a></li>
+<li><a href="http://poniesandlight.co.uk">Tim Gfrerer</a></li>
+<li><a href="https://github.com/Paul92">Paul92</a></li>
+<li><a href="http://kriss.cx/tom">Tom Butterworth</a></li>
+<li><a href="https://github.com/ofTheo">Theodore Watson</a></li>
+<li><a href="http://kylemcdonald.net/">Kyle McDonald</a></li>
+<li><a href="https://twitter.com/admsyn">Adam Carlucci</a></li>
+<li><a href="http://www.mazbox.com/">Marek Bereza</a></li>
+<li><a href="http://roymacdonald.github.io">Roy Macdonald</a></li>
+<li><a href="https://github.com/zepx">Choong Jun Jin</a></li>
+<li><a href="http://christopherbaker.net">Christopher Baker</a></li>
+<li><a href="http://www.gasparrey.com">Gaspar Rey</a></li>
+<li><a href="http://www.syedrezaali.com/">Reza Ali</a></li>
+<li><a href="https://robertxiao.ca">Robert Xiao</a></li>
+<li><a href="https://github.com/JobLeonard">Job van der Zwan</a></li>
+<li><a href="http://cv.nkbrown.us/">Nathan Brown</a></li>
+<li><a href="http://tobiasebsen.dk">Tobias Ebsen</a></li>
+<li><a href="https://github.com/bilderbuchi">Christoph Buchner</a></li>
 </ul>
 
 <p>위의 기여자 리스트는 코드저장소에서 자동으로 생성되었습니다. 혹시 프로젝트에 어떠한 방법이라도 공헌했음에도 위의 리스트에서 이름을 찾을 수 없다면, 저희에게 알려주시기 바랍니다. 이름을 추가해드리도록 하겠습니다.</p>
