@@ -40,7 +40,6 @@ At least, these model formats are supported:
 - OBJ
 - SMD
 - Collada
-- LWO
 - Ogre XML
 - partly LWS 
 
