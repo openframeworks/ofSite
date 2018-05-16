@@ -28,13 +28,13 @@ which explicitly creates a window that uses openGL 3.2.
 
 Also when creating multiple windows in one application you'll need to use the different window settings classes. 
 
-There's a base settings window that will work on any platform: [ofWindowSettings](ofWindowSettings.html) this allows to specify really basic settings like the size of the window or if we want a fullscreen application.
+There's a base settings window that will work on any platform: [ofWindowSettings](ofWindowSettings/) this allows to specify really basic settings like the size of the window or if we want a fullscreen application.
 
-Then there's an specific GL window settings class for openGL based applications (almost everyone except for windowless apps right now), [ofGLWindowSettings](ofGLWindowSettings.html) for plain openGL and [ofGLESWindowSettings](ofGLESWindowSettings.html) for openGL ES, the flavour of openGL used in mobiles or linux arm boards like the rasperry.
+Then there's an specific GL window settings class for openGL based applications (almost everyone except for windowless apps right now), [ofGLWindowSettings](ofGLWindowSettings/) for plain openGL and [ofGLESWindowSettings](ofGLESWindowSettings/) for openGL ES, the flavour of openGL used in mobiles or linux arm boards like the rasperry.
 
-In the desktop since GLFW is the default windowing system, you can use [ofGLFWWindowSettings](ofGLFWWindowSettings.html) which allows to specify settings more specific to a desktop environment like if the window is iconified when the application starts, it's position in the desktop or the monitor in which it should appear.
+In the desktop since GLFW is the default windowing system, you can use [ofGLFWWindowSettings](ofGLFWWindowSettings/) which allows to specify settings more specific to a desktop environment like if the window is iconified when the application starts, it's position in the desktop or the monitor in which it should appear.
 
-All these settings classes are used in the same way, you create an instance, set it's fields and pass it to [ofCreateWindow](ofAppRunner.html#ofCreateWindow) which creates a window, you can hold that window on a variable like:
+All these settings classes are used in the same way, you create an instance, set it's fields and pass it to [ofCreateWindow](ofAppRunner/#ofCreateWindow) which creates a window, you can hold that window on a variable like:
 
 ```cpp
 auto window = ofCreateWindow(settings);
