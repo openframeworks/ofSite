@@ -674,10 +674,9 @@ Initializes either the default capture device or the capture device specified by
 myGrabber.setVerbose(true);
 myGrabber.setDeviceID(1);
 myGrabber.initGrabber(320,240);
-int grabW = myGrabber.width;
-int grabH = myGrabber.height;
-printf("asked for 320 by 240 - actual size is %i by %i 
-", grabW, grabH);
+int grabW = myGrabber.getWidth();
+int grabH = myGrabber.getHeight();
+printf("asked for 320 by 240 - actual size is %i by %i", grabW, grabH);
 ~~~~
 
 
