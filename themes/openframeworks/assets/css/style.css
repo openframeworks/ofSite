@@ -1602,15 +1602,15 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 }
 
 /* The Close Button */
-.close {
+.close-btn {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close-btn:hover,
+.close-btn:focus {
     color: #A617CE;
     text-decoration: none;
     cursor: pointer;
