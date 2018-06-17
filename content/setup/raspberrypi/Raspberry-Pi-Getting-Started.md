@@ -5,13 +5,13 @@ Getting your Raspberry Pi ready for openFrameworks
 ============
 
 
-## Install Raspbian "Jessie"
+## Install Raspbian "Stretch"
 0. Install the latest _**Raspbian** (Debian Stretch)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
 1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card
 
 
 ## Configure the Raspberry Pi
-This guide assumes you are starting from a fresh Raspian install and that you are able to connect to the Raspberry Pi and send it commands.
+This guide assumes you are starting from a fresh Raspbian install and that you are able to connect to the Raspberry Pi and send it commands.
 
 If you're installing Raspbian via NOOBS, SSH access is disabled by default since the 2016-11-25 release, which makes setup in headless mode difficult. If you don't have access to a keyboard and monitor and plan to set up from scratch in the headless mode, make sure you follow [this guide and add the ssh file onto the boot partition](https://www.raspberrypi.org/documentation/remote-access/ssh/).
 
