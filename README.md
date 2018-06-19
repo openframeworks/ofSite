@@ -56,7 +56,7 @@ The documentation portion of the site is written in Markdown, a wiki-style synta
 
 The easiest way to check the syntax is having a look at the many pages already on the site, but here are some useful tips:
 
-To insert code snippets use four tildes followed by curly braces with ".cpp" inside, and ending with four tildes:
+To insert code snippets use three tildes followed by curly braces with ".cpp" inside, and ending with three tildes:
 
 	```cpp
 	for(int i = 0; i < 16; i++) {
