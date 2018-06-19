@@ -5,25 +5,27 @@ Getting your Raspberry Pi ready for openFrameworks
 ============
 
 
-## Install Raspbian "Jessie"
-0. Install the latest _**Raspbian** (Debian Jessie)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
+## Install Raspbian "Stretch"
+0. Install the latest _**Raspbian** (Debian Stretch)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
 1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card
 
 
 ## Configure the Raspberry Pi
-This guide assumes you are starting from a fresh Raspian install and that you are able to connect to the Raspberry Pi and send it commands.
+This guide assumes you are starting from a fresh Raspbian install and that you are able to connect to the Raspberry Pi and send it commands.
+
+If you're installing Raspbian via NOOBS, SSH access is disabled by default since the 2016-11-25 release, which makes setup in headless mode difficult. If you don't have access to a keyboard and monitor and plan to set up from scratch in the headless mode, make sure you follow [this guide and add the ssh file onto the boot partition](https://www.raspberrypi.org/documentation/remote-access/ssh/).
 
 You can enter commands on the Pi by:
 
 0. SSH into the Pi from a different computer
 0. Attach a keyboard and monitor to the Pi.
-	* With Jessie the Raspberry Pi now boots the X11 window system by default, open up LXTerminal from the shortcut on the Raspberry Pi Desktop
+	* With Stretch the Raspberry Pi now boots the X11 window system by default, open up LXTerminal from the shortcut on the Raspberry Pi Desktop
 	* Type in the command `sudo raspi-config`
 
 _We need to make sure the CPU has 192MB of RAM in order to compile openFrameworks. Once you have compiled openFrameworks you may want to repeat this step with 128_
 
 0.  Select `1 Expand Filesystem` and hit Enter
-0.  Select `8 Advanced Options` and hit Enter
+0.  Select `7 Advanced Options` and hit Enter
 	* Select `A3 Memory Split` and hit Enter
 	* Type `64` and Hit `<ok>`
 
@@ -32,7 +34,13 @@ openFrameworks does not use the X11 Desktop for running OF applications. You can
 0. Select `3 Boot Options`
 0. Select `B1 Console` or `B2 Console Autologin`
 
-Unlike Wheezy, Debian Jessie does not display the IP address on boot. You may wish to get the current IP by typing `ifconfig`. The IP address is under the eth0 entry for wired ethernet. This can possibly change on reboot.
+openFrameworks also needs to use the legacy GL driver instead of the hardware accelerated KMS drivers.
+
+0. Select `7 Advanced Options` and hit Enter
+	* Select `G3 Legacy` and hit Enter
+	* The prompt will show `The GL driver is disabled`. Hit Ok.
+
+Unlike Wheezy, Debian Jessie onwards does not display the IP address on boot. You may wish to get the current IP by typing `ifconfig`. The IP address is under the eth0 entry for wired ethernet. This can possibly change on reboot.
 
 0. Reboot when prompted or type `sudo reboot`
 0. Assuming you have internet access run these commands to update the software to the latest packages.
@@ -51,16 +59,17 @@ You now can download openFrameworks and uncompress it into a folder. Using a She
 
 ```sh
 cd
-wget https://openframeworks.cc/versions/v0.9.8/of_v0.9.8_linuxarmv6l_release.tar.gz
+wget https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_linuxarmv6l_release.tar.gz
 mkdir openFrameworks
-tar vxfz of_v0.9.8_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
+tar vxfz of_v0.10.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
 ```
 
 
 ## Install packages and compile openFrameworks:
  Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.
 
-The time for these steps will depend on whether you are on a RPI1 or RPI2 and the speed of the Raspbian mirrors to download the packages.
+The time for these steps will depend on whether you are on a RPI1, RPI2 or RPI3 and the speed of the Raspbian mirrors to download the packages.
+
 Assuming openFrameworks is located at `/home/pi/openFrameworks` run the following commands to install the necessary packages and compile openFrameworks.
 
 ```sh
@@ -119,5 +128,3 @@ make run
 It is critical to keep your application directory 3 levels below the openFrameworks directory.
 
 Have fun! :)
-
-
