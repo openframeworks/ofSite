@@ -21,7 +21,7 @@
 openFrameworks is designed to work as a general purpose glue, and wraps together several commonly used libraries, including:
 
 * [OpenGL](http://www.opengl.org/), [GLEW](http://glew.sourceforge.net/), [GLUT](http://www.opengl.org/resources/libraries/glut/), [libtess2](https://code.google.com/p/libtess2/) and [cairo](http://cairographics.org/) for graphics
-* [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/), [OpenAL](http://http://connect.creativelabs.com/openal) and [Kiss FFT](http://kissfft.sourceforge.net/) or [FMOD](http://www.fmod.org/) for audio input, output and analysis
+* [rtAudio](http://www.music.mcgill.ca/~gary/rtaudio/), [PortAudio](http://www.portaudio.com/), [OpenAL](https://www.openal.org/) and [Kiss FFT](http://kissfft.sourceforge.net/) or [FMOD](http://www.fmod.org/) for audio input, output and analysis
 * [FreeType](http://freetype.sourceforge.net/index2.html) for fonts
 * [FreeImage](http://freeimage.sourceforge.net/) for image saving and loading
 * [Quicktime](http://developer.apple.com/quicktime/), [GStreamer](http://gstreamer.freedesktop.org/) and [videoInput](https://github.com/ofTheo/videoInput) for video playback and grabbing
@@ -111,7 +111,7 @@ For example, we chose GLUT as the windowing library. Primarily, because it's fai
 
 **Where can I see the latest version of openFrameworks?**
 
-The most recent release is available from the [downloads](../downloads) page, which is also available on [github](https://github.com/openframeworks/openFrameworks/). The absolutely most recent version of openFrameworks is located in the [develop branch](https://github.com/openframeworks/openFrameworks/tree/develop). For more information about building OF from Github, see the [readme](https://github.com/openframeworks/openFrameworks/blob/master/readme.txt). For more information about contributing to Github, see [this document](https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow).
+The most recent release is available from the [downloads](../downloads) page, which is also available on [github](https://github.com/openframeworks/openFrameworks/). The absolutely most recent version of openFrameworks is located in the [master branch](https://github.com/openframeworks/openFrameworks/tree/master). For more information about building OF from Github, see the [readme](https://github.com/openframeworks/openFrameworks/blob/master/INSTALL_FROM_GITHUB.md). For more information about contributing to Github, see [this document](https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow).
 
 **How can I help?**
 
@@ -147,7 +147,7 @@ We don't really expect that openFrameworks should be used as a teaching tool for
 [9]: http://www.cplusplus.com/doc/tutorial/
 [10]: http://www.cplusplus.com/reference/
 [11]: http://stackoverflow.com/
-[12]: http://www.4p8.com/eric.brasseur/cppcen.html
+[12]: http://www.ericbrasseur.org/cppcen.html
 [13]: http://cprogramming.com/
 [14]: http://yosefk.com/C++fqa/
 [15]: http://www.cppreference.com/wiki/
