@@ -4,9 +4,7 @@
 .. type: howto
 ---
 
-*Note!*: This page is useful only if you are working with the current master branch. You can skip this information if you are working with the version 0.9.3 that you have downloaded from this website.
-
-The next version of openFrameworks will replace the internal math library with [GLM](http://glm.g-truc.net). GLM is a solid C++ library used for all the math operations needed when doing vectors and matrices operations. The use of this library implies some change in the syntax used to declare vectors and to execute vector's operation. The legacy mode is still supported, but the new mode, enabled by default, uses the new glm syntax.
+The new version of openFrameworks replaces the internal math library with [GLM](http://glm.g-truc.net). GLM is a solid C++ library used for all the math operations needed when doing vectors and matrices operations. The use of this library implies some change in the syntax used to declare vectors and to execute vector's operation. The legacy mode is still supported, but the new mode, enabled by default, uses the new glm syntax.
 
 If you are not interested using this library and you want to continue using the syntax you were used to, or if you want to run an old project using the last openFrameworks master branch, you can define the OF_USE_LEGACY_MESH constant in ofConstants.h.
 Doing this, glm will be disabled for ofPolyline and ofMesh.
