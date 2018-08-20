@@ -83,7 +83,7 @@ Won't work anymore, you need to do now:
 glm::vec3 v3 = glm::vec3(v2, 0.f);
 ```
 
-Or in the oposite case:
+Or in the opposite case:
 
 ```
 glm::vec3 v3(2.f, 2.f, 2.f);
@@ -114,7 +114,7 @@ ofVec3 v;
 ofVec3f projected = v * model * view * projection;
 ```
 
-with glm as in glsl the multiplication order is the oposite so now you would do:
+with glm as in glsl the multiplication order is the opposite so now you would do:
 
 ```
 glm::vec3 v;
