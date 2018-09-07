@@ -58,7 +58,7 @@ Example:
 		fingerMovie.draw(0, 0, 400, 300);
 	}
 	
-If you get the following Error:
+If you are on Windows and get the following Error:
 
 “Error occured while playing or pausing or opening the file”
 
