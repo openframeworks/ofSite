@@ -31,7 +31,7 @@ With this you can already go into any of the examples folders and compile the ex
 ```sh
 cd OF/examples/graphics/polygonExample
 make
-make Run
+make run
 ```
 
 Or use the officially supported IDE: [qtcreator](../qtcreator/) which has plugins that allow to create new projects, import existing ones, add addons to them. Eclipse is no longer officially supported. 
