@@ -34,7 +34,7 @@ make
 make Run
 ```
 
-Or use any of the officially supported IDEs: [qtcreator](../qtcreator/) or [eclipse](../eclipse/) both IDEs have plugins that allow to create new projects, import existing ones, add addons to them.
+Or use the officially supported IDE: [qtcreator](../qtcreator/) which has plugins that allow to create new projects, import existing ones, add addons to them. Eclipse is no longer officially supported. 
 
 If you want to install the project generator, a tool that allows to create and update an OF project, you'll need to run one last script:
 
