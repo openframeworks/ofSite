@@ -25,20 +25,20 @@ Installation
 
 <h3>Install Android Studio and the SDK</h3>
 
-Download and install Android Studio from [https://tools.android.com/download/studio/stable]() (you need Android Studio 1.0 or higher). It should come with (or automatically install) a recent SDK, though you can customize the SDK version later from within Android Studio using **Tools ➞ Android ➞ SDK Manager**.
+Download and install Android Studio from [https://tools.android.com/download/studio/stable](https://tools.android.com/download/studio/stable) (you need Android Studio 1.0 or higher). It should come with (or automatically install) a recent SDK, though you can customize the SDK version later from within Android Studio using **Tools ➞ Android ➞ SDK Manager**.
 
-In the event that Android Studio does not come with an SDK, you can install it from <https://developer.android.com/sdk/index.html> (under "Get the SDK for an existing IDE").
+In the event that Android Studio does not come with an SDK, you can install it from [https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html) (under "Get the SDK for an existing IDE").
 
 <h3>Install the Android NDK</h3>
 
 This is the C/C++ compiler, headers and libraries for Android. OF 0.10.0 has been tested with the NDK version r15c, newer versions might work but it's not guaranteed.
 
-<https://developer.android.com/ndk/downloads/older_releases>
+[https://developer.android.com/ndk/downloads/older_releases](https://developer.android.com/ndk/downloads/older_releases)
 
-- OS X: <https://dl.google.com/android/repository/android-ndk-r15c-darwin-x86_64.zip>
-- Linux 64: <https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip>
-- Windows 32: <https://dl.google.com/android/repository/android-ndk-r15c-windows-x86.zip>
-- Windows 64: <https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip>
+- OS X: [https://dl.google.com/android/repository/android-ndk-r15c-darwin-x86_64.zip](https://dl.google.com/android/repository/android-ndk-r15c-darwin-x86_64.zip)
+- Linux 64: [https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip](https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip)
+- Windows 32: [https://dl.google.com/android/repository/android-ndk-r15c-windows-x86.zip](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86.zip)
+- Windows 64: [https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip)
 
 <h3>Download openFrameworks</h3>
 
