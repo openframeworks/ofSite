@@ -12,8 +12,12 @@ Setting up openFrameworks with Android Studio is fairly straightforward. The bas
 - Install Android Studio and the Android SDK
 - Install the Android NDK (actually tested version is r15c)
 - Download openFrameworks from the download page or from git
-- Set the path to the NDK in local.properties (`ndk.dir`)
-- In Android Studio, use **File ➞ Open Project** and select an openFrameworks example from the examples/android folder
+- If you got openFrameworks from git: 
+	- Run `scripts/android/download_libs.sh` to download libraries.
+	- Use the Project Generator to generate Android Studio project files for android examples.
+- In Android Studio, use **Open an existing Android Studio project** and select an openFrameworks example from the `examples/android` folder.
+- It will ask you for NDK location, either put the path in `local.properties` or click *Project Structure* and select the NDK location.
+- Let Android Studio download all other dependencies missing automatically.
 - Build and run
 
 Installation
@@ -40,12 +44,6 @@ This is the C/C++ compiler, headers and libraries for Android. OF 0.10.0 has bee
 
 [Download](/download) it from the downloads page:
 
-
-<h3>Configure the NDK</h3>
-
-With a text editor, edit the file `libs/openFrameworksCompiled/project/android/paths.make` and set the NDK path to the correct folder:
-
-    NDK_ROOT=/path/to/the/ndk
 
 <h3>Open the project</h3>
 
