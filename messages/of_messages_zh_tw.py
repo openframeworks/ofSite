@@ -46,44 +46,44 @@ MESSAGES = {
 
     'linuxarm': 'openFrameworks for arm boards running linux like Raspberry Pi, Beaglebone (black), Pandaboard, BeagleBoard and others.<br/>We have setup guides for some of the most common boards but it should work on any armv6 and armv7 board.</br></br>',
 
-    'instructions': 'We release openFrameworks as an uncompiled library. This means that when you download and unzip openFrameworks, you will see the following folders: `addons/`, `apps/`, `libs/`, and a few more. These folders contain openFrameworks completely, so if you want to keep multiple versions of openFrameworks on your computer you should just create multiple folders. For example, one `of_v${currentVersion}_osx_release/` folder and one `of_v${olderVersion}_osx_release/` folder, each with their own `apps/` folder. Even when new versions of openFrameworks are released, your old apps will still compile with old versions of openFrameworks.<br/><br/>The examples folder is a great place to start. Inside examples you\'ll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and FFT analysis, video grabbing, movie playing, image loading and saving, event handling, serial communication, and much more.',
+    'instructions': 'We release openFrameworks as an uncompiled library. This means that when you download and unzip openFrameworks, you will see the following folders: \'addons/\', \'apps/\', \'libs/\', and a few more. These folders contain openFrameworks completely, so if you want to keep multiple versions of openFrameworks on your computer you should just create multiple folders. For example, one `of_v${currentVersion}_osx_release/` folder and one `of_v${olderVersion}_osx_release/` folder, each with their own `apps/` folder. Even when new versions of openFrameworks are released, your old apps will still compile with old versions of openFrameworks.<br/><br/>The examples folder is a great place to start. Inside examples you\'ll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and FFT analysis, video grabbing, movie playing, image loading and saving, event handling, serial communication, and much more.',
 
     'other_releases': '<h2>other releases</h2>    Older releases of openFrameworks are archived <a href="older/">here</a>. For the absolute latest version of openFrameworks, see the <a href="https://github.com/openframeworks/openFrameworks/">openFrameworks GitHub</a>. If you\'re interested in contributing to openFrameworks, you should fork the GitHub repository and follow the guidelines for the <a href="https://github.com/openframeworks/openFrameworks/wiki/openFrameworks-git-workflow">openFrameworks GitHub workflow</a>.',
 
-    'translation': '翻譯'
-    
+    'translation': '翻譯',
+
     'how-tos': '入門指南',
-    
+
     'a quick reference for common questions': '常見問題集',
-    
+
     'a collection of openFrameworks guides': 'openFrameworks指引集',
 
     'Contribute' : 'Contribute',
 
     'How to improve the documentation': 'How to improve the documentation',
-    
+
     'Getting Started!': '從這裡開始!',
-    
+
     'Download & set up openFrameworks': '下載與安裝openFramewroks',
-    
+
     'Explore the examples': '探索範例',
-    
+
     'Create a new project': '建立新專案',
-    
+
     'Check out the how-tos!': '查看一下入門指南!',
-    
+
     'External Resources': '額外資源',
-    
+
     'Code Liberation OF workshops': 'Code Liberation OF工作坊',
-    
+
     'OF video series': 'OF頻道',
-    
+
     'ofBook': 'ofBook',
-    
+
     '... and many more! (GitHub wiki)': '... 以及更多! (GitHub wiki)',
-    
+
     'back to all how-tos': '返回入門指南',
-    
+
     '(experimental)': '(experimental)',
 
 }
