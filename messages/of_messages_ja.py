@@ -34,7 +34,7 @@ MESSAGES = {
 
     'non_breaking': 'は最新のリリースです。これはマイナーバージョンです。様々な新機能や新しいインターフェイスが追加されています。 ですので、このバージョンは${majorVersion}やさらに新しいバージョンと完全に互換性があります。',
 
-    'please_see': 'バージョン間の違いの一覧は、<a href="https://raw.github.com/openframeworks/openFrameworks/${currentVersion}/CHANGELOG.md">changelog</a>を参照してください。',
+    'please_see': 'バージョン間の違いの一覧は、<a href="https://github.com/openframeworks/openFrameworks/blob/${currentVersion}/CHANGELOG.md">changelog</a>を参照してください。',
 
     'intro': 'openFrameworksを使用するためにはIDE(統合開発環境)が必要です。また、実際に試していくにはプラットフォームごとのセットアップガイドが必要となるでしょう。もしバグをみつけたら <a href="http://github.com/openframeworks/openFrameworks/issues">問題点</a> のページに投稿してください。その他質問があれば、<a href="http://forum.openframeworks.cc">フォーラム</a> に投稿してください。openFrameworksは、 <a href="../about/license/">MITライセンス</a> で配布されています。',
 

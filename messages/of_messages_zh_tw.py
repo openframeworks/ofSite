@@ -34,7 +34,7 @@ MESSAGES = {
 
     'non_breaking': '是最新發佈的版本。 這個版本是修改了一些BUG的小版本，與版本 ${majorVersion}100%相容而且與新版本也相容。',
 
-    'please_see': '查看 <a href="https://raw.github.com/openframeworks/openFrameworks/${currentVersion}/CHANGELOG.md">變化日誌</a>，看看與之前版本的變化',
+    'please_see': '查看 <a href="https://github.com/openframeworks/openFrameworks/blob/${currentVersion}/CHANGELOG.md">變化日誌</a>，看看與之前版本的變化',
 
     'intro': 'To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license/">MIT License</a>.',
 
