@@ -27,9 +27,9 @@ $(document).ready(function(){
 
 	    <h2>${currentVersion}</h2>
 	    % if breaking:
-	        <h3>${of.msg("breaking", locals())} ${of.msg("please_see", locals())}</h3>
+	        <h3>${of.msg("breaking", locals())}  ${of.msg("please_see", locals())}</h3>
 	    % else:
-	        <h3>${of.msg("non_breaking", locals())} ${of.msg("please_see", locals())}</h3>
+	        <h3>${of.msg("non_breaking", locals())}  ${of.msg("please_see", locals())}</h3>
 	    % endif
 	    <p>${of.msg("intro", locals())}</p>
     </div>
