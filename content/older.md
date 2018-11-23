@@ -8,7 +8,23 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
-**pre release v0.9.8**
+**release v0.10.0**
+
+windows: [msys2/qtcreator][232] | [visual studio 2015][233]
+
+mac [x-code (10.7-10.10)][234]
+
+linux: [makefiles/qtcreator][235] | [(64 bit) makefiles/qtcreator][236]
+
+iOS: [iOS][237]
+
+android: [Android][238]
+
+linux arm: [armv6][239] | [armv7][240]
+
+--------------------------------
+
+**release v0.9.8**
 
 windows: [msys2/qtcreator][223] | [visual studio 2015][224]
 
@@ -24,7 +40,7 @@ linux arm: [armv6][230] | [armv7][231]
 
 --------------------------------
 
-**pre release v0.9.7**
+**release v0.9.7**
 
 windows: [msys2/qtcreator][214] | [visual studio 2015][215]
 
@@ -40,7 +56,7 @@ linux arm: [armv6][221] | [armv7][222]
 
 --------------------------------
 
-**pre release v0.9.6**
+**release v0.9.6**
 
 windows: [msys2/qtcreator][205] | [visual studio 2015][206]
 
@@ -56,7 +72,7 @@ linux arm: [armv6][212] | [armv7][213]
 
 --------------------------------
 
-**pre release v0.9.5**
+**release v0.9.5**
 
 windows: [msys2/qtcreator][196] | [visual studio 2015][197]
 
@@ -72,7 +88,7 @@ linux arm: [armv6][203] | [armv7][204]
 
 --------------------------------
 
-**pre release v0.9.4**
+**release v0.9.4**
 
 windows: [msys2/qtcreator][187] | [visual studio 2015][188]
 
@@ -88,7 +104,7 @@ linux arm: [armv6][194] | [armv7][195]
 
 --------------------------------
 
-**pre release v0.9.3**
+**release v0.9.3**
 
 windows: [msys2/qtcreator][178] | [visual studio 2015][179]
 
@@ -104,7 +120,7 @@ linux arm: [armv6][185] | [armv7][186]
 
 --------------------------------
 
-**pre release v0.9.2**
+**release v0.9.2**
 
 windows: [msys2/qtcreator][169] | [visual studio 2015][170]
 
@@ -120,7 +136,7 @@ linux arm: [armv6][176] | [armv7][177]
 
 --------------------------------
 
-**pre release v0.9.1**
+**release v0.9.1**
 
 windows: [msys2/qtcreator][160] | [visual studio 2015][161]
 
@@ -136,7 +152,7 @@ linux arm: [armv6][167] | [armv7][168]
 
 --------------------------------
 
-**pre release v0.9.0**
+**release v0.9.0**
 
 windows: [msys2/qtcreator][151] | [visual studio 2015][152]
 
@@ -152,7 +168,7 @@ linux arm: [armv6][158] | [armv7][159]
 
 --------------------------------
 
-**pre release v0.8.4**
+**release v0.8.4**
 
 windows: [code blocks][142] | [visual studio 2012][143]
 
@@ -168,7 +184,7 @@ linux arm: [armv6][149] | [armv7][150]
 
 --------------------------------
 
-**pre release v0.8.3**
+**release v0.8.3**
 
 windows: [code blocks][133] | [visual studio 2012][134]
 
@@ -184,7 +200,7 @@ linux arm: [armv6][140] | [armv7][141]
 
 --------------------------------
 
-**pre release v0.8.2**
+**release v0.8.2**
 
 windows: [code blocks][124] | [visual studio 2012][125]
 
@@ -200,7 +216,7 @@ linux arm: [armv6][131] | [armv7][132]
 
 --------------------------------
 
-**pre release v0.8.1**
+**release v0.8.1**
 
 windows: [code blocks][115] | [visual studio 2012][116]
 
@@ -216,7 +232,7 @@ linux arm: [armv6][122] | [armv7][123]
 
 --------------------------------
 
-**pre release v0.8.0**
+**release v0.8.0**
 
 windows: [code blocks][106] | [visual studio 2012][107]
 
@@ -232,7 +248,7 @@ linux arm: [armv6][113] | [armv7][114]
 
 --------------------------------
 
-**pre release v0074**
+**release v0074**
 
 windows: [code blocks][99] | [visual studio 2010][100]
 
@@ -246,7 +262,7 @@ android: [Android][105]
 
 --------------------------------
 
-**pre release v0073**
+**release v0073**
 
 windows: [code blocks][92] | [visual studio 2010][93]
 
@@ -260,7 +276,7 @@ android: [Android][98]
 
 --------------------------------
 
-**pre release v0072**
+**release v0072**
 
 windows: [code blocks][85] | [visual studio 2010][86]
 
@@ -274,7 +290,7 @@ android: [Android][91]
 
 --------------------------------
 
-**pre release v0071**
+**release v0071**
 
 windows: [code blocks][78] | [visual studio 2010][79]
 
@@ -288,7 +304,7 @@ android: [Android][84]
 
 --------------------------------
 
-**pre release v0.07**
+**release v0.07**
 
 windows: [code blocks][71] | [visual studio 2010][72]
 
@@ -303,7 +319,7 @@ android: [Android][77]
 
 --------------------------------
 
-**pre release v0.062**
+**release v0.062**
 
 windows: [code blocks FAT][12] | [visual studio 2010 FAT][13] | [visual studio 2008 FAT][14]
 
@@ -317,7 +333,7 @@ iphone: [iPhone 0062 FAT][19]
 --------------------------------
 
 
-**pre release v0.061**
+**release v0.061**
 
 **_note that 0.06 project files are not compatible with 0.061 -- a guide detailing the new project structure will be posted soon._**
 
@@ -342,7 +358,7 @@ license (MIT): [license][37]
 --------------------------------
 
 
-**pre release v0.06**
+**release v0.06**
 
 _starting for 0.05, we are releasing normal and "FAT" versions, the fat versions contain several addons ready to go, plus addon examples. These addons aren't part of the core OF codebase, but contain advanced functionality like opencv, vector output, OSC, network communication, vector math and more. Also, in this release we will also post binaries of the examples, so you can download and try without having to compile_
 
@@ -360,7 +376,7 @@ changes:[changelog for 0.06][36]
 
 --------------------------------
 
-**pre release v0.05**
+**release v0.05**
 
 **addon fixes:** Since the 005 release there have been several critical fixes for addons -- details of the fixes and how to apply them can be found here: [addon fixes][49].
 
@@ -377,7 +393,7 @@ apps][60]
 
 --------------------------------
 
-**pre release v0.04**
+**release v0.04**
 
 windows: [visual studio ][61] | [dev c++][62] | [code warrior][63]
 
@@ -617,3 +633,12 @@ changes: [changelog for 0.04][67]
 [229]: http://www.openframeworks.cc/versions/v0.9.8/of_v0.9.8_android_release.tar.gz
 [230]: http://www.openframeworks.cc/versions/v0.9.8/of_v0.9.8_linuxarmv6l_release.tar.gz
 [231]: http://www.openframeworks.cc/versions/v0.9.8/of_v0.9.8_linuxarmv7l_release.tar.gz
+[232]: http://www.openframeworks.cc/versions/v0.10.0/of_v0.10.0_msys2_release.zip
+[233]: http://www.openframeworks.cc/versions/v0.10.0/of_v0.10.0_vs_release.zip
+[234]: http://www.openframeworks.cc/versions/v0.10.0/of_v0.10.0_osx_release.zip
+[235]: http://www.openframeworks.cc/versions/v0.10.0/of_v0.10.0_linux_release.tar.gz
+[236]: http://www.openframeworks.cc/versions/v0.10.0/of_v0.10.0_linux64_release.tar.gz
+[237]: http://www.openframeworks.cc/versions/v0.10.0/of_v0.10.0_ios_release.zip
+[238]: http://www.openframeworks.cc/versions/v0.10.0/of_v0.10.0_android_release.tar.gz
+[239]: http://www.openframeworks.cc/versions/v0.10.0/of_v0.10.0_linuxarmv6l_release.tar.gz
+[240]: http://www.openframeworks.cc/versions/v0.10.0/of_v0.10.0_linuxarmv7l_release.tar.gz
