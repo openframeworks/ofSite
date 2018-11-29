@@ -102,14 +102,17 @@ _description: _
 
 Begin using the camera, e.g.:
 
-c++
-myCamera.begin();
+~~~~{.cpp}
+void draw() {
 
-ofDrawGrid();
-//draw rest of scene
+    myCamera.begin();
 
-myCamera.end();
+    ofDrawGrid();
+    //draw rest of scene
 
+    myCamera.end();
+}
+~~~~
 
 
 
