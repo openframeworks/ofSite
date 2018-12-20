@@ -23,8 +23,8 @@ You can enter commands on the Pi by:
 
 _We need to make sure the CPU has 192MB of RAM in order to compile openFrameworks. Once you have compiled openFrameworks you may want to repeat this step with 128_
 
-0.  Select `1 Expand Filesystem` and hit Enter
 0.  Select `8 Advanced Options` and hit Enter
+0.  Select `1 Expand Filesystem` and hit Enter
 	* Select `A3 Memory Split` and hit Enter
 	* Type `64` and Hit `<ok>`
 
