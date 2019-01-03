@@ -19,6 +19,10 @@ Video Codecs
 -------
 Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickTime.  To support QuickTime video files or files like MP4 video you will need to install the video codecs onto your machine.  We recommend the [K-Lite Codec Pack - Version 12.1.0 Full April 18th 2016][1] which is free to download and adds support for many video formats. Note: other newer versions of K-Lite might not contain the codecs needed for OF.
 
+Disable Automatic Precompiled Header
+-------
+Visual Studio creates a hidden folder ".vs", which used to be ~10 kB in Visual Studio 2015; however, Visual Studio 2017 by default takes a few hundred megabytes for each project due to optimization of IntelliSense (code completion). This is not ideal on a laptop or a tablet with a small storage. You can disable the optimization and reduce the folder size at the cost of speed of IntelliSense. To do so, go to Tools > Options, then navigate to Text Editor > C/C++ > Advanced, and set Disable Automatic Precompiled Header to True.
+
 openFrameworks plugin for Visual Studio
 ---------------------------------------------------
 
