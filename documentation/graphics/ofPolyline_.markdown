@@ -19,14 +19,14 @@ _extends: _
 
 ofPolyLine allows you to combine multiple points into a single vector data object that can be drawn to the screen, manipulated point by point, and combined with other ofPolyline instances. It is less complex than the [ofPath](ofPath.html) and generally represents a single line or vector shape rather than multiple lines or shapes.
 
-You can add points to an ofPolyline by adding vertices:
+You can add points to an ofPolyline by adding vertices. By default these vertices are ofVec3f types, meaning you also need to specify a z-value, even when drawing in 2D:
 ~~~~{.cpp}
 float i = 0;
 while (i < TWO_PI) { // make a heart
 	float r = (2-2*sin(i) + sin(i)*sqrt(abs(cos(i))) / (sin(i)+1.4)) * -80;
 	float x = ofGetWidth()/2 + cos(i) * r;
 	float y = ofGetHeight()/2 + sin(i) * r;
-	line.addVertex(ofVec2f(x,y));
+	line.addVertex(ofVec3f(x,y,0));
 	i+=0.005*HALF_PI*0.5;
 }
 line.close(); // close the shape
