@@ -36,7 +36,7 @@ _inlined_description: _
 
 Read the contents of a file at path into a buffer.
 
-Opens as a text file by default.
+Opens as a binary file by default.
 
 
 **Parameters:**
@@ -81,7 +81,7 @@ _inlined_description: _
 
 Write the contents of a buffer to a file at path.
 
-Saves as a text file by default.
+Saves as a binary file by default.
 
 
 **Parameters:**
