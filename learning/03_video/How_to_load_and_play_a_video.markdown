@@ -58,6 +58,18 @@ Example:
 		fingerMovie.draw(0, 0, 400, 300);
 	}
 	
+If you are on Windows and get the following Error:
+
+“Error occured while playing or pausing or opening the file”
+
+You may not have the right codecs installed to handle the file type you are trying to play. 
+
+Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickTime. To support QuickTime video files or files like MP4 video you will need to install the video codecs onto your machine. We recommend the K-Lite Codec Pack - Version 12.1.0 Full April 18th 2016 which is free to download and adds support for many video formats. 
+
+Download K-Lite Codec Pack - Version 12.1.0 [here](https://filehippo.com/download_klite_codec_pack/67445/).
+
+Note: other newer versions of K-Lite might not contain the codecs needed for OF.
+
 ###For more information:
 
 take a look at: ```examples/video/videoPlayerExample```
