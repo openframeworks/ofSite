@@ -806,14 +806,14 @@ This is a variable to represent how wide spaces are sized.   It's a scalar for t
 
 <!----------------------------------------------------------------------------->
 
-###int getStringAsPoints()
+###int getStringAsPoints(string, vflip = true, filled = true)
 
 <!--
-_syntax: getStringAsPoints()_
+_syntax: getStringAsPoints(string, vflip = true, filled = true)_
 _name: getStringAsPoints_
 _returns: int_
 _returns_description: _
-_parameters: _
+_parameters: const string &s, bool vflip=true, bool filled=true_
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
@@ -834,7 +834,7 @@ _inlined_description: _
 
 _description: _
 
-This returns a vector of ofTTFCharacters (which is actually an ofPath) for a given string.  This means you can get access to the point data / outlines of the letter forms.
+This returns a vector of ofPaths for a given string.  This means you can get access to the point data / outlines of the letter forms.
 
 ~~~~{.cpp}
 
@@ -855,7 +855,7 @@ void testApp::update(){
 void testApp::draw(){
 
     // get the string as paths
-    vector < ofTTFCharacter > paths = font.getStringAsPoints("hello!");
+    vector < ofTTFCharacter > paths = font.getStringAsPoints("hello!", true, false);
 
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
