@@ -3,7 +3,7 @@
 
 visual studio setup guide
 =========================
-Here are the setup instructions for those of you who wish to work with Visual Studio Community 2015 on Windows.
+Here are the setup instructions for those of you who wish to work with Visual Studio Community 2017 on Windows.
 
 Download
 --------
@@ -11,9 +11,9 @@ Download
 
 Install
 -------
-Run the installer, and let it install to the default configuration.
+Run the installer, and when asked select the following components:
 
-![](vs_install.png)
+![](list_of_components.png)
 
 Video Codecs
 -------
@@ -32,7 +32,7 @@ From Visual Studio, go to Tools > Extensions and Updates. Select online and sear
 
 That will allow you to use File > New > Project... to create new openFrameworks projects and the contextual menu on any project to later add and remove addons
 
-There's more information in the [Visual Studio Gallery page](https://visualstudiogallery.msdn.microsoft.com/77678909-81b8-494b-b75c-d97dd7a3eaa6) and the following video.
+There's more information in the [Visual Studio Gallery page](https://marketplace.visualstudio.com/items?itemName=HalfA.openFrameworkspluginforVisualStudio2017) and the following video.
 
 <iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
