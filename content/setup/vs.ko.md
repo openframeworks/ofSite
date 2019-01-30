@@ -34,7 +34,7 @@ Windows 운영체제에서 Visual Studio Comminuty 2015와 함께 오픈프레�
 
 이제부터 `File > New > Project...`를 통해 새 오픈프레임웍스 프로젝트를 생성할 수 있으며, 나중에도 contextual 메뉴를 통해 애드온을 삭제하거나 추가할 수 있습니다.
 
-[Visual Studio Gallery page](https://visualstudiogallery.msdn.microsoft.com/77678909-81b8-494b-b75c-d97dd7a3eaa6)에서 보다 자세한 정보와 가이드 비디오를 보실 수 있습니다.
+[Visual Studio Gallery page](https://marketplace.visualstudio.com/items?itemName=HalfA.openFrameworkspluginforVisualStudio2017)에서 보다 자세한 정보와 가이드 비디오를 보실 수 있습니다.
 
 
 <iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
