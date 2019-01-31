@@ -13,7 +13,7 @@ Visual Studioセットアップガイド
 -------
 インストーラーを起動して、指示された際に下記のコンポーネントを指定します。
 
-![](list_of_components.png)
+![](/setup/vs/list_of_components.png)
 
 ## ビデオ・コーデック
 
