@@ -3,7 +3,7 @@
 
 visual studio 셋업 가이드
 =========================
-Windows 운영체제에서 Visual Studio Comminuty 2015와 함께 오픈프레임웍스를 사용하기 위한 셋업 가이드입니다.
+Windows 운영체제에서 Visual Studio Comminuty 2017과 함께 오픈프레임웍스를 사용하기 위한 셋업 가이드입니다.
 
 <!-- Download -->
 다운로드
