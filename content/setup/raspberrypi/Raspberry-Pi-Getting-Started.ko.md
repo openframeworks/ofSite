@@ -11,7 +11,7 @@
 ## 라즈베리파이 설정하기
 이 가이드는 새 Raspbian 설치본에서 시작하는 것을 염두하고 있으며, 이제부터 라즈베리파이에 접속하여 명령을 입력할 수 있습니다.
 
-2016-11-25 이후 NOOBS를 통해 라즈비안을 설치했을 경우, 기본적으로 SSH 접근이 막혀 있어, headless 셋업이 더 까다로워졌습니다. 만약 키보드와 모니터에 접근할 수 없는 상태에서 headless 모드로 셋업을 진행할 계획이라면, [부트 파티션에 SSH 파일 추가하기 가이드])(https://www.raspberrypi.org/documentation/remote-access/ssh/)를 참고해주세요.
+2016-11-25 이후 NOOBS를 통해 라즈비안을 설치했을 경우, 기본적으로 SSH 접근이 막혀 있어, headless 셋업이 더 까다로워졌습니다. 만약 키보드와 모니터에 접근할 수 없는 상태에서 headless 모드로 셋업을 진행할 계획이라면, [부트 파티션에 SSH 파일 추가하기 가이드](https://www.raspberrypi.org/documentation/remote-access/ssh/)를 참고해주세요.
 
 라즈베리파이에서 아래와 같은 방법으로 명령을 입력할 수 있습니다:
 
