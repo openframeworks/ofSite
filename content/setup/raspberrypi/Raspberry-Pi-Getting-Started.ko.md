@@ -4,7 +4,7 @@
 오픈프레임웍스를 위한 라즈베리파이 준비하기
 ============
 
-## Raspbian "Jessie" 설치
+## Raspbian "Stertch" 설치
 0. 가장 최신의 _**Raspbian** (데비안 stretch)_ 이미지를 [라즈베리파이 다운로드 페이지](http://www.raspberrypi.org/downloads)에서 다운받으세요.
 1. [라즈베리파이를 위한 SD카드 준비하기](http://elinux.org/RPi_Easy_SD_Card_Setup)의 설명에 따라 SD카드에 Raspbian을 설치해주세요.
 
