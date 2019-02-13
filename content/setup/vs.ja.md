@@ -3,7 +3,7 @@
 
 Visual Studioセットアップガイド
 =========================
-これは、Visual Studio Community 2017を使って作業したい人のためのセットアップの解説です。
+これは、WindowsのVisual Studio Community 2017を使って作業したい人のためのセットアップの解説です。
 
 ダウンロード
 --------
@@ -11,13 +11,17 @@ Visual Studioセットアップガイド
 
 インストール
 -------
-インストーラーを起動して、設定はデフォルトのままでインストールします。
+インストーラーを起動して、指示された際に下記のコンポーネントを指定します。
 
-![](vs_install.png)
+![](/setup/vs/list_of_components.png)
 
 ## ビデオ・コーデック
 
 openFrameworksの 0.9.0 からは、動画の再生にQuickTimeではなくDirectShowを使用しています。QuickTime形式や、MP4形式の動画に対応するには、使用しているマシンにビデオ・コーデック(Video Codec)をインストールする必要があります。 私たちは、[K-Lite Codec Pack - Version 12.1.0 Full April 18th 2016][1] を推奨しています。フリーでダウンロードでき、ほとんどの動画形式をサポートしています。しかし、多くのコーデックはアドウェアがバンドルされています。 以下のリンクは、openFrameworksでテスト済みで、インストーラーがダウンロードする前に自動的にアドウェアを消去してくれます。
+
+## 自動プリコンパイルされたヘッダーの無効化
+
+Visual Studioは隠しフォルダ ".vs"を作成します。フォルダ内のファイルサイズはVisual Studio 2015では最大10KBでした。しかし、Visual Studio 2017では、IntelliSenseの最適化（コード補完）により、各プロジェクトごとに数百MBを要します。これは、ストレージが小さなラップトップやタブレット端末には理想的ではありません。IntelliSenseの速度は犠牲になりますが、最適化を無効にしてフォルダサイズを縮小することができます。これを行うには、Tools > Option に移動し、Text Editor > C/C++ > Advanced に移動して、「Disable Automatic Precompiled Header」を選択します。
 
 ## Visual Studio向けopenFrameworksプラグイン
 
@@ -27,7 +31,7 @@ Visua Studioのメニューから、Tools > Extensions and Updates に行きま�
 
 これにより、File > New > Project... メニューから、新規にopenFrameworksのプロジェクトが生成され、後からアドオンを追加したり消去するためのメニューが用意されます。
 
-さらに詳しい情報は、 [Visual Studio Gallery page](https://visualstudiogallery.msdn.microsoft.com/77678909-81b8-494b-b75c-d97dd7a3eaa6)にあります。また、下記のビデオを参照してください。
+さらに詳しい情報は、 [Visual Studio Gallery page](https://marketplace.visualstudio.com/items?itemName=HalfA.openFrameworkspluginforVisualStudio2017) にあります。また、下記のビデオを参照してください。
 
 <iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
