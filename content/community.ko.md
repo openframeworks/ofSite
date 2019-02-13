@@ -44,7 +44,7 @@
 
 <p>이 행동 강령은 개인이 오픈프레임웍스 커뮤니티를 대표할 때 프로젝트 공간 및 공공 장소 모두에서 적용됩니다.</p>
 
-<p><em>이 행동 강령은 <a href="http://contributor-covenant.org" target="blank">기여자 규약</a>과 <a href="http://berlincodeofconduct.org/" target="blank">베를린 행동 강령</a>에서 발췌하였습니다.</em></p>
+<p><em>이 행동 강령은 <a href="https://contributor-covenant.org" target="blank">기여자 규약</a>과 <a href="https://berlincodeofconduct.org/" target="blank">베를린 행동 강령</a>에서 발췌하였습니다.</em></p>
 
 </div>
 
@@ -55,7 +55,7 @@
 <p>커뮤티니의 최신 소식 및 정보</p>
 <p>
 <ul>
-	<li><a href="http://blog.openframeworks.cc/">블로그</a></li>
+	<li><a href="https://blog.openframeworks.cc/">블로그</a></li>
     <li><a href="https://twitter.com/openframeworks">트위터</a></li>
 	<li><a href="https://forum.openframeworks.cc/c/announcements">포럼 공지</a></li>
 </ul>
@@ -69,16 +69,16 @@
     <li><a href="https://twitter.com/search?f=tweets&vertical=default&q=%23openframeworks">트위터</a></li>
 	<li><a href="https://www.behance.net/search?content=projects&sort=published_date&time=all&search=openframeworks">Behance</a></li>
 	<li><a href="https://www.flickr.com/groups/openframeworks/">Flickr</a></li>
-	<li><a href="http://www.creativeapplications.net/category/openframeworks/">Creative Applications Network</a></li>
+	<li><a href="https://www.creativeapplications.net/category/openframeworks/">Creative Applications Network</a></li>
 </ul></p>
 
 <h3>개발</h3>
 <p>다른 개발자 및 기여자와 함께하기</p>
 <ul>
     <li><a href="https://github.com/openframeworks">Github</a></li>
-	<li><a href="http://ofslack.herokuapp.com">Slack</a></li>
+	<li><a href="https://ofslack.herokuapp.com">Slack</a></li>
     <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">개발자 메일링 리스트</a> <span style="font-size:75%">(Low Volume)</span></li>
-	<li><a href="http://webchat.freenode.net/?channels=openframeworks">IRC</a> <span style="font-size:75%">(Low Volume)</span></li>
+	<li><a href="https://webchat.freenode.net/?channels=openframeworks">IRC</a> <span style="font-size:75%">(Low Volume)</span></li>
 </ul>
 
 <h3>모임</h3>

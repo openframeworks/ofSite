@@ -9,9 +9,9 @@
 
 <ul class="external_links" >
 		<li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-devメーリングリスト</a></li>
-		<li><a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li>
-		<li><a href="http://forum.openframeworks.cc/">フォーラム</a></li>
-		<li><a href="http://github.com/openframeworks/openFrameworks">github</a></li>
+		<li><a href="https://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li>
+		<li><a href="https://forum.openframeworks.cc/">フォーラム</a></li>
+		<li><a href="https://github.com/openframeworks/openFrameworks">github</a></li>
 </ul>
 
 <hr>

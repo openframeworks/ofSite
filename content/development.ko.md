@@ -1,9 +1,9 @@
 ## -*- coding: utf-8 -*-
 .. title: development
 
-### 오픈프레임웍스 개발은 협업적입니다. 이는 <a href="http://forum.openframeworks.cc/">포럼</a>, <a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a>, 그리고<a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">오픈프레임웍스 개발 메일링 리스트</a>등에서 수시로 의논을 교환하고 있는 <a href="https://github.com/openframeworks/openFrameworks/contributors">많은 분들</a>의 공헌으로 성장하고 있습니다.</h3>
+### 오픈프레임웍스 개발은 협업적입니다. 이는 <a href="https://forum.openframeworks.cc/">포럼</a>, <a href="https://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a>, 그리고<a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">오픈프레임웍스 개발 메일링 리스트</a>등에서 수시로 의논을 교환하고 있는 <a href="https://github.com/openframeworks/openFrameworks/contributors">많은 분들</a>의 공헌으로 성장하고 있습니다.</h3>
 
-저희는 누구나 브랜치, 실험, 제안을 할수 있도록 분산버전관리시스템인 깃을 사용하고 있습니다. <a href="http://github.com/openframeworks/openFrameworks">GitHub</a>의 네트워크 다이어그램을 살펴보시면 아시겠지만, 그것은 마치 외계인의 다이어그램처럼보일것입니다. 브랜치들이 얽혀있고, 코드 pulling이 서로 오고가고 있습니다. 이는 정말이지 전세계를 아우르는 핵심코드로 작업하는 거대한 커뮤니티입니다: 버그를 수정하고, pull request를 제출하고, 원하는 방향으로 도구를 다듬고 있습니다.
+저희는 누구나 브랜치, 실험, 제안을 할수 있도록 분산버전관리시스템인 깃을 사용하고 있습니다. <a href="https://github.com/openframeworks/openFrameworks">GitHub</a>의 네트워크 다이어그램을 살펴보시면 아시겠지만, 그것은 마치 외계인의 다이어그램처럼보일것입니다. 브랜치들이 얽혀있고, 코드 pulling이 서로 오고가고 있습니다. 이는 정말이지 전세계를 아우르는 핵심코드로 작업하는 거대한 커뮤니티입니다: 버그를 수정하고, pull request를 제출하고, 원하는 방향으로 도구를 다듬고 있습니다.
 
 <a href="../community">커뮤니티 페이지</a>를 방문하여 공헌할 수 있는 다른 방법을 찾아보세요.</p>
 
@@ -12,8 +12,8 @@
 <ul class="external_links" >
     <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">오픈프레임웍스 개발 메일링 리스트</a></li>
     <li><a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li>
-    <li><a href="http://forum.openframeworks.cc/">포럼</a></li>
-    <li><a href="http://github.com/openframeworks/openFrameworks">github</a></li>
+    <li><a href="https://forum.openframeworks.cc/">포럼</a></li>
+    <li><a href="https://github.com/openframeworks/openFrameworks">github</a></li>
 </ul>
 
 

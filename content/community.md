@@ -44,7 +44,7 @@
 
 <p>This code of conduct applies both within project spaces and in public spaces when an individual is representing the openFrameworks community.</p>
 
-<p><em>This Code of Conduct is adapted from the <a href="http://contributor-covenant.org" target="blank">Contributor Covenant</a> and the <a href="http://berlincodeofconduct.org/" target="blank">Berlin Code of Conduct</a></em></p>
+<p><em>This Code of Conduct is adapted from the <a href="https://contributor-covenant.org" target="blank">Contributor Covenant</a> and the <a href="https://berlincodeofconduct.org/" target="blank">Berlin Code of Conduct</a></em></p>
 
 </div>
 
@@ -55,7 +55,7 @@
 <p>The latest news and information from the community.</p>
 <p>
 <ul>
-	<li><a href="http://blog.openframeworks.cc/">Blog</a></li>
+	<li><a href="https://blog.openframeworks.cc/">Blog</a></li>
     <li><a href="https://twitter.com/openframeworks">Twitter</a></li>
 	<li><a href="https://forum.openframeworks.cc/c/announcements">Announcements Forum</a></li>
 </ul>
@@ -69,16 +69,16 @@
     <li><a href="https://twitter.com/search?f=tweets&vertical=default&q=%23openframeworks">Twitter</a></li>
 	<li><a href="https://www.behance.net/search?content=projects&sort=published_date&time=all&search=openframeworks">Behance</a></li>
 	<li><a href="https://www.flickr.com/groups/openframeworks/">Flickr</a></li>
-	<li><a href="http://www.creativeapplications.net/category/openframeworks/">Creative Applications Network</a></li>
+	<li><a href="https://www.creativeapplications.net/category/openframeworks/">Creative Applications Network</a></li>
 </ul></p>
 
 <h3>Develop</h3>
 <p>Connect with other developers and contributors.</p>
 <ul>
     <li><a href="https://github.com/openframeworks">Github</a></li>
-	<li><a href="http://ofslack.herokuapp.com">Slack</a></li>
+	<li><a href="https://ofslack.herokuapp.com">Slack</a></li>
     <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">Developer Mailing List</a> <span style="font-size:75%">(Low Volume)</span></li>
-	<li><a href="http://webchat.freenode.net/?channels=openframeworks">IRC</a> <span style="font-size:75%">(Low Volume)</span></li>
+	<li><a href="https://webchat.freenode.net/?channels=openframeworks">IRC</a> <span style="font-size:75%">(Low Volume)</span></li>
 </ul>
 
 <h3>Meet</h3>
