@@ -634,7 +634,7 @@ changes: [changelog for 0.04][67]
 [230]: https://openframeworks.cc/versions/v0.9.8/of_v0.9.8_linuxarmv6l_release.tar.gz
 [231]: https://openframeworks.cc/versions/v0.9.8/of_v0.9.8_linuxarmv7l_release.tar.gz
 [232]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_msys2_release.zip
-[233]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_vs_release.zip
+[233]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_vs2017_release.zip
 [234]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_osx_release.zip
 [235]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_linux_release.tar.gz
 [236]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_linux64_release.tar.gz
