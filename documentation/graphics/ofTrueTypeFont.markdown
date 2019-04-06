@@ -855,7 +855,7 @@ void testApp::update(){
 void testApp::draw(){
 
     // get the string as paths
-    vector < ofTTFCharacter > paths = font.getStringAsPoints("hello!");
+    vector < ofPath > paths = font.getStringAsPoints("hello!");
 
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
