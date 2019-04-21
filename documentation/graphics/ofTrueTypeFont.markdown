@@ -855,7 +855,10 @@ void testApp::update(){
 void testApp::draw(){
 
     // get the string as paths
-    vector < ofTTFCharacter > paths = font.getStringAsPoints("hello!");
+    bool vflip = true; // OF flips y coordinate in the default perspective, 
+                       // should be false if using a camera for example
+    bool filled = true; // or false for contours
+    vector < ofPath > paths = font.getStringAsPoints("hello!", vflip, filled);
 
     ofPushMatrix();
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
