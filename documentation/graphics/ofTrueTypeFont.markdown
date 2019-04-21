@@ -809,11 +809,11 @@ This is a variable to represent how wide spaces are sized.   It's a scalar for t
 ###int getStringAsPoints()
 
 <!--
-_syntax: getStringAsPoints(string, vflip = true, filled = true)_
+_syntax: getStringAsPoints()_
 _name: getStringAsPoints_
 _returns: int_
 _returns_description: _
-_parameters: const string &s, bool vflip=true, bool filled=true_
+_parameters: _
 _access: public_
 _version_started: 0073_
 _version_deprecated: _
