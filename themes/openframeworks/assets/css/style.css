@@ -280,11 +280,22 @@ hr.header {
 	padding: 5px 0px 0px 80px;
 	width: 670px;
 }
+.page-left-donations {
+	float: left;
+	padding: 5px 0px 0px 80px;
+	width: 580px;
+}
 .page-right-medium {
 	float: left;
 	margin: 0px;
 	padding: 0px;
 	width: 600px;
+}
+.page-right-donations {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	width: 500px;
 }
 .page-left-wide {
 	float: left;

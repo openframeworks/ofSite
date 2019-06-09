@@ -2,7 +2,7 @@
 .. title: donations
 
 
-<div class="page-left-medium">
+<div class="page-left-donations">
 <h1>donations</h1>
 
 <em>openFrameworks is developed and maintained by several voluntary contributors.</em>
@@ -44,7 +44,7 @@ $(document).ready(function(){
 
 </div>
 
-<div class="page-right-narrow">
+<div class="page-right-donations">
 <div class="home-links">
 
 <div class="donations">
