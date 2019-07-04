@@ -2744,7 +2744,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws an rectangle from point p, with a given width and height.
+Draws a rectangle from point p, with a given width and height.
 ~~~~{.cpp}
 void ofApp::draw(){
     glm::vec3 p;      // create a point P
@@ -2823,7 +2823,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws an rectangle from the given rectangle.
+Draws a rectangle from the given rectangle.
 ~~~~{.cpp}
 void ofApp::draw(){
     ofRectangle rect;
@@ -2869,7 +2869,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Draws an rectangle from point X, Y at depth Z with a given width and height.
+Draws a rectangle from point X, Y at depth Z with a given width and height.
 ~~~~{.cpp}
 void ofApp::draw(){
     ofDrawRectangle(10,10,-100, 80, 80); // Draw a rectangle at 100 pixels in depth
