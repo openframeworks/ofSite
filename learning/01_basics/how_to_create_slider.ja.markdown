@@ -39,6 +39,7 @@ Xcodeでアプリケーションを開くと、ソースファイルの中にGUI
 
 	void ofApp:draw(){
 		ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, radius);
+		gui.draw();
 	}
 
 アプリケーションを実行して、スライダーを前後させると、円の大きさが変化します。
