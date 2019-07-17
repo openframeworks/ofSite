@@ -14,7 +14,7 @@ The ofSpherePrimitive allows you to create a UV sphere.
 A UV spherewhich is a sphere based on UV slices rather than faces like
 the ofIcoSpherePrimitive. Note this:
 
-[IMG](../spheretypes.png)
+[IMG](spheretypes.png)
 
 On the left is a UV sphere and on the right is an ICO sphere.
 
