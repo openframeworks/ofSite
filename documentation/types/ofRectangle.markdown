@@ -30,7 +30,7 @@ all ofRectangle operations are 2D only, ignoring the z-component.
 
 ofRectangle is a simple container for describing the position and size of a 2D rectangle. The ofRectangle class provides a data structure and a collection of useful helper methods for manipulating rectangles. 
 
-Since the `width` and `height` variables can be negative, the x/y-position is not guaranteed to represent the upper right hand corner. For example, two visually identical rectangles can be represented in the following ways:
+Since the `width` and `height` variables can be negative, the x/y-position is not guaranteed to represent the upper left hand corner. For example, two visually identical rectangles can be represented in the following ways:
 
 ~~~~{.cpp}
     ofRectangle myRect(0, 0, 100, 100);
