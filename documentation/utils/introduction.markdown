@@ -1,4 +1,4 @@
-## Filesystem, threading, popup windows and other utilities
+## Filesystem, threading and other utilities
 
 The utils module, has different kinds of utilities the main groups are:
 
