@@ -1744,7 +1744,7 @@ direction (heading).
 
 ~~~~{.cpp}
 ofVec2f v1(5, 0);
-v1.normalize(); // v2 is now (1, 0)
+v1.normalize(); // v1 is now (1, 0)
 ofVec2f v2(5, 5);
 v2.normalize(); // v2 is now (√2, √2)
 ~~~~
@@ -1763,7 +1763,7 @@ Normalize the vector.
 
 ~~~~{.cpp}
 ofVec2f v1(5, 0);
-v1.normalize(); // v2 is now (1, 0)
+v1.normalize(); // v1 is now (1, 0)
 ofVec2f v2(5, 5);
 v2.normalize(); // v2 is now (√2, √2)
 ~~~~
