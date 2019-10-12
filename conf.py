@@ -212,11 +212,10 @@ EXTERNAL_LINKS = {
     ),
     "zh_cn": (
         ("https://forum.openframeworks.cc", "论坛(EN)", True),
-        ("https://forum.openframeworks.cn", "论坛(CN)", True),
+        ("https://forum.openframeworks.cc/c/international-discussions/zhcn", "论坛(CN)", True),
         ("https://github.com/openframeworks", "github", True),
         ("http://ofxaddons.com", "插件", True),
         ("http://forum.openframeworks.kr/t/slack/32", "slack", True),
-        ("https://guest.jianliao.com/rooms/d9640eb07f", "翻译讨论群", True),
         ("https://blog.openframeworks.cc/", "博客", True),
         ("/donations", "donations", False),
     ),
