@@ -38,6 +38,7 @@ Open an **MSYS shell** (`C:\msys64\msys2_shell.bat`) and install OF dependencies
 If you are going to use Qt Creator it's reacommended to restart the computer after running the install_dependencies script so the system gets some changes correctly.
 
 Open an **MINGW32** shell (run `C:\msys64\mingw32_shell.bat`) and compile oF libraries:
+*Warning: MINGW64 is not supported yet. Always use the 32 bit version with OF*
 
     cd your_oF_directory/libs/openFrameworksCompiled/project
     make
@@ -69,6 +70,7 @@ the examples, and have fun!
 Running examples
 ----------------
 Compile the example (for example the 3DPrimitivesExample)
+*Warning: MINGW64 is not supported yet. Always use the 32 bit version with OF*
 
     cd your_oF_directory/examples/3d/3DPrimitivesExample
     make
