@@ -37,6 +37,7 @@ openFrameworksのインストール
 もし、Qt Creatorの使用を考えているなら、依存関係のインストールスクリプトの実行を終えてから、コンピューターの再起動をお勧めします。再起動によって、システムへの変更が正しく更新されます。
 
  **MINGW32** shell (`C:\msys64\mingw32_shell.bat`を起動) を開いて、openFrameworksのライブラリーをコンパイルします。 
+ *注意: MINGW64はサポートされていません。必ず32bitバージョンを使用してください。*
 
     cd your_oF_directory/libs/openFrameworksCompiled/project
     make
@@ -70,6 +71,7 @@ setx PATH "c:\msys64\mingw32\bin;c:\msys64\usr\bin;%PATH%"
 ----------------
 
 例として3DPrimitivesExampleをコンパイルしてみましょう。
+*注意: MINGW64はサポートされていません。必ず32bitバージョンを使用してください。*
 
     cd your_oF_directory/examples/3d/3DPrimitivesExample
     make
