@@ -38,6 +38,7 @@ openFrameworks 설치하기
 만약 Qt Creator를 사용할거라면, install_dependencies 스크립트를 실행한 뒤 컴퓨터를 재부팅하는것을 추천드립니다. 이로써 시스템에 변경된 사항이 적용됩니다.
 
 **MINGW32**쉘을 열고 (`C:\msys64\ming32_shell.bat`을 실행), OF 라이브러리들을 컴파일합니다:
+* 주의 : MING64는 아직 지원되지 않으므로, OF와 함께 사용하기 위해서는 반드시 32 비트버전을 사용해주세요
 
     cd your_oF_directory/libs/openFrameworksCompiled/project
     make
