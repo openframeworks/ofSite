@@ -25,7 +25,7 @@
 </ul>
 
 <h2>Code of conduct</h2>
-<p>One of the goals of openFrameworks is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds po를ssible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, socioeconomic status, age, level of experience, personal appearance, ethnicity, religion or philosophy.</p>
+<p>One of the goals of openFrameworks is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, socioeconomic status, age, level of experience, personal appearance, ethnicity, religion or philosophy.</p>
 
 <p>As the openFrameworks community, we pledge to respect both old and new members who post on the forum, chat on IRC, post on mailing lists, report issues, post feature requests, submit pull requests or patches, update documentation, participate in meetups and workshops, or are involved in any way with openFrameworks.</p>
 
