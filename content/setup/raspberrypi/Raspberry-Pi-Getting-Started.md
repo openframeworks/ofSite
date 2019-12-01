@@ -5,8 +5,8 @@ Getting your Raspberry Pi ready for openFrameworks
 ============
 
 
-## Install Raspbian "Stretch"
-0. Install the latest _**Raspbian** (Debian Stretch)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
+## Install Raspbian "Buster"
+0. Install the latest _**Raspbian** (Debian Buster)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
 1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card
 
 
@@ -34,11 +34,13 @@ openFrameworks does not use the X11 Desktop for running OF applications. You can
 0. Select `3 Boot Options`
 0. Select `B1 Console` or `B2 Console Autologin`
 
-openFrameworks also needs to use the legacy GL driver instead of the hardware accelerated KMS drivers.
+For openFrameworks 0.11.0 and onwards OF needs to use the new experimental GL driver instead of the legacy driver.
 
 0. Select `7 Advanced Options` and hit Enter
-	* Select `G3 Legacy` and hit Enter
-	* The prompt will show `The GL driver is disabled`. Hit Ok.
+	* Select `GL Driver` and hit Enter
+	* Select either `GL Driver Fake KMS` or `GL Driver Full KMS` or from the options and hit Enter
+
+For older OF releases with Wheezy or Jessie select the legacy driver instead.
 
 Unlike Wheezy, Debian Jessie onwards does not display the IP address on boot. You may wish to get the current IP by typing `ifconfig`. The IP address is under the eth0 entry for wired ethernet. This can possibly change on reboot.
 
@@ -59,9 +61,9 @@ You now can download openFrameworks and uncompress it into a folder. Using a She
 
 ```sh
 cd
-wget https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_linuxarmv6l_release.tar.gz
+wget https://openframeworks.cc/versions/v0.11.0/of_v0.11.0_linuxarmv6l_release.tar.gz
 mkdir openFrameworks
-tar vxfz of_v0.10.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
+tar vxfz of_v0.11.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
 ```
 
 
@@ -81,6 +83,9 @@ You are now ready to compile openFrameworks!
 ```sh
 make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project
 ```
+
+## Use EGL instead of GLFW 
+As of 0.11.0 the default window is ofAppGLFWWindow. If you want to use the older ofAppEGLWindow approach, comment out `USE_GLFW_WINDOW = 1` in `libs/openFrameworksCompiled/project/linuxarmv6l/config.linuxarmv6l.default.mk` 
 
 ## Speeding up compiling
 Compiling natively on the Raspberry Pi takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time.
