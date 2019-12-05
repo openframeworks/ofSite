@@ -2,7 +2,12 @@
 
 [English](README.md) | [中文](README-zh.md) | [日本語](README-ja.md) | [한국어](README-ko.md)
 
+
 This repository stores the content and code that generates the [openFrameworks](http://openFrameworks.cc/) website.
+=======
+- korean(한국어) : [readme.ko.md](readme.ko.md)
+- japanese(日本語) : [readme.ja.md](readme.ja.md)
+- simplified chinese(简体中文) : [readme.zh_cn.md](readme.zh_cn.md)
 
 ## Contributing
 
@@ -37,7 +42,9 @@ This site is built using [nikola](https://getnikola.com). There's some scripts i
 
 2. From the ofSite source directory, run ./install.sh which installs nikola and all the needed dependencies. (This has only been tested on linux and OS-X). 
 
-3. Finally add the following to your .basrc, .bash_profile or .zshrc file:
+3. Please make sure the symbol link `~/nikola/.Python` to python3 path is correct before you run `install.sh` script.
+
+4. Finally add the following to your .basrc, .bash_profile or .zshrc file:
   `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
 
 There are two scripts included in the ofSite root to help work with the docs:

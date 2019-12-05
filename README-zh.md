@@ -23,7 +23,21 @@
 
 这个网站是基于 [nikola](https://getnikola.com)环境生成的. 为了方便搭建环境已经为大家准备好了环境搭建脚本。
 
-- ./install.sh 是安装 `nikola` 和必要的依赖包。现在支持的环境是Linux和Mac OS X。在Mac OS X环境里面运行这个脚本之前需要安装：
+1. 首先要安装 Xcode 命令行工具：
+
+  ```bash
+  xcode-select --install
+  ```
+  然后运行以下命令安装python3和pip。如果你的电脑没有brew，请先安装[brew.sh](http://brew.sh/):
+
+  ```bash
+  brew install python3
+  sudo easy_install pip
+  brew linkapps python3
+  ```
+
+
+2. ./install.sh 是安装 `nikola` 和必要的依赖包。现在支持的环境是Linux和Mac OS X。在Mac OS X环境里面运行这个脚本之前需要安装：
 
   ```bash
   brew install python3
@@ -35,9 +49,11 @@
 
   `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
 
-- ./auto_build.sh 脚本运行后会检测网站源文件有变化时运行 `nikola` 编译生成网站。在 Mac OS X 出现 `FileNotFoundError: [Errno 2] No such file or directory: 'asciidoctor'` 错误时, 按照[这里](http://asciidoctor.org/docs/install-asciidoctor-macosx/)教程步骤安装`asciidoctor`后在运行脚本。
+3. 在安装`install.sh`脚本之前必须要确认`~/nikola/.Python`的符号链接是否是正确的python3路径，如果不是会运行不了这个脚本。
 
-- ./serve.sh 会在本地运行网站服务器，这样就可以在浏览器访问本地地址查看网站效果.
+4. `./auto_build.sh` 脚本运行后会检测网站源文件有变化时运行 `nikola` 编译生成网站。在 Mac OS X 出现 `FileNotFoundError: [Errno 2] No such file or directory: 'asciidoctor'` 错误时, 按照[这里](http://asciidoctor.org/docs/install-asciidoctor-macosx/)教程步骤安装`asciidoctor`后在运行脚本。
+
+- `./serve.sh` 会在本地运行网站服务器，这样就可以在浏览器访问本地地址查看网站效果.
 
 修改文档源文件或翻译文档时先运行 `./auto_build.sh`后再运行 `./serve.sh`两个同时运行。这时有任何文件变化时网站会自动更新。
 

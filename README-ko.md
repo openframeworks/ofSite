@@ -2,6 +2,12 @@
 
 이 저장소는 [openFrameworks](http://openFrameworks.cc/)웹사이트를 생성하기 위한 콘텐츠와 코드를 담고 있습니다.
 
+다른 언어는 아래에서 보실 수 있습니다.
+=======
+- 영어(English) : [readme.md](readme.md)
+- 일본어(日本語) : [readme.ja.md](readme.ja.md)
+- 중국어-간체(简体中文) : [readme.zh_cn.md](readme.zh_cn.md)
+
 ## 참여하기
 
 웹페이지나 도큐먼트를 수정하는데 참여하기 위해, 이 저장소를 fork하여 작어하시고, github을 통해 pull request를 보내주시면 됩니다.
