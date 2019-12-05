@@ -12,15 +12,25 @@ Installing msys2
 First, install MSYS2 using the [one-click installer](https://msys2.github.io/) or
 directly unzipping the archive from their [repository](http://sourceforge.net/projects/msys2/files/Base/x86_64/)
 
+If you have an old install of MSYS2 (before 2018), it's recommended to do a fresh install.
+
 If you are going to use QtCreator you should install msys2 in the default install folder, c:\msys64
 
-Open a **MSYS2 shell** (`C:\msys64\msys2_shell.bat`) and update the system packages :
 
-    pacman --noconfirm  --needed -Sy bash pacman pacman-mirrors msys2-runtime
 
-Close the shell and open a new one to update the remaining packages :
+Now, let's update the MSYS2 installation.
+From an MSYS2 shell (it can be MSYS, MINGW32 or MINGW64), run :
 
-    pacman --noconfirm -Su
+```sh
+pacman -Syu --noconfirm --needed
+```
+
+If some system files are updated, you may be requested to close the shell.
+If that happens, close the shell as instructed and open a new one to update the remaining packages using the same command :
+
+```sh
+pacman -Syu --noconfirm --needed
+```
 
 You are now ready to install openFrameworks.
 
@@ -28,16 +38,26 @@ You are now ready to install openFrameworks.
 Installing openFrameworks
 -------------------------
 
-Download and unzip the qt **creator / msys2** version of oF.
+**IMPORTANT**
+MSYS2 comes in 3 flavors : MSYS (msys2.exe), MINGW32 (mingw32.exe), MINGW64 (mingw64.exe).
+This really important to remember as lots of problem with running OF with MSYS2 come from using the wrong flavor.
+As of today, only **MINGW32** is supported.
+So you must use the mingw32.exe shell to run oF.
 
-Open an **MSYS shell** (`C:\msys64\msys2_shell.bat`) and install OF dependencies:
+For the following instructions, it assumed that MSYS2 is installed in `C:\msys64`.
+If it has been installed elsewhere, adapt the instructions to reflect your MSYS2 installation path
 
-    cd your_oF_directory/scripts/msys2
-    ./install_dependencies.sh`
+Download and unzip the **qt creator / msys2** version of oF. 
+**DO NOT INSTALL** oF in a folder having space or other 
 
-If you are going to use Qt Creator it's reacommended to restart the computer after running the install_dependencies script so the system gets some changes correctly.
+Open an **MINGW32** shell (`C:\msys64\mingw32.exe` ) and install OF dependencies:
 
-Open an **MINGW32** shell (run `C:\msys64\mingw32_shell.bat`) and compile oF libraries:
+```sh
+cd your_oF_directory/scripts/msys2
+./install_dependencies.sh`
+```
+
+Open an **MINGW32** shell (run `C:\msys64\mingw32.exe`) and compile oF libraries:
 
     cd your_oF_directory/libs/openFrameworksCompiled/project
     make
@@ -47,13 +67,47 @@ You can speed-up compilation using parallel build `make -j4` or the number of co
 
 Setting the PATH variable
 -------------------------
-Usually the install_dependencies.sh script will take care of adding these paths. If after restarting the computer you keep having issues with Qt Creator or just compiling you can check that they are set correctly and if not set them manually following the next steps:
 
-On MSYS2, openFrameworks needs the dlls that are provided by MSYS2 package manager `pacman`. The PATH variable tells the system where to look for these dlls. On Windows, the system starts to look into the executable folder, then into the folders defined in system PATH and finally into the folders defined in user PATH.
+Setting the PATH variable is an optional step but is also the cause of many trouble.
+
+As of v0.10.1, the install_dependencies.sh script does it in an wrong way!
+
+### Why would you need to set the PATH variable ?
+
+__To be able to run my oF application by double clicking on it.__
+
+To run, the application needs to have the dll it was compiled with.
+If the required dll is not found at the location of your application, Windows will traverse the folders in your PATH to find it.
+If `C:\msys64\mingw32\bin` is included in your PATH, it will hopefully find the right dll.
+However, it may find a dll with a matching name in a different folder that is not compatible...  
+It may also happen that, after an MSYS2 update, it finds a newer version in `C:\msys64\mingw32\bin` that is also incompatible...
+
+The solution is to copy all the needed dlls in the application folder.
+This can be easily done with the command : 
+
+```sh
+make copy_dlls
+```
+This will also ease the installation of the application on a different computer....
+
+
+__To compile oF in IDE (Qt Creator or VS Code )__
+
+These softwares will try to detect compiler programs (gcc, make) by scanning the PATH variable.
+So it's an easy way to setup up your IDE.
+There may also be some settings in the IDE to configure where to find the programs.
+That gives you better control.
+As in the previous point, relying on the PATH variable to find the programs may result in unexpected behaviours (for example, using Windows C:\Windows\System32\find.exe instead of MSYS C:\msys64\usr\bin\find.exe)
+
+It may be interesting to write a wrapper batch file to lauch your IDE where you set the PATH to use.
+This way you do not pollute your PATH system-wide.
+
+### I've decided to use the PATH variable. How do I set it ?
 
 You can find how to set the PATH in windows here: http://www.computerhope.com/issues/ch000549.htm
 
-You'll need to add `c:\msys64\mingw32\bin` and `c:\msys64\usr\bin` to your PATH. There are two ways:
+You'll need to add `c:\msys64\mingw32\bin` and `c:\msys64\usr\bin` to your PATH in **that order**.
+There are two ways:
 
 1. Either add them via 'Environment Variables' from the Control Panel > System > Advanced System Settings.
 2. Or you can also set the PATH from the command line: open a Windows cmd prompt and set you user PATH.
@@ -61,7 +115,7 @@ You'll need to add `c:\msys64\mingw32\bin` and `c:\msys64\usr\bin` to your PATH.
 setx PATH "c:\msys64\mingw32\bin;c:\msys64\usr\bin;%PATH%"
 ```
 
-If you have administrative privileges, you can directly set the system PATH. All users will benefit of it...
+Don't forget to logoff/logon as PATH is updated at logon.
 
 That's all, now go to the your_oF_directory/examples folder, where you will find
 the examples, and have fun!
@@ -70,11 +124,14 @@ Running examples
 ----------------
 Compile the example (for example the 3DPrimitivesExample)
 
-    cd your_oF_directory/examples/3d/3DPrimitivesExample
-    make
+```sh
+cd your_oF_directory/examples/3d/3DPrimitivesExample
+make
+```
 
-At this point, `make run` or  double-click on the exe file to launch.
+At this point, `make run` to launch.
 
+To be able to double-click on the exe file to run it, run `make copy_dlls` (if you haven't set the PATH!)
 
 Makefile
 --------
