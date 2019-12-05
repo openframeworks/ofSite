@@ -19,8 +19,8 @@ For 64bit installs:
 
 git clone https://github.com/emscripten-core/emsdk
 cd emsdk
-./emsdk install sdk-incoming-64bit binaryen-master-64bit
-./emsdk activate sdk-incoming-64bit binaryen-master-64bit
+./emsdk install sdk-incoming-64bit
+./emsdk activate sdk-incoming-64bit
 source ./emsdk_env.sh
 ```
 
@@ -29,8 +29,8 @@ For 32bit installs:
 
 git clone https://github.com/emscripten-core/emsdk
 cd emsdk
-./emsdk install sdk-incoming-32bit binaryen-master-32bit
-./emsdk activate sdk-incoming-32bit binaryen-master-32bit
+./emsdk install sdk-incoming-32bit
+./emsdk activate sdk-incoming-32bit
 source ./emsdk_env.sh
 ```
 
