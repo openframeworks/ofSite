@@ -4,10 +4,6 @@
 
 
 This repository stores the content and code that generates the [openFrameworks](http://openFrameworks.cc/) website.
-=======
-- korean(한국어) : [readme.ko.md](readme.ko.md)
-- japanese(日本語) : [readme.ja.md](readme.ja.md)
-- simplified chinese(简体中文) : [readme.zh_cn.md](readme.zh_cn.md)
 
 ## Contributing
 
