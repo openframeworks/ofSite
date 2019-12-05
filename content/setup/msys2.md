@@ -41,11 +41,14 @@ Installing openFrameworks
 **IMPORTANT**
 MSYS2 comes in 3 flavors : MSYS (msys2.exe), MINGW32 (mingw32.exe), MINGW64 (mingw64.exe).
 This really important to remember as lots of problem with running OF with MSYS2 come from using the wrong flavor.
-As of today, only **MINGW32** is supported.
-So you must use the mingw32.exe shell to run oF.
 
-For the following instructions, it assumed that MSYS2 is installed in `C:\msys64`.
-If it has been installed elsewhere, adapt the instructions to reflect your MSYS2 installation path
+As of 0.11.0, **MINGW32** and **MINGW64** is supported as two different releases on the [download page](https://openframeworks.cc/download).
+But you must use the correct corresponding shell. ie: **mingw32.exe** shell to run the **32bit OF release** and **mingw64.exe** to run the **64bit OF release**.
+
+For the following instructions, it assumed that MSYS2 is installed in `C:\msys64` and you are using the 32bit OF release. 
+If it has been installed elsewhere, adapt the instructions to reflect your MSYS2 installation path.
+
+**NOTE: If you are using the 64bit OF release, use the `mingw64.exe` wherever `mingw32.exe` is referenced below.** 
 
 Download and unzip the **qt creator / msys2** version of oF. 
 **DO NOT INSTALL** oF in a folder having space or other 
