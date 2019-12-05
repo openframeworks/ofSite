@@ -26,21 +26,35 @@
 
 이 사이트는 [nikola](https://getnikola.com)를 기반으로 합니다. 손쉬운 구축 및 설치, 사용을 위한 스크립트가 최상위 폴더에 준비되어 있습니다.
 
-- ./install.sh는 nikola및 필요한 의존성 패키지를 설치해줍니다. 현재는 리눅스와 매킨토시에서 테스트되었습니다. 매킨토시에서는, 스크립트를 실행하기 전에, 우선 아래 패키지들을 설치해주어야 합니다.
+1. 우선 MacOS에 설치를 하신다면, Xcode command lines tools`가 설치되어있는지 확인해야 합니다:
 
-  ```bash
-  brew install python3
-  sudo easy_install pip
-  brew linkapps python3
-  ```
+    ```bash
+    xcode-select --install
+    ```
+    그런 뒤, 아래의 패키지들을 설치해둡니다. (MacOS에 brew 패키지 매니저가 설치되어있지 않다면, [brew.sh](http://brew.sh/)에서 설치해주세요.)
 
-  그리고 나서 .bashrc 또는 .zshrc 파일에 아래 코드를 추가해주시면 됩니다.
+    
+    ```bash
+    brew install python3
+    sudo easy_install pip
+    brew linkapps python3
+    ```
+  
+2. ofSite 저장소 디렉토리에서 `./install.sh`를 실행하여, 필요한 의존성 패키지들을 시스템에 설치합니다. (이부분은 리눅스와 macOS에서만 테스트 되었습니다.)
+
+3. `install.sh` 스크립트를 실행하기 전에 반드시 `~/nikola/.python` 심볼릭 링크가 python3를 가리키고 있는지 확인하시기 바랍니다.
+
+4. 마지막으로 .bashrc 또는 .bash_profile, zshrc 파일에 아래 코드를 추가해주시면 됩니다:
 
   `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
 
-- ./auto_build.sh는 수정된 파일이 있을때마다 nikola를 구동하고 수정된 파일이 있을 때마다 웹을 빌드합니다. 만약 매킨토시에서 `FileNotFoundError: [Errno 2] No such file or directory: 'asciidoctor'` 에러가 발생할 경우, [이곳](http://asciidoctor.org/docs/install-asciidoctor-macosx/)에서 설명하는 가이드를 따라 asciidoctor를 설치하고 난 뒤, 스크립트를 다시 실행해주십시오.
+ofSite 루트에는 도큐먼트 문서를 위한 두개의 헬퍼 스크립트가 있습니다 
 
-- ./serve.sh는 브라우저에서 확인할 수 있도록 로컬 웹서버를 시작하여 웹사이트를 제공합니다. 
+**./auto_build.sh** : 수정된 파일이 있을때마다 nikola를 구동하고 수정된 파일이 있을 때마다 웹을 빌드합니다. 
+
+만약 MacOS에서 `FileNotFoundError: [Errno 2] No such file or directory: 'asciidoctor'` 에러가 발생할 경우 [이곳](http://asciidoctor.org/docs/install-asciidoctor-macosx/)에서 설명하는 가이드를 따라 asciidoctor를 설치하고 난 뒤, 스크립트를 다시 실행해주십시오.
+
+**./serve.sh** : 브라우저에서 확인할 수 있도록 로컬 웹서버를 시작하여 웹사이트를 제공합니다. 
 
 번역에 참여하는 것과 같이 큰 수정을 할 계획이 있으시다면, 가장 쉬운 방법은 위에서 언급한 마지막 2개의 스크립트를 실행시켜둔 상태에서 콘텐츠 파일을 수정하는 것입니다. 파일의 변경이 있으면 사이트는 자동으로 업데이트 됩니다.
 
