@@ -4,8 +4,8 @@
 오픈프레임웍스를 위한 라즈베리파이 준비하기
 ============
 
-## Raspbian "Stertch" 설치
-0. 가장 최신의 _**Raspbian** (데비안 stretch)_ 이미지를 [라즈베리파이 다운로드 페이지](http://www.raspberrypi.org/downloads)에서 다운받으세요.
+## Raspbian "Buster" 설치
+0. 가장 최신의 _**Raspbian** (데비안 Buster)_ 이미지를 [라즈베리파이 다운로드 페이지](http://www.raspberrypi.org/downloads)에서 다운받으세요.
 1. [라즈베리파이를 위한 SD카드 준비하기](http://elinux.org/RPi_Easy_SD_Card_Setup)의 설명에 따라 SD카드에 Raspbian을 설치해주세요.
 
 ## 라즈베리파이 설정하기
@@ -34,15 +34,18 @@ _오픈프레임웍스를 컴파일 하기 위해 CPU가 RAM의 192MB를 사용�
 0. `B1 Console` 또는 `B2 Console Autologin`를 선택한다
 
 오픈프레임웍스는 또한 하드웨어 가속 KMS 드라이버가 아닌, legacy GL 드라이버를 사용해야합니다.
+오픈프레임웍스 0.11.0 이후로부터는, 'legacy GL 드라이버' 대신, 새 'experimental GL' 드라이버를 사용해야 합니다.
 
 0. `7. Advanced Options`를 선택하고 엔터를 입력합니다.
-	* `G3 Legacy`를 선택하고 엔터를 입력합니다.
-	& 프롬프트로 `The GL driver is disabled`가 뜨면, `<ok>`를 입력합니다.
+	* `GL Legacy`를 선택하고 엔터를 입력합니다.
+	* 옵션 리스트에서 `GL Driver Fake KMS` 또는 `GL Driver Full KMS`를 선택하고 엔터를 입력합니다.
+  
+  Wheezy 혹은 Jessie와 같은 이전 버전의 오픈프레임웍스 배포판을 사용할 경우에는 `legacy driver`를 선택합니다.
 
 Wheezy 배포판과는 다르게, 데비안 Jessie는 부팅시에 IP 주소를 표시해주지 않습니다. `ifconfig`명령을 입력하여 현재 사용하고 있는 IP 주소를 확인할 수 있습니다. 유선 이더넷의 IP주소는 eth0 엔트리에서 볼 수 있습니다. 재부팅되면 바뀔 수도 잇습니다.
 
-0. 재부팅을 물어볼 때 또는 추후 콘솔에서 `sudo reboot`를 입력하여 재부팅합니다.
-0. 인터넷 연결이 되어있는지 확인하고, 최신 패키지로 업데이트 하기위해 아래의 명령어를 입력합니다.
+1. 재부팅을 물어볼 때 또는 추후 콘솔에서 `sudo reboot`를 입력하여 재부팅합니다.
+2. 인터넷 연결이 되어있는지 확인하고, 최신 패키지로 업데이트 하기위해 아래의 명령어를 입력합니다.
 
 ```sh
 sudo apt-get clean
@@ -59,9 +62,9 @@ _Note: 위 과정들은 약간의 시간이 소요될 것입니다._
 
 ```sh
 cd
-wget https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_linuxarmv6l_release.tar.gz
+wget https://openframeworks.cc/versions/v0.11.0/of_v0.11.0_linuxarmv6l_release.tar.gz
 mkdir openFrameworks
-tar vxfz of_v0.9.3_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
+tar vxfz of_v0.11.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
 ```
 
 ## 패키지 설치 및 오픈프레임웍스 컴파일하기:
@@ -79,6 +82,9 @@ sudo ./install_dependencies.sh
 ```sh
 make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project
 ```
+
+## GLFW 대신 EGL 사용하기
+0.11.0 배포판에서는 ofAppGLFWWindow가 기본 윈도우가 됩니다. 만약 예전 방법대로 `ofAppEGLWindow`를 사용하고 싶다면, `libs/openFrameworksCompiled/project/linuxarmv6l/config.linuxarmv6l.default.mk` 파일에서 `USE_GLFW_WINDOW = 1` 를 주석처리하시기 바랍니다.
 
 ## 컴파일 속도 높이기
 라즈베리파이 상에서 네이티브로 컴파일할 경우 시간이 오래 걸립니다. 일반적인 오픈프레임웍스 어플리케이션의 경우에는 코어 라이리브러리보다 훨씬 적게 걸립니다. 크로스 컴파일 해결법을 사용하면 엄청난 시간을 절약할 수 있습니다.
