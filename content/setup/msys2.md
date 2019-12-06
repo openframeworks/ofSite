@@ -60,10 +60,12 @@ cd your_oF_directory/scripts/msys2
 ./install_dependencies.sh`
 ```
 
-Open an **MINGW32** shell (run `C:\msys64\mingw32.exe`) and compile oF libraries:
+next, compile oF libraries:
 
-    cd your_oF_directory/libs/openFrameworksCompiled/project
-    make
+```sh
+cd your_oF_directory/libs/openFrameworksCompiled/project
+make
+```
 
 You can speed-up compilation using parallel build `make -j4` or the number of cores you want it to use
 
