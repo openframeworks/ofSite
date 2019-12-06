@@ -57,7 +57,7 @@ Open an **MINGW32** shell (`C:\msys64\mingw32.exe` ) and install OF dependencies
 
 ```sh
 cd your_oF_directory/scripts/msys2
-./install_dependencies.sh`
+./install_dependencies.sh
 ```
 
 next, compile oF libraries:
