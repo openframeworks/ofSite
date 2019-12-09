@@ -14,9 +14,16 @@ Install Emscripten
 The recommended way to install Emscripten is to install directly from the Emscripten repo with git. 
 Open a terminal at the location where you want the emsdk to be installed and run the followings commands:
 
-For 64bit installs: 
 ```bash
+git clone https://github.com/emscripten-core/emsdk
+cd emsdk
+./emsdk install latest-fastcomp
+./emsdk activate latest-fastcomp
+source ./emsdk_env.sh
+```
 
+If the above doesn't work for any reason. You can try using the incoming SDK which might not be as stable: 
+```bash
 git clone https://github.com/emscripten-core/emsdk
 cd emsdk
 ./emsdk install sdk-incoming-64bit
@@ -24,15 +31,7 @@ cd emsdk
 source ./emsdk_env.sh
 ```
 
-For 32bit installs: 
-```bash
-
-git clone https://github.com/emscripten-core/emsdk
-cd emsdk
-./emsdk install sdk-incoming-32bit
-./emsdk activate sdk-incoming-32bit
-source ./emsdk_env.sh
-```
+For 32bit systems swap the `-64bit` for `-32bit`. 
 
 _Note: Because the current `emsdk` script uses Python2, you may get errors if the default `python` command on your machine is aliased to Python3. In this case, try explicitly running the above commands with Python2. For example: `python2 ./emsdk update`._
 
