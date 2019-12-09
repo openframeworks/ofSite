@@ -38,7 +38,7 @@ Next, play the sound file. If you add this to the setup method, the sound will p
 You can also trigger the play function for mousepress, keys, mousedrag, etc. For example, 
 
 	void testApp::keyPressed  (int key){
-		if(key == "p"){
+		if(key == 'p'){
 			mySound.play();
 		}
 	}
