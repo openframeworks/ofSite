@@ -11,22 +11,35 @@ emscripten 셋업
 Emscripten 설치
 ------------------
 
-[이 페이지](https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html)로 가셔서 여러분이 사용하고 있는 운영체제에 맞는 SDK를 다운받습니다.
-만약 윈도우즈 운영체제를 사용한다면, `.exe`를 더블클릭하여 마법사의 진행을 따라주시면 됩니다.
-만약 매킨토시나 리눅스를 사용한다면, `Portable Emscripten SDK for Linux and OS X`를 찾아, 클릭해 다운로드합니다. 다운로드가 완료되면, 압축을 폴더에 풀고, 터미널을 여러 해당 폴더로 이동한 뒤 아래의 명령을 사용하시면 됩니다:
+Emscripten설치는 git을 사용하여 Emscripten 저장소를 통해 직접 설치하는 것을 추천드립니다.
 
+emsdk가 설치될 위치에서 터미널을 열고 아래의 명령어를 입력하시기 바랍니다:
 
 ```bash
-# Fetch the latest registry of available tools.
-./emsdk update
-
-# Download and install the latest SDK tools.
-./emsdk install latest
-
-# Make the "latest" SDK "active"
-./emsdk activate latest
+git clone https://github.com/emscripten-core/emsdk
+cd emsdk
+./emsdk install latest-fastcomp
+./emsdk activate latest-fastcomp
+source ./emsdk_env.sh
 ```
+
+만약 위 명령어가 어떠한 이유로 인해 동작하지 않는다면, incoming SDK를 사용할 수 있습니다만, 어쩌면 안정적이지 않을수도 있습니다: 
+
+```bash
+git clone https://github.com/emscripten-core/emsdk
+cd emsdk
+./emsdk install sdk-incoming-64bit
+./emsdk activate sdk-incoming-64bit
+source ./emsdk_env.sh
+```
+
+32비트 환경이라면, `-64bit`를 `-32bit`로 변경해주세요.
+
+_주의: 현재의 `emsdk` 스크립트가 Python2를 사용하기 때문에, 여러문의 컴퓨터에서 `python`이 Python3의 alias라면 에러가 발생할 수 있습니다. 이 경우, 명시적으로 Python2를 사용하여 위 명령을 실행해주세요 : `python2 ./emsdk update`._
+
 설치과정에 약간의 시간이 소요됩니다. 설치가 끝나면, `source ./emsdk_env.sh`를 입력하여 활성화된 Emscripten의 시스템 경로를 설정해줍니다. 이 명령의 출력을 복사하여 `.profile`파일에 추가할 수 있습니다. 이렇게 하여 저장된 변수는 다음 세션에서도 자동으로 적용됩니다.
+
+_주의 : 만약 이전에 이미 설치된 emscripten가 있다면, OF_FOLDER내의 컴파일된 코드들을 삭제해야 합니다. 컴파일을 시도하기 전에 `OF_FOLDER/libs/openFrameworksCompiled/lib/emscripten/`내 모든 파일 또는 `obj`폴더와, 여러분의 프로젝트 폴더들의 모든 `obj/`폴더를 삭제해주세요_
 
 emscripten을 사용하여 오픈프레임웍스 프로젝트 컴파일하기
 --------------------------------------
