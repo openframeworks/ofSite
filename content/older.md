@@ -8,6 +8,12 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**release v0.10.1**
+
+Browse all platforms: [release v0.10.1][241]
+
+--------------------------------
+
 **release v0.10.0**
 
 windows: [msys2/qtcreator][232] | [visual studio 2017][233]
@@ -642,3 +648,4 @@ changes: [changelog for 0.04][67]
 [238]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_android_release.tar.gz
 [239]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_linuxarmv6l_release.tar.gz
 [240]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_linuxarmv7l_release.tar.gz
+[241]: https://openframeworks.cc/versions/v0.10.1/
