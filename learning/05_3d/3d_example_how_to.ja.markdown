@@ -24,5 +24,5 @@ void ofApp::draw(){
 }
 ```
 
-openFramworksの`addons/3DModelLoaderExample/`フォルダの中に、完成された作動するサンプルが入っています。
+openFramworksの`examples/3d/3DModelLoaderExample/`フォルダの中に、完成された作動するサンプルが入っています。
 
