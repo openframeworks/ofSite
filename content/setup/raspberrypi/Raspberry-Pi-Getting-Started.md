@@ -37,7 +37,6 @@ openFrameworks does not use the X11 Desktop for running OF applications. You can
 For openFrameworks 0.11.0 and onwards OF needs to use the new experimental GL driver instead of the legacy driver.
 
 0. Select `7 Advanced Options` and hit Enter
-	* Select `GL Driver` and hit Enter
 	* Select either `GL Driver Fake KMS` or `GL Driver Full KMS` or from the options and hit Enter
 
 For older OF releases with Wheezy or Jessie select the legacy driver instead.
