@@ -99,5 +99,5 @@ Here is what the output should look like in this case.
 
 ![image of outpu](How_to_save_a_file_output.jpg)
 
-For more info refer to the examples/graphics/imageSaverExample.
+For more info refer to the examples/input_output/imageSaverExample.
 
