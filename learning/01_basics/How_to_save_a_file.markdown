@@ -7,7 +7,7 @@ openFrameworks will save to your bin/data folder unless you specify another file
 
 ![File location bin/data](How_to_save_a_file_output_whereTo.png)
 
-If you want to save many files, each file will need to have its own unique file name. A quick way of doing this is to use the current timestamp because it is never the same. So instead of naming it ```"myFile.xml" ```, which will write over itself everytime you save, you can do ```"myFile_" + ofGetTimestampString() + ".xml"``` to give each file its own name. 
+If you want to save many files, each file will need to have its own unique file name. A quick way of doing this is to use the current timestamp because it is never the same. So instead of naming it ```"myFile.xml"```, which will write over itself everytime you save, you can do ```"myFile_" + ofGetTimestampString() + ".xml"``` to give each file its own name. 
 
 ![using timeStamps versus not](How_to_save_a_file_usingTimeStamps.png)
 
@@ -97,7 +97,7 @@ the default is ```OF_IMAGE_QUALITY_BEST``` and all the options are: ```OF_IMAGE_
 
 Here is what the output should look like in this case. 
 
-![image of outpu](How_to_save_a_file_output.jpg)
+![image of output](How_to_save_a_file_output.jpg)
 
-For more info refer to the examples/graphics/imageSaverExample.
+For more info refer to the examples/input_output/imageSaverExample.
 
