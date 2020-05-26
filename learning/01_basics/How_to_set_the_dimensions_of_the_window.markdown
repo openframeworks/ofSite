@@ -7,12 +7,12 @@
 
 The ```ofSetupOpenGL ``` method allows you to specify how you want your project displayed on screen. 
 
-	ofSetupOpenGL(width, height, DISPLAY_MODE);
+	ofSetupOpenGL(width, height, OF_GAME_MODE);
 
 
 The first two parameters specify the width and height of the window:
 
-	ofSetupOpenGL(1024, 768, DISPLAY_MODE);
+	ofSetupOpenGL(1024, 768, OF_GAME_MODE);
 	
 With the third parameter, you can specify how you want the window to be displayed using three possible modes:
 
