@@ -5325,7 +5325,7 @@ void ofApp::draw(){
     ofDrawRectangle(10,10,40,40);    // draw a square rectangle
 }
 ~~~~
-Rectangle width will be now 20px heigh!
+Rectangle width will now be 20px but the height remains 40px.
 
 
 
