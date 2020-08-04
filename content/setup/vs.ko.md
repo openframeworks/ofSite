@@ -19,7 +19,7 @@ Windows 운영체제에서 Visual Studio Comminuty 2017과 함께 오픈프레�
 비디오 코덱
 -------
 
-오픈프레임웍스 0.9.0 이후의 배포판부터는, 비디오플레이어는 더이상 QuickTime이 아닌 DirectShow를 사용합니다. QuickTime 비디오파일 및 MP4와 같은 비디 파일을 사용하기 위해서는, 여러분의 컴퓨터에 코덱을 설치해줄 필요가 있습니다. 저희는 무료로 사용이 가능하고, 다양한 비디오파일을 지원하는 [K-Lite Codec Pack - Version 12.1.0 Full April 18th 2016][1] 을 추천드립니다. 주의: 더 높은 버전의 K-Lite는 OF에서 필요로 하는 코덱을 포함하지 않을 수 있습니다.
+오픈프레임웍스 0.9.0 이후의 배포판부터는, 비디오플레이어는 더이상 QuickTime이 아닌 DirectShow를 사용합니다. QuickTime 비디오파일 및 MP4와 같은 비디 파일을 사용하기 위해서는, 여러분의 컴퓨터에 코덱을 설치해줄 필요가 있습니다. 저희는 무료로 사용이 가능하고, 다양한 비디오파일을 지원하는 [K-Lite Codec Pack][1] 을 추천드립니다. 
 
 자동으로 미리컴파일되는 헤더파일 비활성화하기
 -------
@@ -40,4 +40,4 @@ Windows 운영체제에서 Visual Studio Comminuty 2017과 함께 오픈프레�
 <iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 [0]: https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15
-[1]: http://filehippo.com/download_klite_codec_pack/67445/
+[1]: https://ninite.com/klitecodecs/
