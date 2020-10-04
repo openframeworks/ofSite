@@ -2138,7 +2138,7 @@ _description: _
 
 Coordinates (x, y) are considered inside the rectangle if:
 
-`x > rectMinX && x < rectMinX && y > rectMinY && y < rectMaxY`
+`x > rectMinX && x < rectMaxX && y > rectMinY && y < rectMaxY`
 
 
 
