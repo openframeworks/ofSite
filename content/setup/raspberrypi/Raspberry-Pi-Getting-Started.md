@@ -131,4 +131,10 @@ make run
 
 It is critical to keep your application directory 3 levels below the openFrameworks directory.
 
+## Tips for 0.11.0 / Raspberry Pi 4 
+- Currently the 0.11.0 release has 4x Anti Aliasing as default for the GLFW window. This can cause quite a big hit to framerate. 0.11.1 Patch release [will fix this](https://github.com/openframeworks/openFrameworks/pull/6503/files), but you can also set the window settings manually in main.cpp to set numSamples to 0.
+- If you don't want to run PI apps from the X desktop enviornment but want to use the GLFW window system ( or have a Raspberry Pi 4 which requires X ) you can run an OF app without the desktop. First make sure you have X installed with: ```sudo apt-get install xorg``` then launch your app with: ```startx ./polygonExample -- -s off```. Your app will run with an X window but without the overhead of the desktop enivornment.    
+- If you want to run an app headless you can use XVFB ( X Virtual Framebuffer ). First install XVFB with: ```sudo apt-get install xvfb``` Then run your app with: ```xvfb-run ./polygonExample &```. You won't see a window, but GL operations will be executed. 
+- Finally for users who are looking for the old EGL style window support but with Raspberry Pi 4. This [work in progress addon](https://forum.openframeworks.cc/t/new-ofxaddon-ofxrpi4window/34388) is very close to providing similar functionality. 
+
 Have fun! :)
