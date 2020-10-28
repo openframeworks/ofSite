@@ -29,10 +29,10 @@ _We need to make sure the CPU has 192MB of RAM in order to compile openFramework
 	* Select `A3 Memory Split` and hit Enter
 	* Type `64` and Hit `<ok>`
 
-openFrameworks does not use the X11 Desktop for running OF applications. You can save GPU memory by disabling it. This is optional but suggested.
+openFrameworks requires X11 Desktop for Raspberry Pi 4 and newer. If you are on an older Raspberry Pi model or you want to run your application with X but from console ( see tips at bottom of this document ) you can save GPU memory by disabling it. To do that: 
 
 0. Select `3 Boot Options`
-0. Select `B1 Console` or `B2 Console Autologin`
+0. Select `B1 Console` or `B2 Console Autologin` or if you want a Desktop enviroment select `B4 Desktop with Autologin` 
 
 For openFrameworks 0.11.0 and onwards OF needs to use the new experimental GL driver instead of the legacy driver.
 
