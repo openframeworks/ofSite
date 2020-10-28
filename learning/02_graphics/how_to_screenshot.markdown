@@ -20,13 +20,13 @@ Initialize an ofImage labeled "img".
 Draw something! For the sake of example, draw a circle in the  ```draw()``` function. 
 
 
-	void ofApp:draw(){
+	void ofApp::draw(){
 		ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, 200);
 	}
 
 Next, trigger grabbing and saving the screen. Here, when "x" is pressed, a rectangle starting at point (0,0) with a width and height of ```ofGetWidth()``` and ```ofGetHeight()``` is grabbed and saved.  
 
-	void ofApp:keyPressed(int key){
+	void ofApp::keyPressed(int key){
 		if(key == 'x'){
 			img.grabScreen(0, 0 , ofGetWidth(), ofGetHeight());
 			img.save("screenshot.png");
