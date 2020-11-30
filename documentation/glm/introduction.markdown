@@ -2,7 +2,7 @@
 
 OpenGL Mathematics [GLM](https://glm.g-truc.net/0.9.8/index.html) has become the defacto standard for graphics vector math in C++ in the latest years. It's syntax mimics that of glsl so working with it while working with OpenGL, shaders... makes things easier cause the syntax is almost the same across the different languages.
 
-openFrmaeworks, since version 0.10 uses GLM as it's default vector math library in the core and although old projects using ofVec* classes should work with minimal changes, if you are starting a new project we recomend to use GLM instead.
+openFrameworks, since version 0.10 uses GLM as it's default vector math library in the core and although old projects using ofVec* classes should work with minimal changes, if you are starting a new project we recomend to use GLM instead.
 
 ### Namespace
 
