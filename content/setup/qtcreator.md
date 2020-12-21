@@ -4,7 +4,7 @@
 Qt Creator
 ==========
 
-OpenFrameworks 0.10.0 has been tested with Qt Creator 4.6.0 and 4.6.1, we recomend to use 4.6.1 later versions might have different steps to follow or not work as expected.
+OpenFrameworks 0.10.0 has been tested with Qt Creator 4.6.0 and 4.6.1, we recomend to use 4.6.1 as later versions might have different steps to follow or not work as expected.
 
 You can find all versions of Qt Creator here:
 [http://download.qt.io/official_releases/qtcreator/](http://download.qt.io/official_releases/qtcreator/)
