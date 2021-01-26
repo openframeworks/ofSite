@@ -17,17 +17,8 @@ Open a terminal at the location where you want the emsdk to be installed and run
 ```bash
 git clone https://github.com/emscripten-core/emsdk
 cd emsdk
-./emsdk install latest-fastcomp
-./emsdk activate latest-fastcomp
-source ./emsdk_env.sh
-```
-
-If the above doesn't work for any reason. You can try using the incoming SDK which might not be as stable: 
-```bash
-git clone https://github.com/emscripten-core/emsdk
-cd emsdk
-./emsdk install sdk-incoming-64bit
-./emsdk activate sdk-incoming-64bit
+./emsdk install sdk-1.40.0-64bit
+./emsdk activate sdk-1.40.0-64bit
 source ./emsdk_env.sh
 ```
 
