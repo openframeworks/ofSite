@@ -15,7 +15,7 @@ Linux
 
 Before using OF in linux you need to run some install scripts, follow the instructions [here](../linux-install/) if you haven't done so yet.
 
-In linux even if Qt Creator is available in the official repositories for your distributions, it's recommended to install qtcreator from their webpage instead. The one that comes with the distribution (at least in ubuntu) might be outdated or have missing core dependenices, and installing the one from the webpage you'll get support for the clang plugin which analizes the code while you type marking any errors more accurately than the default qtcreator static analizer.
+In linux even if Qt Creator is available in the official repositories for your distributions, it's recommended to install qtcreator from their webpage instead. The one that comes with the distribution (at least in ubuntu) might be outdated or have missing core dependencies, and installing the one from the webpage you'll get support for the clang plugin which analizes the code while you type marking any errors more accurately than the default qtcreator static analizer.
 
 If you decide to install Qt Creator using your distribution package manager, make sure to check the package `qbs` was also included as it is sometimes not installed by default (e.g. Archlinux). Qt Creator will throw critical errors without it.
 
