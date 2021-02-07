@@ -38,7 +38,7 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>osx</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a></p><br/>
+	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a> ( macOS 11.0+ use nightly builds at bottom of page ) </p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/xcode">xcode</a></p>
 	        <p><a href="../setup/qtcreator">qt creator ${of.msg("(experimental)", locals())}</a></p>
