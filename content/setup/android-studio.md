@@ -40,9 +40,20 @@ This is the C/C++ compiler, headers and libraries for Android. OF 0.10.0 has bee
 - Windows 32: [https://dl.google.com/android/repository/android-ndk-r15c-windows-x86.zip](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86.zip)
 - Windows 64: [https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip)
 
+
+Once you downloaded the android ndk .zip, you'll have to install it in the "ndk" folder of android studio sdk. 
+To know the path of the android studio sdk, open android studio. You should see the welcome screen. If you have an open project close it with "File" > "Close project".  Click on the button at the bottom right : "Configure" > "SDK manager". Can also be found in "File" > "Settings" > "File 
+At the top you should have a path pointing to the SDK location, called "Android SDK location". 
+On windows it is probably :
+`C:\Users\%userprofile%\AppData\Local\Android\sdk\`
+
+Now in the file explorer go to that location, and look for a "ndk" folder. If it doesn't exist create one, and paste the extracted `android-ndk-r15c` folder here...
+
+
 <h3>Download openFrameworks</h3>
 
-[Download](/download) it from the downloads page:
+[Download](/download) it from the downloads page.
+Once downloaded, extract it in the location of your choice.
 
 
 <h3>Open the project</h3>
@@ -57,11 +68,13 @@ Then browse to any of the android examples in `examples/android`.
 
 Accept all the prompts and wait for Android Studio to set up the project.
 
-You'll have to wait a bit: the first sync will automatically build openFrameworks. If it doesn't work (Gradle sync still fails), try looking at the Troubleshooting tips.  In some cases, clicking on the error in the console window will take you to a solution, such as installing various versions of the Android SDK.  In some cases, you may have to do this several times to solve several missing dependencies.
+You'll have to wait a bit: the first sync will automatically build openFrameworks. If it doesn't work (Gradle sync still fails), try looking at the Troubleshooting tips bellow.  In some cases, clicking on the error in the console window will take you to a solution, such as installing various versions of the Android SDK.  In some cases, you may have to do this several times to solve several missing dependencies.
 
 <h3>Build and run</h3>
 
 Press the Play button next to the `androidEmptyExample` shown in the toolbar. With any luck, it should build the app, and momentarily deploy it to your Android device (or prompt you to deploy it on a suitable emulator). If the app runs, congratulations! You have setup openFrameworks.
+
+To deploy on your android device you may have to download the appropriate SDK (deppending on your android version). Your device have to be in "Develloper mode", with Usb debug activated.
 
 Creating new projects
 --------------------
@@ -76,6 +89,15 @@ before being able to run the project generator
 
 Troubleshooting
 --------------
+
+- If you have an error like this : `Caused by: org.gradle.api.GradleException: You havent set the path to the NDK library. Please set the property 'ndk.dir' in C:\Users\%userprofile%\%path_to_of%\examples\android\%example_name%\local.properties to the root of the NDK library, or go to Project Structure and select the folder.`
+	- Click on the link provided by the error, it should open a file.
+	- in that file there is probably something a line like `sdk.dir=C\:\\Users\\%username%\\AppData\\Local\\Android\\Sdk` (Windows) 
+	- dupplicate this line and change "sdk.dir" in "ndk.dir", and add "\\ndk\\android-ndk-15" at the end. You should have something like that : 						`ndk.dir=C\:\\Users\\%username%\\AppData\\Local\\Android\\Sdk\\ndk\\android-ndk-r15c` 
+	- Save the file, close the project and try to open the project again
+	(You may have to do this for every example, but once you done it with the "empty android example" it should be fine)
+
+- If the error is asking to, install `Android SDK build tools`. In android studio, no project opened, go to "Configure" > "SDK manager" > "SDK Tools". Check the `Show package details` at the bottom. Install version 25.0.3 of `Android SDK buil tools`.
 
 - You may need to adjust the following numbers to match your installed Android Studio and Android SDK. Android Studio should offer to fix these values for you when you open the appropriate build files.
 
