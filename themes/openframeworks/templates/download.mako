@@ -38,7 +38,7 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>osx</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a> ( macOS 11.0+ use nightly builds at bottom of page ) </p><br/>
+	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/xcode">xcode</a></p>
 	        <p><a href="../setup/qtcreator">qt creator ${of.msg("(experimental)", locals())}</a></p>
@@ -49,8 +49,7 @@ $(document).ready(function(){
 	        <h2>linux</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64gcc6_release.tar.gz">linux gcc6 or later</a></p>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64gcc5_release.tar.gz">linux gcc5</a> /
-			   <a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64gcc4_release.tar.gz">linux gcc4</a></p><br/>
+	        <br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/linux-install">linux install</a></p>
 	        <p><a href="../setup/qtcreator">qt creator</a></p>
@@ -61,8 +60,8 @@ $(document).ready(function(){
 	        <h2>windows</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_vs2017_release.zip">visual studio (2017)</a></p>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_msys2_release.zip">qt creator / msys2 32bit</a></p>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_msys264_release.zip">qt creator / msys2 64bit</a></p><br/>
+	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_msys2_mingw32_release.zip">qt creator / msys2 32bit</a></p>
+	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_msys2_mingw64_release.zip">qt creator / msys2 64bit</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/vs">visual studio</a></p>
 	        <p><a href="../setup/qtcreator">qt creator</a></p>
