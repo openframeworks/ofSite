@@ -141,7 +141,7 @@ We don't really expect that openFrameworks should be used as a teaching tool for
 [3]: http://www.youtube.com/results?search_query=openFrameworks&search=tag&search_sort=video_date_uploaded
 [4]: http://search.twitter.com/search?q=openFrameworks
 [5]: http://www.creativeapplications.net/?cat=261
-[6]: http://www.itee.uq.edu.au/~comp3300/Resources/C_C++_notes.pdf
+[6]: http://doc.gold.ac.uk/~mus02mg/creativecomputation/wp-content/uploads/c-5days.pdf
 [7]: http://wiki.openframeworks.cc/index.php?title=OF_for_Processing_users
 [8]: http://oreilly.com/catalog/9780596154141/
 [9]: http://www.cplusplus.com/doc/tutorial/
