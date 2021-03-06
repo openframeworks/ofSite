@@ -97,7 +97,7 @@ Troubleshooting
 	- Save the file, close the project and try to open the project again
 	(You may have to do this for every example, but once you done it with the "empty android example" it should be fine)
 
-- If the error is asking to, install `Android SDK build tools`. In android studio, no project opened, go to "Configure" > "SDK manager" > "SDK Tools". Check the `Show package details` at the bottom. Install version 25.0.3 of `Android SDK buil tools`.
+- If the error is asking to, install `Android SDK build tools`. In android studio, no project opened, go to "Configure" > "SDK manager" > "SDK Tools". Check the `Show package details` at the bottom. Install version 25.0.3 of `Android SDK build tools`.
 
 - You may need to adjust the following numbers to match your installed Android Studio and Android SDK. Android Studio should offer to fix these values for you when you open the appropriate build files.
 
