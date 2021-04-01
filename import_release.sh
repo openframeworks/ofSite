@@ -7,8 +7,11 @@ cd /home/ofadmin/openFrameworks.cc/
 mkdir versions/v${version}
 cd versions/v${version}/
 
-if [ -f of_v${version}_msys2_release.zip ]; then rm of_v${version}_msys2_release.zip; fi
-wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_msys2_release.zip 2> ~/logs/import_release.log
+if [ -f of_v${version}_msys2_mingw32_release.zip ]; then rm of_v${version}_msys2_mingw32_release.zip; fi
+wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_msys2_mingw32_release.zip 2> ~/logs/import_release.log
+
+if [ -f of_v${version}_msys2_mingw64_release.zip ]; then rm of_v${version}_msys2_mingw64_release.zip; fi
+wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_msys2_mingw64_release.zip 2> ~/logs/import_release.log
 
 # if [ -f of_v${version}_vs2015_release.zip ]; then rm of_v${version}_vs2015_release.zip; fi
 # wget http://ci.openframeworks.cc/versions/v${version}/of_v${version}_vs2015_release.zip 2>> ~/logs/import_release.log
