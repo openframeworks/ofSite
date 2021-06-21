@@ -67,7 +67,7 @@ _inlined_description: _
 
 _description: _
 
-See [ofBackground](../ofGraphics/!#show_ofBackground)
+See [ofBackground](../ofGraphics/#!show_ofBackground)
 
 
 
