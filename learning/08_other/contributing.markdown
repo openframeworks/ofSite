@@ -141,7 +141,7 @@ Congrats!  You've just modified the openFrameworks documentation, contributed to
 
 #### Adding documentation to the core
 
-The documentation in the core files uses [Doxygen](http://www.stack.nl/~dimitri/doxygen/). Have a look at the doxygen website or at the other files in the core to get an idea about the syntax.
+The documentation in the core files uses [Doxygen](https://www.doxygen.nl/index.html). Have a look at the doxygen website or at the other files in the core to get an idea about the syntax.
 
 Usually, you should add the documentation to the markdown files. But there are case when you need to edit the files contained in the openFrameworks core files, for example when the signature of a method is different from what the documentation says, or the description is wrong or outdated.
 
