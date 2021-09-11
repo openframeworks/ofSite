@@ -13,7 +13,7 @@ _extends: _
 ofPath is a way to create a path or multiple paths consisting of
 points. It allows you to combine multiple paths consisting of points into
 a single vector data object that can be drawn to the screen, manipulated
-point by point, or manipulated with it's child subpaths. It is better at
+point by point, or manipulated with its child subpaths. It is better at
 representing and manipulating complex shapes than the ofPolyline and more
 easily represents multiple child lines or shapes as either ofSubPath or
 ofPolyline instances. By default ofPath uses ofSubPath instances. Closing
