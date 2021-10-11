@@ -19,7 +19,7 @@ Video Codecs
 -------
 Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickTime.  To support QuickTime video files or files like MP4 video you will need to install the video codecs onto your machine.  We recommend the [K-Lite Codec Pack][1] which is free to download and adds support for many video formats. 
 
-**The current version of K-Lite requires an additonal step:**
+**NOTE: The current version of K-Lite requires an additonal step:**
 1. Open the Code Tweak Tool ( which is part of K-Lite ) 
 2. Click the button: General -> Fixes 
 3. Check '**Re-register base Directshow Filters**' and hit Apply
