@@ -2912,7 +2912,7 @@ _inlined_description: _
 Draws a rectangle from point x,y with a given width and height.
 ~~~~{.cpp}
 void ofApp::draw(){
-    ofDrawRect(10,10,100,100);
+    ofDrawRectangle(10,10,100,100);
 }
 ~~~~
 

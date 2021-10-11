@@ -7,7 +7,7 @@ Xcode Setup Guide
 First Steps
 ----------
 
-1. Install Xcode from the [OSX App Store](https://itunes.apple.com/ca/app/xcode/id497799835?mt=12)
+1. Install Xcode 11 or newer from the [OSX App Store](https://itunes.apple.com/ca/app/xcode/id497799835?mt=12) or [Apple Developer Portal](https://developer.apple.com/download/more/) 
 2. Install Xcode's command line tools
 
 To install the command line tools, first finish installing Xcode then open up a terminal (you can find it at Applications/Utilities/Terminal.app), type the following and hit enter:
