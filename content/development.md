@@ -9,10 +9,11 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 
 
 <ul class="external_links" >
-    <li><a href="https://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev mailing list</a></li>
-    <li><a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li>
-    <li><a href="https://forum.openframeworks.cc/">forum</a></li>
-    <li><a href="https://github.com/openframeworks/openFrameworks">github</a></li>
+	<!-- <li><a href="https://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev mailing list</a></li>
+	<li><a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li> -->
+	<li><a href="https://forum.openframeworks.cc/">forum</a></li>
+	<li><a href="https://github.com/openframeworks/openFrameworks">github</a></li>
+	<li><a href="https://ofslack.herokuapp.com">slack</a></li>
 </ul>
 
 

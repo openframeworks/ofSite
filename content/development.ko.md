@@ -10,10 +10,11 @@
 
 
 <ul class="external_links" >
-    <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">오픈프레임웍스 개발 메일링 리스트</a></li>
-    <li><a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li>
+    <!-- <li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">오픈프레임웍스 개발 메일링 리스트</a></li>
+    <li><a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li> -->
     <li><a href="https://forum.openframeworks.cc/">포럼</a></li>
     <li><a href="https://github.com/openframeworks/openFrameworks">github</a></li>
+    <li><a href="https://ofslack.herokuapp.com">slack</a></li>
 </ul>
 
 
