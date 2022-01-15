@@ -2,7 +2,6 @@
 .. title: development
 
 ###openFrameworks development is collaborative. It thrives on the contributions of <a href="https://github.com/openframeworks/openFrameworks/contributors">many people</a>, who engage in frequent discussion on the <a href="https://forum.openframeworks.cc/">forums</a>, <a href="https://github.com/openframeworks/openFrameworks">github</a> and <a href="https://ofslack.herokuapp.com">slack</a>.
-<!-- <a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a>, and the <a href="https://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev mailing list</a>. -->
 
 We use git, a distributed versioning system, which means also that people can branch, experiment, and make suggestions. If you look at the network diagram on <a href="http://github.com/openframeworks/openFrameworks">GitHub</a>, it's looks like some alien diagram, full of weaving branches, code pulling apart and coming together. There's a huge community, all over the world, working on the core code: fixing bugs, submitting pull requests, and shaping the tool the way they want to see it.
 
@@ -10,8 +9,6 @@ Visit the <a href="../community">community page</a> for other ways to contribute
 
 
 <ul class="external_links" >
-	<!-- <li><a href="https://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-dev mailing list</a></li>
-	<li><a href="http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li> -->
 	<li><a href="https://forum.openframeworks.cc/">forum</a></li>
 	<li><a href="https://github.com/openframeworks/openFrameworks">github</a></li>
 	<li><a href="https://ofslack.herokuapp.com">slack</a></li>
