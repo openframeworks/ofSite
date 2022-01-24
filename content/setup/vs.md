@@ -3,11 +3,11 @@
 
 visual studio setup guide
 =========================
-Here are the setup instructions for those of you who wish to work with Visual Studio Community 2017 on Windows.
+Here are the setup instructions for those of you who wish to work with Visual Studio Community 2019 on Windows. Note: OF should be compatible with Visual Studio 2017, 2019 and newer. 
 
 Download
 --------
-> [Download Visual Studio Community 2017][0]
+> [Download Visual Studio Community 2019][0]
 
 Install
 -------
@@ -26,12 +26,12 @@ Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickT
 
 Disable Automatic Precompiled Header
 -------
-Visual Studio creates a hidden folder ".vs", which used to be ~10 kB in Visual Studio 2015; however, Visual Studio 2017 by default takes a few hundred megabytes for each project due to optimization of IntelliSense (code completion). This is not ideal on a laptop or a tablet with a small storage. You can disable the optimization and reduce the folder size at the cost of speed of IntelliSense. To do so, go to Tools > Options, then navigate to Text Editor > C/C++ > Advanced, and set Disable Automatic Precompiled Header to True.
+Visual Studio creates a hidden folder ".vs", which used to be ~10 kB in Visual Studio 2015; however, Visual Studio 2019 by default takes a few hundred megabytes for each project due to optimization of IntelliSense (code completion). This is not ideal on a laptop or a tablet with a small storage. You can disable the optimization and reduce the folder size at the cost of speed of IntelliSense. To do so, go to Tools > Options, then navigate to Text Editor > C/C++ > Advanced, and set Disable Automatic Precompiled Header to True.
 
 openFrameworks plugin for Visual Studio
 ---------------------------------------------------
 
-Before you're able to use openFrameworks with Visual Studio, you have to have Common Tools for Visual C++ 2017 installed, otherwise you'll get an error message later on. To install, go to File > New > Project and choose Visual C++ in the installed templates section. There now should be an option to install the tools, if they aren't already. Select it, confirm with 'OK' and follow the instructions.
+**NOTE: Not tested with VS 2019 and newer.** Before you're able to use openFrameworks with Visual Studio, you have to have Common Tools for Visual C++ 2017 installed, otherwise you'll get an error message later on. To install, go to File > New > Project and choose Visual C++ in the installed templates section. There now should be an option to install the tools, if they aren't already. Select it, confirm with 'OK' and follow the instructions.
 
 From Visual Studio, go to Tools > Extensions and Updates. Select online and search for openFrameworks and install the plugin.
 
@@ -41,5 +41,5 @@ There's more information in the [Visual Studio Gallery page](https://marketplace
 
 <iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-[0]: https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15
+[0]: https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=16
 [1]: https://ninite.com/klitecodecs/
