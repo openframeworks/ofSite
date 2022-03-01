@@ -38,7 +38,7 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>osx</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/xcode">xcode</a></p>
 	        <p><a href="../setup/qtcreator">qt creator ${of.msg("(experimental)", locals())}</a></p>
@@ -48,7 +48,7 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>linux</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linux64gcc6_release.tar.gz">linux gcc6 or later</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linux64gcc6_release.tar.gz">linux gcc6 or later</a></p>
 	        <br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/linux-install">linux install</a></p>
@@ -59,9 +59,9 @@ $(document).ready(function(){
         <div id="download-latest-platform-last">
 	        <h2>windows</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_vs2017_release.zip">visual studio (2017-2022)</a></p>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_msys2_mingw32_release.zip">qt creator / msys2 32bit</a></p>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_msys2_mingw64_release.zip">qt creator / msys2 64bit</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_vs2017_release.zip">visual studio (2017-2022)</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_mingw32_release.zip">qt creator / msys2 32bit</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_mingw64_release.zip">qt creator / msys2 64bit</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/vs">visual studio</a></p>
 	        <p><a href="../setup/qtcreator">qt creator</a></p>
@@ -79,7 +79,7 @@ $(document).ready(function(){
 	        <h2>ios</h2>
 	        <p><em>osx only</em></p><br/>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_ios_release.zip">xcode</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_ios_release.zip">xcode</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/iphone">xcode</a></p>
         </div>
@@ -87,7 +87,7 @@ $(document).ready(function(){
         <div id="download-latest-platform-last">
 	        <h2>android</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_android_release.tar.gz">android</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_android_release.tar.gz">android</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/android-studio">android studio</a></p>
         </div>
@@ -103,7 +103,7 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>linux&nbsp;armv6</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linuxarmv6l_release.tar.gz">linux armv6</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linuxarmv6l_release.tar.gz">linux armv6</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/raspberrypi">raspberry pi</a></p>
         </div>
@@ -111,7 +111,7 @@ $(document).ready(function(){
         <div id="download-latest-platform-last">
 	        <h2>linux&nbsp;armv7</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="/versions/v${currentVersion}/of_v${currentVersion}_linuxarmv7l_release.tar.gz">linux armv7</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linuxarmv7l_release.tar.gz">linux armv7</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/pandaboard">pandaboard</a></p>
 	        <p><a href="../setup/armv7">generic armv7</a></p>
