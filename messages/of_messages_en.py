@@ -36,7 +36,7 @@ MESSAGES = {
 
     'please_see': 'Please see the <a href="https://github.com/openframeworks/openFrameworks/blob/${currentVersion}/CHANGELOG.md">changelog</a> to get an overview of the differences between versions.',
 
-    'intro': 'To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license/">MIT License</a>.',
+    'intro': 'To use openFrameworks you will need an IDE, and the setup guide for your platform can walk you through this. Please post any bugs on the <a href="http://github.com/openframeworks/openFrameworks/issues">issues</a> page, and post to the <a href="http://forum.openframeworks.cc">forum</a> if you have any other questions. openFrameworks is distributed under the <a href="../about/license/">MIT License</a>.  NOTE: If the Github links below do not work for you, please try the <a href="https://openframeworks.cc/versions/v${currentVersion}/">mirror links here</a>.',
 
     'download_openframeworks': 'download<br/>openFrameworks for',
 
