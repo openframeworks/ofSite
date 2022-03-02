@@ -8,10 +8,9 @@
 その他の方法で貢献したいのであれば、[コミュニティー](../community)のページを訪れてみてください。
 
 <ul class="external_links" >
-		<li><a href="http://dev.openframeworks.cc/listinfo.cgi/of-dev-openframeworks.cc">of-devメーリングリスト</a></li>
-		<li><a href="https://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39">IRC</a></li>
-		<li><a href="https://forum.openframeworks.cc/">フォーラム</a></li>
-		<li><a href="https://github.com/openframeworks/openFrameworks">github</a></li>
+	<li><a href="https://forum.openframeworks.cc/">フォーラム</a></li>
+	<li><a href="https://github.com/openframeworks/openFrameworks">github</a></li>
+	<li><a href="https://ofslack.herokuapp.com">slack</a></li>
 </ul>
 
 <hr>
