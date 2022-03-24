@@ -26,7 +26,7 @@ BLOG_TITLE = "openFrameworks"  # (translatable)
 if socket.gethostbyname(socket.gethostname()) == socket.gethostbyname('openframeworks.cc'):
     SITE_URL = "https://openframeworks.cc/"
 else:
-    SITE_URL = "http://localhost:8000"
+    SITE_URL = "http://localhost:8000/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://openframeworks.cc/"

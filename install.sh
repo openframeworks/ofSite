@@ -1,9 +1,23 @@
 #!/usr/bin/env bash
+set -e
+# capture failing exits in commands obscured behind a pipe
+set -o pipefail
+
+
+# trap any script errors and exit
+trap "trapError" ERR
+
+trapError() {
+	echo
+	echo " ^ Received error installing website static generator ^"
+	exit 1
+}
+
 OS=$(uname -s)
 PIP=pip
 if [ "$OS" == "Linux" ]; then
 	sudo apt-get install python3 python3-pip asciidoctor
-	PIP=$(ls /usr/bin/pip-3* | head -n1)
+	PIP=$(ls /usr/bin/pip* | head -n1)
 	if [ "$PIP" == "" ]; then
 		PIP=$(ls /usr/bin/pip3 | head -n1)
 	fi
@@ -22,7 +36,8 @@ sudo $PIP install virtualenv
 virtualenv -p $(which python3) nikola
 source nikola/bin/activate
 pip install --upgrade pip
-pip install --upgrade "Nikola[extras]"
-pip install --upgrade python-Levenshtein
+pip install --upgrade "Nikola[extras]"==7.7.4
+pip install --upgrade python-Levenshtein==0.12.0
 pip install --upgrade pathlib
-pip install --upgrade beautifulsoup4
+pip install --upgrade beautifulsoup4==4.4.1
+pip install --upgrade markdown==2.6.5
