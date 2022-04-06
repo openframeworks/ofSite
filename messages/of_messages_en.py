@@ -21,6 +21,8 @@ MESSAGES = {
     'The forum is a place to meet other people working with openFrameworks. It\'s a place to share your work, or find help solving problems.',
 
     'Latest images': 'Latest images',
+    
+    'Events': 'Events',
 
     'Latest posts': 'Latest posts',
 
