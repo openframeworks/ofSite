@@ -48,8 +48,7 @@ $(document).ready(function(){
 <div class="home-links">
 
 <div class="donations">
-<script src="https://donorbox.org/widget.js" paypalExpress="false"></script><iframe src="https://donorbox.org/embed/openframeworks-donations" height="685px" width="100%"
-        style="max-width:500px; min-width:310px; max-height:none!important" seamless="seamless" name="donorbox" frameborder="0" scrolling="no" allowpaymentrequest></iframe>
+<iframe src="https://opencollective.com/embed/openFrameworks/donate" style="width: 100%; min-height: 100vh;"></iframe>
 </div>
 </div>
 </div>
