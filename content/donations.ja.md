@@ -49,34 +49,8 @@ $(document).ready(function(){
 <div class="page-right-narrow">
 <div class="home-links">
 
-<div class="donations"><strong>一度だけの寄付</strong><br>
-<form action="https://www.paypal.com/cgi-bin/webscr"  method="post" target="_blank">
-    <input name="business" value="donations@openframeworks.cc" type="hidden">
-    <input name="cmd" value="_donations" type="hidden">
-    <input name="item_name" value="openFrameworks one time donation" type="hidden">
-    <input name="item_number" value="One Time Donation" type="hidden">
-    <input name="amount" value="" type="text"><br/>
-    <em>最低 €1 から</em><p></p>
-    <input name="lc" value="US" type="hidden">
-    <input name="currency_code" value="EUR" type="hidden">
-    <input class="buyButton" alt="PayPal – The safer, easier way to pay online." name="submit" value="Donate" type="submit">
-</form>
-<p>&nbsp;</p>
-<p style="font-size: 1.0em; margin-bottom: 0;"><strong>月々の寄付</strong><br></p>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-    <input name="business" value="donations@openframeworks.cc" type="hidden">
-    <input name="cmd" value="_xclick-subscriptions" type="hidden">
-    <input name="item_name" value="openFrameworks monthly donation" type="hidden">
-    <input name="item_number" value="Monthly Donation" type="hidden">
-    <input name="a3" value="" value="1" type="text"><br/>
-    <em>最低 €1 から</em><p></p>
-    <input name="p3" value="1" type="hidden">
-    <input name="t3" value="M" type="hidden">
-    <input name="lc" value="US" type="hidden">
-    <input name="currency_code" value="EUR" type="hidden">
-    <input name="src" value="1" type="hidden">
-    <input class="buyButton" alt="PayPal – The safer, easier way to pay online." name="submit" value="Subscribe" type="submit">
-</form>
+<div class="donations">
+<iframe src="https://opencollective.com/embed/openFrameworks/donate" style="width: 100%; min-height: 100vh;"></iframe>
 </div>
 </div>
 </div>
