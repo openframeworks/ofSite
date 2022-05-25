@@ -19,6 +19,14 @@ The `tutorials` folder is structured with a first level of folders that represen
 
 The `documentation` folder contains the OF API reference and are also in markdown format. This docs are generated from the code but the `description` field in every class, function or var can be edited directly in the markdown files.
 
+## Setting up the site to build locally using Docker
+
+* Pre-reqs: a working [Docker](https://www.docker.com/get-started/) environment and *nix shell
+* Build a container (alpine linux, python3, nikola) with `./build_docker.sh`
+* Build the site and serve it on `http://localhost:8000/` with `./nikola_auto_build.sh`
+* (Build the site only with `./nikola_build.sh`)
+* (Serve the site on `http://localhost:8000/` with `./nikola_serve.sh`)
+
 ## Setting up the site to build locally
 
 This site is built using [nikola](https://getnikola.com). There's some scripts in the root folder to make it easier to install and use.

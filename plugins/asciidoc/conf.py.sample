@@ -1,11 +1,14 @@
 # Add the asciidoc compiler to your COMPILERS dict.
-COMPILERS["asciidoc"] = ('.asc',)
+COMPILERS["asciidoc"] = ['.asc']
 
 # Add asciidoc files to your POSTS, PAGES
 POSTS = POSTS + (("posts/*.asc", "posts", "post.tmpl"),)
-PAGES = PAGES + (("stories/*.asc", "posts", "post.tmpl"),)
+PAGES = PAGES + (("pages/*.asc", "pages", "page.tmpl"),)
 
 # You can choose what command to use for processing.
 # For example, you can replace asciidoc with asciidoctor
 # Or use the full path to the program.
 # ASCIIDOC_BINARY = "asciidoc"
+
+# Specify options to the asciidoc compiler (as a string).
+# ASCIIDOC_OPTIONS = ""
