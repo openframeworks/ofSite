@@ -1269,7 +1269,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a two dimensional Perlin noise value between 0.0...1.0.
+Calculates a two dimensional Simplex Noise value between 0.0...1.0.
 
 
 
@@ -1304,7 +1304,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a three dimensional Perlin noise value between 0.0...1.0.
+Calculates a three dimensional Simplex Noise value between 0.0...1.0.
 
 
 
@@ -1339,7 +1339,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a four dimensional Perlin noise value between 0.0...1.0.
+Calculates a four dimensional Simplex Noise value between 0.0...1.0.
 
 
 
@@ -1374,7 +1374,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a one dimensional Perlin noise value between 0.0...1.0.
+Calculates a one dimensional Simplex Noise value between 0.0...1.0.
 
 
 
@@ -1409,7 +1409,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a two dimensional Perlin noise value between 0.0...1.0.
+Calculates a two dimensional Simplex Noise value between 0.0...1.0.
 
 
 
@@ -1444,7 +1444,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a three dimensional Perlin noise value between 0.0...1.0.
+Calculates a three dimensional Simplex Noise value between 0.0...1.0.
 
 
 
@@ -1479,7 +1479,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a four dimensional Perlin noise value between 0.0...1.0.
+Calculates a four dimensional Simplex Noise value between 0.0...1.0.
 
 
 
@@ -2005,7 +2005,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a two dimensional Perlin noise value between -1.0...1.0.
+Calculates a two dimensional Simplex Noise value between -1.0...1.0.
 
 
 
@@ -2040,7 +2040,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a three dimensional Perlin noise value between -1.0...1.0.
+Calculates a three dimensional Simplex Noise value between -1.0...1.0.
 
 
 
@@ -2075,7 +2075,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a four dimensional Perlin noise value between -1.0...1.0.
+Calculates a four dimensional Simplex Noise value between -1.0...1.0.
 
 
 
@@ -2110,7 +2110,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a one dimensional Perlin noise value between -1.0...1.0.
+Calculates a one dimensional Simplex Noise value between -1.0...1.0.
 
 
 
@@ -2145,7 +2145,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a two dimensional Perlin noise value between -1.0...1.0.
+Calculates a two dimensional Simplex Noise value between -1.0...1.0.
 
 
 
@@ -2180,7 +2180,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a three dimensional Perlin noise value between -1.0...1.0.
+Calculates a three dimensional Simplex Noise value between -1.0...1.0.
 
 
 
@@ -2215,7 +2215,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Calculates a four dimensional Perlin noise value between -1.0...1.0.
+Calculates a four dimensional Simplex Noise value between -1.0...1.0.
 
 
 
@@ -2354,4 +2354,3 @@ _description: _
 
 
 <!----------------------------------------------------------------------------->
-
