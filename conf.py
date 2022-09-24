@@ -203,7 +203,7 @@ EXTERNAL_LINKS = {
 
     "ko": (
         ("https://forum.openframeworks.cc", "포럼(EN)", True),
-        ("https://forum.openframeworks.kr", "포럼(KR)", True),
+        ("http://forum.openframeworks.kr", "포럼(KR)", True),
         ("https://github.com/openframeworks", "github", True),
         ("http://ofxaddons.com", "애드온", True),
         ("http://forum.openframeworks.kr/t/slack/32", "slack", True),
