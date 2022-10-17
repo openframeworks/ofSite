@@ -46,7 +46,7 @@ $(document).ready(function(){
         </div>
 
         <div id="download-latest-platform">
-	        <h2>linux</h2>
+	        <h2>linux (for linux use nightly builds)</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linux64gcc6_release.tar.gz">linux gcc6 or later</a></p>
 	        <br/>
@@ -57,7 +57,7 @@ $(document).ready(function(){
         </div>
 
         <div id="download-latest-platform-last">
-	        <h2>windows</h2>
+	        <h2>windows (for msys2 use nightly builds) </h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_vs2017_release.zip">visual studio (2017-2022)</a></p>
 	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_mingw32_release.zip">qt creator / msys2 32bit</a></p>
