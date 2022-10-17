@@ -46,9 +46,9 @@ $(document).ready(function(){
         </div>
 
         <div id="download-latest-platform">
-	        <h2>linux (for linux use nightly builds)</h2>
+	        <h2>linux</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linux64gcc6_release.tar.gz">linux gcc6 or later</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linux64gcc6_release.tar.gz">linux gcc6 or later</a><i>&nbsp;(use nightly build at bottom of page)</i></p>
 	        <br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/linux-install">linux install</a></p>
@@ -57,11 +57,11 @@ $(document).ready(function(){
         </div>
 
         <div id="download-latest-platform-last">
-	        <h2>windows (for msys2 use nightly builds) </h2>
+	        <h2>windows</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_vs2017_release.zip">visual studio (2017-2022)</a></p>
 	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_mingw32_release.zip">qt creator / msys2 32bit</a></p>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_mingw64_release.zip">qt creator / msys2 64bit</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_mingw64_release.zip">qt creator / msys2 64bit</a></p><i>&nbsp;(use nightly build at bottom of page)</i><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/vs">visual studio</a></p>
 	        <p><a href="../setup/qtcreator">qt creator</a></p>
