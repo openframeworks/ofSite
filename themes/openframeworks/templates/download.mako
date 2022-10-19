@@ -132,7 +132,7 @@ $(document).ready(function(){
 
     <hr/>
 
-    <iframe src="/ci_server/nightlybuilds.html" style="width:100%; height:430px; border: none" scrolling="no" seamless="seamless"></iframe>
+    <iframe src="/ci_server/nightlybuilds.html" style="width:100%; height:370px; border: none" scrolling="no" seamless="seamless"></iframe>
 
     <hr/>
 
