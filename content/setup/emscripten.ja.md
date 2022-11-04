@@ -11,20 +11,24 @@ openFrameworksで作ったプロジェクトをWebで公開したいと思った
 Emscriptenのインストール
 ------------------
 
-[このページ](https://kripken.github.io/emscripten-site/docs/getting_started/downloads.html)からあなたのOSに対応するSDKをダウンロードしてください。Windowsの場合、いずれかの`.exe`インストーラをダウンロードし、ダブルクリックしてウィザードに従います。MacとLinuxの場合、`Portable Emscripten SDK for Linux and OS X`を見つけてダウンロードします。ダウンロードが終わったらアーカイブを解凍して任意のディレクトリに展開し、ターミナルを開いて以下のコマンドを実行してください。
+Emscriptenを導入する推奨の方法は、EmscriptenのリポジトリからGitで直接インストールすることです。
+emsdkをインストールしたい場所でターミナルを開き、以下のコマンドを実行してください。
 
 ```bash
-# 利用可能なツール群の最新のレジストリをフェッチする
-./emsdk update
-
-# 最新のSDKをインストールする
-./emsdk install latest
-
-# "latest"のSDKを有効にする
-./emsdk activate latest
+git clone https://github.com/emscripten-core/emsdk
+cd emsdk
+./emsdk install sdk-1.40.0-64bit
+./emsdk activate sdk-1.40.0-64bit
+source ./emsdk_env.sh
 ```
 
+32bitのシステムでは、`-64bit`を`-32bit`に変更してください。
+
+_Note: 現在の`emsdk`スクリプトはPython2を使用しているため、あなたのコンピュータでデフォルトの`python`コマンドがPython3にエイリアスされている場合はエラーが発生するかもしれません。この場合、上記のコマンドを明示的にPython2で実行してみてください。例: `python2 ./emsdk update`_
+
 これには少し時間がかかります。終わったら`source ./emsdk_env.sh`と入力・実行してEmscriptenへのパスを通しましょう。次回のセッションのために、このコマンドが出力した変数群をコピーしてあなたの`.profile`ファイルに加えておくのもよいでしょう。
+
+_Note: 以前にインストールしたemscriptenが残っている場合は、OF_FOLDERにあるコンパイル済みコードを削除したいでしょう。コンパイルを試行する前に、`OF_FOLDER/libs/openFrameworksCompiled/lib/emscripten/`の中にある全てのファイルおよび`obj`フォルダと、プロジェクトフォルダにある全ての`obj/`フォルダを削除してください。_
 
 emscriptenを使用してopenFrameworks プロジェクトをコンパイルする
 --------------------------------------
