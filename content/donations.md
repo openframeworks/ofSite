@@ -11,6 +11,8 @@
 
 <p>If you are using openFrameworks commercially or would simply like to support openFrameworks development, please consider donating to the project.</p>
 
+<p>To see the different donation tiers please visit our page on Open Source Collective: <a href="https://opencollective.com/embed/openFrameworks">https://opencollective.com/openFrameworks</a>
+    
 <p>If you have any questions or suggestions about donating to openFrameworks, or if you are an institution and want to contribute in a different way, you can contact us by email at <script type="text/javascript" language="javascript">
 <!--
 $(document).ready(function(){
@@ -48,7 +50,7 @@ $(document).ready(function(){
 <div class="home-links">
 
 <div class="donations">
-<iframe src="https://opencollective.com/embed/openFrameworks/donate" style="width: 100%; min-height: 100vh;"></iframe>
+<iframe src="https://opencollective.com/embed/openFrameworks/donate?amount=10&amp;interval=monthly" style="width: 100%; min-height: 100vh;"></iframe>
 </div>
 </div>
 </div>
