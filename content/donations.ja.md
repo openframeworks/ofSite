@@ -50,7 +50,7 @@ $(document).ready(function(){
 <div class="home-links">
 
 <div class="donations">
-<iframe src="https://opencollective.com/embed/openFrameworks/donate" style="width: 100%; min-height: 100vh;"></iframe>
+<iframe src="https://opencollective.com/embed/openFrameworks/donate?amount=10&amp;interval=monthly" style="width: 100%; min-height: 100vh;"></iframe>
 </div>
 </div>
 </div>
