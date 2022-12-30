@@ -19,7 +19,7 @@ If you are going to use QtCreator you should install msys2 in the default instal
 
 
 Now, let's update the MSYS2 installation.
-From an MSYS2 shell (it can be MSYS, MINGW32 or MINGW64), run :
+From an MSYS2 shell (it can be MSYS or MINGW64), run :
 
 ```sh
 pacman -Syu --noconfirm --needed
@@ -42,18 +42,15 @@ Installing openFrameworks
 MSYS2 comes in 3 flavors : MSYS (msys2.exe), MINGW32 (mingw32.exe), MINGW64 (mingw64.exe).
 This really important to remember as lots of problem with running OF with MSYS2 come from using the wrong flavor.
 
-As of 0.11.0, **MINGW32** and **MINGW64** is supported as two different releases on the [download page](https://openframeworks.cc/download).
-But you must use the correct corresponding shell. ie: **mingw32.exe** shell to run the **32bit OF release** and **mingw64.exe** to run the **64bit OF release**.
+As of 0.11.2+, **MINGW64** is the recommended flavor to use.
 
-For the following instructions, it assumed that MSYS2 is installed in `C:\msys64` and you are using the 32bit OF release. 
+For the following instructions, it assumed that MSYS2 is installed in `C:\msys64` and you are using the 64bit OF release. 
 If it has been installed elsewhere, adapt the instructions to reflect your MSYS2 installation path.
-
-**NOTE: If you are using the 64bit OF release, use the `mingw64.exe` wherever `mingw32.exe` is referenced below.** 
 
 Download and unzip the **qt creator / msys2** version of oF. 
 **DO NOT INSTALL** oF in a folder having space or other 
 
-Open an **MINGW32** shell (`C:\msys64\mingw32.exe` ) and install OF dependencies:
+Open an **MINGW64** shell (`C:\msys64\mingw64.exe` ) and install OF dependencies:
 
 ```sh
 cd your_oF_directory/scripts/msys2
@@ -75,17 +72,15 @@ Setting the PATH variable
 
 Setting the PATH variable is an optional step but is also the cause of many trouble.
 
-As of v0.10.1, the install_dependencies.sh script does it in an wrong way!
-
 ### Why would you need to set the PATH variable ?
 
 __To be able to run my oF application by double clicking on it.__
 
 To run, the application needs to have the dll it was compiled with.
 If the required dll is not found at the location of your application, Windows will traverse the folders in your PATH to find it.
-If `C:\msys64\mingw32\bin` is included in your PATH, it will hopefully find the right dll.
+If `C:\msys64\mingw64\bin` is included in your PATH, it will hopefully find the right dll.
 However, it may find a dll with a matching name in a different folder that is not compatible...  
-It may also happen that, after an MSYS2 update, it finds a newer version in `C:\msys64\mingw32\bin` that is also incompatible...
+It may also happen that, after an MSYS2 update, it finds a newer version in `C:\msys64\mingw64\bin` that is also incompatible...
 
 The solution is to copy all the needed dlls in the application folder.
 This can be easily done with the command : 
@@ -111,13 +106,13 @@ This way you do not pollute your PATH system-wide.
 
 You can find how to set the PATH in windows here: http://www.computerhope.com/issues/ch000549.htm
 
-You'll need to add `c:\msys64\mingw32\bin` and `c:\msys64\usr\bin` to your PATH in **that order**.
+You'll need to add `c:\msys64\mingw64\bin` and `c:\msys64\usr\bin` to your PATH in **that order**.
 There are two ways:
 
 1. Either add them via 'Environment Variables' from the Control Panel > System > Advanced System Settings.
 2. Or you can also set the PATH from the command line: open a Windows cmd prompt and set you user PATH.
 ```
-setx PATH "c:\msys64\mingw32\bin;c:\msys64\usr\bin;%PATH%"
+setx PATH "c:\msys64\mingw64\bin;c:\msys64\usr\bin;%PATH%"
 ```
 
 Don't forget to logoff/logon as PATH is updated at logon.
@@ -159,7 +154,7 @@ FAQ / Common problems
 ---------------------
 - "I have a TLSv1_1_client_method missing error" when I double-click the exe ?"
 
-The executable looks for ssleay32.dll and libeay32.dll and it first finds a version that doesn't support TLS v1.1. Often it happens with Intel iCls software. The solution is to move the your_msys2_directory\mingw32\bin path before the conflicting path. If the conflicting path is in the system PATH and you do not have administrative privileges, copy/link ssleay32.dll and libeay32.dll from your_msys2_directory\mingw32\bin to the executable folder.
+The executable looks for ssleay32.dll and libeay32.dll and it first finds a version that doesn't support TLS v1.1. Often it happens with Intel iCls software. The solution is to move the your_msys2_directory\mingw64\bin path before the conflicting path. If the conflicting path is in the system PATH and you do not have administrative privileges, copy/link ssleay32.dll and libeay32.dll from your_msys2_directory\mingw64\bin to the executable folder.
 
 - "I'm on a corporate network with a proxy. I cannot download packages with pacman."
 
