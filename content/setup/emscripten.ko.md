@@ -18,22 +18,10 @@ emsdk가 설치될 위치에서 터미널을 열고 아래의 명령어를 입�
 ```bash
 git clone https://github.com/emscripten-core/emsdk
 cd emsdk
-./emsdk install latest-fastcomp
-./emsdk activate latest-fastcomp
+./emsdk install latest
+./emsdk activate latest
 source ./emsdk_env.sh
 ```
-
-만약 위 명령어가 어떠한 이유로 인해 동작하지 않는다면, incoming SDK를 사용할 수 있습니다만, 어쩌면 안정적이지 않을수도 있습니다: 
-
-```bash
-git clone https://github.com/emscripten-core/emsdk
-cd emsdk
-./emsdk install sdk-incoming-64bit
-./emsdk activate sdk-incoming-64bit
-source ./emsdk_env.sh
-```
-
-32비트 환경이라면, `-64bit`를 `-32bit`로 변경해주세요.
 
 _주의: 현재의 `emsdk` 스크립트가 Python2를 사용하기 때문에, 여러문의 컴퓨터에서 `python`이 Python3의 alias라면 에러가 발생할 수 있습니다. 이 경우, 명시적으로 Python2를 사용하여 위 명령을 실행해주세요 : `python2 ./emsdk update`._
 
