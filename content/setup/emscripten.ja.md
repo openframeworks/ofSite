@@ -6,7 +6,7 @@ emscriptenセットアップガイド
 
 openFrameworksで作ったプロジェクトをWebで公開したいと思ったことはありませんか？いつもはビデオや写真を撮りますが、UIはどうでしょう？マウスを使ったエフェクトをどうやって見てもらいますか？そこで Emscripten の出番です。EmscriptenはあなたのC++コードをものの数分でJavaScriptに変換してくれるのです！あなたの作ったOFプロジェクトはポートフォリオに「すぐに」公開できます。
 
-このガイドではあなた自身のスケッチをWebページに変換したいときにいつでも再利用できるようなやり方で、openFrameworksのディストリビューションに含まれるexampleプロジェクトのひとつをコンパイルする方法を紹介します。すでにopenFrameworks 0.9をダウンロードしていれば（emscriptenはOFのバージョン0.9以上で動作します）、あとはemscriptenをインストールしてプロジェクトをコンパイルするだけです。ひとつずつ見ていきましょう。
+このガイドではあなた自身のスケッチをWebページに変換したいときにいつでも再利用できるようなやり方で、openFrameworksのディストリビューションに含まれるexampleプロジェクトのひとつをコンパイルする方法を紹介します。すでにopenFrameworks をダウンロードしていれば（emscriptenはOFのバージョン以上で動作します）、あとはemscriptenをインストールしてプロジェクトをコンパイルするだけです。ひとつずつ見ていきましょう。
 
 Emscriptenのインストール
 ------------------
@@ -17,14 +17,10 @@ emsdkをインストールしたい場所でターミナルを開き、以下の
 ```bash
 git clone https://github.com/emscripten-core/emsdk
 cd emsdk
-./emsdk install sdk-1.40.0-64bit
-./emsdk activate sdk-1.40.0-64bit
+./emsdk install latest
+./emsdk activate latest
 source ./emsdk_env.sh
 ```
-
-32bitのシステムでは、`-64bit`を`-32bit`に変更してください。
-
-_Note: 現在の`emsdk`スクリプトはPython2を使用しているため、あなたのコンピュータでデフォルトの`python`コマンドがPython3にエイリアスされている場合はエラーが発生するかもしれません。この場合、上記のコマンドを明示的にPython2で実行してみてください。例: `python2 ./emsdk update`_
 
 これには少し時間がかかります。終わったら`source ./emsdk_env.sh`と入力・実行してEmscriptenへのパスを通しましょう。次回のセッションのために、このコマンドが出力した変数群をコピーしてあなたの`.profile`ファイルに加えておくのもよいでしょう。
 
