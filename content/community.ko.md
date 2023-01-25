@@ -55,9 +55,10 @@
 <p>커뮤티니의 최신 소식 및 정보</p>
 <p>
 <ul>
-	<li><a href="https://blog.openframeworks.cc/">블로그</a></li>
-    <li><a href="https://twitter.com/openframeworks">트위터</a></li>
 	<li><a href="https://forum.openframeworks.cc/c/announcements">포럼 공지</a></li>
+	<li><a href="https://fosstodon.org/@openFrameworks">마스토돈</a></li>
+	<li><a href="https://blog.openframeworks.cc/">블로그</a></li>
+   	<li><a href="https://twitter.com/openframeworks">트위터</a></li>
 </ul>
 </p>
 
