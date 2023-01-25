@@ -55,9 +55,10 @@
 <p>The latest news and information from the community.</p>
 <p>
 <ul>
-	<li><a href="https://blog.openframeworks.cc/">Blog</a></li>
-    <li><a href="https://twitter.com/openframeworks">Twitter</a></li>
 	<li><a href="https://forum.openframeworks.cc/c/announcements">Announcements Forum</a></li>
+	<li><a href="https://fosstodon.org/@openFrameworks">Mastodon</a></li>
+	<li><a href="https://blog.openframeworks.cc/">Blog</a></li>
+    	<li><a href="https://twitter.com/openframeworks">Twitter</a></li>
 </ul>
 </p>
 
