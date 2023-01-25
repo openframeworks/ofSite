@@ -12,8 +12,10 @@
 もしどこを見たらいいか分からない場合は、フォーラムの <a href="http://forum.openframeworks.cc/index.php?board=31.0">collaborations</a> セクションから始めるか、または既存の <a href="/tutorials/">tutorials</a> を見てみてください。
 
 <ul class="external_links" >
-    <li><a href="http://openframeworks.cc/list-info/"> mailing list</a></li>
-    <li><a href="http://twitter.com/openFrameworks"> twitter</a></li>
+   	<li><a href="https://forum.openframeworks.cc/c/announcements">Announcements Forum</a></li>
+	<li><a href="https://fosstodon.org/@openFrameworks">Mastodon</a></li>
+	<li><a href="https://blog.openframeworks.cc/">Blog</a></li>
+    <li><a href="https://twitter.com/openframeworks">Twitter</a></li>
 </ul>
 
 
