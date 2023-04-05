@@ -132,8 +132,11 @@ $(document).ready(function(){
 
     <hr/>
 
-    <iframe src="/ci_server/nightlybuilds.html" style="width:100%; height:370px; border: none" scrolling="no" seamless="seamless"></iframe>
-
+    <div id="download-nightly">
+	    <h2>nightly builds</h2>
+	    <p>Download the latest nightly builds (curently recommend) from <a href="https://github.com/openframeworks/openFrameworks/releases/tag/nightly">Github Nightly Release</a></p>
+    </div>
+    
     <hr/>
 
     ${of.msg("other_releases", locals())}
