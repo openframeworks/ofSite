@@ -23,6 +23,14 @@ $(document).ready(function(){
 <%block name="content">
 <div id="body-wrap">
 	<div class="page-left-verywide">
+	
+    <hr/>
+     <div id="download-nightly">
+	    <h2>nightly builds</h2>
+	    <p>Download the latest nightly builds (curently recommend) from <a href="https://github.com/openframeworks/openFrameworks/releases/tag/nightly">Github Nightly Release</a></p>
+    </div>
+    
+    <hr/>
     <div id="download-latest-header">
 
 	    <h2>${currentVersion}</h2>
@@ -130,13 +138,6 @@ $(document).ready(function(){
     <img src="/download/0071_3.png" />
     </div>
 
-    <hr/>
-
-    <div id="download-nightly">
-	    <h2>nightly builds</h2>
-	    <p>Download the latest nightly builds (curently recommend) from <a href="https://github.com/openframeworks/openFrameworks/releases/tag/nightly">Github Nightly Release</a></p>
-    </div>
-    
     <hr/>
 
     ${of.msg("other_releases", locals())}
