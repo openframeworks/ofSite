@@ -27,7 +27,7 @@ $(document).ready(function(){
     <hr/>
      <div id="download-nightly">
 	    <h2>nightly builds</h2>
-	    <p>0.12.0 is almost ready for release we recoomend downloading the latest nightly builds from <a href="https://github.com/openframeworks/openFrameworks/releases/tag/nightly">Github Nightly Release</a></p>
+	    <p>0.12.0 is almost ready for release we recommend downloading the latest nightly builds from <a href="https://github.com/openframeworks/openFrameworks/releases/tag/nightly">Github Nightly Release</a></p>
     </div>
     
     <hr/>
