@@ -37,16 +37,16 @@ Open the terminal in in one project in the examples folder, like `examples/3d/3D
 emmake make
 ```
 
-Once the compilation is finished, there will be a new file in `examples/3d/3DPrimitivesExample/bin`, the `3DPrimitivesExample.html` file. Open this file with the command:
+Once the compilation is finished, there will be a new file in `examples/3d/3DPrimitivesExample/bin/3DPrimitivesExample/`, the `index.html` file. Open this file with the command:
 
 ```bash
-emrun bin/3DPrimitivesExample.html
+emrun bin/3DPrimitivesExample/
 ```
 
-If it does not work, it is probably because you are opening with safari, and safari does not support WebGL. Let's open it with another browser, like chrome
+If it does not work, it might need a different browser like Firefox.
 
 ```bash
-emrun --browser chrome bin/3DPrimitivesExample.html
+emrun --browser firefox bin/3DPrimitivesExample/
 ```
 If everything works, you should see this image
 
