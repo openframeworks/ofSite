@@ -113,7 +113,7 @@ $(document).ready(function(){
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linuxarmv6l_release.tar.gz">linux armv6</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
-	        <p><a href="../setup/raspberrypi">raspberry pi</a></p>
+	        <p><a href="../setup/Raspberry-Pi-Getting-Started.md">raspberry pi</a></p>
         </div>
 
         <div id="download-latest-platform-last">
