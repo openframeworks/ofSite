@@ -1243,7 +1243,7 @@ DEMOTE_HEADERS = 0
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
     "currentVersion": "0.12.0",
-    "breaking": False,
+    "breaking": True,
     "majorVersion": "0.12.0",
     "olderVersion": "0.11.2",
     "external_links": EXTERNAL_LINKS,
