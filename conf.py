@@ -1242,10 +1242,10 @@ DEMOTE_HEADERS = 0
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    "currentVersion": "0.11.2",
+    "currentVersion": "0.12.0",
     "breaking": False,
-    "majorVersion": "0.11.0",
-    "olderVersion": "0.11.1",
+    "majorVersion": "0.12.0",
+    "olderVersion": "0.11.2",
     "external_links": EXTERNAL_LINKS,
     "external_translations": {} if EXTERNAL_TRANSLATIONS==None else EXTERNAL_TRANSLATIONS,
 }
