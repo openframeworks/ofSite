@@ -114,16 +114,15 @@ $(document).ready(function(){
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
 	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linuxarmv6l_release.tar.gz">linux armv6</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
-	        <p><a href="../setup/Raspberry-Pi-Getting-Started.md">raspberry pi</a></p>
+	        <p><a href="../setup/raspberrypi/Raspberry-Pi-Getting-Started.md">raspberry pi</a></p>
         </div>
 
         <div id="download-latest-platform-last">
-	        <h2>linux&nbsp;armv7</h2>
+	        <h2>linux&nbsp;arm64/aarch64</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linuxarmv7l_release.tar.gz">linux armv7</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linuxaarch64_release.tar.gz">linux armv7</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
-	        <p><a href="../setup/pandaboard">pandaboard</a></p>
-	        <p><a href="../setup/armv7">generic armv7</a></p>
+	        <p><a href="../setup/raspberrypi/Raspberry-Pi-Getting-Started.md">raspberry pi</a></p>
         </div>
     </div>
 
