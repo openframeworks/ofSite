@@ -46,7 +46,7 @@ MESSAGES = {
 
     'mobile': 'openFrameworks for mobile platforms supports the same features as the desktop versions plus mobile specific features like acceleromter, compass, gps...',
 
-    'linuxarm': 'openFrameworks for arm boards running linux like Raspberry Pi, Beaglebone (black), Pandaboard, BeagleBoard and others.<br/>We have setup guides for some of the most common boards but it should work on any armv6 and armv7 board.</br></br>',
+    'linuxarm': 'openFrameworks for arm boards running linux like Raspberry Pi, Beaglebone (black), Pandaboard, BeagleBoard and others.<br/>We have setup guides for some of the most common boards but it should work on any armv6 and arm64 board.</br></br>',
 
     'instructions': 'We release openFrameworks as an uncompiled library. This means that when you download and unzip openFrameworks, you will see the following folders: \'addons/\', \'apps/\', \'libs/\', and a few more. These folders contain openFrameworks completely, so if you want to keep multiple versions of openFrameworks on your computer you should just create multiple folders. For example, one `of_v${currentVersion}_osx_release/` folder and one `of_v${olderVersion}_osx_release/` folder, each with their own `apps/` folder. Even when new versions of openFrameworks are released, your old apps will still compile with old versions of openFrameworks.<br/><br/>The examples folder is a great place to start. Inside examples you\'ll find a variety of examples that show what is possible with openFrameworks. They demonstrate font loading, graphics, audio input and output, sound file playback and FFT analysis, video grabbing, movie playing, image loading and saving, event handling, serial communication, and much more.',
 
