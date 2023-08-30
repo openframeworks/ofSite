@@ -91,7 +91,7 @@ $(document).ready(function(){
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/iphone">xcode</a></p>
         </div>
-
+	<!-- 
         <div id="download-latest-platform-last">
 	        <h2>android</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
@@ -99,6 +99,7 @@ $(document).ready(function(){
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/android-studio">android studio</a></p>
         </div>
+	-->
     </div>
 
 
