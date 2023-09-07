@@ -17,7 +17,7 @@ xcode-select --install
 
 This should prompt you to install the command line tools. Select "Install" to begin the process.
 
-![install dialog for the command line tools](xcode_setup_assets/install-dialog.webp)
+![install dialog for the command line tools](/setup/xcode/xcode_setup_assets/install-dialog.webp)
  
 
 ## 2. Testing Your Setup
