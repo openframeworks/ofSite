@@ -74,6 +74,7 @@ It is typical for there to be some warnings generated when openFrameworks is com
 Now that you've verified your setup, it's a good time to start a new project from scratch. In the **projectGenerator** folder, you'll find `projectGenerator.app` which will make it easy to create new openFrameworks apps. 
 
 Open the `projectGenerator.app`
+
 ![pg overview](xcode_setup_assets/of_pg_1.png)
 
 `(1)` : **Give a relevant name to your project.**
@@ -81,9 +82,11 @@ Open the `projectGenerator.app`
 `(2)` : **You can leave project path as it is.**
 
 `(3)` : **You can add built-in or local openframeworks addons.**
+
 ![openframeworks addons](xcode_setup_assets/of_pg_Addon.png)
 
 `(4)` : **Hit "Generate" button**
+
 ![Open Project](xcode_setup_assets/of_open_pg_project.png)
 
 Afterwards, close the project generator and navigate to the `apps/myApps/myProjectName` folder. Open `myProjectName.xcodeproj` in Xcode, expand the project in the browser on the left, expand the **src** folder and select the `ofApp.cpp` file.
@@ -127,34 +130,44 @@ for(int i = 0; i < 100; i++) {
 As your project grows, you'll probably want to start adding new files. These files might be ones written specifically for your project, or they could be addons or external libraries other people have written.
 
 Making new files can be done in a few ways. One is to right click your "src" folder in Xcode, and select "New File..", the other is to go to the menu and select File > New > File...
+
 ![](xcode_setup_assets/of_add_file_1.png)
 
 In the dialog that pops up, navigate to macOS -> Source and then select C++ file. Xcode will create a `.cpp` and `.h` pair for you automatically, so just give it a base name ("myNewClass") and let it do the rest. 
+
 ![](xcode_setup_assets/of_add_file_2.png)
 
 Make sure you tell Xcode to place the new files in your "src" folder when prompted.
+
 ![](xcode_setup_assets/of_add_file_3.png)
 
 Finally, the file you add displays in the XCode editor.
+
 ![](xcode_setup_assets/of_add_file_4.png)
 
 ## Adding ofxAddons to Your Project
 1. If you want to use an external addon from [ofxAddons web-site](https://ofxaddons.com/categories). Click on the addon name. The web site directs you to the repository source page. 
+
 ![ofxIO](xcode_setup_assets/of_addon_1.png) 
 
 2. Download the folder as a zip file.
+
 ![ofxIO](xcode_setup_assets/of_addon_2.png) 
 
 3. Extract the zip content and remove the `-master` suffix.
+
 ![ofxIO](xcode_setup_assets/of_addon_3.png)
 
 4. Move the folder into your openframeworks/addons directory
+
 ![ofxIO](xcode_setup_assets/of_addon_4.png)
 
 5. Open the project generator. Use the `import` button or drag & drop your project folder onto the projectGenerator app.
+
 ![ofxIO](xcode_setup_assets/of_pg.png)
 
 6. Type the name of the addon(s) that you copied into the openFrameworks/addons folder. It should immediately shows-up the relevant ofxAddon.
+
 ![ofxIO project addon](xcode_setup_assets/of_addon_5.png)
 
 7. Hit `Update` button. Then you can open the updated project.
