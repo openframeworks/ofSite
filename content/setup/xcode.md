@@ -125,7 +125,7 @@ for(int i = 0; i < 100; i++) {
 ![filling in the draw function while showing xcode autocomplete](xcode_setup_assets/of_anim.gif)
 
 
-## Adding Files to Your Project
+## 4. Adding Files to Your Project
 
 As your project grows, you'll probably want to start adding new files. These files might be ones written specifically for your project, or they could be addons or external libraries other people have written.
 
@@ -145,7 +145,7 @@ Finally, the file you add displays in the XCode editor.
 
 ![](xcode_setup_assets/of_add_file_4.png)
 
-## Adding ofxAddons to Your Project
+## 5. Adding ofxAddons to Your Project
 1. If you want to use an external addon from [ofxAddons web-site](https://ofxaddons.com/categories). Click on the addon name. The web site directs you to the repository source page. 
 
 ![ofxIO](xcode_setup_assets/of_addon_1.png) 
@@ -172,7 +172,7 @@ Finally, the file you add displays in the XCode editor.
 
 7. Hit `Update` button. Then you can open the updated project.
 
-# FAQ
+## 6. FAQ
 1. **XCode code completetiton support doesn't work as expected.**
 
     As of this date (07.09.2023) there are repoted code completition issues on XCode. Refer to the following forum [post](https://forum.openframeworks.cc/t/psa-autocompletion-is-broken-in-xcode-14-1/42181).
