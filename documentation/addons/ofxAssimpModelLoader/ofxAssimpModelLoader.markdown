@@ -17,7 +17,7 @@ _extends: _
 
 ##Description
 
-ofAssimpModelLoader addon permits loading to memory and processing 3D models in a convenient and unified format. This addon is mostly a wrapper of the "Open Asset Import Library" (assimp), in its version 2.0  ([http://assimp.sourceforge.net/](http://assimp.sourceforge.net/)).
+ofAssimpModelLoader addon permits loading to memory and processing 3D models in a convenient and unified format. This addon is mostly a wrapper of the "Open Asset Import Library" (assimp), in its version 5.2 [https://github.com/assimp/assimp](https://github.com/assimp/assimp).
 
 For an example see `openFrameworks/examples/3d/assimp3DModelLoaderExample`.
 
@@ -26,6 +26,8 @@ At least, these model formats are supported:
 - 3DS
 - ASE
 - DXF
+- GLTF
+- FBX
 - HMP
 - MD2
 - MD3
