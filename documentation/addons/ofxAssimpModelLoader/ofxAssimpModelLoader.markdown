@@ -19,7 +19,7 @@ _extends: _
 
 ofAssimpModelLoader addon permits loading to memory and processing 3D models in a convenient and unified format. This addon is mostly a wrapper of the "Open Asset Import Library" (assimp), in its version 2.0  ([http://assimp.sourceforge.net/](http://assimp.sourceforge.net/)).
 
-For an example see `openFrameworks/examples/addons/assimpExample`.
+For an example see `openFrameworks/examples/3d/assimp3DModelLoaderExample`.
 
 At least, these model formats are supported:
 
