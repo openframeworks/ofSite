@@ -15,19 +15,22 @@ Download link and instructionss can be found on the [MSYS2 web site](https://www
 If you are going to use QtCreator, you should install MSYS2 in the default install folder, c:\msys64
 
 
-Now, let's update the MSYS2 installation.
-From an MSYS2 shell (it can be MSYS or MINGW64), run :
+Updating MSYS2
+--------------
+
+openFrameworks expects an up-to-date installation of MSYS2.
+As MSYS2 is a rolling-release distribution, even the latest installer may be out-of-date!
+
+Let's update the MSYS2 installation.
+From any MSYS2 shell (MSYS2, MINGW64, UCRT64, ...), run :
 
 ```sh
 pacman -Syu --noconfirm --needed
 ```
 
-If some system files are updated, you may be requested to close the shell.
-If that happens, close the shell as instructed and open a new one to update the remaining packages using the same command :
-
-```sh
-pacman -Syu --noconfirm --needed
-```
+Depending on the packages to be updated, you may need to close the shell and run the previous command again.
+If your installation has been updated for some months, you may encounter additional problems.
+Additional instructions on the [Updating MSYS2 page](https://www.msys2.org/docs/updating/) may help to solve them.
 
 You are now ready to install openFrameworks.
 
