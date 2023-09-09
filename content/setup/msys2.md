@@ -6,16 +6,13 @@
 msys2
 =====
 
-Installing msys2
+Installing MSYS2
 ----------------
 
-First, install MSYS2 using the [one-click installer](https://msys2.github.io/) or
-directly unzipping the archive from their [repository](http://sourceforge.net/projects/msys2/files/Base/x86_64/)
+Download link and instructionss can be found on the [MSYS2 web site](https://www.msys2.org/).
+[Several installers](https://www.msys2.org/docs/installer/) (self extracting archive, XZ archive) are available; any will work with openFrameworks.
 
-If you have an old install of MSYS2 (before 2018), it's recommended to do a fresh install.
-
-If you are going to use QtCreator you should install msys2 in the default install folder, c:\msys64
-
+If you are going to use QtCreator, you should install MSYS2 in the default install folder, c:\msys64
 
 
 Now, let's update the MSYS2 installation.
