@@ -67,6 +67,24 @@ make
 
 You can speed-up compilation using parallel build `make -j4` or the number of cores you want it to use
 
+Checking OF installation by running examples
+--------------------------------------------
+
+Compiling and running an OF example in the best way to check if you're ready for it.
+
+To compile an example (for example the 3DPrimitivesExample), run :
+
+```sh
+cd your_oF_directory/examples/3d/3DPrimitivesExample
+make
+```
+
+At this point, `make run` should execute the newly built example.
+
+However, it wil not execute by double-clicking on its icon; lots of "missing DLL" warnings shall appear.
+To enable to double-click on the exe file to run it, you need to copy the required DLLs file in the application folder.
+That is easily done with the `make copy_dlls` command.
+
 
 Setting the PATH variable
 -------------------------
@@ -121,18 +139,6 @@ Don't forget to logoff/logon as PATH is updated at logon.
 That's all, now go to the your_oF_directory/examples folder, where you will find
 the examples, and have fun!
 
-Running examples
-----------------
-Compile the example (for example the 3DPrimitivesExample)
-
-```sh
-cd your_oF_directory/examples/3d/3DPrimitivesExample
-make
-```
-
-At this point, `make run` to launch.
-
-To be able to double-click on the exe file to run it, run `make copy_dlls` (if you haven't set the PATH!)
 
 Makefile
 --------
