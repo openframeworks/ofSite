@@ -106,60 +106,6 @@ You can find more information in the corresponding [setup guide](../qtcreator):
 As mention earlier, pay attention to the installation folder of MSYS2 (which must be `C:\msys64`).
 
 
-Setting the PATH variable
--------------------------
-
-Setting the PATH variable is an optional step but is also the cause of many trouble.
-
-### Why would you need to set the PATH variable ?
-
-__To be able to run my oF application by double clicking on it.__
-
-To run, the application needs to have the dll it was compiled with.
-If the required dll is not found at the location of your application, Windows will traverse the folders in your PATH to find it.
-If `C:\msys64\mingw64\bin` is included in your PATH, it will hopefully find the right dll.
-However, it may find a dll with a matching name in a different folder that is not compatible...  
-It may also happen that, after an MSYS2 update, it finds a newer version in `C:\msys64\mingw64\bin` that is also incompatible...
-
-The solution is to copy all the needed dlls in the application folder.
-This can be easily done with the command : 
-
-```sh
-make copy_dlls
-```
-This will also ease the installation of the application on a different computer....
-
-
-__To compile oF in IDE (Qt Creator or VS Code )__
-
-These softwares will try to detect compiler programs (gcc, make) by scanning the PATH variable.
-So it's an easy way to setup up your IDE.
-There may also be some settings in the IDE to configure where to find the programs.
-That gives you better control.
-As in the previous point, relying on the PATH variable to find the programs may result in unexpected behaviours (for example, using Windows C:\Windows\System32\find.exe instead of MSYS C:\msys64\usr\bin\find.exe)
-
-It may be interesting to write a wrapper batch file to lauch your IDE where you set the PATH to use.
-This way you do not pollute your PATH system-wide.
-
-### I've decided to use the PATH variable. How do I set it ?
-
-You can find how to set the PATH in windows here: http://www.computerhope.com/issues/ch000549.htm
-
-You'll need to add `c:\msys64\mingw64\bin` and `c:\msys64\usr\bin` to your PATH in **that order**.
-There are two ways:
-
-1. Either add them via 'Environment Variables' from the Control Panel > System > Advanced System Settings.
-2. Or you can also set the PATH from the command line: open a Windows cmd prompt and set you user PATH.
-```
-setx PATH "c:\msys64\mingw64\bin;c:\msys64\usr\bin;%PATH%"
-```
-
-Don't forget to logoff/logon as PATH is updated at logon.
-
-That's all, now go to the your_oF_directory/examples folder, where you will find
-the examples, and have fun!
-
-
 Makefile
 --------
 
@@ -172,18 +118,37 @@ syntax is the usual syntax in makefiles, there's help comments inside the file.
 addons.make: if you want to use an addon which is inside the addons folder, just
 add its name in a new line in this file.
 
-QtCreator
----------
-
-With msys2 you can also use QtCreator as an IDE, you can find more information in the corresponding [setup guide](../qtcreator):
 
 FAQ / Common problems
 ---------------------
+- "How to set up the PATH variable ?"
+
+Unless you know exactly what you are doing, **YOU SHOULD NOT*** set the PATH variable.
+It is the main cause of OF application crashes because of dll incompatibilities.
+This is because, when the DLL is not found in the same folder as the application executable, the OF application looks for it in the PATH.
+It may find DLL with the right name but with a different MSYS2 flavor (MINGW32 vs MINGW64) or from a non-MSYS2 location (for example a separate OpenSSL installation).
+
+Use the `make copy_dlls` command to make sur that the MSYS2 DLLs are copied next to the executable.
+This will also ease the installation of the application on a different computer....
+
+You may be tempted to set MSYS2 in the path to enable the automatic detection of compiler installation by IDE software. 
+It's an easy way to setup up your IDE.
+However, there may also be some settings in the IDE to configure where to find the programs.
+That gives you better control.
+As in the previous point, relying on the PATH variable to find the programs may result in unexpected behaviours (for example, using Windows C:\Windows\System32\find.exe instead of MSYS C:\msys64\usr\bin\find.exe)
+
+It may be interesting to write a wrapper batch file to lauch your IDE where you set the PATH to use.
+This way you do not pollute your PATH system-wide.
+
+
 - "I have a TLSv1_1_client_method missing error" when I double-click the exe ?"
 
 The executable looks for ssleay32.dll and libeay32.dll and it first finds a version that doesn't support TLS v1.1. Often it happens with Intel iCls software. The solution is to move the your_msys2_directory\mingw64\bin path before the conflicting path. If the conflicting path is in the system PATH and you do not have administrative privileges, copy/link ssleay32.dll and libeay32.dll from your_msys2_directory\mingw64\bin to the executable folder.
 
-- "I'm on a corporate network with a proxy. I cannot download packages with pacman."
+- "I'm on a corporate network and I cannot install OF dependencies, update MSYS2..."
+
+This is more an MSYS2 problem than an OF problem...
+Ask your system adminsitrator for help as the reasons are multiple (proxy,certificates,...)
 
 You may need to set HTTP_PROXY and HTTPS_PROXY environment variables.
 
