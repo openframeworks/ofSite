@@ -141,6 +141,13 @@ It may be interesting to write a wrapper batch file to lauch your IDE where you 
 This way you do not pollute your PATH system-wide.
 
 
+- "Are UCRT64, CLANG64 and others MSYS2 flavors supported ?"
+
+Only MINGW64 is only supported.
+OF has been successfully compiled with UCRT64 and CLANG64.
+However, it is something reserved for advanced users as it requires recompiling Apothecary modules,...
+
+
 - "I have a TLSv1_1_client_method missing error" when I double-click the exe ?"
 
 The executable looks for ssleay32.dll and libeay32.dll and it first finds a version that doesn't support TLS v1.1. Often it happens with Intel iCls software. The solution is to move the your_msys2_directory\mingw64\bin path before the conflicting path. If the conflicting path is in the system PATH and you do not have administrative privileges, copy/link ssleay32.dll and libeay32.dll from your_msys2_directory\mingw64\bin to the executable folder.
