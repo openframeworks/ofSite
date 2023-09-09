@@ -67,6 +67,7 @@ make
 
 You can speed-up compilation using parallel build `make -j4` or the number of cores you want it to use
 
+
 Checking OF installation by running examples
 --------------------------------------------
 
@@ -84,6 +85,25 @@ At this point, `make run` should execute the newly built example.
 However, it wil not execute by double-clicking on its icon; lots of "missing DLL" warnings shall appear.
 To enable to double-click on the exe file to run it, you need to copy the required DLLs file in the application folder.
 That is easily done with the `make copy_dlls` command.
+
+
+Setting up an IDE
+-----------------
+
+Several IDE can be used with MSYS2.
+QT Creator used to be OF recommended choice.
+However, VS Code has gain popularity and is now used by many OF enthusiasts.
+
+If you use a different IDE and would like to share your knowledge in setting it up for OF development, do not hesitate to contribute to this page.
+
+
+### VS Code
+You can find more information in the corresponding [setup guide](../vscode):
+
+### QT Creator
+You can find more information in the corresponding [setup guide](../qtcreator):
+
+As mention earlier, pay attention to the installation folder of MSYS2 (which must be `C:\msys64`).
 
 
 Setting the PATH variable
