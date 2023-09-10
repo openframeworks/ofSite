@@ -40,3 +40,35 @@ Then, edit the `terminal.integrated.profiles.windows` object to add `OF-MINGW64`
 ```
 
 Now when you open a terminal in VS Code, it will open a MINGW64 shell where you can run the `make` commands as appropriate.
+
+### Edit C/C++ Extension settings
+
+```json
+{
+    "env": {
+        "OF_ROOT": "C:/openFrameworks"
+    },
+    "configurations": [
+        {
+            "name": "OF-MINGW64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${env:OF_ROOT}/addons/**/src",
+                "${env:OF_ROOT}/libs/openFrameworks/**",
+                "c:/msys64/mingw64/include/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "c:/msys64/mingw64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
+```
