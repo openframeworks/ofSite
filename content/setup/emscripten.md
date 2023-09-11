@@ -4,9 +4,11 @@
 emscripten setup
 ===========
 
+**NOTE: We recommend using the [nightly builds](https://openframeworks.cc/download/) of OF ( bottom of download page ) for emscripten.**
+
 Have you ever made a project in openFrameworks and been like "This is awesome! I want to put it on my online portfolio!". You could always make a video or take photos, but what about the UI aspect of your project? How can people see the awesome mouse effects you made? Enter Emscripten. Emscripten translates your C++ code into Javascript code in a matter of minutes! So you can put your awesome OF project "on the line" in your portfolio.
 
-These instruction will show you how to compile one example project in the openFrameworks distribution, and can be reused whenever you want to translate an openFrameworks sketch to a web page. Assuming that you have downloaded openFrameworks 0.9 (it works only with OF versions >= 0.9) you only have to install emscripten and compile a project with it. Here the instruction steb by step.
+These instruction will show you how to compile one example project in the openFrameworks distribution, and can be reused whenever you want to translate an openFrameworks sketch to a web page. Assuming that you have downloaded openFrameworks you only have to install emscripten and compile a project with it. Here the instruction steb by step.
 
 Install Emscripten
 ------------------
@@ -17,14 +19,10 @@ Open a terminal at the location where you want the emsdk to be installed and run
 ```bash
 git clone https://github.com/emscripten-core/emsdk
 cd emsdk
-./emsdk install sdk-1.40.0-64bit
-./emsdk activate sdk-1.40.0-64bit
+./emsdk install latest
+./emsdk activate latest
 source ./emsdk_env.sh
 ```
-
-For 32bit systems swap the `-64bit` for `-32bit`. 
-
-_Note: Because the current `emsdk` script uses Python2, you may get errors if the default `python` command on your machine is aliased to Python3. In this case, try explicitly running the above commands with Python2. For example: `python2 ./emsdk update`._
 
 The installation will take a while. When it is finished, type `source ./emsdk_env.sh` to set the system path to the active version of Emscripten. You can copy the output of this command and add it to your `.profile` file, in order to save this variables also for the next sessions.
 
@@ -39,16 +37,16 @@ Open the terminal in in one project in the examples folder, like `examples/3d/3D
 emmake make
 ```
 
-Once the compilation is finished, there will be a new file in `examples/3d/3DPrimitivesExample/bin`, the `3DPrimitivesExample.html` file. Open this file with the command:
+Once the compilation is finished, there will be a new file in `examples/3d/3DPrimitivesExample/bin/3DPrimitivesExample/`, the `index.html` file. Open this file with the command:
 
 ```bash
-emrun bin/3DPrimitivesExample.html
+emrun bin/3DPrimitivesExample/
 ```
 
-If it does not work, it is probably because you are opening with safari, and safari does not support WebGL. Let's open it with another browser, like chrome
+If it does not work, it might need a different browser like Firefox.
 
 ```bash
-emrun --browser chrome bin/3DPrimitivesExample.html
+emrun --browser firefox bin/3DPrimitivesExample/
 ```
 If everything works, you should see this image
 

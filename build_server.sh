@@ -17,7 +17,7 @@ if [ $ret -ne 0 ]
 then
 	SUBJECT="Failed building site"
 	# Email To ?
-	EMAIL="arturo@openframeworks.cc"
+	EMAIL="of@openframeworks.cc"
 	# Email text/message
 	# send an email using /bin/mail
 	/usr/bin/mail -s "$SUBJECT" "$EMAIL" < $LOG

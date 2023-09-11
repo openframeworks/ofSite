@@ -5,13 +5,13 @@ Getting your Raspberry Pi ready for openFrameworks
 ============
 
 
-## Install Raspbian "Buster"
-0. Install the latest _**Raspbian** (Debian Buster)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
+## Install Raspbian "Bullseye"
+0. Install the latest _**Raspbian or Raspberry Pi OS** (Debian Bullseye)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
 1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card
 
 
 ## Configure the Raspberry Pi
-This guide assumes you are starting from a fresh Raspbian install and that you are able to connect to the Raspberry Pi and send it commands.
+This guide assumes you are starting from a fresh Bullseye install and that you are able to connect to the Raspberry Pi and send it commands.
 
 If you're installing Raspbian via NOOBS, SSH access is disabled by default since the 2016-11-25 release, which makes setup in headless mode difficult. If you don't have access to a keyboard and monitor and plan to set up from scratch in the headless mode, make sure you follow [this guide and add the ssh file onto the boot partition](https://www.raspberrypi.org/documentation/remote-access/ssh/).
 
@@ -56,18 +56,16 @@ _Note: The above steps may take a little while._
 ## Download openFrameworks
 You now can download openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
 
-### For the Raspberry Pi using OF for arm6
+### For Raspberry Pi with 64bit OS 
+Download the aarch64 release of openFrameworks from
+https://github.com/openframeworks/openFrameworks/releases and expand it and rename the folder `openFrameworks` 
 
-```sh
-cd
-wget https://openframeworks.cc/versions/v0.11.0/of_v0.11.0_linuxarmv6l_release.tar.gz
-mkdir openFrameworks
-tar vxfz of_v0.11.0_linuxarmv6l_release.tar.gz -C openFrameworks --strip-components 1
-```
-
+### For Raspberry Pi with 32bit OS 
+Download the armv6l release of openFrameworks from
+https://github.com/openframeworks/openFrameworks/releases and expand it and rename the folder `openFrameworks` 
 
 ## Install packages and compile openFrameworks:
- Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.
+Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.
 
 The time for these steps will depend on whether you are on a RPI1, RPI2 or RPI3 and the speed of the Raspbian mirrors to download the packages.
 
@@ -85,11 +83,6 @@ make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project
 
 ## Use EGL instead of GLFW 
 As of 0.11.0 the default window is ofAppGLFWWindow. If you want to use the older ofAppEGLWindow approach, comment out `USE_GLFW_WINDOW = 1` in `libs/openFrameworksCompiled/project/linuxarmv6l/config.linuxarmv6l.default.mk` 
-
-## Speeding up compiling
-Compiling natively on the Raspberry Pi takes a long time. openFrameworks applications typically take much less time than the core library. Taking the time to set up a cross-compiling solution will save you enormous amounts of time.
-
-[Raspberry Pi Cross Compiling Guide](../raspberry-pi-cross-compiling-guide/)
 
 ## Compile your first app
 openFrameworks ships with a bunch of examples located in the `openFrameworks/examples` folder. Inside examples the projects are sorted by the categories:
@@ -131,8 +124,7 @@ make run
 
 It is critical to keep your application directory 3 levels below the openFrameworks directory.
 
-## Tips for 0.11.0 / Raspberry Pi 4 
-- Currently the 0.11.0 release has 4x Anti Aliasing as default for the GLFW window. This can cause quite a big hit to framerate. 0.11.1 Patch release [will fix this](https://github.com/openframeworks/openFrameworks/pull/6503/files), but you can also set the window settings manually in main.cpp to set numSamples to 0.
+## Tips for 0.12.0 / Raspberry Pi 4 
 - If you don't want to run PI apps from the X desktop enviornment but want to use the GLFW window system ( or have a Raspberry Pi 4 which requires X ) you can run an OF app without the desktop. First make sure you have X installed with: ```sudo apt-get install xorg``` then launch your app with: ```startx ./polygonExample -- -s off```. Your app will run with an X window but without the overhead of the desktop enivornment.    
 - If you want to run an app headless you can use XVFB ( X Virtual Framebuffer ). First install XVFB with: ```sudo apt-get install xvfb``` Then run your app with: ```xvfb-run ./polygonExample &```. You won't see a window, but GL operations will be executed. 
 - Finally for users who are looking for the old EGL style window support but with Raspberry Pi 4. This [work in progress addon](https://forum.openframeworks.cc/t/new-ofxaddon-ofxrpi4window/34388) is very close to providing similar functionality. 

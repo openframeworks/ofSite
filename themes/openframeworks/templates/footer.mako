@@ -3,13 +3,14 @@
 
 Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/openframeworks/ofSite/commit/${self.getLastCommitHash()}">${self.getLastCommitHash()}</a>
 
+<!--
 <br/>
 <a href="http://www.rackspace.com" target="_blank" class="rackspace">
 Hosting for openFrameworks is generously provided by Rackspace
 <br/>
 <img src="/assets/images/rackspace.png">
 </a>
-
+-->
 </p>
 
 

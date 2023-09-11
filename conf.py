@@ -26,7 +26,7 @@ BLOG_TITLE = "openFrameworks"  # (translatable)
 if socket.gethostbyname(socket.gethostname()) == socket.gethostbyname('openframeworks.cc'):
     SITE_URL = "https://openframeworks.cc/"
 else:
-    SITE_URL = "http://localhost:8000"
+    SITE_URL = "http://localhost:8000/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://openframeworks.cc/"
@@ -187,7 +187,7 @@ EXTERNAL_LINKS = {
         ("https://forum.openframeworks.cc", "forum", True),
         ("https://github.com/openframeworks", "github", True),
         ("http://ofxaddons.com", "addons", True),
-        ("http://ofslack.herokuapp.com/", "slack", True),
+        ("https://join.slack.com/t/openframeworks/shared_invite/zt-1r2brqms0-dZMMFZgZhFTgomjJ0vlCjA", "slack", True),
         ("https://blog.openframeworks.cc/", "blog", True),
         ("/donations", "donations", False),
     ),
@@ -196,17 +196,17 @@ EXTERNAL_LINKS = {
         ("https://forum.openframeworks.cc", "forum", True),
         ("https://github.com/openframeworks", "github", True),
         ("http://ofxaddons.com", "addons", True),
-        ("http://ofslack.herokuapp.com/", "slack", True),
+        ("https://join.slack.com/t/openframeworks/shared_invite/zt-1r2brqms0-dZMMFZgZhFTgomjJ0vlCjA", "slack", True),
         ("https://blog.openframeworks.cc/", "blog", True),
         ("/donations", "donations", False),
     ),
 
     "ko": (
         ("https://forum.openframeworks.cc", "포럼(EN)", True),
-        ("https://forum.openframeworks.kr", "포럼(KR)", True),
+        ("http://forum.openframeworks.kr", "포럼(KR)", True),
         ("https://github.com/openframeworks", "github", True),
         ("http://ofxaddons.com", "애드온", True),
-        ("http://forum.openframeworks.kr/t/slack/32", "slack", True),
+        ("https://join.slack.com/t/openframeworks/shared_invite/zt-1r2brqms0-dZMMFZgZhFTgomjJ0vlCjA", "slack", True),
         ("https://blog.openframeworks.cc/", "블로그", True),
         ("/donations", "donations", False),
     ),
@@ -215,7 +215,7 @@ EXTERNAL_LINKS = {
         ("https://forum.openframeworks.cc/c/international-discussions/zhcn", "论坛(CN)", True),
         ("https://github.com/openframeworks", "github", True),
         ("http://ofxaddons.com", "插件", True),
-        ("http://forum.openframeworks.kr/t/slack/32", "slack", True),
+        ("https://join.slack.com/t/openframeworks/shared_invite/zt-1r2brqms0-dZMMFZgZhFTgomjJ0vlCjA", "slack", True),
         ("https://blog.openframeworks.cc/", "博客", True),
         ("/donations", "donations", False),
     ),
@@ -1242,10 +1242,10 @@ DEMOTE_HEADERS = 0
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {
-    "currentVersion": "0.11.2",
-    "breaking": False,
-    "majorVersion": "0.11.0",
-    "olderVersion": "0.11.1",
+    "currentVersion": "0.12.0",
+    "breaking": True,
+    "majorVersion": "0.12.0",
+    "olderVersion": "0.11.2",
     "external_links": EXTERNAL_LINKS,
     "external_translations": {} if EXTERNAL_TRANSLATIONS==None else EXTERNAL_TRANSLATIONS,
 }

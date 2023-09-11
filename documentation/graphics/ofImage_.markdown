@@ -23,8 +23,16 @@ The ofImage is a useful object for loading, saving and drawing images in openFra
 
 ofImage uses a library called "freeImage" under the hood.
 
-
-
+Simple example to load & draw an image :
+In setup :
+~~~~{.cpp}
+ofImage myImg; // declare a new ofImage image (rather in ofApp.h)
+myImg.load("anImage.png"); // first load image, assuming it's in bin/data folder
+~~~~
+In draw :
+~~~~{.cpp}
+myImg.draw(0, 0); // draw the image in the draw loop
+~~~~
 
 
 ##Methods
@@ -320,8 +328,13 @@ h Height of region to crop.
 
 _description: _
 
-This crops the image to the w,h passed in from the x,y position.
+This crops the image to the w,h passed in from the x,y position. The image has to be loaded before it's cropped. 
 
+~~~~{.cpp}
+ofImage myImg;
+myImg.load("anImage.png");
+myImg.crop(0, 0, 1024, 1024); // crop a 1024px x 1024px square 
+~~~~
 
 
 
@@ -494,7 +507,14 @@ _description: _
 
 Draws the ofImage into the x,y location using the default height and width of the image.
 
+~~~~{.cpp}
+// in setup
+ofImage myImg;
+myImg.load("anImage.png"); // first load image, then draw it
 
+// in draw
+myImg.draw(0, 0); // draw at upper-left corner position (O px x 0 px) 
+~~~~
 
 
 
@@ -541,7 +561,14 @@ _description: _
 
 Draws the ofImage into the x,y location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height.
 
+~~~~{.cpp}
+// in setup
+ofImage myImg;
+myImg.load("anImage.png"); // first load image, then draw it
 
+// in draw
+myImg.draw(0, 0, 1024, 1024); // draw at upper-left corner position (O px x 0 px), 1024 px of width & height
+~~~~
 
 
 
@@ -586,7 +613,14 @@ _description: _
 
 Draws the ofImage into the x,y,z location with the default height and width. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
 
+~~~~{.cpp}
+// in setup
+ofImage myImg;
+myImg.load("anImage.png"); // first load image, then draw it
 
+// in draw
+myImg.draw(0, 0, 10); // x, y, z 
+~~~~
 
 
 
@@ -635,7 +669,14 @@ _description: _
 
 Draws the ofImage into the x,y,z location and with the width and height, with any attendant scaling that may occur from fitting the ofImage into the width and height. You should ensure that you turn on depth sorting using glEnable(GL_DEPTH) before trying to draw multiple objects into z-space.
 
+~~~~{.cpp}
+// in setup
+ofImage myImg;
+myImg.load("anImage.png"); // first load image, then draw it
 
+// in draw
+myImg.draw(0, 0, 10, 1024, 1024); // x, y, z, with, height
+~~~~
 
 
 
@@ -1453,11 +1494,24 @@ settings Load options
 
 _description: _
 
+Loads an image given by file name, assuming it's in the bin/data folder.
+An image has to be loaded first, then you'll have to call draw() function to draw it on the screen.
 
+~~~~{.cpp}
+ofImage myImg;
+myImg.load("anImage.png"); // put your image in bin/data folder
+~~~~
 
+The image can also be loaded with settings (JPG image only). For more information look at [ofImageLoadSettings documentation](https://openframeworks.cc///documentation/graphics/ofImageLoadSettings/ "ofImageLoadSettings module documentation")
 
+~~~~{.cpp}
+ofImageLoadSettings settings;
+settings.accurate = true;
 
-
+// Then load the image with these settings 
+ofImage myImg;
+myImg.load("anImage.png", settings);
+~~~~
 
 <!----------------------------------------------------------------------------->
 
@@ -1967,7 +2021,11 @@ _description: _
 
 Resizes the image to a new size (w, h); Can be used to scale up or down an image.
 
-
+~~~~{.cpp}
+ofImage myImg;
+myImg.load("anImage.png");
+myImg.resize(300, 300); // 300px width x 300px height
+~~~~
 
 
 
