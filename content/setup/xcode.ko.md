@@ -18,7 +18,7 @@ xcode-select --install
 
 위 명령어를 입력하면 command line tools를 입력하는 창이 뜰것입니다. **설치** 버튼을 눌러 설치를 진행합니다.
 
-![install dialog for the command line tools](xcode_setup_assets/install-dialog.webp)
+![install dialog for the command line tools](./xcode_setup_assets/install-dialog.webp)
 
 
 ## 2. 셋업 테스트 하기
@@ -34,7 +34,7 @@ OF 앱을 빌드하고 실행할것입니다! 오픈프레임웍스에 포함된
 
 3DPrimitivesExample로 테스트를 해봅시다. **examples**폴더를 열고, 안에 **3d**폴더에 들어가보면 **3DPrimitivesExample**폴더가 보입니다. 내부에 2개의 폴더와 몇몇의 파일들을 볼 수 있을것입니다.
 
-![selecting the 3D primitives example](xcode_setup_assets/example-selecting.png)
+![selecting the 3D primitives example](./xcode_setup_assets/example-selecting.png)
 
 아래는 오픈프레임웍스 앱의 기본 구조입니다:
 
@@ -47,12 +47,12 @@ OF 앱을 빌드하고 실행할것입니다! 오픈프레임웍스에 포함된
 
 `3DPrimitivesExample.xcodeproj` 프로젝트를 더블클릭하면 Mac OS에서 보안 이슈로 인해 알림 팝업 창이 나타납니다. **열기** 버튼을 클릭하시면 됩니다.
 
-![xcode showing an openframeworks example](xcode_setup_assets/of_first_time_example-open.png)
+![xcode showing an openframeworks example](./xcode_setup_assets/of_first_time_example-open.png)
 
 맨 위에서 폴더 아이콘이 선택된 경우, 왼쪽 바`(1)`는 일반적인 프로젝트 브라우저로 프로젝트 파일을 표시합니다. 또한 앱을 빌드하는 동안 발생한 오류도 표시합니다. `(2)`번은 앱을 빌드 할 수 있는 버튼입니다.
 
 
-![XCode Overview](xcode_setup_assets/of_overview.png)
+![XCode Overview](./xcode_setup_assets/of_overview.png)
 
 중앙의 섹션이 메인 편집기`(3)`입니다. 프로젝트 브라우저에서 선택한 파일을 편집할 수 있습니다. `.cpp`나 `.h`와 같은 소스파일을 위한 텍스트 에디터로 사용되는것이 보통이지만, 프로젝트파일의 상단에 위치한 프로젝트 세팅을 클릭해 변경하거나, 이미지/비디오/사운드파일들을 확인할 수도 있습니다.
 
@@ -65,7 +65,7 @@ OF 앱을 빌드하고 실행할것입니다! 오픈프레임웍스에 포함된
 
 처음으로 오픈프레임웍스 프로젝트를 컴파일할 때에는, 거의 1분 정도가 걸리는데 이는 오픈프레임웍스를 컴파일 하기 때문입니다. 추후 오픈프레임웍스를 업데이트하거나 오픈프레임웍스 내부 파일들을 편집하지 않는다면 이 과정은 한 번만 필요합니다. 오픈프레임웍스 자체의 컴파일이 끝나면, Xcode는 예제 파일을 컴파일 할 것이고, `Build Succeeded` 메시지와 함께 예제 앱이 실행될 것입니다..
 
-![example running in a window in front of xcode](xcode_setup_assets/of_example-running.png)
+![example running in a window in front of xcode](./xcode_setup_assets/of_example-running.png)
 
 실행된 예제 앱의 창을 닫으면, 새로운 패널이 Xcode의 하단에 추가되어있음을 알 수 있습니다. 이것은 `ofLog` 메세지가 출력되거나 디버깅을 위해 사용되는 콘솔 패널입니다. `⌘ + shift + y` 단축키로 이 패널을 감추거나 표시할 수 있습니다.
 
@@ -75,7 +75,7 @@ OF 앱을 빌드하고 실행할것입니다! 오픈프레임웍스에 포함된
 
 자 이제 셋업이 잘 되었는지 확인되었습니다. 이제부턴 새 프로젝트로 시작해볼 단계입니다. **projectGenerator**폴더에 들어가보면, 오픈프레임웍스의 앱을 쉽게 생성해주는 `projectGenerator.app`을 실행해 봅니다.
 
-![pg 개요](xcode_setup_assets/of_pg_1.png)
+![pg 개요](./xcode_setup_assets/of_pg_1.png)
 
 `(1)` : **프로젝트에 적절한 이름을 지정합니다.**
 
@@ -83,19 +83,19 @@ OF 앱을 빌드하고 실행할것입니다! 오픈프레임웍스에 포함된
 
 `(3)` : **내장 또는 로컬 openFrameworks 애드온을 추가할 수 있습니다.**
 
-![openFrameworks 애드온](xcode_setup_assets/of_pg_Addon.png)
+![openFrameworks 애드온](./xcode_setup_assets/of_pg_Addon.png)
 
 `(4)` : **"Generate" 버튼을 누릅니다.**
 
 
-![Open Project](xcode_setup_assets/of_open_pg_project.png)
+![Open Project](./xcode_setup_assets/of_open_pg_project.png)
 
 이후 프로잭트 생성기를 닫고, `apps/myApps/myProjectName` 폴더로 이동합니다. 
 `myProjectName.xcodeproj`를 Xcode로 열서 좌측 프로잭트 탭에서 **src**폴더 안의 `ofApp.cpp` 파일을 선택합니다.
 
 그럼 `setup()`, `update()`, `darw()` 함수들과 몇몇 빈 함수들이 작성된 기본 앱의 템플릿을 볼 수 있습니다.
 
-![blank openframeworks project template](xcode_setup_assets/of_generate-blank.png)
+![blank openframeworks project template](./xcode_setup_assets/of_generate-blank.png)
 
 이제 간단한 앱을 만들어보겠습니다. 화면 왼쪽 상단에 텍스트와 중앙에 여러 개의 움직이는 도형들을 만들어 봅시다. `draw()` 함수에 다음 코드를 추가한 다음 `⌘ + r`을 누르거나 (또는 실행 버튼을 클릭)하여 새로운 앱을 실행합니다:
 
@@ -125,7 +125,7 @@ for(int i = 0; i < 100; i++) {
 }
 ```
 
-![filling in the draw function while showing xcode autocomplete](xcode_setup_assets/of_anim.gif)
+![filling in the draw function while showing xcode autocomplete](./xcode_setup_assets/of_anim.gif)
 
 
 ## 4. 프로젝트에 파일 추가하기
@@ -134,44 +134,44 @@ for(int i = 0; i < 100; i++) {
 
 새 파일을 만드는 방법이 몇가지 있습니다. 첫번째 방법은 Xcode에서 **src** 폴더에 우측버튼을 누르고, **New File**을 선택하는 것입니다. 다른 방법은 메뉴에서 **File > New > File..** 을 선택하는 것입니다.
 
-![](xcode_setup_assets/of_add_file_1.png)
+![](./xcode_setup_assets/of_add_file_1.png)
 
 다이얼로그가 뜨면, OS X > Source로 이동하여 C++ 파일을 선택합니다. Xcode는 `.cpp`와 `.h`을 세트로 하여 자동으로 생성해줍니다. 따라서 기본 이름 **myNewClass**만 제공하면 됩니다. 다이얼로그에서 새 파일의 경로를 **src**폴더로 지정했는지 체크하시기 바랍니다.
 
-![이미지](xcode_setup_assets/of_add_file_2.png)
+![이미지](./xcode_setup_assets/of_add_file_2.png)
 
 새 파일을 **src** 폴더에 저장하라는 프롬프트가 나타나면 Xcode에게 알려줘야 합니다.
 
-![이미지](xcode_setup_assets/of_add_file_3.png)
+![이미지](./xcode_setup_assets/of_add_file_3.png)
 
 마지막으로, 추가한 파일은 Xcode 편집기에 표시됩니다.
 
-![이미지](xcode_setup_assets/of_add_file_4.png)
+![이미지](./xcode_setup_assets/of_add_file_4.png)
 
 ## 5. 프로젝트에 ofxAddons 추가
 1. [ofxAddons 웹 사이트](https://ofxaddons.com/categories)에서 외부 애드온을 사용하려면 먼저 원하는 애드온을 클릭합니다. 웹 사이트에서는 레포지토리 소스 페이지로 연결됩니다.
 
-![ofxIO](xcode_setup_assets/of_addon_1.png)
+![ofxIO](./xcode_setup_assets/of_addon_1.png)
 
 2. 폴더를 zip 파일로 다운로드합니다.
 
-![ofxIO](xcode_setup_assets/of_addon_2.png)
+![ofxIO](./xcode_setup_assets/of_addon_2.png)
 
 3. zip 파일의 내용을 추출하고 `-master` suffix를 제거합니다.
 
-![ofxIO](xcode_setup_assets/of_addon_3.png)
+![ofxIO](./xcode_setup_assets/of_addon_3.png)
 
 4. 폴더를 `openframeworks/addons` 디렉토리로 이동합니다.
 
-![ofxIO](xcode_setup_assets/of_addon_4.png)
+![ofxIO](./xcode_setup_assets/of_addon_4.png)
 
 5. 프로젝트 생성기를 엽니다. `import` 버튼을 사용하거나 프로젝트 폴더를 **projectGenerator** 앱으로 드래그하여 놓습니다.
 
-![ofxIO](xcode_setup_assets/of_pg.png)
+![ofxIO](./xcode_setup_assets/of_pg.png)
 
 6. `openFrameworks/addons` 폴더로 복사한 애드온의 이름을 입력합니다. 관련 ofxAddon이 즉시 나타날 것입니다.
 
-![ofxIO 프로젝트 애드온](xcode_setup_assets/of_addon_5.png)
+![ofxIO 프로젝트 애드온](./xcode_setup_assets/of_addon_5.png)
 
 7. `Update` 버튼을 누릅니다. 그런 다음 업데이트된 프로젝트를 열 수 있습니다.
 
@@ -190,7 +190,7 @@ for(int i = 0; i < 100; i++) {
     - XCode를 엽니다.
     - oF 프로젝트를 엽니다.
     - 상단 메뉴로 이동 -> Product -> Destination Architecture -> Show Rosetta Destinations 
-    ![](xcode_setup_assets/of_xcode_rosetta.png)
+    ![](./xcode_setup_assets/of_xcode_rosetta.png)
     - 다시 실행합니다.
 
 4. **프로젝트 폴더를 컴퓨터의 다른 위치로 이동했습니다. 어떻게 해야 하나요?**
@@ -199,11 +199,11 @@ for(int i = 0; i < 100; i++) {
     - 프로젝트 폴더를 드래그 & 드롭합니다. 
     - **Update**를 클릭합니다.
     - 다시 *.xcodeproj 파일을 열어 보세요.
-    ![](xcode_setup_assets/of_pg.png)
+    ![](./xcode_setup_assets/of_pg.png)
 
 5. **앱이 낮은 FPS 또는 느린 속도로 실행됩니다. 성능을 향상시키려면 어떻게 할 수 있나요?**
     
     여러 이유가 있을 수 있습니다. 포럼에 질문하기 전에 다음 팁을 시도해 보세요.
     - `update()` 및 `draw()` 함수에서의 콘솔 출력 메시지 주석 처리하기. `ofLog()`, `ofLogNotice()`, `ofLogVerbose()`, `cout` 등과 같은 명령어가 있는지 확인하세요.
     - 앱을 `Release` 모드로 실행해 보세요.
-    ![](xcode_setup_assets/of_release.png)
+    ![](./xcode_setup_assets/of_release.png)
