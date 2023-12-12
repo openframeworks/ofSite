@@ -377,6 +377,7 @@ _inlined_description: _
 
 _description: _
 
+The getDuration() method returns a _float_ value with the duration in seconds of the movie.
 
 
 
@@ -853,9 +854,25 @@ _inlined_description: _
 
 _description: _
 
+The getPosition() method returns a _float_ value between 0 and 1 with the relative position in the movie. A return value of _0_ means the start point in the movie, a return value of _1_ means the end of the movie.
 
+Example:
 
+~~~~{.cpp}
+void main() {	
+	myPlayer.load("movies/fingers.mov");
+}
 
+	
+void update() {
+	myPlayer.update();
+}
+	
+void draw() {
+	ofLogNotice() << "The movie is playing the " << (myPlayer.getPosition() * 100) << "%";
+	ofLogNotice() << "The movie is in the following time in secs: " <<  myPlayer.getPosition()*myPlayer.getDuration();
+}
+~~~~
 
 
 
