@@ -127,7 +127,6 @@ for(int i = 0; i < 100; i++) {
 
 ![filling in the draw function while showing xcode autocomplete](https://openframeworks.cc/setup/xcode/xcode_setup_assets/of_anim.gif)
 
-
 ## 4. 프로젝트에 파일 추가하기
 
 작업을 하면서, 새로운 파일을 추가하고 싶을 때가 있습니다. 이 파일들은 여러분의 프로젝트를 위해서만 작성되거나 혹은 애드온, 혹은 다른 사람이 작성한 외부 라이브러리가 될수도 있겠죠.
@@ -147,6 +146,7 @@ for(int i = 0; i < 100; i++) {
 마지막으로, 추가한 파일은 Xcode 편집기에 표시됩니다.
 
 ![이미지](https://openframeworks.cc/setup/xcode/xcode_setup_assets/of_add_file_4.png)
+
 
 ## 5. 프로젝트에 ofxAddons 추가
 1. [ofxAddons 웹 사이트](https://ofxaddons.com/categories)에서 외부 애드온을 사용하려면 먼저 원하는 애드온을 클릭합니다. 웹 사이트에서는 레포지토리 소스 페이지로 연결됩니다.
@@ -191,6 +191,7 @@ for(int i = 0; i < 100; i++) {
     - oF 프로젝트를 엽니다.
     - 상단 메뉴로 이동 -> Product -> Destination Architecture -> Show Rosetta Destinations 
     ![](https://openframeworks.cc/setup/xcode/xcode_setup_assets/of_xcode_rosetta.png)
+
     - 다시 실행합니다.
 
 4. **프로젝트 폴더를 컴퓨터의 다른 위치로 이동했습니다. 어떻게 해야 하나요?**
