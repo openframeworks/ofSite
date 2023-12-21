@@ -43,7 +43,7 @@ $(document).ready(function(){
 	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/xcode">xcode</a></p>
-	        <p><a href="../setup/qtcreator">qt creator ${of.msg("(experimental)", locals())}</a></p>
+	        <p><a href="../setup/vscode">vs code</a></p>
 	        <p><a href="../setup/emscripten">emscripten</a></p>
         </div>
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
 	        <br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/linux-install">linux install</a></p>
-	        <p><a href="../setup/qtcreator">qt creator</a></p>
+	        <p><a href="../setup/vscode">vs code</a></p>
 	        <p><a href="../setup/emscripten">emscripten</a></p>
         </div>
 
