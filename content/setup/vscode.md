@@ -14,7 +14,7 @@ VS Code works similarly on Linux and macOS. For Windows users see the **msys2** 
 3. **Important** make sure Cmake extensions are NOT installed as they can interfere with your project build. 
 
 _We reccomend the following extensions for OF in VS Code._
-![recommend extensions for VS Code](setup_assets/vscode-extensions.png)
+![recommend extensions for VS Code](https://openframeworks.cc/setup/setup_assets/vscode-extensions.png)
 
 ### Open a VS Code project. 
 The file extension of a VS Code project is `.code-workspace`. All examples should have a VS Code project file already eg: `examples/3d/3DPrimitivesExample/3DPrimitivesExample.code-workspace`. Double clicking on the file should open it in VS Code. 
@@ -23,15 +23,15 @@ The file extension of a VS Code project is `.code-workspace`. All examples shoul
 To build a VS Code project go up to the menu titled **Terminal** and select **Build Release**. Build Release both builds and runs your project in Release mode. 
 
 _Building and running in Release._
-![build a OF project in VS Code](setup_assets/vscode-build.jpg)
+![build a OF project in VS Code](https://openframeworks.cc/setup/setup_assets/vscode-build.jpg)
 
-![running a OF project in VS Code](setup_assets/vscode-run.jpg)
+![running a OF project in VS Code](https://openframeworks.cc/setup/setup_assets/vscode-run.jpg)
 
 ### Debugging a VS Code project. 
 1. First open the **Terminal** menu and select **Build Debug**. This compiles the app for Debug but does not run it. 
 2. Then open the Run menu and select Begin Debugging. 
 
-![debug a OF project in VS Code](setup_assets/vscode-debug.jpg)
+![debug a OF project in VS Code](https://openframeworks.cc/setup/setup_assets/vscode-debug.jpg)
 
 
 =======
