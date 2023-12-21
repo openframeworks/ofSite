@@ -4,15 +4,39 @@
 # VS Code
 =======
 
-Instructions for setting up VS Code are not yet fully available.
-
-Do not hesitate to contribute if you have some experience in setting up VS Code with OF.
+VS Code works similarly on Linux and macOS. For Windows users see the **msys2** section at the bottom of this page or use the [Visual Studio](https://openframeworks.cc/setup/vs/) setup. 
 
 ## Common
 
-Install the [Microsoft C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+### Install VS Code
+1. [Download and install VS Code for your platform](https://code.visualstudio.com/download)
+2. When opening an OF project you may be asked to install extensions. We recommend only installing the **Microsoft C/C++ extension** and the **Makefile extension**.
+3. **Important** make sure Cmake extensions are NOT installed as they can interfere with your project build. 
 
-## MSYS2
+_We reccomend the following extensions for OF in VS Code._
+![recommend extensions for VS Code](setup_assets/vscode-extensions.png)
+
+### Open a VS Code project. 
+The file extension of a VS Code project is `.code-workspace`. All examples should have a VS Code project file already eg: `examples/3d/3DPrimitivesExample/3DPrimitivesExample.code-workspace`. Double clicking on the file should open it in VS Code. 
+
+### Building a VS Code project. 
+To build a VS Code project go up to the menu titled **Terminal** and select **Build Release**. Build Release both builds and runs your project in Release mode. 
+
+_Building and running in Release._
+![build a OF project in VS Code](setup_assets/vscode-build.jpg)
+
+![running a OF project in VS Code](setup_assets/vscode-run.jpg)
+
+### Debugging a VS Code project. 
+1. First open the **Terminal** menu and select **Build Debug**. This compiles the app for Debug but does not run it. 
+2. Then open the Run menu and select Begin Debugging. 
+
+![debug a OF project in VS Code](setup_assets/vscode-debug.jpg)
+
+
+=======
+
+## MSYS2 ONLY
 
 ### Setting up MSYS2 shell
 
