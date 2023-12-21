@@ -29,7 +29,7 @@ _Building and running in Release._
 
 ### Debugging a VS Code project. 
 1. First open the **Terminal** menu and select **Run Build Task...** and then **Build Debug**. This compiles the app for Debug but does not run it. 
-2. Then open the Run menu and select Begin Debugging. 
+2. Then open the **Run** menu and select **Begin Debugging**. 
 
 ![debug a OF project in VS Code](https://openframeworks.cc/setup/setup_assets/vscode-debug.jpg)
 
