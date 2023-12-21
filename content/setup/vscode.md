@@ -20,7 +20,7 @@ _We recommend the following extensions for OF in VS Code._
 The file extension of a VS Code project is `.code-workspace`. All examples should have a VS Code project file already eg: `examples/3d/3DPrimitivesExample/3DPrimitivesExample.code-workspace`. Double clicking on the file should open it in VS Code. 
 
 ### Building a VS Code project. 
-To build a VS Code project go up to the menu titled **Terminal** and select **Build Release**. Build Release both builds and runs your project in Release mode. 
+To build a VS Code project go up to the menu titled **Terminal** and select **Run Build Task...** and then **Build Release**. Build Release builds and also runs your project in Release mode. 
 
 _Building and running in Release._
 ![build a OF project in VS Code](https://openframeworks.cc/setup/setup_assets/vscode-build.jpg)
