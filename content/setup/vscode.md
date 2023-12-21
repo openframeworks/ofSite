@@ -13,7 +13,7 @@ VS Code works similarly on Linux and macOS. For Windows users see the **msys2** 
 2. When opening an OF project you may be asked to install extensions. We recommend only installing the **Microsoft C/C++ extension** and the **Makefile extension**.
 3. **Important** make sure Cmake extensions are NOT installed as they can interfere with your project build. 
 
-_We reccomend the following extensions for OF in VS Code._
+_We recommend the following extensions for OF in VS Code._
 ![recommend extensions for VS Code](https://openframeworks.cc/setup/setup_assets/vscode-extensions.png)
 
 ### Open a VS Code project. 
