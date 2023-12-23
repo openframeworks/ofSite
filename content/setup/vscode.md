@@ -9,7 +9,7 @@ VS Code works similarly on Linux and macOS. For Windows users see the **msys2** 
 ## Common
 
 ### Install VS Code
-1. [Download and install VS Code for your platform](https://code.visualstudio.com/download)
+1. [Download and install VS Code for your platform](https://code.visualstudio.com/download). NOTE: For an MIT Licensed version of VS Code without tracking - you can [download the latest VSCodium](https://vscodium.com) release which has 1:1 feature parity as VS Code ( just Open Source ). 
 2. When opening an OF project you may be asked to install extensions. We recommend only installing the **Microsoft C/C++ extension** and the **Makefile extension**.
 3. **Important** make sure Cmake extensions are NOT installed as they can interfere with your project build. 
 
