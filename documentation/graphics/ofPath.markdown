@@ -3616,7 +3616,10 @@ _advanced: False_
 _inlined_description: _
 
 Set the stroke width of the line if the ofPath is to be drawn
-not in wireframe.
+not in wireframe. OpenGL 3 or later is not supporting line
+width, so calling for any number greater than 0 brings the
+same 1px line. If you want thick lines, you can represent
+them with fill of thin rectangles.
 
 
 
@@ -3624,7 +3627,7 @@ not in wireframe.
 
 _description: _
 
-Sets the stroke width of the line if the ofPath is to be drawn not in wireframe.
+Sets the stroke width of the line if the ofPath is to be drawn not in wireframe. OpenGL 3 or later is not supporting line width, so calling for any number greater than 0 brings the same 1px line. If you want thick lines, you can represent them with fill of thin rectangles.
 
 
 
