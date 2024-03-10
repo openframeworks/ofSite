@@ -21,32 +21,21 @@ The `documentation` folder contains the OF API reference and are also in markdow
 
 ## Setting up the site to build locally using Docker
 
-* Pre-reqs: a working [Docker](https://www.docker.com/get-started/) environment and *nix shell
-* Build a container (alpine linux, python3, nikola) with `./build_docker.sh`
+This site is built using [nikola](https://getnikola.com).
+There's some scripts in the `bin/` folder that use Docker
+to make it easier to install and use.
+(Tested on MacOS).
+
+* Pre-reqs: a working [Docker](https://www.docker.com/get-started/)
+  environment and *nix shell
+* Build an image (alpine linux, python3, nikola) with
+  `./bin/build_docker.sh` (delete the image with `./bin/rm_docker.sh`)
 * Build the site and serve it on `http://localhost:8000/` with `./nikola_auto_build.sh`
 * (Build the site only with `./nikola_build.sh`)
 * (Serve the site on `http://localhost:8000/` with `./nikola_serve.sh`)
 
 ## Setting up the site to build locally
 
-This site is built using [nikola](https://getnikola.com). There's some scripts in the root folder to make it easier to install and use.
-
-1. First, if installing on Mac OS-X, make sure the Xcode command lines tools have been installed:
-
-  ```bash
-  xcode-select --install
-  ```
-  and then install the following packages (If you do not have brew installed you can grab it from [brew.sh](http://brew.sh/)):
-
-  ```bash
-  brew install python3
-  sudo easy_install pip
-  brew linkapps python3
-  ```
-
-2. From the ofSite source directory, run ./install.sh which installs nikola and all the needed dependencies. (This has only been tested on linux and OS-X). 
-
-3. Please make sure the symbol link `~/nikola/.Python` to python3 path is correct before you run `install.sh` script.
 
 4. Finally add the following to your .basrc, .bash_profile or .zshrc file:
   `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
