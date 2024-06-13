@@ -76,7 +76,7 @@ MESSAGES = {
 
     'Code Liberation OF workshops': 'Code Liberationによるワークショップ資料',
 
-    'OF video series': 'OFビデオチュートリアル',
+    'openFrameworks Tutorial Series': 'OFビデオチュートリアル',
 
     'ofBook': 'ofBook',
 
