@@ -26,41 +26,41 @@ First things first, OpenGL stands for Open Graphics Language but no one ever cal
 OpenGL’s main job is to help a programmer create code that creates points, lines, and polygons, and then convert those objects into pixels. The conversion of objects into pixels is called the "pipeline" of the OpenGL renderer and how that pipeline works at a high level is actually pretty important to understanding how to make OF do what you want it to and do it quickly. OF uses OpenGL for all of its graphics drawing but most of the calls are hidden. It actually uses an implementation of OpenGL called GLFW by default. All graphics calls in the ofGraphics class use calls to common OpenGL methods, which you can see if you open the class and take a look at what goes on in some of the methods. So, let's say you want to call OF line. Well, that actually calls ofGLRenderer::drawLine() which contains the following lines:
 
 ~~~~{.cpp}
-	linePoints[0].set(x1,y1,z1);
-	linePoints[1].set(x2,y2,z2);
+    linePoints[0].set(x1,y1,z1);
+    linePoints[1].set(x2,y2,z2);
 
-	// use smoothness, if requested:
-	if (bSmoothHinted) startSmoothing();
+    // use smoothness, if requested:
+    if (bSmoothHinted) startSmoothing();
 
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glVertexPointer(3, GL_FLOAT, sizeof(ofVec3f), &linePoints[0].x);
-	glDrawArrays(GL_LINES, 0, 2);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(3, GL_FLOAT, sizeof(ofVec3f), &linePoints[0].x);
+    glDrawArrays(GL_LINES, 0, 2);
 
-	// use smoothness, if requested:
-	if (bSmoothHinted) endSmoothing();
+    // use smoothness, if requested:
+    if (bSmoothHinted) endSmoothing();
 ~~~~
 
 Now, what's going on in there looks pretty weird, but it's actually fairly straight forward. Don't worry too much about the calls that are going on below, just check out the notes alongside them because, while the methods and variable names are kinda tricky, the fundamental ideas are not.
 So, we've got two points representing the beginning and end of our line, so we set those with the values we passed into ofDrawLine():
 
 ~~~~{.cpp}
-	linePoints[0].set(x1,y1,z1);
-	linePoints[1].set(x2,y2,z2);
+    linePoints[0].set(x1,y1,z1);
+    linePoints[1].set(x2,y2,z2);
 ~~~~
 
 If we're doing smoothing, let's go ahead and do it:
 
 ~~~~{.cpp}
-		// use smoothness, if requested:
-	if (bSmoothHinted) startSmoothing();
+        // use smoothness, if requested:
+    if (bSmoothHinted) startSmoothing();
 ~~~~
 
 Alright, onto the tricky part:
 
 ~~~~{.cpp}
-	glEnableClientState(GL_VERTEX_ARRAY); // #1
-	glVertexPointer(3, GL_FLOAT, sizeof(ofVec3f), &linePoints[0].x); // #2
-	glDrawArrays(GL_LINES, 0, 2); // #3
+    glEnableClientState(GL_VERTEX_ARRAY); // #1
+    glVertexPointer(3, GL_FLOAT, sizeof(ofVec3f), &linePoints[0].x); // #2
+    glDrawArrays(GL_LINES, 0, 2); // #3
 ~~~~
 
 What we're doing is saying:
@@ -564,7 +564,7 @@ This method loads the array of unsigned chars (data) into the texture, with a gi
 ~~~~{.cpp}
 unsigned char pixels[200*100*3];
 for (int i = 0; i < 200*100*3; i++){
-	pixels[i] = (int)(255 * ofRandomuf());
+    pixels[i] = (int)(255 * ofRandomuf());
 }
 myTexture.loadData(pixels, 200, 100, GL_RGB); // random-ish noise
 ~~~~
@@ -575,15 +575,15 @@ Finally, we can just use:
 ofLoadImage(theTex, "path/toAnImage.png");
 ~~~~
 
-When we actually draw the texture what we're doing is, surprise, putting some vertices on the screen that say where the texture should show up and say: we're going to use this ofTexture to fill in the spaces in between our vertices. The vertices are used to define locations in space where that texture will be used. Voila, textures on the screen. The way that we actually say "this is the texture that should show up in between all the vertices that we're drawing" is by using the bind() method. Now, you don't normally need to do this. The draw() method of both the ofImage and the ofTexture object take care of all of this for you, but this tutorial is all about explaining some of the underlying OpenGL stuff and underneath, those draw() methods call bind() to start drawing the texture, ofDrawRectangle() to put some vertices in place, and unbind() when it's done. It's just like this:
+When we actually draw the texture what we're doing is surprise, putting some vertices on the screen that says where the texture should show up and say: we're going to use this ofTexture to fill in the spaces in between our vertices. The vertices are used to define locations in space where that texture will be used. Voila, textures on the screen. The way that we actually say "this is the texture that should show up in between all the vertices that we're drawing" is by using the bind() method. Now, you don't normally need to do this. The draw() method of both the ofImage and the ofTexture object take care of all of this for you, but this tutorial is all about explaining some of the underlying OpenGL stuff and underneath, that draw () methods call bind() to start drawing the texture, ofDrawRectangle() to put some vertices in place, and unbind() when it's done. It's just like this:
 
 ~~~~{.cpp}
-tex.bind(); // start using our texture
+tex.bind(); // start using our textured
 quad.draw(); // quad is just a rectangle, like we made in the ofMesh section
 tex.unbind(); // all done with our texture
 ~~~~
 
-Every texture that's loaded onto the GPU gets an ID that can be used to identify it and this is in essence what the bind() method does: say which texture we're using when we define some vertices to be filled in. The thing that's important in this is that each vertex has not only a location in space, but a location in the texture. Let's say you have a 500x389 pixel image. Since OF uses what are called ARB texture coordinates, that means that 0,0 is the upper left corner of the image and 500,389 is the lower right corner. If you were using "normalized" coordinates then 0,0, would be the upper left and 1,1 would be the lower right. Sidenote: normalized coordinates can be toggled with "ofEnableNormalizedTexCoords()". Anyhow, you have an image and you're going to draw it onto an ofPlanePrimitive:
+Every texture that's loaded onto the GPU gets an ID that can be used to identify it and this is in essence what the bind() method does: say which texture we're using when we define some vertices to be filled in. The thing that's important in this is that each vertex has not only a location in space but a location in the texture. Let's say you have a 500x389 pixel image. Since OF uses what are called ARB texture coordinates, that means that 0,0 is the upper left corner of the image and 500,389 is the lower right corner. If you were using "normalized" coordinates then 0,0, would be the upper left and 1,1 would be the lower right. Sidenote: normalized coordinates can be toggled with "ofEnableNormalizedTexCoords()". Anyhow, you have an image and you're going to draw it onto an ofPlanePrimitive:
 
 ~~~~{.cpp}
 
@@ -624,7 +624,7 @@ We should see this:
 
 ![img](texture_coords.png)
 
-Take note that anything we do moving the modelView matrix around, for example that call to ofTranslate(), doesn't affect the images texture coordinates, only their screen position. What about when we go past the end of a texture?
+Take note that anything we do moving the modelView matrix around, for example, that call to ofTranslate(), doesn't affect the images texture coordinates, only their screen position. What about when we go past the end of a texture?
 
 ![img](past_last_texcoord.png)
 
@@ -639,11 +639,11 @@ Now we get:
 
 ![img](past_tex_border.png)
 
-Since we're not using power of two textures, i.e. textures that are strange sizes, we can't use the classic GL_REPEAT, but that's fine, it's not really that useful anyways, honestly.
+Since we're not using the power of two textures, i.e. textures that are strange sizes, we can't use the classic GL_REPEAT, but that's fine, it's not really that useful anyway, honestly.
 
 *Depth v Alpha*
 
-What happens if you draw a texture at 100, 100, 100 and then another at 100, 100, 101? Good question. The answer however, is confusing, if you've got alpha blending on, then, em, it's going to look wrong.
+What happens if you draw a texture at 100, 100, 100 and then another at 100, 100, 101? Good question. The answer, however, is confusing, if you've got alpha blending on, then, em, it's going to look wrong.
 
 ~~~~{.cpp}
 bikers.draw(0, 0, 101); // supposed to up front
@@ -733,7 +733,7 @@ What's that -7992 and 79? Well, those are just a guess at a 1024x768 sized windo
 
 ~~~~
 
-There's a bit of math in there to say: make it so the the view of the camera is relatively proportional to the size of the window. You'll see the same thing in the camera setupPerspective() method:
+There's a bit of math in there to say: make it so the view of the camera is relatively proportional to the size of the window. You'll see the same thing in the camera setupPerspective() method:
 
 ~~~~{.cpp}
   ofRectangle orientedViewport = ofGetNativeViewport();
@@ -756,7 +756,7 @@ There's a bit of math in there to say: make it so the the view of the camera is 
   lookAt(ofVec3f(eyeX,eyeY,0),ofVec3f(0,1,0)); // what are we looking at?
 ~~~~
 
-We get the size of the viewport, figure out what the farthest thing we can see is, what the nearest thing we can see is, what the aspect ratio should be, and what the field of view is, and off we go. Once you get a camera set up so that it knows what it can see, it's time to position it so that you can move it around. Just like in people, there are 3 controls that dictate what a camera can see: location, orientation, and heading. You can kind of separate what a camera is looking at from what it's pointing at but you shouldn't, stick with always looking ahead, the ofEasyCam does. Because a ofCamera extends a ofNode, it's pretty easy to move it around.
+We get the size of the viewport, figure out what the farthest thing we can see is, what the nearest thing we can see is, what the aspect ratio should be, and what the field of view is, and off we go. Once you get a camera set up so that it knows what it can see, it's time to position it so that you can move it around. Just like in people, there are 3 controls that dictate what a camera can see: location, orientation, and heading. You can kind of separate what a camera is looking at from what it's pointing at but you shouldn't, stick with always looking ahead, the ofEasyCam does. Because an ofCamera extends an ofNode, it's pretty easy to move it around.
 
 ~~~~{.cpp}
 cam.setPosition(ofVec3f(0, 100, 100));
@@ -774,7 +774,7 @@ You'll notice that the signature of that method is actually
 void lookAt(const ofVec3f& lookAtPosition, ofVec3f upVector = ofVec3f(0, 1, 0));
 ~~~~
 
-That second vector is so that you know what direction is up. While for a person it's pretty hard to imagine forgetting that you're upside-down, but for a camera, it's an easy way to get things wrong. So as you're moving the camera around you're really just modifying the matrix that the ofCamera contains and when you call begin(), that matrix is uploaded to the graphics card. When you call end(), that matrix is un-multiplied from the OpenGL state card. There's more to the cameras in OF but looking at the examples in examples/gl and at the documentation for ofEasyCam. To finish up, lets check out the way that the ofEasyCam works, since that's a good place to start when using a camera.
+That second vector is so that you know what direction is up. While for a person it's pretty hard to imagine forgetting that you're upside-down, but for a camera, it's an easy way to get things wrong. So as you're moving the camera around you're really just modifying the matrix that the ofCamera contains and when you call begin(), that matrix is uploaded to the graphics card. When you call end(), that matrix is un-multiplied from the OpenGL state card. There's more to the cameras in OF but looking at the examples in examples/gl and at the documentation for ofEasyCam. To finish up lets check out the way that the ofEasyCam works, since that's a good place to start when using a camera.
 
 So, as mentioned earlier, there are two camera classes in OF, ofCamera and ofEasyCam. ofCamera is really a stripped down matrix manipulation tool for advanced folks who know exactly what they need to do. ofEasyCam extends ofCamera and provides extra interactivity like setting up mouse dragging to rotate the camera which you can turn on/off with ofEasyCam::enableMouseInput() and ofEasyCam::disableMouseInput(). There's not a huge difference between the two, but ofEasyCam is probably what you're looking for if you want to quickly create a camera and get it moving around boxes, spheres, and other stuff that you're drawing.
 
