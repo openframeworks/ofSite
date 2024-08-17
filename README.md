@@ -61,11 +61,11 @@ The easiest way to check the syntax is having a look at the many pages already o
 
 To insert code snippets use three tildes followed by curly braces with ".cpp" inside, and ending with three tildes:
 
-	```cpp
+	~~~~{.cpp}
 	for(int i = 0; i < 16; i++) {
 		ofLog() << i;
 	}
-	```
+	~~~~
 
 
 Images are added using normal markdown format:
