@@ -806,12 +806,12 @@ This is a variable to represent how wide spaces are sized.   It's a scalar for t
 
 <!----------------------------------------------------------------------------->
 
-###int getStringAsPoints()
+###std::vector<ofPath> getStringAsPoints()
 
 <!--
 _syntax: getStringAsPoints()_
 _name: getStringAsPoints_
-_returns: int_
+_returns: std::vector<ofPath>
 _returns_description: _
 _parameters: _
 _access: public_
