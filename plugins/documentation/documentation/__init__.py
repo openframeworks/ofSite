@@ -233,21 +233,21 @@ class DocsTask(Task):
                 clazz.name = clazz.name[:-1]
 
             clazz.detailed_inline_description = relative_urls(clazz.detailed_inline_description)
-            clazz.detailed_inline_description = markdown(clazz.detailed_inline_description, md_extensions)
+            clazz.detailed_inline_description = markdown(clazz.detailed_inline_description, extensions=md_extensions)
             clazz.detailed_inline_description = of_classes_to_links(clazz.detailed_inline_description, classes_simple_name, module_lookup)
 
             clazz.reference = relative_urls(clazz.reference)
-            clazz.reference = markdown(clazz.reference, md_extensions)
+            clazz.reference = markdown(clazz.reference, extensions=md_extensions)
             clazz.reference = of_classes_to_links(clazz.reference, classes_simple_name, module_lookup)
 
             # methods in class
             for function in clazz.function_list:
                 function.description = relative_urls(function.description)
-                function.description = markdown(function.description, md_extensions)
+                function.description = markdown(function.description, extensions=md_extensions)
                 function.description = of_classes_to_links(function.description, classes_simple_name, module_lookup)
 
                 function.inlined_description = relative_urls(function.inlined_description)
-                function.inlined_description = markdown(function.inlined_description, md_extensions)
+                function.inlined_description = markdown(function.inlined_description, extensions=md_extensions)
                 function.inlined_description = of_classes_to_links(function.inlined_description, classes_simple_name, module_lookup)
                 for lang in self.kw['translations']:
                     content_js[lang] += method_to_js(function, clazz, self.site, lang)
@@ -263,11 +263,11 @@ class DocsTask(Task):
             functions_file = markdown_file.getfunctionsfile(clazz.name)
             for function in functions_file.function_list:
                 function.description = relative_urls(function.description)
-                function.description = markdown(function.description, md_extensions)
+                function.description = markdown(function.description, extensions=md_extensions)
                 function.description = of_classes_to_links(function.description, classes_simple_name, module_lookup)
 
                 function.inlined_description = relative_urls(function.inlined_description)
-                function.inlined_description = markdown(function.inlined_description, md_extensions)
+                function.inlined_description = markdown(function.inlined_description, extensions=md_extensions)
                 function.inlined_description = of_classes_to_links(function.inlined_description, classes_simple_name, module_lookup)
                 for lang in self.kw['translations']:
                     content_js[lang] += function_to_js(function, functions_file, self.site, lang)
@@ -337,11 +337,11 @@ class DocsTask(Task):
 
             for function in functions_file.function_list:
                 function.description = relative_urls(function.description)
-                function.description = markdown(function.description, md_extensions)
+                function.description = markdown(function.description, extensions=md_extensions)
                 function.description = of_classes_to_links(function.description, classes_simple_name, module_lookup)
 
                 function.inlined_description = relative_urls(function.inlined_description)
-                function.inlined_description = markdown(function.inlined_description, md_extensions)
+                function.inlined_description = markdown(function.inlined_description, extensions=md_extensions)
                 function.inlined_description = of_classes_to_links(function.inlined_description, classes_simple_name, module_lookup)
                 for lang in self.kw['translations']:
                     content_js[lang] += function_to_js(function, functions_file, self.site, lang)
@@ -394,7 +394,7 @@ class DocsTask(Task):
                         module_intro_file = open(module_intro)
                         module_intro_content = module_intro_file.read()
                         module_subtitles[module] = module_intro_content.splitlines()[0].strip('##').strip(' ')
-                        module_intro_content = markdown(module_intro_content, md_extensions)
+                        module_intro_content = markdown(module_intro_content, extensions=md_extensions)
                         for lang in self.kw['translations']:
                             context = {}
                             context["site_url"] = self.site.config["SITE_URL"]
@@ -440,7 +440,7 @@ class DocsTask(Task):
             for key in self.site.GLOBAL_CONTEXT.keys():
                 if isinstance(self.site.GLOBAL_CONTEXT[key], str):
                    docs_intro = docs_intro.replace('${' + key + '}', self.site.GLOBAL_CONTEXT[key])
-            docs_intro = markdown(docs_intro, md_extensions)
+            docs_intro = markdown(docs_intro, extensions=md_extensions)
             context = {}
             context["lang"] = lang
             context["site_url"] = self.site.config["SITE_URL"]
