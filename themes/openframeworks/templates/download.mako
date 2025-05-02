@@ -50,7 +50,7 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>linux</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linux64gcc6_release.tar.gz">linux gcc6 or later</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linux64_gcc6_release.tar.gz">linux gcc6 or later</a></p>
 	        <br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/linux-install">linux install</a></p>
