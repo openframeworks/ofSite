@@ -40,7 +40,7 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>osx</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_osx_release.zip">osx</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_osx_release.tar.gz">osx</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/xcode">xcode</a></p>
 	        <p><a href="../setup/vscode">vs code</a></p>
@@ -61,7 +61,8 @@ $(document).ready(function(){
         <div id="download-latest-platform-last">
 	        <h2>windows</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_vs_release.zip">visual studio</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_vs_64_release.zip
+">visual studio</a></p>
 	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_mingw64_release.zip">msys2 64bit</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/vs">visual studio</a></p>
@@ -79,7 +80,7 @@ $(document).ready(function(){
 	        <h2>ios</h2>
 	        <p><em>osx only</em></p><br/>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_ios_release.zip">xcode</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_ios_release.tar.gz">xcode</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/iphone">xcode</a></p>
         </div>
