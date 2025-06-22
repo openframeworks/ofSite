@@ -2,8 +2,11 @@
 Name = asciidoc
 Module = asciidoc
 
+[Nikola]
+PluginCategory = PageCompiler
+
 [Documentation]
 Author = Roberto Alsina
-Version = 0.3
+Version = 0.6
 Website = http://plugins.getnikola.com/#asciidoc
 Description = Compile ASCIIDoc into HTML
