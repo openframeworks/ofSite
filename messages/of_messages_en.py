@@ -78,7 +78,7 @@ MESSAGES = {
 
     'Code Liberation OF workshops': 'Code Liberation OF workshops',
 
-    'OF video series': 'OF video series',
+    'openFrameworks Tutorial Series': 'openFrameworks Tutorial Series',
 
     'ofBook': 'ofBook',
 
