@@ -19,7 +19,7 @@
 
 <ul>
     <li> <a href="http://codeliberation.github.io/CLF-slides/" target="_blank"> ${ of.msg("Code Liberation OF workshops", parent_locals) }</a> </li>
-    <li> <a href="https://www.youtube.com/watch?v=IKSTo_0pB28&index=51&list=PL4neAtv21WOmrV8z9rSzL20QpdLU1zJLr" target="_blank">${ of.msg("OF video series", parent_locals) }</a></li>
+    <li> <a href="https://www.youtube.com/watch?v=dwt2NAd1ZYY&list=PL4neAtv21WOlqpDzGqbGM_WN2hc5ZaVv7" target="_blank">${ of.msg("openFrameworks Tutorial Series", parent_locals) }</a></li>
     <li> <a href="#ofBook"> ${ of.msg("ofBook", parent_locals) } </a> </li>
     <li> <a href="https://github.com/openframeworks/openFrameworks/wiki/Resources-for-Learning"> ${ of.msg("... and many more! (GitHub wiki)", parent_locals) } </a></li>
 </div>

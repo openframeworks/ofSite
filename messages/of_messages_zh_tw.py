@@ -76,7 +76,7 @@ MESSAGES = {
 
     'Code Liberation OF workshops': 'Code Liberation OF工作坊',
 
-    'OF video series': 'OF頻道',
+    'openFrameworks Tutorial Series': 'OF頻道',
 
     'ofBook': 'ofBook',
 
