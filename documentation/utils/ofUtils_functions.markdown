@@ -1770,14 +1770,19 @@ _advanced: False_
 
 _inlined_description: _
 
+Open a browser windows with the specified URL
 
+~~~~{.cpp}
 
+// Open the OpenFrameworks site :
+ofLaunchBrowser("https://openframeworks.cc/", false);
+
+~~~~
 
 
 
 
 _description: _
-
 
 
 
@@ -2011,6 +2016,7 @@ Saves the current frame as a PNG image.
 
 The PNG image will be named according to an internal counter in sequence.
 The count will be restarted each time the program is restarted.
+For more options, use the ofSaveImage() function from ofImage class.
 
 
 **Parameters:**
@@ -2050,7 +2056,7 @@ _advanced: False_
 
 _inlined_description: _
 
-\section Frame Saving
+Frame Saving
 Saves the current screen image to a file on disk.
 
 Example:
