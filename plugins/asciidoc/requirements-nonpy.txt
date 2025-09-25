@@ -1,1 +1,2 @@
-AsciiDoc::http://www.methods.co.nz/asciidoc/
+AsciiDoc::https://asciidoc.org/INSTALL.html
+Asciidoctor (alternative)::https://asciidoctor.org/
