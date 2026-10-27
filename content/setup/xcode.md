@@ -5,7 +5,7 @@
 
 ## 1. First Steps
 
-1. Install Xcode 14.1 or newer (15 beta) from the [OSX App Store](https://itunes.apple.com/ca/app/xcode/id497799835?mt=12) or [Apple Developer Portal](https://developer.apple.com/download/more/). 
+1. Install a current version of Xcode from the [Mac App Store](https://itunes.apple.com/ca/app/xcode/id497799835?mt=12) or the [Apple Developer Portal](https://developer.apple.com/download/more/). From openFrameworks 0.12.2, apps run on macOS 12 (Monterey) and newer (0.12.1: macOS 10.15 and newer).
    
 2. Install Xcode's command line tools
 

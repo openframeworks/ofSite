@@ -14,15 +14,18 @@ Install Emscripten
 ------------------
 
 The recommended way to install Emscripten is to install directly from the Emscripten repo with git. 
+openFrameworks is tested with a specific Emscripten version (currently **6.0.11**), so install that one rather than `latest`, which may be newer than openFrameworks supports.
 Open a terminal at the location where you want the emsdk to be installed and run the followings commands:
 
 ```bash
 git clone https://github.com/emscripten-core/emsdk
 cd emsdk
-./emsdk install latest
-./emsdk activate latest
+./emsdk install 6.0.11
+./emsdk activate 6.0.11
 source ./emsdk_env.sh
 ```
+
+From git, `scripts/emscripten/install_emscripten.sh` in openFrameworks installs and activates the tested version for you.
 
 The installation will take a while. When it is finished, type `source ./emsdk_env.sh` to set the system path to the active version of Emscripten. You can copy the output of this command and add it to your `.profile` file, in order to save this variables also for the next sessions.
 
@@ -42,6 +45,8 @@ Once the compilation is finished, there will be a new file in `examples/3d/3DPri
 ```bash
 emrun bin/3DPrimitivesExample/
 ```
+
+Apps use WebGL 2 by default. For a WebGL 1 only build, add `PROJECT_DEFINES += OF_WEBGL_VERSION=1` to the project's `config.make`.
 
 If it does not work, it might need a different browser like Firefox.
 

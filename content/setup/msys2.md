@@ -20,7 +20,7 @@ Updating MSYS2
 
 openFrameworks expects an up-to-date installation of MSYS2. As MSYS2 is a rolling-release distribution, even the latest installer may be out-of-date!
 
-To update your MSYS2 installation, from any MSYS2 shell (MSYS2, MINGW64, UCRT64, ...), run :
+To update your MSYS2 installation, from any MSYS2 shell (MSYS2, UCRT64, CLANG64, ...), run :
 
 ```sh
 pacman -Syu --noconfirm --needed
@@ -42,15 +42,23 @@ MSYS2 comes in many flavors : MSYS2 (msys2.exe), MINGW32 (mingw32.exe), MINGW64 
 Each flavor has its shell launcher in MSYS2 installation folder.
 This really important to remember as lots of problem with running openFrameworks with MSYS2 come from using the wrong flavor/shell.
 
-As of 0.11.2+, **MINGW64** is the recommended flavor to use.
+openFrameworks supports:
+
+- **UCRT64** (`ucrt64.exe`), recommended, GCC
+- **CLANG64** (`clang64.exe`), Clang
+- **CLANGARM64** (`clangarm64.exe`), Clang, for Windows on ARM
+
+**MINGW64** and **MINGW32** are no longer supported (openFrameworks 0.12.2 and later): MSYS2 is retiring them, and packages openFrameworks needs (rtaudio) are no longer built for them.
+
+The instructions below use UCRT64. For CLANG64 / CLANGARM64, use `clang64` / `clangarm64` instead of `ucrt64`.
 
 For the following instructions, it assumed that MSYS2 is installed in `C:\msys64`. 
 If it has been installed elsewhere, adapt the instructions to reflect your MSYS2 installation path.
 
-Download and unzip the **msys2 64bits** version of openFrameworks which is MINGW64 flavor. 
+Download and unzip the openFrameworks package for your flavor: `msys2_ucrt64`, `msys2_clang64` or `msys2_clangarm64`. 
 **DO NOT INSTALL** oF in a folder containing a space or other special characters.
 
-Open an **MINGW64** shell (`C:\msys64\mingw64.exe` ) and install openFrameworks dependencies:
+Open a **UCRT64** shell (`C:\msys64\ucrt64.exe` ) and install openFrameworks dependencies:
 
 ```sh
 cd your_oF_directory/scripts/msys2
@@ -120,7 +128,7 @@ FAQ / Common problems
 Unless you know exactly what you are doing, **YOU SHOULD _NOT_** set the PATH variable.
 The main cause of openFrameworks application crashes on MSYS2 is DLL incompatibilities.
 This is because, when the DLL is not in the same folder as the application executable, the OF application looks for it in the PATH.
-It may find DLL with the right name but with a different MSYS2 flavor (MINGW32 vs MINGW64) or from a non-MSYS2 location (for example a separate OpenSSL installation).
+It may find DLL with the right name but with a different MSYS2 flavor (UCRT64 vs CLANG64) or from a non-MSYS2 location (for example a separate OpenSSL installation).
 
 Use the `make copy_dlls` command to make sure that the MSYS2 DLLs are copied next to the executable.
 This will also ease the installation of the application on a different computer, because you can just copy the executable & all DLLs together.
@@ -135,16 +143,15 @@ It may be helpful to write a wrapper batch file to lauch your IDE where you set 
 This way you do not pollute your PATH system-wide.
 
 
-- "Are UCRT64, CLANG64 and others MSYS2 flavors supported?"
+- "Which MSYS2 flavors are supported?"
 
-Only MINGW64 is only supported.
-OF has been successfully compiled with UCRT64 and CLANG64.
-However, it is something reserved for advanced users as it requires recompiling Apothecary modules.
+UCRT64 (recommended), CLANG64 and CLANGARM64, each with its own openFrameworks package.
+MINGW64 was the recommended flavor up to openFrameworks 0.12.1; from 0.12.2 it is no longer supported, as MSYS2 is retiring it.
 
 
 - "I have a 'TLSv1_1_client_method missing error' when I double-click the exe?"
 
-This happens when the executable looks for ssleay32.dll and libeay32.dll and it first finds a version that doesn't support TLS v1.1. Often it happens with Intel iCls software. The solution is to move the your_msys2_directory\mingw64\bin path before the conflicting path. If the conflicting path is in the system PATH and you do not have administrative privileges, copy/link ssleay32.dll and libeay32.dll from your_msys2_directory\mingw64\bin to the executable folder.
+This happens when the executable looks for ssleay32.dll and libeay32.dll and it first finds a version that doesn't support TLS v1.1. Often it happens with Intel iCls software. The solution is to move the your_msys2_directory\ucrt64\bin path before the conflicting path. If the conflicting path is in the system PATH and you do not have administrative privileges, copy/link ssleay32.dll and libeay32.dll from your_msys2_directory\ucrt64\bin to the executable folder.
 
 
 - "I'm on a corporate network and I cannot install OF dependencies, update MSYS2..."
