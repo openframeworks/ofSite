@@ -4,6 +4,8 @@
 Getting your Raspberry Pi ready for openFrameworks
 ============
 
+_Current Raspberry Pi OS (Bookworm and later) uses Wayland by default and has no GL driver options in `raspi-config`: skip those steps below. openFrameworks 0.12.2 and later open windows on both Wayland and X11 desktops._
+
 
 ## Install Raspbian "Bullseye"
 0. Install the latest _**Raspbian or Raspberry Pi OS** (Debian Bullseye)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
@@ -56,13 +58,15 @@ _Note: The above steps may take a little while._
 ## Download openFrameworks
 You now can download openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
 
-### For Raspberry Pi with 64bit OS 
-Download the aarch64 release of openFrameworks from
-https://github.com/openframeworks/openFrameworks/releases and expand it and rename the folder `openFrameworks` 
+Download the release for your Raspberry Pi OS from https://github.com/openframeworks/openFrameworks/releases, expand it and rename the folder `openFrameworks`:
 
-### For Raspberry Pi with 32bit OS 
-Download the armv6l release of openFrameworks from
-https://github.com/openframeworks/openFrameworks/releases and expand it and rename the folder `openFrameworks` 
+| Raspberry Pi OS | Raspberry Pi | Download (0.12.2 and later) | 0.12.1 and earlier |
+|---|---|---|---|
+| 64-bit | Pi 3, 4, 5 and Zero 2 | `linux_aarch64_rpi_gcc10` | `linuxaarch64` |
+| 32-bit | Pi 2, 3, 4, 5 and Zero 2 | `linux_armv7l_rpi_gcc10` | `linuxarmv6l` |
+| 32-bit | Pi 1 and Zero | `linux_armv6l_rpi_gcc10` | `linuxarmv6l` |
+
+The `linux_arm64_gcc10` download is for other 64-bit ARM computers, not the Raspberry Pi. If you use openFrameworks from git, `scripts/linux/download_libs.sh` detects the Raspberry Pi and downloads the right libraries.
 
 ## Install packages and compile openFrameworks:
 Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.

@@ -6,7 +6,24 @@ Linux install
 
 Before you can use OF in Linux you'll need to run a couple of scripts to install some dependencies and compile both the OF library itself and the project generator.
 
-First of all you'll need to execute the install_dependencies.sh script for your distribution which is located in `scripts/linux/distro_name/install_dependencies.sh`
+Which download
+--------------
+
+| Download | For |
+|---|---|
+| `linux_64_gcc10` | 64-bit Intel / AMD computers |
+| `linux_arm64_gcc10` | 64-bit ARM computers and servers running a desktop distribution (Ubuntu, Debian, Fedora...) |
+
+For a Raspberry Pi, use the Raspberry Pi downloads instead, see the [Raspberry Pi guide](../raspberrypi/).
+
+_openFrameworks 0.12.1 and earlier came as `linux64_gcc6` (64-bit Intel / AMD only)._
+
+If you use openFrameworks from git, run `scripts/linux/download_libs.sh`: it detects your computer's architecture (x86_64, ARM64 or Raspberry Pi) and downloads the matching libraries into `libs/*/lib/linux/<arch>`.
+
+Install the dependencies
+------------------------
+
+Execute the `install_dependencies.sh` script for your distribution, located in `scripts/linux/distro_name/install_dependencies.sh`. There are scripts for Ubuntu (and derivatives), Debian, Fedora and Arch Linux.
 
 For example if you are using Ubuntu, open a new console and enter:
 
@@ -16,6 +33,9 @@ sudo ./install_dependencies.sh
 ```
 
 Next, if you want to use some formats like mp3, you'll need to run the install_codecs script: it's in the same folder and is run the same way as the install_dependencies one. We separate them because mp3 and some other formats installed by the script might be protected by patents in some countries and could be problematic to use in commercial work. Also, this might help those Linux users that don't want to use proprietary codecs.
+
+Compile openFrameworks
+----------------------
 
 The OF source code comes uncompiled so the first time you compile an example it would need to compile it to, if you go and compile any example it would compile OF as a dependency but to make that easier and catch any potential problems let's do that as a separate step:
 
@@ -34,7 +54,12 @@ make
 make run
 ```
 
-Or use the officially supported IDE: [qtcreator](../qtcreator/) which has plugins that allow to create new projects, import existing ones, add addons to them. Eclipse is no longer officially supported. 
+Apps run in both X11 and Wayland desktop sessions.
+
+You can also use [vs code](../vscode/) or [qtcreator](../qtcreator/). Eclipse is no longer officially supported.
+
+The project generator
+---------------------
 
 If you want to install the project generator, a tool that allows to create and update an OF project, you'll need to run one last script:
 
@@ -53,61 +78,24 @@ projectGenerator
 
 ---
 
-## Install on Third-Party Linux Distribution
+## Ubuntu derivatives
 
-if your linux is third-party distribution, maybe you can see some error while install openFrameworks. this is because installing scripts are using information of kernel and version number that you can check with `lsb_release -a` command on your machine. in this situation, you can install openFrameworks by modifying this information temporarily.
+The Ubuntu script reads the Ubuntu version from `/etc/os-release` (`lsb_release` isn't needed). It recognises **elementary OS** and **Linux Mint** and uses the Ubuntu version they are based on. Derivatives whose `VERSION_ID` is the Ubuntu version they are based on, like **Pop!_OS**, work as well.
 
-for example, **Elementary OS 0.3 freya** is based on **Ubuntu 14.04 LTS**. you can check your linux distro information on official distro websites.
+For another derivative, if the script says it couldn't detect the Ubuntu version or picks the wrong packages, check which Ubuntu version your distribution is based on (on its website, or `UBUNTU_CODENAME` in `/etc/os-release`) and please [open an issue](https://github.com/openframeworks/openFrameworks/issues) so it can be added.
 
-### 1. get your distribution information
-for revert to back after install oF successfully, you need to copy or make a backup as a file (.bak) of this information.
+---
 
-```sh
-$ cat /etc/lsb-release
-DISTRIB_ID="elementary OS"
-DISTRIB_RELEASE=0.3.2
-DISTRIB_CODENAME=freya
-DISTRIB_DESCRIPTION="elementary OS Freya"
-$ sudo cp /etc/lsb-release /etc/lsb-release.bak
+## Linking prebuilt libraries: "recompile with -fPIE"
+
+Current distributions (Ubuntu, Debian, Fedora, Raspberry Pi OS...) build executables as PIE (position independent executables) by default. A static library (`.a`) that wasn't compiled as position independent code can't be linked into one, and the link fails with an error like this:
+
+```
+/usr/bin/ld: libfoo.a(foo.o): relocation R_X86_64_32S against symbol `bar' can not be used when making a PIE object; recompile with -fPIE
+/usr/bin/ld: failed to set dynamic section sizes: bad value
+collect2: error: ld returned 1 exit status
 ```
 
-### 2. get based disribution information
-run this command on based ditribution machine.
-this example is **Ubuntu 14.04 LTS**:
+This usually comes from a precompiled library in an addon, built before PIE was the default. **The fix is to rebuild the library with `-fPIC`** (with CMake: `-DCMAKE_POSITION_INDEPENDENT_CODE=ON`), and to report it to the addon so the fixed library helps everyone. If you can't rebuild it, you can link your app without PIE by adding `PROJECT_LDFLAGS = -no-pie` to your project's `config.make`.
 
-```sh
-$ cat /etc/lsb-release
-DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=14.04
-DISTRIB_CODENAME=trusty
-DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
-```
-
-### 3. modifying kernel information on linux machine will install openFrameworks 
-modifying `/etc/lsb-release` with information from *step 2*.
-
-```sh
-$ sudo vi /etc/lsb-release
-DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=14.04
-DISTRIB_CODENAME=trusty
-DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
-```
-
-### 4. install openFrameworks.
-install dependencies, codecs and compile openFrameworks and projectGenerator
-
-```sh
-$ ls {OF_DIRECTORY}/scripts/linux/ubuntu
-$ sudo ./install_dependencies.sh
-$ sudo ./install_codecs.sh
-$ ls {OF_DIRECTORY}/scripts/linux
-$ sudo ./compileOF.sh 
-$ sudo ./compilePG.sh 
-```
-### 5. revert to original 
-**don't forget this step!**
-
-```sh
-$ sudo cp /etc/lsb-release.bak /etc/lsb-release
-```
+See [docs/linux.md](https://github.com/openframeworks/openFrameworks/blob/master/docs/linux.md) for how to check a library and more details.
