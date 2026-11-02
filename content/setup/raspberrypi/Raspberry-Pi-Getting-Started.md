@@ -4,129 +4,101 @@
 Getting your Raspberry Pi ready for openFrameworks
 ============
 
+## Install Raspberry Pi OS
 
-## Install Raspbian "Bullseye"
-0. Install the latest _**Raspbian or Raspberry Pi OS** (Debian Bullseye)_ image from the [Raspberry Pi downloads page](http://www.raspberrypi.org/downloads)
-1. Follow the instructions at [Raspberry Pi Preparing Your SD Card](http://elinux.org/RPi_Easy_SD_Card_Setup) to get Raspbian installed onto your SD Card
+Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/) and write **Raspberry Pi OS (64-bit)**. The current image is Debian 13 (trixie), released 6 October 2026. The download page is [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/).
 
+| Board | OS | openFrameworks package |
+| --- | --- | --- |
+| Pi 3, Pi 4, Pi 5, Pi Zero 2 W | Raspberry Pi OS 64-bit (trixie) | `linuxaarch64` |
+| Pi 1, Pi Zero, Pi Zero W | Raspberry Pi OS 32-bit | `linuxarmv6l` |
+| Other 64-bit ARM boards (not a Pi) | Debian or Ubuntu arm64 | nightly `linux_arm64`, or 0.12.1 `linuxaarch64` |
 
-## Configure the Raspberry Pi
-This guide assumes you are starting from a fresh Bullseye install and that you are able to connect to the Raspberry Pi and send it commands.
+Raspberry Pi OS Bookworm is under Legacy in the Imager. Prefer Trixie for a new card. Pi 5 needs the 64-bit OS.
 
-If you're installing Raspbian via NOOBS, SSH access is disabled by default since the 2016-11-25 release, which makes setup in headless mode difficult. If you don't have access to a keyboard and monitor and plan to set up from scratch in the headless mode, make sure you follow [this guide and add the ssh file onto the boot partition](https://www.raspberrypi.org/documentation/remote-access/ssh/).
-
-You can enter commands on the Pi by:
-
-0. SSH into the Pi from a different computer
-0. Attach a keyboard and monitor to the Pi.
-	* With Stretch the Raspberry Pi now boots the X11 window system by default, open up LXTerminal from the shortcut on the Raspberry Pi Desktop
-	* Type in the command `sudo raspi-config`
-
-_We need to make sure the CPU has 192MB of RAM in order to compile openFrameworks. Once you have compiled openFrameworks you may want to repeat this step with 128_
-
-0.  Select `1 Expand Filesystem` and hit Enter
-0.  Select `7 Advanced Options` and hit Enter
-	* Select `A3 Memory Split` and hit Enter
-	* Type `64` and Hit `<ok>`
-
-openFrameworks requires X11 Desktop for Raspberry Pi 4 and newer. If you are on an older Raspberry Pi model or you want to run your application with X but from console ( see tips at bottom of this document ) you can save GPU memory by disabling it. To do that: 
-
-0. Select `3 Boot Options`
-0. Select `B1 Console` or `B2 Console Autologin` or if you want a Desktop enviroment select `B4 Desktop with Autologin` 
-
-For openFrameworks 0.11.0 and onwards OF needs to use the new experimental GL driver instead of the legacy driver.
-
-0. Select `7 Advanced Options` and hit Enter
-	* Select either `GL Driver Fake KMS` or `GL Driver Full KMS` or from the options and hit Enter
-
-For older OF releases with Wheezy or Jessie select the legacy driver instead.
-
-Unlike Wheezy, Debian Jessie onwards does not display the IP address on boot. You may wish to get the current IP by typing `ifconfig`. The IP address is under the eth0 entry for wired ethernet. This can possibly change on reboot.
-
-0. Reboot when prompted or type `sudo reboot`
-0. Assuming you have internet access run these commands to update the software to the latest packages.
-
-```sh
-sudo apt-get clean
-sudo apt-get update
-sudo apt-get upgrade
-```
-_Note: The above steps may take a little while._
+In the Imager, set the username, Wi-Fi, and SSH before you write the card. The username no longer has to be `pi`. The paths below use `$HOME`.
 
 ## Download openFrameworks
-You now can download openFrameworks and uncompress it into a folder. Using a Shell, The following commands will download openFrameworks and uncompress it into the folder `/home/pi/openFrameworks`
 
-### For Raspberry Pi with 64bit OS 
-Download the aarch64 release of openFrameworks from
-https://github.com/openframeworks/openFrameworks/releases and expand it and rename the folder `openFrameworks` 
+Stable release [0.12.1](https://github.com/openframeworks/openFrameworks/releases/tag/0.12.1):
 
-### For Raspberry Pi with 32bit OS 
-Download the armv6l release of openFrameworks from
-https://github.com/openframeworks/openFrameworks/releases and expand it and rename the folder `openFrameworks` 
+- 64-bit: [of_v0.12.1_linuxaarch64_release.tar.gz](https://github.com/openframeworks/openFrameworks/releases/download/0.12.1/of_v0.12.1_linuxaarch64_release.tar.gz)
+- 32-bit: [of_v0.12.1_linuxarmv6l_release.tar.gz](https://github.com/openframeworks/openFrameworks/releases/download/0.12.1/of_v0.12.1_linuxarmv6l_release.tar.gz)
 
-## Install packages and compile openFrameworks:
-Make sure you didn't skip the Memory Split step in the above section _**Configure the Raspberry Pi**_ or it will eventually fail.
+Nightly builds are at [the nightly release](https://github.com/openframeworks/openFrameworks/releases/tag/nightly). The asset names include the date, for example `of_v20261102_linux_aarch64_rpi_gcc10_release.tar.gz` and `of_v20261102_linux_armv6l_rpi_gcc10_release.tar.gz`. There is also `linux_arm64` for arm64 boards that are not a Raspberry Pi, and `linux_armv7l_rpi` on nightly. 0.12.1 does not ship a separate armv7 package.
 
-The time for these steps will depend on whether you are on a RPI1, RPI2 or RPI3 and the speed of the Raspbian mirrors to download the packages.
+Unpack the archive in your home directory and rename the folder to `openFrameworks` if you want the paths below to match.
 
-Assuming openFrameworks is located at `/home/pi/openFrameworks` run the following commands to install the necessary packages and compile openFrameworks.
+## Configure the Pi
+
+Current Raspberry Pi OS uses the kernel KMS driver. You do not set a memory split, and you do not select the legacy GL driver. Those steps were for Wheezy, Jessie, and the early Bullseye images.
+
+The desktop session is Wayland. openFrameworks opens its window through XWayland. If a built app cannot open a window, install the X11 server:
 
 ```sh
-cd /home/pi/openFrameworks/scripts/linux/debian
+sudo apt-get install xorg
+```
+
+Update packages after the first boot:
+
+```sh
+sudo apt-get update
+sudo apt-get full-upgrade
+```
+
+## Install packages and compile
+
+Raspberry Pi OS uses the Debian script.
+
+```sh
+cd $HOME/openFrameworks/scripts/linux/debian
 sudo ./install_dependencies.sh
 ```
 
-You are now ready to compile openFrameworks!
+Debian 13 and Raspberry Pi OS Trixie removed `libgconf-2-4`. The script still asks apt for it, so the install stops ([#8480](https://github.com/openframeworks/openFrameworks/issues/8480)). Delete `libgconf-2-4` from the `apt-get install` line in that script and run it again. Current openFrameworks does not need the library. On a tree from before 30 October 2026 the script may also name `xorgproto`. Replace that with `x11proto-dev`.
+
+Compile openFrameworks. On a Pi 4 or older, a high job count can run out of memory, so start with two jobs:
+
 ```sh
-make Release -C /home/pi/openFrameworks/libs/openFrameworksCompiled/project
+cd $HOME/openFrameworks/scripts/linux
+./compileOF.sh -j2
 ```
 
-## Use EGL instead of GLFW 
-As of 0.11.0 the default window is ofAppGLFWWindow. If you want to use the older ofAppEGLWindow approach, comment out `USE_GLFW_WINDOW = 1` in `libs/openFrameworksCompiled/project/linuxarmv6l/config.linuxarmv6l.default.mk` 
-
-## Compile your first app
-openFrameworks ships with a bunch of examples located in the `openFrameworks/examples` folder. Inside examples the projects are sorted by the categories:
-
-* 3d
-* addons
-* communication
-* empty
-* events
-* gl
-* gles
-* graphics
-* gui
-* math
-* sound
-* utils
-* video
-
-Inside each category folder are a few examples of each. To run them you need to go into the folder, build and run.
-
-For example, here is how you build and run the polygonExample:
+## Compile an example
 
 ```sh
-cd /home/pi/openFrameworks/examples/graphics/polygonExample
+cd $HOME/openFrameworks/examples/graphics/polygonExample
 make
 make run
 ```
 
-Unlike other platforms, OF Raspberry Pi projects do not make use of the projectGenerator. To create your own project from scratch, copy `examples/empty/emptyExample` into `apps/myApps/yourProjectName` folder and start from there
-
-For example:
+To start a project, copy the empty example. Keep the app three directories under the openFrameworks folder so the makefile can find the core:
 
 ```sh
-cp -R /home/pi/openFrameworks/examples/empty/emptyExample /home/pi/openFrameworks/apps/myApps/myRpiApp
-cd /home/pi/openFrameworks/apps/myApps/myRpiApp
+cp -R $HOME/openFrameworks/examples/empty/emptyExample $HOME/openFrameworks/apps/myApps/myRpiApp
+cd $HOME/openFrameworks/apps/myApps/myRpiApp
 make
 make run
 ```
 
-It is critical to keep your application directory 3 levels below the openFrameworks directory.
+[VS Code](../../vscode/) can open the `.code-workspace` file in that folder. The platform install is the same makefile flow as [Linux](../../linux-install/).
 
-## Tips for 0.12.0 / Raspberry Pi 4 
-- If you don't want to run PI apps from the X desktop enviornment but want to use the GLFW window system ( or have a Raspberry Pi 4 which requires X ) you can run an OF app without the desktop. First make sure you have X installed with: ```sudo apt-get install xorg``` then launch your app with: ```startx ./polygonExample -- -s off```. Your app will run with an X window but without the overhead of the desktop enivornment.    
-- If you want to run an app headless you can use XVFB ( X Virtual Framebuffer ). First install XVFB with: ```sudo apt-get install xvfb``` Then run your app with: ```xvfb-run ./polygonExample &```. You won't see a window, but GL operations will be executed. 
-- Finally for users who are looking for the old EGL style window support but with Raspberry Pi 4. This [work in progress addon](https://forum.openframeworks.cc/t/new-ofxaddon-ofxrpi4window/34388) is very close to providing similar functionality. 
+## Run without the desktop
 
-Have fun! :)
+A Pi 4 or 5 app can start an X server without the desktop session:
+
+```sh
+sudo apt-get install xorg
+startx ./polygonExample -- -s off
+```
+
+For a headless GL run, use a virtual framebuffer:
+
+```sh
+sudo apt-get install xvfb
+xvfb-run ./polygonExample
+```
+
+## Other boards
+
+A 64-bit ARM board running Debian uses `scripts/linux/debian`. One running Ubuntu uses `scripts/linux/ubuntu`. Pick the arm64 package from the table above. The same `libgconf-2-4` note applies to Debian 13.
