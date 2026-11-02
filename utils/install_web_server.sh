@@ -18,7 +18,7 @@ trapError() {
 }
 
 # Install dependencies
-sudo apt-get install vim git libjpeg-dev bash-completion libxml2-dev libxslt1-dev zlib1g-dev nginx php7.0-common php7.0-cli php7.0-fpm ntp
+sudo apt-get install vim git libjpeg-dev bash-completion libxml2-dev libxslt1-dev zlib1g-dev nginx php-common php-cli php-fpm ntp
 
 # Install ofSite
 # cd ~
@@ -66,8 +66,12 @@ cd ~/ofSite/utils
 debian_version=$(cat /etc/debian_version | sed -E 's/([0-9]+)(\.[0-9]+)?/\1/')
 sudo cp nginx.conf /etc/nginx/sites-available/website
 sudo ln -sf /etc/nginx/sites-available/website /etc/nginx/sites-enabled/website
-sudo sed -i "s/;cgi.fix_pathinfo = 1;/cgi.fix_pathinfo = 0;/g" /etc/php/7.0/fpm/php.ini 
-sudo service php7.0-fpm restart
+PHP_INI=$(ls /etc/php/*/fpm/php.ini | sort -V | tail -1)
+PHP_VER=$(basename "$(dirname "$(dirname "$PHP_INI")")")
+POOL=$(ls /etc/php/*/fpm/pool.d/www.conf | sort -V | tail -1)
+sudo sed -i "s/;cgi.fix_pathinfo = 1;/cgi.fix_pathinfo = 0;/g" "$PHP_INI"
+sudo sed -i "s|^listen = .*|listen = /run/php/php-fpm.sock|" "$POOL"
+sudo service "php${PHP_VER}-fpm" restart
 sudo service nginx restart
 grep stretch-backports /etc/apt/sources.list > /dev/null
 if [ $? -ne 0 ]; then
