@@ -4,7 +4,7 @@
 # VS Code
 =======
 
-VS Code is the makefile editor for Linux, macOS, and MSYS2. Install openFrameworks first with the [Linux](linux-install/), [Raspberry Pi](raspberrypi/raspberry-pi-getting-started/), or [MSYS2](msys2/) guide. Windows Visual Studio projects use the [Visual Studio](vs/) guide instead of this page. The MSYS2 terminal settings are at the bottom of this page. 
+VS Code is the makefile editor for Linux, macOS, and MSYS2. Install openFrameworks first with the [Linux](../linux-install/), [Raspberry Pi](../raspberrypi/raspberry-pi-getting-started/), or [MSYS2](../msys2/) guide. Windows Visual Studio projects use the [Visual Studio](../vs/) guide instead of this page. The MSYS2 terminal settings are at the bottom of this page. 
 
 ## Common
 
