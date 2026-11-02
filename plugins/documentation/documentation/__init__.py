@@ -178,13 +178,50 @@ rel_url_regex = re.compile(r'\[([^\]]*)\]\(([^/]((?!://).)*)\)')
 def relative_urls(text):
     return rel_url_regex.sub(r'[\1](../\2)', text)
 
+_html_token_re = re.compile(r'(?is)(<!--.*?-->|<[^>]+>)')
+
 def of_classes_to_links(text, classes_simple_name, module_lookup):
-    for class_name in classes_simple_name:
-        rep = "(?!\[[^[\]]*)"+class_name+"(?=[\s(])(?![^[\]]*\])"
-        #rep = "/("+class_name + "[\s(])(?![^\[]*\])/g"
-        dst_pattern = "<a href=\"/documentation/"+module_lookup[class_name]+"/"+class_name+"\" class=\"docs_class\" >"+class_name+"</a>"
-        text = re.sub(rep,dst_pattern,text)
-    return text
+    """Link a documented class name wherever it stands alone.
+
+    Names are linked before punctuation and at the end of a sentence, not only
+    before a space or '('. Text already inside an anchor is left alone, and
+    HTML tags are not rewritten.
+    """
+    if not text:
+        return text
+    names = sorted(
+        {name for name in classes_simple_name if name and name in module_lookup},
+        key=len,
+        reverse=True,
+    )
+    if not names:
+        return text
+    pattern = re.compile(
+        r'(?<![A-Za-z0-9_])(?:' + '|'.join(re.escape(name) for name in names) + r')(?![A-Za-z0-9_])'
+    )
+
+    def replacer(match):
+        class_name = match.group(0)
+        return (
+            '<a href="/documentation/' + module_lookup[class_name] + '/' + class_name
+            + '" class="docs_class" >' + class_name + '</a>'
+        )
+
+    parts = _html_token_re.split(text)
+    out = []
+    in_anchor = 0
+    for index, part in enumerate(parts):
+        if index % 2 == 1:
+            out.append(part)
+            if re.match(r'(?i)<a(?:\s|>|/)', part):
+                in_anchor += 1
+            elif re.match(r'(?i)</a(?:\s|>)', part):
+                in_anchor = max(0, in_anchor - 1)
+        elif in_anchor:
+            out.append(part)
+        else:
+            out.append(pattern.sub(replacer, part))
+    return ''.join(out)
 
 class DocsTask(Task):
     """Generates the tutorials contents."""
@@ -251,6 +288,13 @@ class DocsTask(Task):
                 function.inlined_description = of_classes_to_links(function.inlined_description, classes_simple_name, module_lookup)
                 for lang in self.kw['translations']:
                     content_js[lang] += method_to_js(function, clazz, self.site, lang)
+
+            # Variables were left as raw markdown, so class names in them were
+            # never linked and code fences were sent to the browser as text.
+            for var in clazz.var_list:
+                var.description = relative_urls(var.description)
+                var.description = markdown(var.description, md_extensions)
+                var.description = of_classes_to_links(var.description, classes_simple_name, module_lookup)
 
             # inheritance
             def gen_link(class_name):
