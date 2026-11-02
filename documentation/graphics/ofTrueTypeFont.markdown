@@ -836,6 +836,8 @@ _description: _
 
 This returns a vector of ofTTFCharacters (which is actually an ofPath) for a given string.  This means you can get access to the point data / outlines of the letter forms.
 
+Pass `filled` as false for the contour paths. A filled glyph has no stroke, so `getOutline()` is empty and the points in this example are not drawn.
+
 ~~~~{.cpp}
 
 //--------------------------------------------------------------
@@ -857,7 +859,7 @@ void testApp::draw(){
     // get the string as paths
     bool vflip = true; // OF flips y coordinate in the default perspective, 
                        // should be false if using a camera for example
-    bool filled = true; // or false for contours
+    bool filled = false; // contours. getOutline() is empty when this is true
     vector < ofPath > paths = font.getStringAsPoints("hello!", vflip, filled);
 
     ofPushMatrix();
