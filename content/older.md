@@ -8,9 +8,27 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**release v0.12.0**
+
+Browse all platforms: [release v0.12.0][243]
+
+--------------------------------
+
 **release v0.11.2**
 
 Browse all platforms: [release v0.11.2][242]
+
+--------------------------------
+
+**release v0.11.1**
+
+Browse all platforms: [release v0.11.1][244]
+
+--------------------------------
+
+**release v0.11.0**
+
+Browse all platforms: [release v0.11.0][245]
 
 --------------------------------
 
@@ -656,3 +674,6 @@ changes: [changelog for 0.04][67]
 [240]: https://openframeworks.cc/versions/v0.10.0/of_v0.10.0_linuxarmv7l_release.tar.gz
 [241]: https://openframeworks.cc/versions/v0.10.1/
 [242]: https://github.com/openframeworks/openFrameworks/releases/tag/0.11.2
+[243]: https://github.com/openframeworks/openFrameworks/releases/tag/0.12.0
+[244]: https://openframeworks.cc/versions/v0.11.1/
+[245]: https://openframeworks.cc/versions/v0.11.0/
