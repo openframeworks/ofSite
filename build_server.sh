@@ -1,13 +1,37 @@
 LOG=../logs/webbuild.log
-if [ -f /home/ofadmin/ofSite/.lock ] || [ ! -f /home/ofadmin/hooks/.regenerate_site ]; then
+LOCK=/home/ofadmin/ofSite/.lock
+FLAG=/home/ofadmin/hooks/.regenerate_site
+SITE=/home/ofadmin/ofSite
+
+if [ -f "$LOCK" ]; then
 	exit
 fi
-touch /home/ofadmin/ofSite/.lock
-rm /home/ofadmin/hooks/.regenerate_site
+
+cd "$SITE" || exit
+
+# Rebuild when the GitHub webhook wrote the flag, or when origin/master
+# has commits the checkout does not. Cron runs this every minute; the
+# webhook is commit_hook.php, which only works if php-fpm executes it.
+NEED_BUILD=
+if [ -f "$FLAG" ]; then
+	NEED_BUILD=1
+fi
+if git fetch origin master >/dev/null 2>&1; then
+	LOCAL=$(git rev-parse HEAD)
+	REMOTE=$(git rev-parse FETCH_HEAD)
+	if [ -n "$REMOTE" ] && [ "$LOCAL" != "$REMOTE" ]; then
+		NEED_BUILD=1
+	fi
+fi
+if [ -z "$NEED_BUILD" ]; then
+	exit
+fi
+
+touch "$LOCK"
+rm -f "$FLAG"
 echo "started building at `date`" > $LOG
-cd /home/ofadmin/ofSite
 echo pull
-git pull origin master 
+git pull origin master
 echo nikola
 . nikola/bin/activate
 #nikola clean 2>> $LOG
@@ -22,12 +46,12 @@ then
 	# send an email using /bin/mail
 	/usr/bin/mail -s "$SUBJECT" "$EMAIL" < $LOG
 	cat $LOG
-	rm /home/ofadmin/ofSite/.lock
+	rm "$LOCK"
 	exit
 fi
 echo "build finished correctly at `date` " >> $LOG
 echo copy newsite
-rm -rf ../openFrameworks.cc/about 
+rm -rf ../openFrameworks.cc/about
 rm -rf ../openFrameworks.cc/community
 rm -rf ../openFrameworks.cc/css
 rm -rf ../openFrameworks.cc/documentation
@@ -47,6 +71,5 @@ rm -rf ../openFrameworks.cc/categories
 
 cp -r output/* ../openFrameworks.cc/ 2>> $LOG
 cp *.php ../openFrameworks.cc/ 2>> $LOG
-rm /home/ofadmin/ofSite/.lock 2>> $LOG
+rm "$LOCK" 2>> $LOG
 rm ../openFrameworks.cc/*.sh
-
