@@ -12,7 +12,7 @@ Installing MSYS2
 Download link and instructionss can be found on the [MSYS2 web site](https://www.msys2.org/).
 [Several installers](https://www.msys2.org/docs/installer/) (self extracting archive, XZ archive) are available; any will work with openFrameworks.
 
-If you are going to use QtCreator, you should install MSYS2 in the default install folder, c:\msys64
+Install MSYS2 in the default folder, `C:\msys64`, unless you know you need another path. [Qt Creator](../qtcreator/) is no longer a maintained setup. Use [VS Code](../vscode/).
 
 
 Updating MSYS2
@@ -42,15 +42,22 @@ MSYS2 comes in many flavors : MSYS2 (msys2.exe), MINGW32 (mingw32.exe), MINGW64 
 Each flavor has its shell launcher in MSYS2 installation folder.
 This really important to remember as lots of problem with running openFrameworks with MSYS2 come from using the wrong flavor/shell.
 
-As of 0.11.2+, **MINGW64** is the recommended flavor to use.
+0.12.1 publishes three 64-bit MSYS2 packages. Open the shell that matches the zip. The stable files are on the [0.12.1 release](https://github.com/openframeworks/openFrameworks/releases/tag/0.12.1). Nightly names are dated and listed on the [nightly release](https://github.com/openframeworks/openFrameworks/releases/tag/nightly).
 
-For the following instructions, it assumed that MSYS2 is installed in `C:\msys64`. 
+| Shell | 0.12.1 package |
+| --- | --- |
+| MINGW64 (`C:\msys64\mingw64.exe`) | [of_v0.12.1_msys2_mingw64_release.zip](https://github.com/openframeworks/openFrameworks/releases/download/0.12.1/of_v0.12.1_msys2_mingw64_release.zip) |
+| UCRT64 (`C:\msys64\ucrt64.exe`) | [of_v0.12.1_msys2_ucrt64_release.zip](https://github.com/openframeworks/openFrameworks/releases/download/0.12.1/of_v0.12.1_msys2_ucrt64_release.zip) |
+| CLANG64 (`C:\msys64\clang64.exe`) | [of_v0.12.1_msys2_clang64_release.zip](https://github.com/openframeworks/openFrameworks/releases/download/0.12.1/of_v0.12.1_msys2_clang64_release.zip) |
+
+MINGW64 is the default if you do not have a reason to pick another. Nightly builds also include a CLANGARM64 package.
+
+For the following instructions, it assumed that MSYS2 is installed in `C:\msys64`.
 If it has been installed elsewhere, adapt the instructions to reflect your MSYS2 installation path.
 
-Download and unzip the **msys2 64bits** version of openFrameworks which is MINGW64 flavor. 
 **DO NOT INSTALL** oF in a folder containing a space or other special characters.
 
-Open an **MINGW64** shell (`C:\msys64\mingw64.exe` ) and install openFrameworks dependencies:
+Open the matching shell and install openFrameworks dependencies:
 
 ```sh
 cd your_oF_directory/scripts/msys2
@@ -137,9 +144,7 @@ This way you do not pollute your PATH system-wide.
 
 - "Are UCRT64, CLANG64 and others MSYS2 flavors supported?"
 
-Only MINGW64 is only supported.
-OF has been successfully compiled with UCRT64 and CLANG64.
-However, it is something reserved for advanced users as it requires recompiling Apothecary modules.
+Yes, when you download the matching release zip and open the matching shell. 0.12.1 ships MINGW64, UCRT64, and CLANG64. Nightly also ships CLANGARM64. Do not mix libraries from one shell with a compiler from another.
 
 
 - "I have a 'TLSv1_1_client_method missing error' when I double-click the exe?"

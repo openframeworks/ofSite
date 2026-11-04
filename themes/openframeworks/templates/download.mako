@@ -50,7 +50,7 @@ $(document).ready(function(){
         <div id="download-latest-platform">
 	        <h2>linux</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linux64_gcc6_release.tar.gz">linux gcc6 or later</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_linux64_gcc6_release.tar.gz">linux 64-bit</a></p>
 	        <br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/linux-install">linux install</a></p>
@@ -61,9 +61,10 @@ $(document).ready(function(){
         <div id="download-latest-platform-last">
 	        <h2>windows</h2>
 	        <h3>${of.msg("download_openframeworks", locals())}</h3>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_vs_64_release.zip
-">visual studio</a></p>
-	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_mingw64_release.zip">msys2 64bit</a></p><br/>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_vs_64_release.zip">visual studio 64-bit</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_mingw64_release.zip">msys2 mingw64</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_ucrt64_release.zip">msys2 ucrt64</a></p>
+	        <p><a href="https://github.com/openframeworks/openFrameworks/releases/download/${currentVersion}/of_v${currentVersion}_msys2_clang64_release.zip">msys2 clang64</a></p><br/>
 	        <h3>${of.msg("setup_guides", locals())}</h3>
 	        <p><a href="../setup/vs">visual studio</a></p>
 	        <p><a href="../setup/msys2">msys2</a></p>
@@ -120,6 +121,7 @@ $(document).ready(function(){
     </div>
 
     <br class="clearboth"/>
+    <p>These links are the ${currentVersion} packages. The file list for that tag is on <a href="https://github.com/openframeworks/openFrameworks/releases/tag/${currentVersion}">GitHub</a>. Newer dates, Visual Studio 2026, and the dated Linux arm names are on the <a href="https://github.com/openframeworks/openFrameworks/releases/tag/nightly">nightly</a> release.</p>
     ${of.msg("instructions", locals())}
     <br />
     <br/>

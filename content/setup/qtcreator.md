@@ -4,7 +4,9 @@
 Qt Creator
 ==========
 
-OpenFrameworks 0.10.0 has been tested with Qt Creator 4.6.0 and 4.6.1, we recomend to use 4.6.1 as later versions might have different steps to follow or not work as expected.
+**This guide is no longer maintained.** Qt Creator is not the recommended setup. Use [VS Code](../vscode/) with the makefile projects on Linux, macOS, and MSYS2, or [Visual Studio](../vs/) on Windows. The steps below are kept so older links still resolve.
+
+OpenFrameworks 0.10.0 was tested with Qt Creator 4.6.0 and 4.6.1. Later Qt Creator releases were not kept in step with these instructions.
 
 You can find all versions of Qt Creator here:
 [http://download.qt.io/official_releases/qtcreator/](http://download.qt.io/official_releases/qtcreator/)
