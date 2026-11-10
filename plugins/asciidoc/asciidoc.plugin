@@ -7,3 +7,6 @@ Author = Roberto Alsina
 Version = 0.3
 Website = http://plugins.getnikola.com/#asciidoc
 Description = Compile ASCIIDoc into HTML
+
+[Nikola]
+PluginCategory = PageCompiler

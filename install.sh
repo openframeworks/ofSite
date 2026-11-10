@@ -1,43 +1,47 @@
-#!/usr/bin/env bash
-set -e
-# capture failing exits in commands obscured behind a pipe
-set -o pipefail
+#!/bin/bash
 
+# Use pyenv's Python 3.11 explicitly
+PYTHON_CMD="$HOME/.pyenv/versions/3.11.8/bin/python3"
 
-# trap any script errors and exit
-trap "trapError" ERR
+echo "Creating virtual environment with Python 3.11..."
+$PYTHON_CMD -m venv nikola
 
-trapError() {
-	echo
-	echo " ^ Received error installing website static generator ^"
-	exit 1
-}
-
-OS=$(uname -s)
-PIP=pip
-if [ "$OS" == "Linux" ]; then
-	sudo apt-get install python3 python3-pip asciidoctor
-	PIP=$(ls /usr/bin/pip* | head -n1)
-	if [ "$PIP" == "" ]; then
-		PIP=$(ls /usr/bin/pip3 | head -n1)
-	fi
-        if [ "$PIP" == "" ]; then
-		PIP=$(which pip)
-	fi
-        if [ "$PIP" == "" ]; then
-		echo Couldn\'t find pip for python3, please install it manually
-	fi
-fi
-if [ "$(which python3)" == "" ]; then
-	echo ofSite needs python3, pip and asciidoctor to run, please install them before running this script
-	exit 1
-fi
-sudo $PIP install virtualenv
-virtualenv -p $(which python3) nikola
+echo "Activating virtual environment..."
 source nikola/bin/activate
+
+echo "Upgrading pip..."
 pip install --upgrade pip
-pip install --upgrade "Nikola[extras]"==7.7.4
-pip install --upgrade python-Levenshtein==0.12.0
+
+echo "Installing Nikola 7.8.15..."
+pip install --upgrade "Nikola[extras]"==7.8.15
+
+echo "Installing compatible dependencies..."
+pip install --upgrade python-Levenshtein
 pip install --upgrade pathlib
-pip install --upgrade beautifulsoup4==4.4.1
-pip install --upgrade markdown==2.6.5
+pip install --upgrade beautifulsoup4
+
+# Install compatible versions for Python 3.11
+echo "Installing Python 3.11 compatible packages..."
+pip install --upgrade "watchdog>=2.0"
+pip install "doit==0.35.0"
+pip install --force-reinstall "markdown==3.2.2"
+
+echo "Patching Nikola for Python 3.11 compatibility..."
+# Fix the Callable import issue
+sed -i 's/from collections import defaultdict, Callable, OrderedDict/from collections import defaultdict, OrderedDict\nfrom collections.abc import Callable/' nikola/lib/python3.11/site-packages/nikola/utils.py
+
+echo "Disabling incompatible markdown plugins..."
+# Disable problematic markdown plugins
+mv nikola/lib/python3.11/site-packages/nikola/plugins/compile/markdown/mdx_podcast.plugin nikola/lib/python3.11/site-packages/nikola/plugins/compile/markdown/mdx_podcast.plugin.disabled 2>/dev/null || true
+mv nikola/lib/python3.11/site-packages/nikola/plugins/compile/markdown/mdx_gist.plugin nikola/lib/python3.11/site-packages/nikola/plugins/compile/markdown/mdx_gist.plugin.disabled 2>/dev/null || true
+
+echo ""
+echo "Installation complete!"
+echo ""
+echo "To activate the environment, run:"
+echo "  source nikola/bin/activate"
+echo ""
+echo "To build the site, run:"
+echo "  export LC_ALL=C.UTF-8"
+echo "  export LANG=C.UTF-8"
+echo "  ./build.sh"

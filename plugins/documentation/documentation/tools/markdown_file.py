@@ -66,7 +66,7 @@ def getfunctionsfiles_list():
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown':
-                f = open(os.path.join(root, name),'rU')
+                f = open(os.path.join(root, name),'r')
                 state = 'begin'
                 for line in f:
                     if state == 'begin' and line.find('#functions') == 0:
@@ -87,7 +87,7 @@ def getfunctionsfile(filename):
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown' and file_split[0] == filename+"_functions":
                 functionsfile.path = name
-                f = open(os.path.join(root,name),'rU')
+                f = open(os.path.join(root,name),'r')
                 state = 'begin'
                 linenum = 0
                 for line in f:
@@ -146,7 +146,7 @@ def getclass_list(getTemplated=True):
         for name in files:
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown':
-                f = open(os.path.join(root,name),'rU')
+                f = open(os.path.join(root,name),'r')
                 state = 'begin'
                 for line in f:
                     if state == 'begin' and line.find('#class') == 0 and line.find(file_split[0])!=-1 :
@@ -183,7 +183,7 @@ def getclass(clazz):
             file_split = os.path.splitext(name)
             if file_split[1]=='.markdown' and file_split[0] == clazz:
                 documentation_clazz.new = False
-                f = open(os.path.join(root,name),'rU')
+                f = open(os.path.join(root,name),'r')
                 state = 'begin'
                 linenum = 0
                 for line in f:

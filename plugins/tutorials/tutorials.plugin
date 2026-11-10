@@ -7,3 +7,6 @@ Author = Arturo Castro
 Version = 0.1
 Website = http://openframeworks.cc
 Description = Generate the openframeworks tutorials
+
+[Nikola]
+PluginCategory = Task
