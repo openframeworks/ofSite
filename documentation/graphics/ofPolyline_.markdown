@@ -1287,8 +1287,7 @@ all the points to determine the extents of the polyline.
 
 _description: _
 
-
-
+Returns the bounding box of the shape, taking into account all the points to determine the extents of the polyline.
 
 
 
@@ -1323,8 +1322,7 @@ Get the center of the area bounded by the line
 
 _description: _
 
-
-
+Get the center of the area bounded by the line.
 
 
 
@@ -1361,8 +1359,7 @@ index of the closest vertex
 
 _description: _
 
-Returns the bounding box of the shape, taking into account all the points to determine the extents of the polyline.
-
+Gets the point on the line closest to the target. You can also optionally pass a pointer to/address of an unsigned int to get the index of the closest vertex.
 
 
 
@@ -1397,8 +1394,7 @@ Get angle (degrees) of the path at index
 
 _description: _
 
-Get the center of the area bounded by the line.
-
+Get the angle, in degrees, of the path at index.
 
 
 
@@ -1434,8 +1430,7 @@ neighboring indices)
 
 _description: _
 
-This returns the point on the line closest to the target. You can also optionally pass a pointer to/address of an unsigned int to get the index of the closest vertex.
-
+Get the angle, in degrees, at an interpolated index (interpolated between neighboring indices).
 
 
 
@@ -1797,7 +1792,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Get point long the path at a given length (e.g. `f=150` => 150
+Get point along the path at a given length (e.g. `f=150` => 150
 units along the path)
 
 
@@ -1871,7 +1866,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Get angle (degrees) of the path at index
+Get angle (radians) of the path at index
 
 
 
@@ -1879,8 +1874,7 @@ Get angle (degrees) of the path at index
 
 _description: _
 
-
-
+Get the angle, in radians, of the path at index.
 
 
 
@@ -1907,7 +1901,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Get angle (degrees) at interpolated index (interpolated between
+Get angle (radians) at interpolated index (interpolated between
 neighboring indices)
 
 
@@ -1916,8 +1910,7 @@ neighboring indices)
 
 _description: _
 
-
-
+Get the angle, in radians, at an interpolated index (interpolated between neighboring indices).
 
 
 
@@ -1944,10 +1937,7 @@ _advanced: False_
 
 _inlined_description: _
 
-Resamples the line based on the count passed in. The lower the
-count passed in, the more points will be eliminated.
-
-This doesn't add new points to the line.
+Resamples the line to the count passed in. The lower the count, the more points are removed. New points are added when the line has fewer points than count.
 
 
 
@@ -1955,8 +1945,7 @@ This doesn't add new points to the line.
 
 _description: _
 
-This resamples the line based on the spacing passed in. The lower the count passed in, the more points will be eliminated. New points are added if necessary to match count.
-
+Resamples the line to the count passed in. The lower the count, the more points are removed. New points are added when the line has fewer points than count.
 
 
 
@@ -2517,7 +2506,7 @@ Tests whether the T is within a closed ofPolyline.
 
 _description: _
 
-Test whether the ofPoint is within anothe polyline, passed in as ofPolyline&
+Test whether the ofPoint is within another polyline, passed in as ofPolyline&
 
 
 
@@ -2589,7 +2578,7 @@ Tests whether the x,y coordinates are within a closed ofPolyline.
 
 _description: _
 
-Test whether the x,y point is within anothe polyline, passed in as ofPolyline&
+Test whether the x,y point is within another polyline, passed in as ofPolyline&
 
 
 
@@ -3203,9 +3192,6 @@ _advanced: False_
 
 _inlined_description: _
 
-\}
-\name Transform polyline
-\{
 
 
 
@@ -3213,8 +3199,7 @@ _inlined_description: _
 
 _description: _
 
-
-
+Rotates each vertex by `degrees` about `axis`. The axis passes through the origin.
 
 
 
@@ -3249,8 +3234,7 @@ _inlined_description: _
 
 _description: _
 
-
-
+Rotates each vertex by `degrees` about `axis`. The axis passes through the origin.
 
 
 
@@ -3285,8 +3269,7 @@ _inlined_description: _
 
 _description: _
 
-
-
+Rotates each vertex by `radians` about `axis`. The axis passes through the origin.
 
 
 
@@ -3321,8 +3304,7 @@ _inlined_description: _
 
 _description: _
 
-
-
+Rotates each vertex by `radians` about `axis`. The axis passes through the origin.
 
 
 

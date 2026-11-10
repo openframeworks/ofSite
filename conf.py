@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
+import os
 import time
 import markdown
 import socket
@@ -23,7 +24,9 @@ BLOG_AUTHOR = "openFrameworks"  # (translatable)
 BLOG_TITLE = "openFrameworks"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-if socket.gethostbyname(socket.gethostname()) == socket.gethostbyname('openframeworks.cc'):
+if os.environ.get("OFSITE_SITE_URL"):
+    SITE_URL = os.environ["OFSITE_SITE_URL"]
+elif socket.gethostbyname(socket.gethostname()) == socket.gethostbyname('openframeworks.cc'):
     SITE_URL = "https://openframeworks.cc/"
 else:
     SITE_URL = "http://localhost:8000/"

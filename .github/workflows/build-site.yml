@@ -1,0 +1,87 @@
+name: Build site
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: build-site-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.8"
+
+      - name: Install system packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y asciidoctor python3-dev gcc
+
+      - name: Install Nikola
+        run: |
+          python -m venv nikola
+          . nikola/bin/activate
+          pip install --upgrade pip wheel
+          pip install --upgrade "Nikola[extras]==7.7.4"
+          pip install --upgrade python-Levenshtein==0.12.0
+          pip install --upgrade pathlib
+          pip install --upgrade beautifulsoup4==4.4.1
+          pip install --upgrade markdown==2.6.5
+
+      - name: Build
+        env:
+          OFSITE_SITE_URL: https://openframeworks.cc/
+        run: |
+          . nikola/bin/activate
+          nikola build
+
+      - name: Pack output
+        run: |
+          cp -f commit_hook.php book_hook.php release_hook.php output/
+          echo "${{ github.sha }}" > output/.ofsite-commit
+          tar -C output -czf openframeworks.cc.tar.gz .
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: openframeworks.cc
+          path: openframeworks.cc.tar.gz
+          if-no-files-found: error
+
+      - name: Publish site-latest release
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master' && github.repository == 'openframeworks/ofSite'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SHA="${{ github.sha }}"
+          NOTES=$(mktemp)
+          cat > "$NOTES" <<EOF
+          Nikola build of openframeworks.cc from ${SHA}.
+
+          Server:
+
+          \`\`\`bash
+          curl -fsSL -o /tmp/openframeworks.cc.tar.gz \\
+            https://github.com/openframeworks/ofSite/releases/download/site-latest/openframeworks.cc.tar.gz
+          \`\`\`
+          EOF
+          if gh release view site-latest >/dev/null 2>&1; then
+            gh release upload site-latest openframeworks.cc.tar.gz --clobber
+            gh release edit site-latest --title "openframeworks.cc ${SHA}" --notes-file "$NOTES" --latest
+          else
+            gh release create site-latest openframeworks.cc.tar.gz \
+              --title "openframeworks.cc ${SHA}" --notes-file "$NOTES" --latest
+          fi
