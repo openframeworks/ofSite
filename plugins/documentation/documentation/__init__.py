@@ -293,7 +293,7 @@ class DocsTask(Task):
             # never linked and code fences were sent to the browser as text.
             for var in clazz.var_list:
                 var.description = relative_urls(var.description)
-                var.description = markdown(var.description, md_extensions)
+                var.description = markdown(var.description, extensions=md_extensions)
                 var.description = of_classes_to_links(var.description, classes_simple_name, module_lookup)
 
             # inheritance
