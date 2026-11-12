@@ -3,43 +3,46 @@
 
 visual studio setup guide
 =========================
-Here are the setup instructions for those of you who wish to work with Visual Studio Community 2019 on Windows. Note: OF should be compatible with Visual Studio 2017, 2019 and newer. 
+
+Use Visual Studio 2022 for the [0.12.1](https://github.com/openframeworks/openFrameworks/releases/tag/0.12.1) Windows package. Nightly builds also publish Visual Studio 2026 packages. The free Community edition is enough.
 
 Download
 --------
-> [Download Visual Studio Community 2019][0]
 
-Install
+- [Visual Studio Community](https://visualstudio.microsoft.com/downloads/)
+- openFrameworks 0.12.1, 64-bit: [of_v0.12.1_vs_64_release.zip](https://github.com/openframeworks/openFrameworks/releases/download/0.12.1/of_v0.12.1_vs_64_release.zip)
+- All current packages, including nightly Visual Studio 2022 and 2026 builds: [releases](https://github.com/openframeworks/openFrameworks/releases)
+
+Nightly asset names look like `of_v20261102_vs_2022_64_release.zip` and `of_v20261102_vs_2026_64_release.zip`. ARM64 and ARM64EC variants are named `vs_2022_64_arm64_arm64ec` and `vs_2026_64_arm64_arm64ec` on the nightly release.
+
+Install Visual Studio
 -------
-Run the installer, and when asked select the following components:
 
-![](list_of_components.png)
+Run the installer and select the **Desktop development with C++** workload.
 
-Video Codecs
+Unzip openFrameworks to a real folder. Opening the zip itself in Explorer and running an example from there leaves project paths pointed at the archive, and Visual Studio then reports that projects failed to load.
+
+Video
 -------
-Starting in OF release 0.9.0 the video player now uses DirectShow and not QuickTime.  To support QuickTime video files or files like MP4 video you will need to install the video codecs onto your machine.  We recommend the [K-Lite Codec Pack][1] which is free to download and adds support for many video formats. 
 
-**NOTE: The current version of K-Lite requires an additonal step:**
-1. Open the Code Tweak Tool ( which is part of K-Lite ) 
-2. Click the button: General -> Fixes 
-3. Check '**Re-register base Directshow Filters**' and hit Apply
+0.12 does not need the K-Lite codec pack for ordinary video playback. The older DirectShow and QuickTime notes do not apply to this release.
 
-Disable Automatic Precompiled Header
+Create a project
 -------
-Visual Studio creates a hidden folder ".vs", which used to be ~10 kB in Visual Studio 2015; however, Visual Studio 2019 by default takes a few hundred megabytes for each project due to optimization of IntelliSense (code completion). This is not ideal on a laptop or a tablet with a small storage. You can disable the optimization and reduce the folder size at the cost of speed of IntelliSense. To do so, go to Tools > Options, then navigate to Text Editor > C/C++ > Advanced, and set Disable Automatic Precompiled Header to True.
 
-openFrameworks plugin for Visual Studio
----------------------------------------------------
+The Visual Studio extension that used to live in the marketplace is not part of the current setup. Use the Project Generator that ships in the openFrameworks folder.
 
-**NOTE: Not tested with VS 2019 and newer.** Before you're able to use openFrameworks with Visual Studio, you have to have Common Tools for Visual C++ 2017 installed, otherwise you'll get an error message later on. To install, go to File > New > Project and choose Visual C++ in the installed templates section. There now should be an option to install the tools, if they aren't already. Select it, confirm with 'OK' and follow the instructions.
+1. Open the Project Generator.
+2. Set the project name and path.
+3. Choose Windows (Visual Studio).
+4. For Visual Studio 2022, leave the template empty. Nightly builds can target Visual Studio 2026 by choosing the `vs2026` template when that release zip is the one you downloaded.
+5. Generate.
 
-From Visual Studio, go to Tools > Extensions and Updates. Select online and search for openFrameworks and install the plugin.
+Open the `.sln` under `apps/<folder>/<project>/`. If Visual Studio asks to retarget the solution, retarget it to the toolset you installed. After the Project Generator updates a project, retarget again from the solution if the prompt does not appear: right-click the solution and choose Retarget.
 
-That will allow you to use File > New > Project... to create new openFrameworks projects and the contextual menu on any project to later add and remove addons
+Press F5 to build and run Debug. The configuration dropdown switches Debug and Release.
 
-There's more information in the [Visual Studio Gallery page](https://marketplace.visualstudio.com/items?itemName=HalfA.openFrameworkspluginforVisualStudio2017) and the following video.
+Architectures
+-------
 
-<iframe src="https://player.vimeo.com/video/143111085" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-[0]: https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=16
-[1]: https://ninite.com/klitecodecs/
+The default 0.12.1 package is x64. Nightly packages add native ARM64 and ARM64EC for Windows on Arm.

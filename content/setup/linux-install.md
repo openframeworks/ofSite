@@ -4,110 +4,74 @@
 Linux install
 ==========
 
-Before you can use OF in Linux you'll need to run a couple of scripts to install some dependencies and compile both the OF library itself and the project generator.
+The current stable release is [0.12.1](https://github.com/openframeworks/openFrameworks/releases/tag/0.12.1). Nightly packages, whose filenames change with the build date, are on the [nightly release](https://github.com/openframeworks/openFrameworks/releases/tag/nightly).
 
-First of all you'll need to execute the install_dependencies.sh script for your distribution which is located in `scripts/linux/distro_name/install_dependencies.sh`
+Download the 64-bit package:
 
-For example if you are using Ubuntu, open a new console and enter:
+[of_v0.12.1_linux64_gcc6_release.tar.gz](https://github.com/openframeworks/openFrameworks/releases/download/0.12.1/of_v0.12.1_linux64_gcc6_release.tar.gz)
+
+The `gcc6` in that filename is historical. The package is the x86_64 build. Raspberry Pi and other ARM boards use the packages on the [Raspberry Pi guide](../raspberrypi/raspberry-pi-getting-started/).
+
+## Distributions
+
+Run the install script that matches the distribution. Each script lives in `scripts/linux/<name>/install_dependencies.sh`.
+
+| Distribution | Script directory | Notes |
+| --- | --- | --- |
+| Ubuntu 22.04 and 24.04, and Ubuntu derivatives the script recognizes (Linux Mint, elementary OS) | `scripts/linux/ubuntu` | Tested in CI on Ubuntu 24.04. |
+| Debian 12 (bookworm) | `scripts/linux/debian` | |
+| Debian 13 (trixie) and Raspberry Pi OS Trixie | `scripts/linux/debian` | See the package note below. |
+| Arch Linux | `scripts/linux/archlinux` | Uses `pacman`. |
+| Fedora | `scripts/linux/fedora` | Uses `dnf`. |
+
+Ubuntu 22.04 can stop on a held `libunwind` package when `libunwind-14` is already installed. Remove that package, then run the script again: `sudo apt-get remove libunwind-14`. This shows up on some CI images ([#8543](https://github.com/openframeworks/openFrameworks/issues/8543)). A normal desktop install usually does not have that package.
+
+Debian 13 removed `libgconf-2-4`. The install script still lists it, so apt stops ([#8480](https://github.com/openframeworks/openFrameworks/issues/8480)). Delete `libgconf-2-4` from the `apt-get install` line in `scripts/linux/debian/install_dependencies.sh` and run the script again. Current openFrameworks does not need that library. On a checkout from before 30 October 2026, the same script may also ask for `xorgproto`. That package name is the source package. The installable name is `x11proto-dev` ([#8630](https://github.com/openframeworks/openFrameworks/pull/8630)).
+
+Do not rewrite `/etc/lsb-release` to look like an older Ubuntu. The Ubuntu script reads `/etc/os-release`. If it does not recognize a derivative, run the Debian or Ubuntu script that matches the base system.
+
+## Dependencies and codecs
+
+From the openFrameworks directory, for Ubuntu:
 
 ```sh
-cd OF/scripts/linux/ubuntu
+cd scripts/linux/ubuntu
 sudo ./install_dependencies.sh
 ```
 
-Next, if you want to use some formats like mp3, you'll need to run the install_codecs script: it's in the same folder and is run the same way as the install_dependencies one. We separate them because mp3 and some other formats installed by the script might be protected by patents in some countries and could be problematic to use in commercial work. Also, this might help those Linux users that don't want to use proprietary codecs.
+Swap `ubuntu` for `debian`, `archlinux`, or `fedora` on those systems.
 
-The OF source code comes uncompiled so the first time you compile an example it would need to compile it to, if you go and compile any example it would compile OF as a dependency but to make that easier and catch any potential problems let's do that as a separate step:
+Optional patent-encumbered codecs, including mp3, are a separate script in the same directory:
 
 ```sh
-cd OF/scripts/linux
+sudo ./install_codecs.sh
+```
+
+## Compile openFrameworks
+
+```sh
+cd scripts/linux
 ./compileOF.sh -j3
 ```
 
-`-j3` tells the script to use 3 CPUs to compile. You can specify as many as you want but it's recommended to use the number of cores in your computer or less.
+`-j3` is the number of compile jobs. Use the number of cores, or fewer.
 
-With this you can already go into any of the examples folders and compile the examples using make:
+The project generator:
 
 ```sh
-cd OF/examples/graphics/polygonExample
+./compilePG.sh
+```
+
+That builds the GUI in the openFrameworks directory and can install the `projectGenerator` command. Run `projectGenerator` with no arguments to see its options.
+
+## Run an example
+
+```sh
+cd examples/graphics/polygonExample
 make
 make run
 ```
 
-Or use the officially supported IDE: [qtcreator](../qtcreator/) which has plugins that allow to create new projects, import existing ones, add addons to them. Eclipse is no longer officially supported. 
+## Editor
 
-If you want to install the project generator, a tool that allows to create and update an OF project, you'll need to run one last script:
-
-```sh
-cd OF/scripts/linux
-./compilePG.sh
-```
-
-This will compile the GUI version of the project generator which will be placed in the root of the OF folder. When it's done compiling it will ask you if you also want to install the optional command line version of the tool which allows you to create projects from anywhere on your system.
-If you installed the command line tool and want to change the OF path it uses, you can change the value of PG_OF_PATH in ~/.profile.
-
-Run the commandline project generator without any arguments to see how to use it:
-```sh
-projectGenerator
-```
-
----
-
-## Install on Third-Party Linux Distribution
-
-if your linux is third-party distribution, maybe you can see some error while install openFrameworks. this is because installing scripts are using information of kernel and version number that you can check with `lsb_release -a` command on your machine. in this situation, you can install openFrameworks by modifying this information temporarily.
-
-for example, **Elementary OS 0.3 freya** is based on **Ubuntu 14.04 LTS**. you can check your linux distro information on official distro websites.
-
-### 1. get your distribution information
-for revert to back after install oF successfully, you need to copy or make a backup as a file (.bak) of this information.
-
-```sh
-$ cat /etc/lsb-release
-DISTRIB_ID="elementary OS"
-DISTRIB_RELEASE=0.3.2
-DISTRIB_CODENAME=freya
-DISTRIB_DESCRIPTION="elementary OS Freya"
-$ sudo cp /etc/lsb-release /etc/lsb-release.bak
-```
-
-### 2. get based disribution information
-run this command on based ditribution machine.
-this example is **Ubuntu 14.04 LTS**:
-
-```sh
-$ cat /etc/lsb-release
-DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=14.04
-DISTRIB_CODENAME=trusty
-DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
-```
-
-### 3. modifying kernel information on linux machine will install openFrameworks 
-modifying `/etc/lsb-release` with information from *step 2*.
-
-```sh
-$ sudo vi /etc/lsb-release
-DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=14.04
-DISTRIB_CODENAME=trusty
-DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
-```
-
-### 4. install openFrameworks.
-install dependencies, codecs and compile openFrameworks and projectGenerator
-
-```sh
-$ ls {OF_DIRECTORY}/scripts/linux/ubuntu
-$ sudo ./install_dependencies.sh
-$ sudo ./install_codecs.sh
-$ ls {OF_DIRECTORY}/scripts/linux
-$ sudo ./compileOF.sh 
-$ sudo ./compilePG.sh 
-```
-### 5. revert to original 
-**don't forget this step!**
-
-```sh
-$ sudo cp /etc/lsb-release.bak /etc/lsb-release
-```
+[VS Code](../vscode/) is the makefile editor for Linux. Open the `.code-workspace` file in an example. [Qt Creator](../qtcreator/) is no longer a maintained setup path.
