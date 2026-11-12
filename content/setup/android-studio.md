@@ -85,7 +85,7 @@ To create new projects just use the project generator for your platform that you
 scripts/android/compileLinuxPG.sh
 ```
 
-before being able to run the project generator
+This builds the command-line generator, not the Electron GUI. Follow [Create a new project](/learning/01_basics/create_a_new_project/) for the generator workflow, and select **Android (Android Studio)** when using the GUI supplied with your download.
 
 Troubleshooting
 --------------
