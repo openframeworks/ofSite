@@ -32,13 +32,15 @@ Create a project
 
 The Visual Studio extension that used to live in the marketplace is not part of the current setup. Use the Project Generator that ships in the openFrameworks folder.
 
-1. Open the Project Generator.
-2. Set the project name and path.
+1. Open the Project Generator from the `projectGenerator` folder in your download. In **Settings**, set **OF path** to the openFrameworks root containing `addons`, `apps`, `libs`, and `scripts`.
+2. Set **Project name** and **Project path**. The path is the parent folder; `apps/myApps` and `mySketch` create `apps/myApps/mySketch`.
 3. Choose Windows (Visual Studio).
-4. For Visual Studio 2022, leave the template empty. Nightly builds can target Visual Studio 2026 by choosing the `vs2026` template when that release zip is the one you downloaded.
-5. Generate.
+4. For the 0.12.1 Visual Studio 2022 package, leave **Template** empty. Use a matching nightly generator and package when selecting a newer template such as `vs2026`.
+5. Choose any installed **Addons**, then click **Generate**.
 
 Open the `.sln` under `apps/<folder>/<project>/`. If Visual Studio asks to retarget the solution, retarget it to the toolset you installed. After the Project Generator updates a project, retarget again from the solution if the prompt does not appear: right-click the solution and choose Retarget.
+
+To add source files or addons later, use **import** or drag the project folder onto the generator, then click **Update**. The [Project Generator guide](/learning/01_basics/create_a_new_project/) covers the full workflow.
 
 Press F5 to build and run Debug. The configuration dropdown switches Debug and Release.
 

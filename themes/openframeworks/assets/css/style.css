@@ -1522,6 +1522,23 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 	padding: 5px 10px;
 }
 
+.tutorial table,
+.page-wide-tutorial table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+.tutorial th,
+.tutorial td,
+.page-wide-tutorial th,
+.page-wide-tutorial td {
+    padding: 0.4em 0.7em;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+
 .tutorial #back-link {
 	margin-bottom: 2.5em;
 }

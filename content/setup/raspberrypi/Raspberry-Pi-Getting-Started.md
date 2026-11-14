@@ -6,7 +6,7 @@ Getting your Raspberry Pi ready for openFrameworks
 
 ## Install Raspberry Pi OS
 
-Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/) and write **Raspberry Pi OS (64-bit)**. The current image is Debian 13 (trixie), released 6 October 2026. The download page is [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/).
+Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/) and write **Raspberry Pi OS (64-bit)**. Choose the Debian 13 (trixie) image for a new install. The download page is [Raspberry Pi OS](https://www.raspberrypi.com/software/operating-systems/).
 
 | Board | OS | openFrameworks package |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/) and write **Ras
 | Pi 1, Pi Zero, Pi Zero W | Raspberry Pi OS 32-bit | `linuxarmv6l` |
 | Other 64-bit ARM boards (not a Pi) | Debian or Ubuntu arm64 | nightly `linux_arm64`, or 0.12.1 `linuxaarch64` |
 
-Raspberry Pi OS Bookworm is under Legacy in the Imager. Prefer Trixie for a new card. Pi 5 needs the 64-bit OS.
+Raspberry Pi OS Bookworm is under Legacy in the Imager. Prefer Trixie for a new card.
 
 In the Imager, set the username, Wi-Fi, and SSH before you write the card. The username no longer has to be `pi`. The paths below use `$HOME`.
 
@@ -55,7 +55,7 @@ cd $HOME/openFrameworks/scripts/linux/debian
 sudo ./install_dependencies.sh
 ```
 
-Debian 13 and Raspberry Pi OS Trixie removed `libgconf-2-4`. The script still asks apt for it, so the install stops ([#8480](https://github.com/openframeworks/openFrameworks/issues/8480)). Delete `libgconf-2-4` from the `apt-get install` line in that script and run it again. Current openFrameworks does not need the library. On a tree from before 30 October 2026 the script may also name `xorgproto`. Replace that with `x11proto-dev`.
+Debian 13 and Raspberry Pi OS Trixie removed `libgconf-2-4`. The script in the 0.12.1 package asks apt for it, so the install stops ([#8480](https://github.com/openframeworks/openFrameworks/issues/8480)). Delete `libgconf-2-4` from the `apt-get install` line in that script and run it again. Current master has removed that dependency; the workaround is for older copies of the script. If your copy also names `xorgproto`, replace that entry with `x11proto-dev`.
 
 Compile openFrameworks. On a Pi 4 or older, a high job count can run out of memory, so start with two jobs:
 
@@ -72,14 +72,20 @@ make
 make run
 ```
 
-To start a project, copy the empty example. Keep the app three directories under the openFrameworks folder so the makefile can find the core:
+## Generate a project
+
+The 0.12.1 Project Generator can create the makefiles and VS Code workspace for you. Build its command-line tool and accept the optional command install:
 
 ```sh
-cp -R $HOME/openFrameworks/examples/empty/emptyExample $HOME/openFrameworks/apps/myApps/myRpiApp
-cd $HOME/openFrameworks/apps/myApps/myRpiApp
+cd "$HOME/openFrameworks"
+./scripts/linux/compilePG.sh
+projectGenerator -o"$PWD" -plinuxaarch64 apps/myApps/myRpiApp
+cd apps/myApps/myRpiApp
 make
 make run
 ```
+
+Use `-plinuxarmv6l` on a Pi 1 or Pi Zero with the 32-bit package. `compilePG.sh` builds the command-line generator, not the Electron GUI. See [Create a new project](/learning/01_basics/create_a_new_project/) for updating projects and selecting addons.
 
 [VS Code](../../vscode/) can open the `.code-workspace` file in that folder. The platform install is the same makefile flow as [Linux](../../linux-install/).
 

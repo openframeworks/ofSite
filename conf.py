@@ -325,6 +325,11 @@ TIMEZONE = "UTC"
 # Default is:
 # FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
+FILES_FOLDERS = {
+    'files': '',
+    'content/setup/setup_assets': 'setup/setup_assets',
+    'content/setup/xcode_setup_assets': 'setup/xcode/xcode_setup_assets',
+}
 
 # One or more folders containing listings to be processed and stored into
 # the output. The format is a dictionary of {source: relative destination}.

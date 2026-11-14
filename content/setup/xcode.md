@@ -5,7 +5,7 @@
 
 ## 1. First Steps
 
-1. Install Xcode 14.1 or newer (15 beta) from the [OSX App Store](https://itunes.apple.com/ca/app/xcode/id497799835?mt=12) or [Apple Developer Portal](https://developer.apple.com/download/more/). 
+1. Install Xcode from the [OSX App Store](https://itunes.apple.com/ca/app/xcode/id497799835?mt=12) or [Apple Developer Portal](https://developer.apple.com/download/more/).
    
 2. Install Xcode's command line tools
 
@@ -38,12 +38,12 @@ Let's test your setup with the 3DPrimitivesExample. Open the **examples** folder
 This follows the basic structure of an openFrameworks app.
 
 - **src** is typically where your app's source files will go
-- **bin** is where your finished runnable app will end up, as well as your
-- **data** folder which is for assets like images, sound files, etc.
+- **bin** is where your finished runnable app will end up
+- **bin/data** contains assets such as images, sound files, and fonts
 
 The file with the `.xcodeproj` extension is the file you should open in Xcode. Open it now and you should see something similar to the following. You may need to expand the project in the left bar and drill down to the `ofApp.cpp` file as shown in the image below in order to see anything interesting.
 
-As of this writing Xcode is on version 14.3.1, so you may see something slightly different if you live in the future. 
+The screenshots use an earlier Xcode version, so the layout may differ from the version you installed.
 
 When you double-click the `3DPrimitivesExample.xcodeproj` project, Mac OS displays a notification pop-up window because of security issues. You can safely hit "Trust and Open".
 
@@ -71,7 +71,7 @@ It is typical for there to be some warnings generated when openFrameworks is com
 
 ## 3. Generating a New Project
 
-Now that you've verified your setup, it's a good time to start a new project from scratch. In the **projectGenerator** folder, you'll find `projectGenerator.app` which will make it easy to create new openFrameworks apps. 
+Now that you have verified your setup, create a project with the `projectGenerator.app` in the **projectGenerator** folder of your 0.12.1 download. In its **Settings**, set **OF path** to the openFrameworks root containing `addons`, `apps`, `libs`, and `scripts`. The [Project Generator guide](/learning/01_basics/create_a_new_project/) covers the full workflow.
 
 Open the `projectGenerator.app`
 
@@ -170,7 +170,7 @@ Finally, the file you add displays in the XCode editor.
 
 ![ofxIO project addon](xcode_setup_assets/of_addon_5.png)
 
-7. Hit `Update` button. Then you can open the updated project.
+7. Keep **OS X (Xcode)** selected under **Platforms**, then click **Update**. Reopen the generated project. The addon list is saved in `addons.make`; if you edit that file by hand, update the Xcode project with the generator again.
 
 ## 6. FAQ
 1. **XCode code completetiton support doesn't work as expected.**

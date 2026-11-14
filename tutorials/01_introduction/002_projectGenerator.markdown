@@ -1,77 +1,36 @@
 ---
-.. date: 2012/10/20 17:00:00
-.. title: Create a new project with the projectGenerator
-.. summary: openframeworks 0072 comes with a new tool to generate projects
-.. author: Jesus Gollonet
-.. author_site: http://jesusgollonet.com
+date: 2012/10/20 17:00:00
+title: Create a new project with the projectGenerator
+summary: Create and update projects with the generator supplied with openFrameworks 0.12.1
+author: Jesus Gollonet
+author_site: http://jesusgollonet.com
 ---
 
-## 1. What is it?
-As of openframeworks 0072 we have a new tool called projectGenerator to create new openframeworks projects, including addons.  In previous versions, creating a new openframeworks project involved duplicating an existing example app and adding the addons by hand.  With the project generator project creation is faster and less error-prone.
+## What is the Project Generator?
 
-An updated projectGenerator was released with openFrameworks 0090.
+The Project Generator creates the IDE project files and makefiles used to build an openFrameworks app. It can also update an existing project after you change its source files, addons, location, or openFrameworks installation.
 
-It is, by the way, a desktop app made with openFrameworks.
+The packaged GUI is an Electron application that calls a C++ command-line generator. Generating a project does not compile or run it; that happens in your IDE or with `make`.
 
-## 2. Usage
-It's pretty simple to make a new project.
-The project generator lives in a folder in the top level of an openframeworks download.
+This guide covers **openFrameworks 0.12.1**. For the full workflow, platform choices, and command-line examples, see [Create a new project](/learning/01_basics/create_a_new_project/).
 
-![Image: where is the projectGenerator](new-pg-00.png)
+## Create a project
 
-Double click the application. This is our new friend.
+1. Open the application in the `projectGenerator` folder of your openFrameworks download. Linux users can build the command-line generator with `scripts/linux/compilePG.sh`.
+2. In **Settings**, set **OF path** to the openFrameworks root containing `addons`, `apps`, `libs`, and `scripts`.
+3. Enter a **Project name**, such as `mySketch`.
+4. Set **Project path** to its parent folder, normally `apps/myApps`. The result will be `apps/myApps/mySketch`.
+5. Select the installed **Addons** and the **Platforms** matching your package. Leave **Template** empty for a standard project.
+6. Click **Generate** and open the resulting project in your IDE, or build it with `make`.
 
-![Image: projectGenerator GUI](new-pg-01.png)
+Keeping projects inside `apps` makes it easier to move them together with their openFrameworks installation. The generator calculates relative paths, so a project does not have to live at one fixed folder depth.
 
-There are some options to consider when creating a new app.
+## Update a project
 
-### 1. Name:
-Give a name to your project
+Use **import**, or drag the project folder onto the generator. Check its addons and platforms, then click **Update**. Import the folder containing `src` and `addons.make`, rather than an individual source or IDE file.
 
-### 2. Project Path
-When you execute the projectGenerator, this should contain the absolute path to the myApps folder in the distribution you downloaded, on OSX this would be something like:
+Addons must be installed in the selected openFrameworks tree before they can be selected. See [How to add an addon to a project](/learning/01_basics/how_to_add_addon_to_project/) for details.
 
-	/Users/username/wherever/you/have/openFrameworks/apps/myApps
+Use the generator that accompanies your openFrameworks release. New nightly templates, such as CMake, require the corresponding nightly source tree; they are not part of 0.12.1.
 
-That's a good default option, but you can put your projects anywhere relative to OF, and it should work. That said, due to the self-contained structure of openframeworks, it is still recommended to use folders inside the apps project. That way, if the OF release or your project gets moved, or if some lower level folder gets renamed, the generated paths don't break.
-
-Here's a suggested file structure
-
-	/.../apps/myApps/
-		/myApp1
-		/myApp2
-		...
-	/.../apps/myBigInstallation
-		/myProject1
-		/myProject2
-		...
-	/.../apps/myAddonsTests/
-		/ofxGifEncoderTests
-		/ofxFlashTests
-		...
-
-
-
-### 3. Addons
-If you know the addons you're going to need, click the addon field and select the ones you want to include in your project.
-
-![Image: projectGenerator - selecting addons](new-pg-02.png)
-
-### 4. Platform
-This should contain the platform you want to build for. Given that there are different distributions for different platforms this is set in your download. This means that if you have, for example, an OSX distribution and an IOS distribution on Mac, you'll have to execute the projectGenerator in their respective folders.
-
-#### Notes on addons
-- All the addons you have in your addons folder will be listed here, not only the ones that came with openframeworks.
-- That said, not all addons (especially non core addons) are packaged in the right way for this, and there are still addons we haven't tested yet.
-- Also, don't worry if you still don't know what you'll need. You can always come back later, import your existing project and update its addons.
-- There are several guides on how to install addons for different platform in the [openframeworks wiki](http://wiki.openframeworks.cc/index.php?title=Main_Page). They might be slightly out of sync with the latest release but if you run into trouble don't hesitate to ask in the [forum](http://forum.openframeworks.cc/index.php)
-- Check out [ofxaddons.com](http://ofxaddons.com) for a huge collection of them.
-
-### 5. Done!
-Click on generate and your project will be created. A popup will opened to show you generating your project was successful. This popup also contains a button that will let you open your newly created project in your main IDE.
-
-Alternatively you can go to the folder you specified in the path and your project will be waiting for you. Start coding.
-
-## 3. Additional notes:
-- Check the [readme](https://github.com/ofZach/projectGeneratorSimple/tree/master/bin) for more info about the tool, including some advanced notes and a more flexible version for developers.
-- Even though the screenshots and paths in this guide are mac centric, the process is the same for all platforms. Again, if you have doubts, ask in the [forum](http://forum.openframeworks.cc/index.php)
+For help, use the [openFrameworks forum](https://forum.openframeworks.cc/). The generator's source and current developer documentation are in the [Project Generator repository](https://github.com/openframeworks/projectGenerator).

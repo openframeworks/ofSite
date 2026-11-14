@@ -1,15 +1,13 @@
 ## -*- coding: utf-8 -*-
 .. title: msys2
 
-[openFrameworks](/) | [Documentation table of contents](table_of_contents.md)
-
 msys2
 =====
 
 Installing MSYS2
 ----------------
 
-Download link and instructionss can be found on the [MSYS2 web site](https://www.msys2.org/).
+Download links and instructions can be found on the [MSYS2 web site](https://www.msys2.org/).
 [Several installers](https://www.msys2.org/docs/installer/) (self extracting archive, XZ archive) are available; any will work with openFrameworks.
 
 Install MSYS2 in the default folder, `C:\msys64`, unless you know you need another path. [Qt Creator](../qtcreator/) is no longer a maintained setup. Use [VS Code](../vscode/).
@@ -40,7 +38,7 @@ Installing openFrameworks
 **IMPORTANT**
 MSYS2 comes in many flavors : MSYS2 (msys2.exe), MINGW32 (mingw32.exe), MINGW64 (mingw64.exe), CLANG32 (clang32.exe), CLANG64 (clang64.exe), CLANGARM64 (clangarm64.exe) and UCRT64 (ucrt64.exe).
 Each flavor has its shell launcher in MSYS2 installation folder.
-This really important to remember as lots of problem with running openFrameworks with MSYS2 come from using the wrong flavor/shell.
+Choose the shell matching your openFrameworks package before installing dependencies or building projects.
 
 0.12.1 publishes three 64-bit MSYS2 packages. Open the shell that matches the zip. The stable files are on the [0.12.1 release](https://github.com/openframeworks/openFrameworks/releases/tag/0.12.1). Nightly names are dated and listed on the [nightly release](https://github.com/openframeworks/openFrameworks/releases/tag/nightly).
 
@@ -77,7 +75,7 @@ You can speed up compilation using `make -j4` (or the number of cores you want i
 Checking OF installation by running examples
 --------------------------------------------
 
-Compiling and running an OF example in the best way to check if you're ready for it.
+Compiling and running an OF example is the best way to check if you're ready for it.
 
 To compile an example (e.x. the 3DPrimitivesExample), run:
 
@@ -88,14 +86,19 @@ make
 
 At this point, `make run` should execute the newly built example.
 
-However, it wil not execute by double-clicking on its icon; lots of "missing DLL" warnings will appear.
+However, it may not execute by double-clicking on its icon; lots of "missing DLL" warnings will appear.
 To fix these, you need to copy the required DLLs file in the application folder with the `make copy_dlls` command.
 
+
+Creating a project
+------------------
+
+Use the Project Generator in your openFrameworks download. Set **OF path** to the root of that same download, choose **Windows (msys2/mingw)** under **Platforms**, and click **Generate**. Open the generated `.code-workspace` in VS Code, or run `make` from your matching MINGW64, UCRT64, or CLANG64 shell. See [Create a new project](/learning/01_basics/create_a_new_project/) for details.
 
 Setting up an IDE
 -----------------
 
-Several IDEs can be used with MSYS2. QT Creator used to be OF recommended choice, but as of late VS Code has gained popularity and is now used by many OF enthusiasts.
+Use [VS Code](../vscode/) as an editor for the makefile projects. The older Qt Creator setup is retained for existing users and is no longer maintained.
 
 If you use a different IDE and would like to share your knowledge in setting it up for OF development, do not hesitate to contribute to this page.
 
@@ -117,7 +120,7 @@ Every example has a Makefile you can configure using the files config.make and a
 config.make: This file has options to add search paths, libraries, etc.
 The syntax is the usual Makefile syntax; there's comments inside the file to help with organization.
 
-addons.make: if you want to use an addon which is inside the addons folder, justadd its name in a new line in this file.
+addons.make: if you want to use an addon which is inside the addons folder, just add its name in a new line in this file.
 
 
 FAQ / Common problems
