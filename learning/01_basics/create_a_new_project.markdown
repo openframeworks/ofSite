@@ -5,7 +5,7 @@ type: howto
 
 The Project Generator creates and updates the files used by your IDE or makefiles. You then build and run the project with Xcode, Visual Studio, or `make`.
 
-These instructions cover **openFrameworks 0.12.1**. Use the generator supplied with your openFrameworks download. Newer nightly generators and templates can have different options.
+The basic workflow applies to **openFrameworks 0.12.1** and current nightly builds. Use the generator supplied with your openFrameworks download. The current-only controls and CMake workflow are described below.
 
 ## Open the Project Generator
 
@@ -91,6 +91,27 @@ When updating without `-a`, the generator reads the project's `addons.make`. Sup
 
 Some newer packages name the command-line executable `projectGeneratorCmd`; use the executable supplied with that package. The packaged GUI is a separate application.
 
-## Nightly features
+## Current nightly / 0.12.2 controls
 
-Recent nightly builds add templates and targets that are not in 0.12.1, including the **CMake** template and newer Visual Studio templates. Use them with a matching nightly openFrameworks tree and its generator. The [Project Generator repository](https://github.com/openframeworks/projectGenerator) documents those versions; the [nightly release](https://github.com/openframeworks/openFrameworks/releases/tag/nightly) contains the corresponding openFrameworks packages.
+Enable **Advanced options** in Settings for the current platform and build controls:
+
+- **Visual Studio version:** select 2026, 2022 or 2019. New VS projects default to 2022 in PG; select 2026 for the default nightly download. Existing projects retain their version unless changed. CLI: `-pvs -t2026`, `-pvs -t2022` or `-pvs -t2019`.
+- **MSYS2 environment:** select UCRT64, CLANG64 or CLANGARM64 to match the downloaded libraries.
+- **Emscripten wasm32 / wasm64:** the chosen bitness needs a matching library download.
+- **App version, build and bundle ID:** shared metadata is read from existing projects. Current Apple updates also preserve custom build settings and resource files; review generated changes in version control.
+
+The current Linux GUI bundles a native CLI. After installation, use `projectGenerator/projectGeneratorCmd` on Linux, `projectGenerator/projectGeneratorCmd.exe` on Windows, or `projectGenerator/projectGenerator` on macOS. Packaged ASAR layouts also keep the CLI under `resources/app.asar.unpacked/app` (macOS: inside the app's `Contents/Resources`).
+
+## CMake projects {#cmake-projects}
+
+With a matching nightly/0.12.2 source tree, choose the target platform and **cmake** under Template, then generate or update the project. This writes `CMakeLists.txt` alongside `src/` and uses `addons.make` for the addon list. Existing `CMakeLists.txt` files are retained.
+
+From the openFrameworks root, with the CLI on your PATH:
+
+```sh
+projectGenerator -o"$PWD" -plinux64 -tcmake apps/myApps/mySketch
+```
+
+Then configure and build from the generated project directory using the commands for your platform in the [CMake setup guide](/setup/cmake/). Android keeps its separate Gradle/CMake path.
+
+The [Project Generator repository](https://github.com/openframeworks/projectGenerator) documents current development; the [nightly release](https://github.com/openframeworks/openFrameworks/releases/tag/nightly) contains matching openFrameworks packages.

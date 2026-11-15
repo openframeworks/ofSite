@@ -4,6 +4,8 @@
 ios setup
 ===========
 
+From openFrameworks 0.12.2, iOS apps run on iOS 15 and newer and tvOS apps on tvOS 18 and newer. Use a current version of Xcode.
+
 There are a number of tutorials about ofxiPhone and development. We've tried to make it as easy as possible to get your code up and running on the iPhone as quickly as possible, but there's a ton of information to cover. If you need more help after following this tutorial, be sure and check out these others, or check out the iPhone section of the openFrameworks forum.
 
 - [Memo Akten's simple openFrameworks application on an iPhone tutorial][0]
@@ -175,3 +177,19 @@ See... Not so bad... Now go make something awesome!
 [5]: /download
 [6]: http://developer.apple.com
 
+## Project Generator and CMake (nightly / 0.12.2) {#project-generator-cmake}
+
+Use the generator supplied with your openFrameworks tree and select **iOS** or **tvOS**. Current PG exposes the app version, build number and bundle identifier, and preserves existing Apple project settings and resources during updates.
+
+For CMake, choose the **cmake** template. On macOS with Xcode and CMake 3.28 or newer, run from the generated iOS project:
+
+```sh
+cmake -S . -B build-ios-sim -G Xcode -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_SYSROOT=iphonesimulator
+cmake --build build-ios-sim --config Release
+```
+
+For tvOS use `-DCMAKE_SYSTEM_NAME=tvOS` and `-DCMAKE_OSX_SYSROOT=appletvsimulator` in a separate build directory. Device builds use `iphoneos` or `appletvos` and `-DOF_APPLE_DEVELOPMENT_TEAM=YOUR_TEAM_ID`. See [CMake for Apple mobile platforms](/setup/cmake/#apple-mobile-platforms).
+
+### Mac Catalyst (catOS) {#mac-catalyst}
+
+Mac Catalyst runs an iOS app on macOS. The [Apple source project](https://github.com/openframeworks/openFrameworks/tree/master/libs/openFrameworksCompiled/project/macos) contains Catalyst platform settings, but the current releases do not publish a standalone `catOS` archive. Use a compatible Apple source project/toolchain; the generic CMake app entry point does not expose an `OF_PLATFORM=catos` target.

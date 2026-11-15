@@ -1666,3 +1666,31 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inh
 	font-size: 1.2em;
 	text-align: center;
 }
+
+/* Download platform groups. */
+.download-platform-group {
+    clear: both;
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: 24px;
+    margin: 0 0 20px;
+    box-sizing: border-box;
+}
+.download-platform-group > h2 { margin-top: 0; }
+.download-platform-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+.download-platform-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.download-platform-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.download-platform { min-width: 0; overflow-wrap: anywhere; }
+.download-platform p { margin: 0 0 10px; }
+.download-target-note { font-size: 0.9em; margin-bottom: 0; }
+.download-nightly { clear: both; padding-top: 12px; }
+@media (max-width: 700px) {
+    .download-platform-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 450px) {
+    .download-platform-grid { grid-template-columns: 1fr; }
+}
