@@ -175,3 +175,20 @@ Don't forget to escape special characters in your password...
 
 many thanks!! OFteam
 
+## Nightly / 0.12.2 environments
+
+Current packages use **UCRT64** (recommended GCC environment), **CLANG64** or **CLANGARM64** (native Windows on Arm). Download the corresponding `msys2_ucrt64`, `msys2_clang64` or `msys2_clangarm64` archive from the [Windows downloads](/download/#windows). MINGW64 is retained above for 0.12.1; it is no longer a current package.
+
+In current PG, select the MSYS2 platform and the matching **MSYS2 environment**. Keep compiler, addon libraries and DLLs in that environment. Do not mix MSYS2 libraries with the Visual Studio packages.
+
+## CMake (nightly / 0.12.2)
+
+From the matching UCRT64, CLANG64 or CLANGARM64 shell, install its CMake and Ninja packages. Generate PG's **cmake** template, then run from the project folder:
+
+```sh
+pacman -S --needed "${MINGW_PACKAGE_PREFIX}-cmake" "${MINGW_PACKAGE_PREFIX}-ninja"
+cmake -S . -B build-cmake -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build-cmake --parallel
+```
+
+See the [CMake guide](/setup/cmake/#windows-msys2) for prerequisites and output locations.

@@ -1,7 +1,7 @@
 ---
 date: 2012/10/20 17:00:00
 title: Create a new project with the projectGenerator
-summary: Create and update projects with the generator supplied with openFrameworks 0.12.1
+summary: Create and update projects with the generator supplied with your openFrameworks release
 author: Jesus Gollonet
 author_site: http://jesusgollonet.com
 ---
@@ -12,7 +12,7 @@ The Project Generator creates the IDE project files and makefiles used to build 
 
 The packaged GUI is an Electron application that calls a C++ command-line generator. Generating a project does not compile or run it; that happens in your IDE or with `make`.
 
-This guide covers **openFrameworks 0.12.1**. For the full workflow, platform choices, and command-line examples, see [Create a new project](/learning/01_basics/create_a_new_project/).
+This guide covers the shared workflow for **openFrameworks 0.12.1 and current nightly builds**. For the full workflow, platform choices, and command-line examples, see [Create a new project](/learning/01_basics/create_a_new_project/).
 
 ## Create a project
 
@@ -31,6 +31,6 @@ Use **import**, or drag the project folder onto the generator. Check its addons 
 
 Addons must be installed in the selected openFrameworks tree before they can be selected. See [How to add an addon to a project](/learning/01_basics/how_to_add_addon_to_project/) for details.
 
-Use the generator that accompanies your openFrameworks release. New nightly templates, such as CMake, require the corresponding nightly source tree; they are not part of 0.12.1.
+Use the generator that accompanies your openFrameworks release. Current nightly builds add CMake templates, a Visual Studio version selector, MSYS2 environment selection and app metadata controls. See [CMake projects](/learning/01_basics/create_a_new_project/#cmake-projects) and the [CMake platform guide](/setup/cmake/); these features need the corresponding nightly/0.12.2 source tree.
 
 For help, use the [openFrameworks forum](https://forum.openframeworks.cc/). The generator's source and current developer documentation are in the [Project Generator repository](https://github.com/openframeworks/projectGenerator).

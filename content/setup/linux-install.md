@@ -86,3 +86,26 @@ make run
 ## Editor
 
 [VS Code](../vscode/) is the makefile editor for Linux. Open the `.code-workspace` file in an example. [Qt Creator](../qtcreator/) is no longer a maintained setup path.
+
+## Nightly / 0.12.2 downloads
+
+For the current development version, use the [nightly release](https://github.com/openframeworks/openFrameworks/releases/tag/nightly). Desktop packages are named `linux_64_gcc10` (Intel/AMD x64) and `linux_arm64_gcc10` (desktop ARM64). Raspberry Pi OS uses the separate [Raspberry Pi packages](/setup/raspberrypi/).
+
+From a source checkout, `scripts/linux/download_libs.sh` downloads libraries for the detected target. Current source has removed the obsolete GConf dependency described above for 0.12.1.
+
+Current packages provide a Project Generator GUI as well as its bundled CLI. If you need to install or refresh it, run `./scripts/linux/download_projectGenerator.sh` from the openFrameworks root. On x64, Ubuntu 22.04/Jammy derivatives use the Ubuntu 22 GUI build; ARM64 uses the native ARM64 package. The standalone CLI is `projectGenerator/projectGeneratorCmd`. `compilePG.sh` remains the source-build option for the CLI, including 32-bit Raspberry Pi targets without a prebuilt GUI.
+
+## CMake (nightly / 0.12.2)
+
+Generate a project using PG's **cmake** template, then from that project folder run:
+
+```sh
+cmake -S . -B build-cmake -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build-cmake --parallel
+```
+
+Install Ninja and the distribution dependencies first. See the [CMake guide](/setup/cmake/#linux-and-raspberry-pi) for project setup, addon handling and platform selection.
+
+## Linking non-PIC addon libraries
+
+If linking an addon fails with `relocation ... can not be used when making a PIE object; recompile with -fPIE`, rebuild its static libraries with `-fPIC` (CMake: `-DCMAKE_POSITION_INDEPENDENT_CODE=ON`). A temporary workaround is `PROJECT_LDFLAGS = -no-pie` in `config.make`. See the [Linux library notes](https://github.com/openframeworks/openFrameworks/blob/master/docs/linux.md).

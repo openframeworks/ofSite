@@ -1,60 +1,52 @@
 ## -*- coding: utf-8 -*-
 .. title: emscripten
 
-emscripten setup
-===========
+Emscripten setup
+===============
 
-**NOTE: Use a [nightly openFrameworks build](https://github.com/openframeworks/openFrameworks/releases/tag/nightly) for Emscripten.** There is no separate Emscripten zip. The nightly page is also linked from the [download page](https://openframeworks.cc/download/). 0.12.1 is the stable desktop release and is not the Emscripten source to start from.
+Use a current [nightly openFrameworks download](https://github.com/openframeworks/openFrameworks/releases/tag/nightly) or source checkout. There is no separate Emscripten application archive. Current source and prebuilt libraries use **Emscripten 7.0.0**; do not replace the pinned SDK with `latest` independently of the libraries.
 
-Have you ever made a project in openFrameworks and been like "This is awesome! I want to put it on my online portfolio!". You could always make a video or take photos, but what about the UI aspect of your project? How can people see the awesome mouse effects you made? Enter Emscripten. Emscripten compiles your C++ code to WebAssembly and generates the JavaScript needed to run it in a browser. So you can put your awesome OF project "on the line" in your portfolio.
+## Install the SDK and libraries
 
-These instructions compile one example. The same commands work for another project. They work on Linux and on Windows Subsystem for Linux.
+From the openFrameworks root, use the source-install path to select the pinned SDK:
 
-Install Emscripten
-------------------
-
-From the openFrameworks directory, install the Emscripten SDK and the prebuilt libraries:
-
-```bash
-scripts/emscripten/install_emscripten.sh
+```sh
+scripts/emscripten/install_emscripten.sh source
+source emsdk/emsdk_env.sh
 scripts/emscripten/download_libs.sh
 ```
 
-`install_emscripten.sh` uses the system package when it can (Homebrew on macOS, apt on Linux, winget on Windows). Pass any argument to clone emsdk instead. That path installs the version pinned in the script. Use the exact SDK version pinned in the script with the matching prebuilt libraries. `./emsdk install latest` can move past the version openFrameworks is built against.
+If `EMSDK` already points to an SDK installation, activate its pinned version and source that installation's `emsdk_env.sh`. Running the installer without an argument uses a system package manager instead and does not guarantee the same SDK version.
 
-After a source install, load the SDK into the shell:
+## Project Generator
 
-```bash
-source emsdk/emsdk_env.sh
-```
+Use PG from the same openFrameworks tree, enable **Advanced options** and select **Emscripten**. For makefile builds, keep the normal platform template; for CMake choose **cmake**. The current GUI also exposes wasm32/wasm64 selection. A wasm64 project needs the corresponding libraries, downloaded with `BITS=64 scripts/emscripten/download_libs.sh`; changing library bitness replaces the installed Emscripten library set.
 
-A package install puts `emcc` on the PATH for you. A source install needs that `source` line in each new shell, or the equivalent lines added to your shell profile.
+## Build with make
 
-_Note: If you have a previous install of emscripten you will want to delete the compiled code in your OF_FOLDER. Delete any files or `obj` folders inside of `OF_FOLDER/libs/openFrameworksCompiled/lib/emscripten/` and any `obj/` folders in your project folders before trying to compile._
+From an example or generated project:
 
-Compile an openFrameworks project using emscripten
---------------------------------------
-
-Open a terminal in a project in the examples folder, like `examples/3d/3DPrimitivesExample`, and compile the project using this command
-
-```bash
+```sh
 emmake make Release
-```
-
-Once the compilation is finished, there will be a new file in `examples/3d/3DPrimitivesExample/bin/em/3DPrimitivesExample/`, the `index.html` file. Serve it through HTTP with `emrun`, rather than opening `index.html` as a local file:
-
-```bash
 emrun bin/em/3DPrimitivesExample/
 ```
 
-If it does not work, it might need a different browser like Firefox.
+Replace `3DPrimitivesExample` with your app's name. Serve the output over HTTP rather than opening `index.html` directly.
 
-```bash
-emrun --browser firefox bin/em/3DPrimitivesExample/
+WebGL 2 is the default. For WebGL 1 add `PROJECT_DEFINES += OF_WEBGL_VERSION=1` to `config.make`.
+
+## Build with CMake
+
+From a project generated with PG's **cmake** template:
+
+```sh
+emcmake cmake -S . -B build-web -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build-web --parallel
+emrun bin/em/mySketch/
 ```
-If everything works, you should see this image
 
-![](3dprimitives.png)
+Use `-DOF_WEBGL_VERSION=1` for a WebGL 1 CMake build. See the [CMake guide](/setup/cmake/#emscripten).
 
-This Tutorial is taken from this [blog post](http://www.reginafloresmir.com/blog/2015/5/14/openframeworks-on-the-line) by Regine Flores Mir.
+## Updating an existing build
 
+After changing SDK, libraries or WebAssembly bitness, remove the old project's build directory and compiled core artifacts for that target, then rebuild. Keep your source files and runtime data.

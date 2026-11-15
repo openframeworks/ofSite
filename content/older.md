@@ -8,6 +8,18 @@ as we update and change OF, you can download older versions of the framework her
 
 --------------------------------
 
+**BETA — 0.12.2-RC1**
+
+Browse all published files and release notes: [0.12.2-RC1](https://github.com/openframeworks/openFrameworks/releases/tag/0.12.2-RC1). This is a prerelease for testing, not the stable release.
+
+--------------------------------
+
+**release v0.12.1**
+
+Browse all platforms: [release v0.12.1](https://github.com/openframeworks/openFrameworks/releases/tag/0.12.1).
+
+--------------------------------
+
 **release v0.12.0**
 
 Browse all platforms: [release v0.12.0][243]

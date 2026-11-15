@@ -95,3 +95,9 @@ For the MINGW64 package, use `OF-MINGW64`, `MSYSTEM=MINGW64`, and `c:/msys64/min
     "version": 4
 }
 ```
+
+## CMake projects (nightly / 0.12.2)
+
+For a current project generated with PG's **cmake** template, install Microsoft's **C/C++** and **CMake Tools** extensions and open the folder containing `CMakeLists.txt`. Select the compiler/toolchain matching your openFrameworks libraries, configure, then build. Existing makefile projects can continue using their generated Makefile tasks.
+
+See the [CMake guide](/setup/cmake/) for platform-specific configure commands. On MSYS2 launch VS Code from the matching UCRT64, CLANG64 or CLANGARM64 shell so CMake inherits the correct tools.

@@ -1,50 +1,51 @@
 ## -*- coding: utf-8 -*-
 .. title: visual studio
 
-visual studio setup guide
-=========================
+Visual Studio setup
+===================
 
-Use Visual Studio 2022 for the [0.12.1](https://github.com/openframeworks/openFrameworks/releases/tag/0.12.1) Windows package. Nightly builds also publish Visual Studio 2026 packages. The free Community edition is enough.
+Install [Visual Studio Community](https://visualstudio.microsoft.com/downloads/) with the **Desktop development with C++** workload. Use a package matching the Visual Studio version and target architecture.
 
-Download
---------
+## Downloads
 
-- [Visual Studio Community](https://visualstudio.microsoft.com/downloads/)
-- openFrameworks 0.12.1, 64-bit: [of_v0.12.1_vs_64_release.zip](https://github.com/openframeworks/openFrameworks/releases/download/0.12.1/of_v0.12.1_vs_64_release.zip)
-- All current packages, including nightly Visual Studio 2022 and 2026 builds: [releases](https://github.com/openframeworks/openFrameworks/releases)
+The [download page](/download/#windows) groups Windows builds by Visual Studio 2026 (the default download choice), Visual Studio 2022, Visual Studio 2019 and MSYS2. Current builds are on the [nightly release](https://github.com/openframeworks/openFrameworks/releases/tag/nightly).
 
-Nightly asset names look like `of_v20261102_vs_2022_64_release.zip` and `of_v20261102_vs_2026_64_release.zip`. ARM64 and ARM64EC variants are named `vs_2022_64_arm64_arm64ec` and `vs_2026_64_arm64_arm64ec` on the nightly release.
+| Toolset | Current package variants | Targets |
+| --- | --- | --- |
+| Visual Studio 2026 | `vs_2026_64`, `vs_2026_64_arm64_arm64ec` | x64, or x64/ARM64/ARM64EC |
+| Visual Studio 2022 | `vs_2022_64`, `vs_2022_64_arm64_arm64ec` | x64, or x64/ARM64/ARM64EC |
+| Visual Studio 2019 | `vs_2019_64` | x64 only, v142 |
 
-Install Visual Studio
--------
+Stable [0.12.1](https://github.com/openframeworks/openFrameworks/releases/tag/0.12.1) uses `of_v0.12.1_vs_64_release.zip` with Visual Studio 2022. The older `vs` and `vs_64` packages contain x64 libraries; use a current combined package for Windows on Arm.
 
-Run the installer and select the **Desktop development with C++** workload.
+Unzip the package to a real folder before opening a project. Do not run an example from inside Explorer's ZIP preview.
 
-Unzip openFrameworks to a real folder. Opening the zip itself in Explorer and running an example from there leaves project paths pointed at the archive, and Visual Studio then reports that projects failed to load.
+## Project Generator
 
-Video
--------
+1. Open the generator supplied with the same openFrameworks package. Set **Settings → OF path** to the root containing `addons`, `apps`, `libs` and `scripts`.
+2. Enter a project name and its parent folder, normally `apps/myApps`.
+3. With current PG, enable **Advanced options**, select **Windows (Visual Studio)** and use **Visual Studio version** to choose **2026**, **2022** or **2019**. PG's default for a new VS project is 2022; select 2026 when using the default nightly download.
+4. Choose installed addons and click **Generate**. Open the resulting `.sln` and press **F5**.
 
-0.12 does not need the K-Lite codec pack for ordinary video playback. The older DirectShow and QuickTime notes do not apply to this release.
+The current CLI equivalents are `-pvs -t2026`, `-pvs -t2022` and `-pvs -t2019`. With the 0.12.1 GUI, leave the template empty for the standard VS 2022 package. Older nightly generators used the `vs2026` template; use the generator matching your tree.
 
-Create a project
--------
+Use **import** or drag the project folder onto PG to update sources and addons. Existing projects retain their VS version unless you explicitly change it. See the [Project Generator guide](/learning/01_basics/create_a_new_project/).
 
-The Visual Studio extension that used to live in the marketplace is not part of the current setup. Use the Project Generator that ships in the openFrameworks folder.
+## Architectures
 
-1. Open the Project Generator from the `projectGenerator` folder in your download. In **Settings**, set **OF path** to the openFrameworks root containing `addons`, `apps`, `libs`, and `scripts`.
-2. Set **Project name** and **Project path**. The path is the parent folder; `apps/myApps` and `mySketch` create `apps/myApps/mySketch`.
-3. Choose Windows (Visual Studio).
-4. For the 0.12.1 Visual Studio 2022 package, leave **Template** empty. Use a matching nightly generator and package when selecting a newer template such as `vs2026`.
-5. Choose any installed **Addons**, then click **Generate**.
+Choose **x64**, **ARM64** or **ARM64EC** in Visual Studio's platform selector. ARM64 is native Windows-on-Arm code; ARM64EC supports interoperability with x64 modules. Install the corresponding compiler components and use matching libraries. VS 2019/v142 builds are x64-only.
 
-Open the `.sln` under `apps/<folder>/<project>/`. If Visual Studio asks to retarget the solution, retarget it to the toolset you installed. After the Project Generator updates a project, retarget again from the solution if the prompt does not appear: right-click the solution and choose Retarget.
+## CMake (nightly / 0.12.2)
 
-To add source files or addons later, use **import** or drag the project folder onto the generator, then click **Update**. The [Project Generator guide](/learning/01_basics/create_a_new_project/) covers the full workflow.
+Choose PG's **cmake** template and configure the generated project:
 
-Press F5 to build and run Debug. The configuration dropdown switches Debug and Release.
+```sh
+cmake -S . -B build-vs2026 -G "Visual Studio 18 2026" -A x64
+cmake --build build-vs2026 --config Release
+```
 
-Architectures
--------
+VS 2026 needs CMake 4.2 or newer. For VS 2022 use `-G "Visual Studio 17 2022"` and a separate build directory. Use `-A ARM64` or `-A ARM64EC` with the combined package. See the [CMake guide](/setup/cmake/#windows-visual-studio).
 
-The default 0.12.1 package is x64. Nightly packages add native ARM64 and ARM64EC for Windows on Arm.
+## Video
+
+Visual Studio builds use Windows Media Foundation. The older QuickTime and DirectShow codec-pack setup instructions do not apply to this path.

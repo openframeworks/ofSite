@@ -204,3 +204,20 @@ Finally, the file you add displays in the XCode editor.
     - Try commenting out console output messages in `update()` and `draw()` functions have such `ofLog()`, `ofLogNotice()`, `ofLogVerbose()`, `cout`, etc... commands.
     - Try to run the app in `Release` mode
     ![](xcode_setup_assets/of_release.png)
+
+## Current Apple targets
+
+Current source and the upcoming 0.12.2 release target macOS 12 or newer, iOS 15 or newer and tvOS 18 or newer. Stable 0.12.1 macOS apps target macOS 10.15 or newer. The [Apple downloads](/download/#apple) list the published macOS (osx) and iOS packages; tvOS and Mac Catalyst source targets are linked separately.
+
+Use the matching Project Generator to create or update a project. Current PG imports app version, build number and bundle identifier, and preserves custom Xcode project settings and resources when updating. Review the generated-file diff after an update.
+
+## CMake (nightly / 0.12.2)
+
+Choose the **cmake** template in PG, then from the project directory run:
+
+```sh
+cmake -S . -B build-xcode -G Xcode
+cmake --build build-xcode --config Release
+```
+
+Open the generated `.xcodeproj` in `build-xcode`, or run the app from `bin/`. See [CMake on macOS](/setup/cmake/#macos) for requirements and a Ninja alternative. iOS and tvOS use separate toolchain/sysroot settings in the [Apple mobile guide](/setup/cmake/#apple-mobile-platforms).
