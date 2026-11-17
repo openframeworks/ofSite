@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import os
 import time
 import markdown
-import socket
+import hashlib
 
 # !! This is the configuration of Nikola. !! #
 # !!  You should edit it to your liking.  !! #
@@ -24,12 +24,7 @@ BLOG_AUTHOR = "openFrameworks"  # (translatable)
 BLOG_TITLE = "openFrameworks"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-if os.environ.get("OFSITE_SITE_URL"):
-    SITE_URL = os.environ["OFSITE_SITE_URL"]
-elif socket.gethostbyname(socket.gethostname()) == socket.gethostbyname('openframeworks.cc'):
-    SITE_URL = "https://openframeworks.cc/"
-else:
-    SITE_URL = "http://localhost:8000/"
+SITE_URL = os.environ.get("OFSITE_SITE_URL") or "https://openframeworks.cc/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://openframeworks.cc/"
@@ -1249,7 +1244,11 @@ DEMOTE_HEADERS = 0
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
+with open(os.path.join(os.path.dirname(__file__), "themes/openframeworks/assets/css/style.css"), "rb") as _stylesheet:
+    STYLESHEET_VERSION = hashlib.sha256(_stylesheet.read()).hexdigest()[:12]
+
 GLOBAL_CONTEXT = {
+    "stylesheet_version": STYLESHEET_VERSION,
     "currentVersion": "0.12.1",
     "breaking": False,
     "majorVersion": "0.12.1",
