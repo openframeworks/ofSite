@@ -152,9 +152,9 @@ $(document).ready(function(){
     <section class="download-platform-group" id="android">
         <h2>Android</h2>
         <div class="download-platform">
+            ${package_link("Android package (macOS host)", "android_macos", "tar.gz", "android_macos")}
             ${package_link("Android package (Windows host)", "android_windows", legacy="android_windows")}
             <p><a href="../setup/android-studio/">Android Studio setup / NDK 29</a> · <a href="https://developer.android.com/studio">Latest Android Studio</a></p>
-            <p class="download-target-note">For another host, use a matching source checkout and download the Android libraries as described in the setup guide.</p>
         </div>
     </section>
 
