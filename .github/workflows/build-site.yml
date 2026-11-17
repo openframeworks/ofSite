@@ -48,6 +48,7 @@ jobs:
         run: |
           . nikola/bin/activate
           nikola build
+          python utils/check_documentation_urls.py output
 
       - name: Pack output
         run: |

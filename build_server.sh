@@ -61,8 +61,12 @@ if [ -z "$SRC" ]; then
 	echo nikola
 	. nikola/bin/activate
 	#nikola clean 2>> $LOG
-	nikola build 2>> $LOG
+	OFSITE_SITE_URL=https://openframeworks.cc/ nikola build 2>> $LOG
 	ret=$?
+	if [ "$ret" -eq 0 ]; then
+		python utils/check_documentation_urls.py output 2>> $LOG
+		ret=$?
+	fi
 	if [ $ret -ne 0 ]
 	then
 		SUBJECT="Failed building site"

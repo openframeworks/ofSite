@@ -144,9 +144,11 @@ $(document).ready(function(){
 
     <section class="download-platform-group" id="android">
         <h2>Android</h2>
-        ${package_link("Android package (Windows host)", "android_windows", legacy="android_windows")}
-        <p><a href="../setup/android-studio/">Android Studio setup / NDK 29</a> · <a href="https://developer.android.com/studio">Latest Android Studio</a></p>
-        <p class="download-target-note">For another host, use a matching source checkout and download the Android libraries as described in the setup guide.</p>
+        <div class="download-platform">
+            ${package_link("Android package (Windows host)", "android_windows", legacy="android_windows")}
+            <p><a href="../setup/android-studio/">Android Studio setup / NDK 29</a> · <a href="https://developer.android.com/studio">Latest Android Studio</a></p>
+            <p class="download-target-note">For another host, use a matching source checkout and download the Android libraries as described in the setup guide.</p>
+        </div>
     </section>
 
     <p>Browse the <a href="https://github.com/openframeworks/openFrameworks/releases/tag/${currentVersion}">${currentVersion} release files</a>, <a href="${NIGHTLY_URL}">nightly builds</a>, or <a href="../download/older/">older releases and beta releases</a>.</p>

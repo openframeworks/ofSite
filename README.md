@@ -51,6 +51,8 @@ If, on osx, you receive this error: `FileNotFoundError: [Errno 2] No such file o
 
 **./serve.sh** : Starts a local web server that serves the site and opens it in the browser.
 
+Builds default to `https://openframeworks.cc/` for absolute links. For a local preview with localhost URLs, explicitly set `OFSITE_SITE_URL=http://localhost:8000/` when running `nikola build`. Production builds must use the public URL.
+
 If you plan to do a big modifications like contribute a translation the easiest is to leave the 2 last scripts running and just edit the content files and the site will automatically get refreshed.
 
 ## Documentation-style markdown

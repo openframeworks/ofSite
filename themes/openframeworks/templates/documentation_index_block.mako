@@ -1,5 +1,9 @@
 ## -*- coding: utf-8 -*-
 <%page args="module,classes,show_header,subtitle"/>
+<%
+    language_path = translations[lang].strip("./")
+    documentation_path = ("/" + language_path if language_path else "") + "/documentation/" + module
+%>
 <div class="documentation_group">
     % if show_header:
     <div class="documentation_group_head hide">
@@ -22,7 +26,7 @@
         	<div class="box">
         	<ul class="documentation_class">
         	    <!-- class link -->
-                <li class="docs-module-title"><a href="${site_url}/${'/documentation/' + module + '/' + clazz.name}/" class="documentation_class_link"><strong>${clazz.name}</strong></a>&nbsp;
+                <li class="docs-module-title"><a href="${documentation_path}/${clazz.name}/" class="documentation_class_link"><strong>${clazz.name}</strong></a>&nbsp;
                 % if clazz.is_class():
                     <img src="/icons/class.png" alt="C++ Class"/>
                 % else:
@@ -38,7 +42,7 @@
                         % if len(method.description) <= 1 and len(method.inlined_description) <= 1:
                             <% htmlclass = htmlclass + " noDoc" %>
                         % endif
-                        <li class="${htmlclass}"><a href="${site_url}/${'documentation/' + module + '/' + clazz.name}/#!show_${method.name.replace("_","")}" title="${method.name.replace("_","")}" class="documentation_func">${method.name}()</a></li>
+                        <li class="${htmlclass}"><a href="${documentation_path}/${clazz.name}/#!show_${method.name.replace("_","")}" title="${method.name.replace("_","")}" class="documentation_func">${method.name}()</a></li>
                         <% prevmethod = method.name %>
                     % endif
                 % endfor
@@ -55,7 +59,7 @@
                             % if len(variable.description) <= 1:
                                 <% htmlclass = htmlclass + " noDoc" %>
                             % endif
-                            <li class="${htmlclass}"><a href="${site_url}/${'/documentation/' + module + '/' + clazz.name}/#!show_${variable.name}" title="${variable.name}" class="documentation_func">${variable.name}</a></li>
+                            <li class="${htmlclass}"><a href="${documentation_path}/${clazz.name}/#!show_${variable.name}" title="${variable.name}" class="documentation_func">${variable.name}</a></li>
                         % endif
                     % endfor
                 % endif
