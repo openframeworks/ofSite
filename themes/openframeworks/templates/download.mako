@@ -101,11 +101,12 @@ $(document).ready(function(){
                 <p><a href="../setup/cmake/#apple-mobile-platforms">tvOS / CMake</a></p>
             </div>
             <div class="download-platform">
-                <h3>Mac Catalyst (catOS)</h3>
-                <p><a href="../setup/iphone/#mac-catalyst">Mac Catalyst source setup</a></p>
+                <h3>macOS Mega</h3>
+                <p>macOS (osx), iOS, tvOS</p>
+                <p><a href="../setup/xcode/#current-apple-targets">macOS Mega source setup</a></p>
             </div>
         </div>
-        <p class="download-target-note">The published archives are macOS (osx) and iOS. tvOS and Mac Catalyst link to source setup; no separate archive is currently published for those targets.</p>
+        <p class="download-target-note">The published archives are macOS (osx) and iOS. tvOS and macOS Mega link to source setup; no separate archive is currently published for those targets.</p>
     </section>
 
     <section class="download-platform-group" id="linux">
@@ -127,16 +128,22 @@ $(document).ready(function(){
         <h2>Linux Raspberry Pi</h2>
         <div class="download-platform-grid download-platform-grid-3">
             <div class="download-platform">
+                <h3>aarch64 (ARM64 / 64bit)</h3>
+                <p class="download-target-note">Pi 3, 4, 5, 400, 500 and Zero 2 W · 64-bit OS</p>
+                <p class="download-target-note">Nightly build: Debian 12 (Bookworm), arm64 · GCC 10</p>
+                ${package_link("Raspberry Pi aarch64", "linux_aarch64_rpi_gcc10", "tar.gz", "linuxaarch64")}
+            </div>
+            <div class="download-platform">
                 <h3>ARMv7 (32bit)</h3>
+                <p class="download-target-note">Pi 2, 3, 4, 400 and Zero 2 W · 32-bit OS</p>
+                <p class="download-target-note">Nightly build: Debian 12 (Bookworm), armhf · GCC 10</p>
                 ${package_link("Raspberry Pi ARMv7", "linux_armv7l_rpi_gcc10", "tar.gz")}
             </div>
             <div class="download-platform">
                 <h3>ARMv6 (32bit)</h3>
+                <p class="download-target-note">Pi 1, Zero, Zero W and Compute Module 1 · 32-bit OS</p>
+                <p class="download-target-note">Nightly build: Debian 12 (Bookworm), armhf · GCC 10</p>
                 ${package_link("Raspberry Pi ARMv6", "linux_armv6l_rpi_gcc10", "tar.gz", "linuxarmv6l")}
-            </div>
-            <div class="download-platform">
-                <h3>aarch64 (64bit)</h3>
-                ${package_link("Raspberry Pi aarch64", "linux_aarch64_rpi_gcc10", "tar.gz", "linuxaarch64")}
             </div>
         </div>
         <p><a href="../setup/raspberrypi/">Raspberry Pi setup</a> · <a href="../setup/cmake/#linux-and-raspberry-pi">CMake</a></p>
@@ -145,9 +152,9 @@ $(document).ready(function(){
     <section class="download-platform-group" id="android">
         <h2>Android</h2>
         <div class="download-platform">
+            ${package_link("Android package (macOS host)", "android_macos", "tar.gz", "android_macos")}
             ${package_link("Android package (Windows host)", "android_windows", legacy="android_windows")}
             <p><a href="../setup/android-studio/">Android Studio setup / NDK 29</a> · <a href="https://developer.android.com/studio">Latest Android Studio</a></p>
-            <p class="download-target-note">For another host, use a matching source checkout and download the Android libraries as described in the setup guide.</p>
         </div>
     </section>
 

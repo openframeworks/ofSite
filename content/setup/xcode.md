@@ -207,7 +207,7 @@ Finally, the file you add displays in the XCode editor.
 
 ## Current Apple targets
 
-Current source and the upcoming 0.12.2 release target macOS 12 or newer, iOS 15 or newer and tvOS 18 or newer. Stable 0.12.1 macOS apps target macOS 10.15 or newer. The [Apple downloads](/download/#apple) list the published macOS (osx) and iOS packages; tvOS and Mac Catalyst source targets are linked separately.
+Current source and the upcoming 0.12.2 release target macOS 12 or newer, iOS 15 or newer and tvOS 18 or newer. Stable 0.12.1 macOS apps target macOS 10.15 or newer. The [Apple downloads](/download/#apple) list the published macOS (osx) and iOS packages. **macOS Mega** covers macOS (osx), iOS and tvOS from a source checkout: use this guide for macOS and the [iOS / tvOS guide](/setup/iphone/#project-generator-cmake) for mobile targets.
 
 Use the matching Project Generator to create or update a project. Current PG imports app version, build number and bundle identifier, and preserves custom Xcode project settings and resources when updating. Review the generated-file diff after an update.
 
